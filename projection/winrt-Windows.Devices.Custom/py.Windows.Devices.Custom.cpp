@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"FromIdAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"FromIdAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Custom::DeviceAccessMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Custom::DeviceSharingMode>(args, 2);
@@ -61,14 +61,14 @@ namespace py::cpp::Windows::Devices::Custom
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Custom::CustomDevice::GetDeviceSelector(param0));
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Devices::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"SendIOControlAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"SendIOControlAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Custom::IIOControlCode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -125,14 +125,14 @@ namespace py::cpp::Windows::Devices::Custom
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"TrySendIOControlAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Custom.CustomDevice", L"TrySendIOControlAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Custom::IIOControlCode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -154,14 +154,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* CustomDevice_get_InputStream(py::wrapper::Windows::Devices::Custom::CustomDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.CustomDevice", L"InputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.CustomDevice", L"InputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputStream());
         }
         catch (...)
@@ -173,14 +173,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* CustomDevice_get_OutputStream(py::wrapper::Windows::Devices::Custom::CustomDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.CustomDevice", L"OutputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.CustomDevice", L"OutputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputStream());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IOControlCode_get_AccessMode(py::wrapper::Windows::Devices::Custom::IOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"AccessMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"AccessMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessMode());
         }
         catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IOControlCode_get_BufferingMethod(py::wrapper::Windows::Devices::Custom::IOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"BufferingMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"BufferingMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BufferingMethod());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IOControlCode_get_ControlCode(py::wrapper::Windows::Devices::Custom::IOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"ControlCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"ControlCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlCode());
         }
         catch (...)
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IOControlCode_get_DeviceType(py::wrapper::Windows::Devices::Custom::IOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"DeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"DeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceType());
         }
         catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IOControlCode_get_Function(py::wrapper::Windows::Devices::Custom::IOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"Function"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IOControlCode", L"Function"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Function());
         }
         catch (...)
@@ -480,14 +480,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* KnownDeviceTypes_get_Unknown(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.KnownDeviceTypes", L"Unknown"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.KnownDeviceTypes", L"Unknown"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Custom::KnownDeviceTypes::Unknown());
         }
         catch (...)
@@ -567,14 +567,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IIOControlCode_get_AccessMode(py::wrapper::Windows::Devices::Custom::IIOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"AccessMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"AccessMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessMode());
         }
         catch (...)
@@ -586,14 +586,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IIOControlCode_get_BufferingMethod(py::wrapper::Windows::Devices::Custom::IIOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"BufferingMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"BufferingMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BufferingMethod());
         }
         catch (...)
@@ -605,14 +605,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IIOControlCode_get_ControlCode(py::wrapper::Windows::Devices::Custom::IIOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"ControlCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"ControlCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlCode());
         }
         catch (...)
@@ -624,14 +624,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IIOControlCode_get_DeviceType(py::wrapper::Windows::Devices::Custom::IIOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"DeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"DeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceType());
         }
         catch (...)
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyObject* IIOControlCode_get_Function(py::wrapper::Windows::Devices::Custom::IIOControlCode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"Function"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Custom.IIOControlCode", L"Function"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Function());
         }
         catch (...)

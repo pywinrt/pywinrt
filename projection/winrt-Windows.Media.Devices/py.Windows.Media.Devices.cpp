@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AdvancedPhotoCaptureSettings_get_Mode(py::wrapper::Windows::Media::Devices::AdvancedPhotoCaptureSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoCaptureSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoCaptureSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int AdvancedPhotoCaptureSettings_put_Mode(py::wrapper::Windows::Media::Devices::AdvancedPhotoCaptureSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoCaptureSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoCaptureSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::AdvancedPhotoMode>(arg);
 
             self->obj.Mode(param0);
@@ -167,14 +167,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Configure", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Configure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>(args, 0);
 
                 self->obj.Configure(param0);
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AdvancedPhotoControl_get_Mode(py::wrapper::Windows::Media::Devices::AdvancedPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -214,14 +214,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AdvancedPhotoControl_get_Supported(py::wrapper::Windows::Media::Devices::AdvancedPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -233,14 +233,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AdvancedPhotoControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::AdvancedPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AdvancedPhotoControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -329,14 +329,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"GetAvailableMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"GetAvailableMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetAvailableMediaStreamProperties(param0));
@@ -360,14 +360,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"GetMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"GetMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetMediaStreamProperties(param0));
@@ -391,14 +391,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"SetMediaStreamPropertiesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceController", L"SetMediaStreamPropertiesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 1);
 
@@ -419,14 +419,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceController_get_VolumePercent(py::wrapper::Windows::Media::Devices::AudioDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"VolumePercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"VolumePercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VolumePercent());
         }
         catch (...)
@@ -438,12 +438,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int AudioDeviceController_put_VolumePercent(py::wrapper::Windows::Media::Devices::AudioDeviceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"VolumePercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -452,6 +446,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"VolumePercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.VolumePercent(param0);
@@ -466,14 +466,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceController_get_Muted(py::wrapper::Windows::Media::Devices::AudioDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"Muted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"Muted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Muted());
         }
         catch (...)
@@ -485,12 +485,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int AudioDeviceController_put_Muted(py::wrapper::Windows::Media::Devices::AudioDeviceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"Muted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -499,6 +493,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"Muted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Muted(param0);
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModule", L"SendCommandAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModule", L"SendCommandAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.SendCommandAsync(param0));
@@ -618,14 +618,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModule_get_ClassId(py::wrapper::Windows::Media::Devices::AudioDeviceModule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"ClassId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"ClassId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClassId());
         }
         catch (...)
@@ -637,14 +637,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModule_get_DisplayName(py::wrapper::Windows::Media::Devices::AudioDeviceModule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -656,14 +656,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModule_get_InstanceId(py::wrapper::Windows::Media::Devices::AudioDeviceModule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"InstanceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"InstanceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceId());
         }
         catch (...)
@@ -675,14 +675,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModule_get_MajorVersion(py::wrapper::Windows::Media::Devices::AudioDeviceModule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"MajorVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"MajorVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MajorVersion());
         }
         catch (...)
@@ -694,14 +694,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModule_get_MinorVersion(py::wrapper::Windows::Media::Devices::AudioDeviceModule* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"MinorVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModule", L"MinorVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinorVersion());
         }
         catch (...)
@@ -788,14 +788,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModuleNotificationEventArgs_get_Module(py::wrapper::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs", L"Module"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs", L"Module"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Module());
         }
         catch (...)
@@ -807,14 +807,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModuleNotificationEventArgs_get_NotificationData(py::wrapper::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs", L"NotificationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceModuleNotificationEventArgs", L"NotificationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NotificationData());
         }
         catch (...)
@@ -925,14 +925,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"FindAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"FindAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindAll());
             }
             catch (...)
@@ -954,14 +954,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"FindAllById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"FindAllById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FindAllById(param0));
@@ -981,14 +981,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModulesManager_add_ModuleNotificationReceived(py::wrapper::Windows::Media::Devices::AudioDeviceModulesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"ModuleNotificationReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"ModuleNotificationReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Devices::AudioDeviceModulesManager, winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>>(arg);
 
             return py::convert(self->obj.ModuleNotificationReceived(param0));
@@ -1002,14 +1002,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* AudioDeviceModulesManager_remove_ModuleNotificationReceived(py::wrapper::Windows::Media::Devices::AudioDeviceModulesManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"ModuleNotificationReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.AudioDeviceModulesManager", L"ModuleNotificationReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ModuleNotificationReceived(param0);
@@ -1101,14 +1101,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"EndCall", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"EndCall", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.EndCall(param0);
@@ -1133,14 +1133,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Devices::CallControl::FromId(param0));
@@ -1164,14 +1164,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Devices::CallControl::GetDefault());
             }
             catch (...)
@@ -1193,14 +1193,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateActiveCall", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateActiveCall", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.IndicateActiveCall(param0);
@@ -1225,14 +1225,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateNewIncomingCall", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateNewIncomingCall", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1257,14 +1257,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateNewOutgoingCall", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CallControl", L"IndicateNewOutgoingCall", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IndicateNewOutgoingCall());
             }
             catch (...)
@@ -1282,14 +1282,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_get_HasRinger(py::wrapper::Windows::Media::Devices::CallControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CallControl", L"HasRinger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CallControl", L"HasRinger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasRinger());
         }
         catch (...)
@@ -1301,14 +1301,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_AnswerRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AnswerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AnswerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::CallControlEventHandler>(arg);
 
             return py::convert(self->obj.AnswerRequested(param0));
@@ -1322,14 +1322,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_AnswerRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AnswerRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AnswerRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AnswerRequested(param0);
@@ -1344,14 +1344,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_AudioTransferRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AudioTransferRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AudioTransferRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::CallControlEventHandler>(arg);
 
             return py::convert(self->obj.AudioTransferRequested(param0));
@@ -1365,14 +1365,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_AudioTransferRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AudioTransferRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"AudioTransferRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AudioTransferRequested(param0);
@@ -1387,14 +1387,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_DialRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"DialRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"DialRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::DialRequestedEventHandler>(arg);
 
             return py::convert(self->obj.DialRequested(param0));
@@ -1408,14 +1408,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_DialRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"DialRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"DialRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DialRequested(param0);
@@ -1430,14 +1430,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_HangUpRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"HangUpRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"HangUpRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::CallControlEventHandler>(arg);
 
             return py::convert(self->obj.HangUpRequested(param0));
@@ -1451,14 +1451,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_HangUpRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"HangUpRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"HangUpRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HangUpRequested(param0);
@@ -1473,14 +1473,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_KeypadPressed(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"KeypadPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"KeypadPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::KeypadPressedEventHandler>(arg);
 
             return py::convert(self->obj.KeypadPressed(param0));
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_KeypadPressed(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"KeypadPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"KeypadPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.KeypadPressed(param0);
@@ -1516,14 +1516,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_add_RedialRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"RedialRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"RedialRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::RedialRequestedEventHandler>(arg);
 
             return py::convert(self->obj.RedialRequested(param0));
@@ -1537,14 +1537,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CallControl_remove_RedialRequested(py::wrapper::Windows::Media::Devices::CallControl* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"RedialRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CallControl", L"RedialRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RedialRequested(param0);
@@ -1676,14 +1676,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"GetState", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"GetState", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetState());
             }
             catch (...)
@@ -1705,14 +1705,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"IsOcclusionKindSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"IsOcclusionKindSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::CameraOcclusionKind>(args, 0);
 
                 return py::convert(self->obj.IsOcclusionKindSupported(param0));
@@ -1732,14 +1732,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CameraOcclusionInfo_add_StateChanged(py::wrapper::Windows::Media::Devices::CameraOcclusionInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Devices::CameraOcclusionInfo, winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CameraOcclusionInfo_remove_StateChanged(py::wrapper::Windows::Media::Devices::CameraOcclusionInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.CameraOcclusionInfo", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1852,14 +1852,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionState", L"IsOcclusionKind", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.CameraOcclusionState", L"IsOcclusionKind", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::CameraOcclusionKind>(args, 0);
 
                 return py::convert(self->obj.IsOcclusionKind(param0));
@@ -1879,14 +1879,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CameraOcclusionState_get_IsOccluded(py::wrapper::Windows::Media::Devices::CameraOcclusionState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CameraOcclusionState", L"IsOccluded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CameraOcclusionState", L"IsOccluded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOccluded());
         }
         catch (...)
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* CameraOcclusionStateChangedEventArgs_get_State(py::wrapper::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CameraOcclusionStateChangedEventArgs", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.CameraOcclusionStateChangedEventArgs", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DefaultAudioCaptureDeviceChangedEventArgs_get_Id(py::wrapper::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2077,14 +2077,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DefaultAudioCaptureDeviceChangedEventArgs_get_Role(py::wrapper::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs", L"Role"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioCaptureDeviceChangedEventArgs", L"Role"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Role());
         }
         catch (...)
@@ -2167,14 +2167,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DefaultAudioRenderDeviceChangedEventArgs_get_Id(py::wrapper::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2186,14 +2186,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DefaultAudioRenderDeviceChangedEventArgs_get_Role(py::wrapper::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs", L"Role"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DefaultAudioRenderDeviceChangedEventArgs", L"Role"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Role());
         }
         catch (...)
@@ -2280,14 +2280,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DialRequestedEventArgs", L"Handled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DialRequestedEventArgs", L"Handled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Handled();
                 Py_RETURN_NONE;
             }
@@ -2306,14 +2306,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DialRequestedEventArgs_get_Contact(py::wrapper::Windows::Media::Devices::DialRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DialRequestedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DialRequestedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -2418,14 +2418,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowBounds_get_Scale(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -2437,12 +2437,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int DigitalWindowBounds_put_Scale(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2451,6 +2445,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Scale(param0);
@@ -2465,14 +2465,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowBounds_get_NormalizedOriginTop(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginTop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginTop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedOriginTop());
         }
         catch (...)
@@ -2484,12 +2484,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int DigitalWindowBounds_put_NormalizedOriginTop(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginTop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2498,6 +2492,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginTop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.NormalizedOriginTop(param0);
@@ -2512,14 +2512,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowBounds_get_NormalizedOriginLeft(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedOriginLeft());
         }
         catch (...)
@@ -2531,12 +2531,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int DigitalWindowBounds_put_NormalizedOriginLeft(py::wrapper::Windows::Media::Devices::DigitalWindowBounds* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2545,6 +2539,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowBounds", L"NormalizedOriginLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.NormalizedOriginLeft(param0);
@@ -2631,14 +2631,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_Height(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -2650,14 +2650,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_MaxScaleValue(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MaxScaleValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MaxScaleValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxScaleValue());
         }
         catch (...)
@@ -2669,14 +2669,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_MinScaleValue(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MinScaleValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MinScaleValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinScaleValue());
         }
         catch (...)
@@ -2688,14 +2688,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_MinScaleValueWithoutUpsampling(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MinScaleValueWithoutUpsampling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"MinScaleValueWithoutUpsampling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinScaleValueWithoutUpsampling());
         }
         catch (...)
@@ -2707,14 +2707,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_NormalizedFieldOfViewLimit(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"NormalizedFieldOfViewLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"NormalizedFieldOfViewLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalizedFieldOfViewLimit());
         }
         catch (...)
@@ -2726,14 +2726,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowCapability_get_Width(py::wrapper::Windows::Media::Devices::DigitalWindowCapability* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowCapability", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -2824,14 +2824,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"Configure", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"Configure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::DigitalWindowMode>(args, 0);
 
                 self->obj.Configure(param0);
@@ -2845,14 +2845,14 @@ namespace py::cpp::Windows::Media::Devices
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"Configure", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"Configure", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::DigitalWindowMode>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Devices::DigitalWindowBounds>(args, 1);
 
@@ -2878,14 +2878,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"GetBounds", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"GetBounds", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetBounds());
             }
             catch (...)
@@ -2907,14 +2907,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"GetCapabilityForSize", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.DigitalWindowControl", L"GetCapabilityForSize", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowControl_get_CurrentMode(py::wrapper::Windows::Media::Devices::DigitalWindowControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"CurrentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"CurrentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentMode());
         }
         catch (...)
@@ -2954,14 +2954,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowControl_get_IsSupported(py::wrapper::Windows::Media::Devices::DigitalWindowControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSupported());
         }
         catch (...)
@@ -2973,14 +2973,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowControl_get_SupportedCapabilities(py::wrapper::Windows::Media::Devices::DigitalWindowControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"SupportedCapabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"SupportedCapabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedCapabilities());
         }
         catch (...)
@@ -2992,14 +2992,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* DigitalWindowControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::DigitalWindowControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.DigitalWindowControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -3091,14 +3091,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -3118,14 +3118,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureCompensationControl_get_Max(py::wrapper::Windows::Media::Devices::ExposureCompensationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -3137,14 +3137,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureCompensationControl_get_Min(py::wrapper::Windows::Media::Devices::ExposureCompensationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -3156,14 +3156,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureCompensationControl_get_Step(py::wrapper::Windows::Media::Devices::ExposureCompensationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -3175,14 +3175,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureCompensationControl_get_Supported(py::wrapper::Windows::Media::Devices::ExposureCompensationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -3194,14 +3194,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureCompensationControl_get_Value(py::wrapper::Windows::Media::Devices::ExposureCompensationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureCompensationControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -3292,14 +3292,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureControl", L"SetAutoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureControl", L"SetAutoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.SetAutoAsync(param0));
@@ -3323,14 +3323,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ExposureControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -3350,14 +3350,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Auto(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Auto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Auto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Auto());
         }
         catch (...)
@@ -3369,14 +3369,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Max(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -3388,14 +3388,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Min(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -3407,14 +3407,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Step(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -3426,14 +3426,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Supported(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -3445,14 +3445,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposureControl_get_Value(py::wrapper::Windows::Media::Devices::ExposureControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposureControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -3541,14 +3541,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposurePriorityVideoControl_get_Enabled(py::wrapper::Windows::Media::Devices::ExposurePriorityVideoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -3560,12 +3560,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int ExposurePriorityVideoControl_put_Enabled(py::wrapper::Windows::Media::Devices::ExposurePriorityVideoControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3574,6 +3568,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -3588,14 +3588,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ExposurePriorityVideoControl_get_Supported(py::wrapper::Windows::Media::Devices::ExposurePriorityVideoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ExposurePriorityVideoControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -3678,14 +3678,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_RedEyeReduction(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReduction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReduction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedEyeReduction());
         }
         catch (...)
@@ -3697,12 +3697,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FlashControl_put_RedEyeReduction(py::wrapper::Windows::Media::Devices::FlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReduction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3711,6 +3705,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReduction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RedEyeReduction(param0);
@@ -3725,14 +3725,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_PowerPercent(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerPercent());
         }
         catch (...)
@@ -3744,12 +3744,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FlashControl_put_PowerPercent(py::wrapper::Windows::Media::Devices::FlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3758,6 +3752,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PowerPercent(param0);
@@ -3772,14 +3772,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_Enabled(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -3791,12 +3791,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FlashControl_put_Enabled(py::wrapper::Windows::Media::Devices::FlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3805,6 +3799,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -3819,14 +3819,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_Auto(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Auto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Auto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Auto());
         }
         catch (...)
@@ -3838,12 +3838,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FlashControl_put_Auto(py::wrapper::Windows::Media::Devices::FlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Auto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3852,6 +3846,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Auto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Auto(param0);
@@ -3866,14 +3866,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_PowerSupported(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"PowerSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerSupported());
         }
         catch (...)
@@ -3885,14 +3885,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_RedEyeReductionSupported(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReductionSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"RedEyeReductionSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedEyeReductionSupported());
         }
         catch (...)
@@ -3904,14 +3904,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_Supported(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -3923,14 +3923,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_AssistantLightEnabled(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AssistantLightEnabled());
         }
         catch (...)
@@ -3942,12 +3942,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FlashControl_put_AssistantLightEnabled(py::wrapper::Windows::Media::Devices::FlashControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3956,6 +3950,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AssistantLightEnabled(param0);
@@ -3970,14 +3970,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FlashControl_get_AssistantLightSupported(py::wrapper::Windows::Media::Devices::FlashControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FlashControl", L"AssistantLightSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AssistantLightSupported());
         }
         catch (...)
@@ -4071,14 +4071,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"Configure", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"Configure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::FocusSettings>(args, 0);
 
                 self->obj.Configure(param0);
@@ -4103,14 +4103,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"FocusAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"FocusAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FocusAsync());
             }
             catch (...)
@@ -4132,14 +4132,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"LockAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"LockAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LockAsync());
             }
             catch (...)
@@ -4161,14 +4161,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetPresetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetPresetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::FocusPreset>(args, 0);
 
                 return py::convert(self->obj.SetPresetAsync(param0));
@@ -4181,14 +4181,14 @@ namespace py::cpp::Windows::Media::Devices
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetPresetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetPresetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::FocusPreset>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -4213,14 +4213,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -4244,14 +4244,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"UnlockAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.FocusControl", L"UnlockAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.UnlockAsync());
             }
             catch (...)
@@ -4269,14 +4269,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Max(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -4288,14 +4288,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Min(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -4307,14 +4307,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Preset(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Preset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Preset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Preset());
         }
         catch (...)
@@ -4326,14 +4326,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Step(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -4345,14 +4345,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Supported(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -4364,14 +4364,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_SupportedPresets(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedPresets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedPresets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedPresets());
         }
         catch (...)
@@ -4383,14 +4383,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Value(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -4402,14 +4402,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_FocusChangedSupported(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"FocusChangedSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"FocusChangedSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusChangedSupported());
         }
         catch (...)
@@ -4421,14 +4421,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_FocusState(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"FocusState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"FocusState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusState());
         }
         catch (...)
@@ -4440,14 +4440,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_Mode(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -4459,14 +4459,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_SupportedFocusDistances(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusDistances"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusDistances"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedFocusDistances());
         }
         catch (...)
@@ -4478,14 +4478,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_SupportedFocusModes(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedFocusModes());
         }
         catch (...)
@@ -4497,14 +4497,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_SupportedFocusRanges(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"SupportedFocusRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedFocusRanges());
         }
         catch (...)
@@ -4516,14 +4516,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusControl_get_WaitForFocusSupported(py::wrapper::Windows::Media::Devices::FocusControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"WaitForFocusSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusControl", L"WaitForFocusSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WaitForFocusSupported());
         }
         catch (...)
@@ -4646,14 +4646,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_WaitForFocus(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"WaitForFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"WaitForFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WaitForFocus());
         }
         catch (...)
@@ -4665,12 +4665,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_WaitForFocus(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"WaitForFocus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4679,6 +4673,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"WaitForFocus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.WaitForFocus(param0);
@@ -4693,14 +4693,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_Value(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -4712,12 +4712,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_Value(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4726,6 +4720,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.Value(param0);
@@ -4740,14 +4740,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_Mode(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -4759,12 +4759,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_Mode(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4773,6 +4767,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::FocusMode>(arg);
 
             self->obj.Mode(param0);
@@ -4787,14 +4787,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_Distance(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Distance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Distance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Distance());
         }
         catch (...)
@@ -4806,12 +4806,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_Distance(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Distance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4820,6 +4814,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"Distance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Media::Devices::ManualFocusDistance>>(arg);
 
             self->obj.Distance(param0);
@@ -4834,14 +4834,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_DisableDriverFallback(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"DisableDriverFallback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"DisableDriverFallback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisableDriverFallback());
         }
         catch (...)
@@ -4853,12 +4853,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_DisableDriverFallback(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"DisableDriverFallback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4867,6 +4861,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"DisableDriverFallback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DisableDriverFallback(param0);
@@ -4881,14 +4881,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* FocusSettings_get_AutoFocusRange(py::wrapper::Windows::Media::Devices::FocusSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"AutoFocusRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"AutoFocusRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoFocusRange());
         }
         catch (...)
@@ -4900,12 +4900,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int FocusSettings_put_AutoFocusRange(py::wrapper::Windows::Media::Devices::FocusSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"AutoFocusRange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4914,6 +4908,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.FocusSettings", L"AutoFocusRange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::AutoFocusRange>(arg);
 
             self->obj.AutoFocusRange(param0);
@@ -5003,14 +5003,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* HdrVideoControl_get_Mode(py::wrapper::Windows::Media::Devices::HdrVideoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -5022,12 +5022,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int HdrVideoControl_put_Mode(py::wrapper::Windows::Media::Devices::HdrVideoControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5036,6 +5030,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::HdrVideoMode>(arg);
 
             self->obj.Mode(param0);
@@ -5050,14 +5050,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* HdrVideoControl_get_Supported(py::wrapper::Windows::Media::Devices::HdrVideoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -5069,14 +5069,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* HdrVideoControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::HdrVideoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.HdrVideoControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -5160,14 +5160,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_Power(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"Power"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"Power"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Power());
         }
         catch (...)
@@ -5179,12 +5179,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int InfraredTorchControl_put_Power(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"Power"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5193,6 +5187,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"Power"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Power(param0);
@@ -5207,14 +5207,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_CurrentMode(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"CurrentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"CurrentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentMode());
         }
         catch (...)
@@ -5226,12 +5226,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int InfraredTorchControl_put_CurrentMode(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"CurrentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5240,6 +5234,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"CurrentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::InfraredTorchMode>(arg);
 
             self->obj.CurrentMode(param0);
@@ -5254,14 +5254,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_IsSupported(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSupported());
         }
         catch (...)
@@ -5273,14 +5273,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_MaxPower(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"MaxPower"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"MaxPower"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPower());
         }
         catch (...)
@@ -5292,14 +5292,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_MinPower(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"MinPower"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"MinPower"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinPower());
         }
         catch (...)
@@ -5311,14 +5311,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_PowerStep(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"PowerStep"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"PowerStep"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerStep());
         }
         catch (...)
@@ -5330,14 +5330,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* InfraredTorchControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::InfraredTorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.InfraredTorchControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -5429,14 +5429,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetAutoAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetAutoAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SetAutoAsync());
             }
             catch (...)
@@ -5458,14 +5458,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetPresetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetPresetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::IsoSpeedPreset>(args, 0);
 
                 return py::convert(self->obj.SetPresetAsync(param0));
@@ -5489,14 +5489,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -5516,14 +5516,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Preset(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Preset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Preset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Preset());
         }
         catch (...)
@@ -5535,14 +5535,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Supported(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -5554,14 +5554,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_SupportedPresets(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SupportedPresets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"SupportedPresets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedPresets());
         }
         catch (...)
@@ -5573,14 +5573,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Auto(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Auto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Auto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Auto());
         }
         catch (...)
@@ -5592,14 +5592,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Max(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -5611,14 +5611,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Min(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -5630,14 +5630,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Step(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -5649,14 +5649,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IsoSpeedControl_get_Value(py::wrapper::Windows::Media::Devices::IsoSpeedControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IsoSpeedControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -5748,14 +5748,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* KeypadPressedEventArgs_get_TelephonyKey(py::wrapper::Windows::Media::Devices::KeypadPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.KeypadPressedEventArgs", L"TelephonyKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.KeypadPressedEventArgs", L"TelephonyKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TelephonyKey());
         }
         catch (...)
@@ -5841,14 +5841,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"GetCurrentFrameRate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"GetCurrentFrameRate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentFrameRate());
             }
             catch (...)
@@ -5870,14 +5870,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"GetHighestConcurrentFrameRate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"GetHighestConcurrentFrameRate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.GetHighestConcurrentFrameRate(param0));
@@ -5897,14 +5897,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoControl_get_ThumbnailFormat(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbnailFormat());
         }
         catch (...)
@@ -5916,12 +5916,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoControl_put_ThumbnailFormat(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5930,6 +5924,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaThumbnailFormat>(arg);
 
             self->obj.ThumbnailFormat(param0);
@@ -5944,14 +5944,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoControl_get_ThumbnailEnabled(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbnailEnabled());
         }
         catch (...)
@@ -5963,12 +5963,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoControl_put_ThumbnailEnabled(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5977,6 +5971,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"ThumbnailEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ThumbnailEnabled(param0);
@@ -5991,14 +5991,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoControl_get_DesiredThumbnailSize(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"DesiredThumbnailSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"DesiredThumbnailSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredThumbnailSize());
         }
         catch (...)
@@ -6010,12 +6010,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoControl_put_DesiredThumbnailSize(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"DesiredThumbnailSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6024,6 +6018,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"DesiredThumbnailSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DesiredThumbnailSize(param0);
@@ -6038,14 +6038,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoControl_get_HardwareAcceleratedThumbnailSupported(py::wrapper::Windows::Media::Devices::LowLagPhotoControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"HardwareAcceleratedThumbnailSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoControl", L"HardwareAcceleratedThumbnailSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareAcceleratedThumbnailSupported());
         }
         catch (...)
@@ -6136,14 +6136,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"GetCurrentFrameRate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"GetCurrentFrameRate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentFrameRate());
             }
             catch (...)
@@ -6165,14 +6165,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"GetHighestConcurrentFrameRate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"GetHighestConcurrentFrameRate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.GetHighestConcurrentFrameRate(param0));
@@ -6192,14 +6192,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_ThumbnailFormat(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbnailFormat());
         }
         catch (...)
@@ -6211,12 +6211,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoSequenceControl_put_ThumbnailFormat(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6225,6 +6219,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaThumbnailFormat>(arg);
 
             self->obj.ThumbnailFormat(param0);
@@ -6239,14 +6239,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_ThumbnailEnabled(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThumbnailEnabled());
         }
         catch (...)
@@ -6258,12 +6258,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoSequenceControl_put_ThumbnailEnabled(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6272,6 +6266,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"ThumbnailEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ThumbnailEnabled(param0);
@@ -6286,14 +6286,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_PhotosPerSecondLimit(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PhotosPerSecondLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PhotosPerSecondLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotosPerSecondLimit());
         }
         catch (...)
@@ -6305,12 +6305,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoSequenceControl_put_PhotosPerSecondLimit(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PhotosPerSecondLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6319,6 +6313,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PhotosPerSecondLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PhotosPerSecondLimit(param0);
@@ -6333,14 +6333,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_PastPhotoLimit(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PastPhotoLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PastPhotoLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PastPhotoLimit());
         }
         catch (...)
@@ -6352,12 +6352,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoSequenceControl_put_PastPhotoLimit(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PastPhotoLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6366,6 +6360,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"PastPhotoLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.PastPhotoLimit(param0);
@@ -6380,14 +6380,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_DesiredThumbnailSize(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"DesiredThumbnailSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"DesiredThumbnailSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredThumbnailSize());
         }
         catch (...)
@@ -6399,12 +6399,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int LowLagPhotoSequenceControl_put_DesiredThumbnailSize(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"DesiredThumbnailSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6413,6 +6407,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"DesiredThumbnailSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DesiredThumbnailSize(param0);
@@ -6427,14 +6427,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_HardwareAcceleratedThumbnailSupported(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"HardwareAcceleratedThumbnailSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"HardwareAcceleratedThumbnailSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareAcceleratedThumbnailSupported());
         }
         catch (...)
@@ -6446,14 +6446,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_MaxPastPhotos(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"MaxPastPhotos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"MaxPastPhotos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPastPhotos());
         }
         catch (...)
@@ -6465,14 +6465,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_MaxPhotosPerSecond(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"MaxPhotosPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"MaxPhotosPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPhotosPerSecond());
         }
         catch (...)
@@ -6484,14 +6484,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* LowLagPhotoSequenceControl_get_Supported(py::wrapper::Windows::Media::Devices::LowLagPhotoSequenceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.LowLagPhotoSequenceControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -6579,14 +6579,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetAudioCaptureSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetAudioCaptureSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Devices::MediaDevice::GetAudioCaptureSelector());
             }
             catch (...)
@@ -6608,14 +6608,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetAudioRenderSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetAudioRenderSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Devices::MediaDevice::GetAudioRenderSelector());
             }
             catch (...)
@@ -6637,14 +6637,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetDefaultAudioCaptureId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetDefaultAudioCaptureId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Devices::MediaDevice::GetDefaultAudioCaptureId(param0));
@@ -6668,14 +6668,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetDefaultAudioRenderId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetDefaultAudioRenderId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Devices::MediaDevice::GetDefaultAudioRenderId(param0));
@@ -6699,14 +6699,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetVideoCaptureSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDevice", L"GetVideoCaptureSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Devices::MediaDevice::GetVideoCaptureSelector());
             }
             catch (...)
@@ -6724,14 +6724,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDevice_add_DefaultAudioCaptureDeviceChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioCaptureDeviceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioCaptureDeviceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Media::Devices::MediaDevice::DefaultAudioCaptureDeviceChanged(param0));
@@ -6745,14 +6745,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDevice_remove_DefaultAudioCaptureDeviceChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioCaptureDeviceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioCaptureDeviceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Media::Devices::MediaDevice::DefaultAudioCaptureDeviceChanged(param0);
@@ -6767,14 +6767,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDevice_add_DefaultAudioRenderDeviceChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioRenderDeviceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioRenderDeviceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Media::Devices::MediaDevice::DefaultAudioRenderDeviceChanged(param0));
@@ -6788,14 +6788,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDevice_remove_DefaultAudioRenderDeviceChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioRenderDeviceChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Devices.MediaDevice", L"DefaultAudioRenderDeviceChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Media::Devices::MediaDevice::DefaultAudioRenderDeviceChanged(param0);
@@ -6890,14 +6890,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TryGetAuto", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TryGetAuto", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 bool param0 {  };
 
                 auto return_value = self->obj.TryGetAuto(param0);
@@ -6933,14 +6933,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TryGetValue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TryGetValue", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 double param0 {  };
 
                 auto return_value = self->obj.TryGetValue(param0);
@@ -6976,14 +6976,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TrySetAuto", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TrySetAuto", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.TrySetAuto(param0));
@@ -7007,14 +7007,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TrySetValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.MediaDeviceControl", L"TrySetValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.TrySetValue(param0));
@@ -7034,14 +7034,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControl_get_Capabilities(py::wrapper::Windows::Media::Devices::MediaDeviceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControl", L"Capabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControl", L"Capabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Capabilities());
         }
         catch (...)
@@ -7127,14 +7127,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_AutoModeSupported(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"AutoModeSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"AutoModeSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoModeSupported());
         }
         catch (...)
@@ -7146,14 +7146,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_Default(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Default"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Default"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Default());
         }
         catch (...)
@@ -7165,14 +7165,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_Max(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -7184,14 +7184,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_Min(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -7203,14 +7203,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_Step(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -7222,14 +7222,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* MediaDeviceControlCapabilities_get_Supported(py::wrapper::Windows::Media::Devices::MediaDeviceControlCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.MediaDeviceControlCapabilities", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -7316,14 +7316,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ModuleCommandResult_get_Result(py::wrapper::Windows::Media::Devices::ModuleCommandResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ModuleCommandResult", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ModuleCommandResult", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -7335,14 +7335,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ModuleCommandResult_get_Status(py::wrapper::Windows::Media::Devices::ModuleCommandResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ModuleCommandResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ModuleCommandResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -7425,14 +7425,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* OpticalImageStabilizationControl_get_Mode(py::wrapper::Windows::Media::Devices::OpticalImageStabilizationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -7444,12 +7444,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int OpticalImageStabilizationControl_put_Mode(py::wrapper::Windows::Media::Devices::OpticalImageStabilizationControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7458,6 +7452,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::OpticalImageStabilizationMode>(arg);
 
             self->obj.Mode(param0);
@@ -7472,14 +7472,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* OpticalImageStabilizationControl_get_Supported(py::wrapper::Windows::Media::Devices::OpticalImageStabilizationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -7491,14 +7491,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* OpticalImageStabilizationControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::OpticalImageStabilizationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.OpticalImageStabilizationControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -7582,14 +7582,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* PanelBasedOptimizationControl_get_Panel(py::wrapper::Windows::Media::Devices::PanelBasedOptimizationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"Panel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"Panel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Panel());
         }
         catch (...)
@@ -7601,12 +7601,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int PanelBasedOptimizationControl_put_Panel(py::wrapper::Windows::Media::Devices::PanelBasedOptimizationControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"Panel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7615,6 +7609,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"Panel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::Panel>(arg);
 
             self->obj.Panel(param0);
@@ -7629,14 +7629,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* PanelBasedOptimizationControl_get_IsSupported(py::wrapper::Windows::Media::Devices::PanelBasedOptimizationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PanelBasedOptimizationControl", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSupported());
         }
         catch (...)
@@ -7719,14 +7719,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* PhotoConfirmationControl_get_PixelFormat(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"PixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"PixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelFormat());
         }
         catch (...)
@@ -7738,12 +7738,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int PhotoConfirmationControl_put_PixelFormat(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"PixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7752,6 +7746,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"PixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaPixelFormat>(arg);
 
             self->obj.PixelFormat(param0);
@@ -7766,14 +7766,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* PhotoConfirmationControl_get_Enabled(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -7785,12 +7785,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int PhotoConfirmationControl_put_Enabled(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7799,6 +7793,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -7813,14 +7813,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* PhotoConfirmationControl_get_Supported(py::wrapper::Windows::Media::Devices::PhotoConfirmationControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.PhotoConfirmationControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -7908,14 +7908,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RedialRequestedEventArgs", L"Handled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RedialRequestedEventArgs", L"Handled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Handled();
                 Py_RETURN_NONE;
             }
@@ -8026,14 +8026,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_Bounds(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -8045,12 +8045,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_Bounds(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8059,6 +8053,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.Bounds(param0);
@@ -8073,14 +8073,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_AutoWhiteBalanceEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoWhiteBalanceEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoWhiteBalanceEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoWhiteBalanceEnabled());
         }
         catch (...)
@@ -8092,12 +8092,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_AutoWhiteBalanceEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoWhiteBalanceEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8106,6 +8100,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoWhiteBalanceEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoWhiteBalanceEnabled(param0);
@@ -8120,14 +8120,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_AutoFocusEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoFocusEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoFocusEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoFocusEnabled());
         }
         catch (...)
@@ -8139,12 +8139,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_AutoFocusEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoFocusEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8153,6 +8147,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoFocusEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoFocusEnabled(param0);
@@ -8167,14 +8167,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_AutoExposureEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoExposureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoExposureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoExposureEnabled());
         }
         catch (...)
@@ -8186,12 +8186,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_AutoExposureEnabled(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoExposureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8200,6 +8194,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"AutoExposureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoExposureEnabled(param0);
@@ -8214,14 +8214,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_Weight(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Weight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Weight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Weight());
         }
         catch (...)
@@ -8233,12 +8233,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_Weight(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Weight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8247,6 +8241,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Weight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Weight(param0);
@@ -8261,14 +8261,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_Type(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -8280,12 +8280,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_Type(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8294,6 +8288,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::RegionOfInterestType>(arg);
 
             self->obj.Type(param0);
@@ -8308,14 +8308,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionOfInterest_get_BoundsNormalized(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"BoundsNormalized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"BoundsNormalized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundsNormalized());
         }
         catch (...)
@@ -8327,12 +8327,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int RegionOfInterest_put_BoundsNormalized(py::wrapper::Windows::Media::Devices::RegionOfInterest* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"BoundsNormalized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8341,6 +8335,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionOfInterest", L"BoundsNormalized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.BoundsNormalized(param0);
@@ -8435,14 +8435,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"ClearRegionsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"ClearRegionsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ClearRegionsAsync());
             }
             catch (...)
@@ -8464,14 +8464,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"SetRegionsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"SetRegionsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Devices::RegionOfInterest>>(args, 0);
 
                 return py::convert(self->obj.SetRegionsAsync(param0));
@@ -8484,14 +8484,14 @@ namespace py::cpp::Windows::Media::Devices
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"SetRegionsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"SetRegionsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Devices::RegionOfInterest>>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -8512,14 +8512,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionsOfInterestControl_get_AutoExposureSupported(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoExposureSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoExposureSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoExposureSupported());
         }
         catch (...)
@@ -8531,14 +8531,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionsOfInterestControl_get_AutoFocusSupported(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoFocusSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoFocusSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoFocusSupported());
         }
         catch (...)
@@ -8550,14 +8550,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionsOfInterestControl_get_AutoWhiteBalanceSupported(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoWhiteBalanceSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"AutoWhiteBalanceSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoWhiteBalanceSupported());
         }
         catch (...)
@@ -8569,14 +8569,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* RegionsOfInterestControl_get_MaxRegions(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"MaxRegions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.RegionsOfInterestControl", L"MaxRegions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxRegions());
         }
         catch (...)
@@ -8667,14 +8667,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.SceneModeControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.SceneModeControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::CaptureSceneMode>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -8694,14 +8694,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* SceneModeControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::SceneModeControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.SceneModeControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.SceneModeControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -8713,14 +8713,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* SceneModeControl_get_Value(py::wrapper::Windows::Media::Devices::SceneModeControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.SceneModeControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.SceneModeControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -8804,14 +8804,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* TorchControl_get_PowerPercent(py::wrapper::Windows::Media::Devices::TorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerPercent());
         }
         catch (...)
@@ -8823,12 +8823,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int TorchControl_put_PowerPercent(py::wrapper::Windows::Media::Devices::TorchControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8837,6 +8831,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PowerPercent(param0);
@@ -8851,14 +8851,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* TorchControl_get_Enabled(py::wrapper::Windows::Media::Devices::TorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -8870,12 +8870,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int TorchControl_put_Enabled(py::wrapper::Windows::Media::Devices::TorchControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8884,6 +8878,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -8898,14 +8898,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* TorchControl_get_PowerSupported(py::wrapper::Windows::Media::Devices::TorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"PowerSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerSupported());
         }
         catch (...)
@@ -8917,14 +8917,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* TorchControl_get_Supported(py::wrapper::Windows::Media::Devices::TorchControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.TorchControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -9013,14 +9013,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetAvailableMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetAvailableMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetAvailableMediaStreamProperties(param0));
@@ -9044,14 +9044,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDeviceProperty", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDeviceProperty", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetDeviceProperty(param0));
@@ -9075,14 +9075,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDevicePropertyByExtendedId", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDevicePropertyByExtendedId", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
@@ -9107,14 +9107,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDevicePropertyById", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetDevicePropertyById", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
@@ -9139,14 +9139,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"GetMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetMediaStreamProperties(param0));
@@ -9170,14 +9170,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDeviceProperty", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDeviceProperty", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9203,14 +9203,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDevicePropertyByExtendedId", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDevicePropertyByExtendedId", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -9235,14 +9235,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDevicePropertyById", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetDevicePropertyById", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9267,14 +9267,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetMediaStreamPropertiesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"SetMediaStreamPropertiesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 1);
 
@@ -9299,14 +9299,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TryAcquireExclusiveControl", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TryAcquireExclusiveControl", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlReleaseMode>(args, 1);
 
@@ -9331,14 +9331,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TryGetPowerlineFrequency", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TryGetPowerlineFrequency", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Media::Capture::PowerlineFrequency param0 {  };
 
                 auto return_value = self->obj.TryGetPowerlineFrequency(param0);
@@ -9374,14 +9374,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TrySetPowerlineFrequency", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.VideoDeviceController", L"TrySetPowerlineFrequency", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::PowerlineFrequency>(args, 0);
 
                 return py::convert(self->obj.TrySetPowerlineFrequency(param0));
@@ -9401,14 +9401,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_CameraOcclusionInfo(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"CameraOcclusionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"CameraOcclusionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraOcclusionInfo());
         }
         catch (...)
@@ -9420,14 +9420,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_PrimaryUse(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PrimaryUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PrimaryUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryUse());
         }
         catch (...)
@@ -9439,12 +9439,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int VideoDeviceController_put_PrimaryUse(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PrimaryUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9453,6 +9447,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PrimaryUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::CaptureUse>(arg);
 
             self->obj.PrimaryUse(param0);
@@ -9467,14 +9467,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_FocusControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"FocusControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"FocusControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusControl());
         }
         catch (...)
@@ -9486,14 +9486,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_IsoSpeedControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"IsoSpeedControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"IsoSpeedControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsoSpeedControl());
         }
         catch (...)
@@ -9505,14 +9505,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_LowLagPhoto(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"LowLagPhoto"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"LowLagPhoto"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LowLagPhoto());
         }
         catch (...)
@@ -9524,14 +9524,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_WhiteBalanceControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"WhiteBalanceControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"WhiteBalanceControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhiteBalanceControl());
         }
         catch (...)
@@ -9543,14 +9543,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_TorchControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"TorchControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"TorchControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TorchControl());
         }
         catch (...)
@@ -9562,14 +9562,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_SceneModeControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"SceneModeControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"SceneModeControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SceneModeControl());
         }
         catch (...)
@@ -9581,14 +9581,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_RegionsOfInterestControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"RegionsOfInterestControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"RegionsOfInterestControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegionsOfInterestControl());
         }
         catch (...)
@@ -9600,14 +9600,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_FlashControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"FlashControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"FlashControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlashControl());
         }
         catch (...)
@@ -9619,14 +9619,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_LowLagPhotoSequence(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"LowLagPhotoSequence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"LowLagPhotoSequence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LowLagPhotoSequence());
         }
         catch (...)
@@ -9638,14 +9638,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_ExposureCompensationControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposureCompensationControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposureCompensationControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExposureCompensationControl());
         }
         catch (...)
@@ -9657,14 +9657,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_ExposureControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposureControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposureControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExposureControl());
         }
         catch (...)
@@ -9676,14 +9676,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_ZoomControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ZoomControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ZoomControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZoomControl());
         }
         catch (...)
@@ -9695,14 +9695,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_PhotoConfirmationControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PhotoConfirmationControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PhotoConfirmationControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhotoConfirmationControl());
         }
         catch (...)
@@ -9714,14 +9714,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_VariablePhotoSequenceController(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"VariablePhotoSequenceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"VariablePhotoSequenceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VariablePhotoSequenceController());
         }
         catch (...)
@@ -9733,14 +9733,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_DesiredOptimization(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DesiredOptimization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DesiredOptimization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredOptimization());
         }
         catch (...)
@@ -9752,12 +9752,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int VideoDeviceController_put_DesiredOptimization(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DesiredOptimization"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9766,6 +9760,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DesiredOptimization"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::MediaCaptureOptimization>(arg);
 
             self->obj.DesiredOptimization(param0);
@@ -9780,14 +9780,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_AdvancedPhotoControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"AdvancedPhotoControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"AdvancedPhotoControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdvancedPhotoControl());
         }
         catch (...)
@@ -9799,14 +9799,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_ExposurePriorityVideoControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposurePriorityVideoControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"ExposurePriorityVideoControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExposurePriorityVideoControl());
         }
         catch (...)
@@ -9818,14 +9818,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_HdrVideoControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"HdrVideoControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"HdrVideoControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HdrVideoControl());
         }
         catch (...)
@@ -9837,14 +9837,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_OpticalImageStabilizationControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"OpticalImageStabilizationControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"OpticalImageStabilizationControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpticalImageStabilizationControl());
         }
         catch (...)
@@ -9856,14 +9856,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Id(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -9875,14 +9875,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_VideoTemporalDenoisingControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"VideoTemporalDenoisingControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"VideoTemporalDenoisingControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoTemporalDenoisingControl());
         }
         catch (...)
@@ -9894,14 +9894,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_InfraredTorchControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"InfraredTorchControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"InfraredTorchControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InfraredTorchControl());
         }
         catch (...)
@@ -9913,14 +9913,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_PanelBasedOptimizationControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PanelBasedOptimizationControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"PanelBasedOptimizationControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PanelBasedOptimizationControl());
         }
         catch (...)
@@ -9932,14 +9932,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_DigitalWindowControl(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DigitalWindowControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"DigitalWindowControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DigitalWindowControl());
         }
         catch (...)
@@ -9951,14 +9951,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Zoom(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Zoom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Zoom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Zoom());
         }
         catch (...)
@@ -9970,14 +9970,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Contrast(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Contrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Contrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contrast());
         }
         catch (...)
@@ -9989,14 +9989,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_BacklightCompensation(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"BacklightCompensation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"BacklightCompensation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BacklightCompensation());
         }
         catch (...)
@@ -10008,14 +10008,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_WhiteBalance(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"WhiteBalance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"WhiteBalance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhiteBalance());
         }
         catch (...)
@@ -10027,14 +10027,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Brightness(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Brightness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Brightness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Brightness());
         }
         catch (...)
@@ -10046,14 +10046,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Exposure(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Exposure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Exposure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exposure());
         }
         catch (...)
@@ -10065,14 +10065,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Tilt(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Tilt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Tilt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tilt());
         }
         catch (...)
@@ -10084,14 +10084,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Roll(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Roll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Roll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Roll());
         }
         catch (...)
@@ -10103,14 +10103,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Hue(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Hue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Hue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Hue());
         }
         catch (...)
@@ -10122,14 +10122,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Pan(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Pan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Pan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pan());
         }
         catch (...)
@@ -10141,14 +10141,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceController_get_Focus(py::wrapper::Windows::Media::Devices::VideoDeviceController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Focus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceController", L"Focus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Focus());
         }
         catch (...)
@@ -10278,14 +10278,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceControllerGetDevicePropertyResult_get_Status(py::wrapper::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -10297,14 +10297,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoDeviceControllerGetDevicePropertyResult_get_Value(py::wrapper::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoDeviceControllerGetDevicePropertyResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -10387,14 +10387,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoTemporalDenoisingControl_get_Mode(py::wrapper::Windows::Media::Devices::VideoTemporalDenoisingControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -10406,12 +10406,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int VideoTemporalDenoisingControl_put_Mode(py::wrapper::Windows::Media::Devices::VideoTemporalDenoisingControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10420,6 +10414,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::VideoTemporalDenoisingMode>(arg);
 
             self->obj.Mode(param0);
@@ -10434,14 +10434,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoTemporalDenoisingControl_get_Supported(py::wrapper::Windows::Media::Devices::VideoTemporalDenoisingControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -10453,14 +10453,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* VideoTemporalDenoisingControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::VideoTemporalDenoisingControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.VideoTemporalDenoisingControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -10548,14 +10548,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"SetPresetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"SetPresetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::ColorTemperaturePreset>(args, 0);
 
                 return py::convert(self->obj.SetPresetAsync(param0));
@@ -10579,14 +10579,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"SetValueAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"SetValueAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.SetValueAsync(param0));
@@ -10606,14 +10606,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Max(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -10625,14 +10625,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Min(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -10644,14 +10644,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Preset(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Preset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Preset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Preset());
         }
         catch (...)
@@ -10663,14 +10663,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Step(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -10682,14 +10682,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Supported(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -10701,14 +10701,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* WhiteBalanceControl_get_Value(py::wrapper::Windows::Media::Devices::WhiteBalanceControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.WhiteBalanceControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -10801,14 +10801,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ZoomControl", L"Configure", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.ZoomControl", L"Configure", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Devices::ZoomSettings>(args, 0);
 
                 self->obj.Configure(param0);
@@ -10829,14 +10829,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Value(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -10848,12 +10848,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int ZoomControl_put_Value(py::wrapper::Windows::Media::Devices::ZoomControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10862,6 +10856,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Value(param0);
@@ -10876,14 +10876,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Max(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -10895,14 +10895,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Min(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -10914,14 +10914,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Step(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Step"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Step"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Step());
         }
         catch (...)
@@ -10933,14 +10933,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Supported(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Supported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Supported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Supported());
         }
         catch (...)
@@ -10952,14 +10952,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_Mode(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -10971,14 +10971,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomControl_get_SupportedModes(py::wrapper::Windows::Media::Devices::ZoomControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"SupportedModes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomControl", L"SupportedModes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedModes());
         }
         catch (...)
@@ -11089,14 +11089,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomSettings_get_Value(py::wrapper::Windows::Media::Devices::ZoomSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -11108,12 +11108,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int ZoomSettings_put_Value(py::wrapper::Windows::Media::Devices::ZoomSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11122,6 +11116,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Value(param0);
@@ -11136,14 +11136,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* ZoomSettings_get_Mode(py::wrapper::Windows::Media::Devices::ZoomSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -11155,12 +11155,6 @@ namespace py::cpp::Windows::Media::Devices
 
     static int ZoomSettings_put_Mode(py::wrapper::Windows::Media::Devices::ZoomSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11169,6 +11163,12 @@ namespace py::cpp::Windows::Media::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.ZoomSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Devices::ZoomTransitionMode>(arg);
 
             self->obj.Mode(param0);
@@ -11254,14 +11254,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IDefaultAudioDeviceChangedEventArgs_get_Id(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -11273,14 +11273,14 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyObject* IDefaultAudioDeviceChangedEventArgs_get_Role(py::wrapper::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs", L"Role"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.IDefaultAudioDeviceChangedEventArgs", L"Role"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Role());
         }
         catch (...)
@@ -11367,14 +11367,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"GetAvailableMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"GetAvailableMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetAvailableMediaStreamProperties(param0));
@@ -11398,14 +11398,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"GetMediaStreamProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"GetMediaStreamProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
 
                 return py::convert(self->obj.GetMediaStreamProperties(param0));
@@ -11429,14 +11429,14 @@ namespace py::cpp::Windows::Media::Devices
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"SetMediaStreamPropertiesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Devices.IMediaDeviceController", L"SetMediaStreamPropertiesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaStreamType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>(args, 1);
 

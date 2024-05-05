@@ -46,14 +46,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* QuickLink_get_Title(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Title(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Title(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* QuickLink_get_Thumbnail(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Thumbnail(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::RandomAccessStreamReference>(arg);
 
             self->obj.Thumbnail(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* QuickLink_get_Id(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static int QuickLink_put_Id(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Id(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* QuickLink_get_SupportedDataFormats(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"SupportedDataFormats"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"SupportedDataFormats"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedDataFormats());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* QuickLink_get_SupportedFileTypes(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"SupportedFileTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink", L"SupportedFileTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedFileTypes());
         }
         catch (...)
@@ -303,14 +303,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"DismissUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"DismissUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DismissUI();
                 Py_RETURN_NONE;
             }
@@ -333,14 +333,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"RemoveThisQuickLink", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"RemoveThisQuickLink", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveThisQuickLink();
                 Py_RETURN_NONE;
             }
@@ -363,14 +363,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportCompleted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportCompleted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportCompleted();
                 Py_RETURN_NONE;
             }
@@ -382,14 +382,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportCompleted", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportCompleted", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>(args, 0);
 
                 self->obj.ReportCompleted(param0);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportDataRetrieved", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportDataRetrieved", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportDataRetrieved();
                 Py_RETURN_NONE;
             }
@@ -444,14 +444,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportStarted", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportStarted", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportStarted();
                 Py_RETURN_NONE;
             }
@@ -506,14 +506,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportSubmittedBackgroundTask", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"ReportSubmittedBackgroundTask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ReportSubmittedBackgroundTask();
                 Py_RETURN_NONE;
             }
@@ -532,14 +532,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_get_Data(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -551,14 +551,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_get_QuickLinkId(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"QuickLinkId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"QuickLinkId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuickLinkId());
         }
         catch (...)
@@ -570,14 +570,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 
     static PyObject* ShareOperation_get_Contacts(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"Contacts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation", L"Contacts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contacts());
         }
         catch (...)

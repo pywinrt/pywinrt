@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInBoundingBoxAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInBoundingBoxAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInBoundingBoxAsync(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInGeocircleAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"FindPackagesInGeocircleAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocircle>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage::FindPackagesInGeocircleAsync(param0));
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"RequestStartDownloadAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"RequestStartDownloadAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestStartDownloadAsync());
             }
             catch (...)
@@ -146,14 +146,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_get_DisplayName(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -165,14 +165,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_get_EnclosingRegionName(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"EnclosingRegionName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"EnclosingRegionName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnclosingRegionName());
         }
         catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_get_EstimatedSizeInBytes(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"EstimatedSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"EstimatedSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EstimatedSizeInBytes());
         }
         catch (...)
@@ -203,14 +203,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_get_Status(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_add_StatusChanged(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -243,14 +243,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackage_remove_StatusChanged(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackage", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -369,14 +369,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackageQueryResult_get_Packages(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult", L"Packages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult", L"Packages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Packages());
         }
         catch (...)
@@ -388,14 +388,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackageQueryResult_get_Status(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageQueryResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyObject* OfflineMapPackageStartDownloadResult_get_Status(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.OfflineMaps.OfflineMapPackageStartDownloadResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)

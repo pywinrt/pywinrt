@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* BufferProtectUnprotectResult_get_Buffer(py::wrapper::Windows::Security::EnterpriseData::BufferProtectUnprotectResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.BufferProtectUnprotectResult", L"Buffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.BufferProtectUnprotectResult", L"Buffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Buffer());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* BufferProtectUnprotectResult_get_ProtectionInfo(py::wrapper::Windows::Security::EnterpriseData::BufferProtectUnprotectResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.BufferProtectUnprotectResult", L"ProtectionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.BufferProtectUnprotectResult", L"ProtectionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtectionInfo());
         }
         catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionInfo_get_Identity(py::wrapper::Windows::Security::EnterpriseData::DataProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.DataProtectionInfo", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.DataProtectionInfo", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identity());
         }
         catch (...)
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* DataProtectionInfo_get_Status(py::wrapper::Windows::Security::EnterpriseData::DataProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.DataProtectionInfo", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.DataProtectionInfo", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"GetProtectionInfoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"GetProtectionInfoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetProtectionInfoAsync(param0));
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"GetStreamProtectionInfoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"GetStreamProtectionInfoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::GetStreamProtectionInfoAsync(param0));
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"ProtectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"ProtectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"ProtectStreamAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"ProtectStreamAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 2);
@@ -365,14 +365,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"UnprotectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"UnprotectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::DataProtectionManager::UnprotectAsync(param0));
@@ -396,14 +396,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"UnprotectStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.DataProtectionManager", L"UnprotectStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 1);
 
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionInfo_get_Identity(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identity());
         }
         catch (...)
@@ -516,14 +516,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionInfo_get_IsRoamable(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"IsRoamable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"IsRoamable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRoamable());
         }
         catch (...)
@@ -535,14 +535,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionInfo_get_Status(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -554,14 +554,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileProtectionInfo_get_IsProtectWhileOpenSupported(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"IsProtectWhileOpenSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileProtectionInfo", L"IsProtectWhileOpenSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsProtectWhileOpenSupported());
         }
         catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"CopyProtectionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"CopyProtectionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
@@ -674,14 +674,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"CreateProtectedAndOpenAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"CreateProtectedAndOpenAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -708,14 +708,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"GetProtectionInfoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"GetProtectionInfoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::GetProtectionInfoAsync(param0));
@@ -739,14 +739,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"IsContainerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"IsContainerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::IsContainerAsync(param0));
@@ -770,14 +770,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::LoadFileFromContainerAsync(param0));
@@ -790,14 +790,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
@@ -811,14 +811,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"LoadFileFromContainerAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"ProtectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"ProtectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -876,14 +876,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"SaveFileAsContainerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"SaveFileAsContainerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::SaveFileAsContainerAsync(param0));
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"SaveFileAsContainerAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"SaveFileAsContainerAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"UnprotectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"UnprotectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileProtectionManager::UnprotectAsync(param0));
@@ -948,14 +948,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"UnprotectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileProtectionManager", L"UnprotectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>(args, 1);
 
@@ -1047,14 +1047,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"CopyProtectionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"CopyProtectionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 1);
 
@@ -1079,14 +1079,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"GetStatusAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"GetStatusAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::FileRevocationManager::GetStatusAsync(param0));
@@ -1110,14 +1110,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"ProtectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"ProtectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"Revoke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.FileRevocationManager", L"Revoke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Security::EnterpriseData::FileRevocationManager::Revoke(param0);
@@ -1265,14 +1265,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* FileUnprotectOptions_get_Audit(py::wrapper::Windows::Security::EnterpriseData::FileUnprotectOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileUnprotectOptions", L"Audit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileUnprotectOptions", L"Audit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Audit());
         }
         catch (...)
@@ -1284,12 +1284,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int FileUnprotectOptions_put_Audit(py::wrapper::Windows::Security::EnterpriseData::FileUnprotectOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileUnprotectOptions", L"Audit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1298,6 +1292,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.FileUnprotectOptions", L"Audit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Audit(param0);
@@ -1382,14 +1382,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedAccessResumedEventArgs_get_Identities(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs", L"Identities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessResumedEventArgs", L"Identities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identities());
         }
         catch (...)
@@ -1475,14 +1475,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1500,14 +1500,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedAccessSuspendingEventArgs_get_Deadline(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -1519,14 +1519,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedAccessSuspendingEventArgs_get_Identities(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"Identities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedAccessSuspendingEventArgs", L"Identities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identities());
         }
         catch (...)
@@ -1610,14 +1610,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedContainerExportResult_get_File(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerExportResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerExportResult", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerExportResult", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -1629,14 +1629,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedContainerExportResult_get_Status(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerExportResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerExportResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerExportResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1719,14 +1719,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedContainerImportResult_get_File(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerImportResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerImportResult", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerImportResult", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -1738,14 +1738,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedContainerImportResult_get_Status(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerImportResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerImportResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContainerImportResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1828,14 +1828,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedContentRevokedEventArgs_get_Identities(py::wrapper::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs", L"Identities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedContentRevokedEventArgs", L"Identities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identities());
         }
         catch (...)
@@ -1917,14 +1917,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedFileCreateResult_get_File(py::wrapper::Windows::Security::EnterpriseData::ProtectedFileCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -1936,14 +1936,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedFileCreateResult_get_ProtectionInfo(py::wrapper::Windows::Security::EnterpriseData::ProtectedFileCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"ProtectionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"ProtectionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtectionInfo());
         }
         catch (...)
@@ -1955,14 +1955,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectedFileCreateResult_get_Stream(py::wrapper::Windows::Security::EnterpriseData::ProtectedFileCreateResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"Stream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectedFileCreateResult", L"Stream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Stream());
         }
         catch (...)
@@ -2089,14 +2089,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyAuditInfo_get_TargetDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"TargetDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"TargetDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetDescription());
         }
         catch (...)
@@ -2108,12 +2108,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_TargetDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"TargetDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2122,6 +2116,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"TargetDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetDescription(param0);
@@ -2136,14 +2136,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyAuditInfo_get_SourceDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"SourceDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"SourceDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceDescription());
         }
         catch (...)
@@ -2155,12 +2155,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_SourceDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"SourceDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2169,6 +2163,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"SourceDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SourceDescription(param0);
@@ -2183,14 +2183,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyAuditInfo_get_DataDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"DataDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"DataDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataDescription());
         }
         catch (...)
@@ -2202,12 +2202,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_DataDescription(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"DataDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2216,6 +2210,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"DataDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DataDescription(param0);
@@ -2230,14 +2230,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyAuditInfo_get_Action(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -2249,12 +2249,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyAuditInfo_put_Action(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2263,6 +2257,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>(arg);
 
             self->obj.Action(param0);
@@ -2354,14 +2354,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CheckAccess", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CheckAccess", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2386,14 +2386,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CheckAccessForApp", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CheckAccessForApp", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2418,14 +2418,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ClearProcessUIPolicy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ClearProcessUIPolicy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ClearProcessUIPolicy();
                 Py_RETURN_NONE;
             }
@@ -2448,14 +2448,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CreateCurrentThreadNetworkContext", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"CreateCurrentThreadNetworkContext", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::CreateCurrentThreadNetworkContext(param0));
@@ -2479,14 +2479,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetEnforcementLevel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetEnforcementLevel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetEnforcementLevel(param0));
@@ -2510,14 +2510,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetForCurrentView());
             }
             catch (...)
@@ -2539,14 +2539,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetPrimaryManagedIdentityForIdentity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetPrimaryManagedIdentityForIdentity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForIdentity(param0));
@@ -2570,14 +2570,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetPrimaryManagedIdentityForNetworkEndpointAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"GetPrimaryManagedIdentityForNetworkEndpointAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::GetPrimaryManagedIdentityForNetworkEndpointAsync(param0));
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"HasContentBeenRevokedSince", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"HasContentBeenRevokedSince", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -2633,14 +2633,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsFileProtectionRequiredAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsFileProtectionRequiredAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2665,14 +2665,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsFileProtectionRequiredForNewFileAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsFileProtectionRequiredForNewFileAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -2698,14 +2698,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsIdentityManaged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsIdentityManaged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsIdentityManaged(param0));
@@ -2729,14 +2729,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsProtectionUnderLockRequired", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsProtectionUnderLockRequired", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionUnderLockRequired(param0));
@@ -2760,14 +2760,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsRoamableProtectionEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsRoamableProtectionEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsRoamableProtectionEnabled(param0));
@@ -2791,14 +2791,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsUserDecryptionAllowed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsUserDecryptionAllowed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsUserDecryptionAllowed(param0));
@@ -2822,14 +2822,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"LogAuditEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"LogAuditEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -2856,14 +2856,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2877,14 +2877,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -2899,14 +2899,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -2922,14 +2922,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -2957,14 +2957,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2978,14 +2978,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3000,14 +3000,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3023,14 +3023,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessForAppAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3058,14 +3058,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForAppAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForAppAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3080,14 +3080,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForAppAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForAppAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3115,14 +3115,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForProcessAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForProcessAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3137,14 +3137,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForProcessAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RequestAccessToFilesForProcessAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>(args, 2);
@@ -3172,14 +3172,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RevokeContent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"RevokeContent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::RevokeContent(param0);
@@ -3204,14 +3204,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"TryApplyProcessUIPolicy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"TryApplyProcessUIPolicy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::TryApplyProcessUIPolicy(param0));
@@ -3231,14 +3231,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_get_Identity(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identity());
         }
         catch (...)
@@ -3250,12 +3250,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyManager_put_Identity(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3264,6 +3258,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Identity(param0);
@@ -3278,14 +3278,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_get_ShowEnterpriseIndicator(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ShowEnterpriseIndicator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ShowEnterpriseIndicator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowEnterpriseIndicator());
         }
         catch (...)
@@ -3297,12 +3297,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static int ProtectionPolicyManager_put_ShowEnterpriseIndicator(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ShowEnterpriseIndicator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3311,6 +3305,12 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ShowEnterpriseIndicator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowEnterpriseIndicator(param0);
@@ -3325,14 +3325,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_get_IsProtectionEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsProtectionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"IsProtectionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::IsProtectionEnabled());
         }
         catch (...)
@@ -3344,14 +3344,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_get_PrimaryManagedIdentity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PrimaryManagedIdentity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PrimaryManagedIdentity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PrimaryManagedIdentity());
         }
         catch (...)
@@ -3363,14 +3363,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_add_PolicyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PolicyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PolicyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0));
@@ -3384,14 +3384,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_remove_PolicyChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PolicyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"PolicyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::PolicyChanged(param0);
@@ -3406,14 +3406,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_add_ProtectedAccessResumed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessResumed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessResumed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0));
@@ -3427,14 +3427,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_remove_ProtectedAccessResumed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessResumed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessResumed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessResumed(param0);
@@ -3449,14 +3449,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_add_ProtectedAccessSuspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessSuspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessSuspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0));
@@ -3470,14 +3470,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_remove_ProtectedAccessSuspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessSuspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedAccessSuspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedAccessSuspending(param0);
@@ -3492,14 +3492,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_add_ProtectedContentRevoked(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedContentRevoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedContentRevoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0));
@@ -3513,14 +3513,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     static PyObject* ProtectionPolicyManager_remove_ProtectedContentRevoked(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedContentRevoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.EnterpriseData.ProtectionPolicyManager", L"ProtectedContentRevoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager::ProtectedContentRevoked(param0);
@@ -3667,14 +3667,14 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ThreadNetworkContext", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.EnterpriseData.ThreadNetworkContext", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }

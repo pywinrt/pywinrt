@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.ConvertLocalToScreen(param0));
@@ -48,14 +48,14 @@ namespace py::cpp::Microsoft::UI::Content
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertLocalToScreen", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>(args, 1);
 
@@ -80,14 +80,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertScreenToLocal", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"ConvertScreenToLocal", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
 
                 return py::convert(self->obj.ConvertScreenToLocal(param0));
@@ -111,14 +111,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"CreateForWindowId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentCoordinateConverter", L"CreateForWindowId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Content::ContentCoordinateConverter::CreateForWindowId(param0));
@@ -239,14 +239,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -335,14 +335,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentEnvironmentSettingChangedEventArgs_get_SettingName(py::wrapper::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs", L"SettingName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentSettingChangedEventArgs", L"SettingName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SettingName());
         }
         catch (...)
@@ -424,14 +424,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentEnvironmentStateChangedEventArgs_get_DidAppWindowIdChange(py::wrapper::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs", L"DidAppWindowIdChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs", L"DidAppWindowIdChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidAppWindowIdChange());
         }
         catch (...)
@@ -443,14 +443,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentEnvironmentStateChangedEventArgs_get_DidDisplayIdChange(py::wrapper::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs", L"DidDisplayIdChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentEnvironmentStateChangedEventArgs", L"DidDisplayIdChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidDisplayIdChange());
         }
         catch (...)
@@ -537,14 +537,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -567,14 +567,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Content::ContentIsland::Create(param0));
@@ -598,14 +598,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"FindAllForCompositor", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"FindAllForCompositor", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Content::ContentIsland::FindAllForCompositor(param0));
@@ -629,14 +629,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"FindAllForCurrentThread", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"FindAllForCurrentThread", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Content::ContentIsland::FindAllForCurrentThread());
             }
             catch (...)
@@ -658,14 +658,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetAutomationHostProvider", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetAutomationHostProvider", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAutomationHostProvider());
             }
             catch (...)
@@ -687,14 +687,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetByVisual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetByVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Content::ContentIsland::GetByVisual(param0));
@@ -718,14 +718,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetFromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetFromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Content::ContentIsland::GetFromId(param0));
@@ -749,14 +749,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetStateChangeDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"GetStateChangeDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStateChangeDeferral());
             }
             catch (...)
@@ -778,14 +778,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"RequestSize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentIsland", L"RequestSize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
 
                 self->obj.RequestSize(param0);
@@ -806,14 +806,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemBackdrop());
         }
         catch (...)
@@ -825,12 +825,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_SystemBackdrop(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -839,6 +833,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBrush>(arg);
 
             self->obj.SystemBackdrop(param0);
@@ -853,14 +853,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsIslandVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIslandVisible());
         }
         catch (...)
@@ -872,12 +872,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsIslandVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -886,6 +880,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsIslandVisible(param0);
@@ -900,14 +900,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsIslandEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIslandEnabled());
         }
         catch (...)
@@ -919,12 +919,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsIslandEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -933,6 +927,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsIslandEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsIslandEnabled(param0);
@@ -947,14 +947,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsHitTestVisibleWhenTransparent(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsHitTestVisibleWhenTransparent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsHitTestVisibleWhenTransparent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHitTestVisibleWhenTransparent());
         }
         catch (...)
@@ -966,12 +966,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_IsHitTestVisibleWhenTransparent(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsHitTestVisibleWhenTransparent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -980,6 +974,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsHitTestVisibleWhenTransparent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHitTestVisibleWhenTransparent(param0);
@@ -994,14 +994,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_AppData(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"AppData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"AppData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppData());
         }
         catch (...)
@@ -1013,12 +1013,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIsland_put_AppData(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"AppData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1027,6 +1021,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"AppData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.AppData(param0);
@@ -1041,14 +1041,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"ActualSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualSize());
         }
         catch (...)
@@ -1060,14 +1060,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"CoordinateConverter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"CoordinateConverter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateConverter());
         }
         catch (...)
@@ -1079,14 +1079,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_CustomProperties(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"CustomProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"CustomProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomProperties());
         }
         catch (...)
@@ -1098,14 +1098,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -1117,14 +1117,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_Environment(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Environment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Environment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Environment());
         }
         catch (...)
@@ -1136,14 +1136,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_Id(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1155,14 +1155,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -1174,14 +1174,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsSiteEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsSiteEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteEnabled());
         }
         catch (...)
@@ -1193,14 +1193,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsSiteVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsSiteVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteVisible());
         }
         catch (...)
@@ -1212,14 +1212,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirection());
         }
         catch (...)
@@ -1231,14 +1231,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -1250,14 +1250,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_get_IsClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIsland", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -1269,14 +1269,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_add_AutomationProviderRequested(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIsland, winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AutomationProviderRequested(param0));
@@ -1290,14 +1290,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_remove_AutomationProviderRequested(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"AutomationProviderRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"AutomationProviderRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AutomationProviderRequested(param0);
@@ -1312,14 +1312,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_add_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIsland, winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1333,14 +1333,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_remove_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1355,14 +1355,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_add_Closed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -1376,14 +1376,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_remove_Closed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -1398,14 +1398,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -1419,14 +1419,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIsland_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentIsland* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIsland", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);
@@ -1590,14 +1590,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandAutomationProviderRequestedEventArgs_get_Handled(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1609,12 +1609,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIslandAutomationProviderRequestedEventArgs_put_Handled(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1623,6 +1617,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1637,14 +1637,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandAutomationProviderRequestedEventArgs_get_AutomationProvider(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"AutomationProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"AutomationProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationProvider());
         }
         catch (...)
@@ -1656,12 +1656,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentIslandAutomationProviderRequestedEventArgs_put_AutomationProvider(py::wrapper::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"AutomationProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1670,6 +1664,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandAutomationProviderRequestedEventArgs", L"AutomationProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.AutomationProvider(param0);
@@ -1755,14 +1755,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"AppWindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"AppWindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppWindowId());
         }
         catch (...)
@@ -1774,14 +1774,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"DisplayId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"DisplayId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayId());
         }
         catch (...)
@@ -1793,14 +1793,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_add_SettingChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"SettingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"SettingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.SettingChanged(param0));
@@ -1814,14 +1814,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_remove_SettingChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"SettingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"SettingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SettingChanged(param0);
@@ -1836,14 +1836,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_add_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1857,14 +1857,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandEnvironment_remove_StateChanged(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentIslandEnvironment", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1954,14 +1954,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandStateChangedEventArgs_get_DidActualSizeChange(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidActualSizeChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidActualSizeChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidActualSizeChange());
         }
         catch (...)
@@ -1973,14 +1973,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandStateChangedEventArgs_get_DidLayoutDirectionChange(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidLayoutDirectionChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidLayoutDirectionChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidLayoutDirectionChange());
         }
         catch (...)
@@ -1992,14 +1992,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandStateChangedEventArgs_get_DidRasterizationScaleChange(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidRasterizationScaleChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidRasterizationScaleChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidRasterizationScaleChange());
         }
         catch (...)
@@ -2011,14 +2011,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandStateChangedEventArgs_get_DidSiteEnabledChange(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidSiteEnabledChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidSiteEnabledChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidSiteEnabledChange());
         }
         catch (...)
@@ -2030,14 +2030,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentIslandStateChangedEventArgs_get_DidSiteVisibleChange(py::wrapper::Microsoft::UI::Content::ContentIslandStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidSiteVisibleChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentIslandStateChangedEventArgs", L"DidSiteVisibleChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidSiteVisibleChange());
         }
         catch (...)
@@ -2127,14 +2127,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSite", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSite", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2157,14 +2157,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSite", L"GetIslandStateChangeDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSite", L"GetIslandStateChangeDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIslandStateChangeDeferral());
             }
             catch (...)
@@ -2182,14 +2182,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ShouldApplyRasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ShouldApplyRasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldApplyRasterizationScale());
         }
         catch (...)
@@ -2201,12 +2201,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ShouldApplyRasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2215,6 +2209,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ShouldApplyRasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldApplyRasterizationScale(param0);
@@ -2229,14 +2229,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ParentScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ParentScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentScale());
         }
         catch (...)
@@ -2248,12 +2248,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ParentScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2262,6 +2256,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ParentScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.ParentScale(param0);
@@ -2276,14 +2276,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverrideScale());
         }
         catch (...)
@@ -2295,12 +2295,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2309,6 +2303,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OverrideScale(param0);
@@ -2323,14 +2323,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirection());
         }
         catch (...)
@@ -2342,12 +2342,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2356,6 +2350,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentLayoutDirection>(arg);
 
             self->obj.LayoutDirection(param0);
@@ -2370,14 +2370,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteVisible());
         }
         catch (...)
@@ -2389,12 +2389,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2403,6 +2397,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSiteVisible(param0);
@@ -2417,14 +2417,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteEnabled());
         }
         catch (...)
@@ -2436,12 +2436,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2450,6 +2444,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsSiteEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSiteEnabled(param0);
@@ -2464,14 +2464,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ClientSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ClientSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientSize());
         }
         catch (...)
@@ -2483,12 +2483,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ClientSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2497,6 +2491,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ClientSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
             self->obj.ClientSize(param0);
@@ -2511,14 +2511,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ActualSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualSize());
         }
         catch (...)
@@ -2530,12 +2530,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSite_put_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ActualSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2544,6 +2538,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.ActualSize(param0);
@@ -2558,14 +2558,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"CoordinateConverter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"CoordinateConverter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateConverter());
         }
         catch (...)
@@ -2577,14 +2577,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -2596,14 +2596,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_Environment(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"Environment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"Environment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Environment());
         }
         catch (...)
@@ -2615,14 +2615,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -2634,14 +2634,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -2653,14 +2653,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_RequestedSize(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedSize());
         }
         catch (...)
@@ -2672,14 +2672,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_View(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"View"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"View"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.View());
         }
         catch (...)
@@ -2691,14 +2691,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_get_IsClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSite", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -2710,14 +2710,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_add_RequestedStateChanged(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentSite, winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.RequestedStateChanged(param0));
@@ -2731,14 +2731,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_remove_RequestedStateChanged(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"RequestedStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RequestedStateChanged(param0);
@@ -2753,14 +2753,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_add_Closed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -2774,14 +2774,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_remove_Closed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -2796,14 +2796,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -2817,14 +2817,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSite_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::ContentSite* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.ContentSite", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);
@@ -2957,14 +2957,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"NotifySettingChanged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"NotifySettingChanged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.NotifySettingChanged(param0);
@@ -2985,14 +2985,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironment_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"DisplayId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"DisplayId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayId());
         }
         catch (...)
@@ -3004,12 +3004,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSiteEnvironment_put_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"DisplayId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3018,6 +3012,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"DisplayId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::DisplayId>(arg);
 
             self->obj.DisplayId(param0);
@@ -3032,14 +3032,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironment_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"AppWindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"AppWindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppWindowId());
         }
         catch (...)
@@ -3051,12 +3051,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int ContentSiteEnvironment_put_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"AppWindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3065,6 +3059,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"AppWindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(arg);
 
             self->obj.AppWindowId(param0);
@@ -3079,14 +3079,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironment_get_View(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"View"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironment", L"View"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.View());
         }
         catch (...)
@@ -3171,14 +3171,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironmentView_get_AppWindowId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironmentView", L"AppWindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironmentView", L"AppWindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppWindowId());
         }
         catch (...)
@@ -3190,14 +3190,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteEnvironmentView_get_DisplayId(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironmentView", L"DisplayId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteEnvironmentView", L"DisplayId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayId());
         }
         catch (...)
@@ -3280,14 +3280,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteRequestedStateChangedEventArgs_get_DidRequestedSizeChange(py::wrapper::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs", L"DidRequestedSizeChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteRequestedStateChangedEventArgs", L"DidRequestedSizeChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DidRequestedSizeChange());
         }
         catch (...)
@@ -3369,14 +3369,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_ActualSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ActualSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ActualSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualSize());
         }
         catch (...)
@@ -3388,14 +3388,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_ClientSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ClientSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ClientSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClientSize());
         }
         catch (...)
@@ -3407,14 +3407,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_CoordinateConverter(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"CoordinateConverter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"CoordinateConverter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateConverter());
         }
         catch (...)
@@ -3426,14 +3426,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -3445,14 +3445,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_EnvironmentView(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"EnvironmentView"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"EnvironmentView"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnvironmentView());
         }
         catch (...)
@@ -3464,14 +3464,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_IsConnected(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -3483,14 +3483,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_IsSiteEnabled(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsSiteEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsSiteEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteEnabled());
         }
         catch (...)
@@ -3502,14 +3502,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_IsSiteVisible(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsSiteVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"IsSiteVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSiteVisible());
         }
         catch (...)
@@ -3521,14 +3521,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_LayoutDirection(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"LayoutDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"LayoutDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirection());
         }
         catch (...)
@@ -3540,14 +3540,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_OverrideScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverrideScale());
         }
         catch (...)
@@ -3559,14 +3559,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_ParentScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ParentScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ParentScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentScale());
         }
         catch (...)
@@ -3578,14 +3578,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_RasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"RasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"RasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RasterizationScale());
         }
         catch (...)
@@ -3597,14 +3597,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_RequestedSize(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"RequestedSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"RequestedSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedSize());
         }
         catch (...)
@@ -3616,14 +3616,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* ContentSiteView_get_ShouldApplyRasterizationScale(py::wrapper::Microsoft::UI::Content::ContentSiteView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ShouldApplyRasterizationScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.ContentSiteView", L"ShouldApplyRasterizationScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldApplyRasterizationScale());
         }
         catch (...)
@@ -3722,14 +3722,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"Create", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"Create", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 1);
 
@@ -3750,14 +3750,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopChildSiteBridge_get_ResizePolicy(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"ResizePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"ResizePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResizePolicy());
         }
         catch (...)
@@ -3769,12 +3769,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopChildSiteBridge_put_ResizePolicy(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"ResizePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3783,6 +3777,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"ResizePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentSizePolicy>(arg);
 
             self->obj.ResizePolicy(param0);
@@ -3797,14 +3797,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopChildSiteBridge_get_SiteView(py::wrapper::Microsoft::UI::Content::DesktopChildSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"SiteView"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopChildSiteBridge", L"SiteView"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SiteView());
         }
         catch (...)
@@ -3917,14 +3917,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3947,14 +3947,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Connect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Connect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
 
                 self->obj.Connect(param0);
@@ -3979,14 +3979,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Disable", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Disable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Disable();
                 Py_RETURN_NONE;
             }
@@ -4009,14 +4009,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Enable", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Enable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Enable();
                 Py_RETURN_NONE;
             }
@@ -4039,14 +4039,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Hide", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Hide", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Hide();
                 Py_RETURN_NONE;
             }
@@ -4069,14 +4069,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Content::DesktopSiteBridge::IsSupported());
             }
             catch (...)
@@ -4098,14 +4098,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveAndResize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveAndResize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
 
                 self->obj.MoveAndResize(param0);
@@ -4130,14 +4130,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtBottom", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtBottom", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MoveInZOrderAtBottom();
                 Py_RETURN_NONE;
             }
@@ -4160,14 +4160,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtTop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderAtTop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MoveInZOrderAtTop();
                 Py_RETURN_NONE;
             }
@@ -4190,14 +4190,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderBelow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"MoveInZOrderBelow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
                 self->obj.MoveInZOrderBelow(param0);
@@ -4222,14 +4222,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Show", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Show", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Show();
                 Py_RETURN_NONE;
             }
@@ -4248,14 +4248,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverrideScale());
         }
         catch (...)
@@ -4267,12 +4267,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4281,6 +4275,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OverrideScale(param0);
@@ -4295,14 +4295,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirectionOverride());
         }
         catch (...)
@@ -4314,12 +4314,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int DesktopSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4328,6 +4322,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
 
             self->obj.LayoutDirectionOverride(param0);
@@ -4342,14 +4342,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -4361,14 +4361,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_IsEnabled(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -4380,14 +4380,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_IsVisible(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -4399,14 +4399,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_WindowId(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"WindowId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"WindowId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WindowId());
         }
         catch (...)
@@ -4418,14 +4418,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_get_IsClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -4437,14 +4437,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_add_Closed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -4458,14 +4458,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_remove_Closed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -4480,14 +4480,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_add_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -4501,14 +4501,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* DesktopSiteBridge_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Content.DesktopSiteBridge", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);
@@ -4664,14 +4664,14 @@ namespace py::cpp::Microsoft::UI::Content
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4690,14 +4690,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* IContentSiteBridge_get_DispatcherQueue(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -4709,14 +4709,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* IContentSiteBridge_get_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"LayoutDirectionOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LayoutDirectionOverride());
         }
         catch (...)
@@ -4728,12 +4728,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int IContentSiteBridge_put_LayoutDirectionOverride(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"LayoutDirectionOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4742,6 +4736,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"LayoutDirectionOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
 
             self->obj.LayoutDirectionOverride(param0);
@@ -4756,14 +4756,14 @@ namespace py::cpp::Microsoft::UI::Content
 
     static PyObject* IContentSiteBridge_get_OverrideScale(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverrideScale());
         }
         catch (...)
@@ -4775,12 +4775,6 @@ namespace py::cpp::Microsoft::UI::Content
 
     static int IContentSiteBridge_put_OverrideScale(py::wrapper::Microsoft::UI::Content::IContentSiteBridge* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"OverrideScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4789,6 +4783,12 @@ namespace py::cpp::Microsoft::UI::Content
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Content.IContentSiteBridge", L"OverrideScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OverrideScale(param0);

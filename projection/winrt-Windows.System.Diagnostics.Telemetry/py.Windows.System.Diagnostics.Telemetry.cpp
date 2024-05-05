@@ -20,14 +20,14 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient", L"Register", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient", L"Register", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient::Register(param0));
@@ -40,14 +40,14 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient", L"Register", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient", L"Register", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>(args, 1);
 
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyObject* PlatformTelemetryRegistrationResult_get_Status(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -247,14 +247,14 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyObject* PlatformTelemetryRegistrationSettings_get_UploadQuotaSize(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"UploadQuotaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"UploadQuotaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UploadQuotaSize());
         }
         catch (...)
@@ -266,12 +266,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static int PlatformTelemetryRegistrationSettings_put_UploadQuotaSize(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"UploadQuotaSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -280,6 +274,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"UploadQuotaSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.UploadQuotaSize(param0);
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyObject* PlatformTelemetryRegistrationSettings_get_StorageSize(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"StorageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"StorageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StorageSize());
         }
         catch (...)
@@ -313,12 +313,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static int PlatformTelemetryRegistrationSettings_put_StorageSize(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"StorageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -327,6 +321,12 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.Telemetry.PlatformTelemetryRegistrationSettings", L"StorageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.StorageSize(param0);

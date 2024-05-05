@@ -137,14 +137,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BackEase_get_Amplitude(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"Amplitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"Amplitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Amplitude());
         }
         catch (...)
@@ -156,12 +156,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BackEase_put_Amplitude(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"Amplitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -170,6 +164,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"Amplitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Amplitude(param0);
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BackEase_get_AmplitudeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"AmplitudeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BackEase", L"AmplitudeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::BackEase::AmplitudeProperty());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BeginStoryboard_get_Storyboard(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Storyboard());
         }
         catch (...)
@@ -431,12 +431,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BeginStoryboard_put_Storyboard(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"Storyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -445,6 +439,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"Storyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Storyboard>(arg);
 
             self->obj.Storyboard(param0);
@@ -459,14 +459,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BeginStoryboard_get_StoryboardProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"StoryboardProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BeginStoryboard", L"StoryboardProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard::StoryboardProperty());
         }
         catch (...)
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BounceEase_get_Bounciness(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounciness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounciness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounciness());
         }
         catch (...)
@@ -615,12 +615,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BounceEase_put_Bounciness(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounciness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -629,6 +623,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounciness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Bounciness(param0);
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BounceEase_get_Bounces(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounces"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounces"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounces());
         }
         catch (...)
@@ -662,12 +662,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int BounceEase_put_Bounces(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounces"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -676,6 +670,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"Bounces"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Bounces(param0);
@@ -690,14 +690,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BounceEase_get_BouncesProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"BouncesProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"BouncesProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::BounceEase::BouncesProperty());
         }
         catch (...)
@@ -709,14 +709,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* BounceEase_get_BouncinessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"BouncinessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.BounceEase", L"BouncinessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::BounceEase::BouncinessProperty());
         }
         catch (...)
@@ -939,14 +939,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -958,12 +958,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -972,6 +966,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.To(param0);
@@ -986,14 +986,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_From(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -1005,12 +1005,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1019,6 +1013,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.From(param0);
@@ -1033,14 +1033,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -1052,12 +1052,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1066,6 +1060,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -1080,14 +1080,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -1099,12 +1099,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1113,6 +1107,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -1127,14 +1127,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_By(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.By());
         }
         catch (...)
@@ -1146,12 +1146,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1160,6 +1154,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.By(param0);
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_ByProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"ByProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"ByProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation::ByProperty());
         }
         catch (...)
@@ -1193,14 +1193,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation::EasingFunctionProperty());
         }
         catch (...)
@@ -1212,14 +1212,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_FromProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"FromProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"FromProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation::FromProperty());
         }
         catch (...)
@@ -1250,14 +1250,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimation_get_ToProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"ToProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimation", L"ToProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation::ToProperty());
         }
         catch (...)
@@ -1395,14 +1395,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -1414,12 +1414,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1428,6 +1422,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -1442,14 +1442,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimationUsingKeyFrames_get_KeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"KeyFrames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"KeyFrames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyFrames());
         }
         catch (...)
@@ -1461,14 +1461,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorAnimationUsingKeyFrames_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1596,12 +1596,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorKeyFrame_put_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1610,6 +1604,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Value(param0);
@@ -1624,14 +1624,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrame_get_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTime());
         }
         catch (...)
@@ -1643,12 +1643,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ColorKeyFrame_put_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1657,6 +1651,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>(arg);
 
             self->obj.KeyTime(param0);
@@ -1671,14 +1671,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrame_get_KeyTimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTimeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"KeyTimeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame::KeyTimeProperty());
         }
         catch (...)
@@ -1690,14 +1690,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrame_get_ValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"ValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrame", L"ValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame::ValueProperty());
         }
         catch (...)
@@ -1833,14 +1833,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(args, 0);
 
                 self->obj.Append(param0);
@@ -1865,14 +1865,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -1895,14 +1895,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1924,14 +1924,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -1955,14 +1955,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame, true>>(args, 1);
 
@@ -1987,14 +1987,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -2016,14 +2016,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(args, 0);
                 uint32_t param1 {  };
 
@@ -2060,14 +2060,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(args, 1);
 
@@ -2093,14 +2093,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -2125,14 +2125,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -2155,14 +2155,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -2187,14 +2187,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>(args, 1);
 
@@ -2216,14 +2216,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ColorKeyFrameCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ColorKeyFrameCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"GetIsStaggerElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"GetIsStaggerElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo::GetIsStaggerElement(param0));
@@ -2503,14 +2503,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"SetIsStaggerElement", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"SetIsStaggerElement", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -2532,14 +2532,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* CommonNavigationTransitionInfo_get_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStaggeringEnabled());
         }
         catch (...)
@@ -2551,12 +2551,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int CommonNavigationTransitionInfo_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2565,6 +2559,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStaggeringEnabled(param0);
@@ -2579,14 +2579,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* CommonNavigationTransitionInfo_get_IsStaggerElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggerElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggerElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo::IsStaggerElementProperty());
         }
         catch (...)
@@ -2598,14 +2598,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* CommonNavigationTransitionInfo_get_IsStaggeringEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.CommonNavigationTransitionInfo", L"IsStaggeringEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo::IsStaggeringEnabledProperty());
         }
         catch (...)
@@ -2720,14 +2720,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -2750,14 +2750,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"SetAnimationComponent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"SetAnimationComponent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"TryStart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"TryStart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(self->obj.TryStart(param0));
@@ -2803,14 +2803,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"TryStart", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"TryStart", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Xaml::UIElement>>(args, 1);
 
@@ -2831,14 +2831,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_get_IsScaleAnimationEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"IsScaleAnimationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"IsScaleAnimationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScaleAnimationEnabled());
         }
         catch (...)
@@ -2850,12 +2850,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimation_put_IsScaleAnimationEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"IsScaleAnimationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2864,6 +2858,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"IsScaleAnimationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsScaleAnimationEnabled(param0);
@@ -2878,14 +2878,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_get_Configuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -2897,12 +2897,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimation_put_Configuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2911,6 +2905,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>(arg);
 
             self->obj.Configuration(param0);
@@ -2925,14 +2925,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_add_Completed(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -2946,14 +2946,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimation_remove_Completed(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -3117,14 +3117,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"GetAnimation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"GetAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetAnimation(param0));
@@ -3148,14 +3148,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService::GetForCurrentView());
             }
             catch (...)
@@ -3177,14 +3177,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"PrepareToAnimate", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"PrepareToAnimate", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 1);
 
@@ -3205,14 +3205,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimationService_get_DefaultEasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultEasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultEasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultEasingFunction());
         }
         catch (...)
@@ -3224,12 +3224,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimationService_put_DefaultEasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultEasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3238,6 +3232,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultEasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunction>(arg);
 
             self->obj.DefaultEasingFunction(param0);
@@ -3252,14 +3252,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ConnectedAnimationService_get_DefaultDuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultDuration());
         }
         catch (...)
@@ -3271,12 +3271,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ConnectedAnimationService_put_DefaultDuration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3285,6 +3279,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ConnectedAnimationService", L"DefaultDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DefaultDuration(param0);
@@ -3420,14 +3420,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContentThemeTransition_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -3439,12 +3439,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContentThemeTransition_put_VerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3453,6 +3447,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.VerticalOffset(param0);
@@ -3467,14 +3467,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContentThemeTransition_get_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -3486,12 +3486,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContentThemeTransition_put_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3500,6 +3494,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.HorizontalOffset(param0);
@@ -3514,14 +3514,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContentThemeTransition_get_HorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"HorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition::HorizontalOffsetProperty());
         }
         catch (...)
@@ -3533,14 +3533,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContentThemeTransition_get_VerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContentThemeTransition", L"VerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition::VerticalOffsetProperty());
         }
         catch (...)
@@ -3676,14 +3676,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetExitElementContainer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetExitElementContainer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ListViewBase>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::GetExitElementContainer(param0));
@@ -3707,14 +3707,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetIsEntranceElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetIsEntranceElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::GetIsEntranceElement(param0));
@@ -3738,14 +3738,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetIsExitElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"GetIsExitElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::GetIsExitElement(param0));
@@ -3769,14 +3769,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetExitElementContainer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetExitElementContainer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ListViewBase>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -3802,14 +3802,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetIsEntranceElement", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetIsEntranceElement", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -3835,14 +3835,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetIsExitElement", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"SetIsExitElement", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -3864,14 +3864,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_get_ExitElement(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitElement());
         }
         catch (...)
@@ -3883,12 +3883,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ContinuumNavigationTransitionInfo_put_ExitElement(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3897,6 +3891,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
             self->obj.ExitElement(param0);
@@ -3911,14 +3911,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_get_ExitElementContainerProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElementContainerProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElementContainerProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::ExitElementContainerProperty());
         }
         catch (...)
@@ -3930,14 +3930,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_get_ExitElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"ExitElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::ExitElementProperty());
         }
         catch (...)
@@ -3949,14 +3949,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_get_IsEntranceElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"IsEntranceElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"IsEntranceElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::IsEntranceElementProperty());
         }
         catch (...)
@@ -3968,14 +3968,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ContinuumNavigationTransitionInfo_get_IsExitElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"IsExitElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo", L"IsExitElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo::IsExitElementProperty());
         }
         catch (...)
@@ -4660,14 +4660,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -4679,12 +4679,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4693,6 +4687,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.To(param0);
@@ -4707,14 +4707,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_From(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -4726,12 +4726,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4740,6 +4734,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.From(param0);
@@ -4754,14 +4754,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -4773,12 +4773,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4787,6 +4781,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -4801,14 +4801,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -4820,12 +4820,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4834,6 +4828,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -4848,14 +4848,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_By(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.By());
         }
         catch (...)
@@ -4867,12 +4867,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4881,6 +4875,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.By(param0);
@@ -4895,14 +4895,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_ByProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"ByProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"ByProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation::ByProperty());
         }
         catch (...)
@@ -4914,14 +4914,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation::EasingFunctionProperty());
         }
         catch (...)
@@ -4933,14 +4933,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -4952,14 +4952,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_FromProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"FromProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"FromProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation::FromProperty());
         }
         catch (...)
@@ -4971,14 +4971,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimation_get_ToProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"ToProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimation", L"ToProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation::ToProperty());
         }
         catch (...)
@@ -5116,14 +5116,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -5135,12 +5135,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5149,6 +5143,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -5163,14 +5163,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimationUsingKeyFrames_get_KeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"KeyFrames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"KeyFrames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyFrames());
         }
         catch (...)
@@ -5182,14 +5182,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleAnimationUsingKeyFrames_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -5298,14 +5298,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -5317,12 +5317,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleKeyFrame_put_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5331,6 +5325,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Value(param0);
@@ -5345,14 +5345,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrame_get_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTime());
         }
         catch (...)
@@ -5364,12 +5364,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DoubleKeyFrame_put_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5378,6 +5372,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>(arg);
 
             self->obj.KeyTime(param0);
@@ -5392,14 +5392,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrame_get_KeyTimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTimeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"KeyTimeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame::KeyTimeProperty());
         }
         catch (...)
@@ -5411,14 +5411,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrame_get_ValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"ValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrame", L"ValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame::ValueProperty());
         }
         catch (...)
@@ -5554,14 +5554,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(args, 0);
 
                 self->obj.Append(param0);
@@ -5586,14 +5586,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -5616,14 +5616,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -5645,14 +5645,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -5676,14 +5676,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame, true>>(args, 1);
 
@@ -5708,14 +5708,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -5737,14 +5737,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(args, 0);
                 uint32_t param1 {  };
 
@@ -5781,14 +5781,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(args, 1);
 
@@ -5814,14 +5814,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -5846,14 +5846,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -5876,14 +5876,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -5908,14 +5908,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>(args, 1);
 
@@ -5937,14 +5937,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DoubleKeyFrameCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DoubleKeyFrameCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -6189,14 +6189,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragItemThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -6208,12 +6208,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragItemThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6222,6 +6216,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -6236,14 +6236,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragItemThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -6373,14 +6373,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_ToOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToOffset());
         }
         catch (...)
@@ -6392,12 +6392,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_ToOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6406,6 +6400,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ToOffset(param0);
@@ -6420,14 +6420,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -6439,12 +6439,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6453,6 +6447,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -6467,14 +6467,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_Direction(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -6486,12 +6486,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DragOverThemeAnimation_put_Direction(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6500,6 +6494,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection>(arg);
 
             self->obj.Direction(param0);
@@ -6514,14 +6514,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_DirectionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"DirectionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"DirectionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation::DirectionProperty());
         }
         catch (...)
@@ -6533,14 +6533,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -6552,14 +6552,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DragOverThemeAnimation_get_ToOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation", L"ToOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation::ToOffsetProperty());
         }
         catch (...)
@@ -6784,14 +6784,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitTargetName());
         }
         catch (...)
@@ -6803,12 +6803,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6817,6 +6811,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ExitTargetName(param0);
@@ -6831,14 +6831,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitTarget());
         }
         catch (...)
@@ -6850,12 +6850,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6864,6 +6858,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ExitTarget(param0);
@@ -6878,14 +6878,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EntranceTargetName());
         }
         catch (...)
@@ -6897,12 +6897,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6911,6 +6905,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.EntranceTargetName(param0);
@@ -6925,14 +6925,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EntranceTarget());
         }
         catch (...)
@@ -6944,12 +6944,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillInThemeAnimation_put_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6958,6 +6952,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.EntranceTarget(param0);
@@ -6972,14 +6972,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_EntranceTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation::EntranceTargetNameProperty());
         }
         catch (...)
@@ -6991,14 +6991,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_EntranceTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"EntranceTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation::EntranceTargetProperty());
         }
         catch (...)
@@ -7010,14 +7010,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_ExitTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation::ExitTargetNameProperty());
         }
         catch (...)
@@ -7029,14 +7029,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillInThemeAnimation_get_ExitTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillInThemeAnimation", L"ExitTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation::ExitTargetProperty());
         }
         catch (...)
@@ -7172,14 +7172,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitTargetName());
         }
         catch (...)
@@ -7191,12 +7191,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_ExitTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7205,6 +7199,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ExitTargetName(param0);
@@ -7219,14 +7219,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitTarget());
         }
         catch (...)
@@ -7238,12 +7238,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_ExitTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7252,6 +7246,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ExitTarget(param0);
@@ -7266,14 +7266,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EntranceTargetName());
         }
         catch (...)
@@ -7285,12 +7285,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_EntranceTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7299,6 +7293,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.EntranceTargetName(param0);
@@ -7313,14 +7313,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EntranceTarget());
         }
         catch (...)
@@ -7332,12 +7332,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DrillOutThemeAnimation_put_EntranceTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7346,6 +7340,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.EntranceTarget(param0);
@@ -7360,14 +7360,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_EntranceTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation::EntranceTargetNameProperty());
         }
         catch (...)
@@ -7379,14 +7379,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_EntranceTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"EntranceTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation::EntranceTargetProperty());
         }
         catch (...)
@@ -7398,14 +7398,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_ExitTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation::ExitTargetNameProperty());
         }
         catch (...)
@@ -7417,14 +7417,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DrillOutThemeAnimation_get_ExitTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DrillOutThemeAnimation", L"ExitTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation::ExitTargetProperty());
         }
         catch (...)
@@ -7560,14 +7560,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DropTargetItemThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -7579,12 +7579,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int DropTargetItemThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7593,6 +7587,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -7607,14 +7607,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* DropTargetItemThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -7744,14 +7744,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingColorKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -7763,12 +7763,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingColorKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7777,6 +7771,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -7791,14 +7791,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingColorKeyFrame_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingColorKeyFrame", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame::EasingFunctionProperty());
         }
         catch (...)
@@ -7928,14 +7928,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingDoubleKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -7947,12 +7947,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingDoubleKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7961,6 +7955,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -7975,14 +7975,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingDoubleKeyFrame_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingDoubleKeyFrame", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame::EasingFunctionProperty());
         }
         catch (...)
@@ -8094,14 +8094,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"Ease", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Ease(param0));
@@ -8121,14 +8121,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingFunctionBase_get_EasingMode(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingMode());
         }
         catch (...)
@@ -8140,12 +8140,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingFunctionBase_put_EasingMode(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8154,6 +8148,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingMode>(arg);
 
             self->obj.EasingMode(param0);
@@ -8168,14 +8168,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingFunctionBase_get_EasingModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingFunctionBase", L"EasingModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase::EasingModeProperty());
         }
         catch (...)
@@ -8306,14 +8306,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingPointKeyFrame_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -8325,12 +8325,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EasingPointKeyFrame_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8339,6 +8333,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -8353,14 +8353,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EasingPointKeyFrame_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EasingPointKeyFrame", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame::EasingFunctionProperty());
         }
         catch (...)
@@ -8490,14 +8490,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EdgeUIThemeTransition_get_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Edge());
         }
         catch (...)
@@ -8509,12 +8509,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EdgeUIThemeTransition_put_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8523,6 +8517,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::EdgeTransitionLocation>(arg);
 
             self->obj.Edge(param0);
@@ -8537,14 +8537,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EdgeUIThemeTransition_get_EdgeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"EdgeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition", L"EdgeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition::EdgeProperty());
         }
         catch (...)
@@ -8674,14 +8674,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ElasticEase_get_Springiness(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Springiness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Springiness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Springiness());
         }
         catch (...)
@@ -8693,12 +8693,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ElasticEase_put_Springiness(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Springiness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8707,6 +8701,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Springiness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Springiness(param0);
@@ -8721,14 +8721,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ElasticEase_get_Oscillations(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Oscillations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Oscillations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Oscillations());
         }
         catch (...)
@@ -8740,12 +8740,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ElasticEase_put_Oscillations(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Oscillations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8754,6 +8748,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"Oscillations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Oscillations(param0);
@@ -8768,14 +8768,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ElasticEase_get_OscillationsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"OscillationsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"OscillationsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ElasticEase::OscillationsProperty());
         }
         catch (...)
@@ -8787,14 +8787,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ElasticEase_get_SpringinessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"SpringinessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ElasticEase", L"SpringinessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ElasticEase::SpringinessProperty());
         }
         catch (...)
@@ -8930,14 +8930,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"GetIsTargetElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"GetIsTargetElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo::GetIsTargetElement(param0));
@@ -8961,14 +8961,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"SetIsTargetElement", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"SetIsTargetElement", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -8990,14 +8990,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceNavigationTransitionInfo_get_IsTargetElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"IsTargetElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo", L"IsTargetElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo::IsTargetElementProperty());
         }
         catch (...)
@@ -9128,14 +9128,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStaggeringEnabled());
         }
         catch (...)
@@ -9147,12 +9147,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9161,6 +9155,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStaggeringEnabled(param0);
@@ -9175,14 +9175,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -9194,12 +9194,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9208,6 +9202,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromVerticalOffset(param0);
@@ -9222,14 +9222,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -9241,12 +9241,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int EntranceThemeTransition_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9255,6 +9249,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromHorizontalOffset(param0);
@@ -9269,14 +9269,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_FromHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition::FromHorizontalOffsetProperty());
         }
         catch (...)
@@ -9288,14 +9288,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_FromVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"FromVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition::FromVerticalOffsetProperty());
         }
         catch (...)
@@ -9307,14 +9307,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* EntranceThemeTransition_get_IsStaggeringEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.EntranceThemeTransition", L"IsStaggeringEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition::IsStaggeringEnabledProperty());
         }
         catch (...)
@@ -9448,14 +9448,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ExponentialEase_get_Exponent(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"Exponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"Exponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exponent());
         }
         catch (...)
@@ -9467,12 +9467,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ExponentialEase_put_Exponent(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"Exponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9481,6 +9475,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"Exponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Exponent(param0);
@@ -9495,14 +9495,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ExponentialEase_get_ExponentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"ExponentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ExponentialEase", L"ExponentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase::ExponentProperty());
         }
         catch (...)
@@ -9632,14 +9632,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* FadeInThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -9651,12 +9651,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int FadeInThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9665,6 +9659,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -9679,14 +9679,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* FadeInThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -9816,14 +9816,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* FadeOutThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -9835,12 +9835,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int FadeOutThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9849,6 +9843,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -9863,14 +9863,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* FadeOutThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -10000,14 +10000,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* GravityConnectedAnimationConfiguration_get_IsShadowEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration", L"IsShadowEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration", L"IsShadowEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsShadowEnabled());
         }
         catch (...)
@@ -10019,12 +10019,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int GravityConnectedAnimationConfiguration_put_IsShadowEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration", L"IsShadowEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10033,6 +10027,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.GravityConnectedAnimationConfiguration", L"IsShadowEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsShadowEnabled(param0);
@@ -10139,14 +10139,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* KeySpline_get_ControlPoint2(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlPoint2());
         }
         catch (...)
@@ -10158,12 +10158,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int KeySpline_put_ControlPoint2(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10172,6 +10166,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.ControlPoint2(param0);
@@ -10186,14 +10186,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* KeySpline_get_ControlPoint1(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlPoint1());
         }
         catch (...)
@@ -10205,12 +10205,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int KeySpline_put_ControlPoint1(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10219,6 +10213,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.KeySpline", L"ControlPoint1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.ControlPoint1(param0);
@@ -10308,14 +10308,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.KeyTimeHelper", L"FromTimeSpan", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.KeyTimeHelper", L"FromTimeSpan", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper::FromTimeSpan(param0));
@@ -10725,14 +10725,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* NavigationThemeTransition_get_DefaultNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultNavigationTransitionInfo());
         }
         catch (...)
@@ -10744,12 +10744,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int NavigationThemeTransition_put_DefaultNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10758,6 +10752,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>(arg);
 
             self->obj.DefaultNavigationTransitionInfo(param0);
@@ -10772,14 +10772,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* NavigationThemeTransition_get_DefaultNavigationTransitionInfoProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfoProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.NavigationThemeTransition", L"DefaultNavigationTransitionInfoProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition::DefaultNavigationTransitionInfoProperty());
         }
         catch (...)
@@ -10978,14 +10978,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -10997,12 +10997,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11011,6 +11005,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -11025,14 +11025,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectAnimationUsingKeyFrames_get_KeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"KeyFrames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"KeyFrames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyFrames());
         }
         catch (...)
@@ -11044,14 +11044,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectAnimationUsingKeyFrames_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -11160,14 +11160,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -11179,12 +11179,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectKeyFrame_put_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11193,6 +11187,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Value(param0);
@@ -11207,14 +11207,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrame_get_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTime());
         }
         catch (...)
@@ -11226,12 +11226,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int ObjectKeyFrame_put_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11240,6 +11234,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>(arg);
 
             self->obj.KeyTime(param0);
@@ -11254,14 +11254,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrame_get_KeyTimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTimeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"KeyTimeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame::KeyTimeProperty());
         }
         catch (...)
@@ -11273,14 +11273,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrame_get_ValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"ValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrame", L"ValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame::ValueProperty());
         }
         catch (...)
@@ -11416,14 +11416,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(args, 0);
 
                 self->obj.Append(param0);
@@ -11448,14 +11448,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -11478,14 +11478,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -11507,14 +11507,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -11538,14 +11538,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame, true>>(args, 1);
 
@@ -11570,14 +11570,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -11599,14 +11599,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(args, 0);
                 uint32_t param1 {  };
 
@@ -11643,14 +11643,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(args, 1);
 
@@ -11676,14 +11676,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -11708,14 +11708,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -11738,14 +11738,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -11770,14 +11770,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>(args, 1);
 
@@ -11799,14 +11799,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* ObjectKeyFrameCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.ObjectKeyFrameCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -12051,14 +12051,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PaneThemeTransition_get_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Edge());
         }
         catch (...)
@@ -12070,12 +12070,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PaneThemeTransition_put_Edge(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12084,6 +12078,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::EdgeTransitionLocation>(arg);
 
             self->obj.Edge(param0);
@@ -12098,14 +12098,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PaneThemeTransition_get_EdgeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"EdgeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PaneThemeTransition", L"EdgeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition::EdgeProperty());
         }
         catch (...)
@@ -12235,14 +12235,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_To(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.To());
         }
         catch (...)
@@ -12254,12 +12254,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_To(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"To"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12268,6 +12262,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"To"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
             self->obj.To(param0);
@@ -12282,14 +12282,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_From(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.From());
         }
         catch (...)
@@ -12301,12 +12301,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_From(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"From"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12315,6 +12309,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"From"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
             self->obj.From(param0);
@@ -12329,14 +12329,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -12348,12 +12348,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12362,6 +12356,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -12376,14 +12376,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EasingFunction());
         }
         catch (...)
@@ -12395,12 +12395,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_EasingFunction(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12409,6 +12403,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>(arg);
 
             self->obj.EasingFunction(param0);
@@ -12423,14 +12423,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_By(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.By());
         }
         catch (...)
@@ -12442,12 +12442,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimation_put_By(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"By"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12456,6 +12450,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"By"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
             self->obj.By(param0);
@@ -12470,14 +12470,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_ByProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"ByProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"ByProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimation::ByProperty());
         }
         catch (...)
@@ -12489,14 +12489,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_EasingFunctionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunctionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EasingFunctionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimation::EasingFunctionProperty());
         }
         catch (...)
@@ -12508,14 +12508,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimation::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -12527,14 +12527,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_FromProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"FromProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"FromProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimation::FromProperty());
         }
         catch (...)
@@ -12546,14 +12546,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimation_get_ToProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"ToProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimation", L"ToProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimation::ToProperty());
         }
         catch (...)
@@ -12691,14 +12691,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimationUsingKeyFrames_get_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnableDependentAnimation());
         }
         catch (...)
@@ -12710,12 +12710,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointAnimationUsingKeyFrames_put_EnableDependentAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12724,6 +12718,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EnableDependentAnimation(param0);
@@ -12738,14 +12738,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimationUsingKeyFrames_get_KeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"KeyFrames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"KeyFrames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyFrames());
         }
         catch (...)
@@ -12757,14 +12757,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointAnimationUsingKeyFrames_get_EnableDependentAnimationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointAnimationUsingKeyFrames", L"EnableDependentAnimationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames::EnableDependentAnimationProperty());
         }
         catch (...)
@@ -12873,14 +12873,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrame_get_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -12892,12 +12892,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointKeyFrame_put_Value(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12906,6 +12900,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
             self->obj.Value(param0);
@@ -12920,14 +12920,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrame_get_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyTime());
         }
         catch (...)
@@ -12939,12 +12939,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointKeyFrame_put_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12953,6 +12947,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>(arg);
 
             self->obj.KeyTime(param0);
@@ -12967,14 +12967,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrame_get_KeyTimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTimeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"KeyTimeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame::KeyTimeProperty());
         }
         catch (...)
@@ -12986,14 +12986,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrame_get_ValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"ValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrame", L"ValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame::ValueProperty());
         }
         catch (...)
@@ -13129,14 +13129,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(args, 0);
 
                 self->obj.Append(param0);
@@ -13161,14 +13161,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -13191,14 +13191,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -13220,14 +13220,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -13251,14 +13251,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame, true>>(args, 1);
 
@@ -13283,14 +13283,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -13312,14 +13312,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(args, 0);
                 uint32_t param1 {  };
 
@@ -13356,14 +13356,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(args, 1);
 
@@ -13389,14 +13389,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -13421,14 +13421,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -13451,14 +13451,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -13483,14 +13483,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>(args, 1);
 
@@ -13512,14 +13512,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointKeyFrameCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointKeyFrameCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -13764,14 +13764,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointerDownThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -13783,12 +13783,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointerDownThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13797,6 +13791,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -13811,14 +13811,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointerDownThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -13948,14 +13948,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointerUpThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -13967,12 +13967,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PointerUpThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13981,6 +13975,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -13995,14 +13995,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PointerUpThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -14132,14 +14132,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -14151,12 +14151,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14165,6 +14159,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -14179,14 +14179,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -14198,12 +14198,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14212,6 +14206,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromVerticalOffset(param0);
@@ -14226,14 +14226,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -14245,12 +14245,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopInThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14259,6 +14253,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromHorizontalOffset(param0);
@@ -14273,14 +14273,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_FromHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation::FromHorizontalOffsetProperty());
         }
         catch (...)
@@ -14292,14 +14292,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_FromVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"FromVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation::FromVerticalOffsetProperty());
         }
         catch (...)
@@ -14311,14 +14311,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopInThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopInThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -14452,14 +14452,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopOutThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -14471,12 +14471,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopOutThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14485,6 +14479,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -14499,14 +14499,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopOutThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -14636,14 +14636,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopupThemeTransition_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -14655,12 +14655,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopupThemeTransition_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14669,6 +14663,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromVerticalOffset(param0);
@@ -14683,14 +14683,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopupThemeTransition_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -14702,12 +14702,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PopupThemeTransition_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14716,6 +14710,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromHorizontalOffset(param0);
@@ -14730,14 +14730,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopupThemeTransition_get_FromHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition::FromHorizontalOffsetProperty());
         }
         catch (...)
@@ -14749,14 +14749,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PopupThemeTransition_get_FromVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PopupThemeTransition", L"FromVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition::FromVerticalOffsetProperty());
         }
         catch (...)
@@ -14888,14 +14888,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PowerEase_get_Power(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"Power"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"Power"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Power());
         }
         catch (...)
@@ -14907,12 +14907,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int PowerEase_put_Power(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"Power"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14921,6 +14915,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"Power"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Power(param0);
@@ -14935,14 +14935,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* PowerEase_get_PowerProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"PowerProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.PowerEase", L"PowerProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::PowerEase::PowerProperty());
         }
         catch (...)
@@ -15418,14 +15418,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"Equals", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"Equals", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(args, 1);
 
@@ -15450,14 +15450,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"FromCount", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"FromCount", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper::FromCount(param0));
@@ -15481,14 +15481,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"FromDuration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"FromDuration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper::FromDuration(param0));
@@ -15512,14 +15512,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"GetHasCount", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"GetHasCount", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper::GetHasCount(param0));
@@ -15543,14 +15543,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"GetHasDuration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"GetHasDuration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper::GetHasDuration(param0));
@@ -15570,14 +15570,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepeatBehaviorHelper_get_Forever(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"Forever"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepeatBehaviorHelper", L"Forever"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper::Forever());
         }
         catch (...)
@@ -15711,14 +15711,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -15730,12 +15730,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15744,6 +15738,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -15758,14 +15758,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -15777,12 +15777,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15791,6 +15785,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromVerticalOffset(param0);
@@ -15805,14 +15805,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -15824,12 +15824,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15838,6 +15832,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromHorizontalOffset(param0);
@@ -15852,14 +15852,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_FromHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation::FromHorizontalOffsetProperty());
         }
         catch (...)
@@ -15871,14 +15871,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_FromVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"FromVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation::FromVerticalOffsetProperty());
         }
         catch (...)
@@ -15890,14 +15890,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -16031,14 +16031,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeTransition_get_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStaggeringEnabled());
         }
         catch (...)
@@ -16050,12 +16050,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int RepositionThemeTransition_put_IsStaggeringEnabled(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16064,6 +16058,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStaggeringEnabled(param0);
@@ -16078,14 +16078,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* RepositionThemeTransition_get_IsStaggeringEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.RepositionThemeTransition", L"IsStaggeringEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition::IsStaggeringEnabledProperty());
         }
         catch (...)
@@ -16306,14 +16306,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SlideNavigationTransitionInfo_get_Effect(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"Effect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"Effect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Effect());
         }
         catch (...)
@@ -16325,12 +16325,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SlideNavigationTransitionInfo_put_Effect(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"Effect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16339,6 +16333,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"Effect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect>(arg);
 
             self->obj.Effect(param0);
@@ -16353,14 +16353,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SlideNavigationTransitionInfo_get_EffectProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"EffectProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SlideNavigationTransitionInfo", L"EffectProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo::EffectProperty());
         }
         catch (...)
@@ -16490,14 +16490,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplineColorKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeySpline());
         }
         catch (...)
@@ -16509,12 +16509,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplineColorKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16523,6 +16517,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>(arg);
 
             self->obj.KeySpline(param0);
@@ -16537,14 +16537,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplineColorKeyFrame_get_KeySplineProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySplineProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineColorKeyFrame", L"KeySplineProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame::KeySplineProperty());
         }
         catch (...)
@@ -16674,14 +16674,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplineDoubleKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeySpline());
         }
         catch (...)
@@ -16693,12 +16693,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplineDoubleKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16707,6 +16701,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>(arg);
 
             self->obj.KeySpline(param0);
@@ -16721,14 +16721,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplineDoubleKeyFrame_get_KeySplineProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySplineProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplineDoubleKeyFrame", L"KeySplineProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame::KeySplineProperty());
         }
         catch (...)
@@ -16858,14 +16858,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplinePointKeyFrame_get_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeySpline());
         }
         catch (...)
@@ -16877,12 +16877,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplinePointKeyFrame_put_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySpline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16891,6 +16885,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySpline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>(arg);
 
             self->obj.KeySpline(param0);
@@ -16905,14 +16905,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplinePointKeyFrame_get_KeySplineProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySplineProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplinePointKeyFrame", L"KeySplineProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame::KeySplineProperty());
         }
         catch (...)
@@ -17042,14 +17042,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedTargetName());
         }
         catch (...)
@@ -17061,12 +17061,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17075,6 +17069,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.OpenedTargetName(param0);
@@ -17089,14 +17089,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedTarget());
         }
         catch (...)
@@ -17108,12 +17108,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17122,6 +17116,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.OpenedTarget(param0);
@@ -17136,14 +17136,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedLength());
         }
         catch (...)
@@ -17155,12 +17155,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17169,6 +17163,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OpenedLength(param0);
@@ -17183,14 +17183,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OffsetFromCenter());
         }
         catch (...)
@@ -17202,12 +17202,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17216,6 +17210,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OffsetFromCenter(param0);
@@ -17230,14 +17230,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTranslationOffset());
         }
         catch (...)
@@ -17249,12 +17249,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17263,6 +17257,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ContentTranslationOffset(param0);
@@ -17277,14 +17277,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTranslationDirection());
         }
         catch (...)
@@ -17296,12 +17296,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17310,6 +17304,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection>(arg);
 
             self->obj.ContentTranslationDirection(param0);
@@ -17324,14 +17324,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTargetName());
         }
         catch (...)
@@ -17343,12 +17343,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17357,6 +17351,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentTargetName(param0);
@@ -17371,14 +17371,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTarget());
         }
         catch (...)
@@ -17390,12 +17390,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17404,6 +17398,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ContentTarget(param0);
@@ -17418,14 +17418,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedTargetName());
         }
         catch (...)
@@ -17437,12 +17437,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17451,6 +17445,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ClosedTargetName(param0);
@@ -17465,14 +17465,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedTarget());
         }
         catch (...)
@@ -17484,12 +17484,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17498,6 +17492,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ClosedTarget(param0);
@@ -17512,14 +17512,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedLength());
         }
         catch (...)
@@ -17531,12 +17531,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitCloseThemeAnimation_put_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17545,6 +17539,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ClosedLength(param0);
@@ -17559,14 +17559,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedLengthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLengthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedLengthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ClosedLengthProperty());
         }
         catch (...)
@@ -17578,14 +17578,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ClosedTargetNameProperty());
         }
         catch (...)
@@ -17597,14 +17597,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ClosedTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ClosedTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ClosedTargetProperty());
         }
         catch (...)
@@ -17616,14 +17616,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ContentTargetNameProperty());
         }
         catch (...)
@@ -17635,14 +17635,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ContentTargetProperty());
         }
         catch (...)
@@ -17654,14 +17654,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTranslationDirectionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirectionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationDirectionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ContentTranslationDirectionProperty());
         }
         catch (...)
@@ -17673,14 +17673,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_ContentTranslationOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"ContentTranslationOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::ContentTranslationOffsetProperty());
         }
         catch (...)
@@ -17692,14 +17692,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OffsetFromCenterProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenterProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OffsetFromCenterProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::OffsetFromCenterProperty());
         }
         catch (...)
@@ -17711,14 +17711,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedLengthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLengthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedLengthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::OpenedLengthProperty());
         }
         catch (...)
@@ -17730,14 +17730,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::OpenedTargetNameProperty());
         }
         catch (...)
@@ -17749,14 +17749,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitCloseThemeAnimation_get_OpenedTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation", L"OpenedTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation::OpenedTargetProperty());
         }
         catch (...)
@@ -17906,14 +17906,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedTargetName());
         }
         catch (...)
@@ -17925,12 +17925,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17939,6 +17933,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.OpenedTargetName(param0);
@@ -17953,14 +17953,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedTarget());
         }
         catch (...)
@@ -17972,12 +17972,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17986,6 +17980,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.OpenedTarget(param0);
@@ -18000,14 +18000,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenedLength());
         }
         catch (...)
@@ -18019,12 +18019,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OpenedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18033,6 +18027,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OpenedLength(param0);
@@ -18047,14 +18047,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OffsetFromCenter());
         }
         catch (...)
@@ -18066,12 +18066,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_OffsetFromCenter(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18080,6 +18074,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OffsetFromCenter(param0);
@@ -18094,14 +18094,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTranslationOffset());
         }
         catch (...)
@@ -18113,12 +18113,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTranslationOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18127,6 +18121,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ContentTranslationOffset(param0);
@@ -18141,14 +18141,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTranslationDirection());
         }
         catch (...)
@@ -18160,12 +18160,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTranslationDirection(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18174,6 +18168,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection>(arg);
 
             self->obj.ContentTranslationDirection(param0);
@@ -18188,14 +18188,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTargetName());
         }
         catch (...)
@@ -18207,12 +18207,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18221,6 +18215,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentTargetName(param0);
@@ -18235,14 +18235,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTarget());
         }
         catch (...)
@@ -18254,12 +18254,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ContentTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18268,6 +18262,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ContentTarget(param0);
@@ -18282,14 +18282,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedTargetName());
         }
         catch (...)
@@ -18301,12 +18301,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedTargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18315,6 +18309,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ClosedTargetName(param0);
@@ -18329,14 +18329,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedTarget());
         }
         catch (...)
@@ -18348,12 +18348,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedTarget(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18362,6 +18356,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.ClosedTarget(param0);
@@ -18376,14 +18376,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClosedLength());
         }
         catch (...)
@@ -18395,12 +18395,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SplitOpenThemeAnimation_put_ClosedLength(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18409,6 +18403,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ClosedLength(param0);
@@ -18423,14 +18423,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedLengthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLengthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedLengthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ClosedLengthProperty());
         }
         catch (...)
@@ -18442,14 +18442,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ClosedTargetNameProperty());
         }
         catch (...)
@@ -18461,14 +18461,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ClosedTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ClosedTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ClosedTargetProperty());
         }
         catch (...)
@@ -18480,14 +18480,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ContentTargetNameProperty());
         }
         catch (...)
@@ -18499,14 +18499,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ContentTargetProperty());
         }
         catch (...)
@@ -18518,14 +18518,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTranslationDirectionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirectionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationDirectionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ContentTranslationDirectionProperty());
         }
         catch (...)
@@ -18537,14 +18537,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_ContentTranslationOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"ContentTranslationOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::ContentTranslationOffsetProperty());
         }
         catch (...)
@@ -18556,14 +18556,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OffsetFromCenterProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenterProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OffsetFromCenterProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::OffsetFromCenterProperty());
         }
         catch (...)
@@ -18575,14 +18575,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedLengthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLengthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedLengthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::OpenedLengthProperty());
         }
         catch (...)
@@ -18594,14 +18594,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedTargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::OpenedTargetNameProperty());
         }
         catch (...)
@@ -18613,14 +18613,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SplitOpenThemeAnimation_get_OpenedTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation", L"OpenedTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation::OpenedTargetProperty());
         }
         catch (...)
@@ -18774,14 +18774,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Begin", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Begin", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Begin();
                 Py_RETURN_NONE;
             }
@@ -18804,14 +18804,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetCurrentState", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetCurrentState", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentState());
             }
             catch (...)
@@ -18833,14 +18833,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetCurrentTime", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetCurrentTime", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentTime());
             }
             catch (...)
@@ -18862,14 +18862,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetTargetName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetTargetName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Storyboard::GetTargetName(param0));
@@ -18893,14 +18893,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetTargetProperty", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"GetTargetProperty", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Storyboard::GetTargetProperty(param0));
@@ -18924,14 +18924,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -18954,14 +18954,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -18984,14 +18984,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.Seek(param0);
@@ -19016,14 +19016,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SeekAlignedToLastTick", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SeekAlignedToLastTick", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.SeekAlignedToLastTick(param0);
@@ -19048,14 +19048,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 1);
 
@@ -19081,14 +19081,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTargetName", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTargetName", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -19114,14 +19114,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTargetProperty", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SetTargetProperty", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -19147,14 +19147,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SkipToFill", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"SkipToFill", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.SkipToFill();
                 Py_RETURN_NONE;
             }
@@ -19177,14 +19177,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -19203,14 +19203,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_get_Children(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -19222,14 +19222,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Storyboard::TargetNameProperty());
         }
         catch (...)
@@ -19241,14 +19241,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Storyboard_get_TargetPropertyProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"TargetPropertyProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Storyboard", L"TargetPropertyProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Storyboard::TargetPropertyProperty());
         }
         catch (...)
@@ -19484,14 +19484,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -19503,12 +19503,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19517,6 +19511,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -19531,14 +19531,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -19550,12 +19550,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19564,6 +19558,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromVerticalOffset(param0);
@@ -19578,14 +19578,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -19597,12 +19597,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeBackThemeAnimation_put_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19611,6 +19605,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FromHorizontalOffset(param0);
@@ -19625,14 +19625,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_FromHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation::FromHorizontalOffsetProperty());
         }
         catch (...)
@@ -19644,14 +19644,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_FromVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"FromVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation::FromVerticalOffsetProperty());
         }
         catch (...)
@@ -19663,14 +19663,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeBackThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeBackThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -19804,14 +19804,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_ToVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToVerticalOffset());
         }
         catch (...)
@@ -19823,12 +19823,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_ToVerticalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19837,6 +19831,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ToVerticalOffset(param0);
@@ -19851,14 +19851,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_ToHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ToHorizontalOffset());
         }
         catch (...)
@@ -19870,12 +19870,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_ToHorizontalOffset(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19884,6 +19878,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ToHorizontalOffset(param0);
@@ -19898,14 +19898,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetName());
         }
         catch (...)
@@ -19917,12 +19917,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int SwipeHintThemeAnimation_put_TargetName(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19931,6 +19925,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TargetName(param0);
@@ -19945,14 +19945,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_TargetNameProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetNameProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"TargetNameProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation::TargetNameProperty());
         }
         catch (...)
@@ -19964,14 +19964,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_ToHorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToHorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation::ToHorizontalOffsetProperty());
         }
         catch (...)
@@ -19983,14 +19983,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* SwipeHintThemeAnimation_get_ToVerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.SwipeHintThemeAnimation", L"ToVerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation::ToVerticalOffsetProperty());
         }
         catch (...)
@@ -20102,14 +20102,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_SpeedRatio(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeedRatio());
         }
         catch (...)
@@ -20121,12 +20121,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_SpeedRatio(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20135,6 +20129,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SpeedRatio(param0);
@@ -20149,14 +20149,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RepeatBehavior());
         }
         catch (...)
@@ -20168,12 +20168,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20182,6 +20176,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>(arg);
 
             self->obj.RepeatBehavior(param0);
@@ -20196,14 +20196,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_FillBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FillBehavior());
         }
         catch (...)
@@ -20215,12 +20215,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_FillBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20229,6 +20223,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::FillBehavior>(arg);
 
             self->obj.FillBehavior(param0);
@@ -20243,14 +20243,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_Duration(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -20262,12 +20262,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_Duration(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20276,6 +20270,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Duration>(arg);
 
             self->obj.Duration(param0);
@@ -20290,14 +20290,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_BeginTime(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BeginTime());
         }
         catch (...)
@@ -20309,12 +20309,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_BeginTime(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20323,6 +20317,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.BeginTime(param0);
@@ -20337,14 +20337,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_AutoReverse(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutoReverse());
         }
         catch (...)
@@ -20356,12 +20356,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_AutoReverse(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20370,6 +20364,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AutoReverse(param0);
@@ -20384,14 +20384,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_AllowDependentAnimations(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AllowDependentAnimations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AllowDependentAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::AllowDependentAnimations());
         }
         catch (...)
@@ -20403,12 +20403,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static int Timeline_put_AllowDependentAnimations(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AllowDependentAnimations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20417,6 +20411,12 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AllowDependentAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::UI::Xaml::Media::Animation::Timeline::AllowDependentAnimations(param0);
@@ -20431,14 +20431,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_AutoReverseProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverseProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"AutoReverseProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::AutoReverseProperty());
         }
         catch (...)
@@ -20450,14 +20450,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_BeginTimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTimeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"BeginTimeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::BeginTimeProperty());
         }
         catch (...)
@@ -20469,14 +20469,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_DurationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"DurationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"DurationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::DurationProperty());
         }
         catch (...)
@@ -20488,14 +20488,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_FillBehaviorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehaviorProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"FillBehaviorProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::FillBehaviorProperty());
         }
         catch (...)
@@ -20507,14 +20507,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_RepeatBehaviorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehaviorProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"RepeatBehaviorProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::RepeatBehaviorProperty());
         }
         catch (...)
@@ -20526,14 +20526,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_get_SpeedRatioProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatioProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"SpeedRatioProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Media::Animation::Timeline::SpeedRatioProperty());
         }
         catch (...)
@@ -20545,14 +20545,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_add_Completed(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -20566,14 +20566,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* Timeline_remove_Completed(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Media.Animation.Timeline", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -20723,14 +20723,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
 
                 self->obj.Append(param0);
@@ -20755,14 +20755,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -20785,14 +20785,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -20814,14 +20814,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -20845,14 +20845,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::Timeline, true>>(args, 1);
 
@@ -20877,14 +20877,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -20906,14 +20906,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 0);
                 uint32_t param1 {  };
 
@@ -20950,14 +20950,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 1);
 
@@ -20983,14 +20983,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -21015,14 +21015,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -21045,14 +21045,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::Timeline, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -21077,14 +21077,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Timeline>(args, 1);
 
@@ -21106,14 +21106,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* TimelineCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::TimelineCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.TimelineCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -21431,14 +21431,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(args, 0);
 
                 self->obj.Append(param0);
@@ -21463,14 +21463,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -21493,14 +21493,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -21522,14 +21522,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -21553,14 +21553,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::Transition, true>>(args, 1);
 
@@ -21585,14 +21585,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -21614,14 +21614,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(args, 0);
                 uint32_t param1 {  };
 
@@ -21658,14 +21658,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(args, 1);
 
@@ -21691,14 +21691,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -21723,14 +21723,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -21753,14 +21753,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::UI::Xaml::Media::Animation::Transition, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -21785,14 +21785,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::Transition>(args, 1);
 
@@ -21814,14 +21814,14 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     static PyObject* TransitionCollection_get_Size(py::wrapper::Windows::UI::Xaml::Media::Animation::TransitionCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Media.Animation.TransitionCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)

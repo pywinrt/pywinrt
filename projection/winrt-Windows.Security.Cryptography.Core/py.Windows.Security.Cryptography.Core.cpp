@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaP521Sha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP521Sha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP521Sha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP521Sha512());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_DsaSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"DsaSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"DsaSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha1());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_DsaSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"DsaSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"DsaSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::DsaSha256());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaP256Sha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP256Sha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP256Sha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP256Sha256());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaP384Sha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP384Sha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaP384Sha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaP384Sha384());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPkcs1Sha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha256());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaOaepSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha1());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaOaepSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha256());
         }
         catch (...)
@@ -168,14 +168,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaOaepSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha384());
         }
         catch (...)
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaOaepSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaOaepSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaOaepSha512());
         }
         catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaPkcs1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaPkcs1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaPkcs1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaPkcs1());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPkcs1Sha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha1());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPkcs1Sha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha384());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPkcs1Sha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPkcs1Sha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPkcs1Sha512());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPssSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha1());
         }
         catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPssSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha256());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPssSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha384());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_RsaSignPssSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"RsaSignPssSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::RsaSignPssSha512());
         }
         catch (...)
@@ -358,14 +358,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha384());
         }
         catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha512());
         }
         catch (...)
@@ -396,14 +396,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricAlgorithmNames_get_EcdsaSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricAlgorithmNames", L"EcdsaSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames::EcdsaSha256());
         }
         catch (...)
@@ -507,14 +507,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPair", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPair", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.CreateKeyPair(param0));
@@ -538,14 +538,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateKeyPairWithCurveName(param0));
@@ -569,14 +569,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveParameters", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"CreateKeyPairWithCurveParameters", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(self->obj.CreateKeyPairWithCurveParameters(param0));
@@ -600,14 +600,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.ImportKeyPair(param0));
@@ -620,14 +620,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportKeyPair", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 1);
 
@@ -652,14 +652,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.ImportPublicKey(param0));
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"ImportPublicKey", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 1);
 
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"OpenAlgorithm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"OpenAlgorithm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider::OpenAlgorithm(param0));
@@ -731,14 +731,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* AsymmetricKeyAlgorithmProvider_get_AlgorithmName(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"AlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider", L"AlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlgorithmName());
         }
         catch (...)
@@ -847,14 +847,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Decrypt", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Decrypt", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -880,14 +880,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DecryptAndAuthenticate", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DecryptAndAuthenticate", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -915,14 +915,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DecryptAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DecryptAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -948,14 +948,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DeriveKeyMaterial", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"DeriveKeyMaterial", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -981,14 +981,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Encrypt", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Encrypt", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -1014,14 +1014,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"EncryptAndAuthenticate", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"EncryptAndAuthenticate", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -1048,14 +1048,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Sign", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"Sign", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1080,14 +1080,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignHashedData", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignHashedData", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1144,14 +1144,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignHashedDataAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"SignHashedDataAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -1176,14 +1176,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"VerifySignature", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"VerifySignature", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -1209,14 +1209,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"VerifySignatureWithHashInput", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicEngine", L"VerifySignatureWithHashInput", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -1321,14 +1321,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.Append(param0);
@@ -1353,14 +1353,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"GetValueAndReset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicHash", L"GetValueAndReset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetValueAndReset());
             }
             catch (...)
@@ -1453,14 +1453,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Export());
             }
             catch (...)
@@ -1471,14 +1471,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"Export", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>(args, 0);
 
                 return py::convert(self->obj.Export(param0));
@@ -1502,14 +1502,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ExportPublicKey());
             }
             catch (...)
@@ -1520,14 +1520,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"ExportPublicKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 0);
 
                 return py::convert(self->obj.ExportPublicKey(param0));
@@ -1547,14 +1547,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* CryptographicKey_get_KeySize(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"KeySize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.CryptographicKey", L"KeySize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeySize());
         }
         catch (...)
@@ -1630,14 +1630,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_AllEccCurveNames(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"AllEccCurveNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"AllEccCurveNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::AllEccCurveNames());
         }
         catch (...)
@@ -1649,14 +1649,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP160r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP160r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP160r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160r1());
         }
         catch (...)
@@ -1668,14 +1668,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP160t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP160t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP160t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP160t1());
         }
         catch (...)
@@ -1687,14 +1687,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP192r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP192r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP192r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192r1());
         }
         catch (...)
@@ -1706,14 +1706,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP192t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP192t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP192t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP192t1());
         }
         catch (...)
@@ -1725,14 +1725,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP224r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP224r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP224r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224r1());
         }
         catch (...)
@@ -1744,14 +1744,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP224t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP224t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP224t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP224t1());
         }
         catch (...)
@@ -1763,14 +1763,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP256r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP256r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP256r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256r1());
         }
         catch (...)
@@ -1782,14 +1782,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP256t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP256t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP256t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP256t1());
         }
         catch (...)
@@ -1801,14 +1801,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP320r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP320r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP320r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320r1());
         }
         catch (...)
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP320t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP320t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP320t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP320t1());
         }
         catch (...)
@@ -1839,14 +1839,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP384r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP384r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP384r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384r1());
         }
         catch (...)
@@ -1858,14 +1858,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP384t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP384t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP384t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP384t1());
         }
         catch (...)
@@ -1877,14 +1877,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP512r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP512r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP512r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512r1());
         }
         catch (...)
@@ -1896,14 +1896,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_BrainpoolP512t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP512t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"BrainpoolP512t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::BrainpoolP512t1());
         }
         catch (...)
@@ -1915,14 +1915,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_Curve25519(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Curve25519"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Curve25519"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Curve25519());
         }
         catch (...)
@@ -1934,14 +1934,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_Ec192wapi(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Ec192wapi"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Ec192wapi"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Ec192wapi());
         }
         catch (...)
@@ -1953,14 +1953,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NistP192(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP192"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP192"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP192());
         }
         catch (...)
@@ -1972,14 +1972,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NistP224(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP224"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP224"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP224());
         }
         catch (...)
@@ -1991,14 +1991,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NistP256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP256());
         }
         catch (...)
@@ -2010,14 +2010,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NistP384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP384());
         }
         catch (...)
@@ -2029,14 +2029,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NistP521(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP521"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NistP521"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NistP521());
         }
         catch (...)
@@ -2048,14 +2048,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NumsP256t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP256t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP256t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP256t1());
         }
         catch (...)
@@ -2067,14 +2067,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NumsP384t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP384t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP384t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP384t1());
         }
         catch (...)
@@ -2086,14 +2086,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_NumsP512t1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP512t1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"NumsP512t1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::NumsP512t1());
         }
         catch (...)
@@ -2105,14 +2105,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP160k1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160k1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160k1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160k1());
         }
         catch (...)
@@ -2124,14 +2124,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP160r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r1());
         }
         catch (...)
@@ -2143,14 +2143,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP160r2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160r2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP160r2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP160r2());
         }
         catch (...)
@@ -2162,14 +2162,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP192k1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP192k1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP192k1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192k1());
         }
         catch (...)
@@ -2181,14 +2181,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP192r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP192r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP192r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP192r1());
         }
         catch (...)
@@ -2200,14 +2200,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP224k1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP224k1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP224k1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224k1());
         }
         catch (...)
@@ -2219,14 +2219,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP224r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP224r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP224r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP224r1());
         }
         catch (...)
@@ -2238,14 +2238,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP256k1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP256k1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP256k1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256k1());
         }
         catch (...)
@@ -2257,14 +2257,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP256r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP256r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP256r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP256r1());
         }
         catch (...)
@@ -2276,14 +2276,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP384r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP384r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP384r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP384r1());
         }
         catch (...)
@@ -2295,14 +2295,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_SecP521r1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP521r1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"SecP521r1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::SecP521r1());
         }
         catch (...)
@@ -2314,14 +2314,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_Wtls12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls12());
         }
         catch (...)
@@ -2333,14 +2333,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_Wtls7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls7());
         }
         catch (...)
@@ -2352,14 +2352,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_Wtls9(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls9"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"Wtls9"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::Wtls9());
         }
         catch (...)
@@ -2371,14 +2371,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P192v1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v1());
         }
         catch (...)
@@ -2390,14 +2390,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P192v2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v2());
         }
         catch (...)
@@ -2409,14 +2409,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P192v3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P192v3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P192v3());
         }
         catch (...)
@@ -2428,14 +2428,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P239v1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v1());
         }
         catch (...)
@@ -2447,14 +2447,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P239v2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v2());
         }
         catch (...)
@@ -2466,14 +2466,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P239v3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P239v3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P239v3());
         }
         catch (...)
@@ -2485,14 +2485,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EccCurveNames_get_X962P256v1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P256v1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EccCurveNames", L"X962P256v1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::EccCurveNames::X962P256v1());
         }
         catch (...)
@@ -2617,14 +2617,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EncryptedAndAuthenticatedData_get_AuthenticationTag(py::wrapper::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"AuthenticationTag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"AuthenticationTag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationTag());
         }
         catch (...)
@@ -2636,14 +2636,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* EncryptedAndAuthenticatedData_get_EncryptedData(py::wrapper::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"EncryptedData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData", L"EncryptedData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncryptedData());
         }
         catch (...)
@@ -2718,14 +2718,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmNames_get_Md5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Md5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Md5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Md5());
         }
         catch (...)
@@ -2737,14 +2737,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmNames_get_Sha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha1());
         }
         catch (...)
@@ -2756,14 +2756,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmNames_get_Sha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha256());
         }
         catch (...)
@@ -2775,14 +2775,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmNames_get_Sha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha384());
         }
         catch (...)
@@ -2794,14 +2794,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmNames_get_Sha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmNames", L"Sha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames::Sha512());
         }
         catch (...)
@@ -2889,14 +2889,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"CreateHash", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"CreateHash", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateHash());
             }
             catch (...)
@@ -2918,14 +2918,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.HashData(param0));
@@ -2949,14 +2949,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"OpenAlgorithm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"OpenAlgorithm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider::OpenAlgorithm(param0));
@@ -2976,14 +2976,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmProvider_get_AlgorithmName(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"AlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"AlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlgorithmName());
         }
         catch (...)
@@ -2995,14 +2995,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* HashAlgorithmProvider_get_HashLength(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.HashAlgorithmProvider", L"HashLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HashLength());
         }
         catch (...)
@@ -3105,14 +3105,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Pbkdf2Sha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha256());
         }
         catch (...)
@@ -3124,14 +3124,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Pbkdf2Md5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Md5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Md5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Md5());
         }
         catch (...)
@@ -3143,14 +3143,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Pbkdf2Sha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha1());
         }
         catch (...)
@@ -3162,14 +3162,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp800108CtrHmacSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha512());
         }
         catch (...)
@@ -3181,14 +3181,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Pbkdf2Sha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha384());
         }
         catch (...)
@@ -3200,14 +3200,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Pbkdf2Sha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Pbkdf2Sha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Pbkdf2Sha512());
         }
         catch (...)
@@ -3219,14 +3219,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp800108CtrHmacMd5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacMd5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacMd5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacMd5());
         }
         catch (...)
@@ -3238,14 +3238,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp800108CtrHmacSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha1());
         }
         catch (...)
@@ -3257,14 +3257,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp800108CtrHmacSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha256());
         }
         catch (...)
@@ -3276,14 +3276,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp800108CtrHmacSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp800108CtrHmacSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp800108CtrHmacSha384());
         }
         catch (...)
@@ -3295,14 +3295,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp80056aConcatMd5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatMd5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatMd5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatMd5());
         }
         catch (...)
@@ -3314,14 +3314,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp80056aConcatSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha1());
         }
         catch (...)
@@ -3333,14 +3333,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp80056aConcatSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha256());
         }
         catch (...)
@@ -3352,14 +3352,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp80056aConcatSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha384());
         }
         catch (...)
@@ -3371,14 +3371,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_Sp80056aConcatSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"Sp80056aConcatSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::Sp80056aConcatSha512());
         }
         catch (...)
@@ -3390,14 +3390,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_CapiKdfSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha1());
         }
         catch (...)
@@ -3409,14 +3409,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_CapiKdfSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha256());
         }
         catch (...)
@@ -3428,14 +3428,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_CapiKdfSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha384());
         }
         catch (...)
@@ -3447,14 +3447,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_CapiKdfSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfSha512());
         }
         catch (...)
@@ -3466,14 +3466,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmNames_get_CapiKdfMd5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfMd5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmNames", L"CapiKdfMd5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames::CapiKdfMd5());
         }
         catch (...)
@@ -3576,14 +3576,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"CreateKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"CreateKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.CreateKey(param0));
@@ -3607,14 +3607,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"OpenAlgorithm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"OpenAlgorithm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider::OpenAlgorithm(param0));
@@ -3634,14 +3634,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationAlgorithmProvider_get_AlgorithmName(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"AlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationAlgorithmProvider", L"AlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlgorithmName());
         }
         catch (...)
@@ -3754,14 +3754,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForCapi1Kdf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForCapi1Kdf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters::BuildForCapi1Kdf(param0));
@@ -3785,14 +3785,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForPbkdf2", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForPbkdf2", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -3817,14 +3817,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForSP800108", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForSP800108", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
 
@@ -3849,14 +3849,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForSP80056a", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"BuildForSP80056a", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 2);
@@ -3880,14 +3880,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_get_KdfGenericBinary(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KdfGenericBinary());
         }
         catch (...)
@@ -3899,12 +3899,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static int KeyDerivationParameters_put_KdfGenericBinary(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3913,6 +3907,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"KdfGenericBinary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.KdfGenericBinary(param0);
@@ -3927,14 +3927,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_get_IterationCount(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"IterationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"IterationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IterationCount());
         }
         catch (...)
@@ -3946,14 +3946,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* KeyDerivationParameters_get_Capi1KdfTargetAlgorithm(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Capi1KdfTargetAlgorithm());
         }
         catch (...)
@@ -3965,12 +3965,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static int KeyDerivationParameters_put_Capi1KdfTargetAlgorithm(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3979,6 +3973,12 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.KeyDerivationParameters", L"Capi1KdfTargetAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(arg);
 
             self->obj.Capi1KdfTargetAlgorithm(param0);
@@ -4086,14 +4086,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_AesCmac(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"AesCmac"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"AesCmac"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::AesCmac());
         }
         catch (...)
@@ -4105,14 +4105,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_HmacMd5(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacMd5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacMd5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacMd5());
         }
         catch (...)
@@ -4124,14 +4124,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_HmacSha1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha1());
         }
         catch (...)
@@ -4143,14 +4143,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_HmacSha256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha256());
         }
         catch (...)
@@ -4162,14 +4162,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_HmacSha384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha384());
         }
         catch (...)
@@ -4181,14 +4181,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmNames_get_HmacSha512(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha512"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmNames", L"HmacSha512"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames::HmacSha512());
         }
         catch (...)
@@ -4277,14 +4277,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateHash", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateHash", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.CreateHash(param0));
@@ -4308,14 +4308,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"CreateKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.CreateKey(param0));
@@ -4339,14 +4339,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"OpenAlgorithm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"OpenAlgorithm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider::OpenAlgorithm(param0));
@@ -4366,14 +4366,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmProvider_get_AlgorithmName(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"AlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"AlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlgorithmName());
         }
         catch (...)
@@ -4385,14 +4385,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* MacAlgorithmProvider_get_MacLength(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"MacLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.MacAlgorithmProvider", L"MacLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MacLength());
         }
         catch (...)
@@ -4499,14 +4499,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.PersistedKeyProvider", L"OpenKeyPairFromCertificateAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.PersistedKeyProvider", L"OpenKeyPairFromCertificateAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>(args, 2);
@@ -4532,14 +4532,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.PersistedKeyProvider", L"OpenPublicKeyFromCertificate", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.PersistedKeyProvider", L"OpenPublicKeyFromCertificate", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>(args, 2);
@@ -4622,14 +4622,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesCbc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCbc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCbc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbc());
         }
         catch (...)
@@ -4641,14 +4641,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesCbcPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCbcPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCbcPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCbcPkcs7());
         }
         catch (...)
@@ -4660,14 +4660,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesCcm(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCcm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesCcm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesCcm());
         }
         catch (...)
@@ -4679,14 +4679,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesEcb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesEcb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesEcb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcb());
         }
         catch (...)
@@ -4698,14 +4698,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesEcbPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesEcbPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesEcbPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesEcbPkcs7());
         }
         catch (...)
@@ -4717,14 +4717,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_AesGcm(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesGcm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"AesGcm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::AesGcm());
         }
         catch (...)
@@ -4736,14 +4736,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_DesCbc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesCbc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesCbc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbc());
         }
         catch (...)
@@ -4755,14 +4755,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_DesCbcPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesCbcPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesCbcPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesCbcPkcs7());
         }
         catch (...)
@@ -4774,14 +4774,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_DesEcb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesEcb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesEcb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcb());
         }
         catch (...)
@@ -4793,14 +4793,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_DesEcbPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesEcbPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"DesEcbPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::DesEcbPkcs7());
         }
         catch (...)
@@ -4812,14 +4812,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_Rc2Cbc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2Cbc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2Cbc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Cbc());
         }
         catch (...)
@@ -4831,14 +4831,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_Rc2CbcPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2CbcPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2CbcPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2CbcPkcs7());
         }
         catch (...)
@@ -4850,14 +4850,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_Rc2Ecb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2Ecb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2Ecb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2Ecb());
         }
         catch (...)
@@ -4869,14 +4869,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_Rc2EcbPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2EcbPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc2EcbPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc2EcbPkcs7());
         }
         catch (...)
@@ -4888,14 +4888,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_Rc4(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"Rc4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::Rc4());
         }
         catch (...)
@@ -4907,14 +4907,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_TripleDesCbc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesCbc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesCbc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbc());
         }
         catch (...)
@@ -4926,14 +4926,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_TripleDesCbcPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesCbcPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesCbcPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesCbcPkcs7());
         }
         catch (...)
@@ -4945,14 +4945,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_TripleDesEcb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesEcb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesEcb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcb());
         }
         catch (...)
@@ -4964,14 +4964,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricAlgorithmNames_get_TripleDesEcbPkcs7(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesEcbPkcs7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricAlgorithmNames", L"TripleDesEcbPkcs7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames::TripleDesEcbPkcs7());
         }
         catch (...)
@@ -5073,14 +5073,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"CreateSymmetricKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"CreateSymmetricKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.CreateSymmetricKey(param0));
@@ -5104,14 +5104,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"OpenAlgorithm", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"OpenAlgorithm", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider::OpenAlgorithm(param0));
@@ -5131,14 +5131,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricKeyAlgorithmProvider_get_AlgorithmName(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"AlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"AlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlgorithmName());
         }
         catch (...)
@@ -5150,14 +5150,14 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     static PyObject* SymmetricKeyAlgorithmProvider_get_BlockLength(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"BlockLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider", L"BlockLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BlockLength());
         }
         catch (...)

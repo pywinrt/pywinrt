@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"CreateFromProcessDiagnosticInfo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"CreateFromProcessDiagnosticInfo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>(args, 0);
 
                 return py::convert(winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider::CreateFromProcessDiagnosticInfo(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -89,14 +89,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -115,14 +115,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_add_RequestResponseCompleted(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestResponseCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestResponseCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.RequestResponseCompleted(param0));
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_remove_RequestResponseCompleted(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestResponseCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestResponseCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RequestResponseCompleted(param0);
@@ -158,14 +158,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_add_RequestSent(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>>(arg);
 
             return py::convert(self->obj.RequestSent(param0));
@@ -179,14 +179,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_remove_RequestSent(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"RequestSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RequestSent(param0);
@@ -201,14 +201,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_add_ResponseReceived(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"ResponseReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"ResponseReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider, winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.ResponseReceived(param0));
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProvider_remove_ResponseReceived(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"ResponseReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProvider", L"ResponseReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ResponseReceived(param0);
@@ -347,14 +347,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_ActivityId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -366,14 +366,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_Initiator(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"Initiator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"Initiator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Initiator());
         }
         catch (...)
@@ -385,14 +385,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_ProcessId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessId());
         }
         catch (...)
@@ -404,14 +404,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_RequestedUri(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"RequestedUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"RequestedUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedUri());
         }
         catch (...)
@@ -423,14 +423,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_SourceLocations(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"SourceLocations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"SourceLocations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceLocations());
         }
         catch (...)
@@ -442,14 +442,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_ThreadId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ThreadId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"ThreadId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThreadId());
         }
         catch (...)
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseCompletedEventArgs_get_Timestamps(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"Timestamps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs", L"Timestamps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamps());
         }
         catch (...)
@@ -556,14 +556,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_CacheCheckedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"CacheCheckedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"CacheCheckedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CacheCheckedTimestamp());
         }
         catch (...)
@@ -575,14 +575,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_ConnectionCompletedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ConnectionCompletedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ConnectionCompletedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionCompletedTimestamp());
         }
         catch (...)
@@ -594,14 +594,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_ConnectionInitiatedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ConnectionInitiatedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ConnectionInitiatedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionInitiatedTimestamp());
         }
         catch (...)
@@ -613,14 +613,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_NameResolvedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"NameResolvedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"NameResolvedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NameResolvedTimestamp());
         }
         catch (...)
@@ -632,14 +632,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_RequestCompletedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"RequestCompletedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"RequestCompletedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestCompletedTimestamp());
         }
         catch (...)
@@ -651,14 +651,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_RequestSentTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"RequestSentTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"RequestSentTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestSentTimestamp());
         }
         catch (...)
@@ -670,14 +670,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_ResponseCompletedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ResponseCompletedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ResponseCompletedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResponseCompletedTimestamp());
         }
         catch (...)
@@ -689,14 +689,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_ResponseReceivedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ResponseReceivedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"ResponseReceivedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResponseReceivedTimestamp());
         }
         catch (...)
@@ -708,14 +708,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestResponseTimestamps_get_SslNegotiatedTimestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"SslNegotiatedTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseTimestamps", L"SslNegotiatedTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SslNegotiatedTimestamp());
         }
         catch (...)
@@ -805,14 +805,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_ActivityId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -824,14 +824,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_Initiator(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Initiator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Initiator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Initiator());
         }
         catch (...)
@@ -843,14 +843,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_Message(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -862,14 +862,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_ProcessId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessId());
         }
         catch (...)
@@ -881,14 +881,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_SourceLocations(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"SourceLocations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"SourceLocations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceLocations());
         }
         catch (...)
@@ -900,14 +900,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_ThreadId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ThreadId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"ThreadId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ThreadId());
         }
         catch (...)
@@ -919,14 +919,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderRequestSentEventArgs_get_Timestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1014,14 +1014,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderResponseReceivedEventArgs_get_ActivityId(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -1033,14 +1033,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderResponseReceivedEventArgs_get_Message(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -1052,14 +1052,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticProviderResponseReceivedEventArgs_get_Timestamp(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticSourceLocation_get_ColumnNumber(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"ColumnNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"ColumnNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColumnNumber());
         }
         catch (...)
@@ -1162,14 +1162,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticSourceLocation_get_LineNumber(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"LineNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"LineNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineNumber());
         }
         catch (...)
@@ -1181,14 +1181,14 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     static PyObject* HttpDiagnosticSourceLocation_get_SourceUri(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"SourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.Http.Diagnostics.HttpDiagnosticSourceLocation", L"SourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceUri());
         }
         catch (...)

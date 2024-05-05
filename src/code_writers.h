@@ -1057,25 +1057,25 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
                     {
                         writer::indent_guard g{w};
 
-                        w.write(
-                            "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"%.%\", L\"%\", %))\n{\n",
-                            method.Parent().TypeNamespace(),
-                            method.Parent().TypeName(),
-                            method.Name(),
-                            count_in_param(signature.params()));
-                        {
-                            writer::indent_guard gg{w};
-                            w.write(
-                                "py::set_arg_count_version_error(%);\n",
-                                count_in_param(signature.params()));
-                            w.write("return nullptr;\n");
-                        }
-                        w.write("}\n\n");
-
                         write_try_catch(
                             w,
                             [&](writer& w)
                             {
+                                w.write(
+                                    "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"%.%\", L\"%\", %))\n{\n",
+                                    method.Parent().TypeNamespace(),
+                                    method.Parent().TypeName(),
+                                    method.Name(),
+                                    count_in_param(signature.params()));
+                                {
+                                    writer::indent_guard gg{w};
+                                    w.write(
+                                        "py::set_arg_count_version_error(%);\n",
+                                        count_in_param(signature.params()));
+                                    w.write("return nullptr;\n");
+                                }
+                                w.write("}\n\n");
+
                                 write_method_body_contents(w, type, method);
                             });
                     }
@@ -1113,32 +1113,32 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         {
             writer::indent_guard g{w};
 
-            w.write(
-                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
-                method.Parent().TypeNamespace(),
-                method.Parent().TypeName(),
-                prop_name);
-            {
-                writer::indent_guard gg{w};
-                w.write(
-                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
+            write_try_catch(
+                w,
+                [&](writer& w)
+                {
+                    w.write(
+                        "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
+                        method.Parent().TypeNamespace(),
+                        method.Parent().TypeName(),
+                        prop_name);
+                    {
+                        writer::indent_guard gg{w};
+                        w.write(
+                            "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
+                        w.write("return nullptr;\n");
+                    }
+                    w.write("}\n\n");
 
-            if (is_ptype(type))
-            {
-                w.write("return self->impl->%();\n", method.Name());
-            }
-            else
-            {
-                write_try_catch(
-                    w,
-                    [&](writer& w)
+                    if (is_ptype(type))
+                    {
+                        w.write("return self->impl->%();\n", method.Name());
+                    }
+                    else
                     {
                         write_method_body_contents(w, type, method);
-                    });
-            }
+                    }
+                });
         }
         w.write("}\n");
     }
@@ -1165,33 +1165,33 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         {
             writer::indent_guard g{w};
 
-            w.write(
-                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
-                method.Parent().TypeNamespace(),
-                method.Parent().TypeName(),
-                prop_name);
-            {
-                writer::indent_guard gg{w};
-                w.write(
-                    "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
+            write_setter_try_catch(
+                w,
+                [&](writer& w)
+                {
+                    w.write(
+                        "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L\"%.%\", L\"%\"))\n{\n",
+                        method.Parent().TypeNamespace(),
+                        method.Parent().TypeName(),
+                        prop_name);
+                    {
+                        writer::indent_guard gg{w};
+                        w.write(
+                            "PyErr_SetString(PyExc_AttributeError, \"property is not available in this version of Windows\");\n");
 
-                w.write("return -1;\n");
-            }
-            w.write("}\n\n");
+                        w.write("return -1;\n");
+                    }
+                    w.write("}\n\n");
 
-            if (is_ptype(type))
-            {
-                w.write("return self->impl->%(arg);\n", method.Name());
-            }
-            else
-            {
-                write_setter_try_catch(
-                    w,
-                    [&](writer& w)
+                    if (is_ptype(type))
+                    {
+                        w.write("return self->impl->%(arg);\n", method.Name());
+                    }
+                    else
                     {
                         write_method_body_contents(w, type, method, true);
-                    });
-            }
+                    }
+                });
         }
         w.write("}\n");
     }
@@ -1217,32 +1217,32 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
         {
             writer::indent_guard g{w};
 
-            w.write(
-                "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"%.%\", L\"%\"))\n{\n",
-                method.Parent().TypeNamespace(),
-                method.Parent().TypeName(),
-                event_name);
-            {
-                writer::indent_guard gg{w};
-                w.write(
-                    "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");\n");
-                w.write("return nullptr;\n");
-            }
-            w.write("}\n\n");
+            write_try_catch(
+                w,
+                [&](writer& w)
+                {
+                    w.write(
+                        "if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L\"%.%\", L\"%\"))\n{\n",
+                        method.Parent().TypeNamespace(),
+                        method.Parent().TypeName(),
+                        event_name);
+                    {
+                        writer::indent_guard gg{w};
+                        w.write(
+                            "PyErr_SetString(PyExc_AttributeError, \"event is not available in this version of Windows\");\n");
+                        w.write("return nullptr;\n");
+                    }
+                    w.write("}\n\n");
 
-            if (is_ptype(type))
-            {
-                w.write("return self->impl->%(arg);\n", method.Name());
-            }
-            else
-            {
-                write_try_catch(
-                    w,
-                    [&](writer& w)
+                    if (is_ptype(type))
+                    {
+                        w.write("return self->impl->%(arg);\n", method.Name());
+                    }
+                    else
                     {
                         write_method_body_contents(w, type, method);
-                    });
-            }
+                    }
+                });
         }
         w.write("}\n");
     }

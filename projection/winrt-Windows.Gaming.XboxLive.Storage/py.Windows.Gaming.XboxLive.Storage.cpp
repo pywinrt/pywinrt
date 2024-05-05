@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobGetResult_get_Status(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobGetResult_get_Value(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobGetResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfo_get_Name(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfo_get_Size(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfo", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfoGetResult_get_Status(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -261,14 +261,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveBlobInfoGetResult_get_Value(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoGetResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetBlobInfoAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetBlobInfoAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetBlobInfoAsync());
             }
             catch (...)
@@ -373,14 +373,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetBlobInfoAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetBlobInfoAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -405,14 +405,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetItemCountAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveBlobInfoQuery", L"GetItemCountAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetItemCountAsync());
             }
             catch (...)
@@ -505,14 +505,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"CreateBlobInfoQuery", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"CreateBlobInfoQuery", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateBlobInfoQuery(param0));
@@ -536,14 +536,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"GetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"GetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetAsync(param0));
@@ -567,14 +567,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"ReadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"ReadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Storage::Streams::IBuffer>>(args, 0);
 
                 return py::convert(self->obj.ReadAsync(param0));
@@ -598,14 +598,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"SubmitPropertySetUpdatesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"SubmitPropertySetUpdatesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"SubmitUpdatesAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"SubmitUpdatesAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Storage::Streams::IBuffer>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_get_Name(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainer_get_Provider(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"Provider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainer", L"Provider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Provider());
         }
         catch (...)
@@ -774,14 +774,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfo_get_DisplayName(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -793,14 +793,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfo_get_LastModifiedTime(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"LastModifiedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"LastModifiedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastModifiedTime());
         }
         catch (...)
@@ -812,14 +812,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfo_get_Name(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -831,14 +831,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfo_get_NeedsSync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"NeedsSync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"NeedsSync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeedsSync());
         }
         catch (...)
@@ -850,14 +850,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfo_get_TotalSize(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"TotalSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfo", L"TotalSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalSize());
         }
         catch (...)
@@ -943,14 +943,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfoGetResult_get_Status(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -962,14 +962,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveContainerInfoGetResult_get_Value(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoGetResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetContainerInfoAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetContainerInfoAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetContainerInfoAsync());
             }
             catch (...)
@@ -1074,14 +1074,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetContainerInfoAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetContainerInfoAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -1106,14 +1106,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetItemCountAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveContainerInfoQuery", L"GetItemCountAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetItemCountAsync());
             }
             catch (...)
@@ -1202,14 +1202,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveOperationResult_get_Status(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveOperationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveOperationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1295,14 +1295,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateContainer(param0));
@@ -1326,14 +1326,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainerInfoQuery", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainerInfoQuery", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateContainerInfoQuery());
             }
             catch (...)
@@ -1344,14 +1344,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainerInfoQuery", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"CreateContainerInfoQuery", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateContainerInfoQuery(param0));
@@ -1375,14 +1375,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"DeleteContainerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"DeleteContainerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteContainerAsync(param0));
@@ -1406,14 +1406,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1438,14 +1438,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetRemainingBytesInQuotaAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetRemainingBytesInQuotaAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRemainingBytesInQuotaAsync());
             }
             catch (...)
@@ -1467,14 +1467,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetSyncOnDemandForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"GetSyncOnDemandForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1495,14 +1495,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_get_ContainersChangedSinceLastSync(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"ContainersChangedSinceLastSync"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"ContainersChangedSinceLastSync"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainersChangedSinceLastSync());
         }
         catch (...)
@@ -1514,14 +1514,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProvider_get_User(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProvider", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProviderGetResult_get_Status(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1654,14 +1654,14 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyObject* GameSaveProviderGetResult_get_Value(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.XboxLive.Storage.GameSaveProviderGetResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)

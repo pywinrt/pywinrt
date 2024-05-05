@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_DetailText(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"DetailText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"DetailText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DetailText());
         }
         catch (...)
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_Image(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Image"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Image"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Image());
         }
         catch (...)
@@ -131,14 +131,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_ImageAlternateText(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"ImageAlternateText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"ImageAlternateText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageAlternateText());
         }
         catch (...)
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_Kind(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_Tag(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tag());
         }
         catch (...)
@@ -188,14 +188,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestion_get_Text(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestion", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"AddToHistory", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"AddToHistory", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddToHistory(param0);
@@ -329,14 +329,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"AddToHistory", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"AddToHistory", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"ClearHistory", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"ClearHistory", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearHistory();
                 Py_RETURN_NONE;
             }
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetLocalContentSuggestionSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetLocalContentSuggestionSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>(args, 0);
 
                 self->obj.SetLocalContentSuggestionSettings(param0);
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.SetQuery(param0);
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -467,14 +467,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SetQuery", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>(args, 2);
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_get_SearchHistoryEnabled(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SearchHistoryEnabled());
         }
         catch (...)
@@ -516,12 +516,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static int SearchSuggestionManager_put_SearchHistoryEnabled(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -530,6 +524,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SearchHistoryEnabled(param0);
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_get_SearchHistoryContext(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SearchHistoryContext());
         }
         catch (...)
@@ -563,12 +563,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static int SearchSuggestionManager_put_SearchHistoryContext(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -577,6 +571,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SearchHistoryContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SearchHistoryContext(param0);
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_get_Suggestions(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"Suggestions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"Suggestions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Suggestions());
         }
         catch (...)
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_add_RequestingFocusOnKeyboardInput(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"RequestingFocusOnKeyboardInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"RequestingFocusOnKeyboardInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>>(arg);
 
             return py::convert(self->obj.RequestingFocusOnKeyboardInput(param0));
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_remove_RequestingFocusOnKeyboardInput(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"RequestingFocusOnKeyboardInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"RequestingFocusOnKeyboardInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RequestingFocusOnKeyboardInput(param0);
@@ -653,14 +653,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_add_SuggestionsRequested(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SuggestionsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SuggestionsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager, winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SuggestionsRequested(param0));
@@ -674,14 +674,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionManager_remove_SuggestionsRequested(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SuggestionsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionManager", L"SuggestionsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SuggestionsRequested(param0);
@@ -776,14 +776,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionsRequestedEventArgs_get_Language(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -795,14 +795,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionsRequestedEventArgs_get_LinguisticDetails(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"LinguisticDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"LinguisticDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinguisticDetails());
         }
         catch (...)
@@ -814,14 +814,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionsRequestedEventArgs_get_QueryText(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"QueryText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"QueryText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QueryText());
         }
         catch (...)
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyObject* SearchSuggestionsRequestedEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Search.Core.SearchSuggestionsRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

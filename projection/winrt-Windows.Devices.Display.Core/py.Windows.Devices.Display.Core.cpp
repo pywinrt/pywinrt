@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DisplayAdapterId>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Display::Core::DisplayAdapter::FromId(param0));
@@ -55,14 +55,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_DeviceInterfacePath(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"DeviceInterfacePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"DeviceInterfacePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInterfacePath());
         }
         catch (...)
@@ -74,14 +74,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_Id(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_PciDeviceId(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PciDeviceId());
         }
         catch (...)
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_PciRevision(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciRevision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciRevision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PciRevision());
         }
         catch (...)
@@ -131,14 +131,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_PciSubSystemId(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciSubSystemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciSubSystemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PciSubSystemId());
         }
         catch (...)
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_PciVendorId(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciVendorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PciVendorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PciVendorId());
         }
         catch (...)
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -188,14 +188,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayAdapter_get_SourceCount(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"SourceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"SourceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceCount());
         }
         catch (...)
@@ -314,14 +314,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreatePeriodicFence", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreatePeriodicFence", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreatePrimary", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreatePrimary", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>(args, 1);
 
@@ -378,14 +378,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateScanoutSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateScanoutSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.CreateScanoutSource(param0));
@@ -409,14 +409,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateSimpleScanout", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateSimpleScanout", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplaySource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplaySurface>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateSimpleScanoutWithDirtyRectsAndOptions", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateSimpleScanoutWithDirtyRectsAndOptions", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplaySource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplaySurface>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -479,14 +479,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateTaskPool", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"CreateTaskPool", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateTaskPool());
             }
             catch (...)
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"IsCapabilitySupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"IsCapabilitySupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayDeviceCapability>(args, 0);
 
                 return py::convert(self->obj.IsCapabilitySupported(param0));
@@ -539,14 +539,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"WaitForVBlank", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"WaitForVBlank", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplaySource>(args, 0);
 
                 self->obj.WaitForVBlank(param0);
@@ -717,14 +717,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -747,14 +747,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayManagerOptions>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Display::Core::DisplayManager::Create(param0));
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"CreateDisplayDevice", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"CreateDisplayDevice", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayAdapter>(args, 0);
 
                 return py::convert(self->obj.CreateDisplayDevice(param0));
@@ -809,14 +809,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"GetCurrentAdapters", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"GetCurrentAdapters", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentAdapters());
             }
             catch (...)
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"GetCurrentTargets", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"GetCurrentTargets", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentTargets());
             }
             catch (...)
@@ -867,14 +867,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"ReleaseTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"ReleaseTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 self->obj.ReleaseTarget(param0);
@@ -899,14 +899,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -929,14 +929,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -959,14 +959,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.TryAcquireTarget(param0));
@@ -990,14 +990,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndCreateEmptyState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndCreateEmptyState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Display::Core::DisplayTarget>>(args, 0);
 
                 return py::convert(self->obj.TryAcquireTargetsAndCreateEmptyState(param0));
@@ -1021,14 +1021,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndCreateSubstate", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndCreateSubstate", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayState>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Display::Core::DisplayTarget>>(args, 1);
 
@@ -1053,14 +1053,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndReadCurrentState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryAcquireTargetsAndReadCurrentState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Display::Core::DisplayTarget>>(args, 0);
 
                 return py::convert(self->obj.TryAcquireTargetsAndReadCurrentState(param0));
@@ -1084,14 +1084,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryReadCurrentStateForAllTargets", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryReadCurrentStateForAllTargets", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryReadCurrentStateForAllTargets());
             }
             catch (...)
@@ -1109,14 +1109,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_add_Changed(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -1130,14 +1130,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_remove_Changed(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -1152,14 +1152,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_add_Disabled(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>>(arg);
 
             return py::convert(self->obj.Disabled(param0));
@@ -1173,14 +1173,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_remove_Disabled(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Disabled(param0);
@@ -1195,14 +1195,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_add_Enabled(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>>(arg);
 
             return py::convert(self->obj.Enabled(param0));
@@ -1216,14 +1216,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_remove_Enabled(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Enabled(param0);
@@ -1238,14 +1238,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_add_PathsFailedOrInvalidated(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"PathsFailedOrInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"PathsFailedOrInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayManager, winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>>(arg);
 
             return py::convert(self->obj.PathsFailedOrInvalidated(param0));
@@ -1259,14 +1259,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManager_remove_PathsFailedOrInvalidated(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"PathsFailedOrInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayManager", L"PathsFailedOrInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PathsFailedOrInvalidated(param0);
@@ -1421,14 +1421,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1446,14 +1446,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerChangedEventArgs_get_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1465,12 +1465,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerChangedEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1479,6 +1473,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerChangedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1568,14 +1568,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1593,14 +1593,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerDisabledEventArgs_get_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1612,12 +1612,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerDisabledEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1626,6 +1620,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerDisabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1715,14 +1715,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1740,14 +1740,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerEnabledEventArgs_get_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1759,12 +1759,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerEnabledEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1773,6 +1767,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerEnabledEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1862,14 +1862,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1887,14 +1887,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerPathsFailedOrInvalidatedEventArgs_get_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1906,12 +1906,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayManagerPathsFailedOrInvalidatedEventArgs_put_Handled(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1920,6 +1914,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerPathsFailedOrInvalidatedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -2005,14 +2005,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerResultWithState_get_ErrorCode(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -2024,14 +2024,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerResultWithState_get_ExtendedErrorCode(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"ExtendedErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"ExtendedErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedErrorCode());
         }
         catch (...)
@@ -2043,14 +2043,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayManagerResultWithState_get_State(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayManagerResultWithState", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2138,14 +2138,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"GetWireFormatSupportedBitsPerChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"GetWireFormatSupportedBitsPerChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding>(args, 0);
 
                 return py::convert(self->obj.GetWireFormatSupportedBitsPerChannel(param0));
@@ -2169,14 +2169,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsWireFormatSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsWireFormatSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormat>(args, 0);
 
                 return py::convert(self->obj.IsWireFormatSupported(param0));
@@ -2196,14 +2196,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_IsInterlaced(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsInterlaced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsInterlaced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInterlaced());
         }
         catch (...)
@@ -2215,14 +2215,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_IsStereo(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsStereo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"IsStereo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStereo());
         }
         catch (...)
@@ -2234,14 +2234,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_PresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"PresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"PresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresentationRate());
         }
         catch (...)
@@ -2253,14 +2253,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -2272,14 +2272,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_SourcePixelFormat(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"SourcePixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"SourcePixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePixelFormat());
         }
         catch (...)
@@ -2291,14 +2291,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_SourceResolution(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"SourceResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"SourceResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceResolution());
         }
         catch (...)
@@ -2310,14 +2310,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_TargetResolution(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"TargetResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"TargetResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetResolution());
         }
         catch (...)
@@ -2329,14 +2329,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayModeInfo_get_PhysicalPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"PhysicalPresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayModeInfo", L"PhysicalPresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalPresentationRate());
         }
         catch (...)
@@ -2431,14 +2431,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPath", L"ApplyPropertiesFromMode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPath", L"ApplyPropertiesFromMode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayModeInfo>(args, 0);
 
                 self->obj.ApplyPropertiesFromMode(param0);
@@ -2463,14 +2463,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPath", L"FindModes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPath", L"FindModes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayModeQueryOptions>(args, 0);
 
                 return py::convert(self->obj.FindModes(param0));
@@ -2490,14 +2490,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_WireFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"WireFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"WireFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WireFormat());
         }
         catch (...)
@@ -2509,12 +2509,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_WireFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"WireFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2523,6 +2517,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"WireFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormat>(arg);
 
             self->obj.WireFormat(param0);
@@ -2537,14 +2537,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_TargetResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"TargetResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"TargetResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TargetResolution());
         }
         catch (...)
@@ -2556,12 +2556,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_TargetResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"TargetResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2570,6 +2564,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"TargetResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Graphics::SizeInt32>>(arg);
 
             self->obj.TargetResolution(param0);
@@ -2584,14 +2584,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_SourceResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourceResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourceResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceResolution());
         }
         catch (...)
@@ -2603,12 +2603,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_SourceResolution(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourceResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2617,6 +2611,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourceResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Graphics::SizeInt32>>(arg);
 
             self->obj.SourceResolution(param0);
@@ -2631,14 +2631,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_SourcePixelFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourcePixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourcePixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePixelFormat());
         }
         catch (...)
@@ -2650,12 +2650,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_SourcePixelFormat(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourcePixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2664,6 +2658,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"SourcePixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(arg);
 
             self->obj.SourcePixelFormat(param0);
@@ -2678,14 +2678,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_Scaling(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Scaling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Scaling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scaling());
         }
         catch (...)
@@ -2697,12 +2697,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_Scaling(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Scaling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2711,6 +2705,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Scaling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayPathScaling>(arg);
 
             self->obj.Scaling(param0);
@@ -2725,14 +2725,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_Rotation(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rotation());
         }
         catch (...)
@@ -2744,12 +2744,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_Rotation(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2758,6 +2752,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayRotation>(arg);
 
             self->obj.Rotation(param0);
@@ -2772,14 +2772,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_PresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresentationRate());
         }
         catch (...)
@@ -2791,12 +2791,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_PresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2805,6 +2799,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>>(arg);
 
             self->obj.PresentationRate(param0);
@@ -2819,14 +2819,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_IsStereo(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsStereo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsStereo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStereo());
         }
         catch (...)
@@ -2838,12 +2838,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_IsStereo(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsStereo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2852,6 +2846,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsStereo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStereo(param0);
@@ -2866,14 +2866,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_IsInterlaced(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsInterlaced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsInterlaced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInterlaced());
         }
         catch (...)
@@ -2885,12 +2885,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_IsInterlaced(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsInterlaced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2899,6 +2893,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"IsInterlaced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsInterlaced(param0);
@@ -2913,14 +2913,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -2932,14 +2932,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_Status(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2951,14 +2951,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_Target(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -2970,14 +2970,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_View(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"View"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"View"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.View());
         }
         catch (...)
@@ -2989,14 +2989,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPath_get_PhysicalPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PhysicalPresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PhysicalPresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalPresentationRate());
         }
         catch (...)
@@ -3008,12 +3008,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayPath_put_PhysicalPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PhysicalPresentationRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3022,6 +3016,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPath", L"PhysicalPresentationRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>>(arg);
 
             self->obj.PhysicalPresentationRate(param0);
@@ -3154,14 +3154,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"CreateWithProperties", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"CreateWithProperties", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::guid, winrt::Windows::Foundation::IInspectable>>>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -3187,14 +3187,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_ColorSpace(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"ColorSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"ColorSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorSpace());
         }
         catch (...)
@@ -3206,14 +3206,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_Format(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Format"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Format"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Format());
         }
         catch (...)
@@ -3225,14 +3225,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_Height(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -3244,14 +3244,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_IsStereo(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"IsStereo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"IsStereo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStereo());
         }
         catch (...)
@@ -3263,14 +3263,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_MultisampleDescription(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"MultisampleDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"MultisampleDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MultisampleDescription());
         }
         catch (...)
@@ -3282,14 +3282,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -3301,14 +3301,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayPrimaryDescription_get_Width(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayPrimaryDescription", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -3495,14 +3495,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplaySource", L"GetMetadata", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplaySource", L"GetMetadata", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.GetMetadata(param0));
@@ -3522,14 +3522,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_get_AdapterId(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"AdapterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"AdapterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdapterId());
         }
         catch (...)
@@ -3541,14 +3541,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_get_SourceId(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"SourceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"SourceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceId());
         }
         catch (...)
@@ -3560,14 +3560,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_get_Status(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplaySource", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -3579,14 +3579,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_add_StatusChanged(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplaySource", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplaySource", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplaySource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -3600,14 +3600,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplaySource_remove_StatusChanged(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplaySource", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplaySource", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -3701,14 +3701,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"CanConnectTargetToView", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"CanConnectTargetToView", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayView>(args, 1);
 
@@ -3733,14 +3733,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -3762,14 +3762,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"ConnectTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"ConnectTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.ConnectTarget(param0));
@@ -3782,14 +3782,14 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"ConnectTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"ConnectTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayView>(args, 1);
 
@@ -3814,14 +3814,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"DisconnectTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"DisconnectTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 self->obj.DisconnectTarget(param0);
@@ -3846,14 +3846,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"GetPathForTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"GetPathForTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.GetPathForTarget(param0));
@@ -3877,14 +3877,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"GetViewForTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"GetViewForTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.GetViewForTarget(param0));
@@ -3908,14 +3908,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"TryApply", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"TryApply", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayStateApplyOptions>(args, 0);
 
                 return py::convert(self->obj.TryApply(param0));
@@ -3939,14 +3939,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"TryFunctionalize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayState", L"TryFunctionalize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayStateFunctionalizeOptions>(args, 0);
 
                 return py::convert(self->obj.TryFunctionalize(param0));
@@ -3966,14 +3966,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_get_IsReadOnly(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"IsReadOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"IsReadOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReadOnly());
         }
         catch (...)
@@ -3985,14 +3985,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_get_IsStale(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"IsStale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"IsStale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStale());
         }
         catch (...)
@@ -4004,14 +4004,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -4023,14 +4023,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_get_Targets(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Targets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Targets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Targets());
         }
         catch (...)
@@ -4042,14 +4042,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayState_get_Views(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Views"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayState", L"Views"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Views());
         }
         catch (...)
@@ -4143,14 +4143,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayStateOperationResult_get_ExtendedErrorCode(py::wrapper::Windows::Devices::Display::Core::DisplayStateOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayStateOperationResult", L"ExtendedErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayStateOperationResult", L"ExtendedErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedErrorCode());
         }
         catch (...)
@@ -4162,14 +4162,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayStateOperationResult_get_Status(py::wrapper::Windows::Devices::Display::Core::DisplayStateOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayStateOperationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayStateOperationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -4325,14 +4325,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsEqual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsEqual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.IsEqual(param0));
@@ -4356,14 +4356,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsSame", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsSame", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
 
                 return py::convert(self->obj.IsSame(param0));
@@ -4387,14 +4387,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"TryGetMonitor", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"TryGetMonitor", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryGetMonitor());
             }
             catch (...)
@@ -4412,14 +4412,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_Adapter(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"Adapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"Adapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Adapter());
         }
         catch (...)
@@ -4431,14 +4431,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_AdapterRelativeId(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"AdapterRelativeId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"AdapterRelativeId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdapterRelativeId());
         }
         catch (...)
@@ -4450,14 +4450,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_DeviceInterfacePath(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"DeviceInterfacePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"DeviceInterfacePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInterfacePath());
         }
         catch (...)
@@ -4469,14 +4469,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_IsConnected(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -4488,14 +4488,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_IsStale(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsStale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsStale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStale());
         }
         catch (...)
@@ -4507,14 +4507,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_IsVirtualModeEnabled(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsVirtualModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsVirtualModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVirtualModeEnabled());
         }
         catch (...)
@@ -4526,14 +4526,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_IsVirtualTopologyEnabled(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsVirtualTopologyEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"IsVirtualTopologyEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVirtualTopologyEnabled());
         }
         catch (...)
@@ -4545,14 +4545,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_MonitorPersistence(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"MonitorPersistence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"MonitorPersistence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MonitorPersistence());
         }
         catch (...)
@@ -4564,14 +4564,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -4583,14 +4583,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_StableMonitorId(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"StableMonitorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"StableMonitorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StableMonitorId());
         }
         catch (...)
@@ -4602,14 +4602,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTarget_get_UsageKind(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"UsageKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTarget", L"UsageKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageKind());
         }
         catch (...)
@@ -4708,14 +4708,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetScanout", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetScanout", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayScanout>(args, 0);
 
                 self->obj.SetScanout(param0);
@@ -4740,14 +4740,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetSignal", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetSignal", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTaskSignalKind>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayFence>(args, 1);
 
@@ -4773,14 +4773,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetWait", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTask", L"SetWait", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayFence>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
@@ -4878,14 +4878,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"CreateTask", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"CreateTask", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateTask());
             }
             catch (...)
@@ -4907,14 +4907,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"ExecuteTask", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"ExecuteTask", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTask>(args, 0);
 
                 self->obj.ExecuteTask(param0);
@@ -4939,14 +4939,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"TryExecuteTask", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayTaskPool", L"TryExecuteTask", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTask>(args, 0);
 
                 return py::convert(self->obj.TryExecuteTask(param0));
@@ -5038,14 +5038,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskResult_get_PresentId(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"PresentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"PresentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresentId());
         }
         catch (...)
@@ -5057,14 +5057,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskResult_get_PresentStatus(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"PresentStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"PresentStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresentStatus());
         }
         catch (...)
@@ -5076,14 +5076,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayTaskResult_get_SourceStatus(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"SourceStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayTaskResult", L"SourceStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceStatus());
         }
         catch (...)
@@ -5171,14 +5171,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayView", L"SetPrimaryPath", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayView", L"SetPrimaryPath", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayPath>(args, 0);
 
                 self->obj.SetPrimaryPath(param0);
@@ -5199,14 +5199,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayView_get_ContentResolution(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"ContentResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"ContentResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentResolution());
         }
         catch (...)
@@ -5218,12 +5218,6 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static int DisplayView_put_ContentResolution(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"ContentResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5232,6 +5226,12 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"ContentResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Graphics::SizeInt32>>(arg);
 
             self->obj.ContentResolution(param0);
@@ -5246,14 +5246,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayView_get_Paths(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"Paths"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"Paths"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Paths());
         }
         catch (...)
@@ -5265,14 +5265,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayView_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayView", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -5389,14 +5389,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
         if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"CreateWithProperties", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"CreateWithProperties", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::guid, winrt::Windows::Foundation::IInspectable>>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -5421,14 +5421,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_BitsPerChannel(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"BitsPerChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"BitsPerChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitsPerChannel());
         }
         catch (...)
@@ -5440,14 +5440,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_ColorSpace(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"ColorSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"ColorSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorSpace());
         }
         catch (...)
@@ -5459,14 +5459,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_Eotf(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"Eotf"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"Eotf"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Eotf());
         }
         catch (...)
@@ -5478,14 +5478,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_HdrMetadata(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"HdrMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"HdrMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HdrMetadata());
         }
         catch (...)
@@ -5497,14 +5497,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_PixelEncoding(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"PixelEncoding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"PixelEncoding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelEncoding());
         }
         catch (...)
@@ -5516,14 +5516,14 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static PyObject* DisplayWireFormat_get_Properties(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayWireFormat", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)

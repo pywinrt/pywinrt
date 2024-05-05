@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.GameControllerProviderInfo", L"GetParentProviderId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.GameControllerProviderInfo", L"GetParentProviderId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetParentProviderId(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.GameControllerProviderInfo", L"GetProviderId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.GameControllerProviderInfo", L"GetProviderId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Input::Preview::GameControllerProviderInfo::GetProviderId(param0));
@@ -151,14 +151,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"ClearPairing", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"ClearPairing", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"ExecuteCommand", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"ExecuteCommand", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::DeviceCommand>(args, 0);
 
                 self->obj.ExecuteCommand(param0);
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"FromGameController", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"FromGameController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::IGameController>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameController(param0));
@@ -247,14 +247,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"FromGameControllerProvider", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"FromGameControllerProvider", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>(args, 0);
 
                 return py::convert(winrt::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider::FromGameControllerProvider(param0));
@@ -278,14 +278,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetDeviceFirmwareCorruptionState", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetDeviceFirmwareCorruptionState", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeviceFirmwareCorruptionState());
             }
             catch (...)
@@ -307,14 +307,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetExtendedDeviceInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetExtendedDeviceInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetExtendedDeviceInfo());
             }
             catch (...)
@@ -336,14 +336,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetHeadsetOperation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetHeadsetOperation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::HeadsetOperation>(args, 0);
 
                 return py::convert(self->obj.GetHeadsetOperation(param0));
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetStandardControllerButtonRemapping", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"GetStandardControllerButtonRemapping", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -399,14 +399,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsCopilot", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsCopilot", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -431,14 +431,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsInterfaceSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsInterfaceSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.IsInterfaceSupported(param0));
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsPilot", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsPilot", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -494,14 +494,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"PairPilotToCopilot", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"PairPilotToCopilot", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -528,14 +528,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetHeadsetOperation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetHeadsetOperation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Gaming::Input::Preview::HeadsetOperation>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -561,14 +561,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetHomeLedIntensity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetHomeLedIntensity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint8_t>(args, 0);
 
                 self->obj.SetHomeLedIntensity(param0);
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetStandardControllerButtonRemapping", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"SetStandardControllerButtonRemapping", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::Windows::Gaming::Input::Preview::RemappingButtonCategory, winrt::Windows::Foundation::IInspectable>>(args, 2);
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_AppCompatVersion(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"AppCompatVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"AppCompatVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppCompatVersion());
         }
         catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_BatteryChargingState(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryChargingState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryChargingState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BatteryChargingState());
         }
         catch (...)
@@ -661,14 +661,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_BatteryKind(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BatteryKind());
         }
         catch (...)
@@ -680,14 +680,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_BatteryLevel(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"BatteryLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BatteryLevel());
         }
         catch (...)
@@ -699,14 +699,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_IsFirmwareCorrupted(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsFirmwareCorrupted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsFirmwareCorrupted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFirmwareCorrupted());
         }
         catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_IsSyntheticDevice(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsSyntheticDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"IsSyntheticDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSyntheticDevice());
         }
         catch (...)
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyObject* LegacyGipGameControllerProvider_get_PreferredTypes(py::wrapper::Windows::Gaming::Input::Preview::LegacyGipGameControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"PreferredTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Gaming.Input.Preview.LegacyGipGameControllerProvider", L"PreferredTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredTypes());
         }
         catch (...)

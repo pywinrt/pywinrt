@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* KeyboardCapabilities_get_KeyboardPresent(py::wrapper::Windows::Devices::Input::KeyboardCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.KeyboardCapabilities", L"KeyboardPresent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.KeyboardCapabilities", L"KeyboardPresent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardPresent());
         }
         catch (...)
@@ -157,14 +157,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseCapabilities_get_HorizontalWheelPresent(py::wrapper::Windows::Devices::Input::MouseCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"HorizontalWheelPresent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"HorizontalWheelPresent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalWheelPresent());
         }
         catch (...)
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseCapabilities_get_MousePresent(py::wrapper::Windows::Devices::Input::MouseCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"MousePresent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"MousePresent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MousePresent());
         }
         catch (...)
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseCapabilities_get_NumberOfButtons(py::wrapper::Windows::Devices::Input::MouseCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"NumberOfButtons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"NumberOfButtons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfButtons());
         }
         catch (...)
@@ -214,14 +214,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseCapabilities_get_SwapButtons(py::wrapper::Windows::Devices::Input::MouseCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"SwapButtons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"SwapButtons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SwapButtons());
         }
         catch (...)
@@ -233,14 +233,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseCapabilities_get_VerticalWheelPresent(py::wrapper::Windows::Devices::Input::MouseCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"VerticalWheelPresent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseCapabilities", L"VerticalWheelPresent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalWheelPresent());
         }
         catch (...)
@@ -330,14 +330,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.MouseDevice", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.MouseDevice", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::MouseDevice::GetForCurrentView());
             }
             catch (...)
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseDevice_add_MouseMoved(py::wrapper::Windows::Devices::Input::MouseDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.MouseDevice", L"MouseMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.MouseDevice", L"MouseMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::MouseDevice, winrt::Windows::Devices::Input::MouseEventArgs>>(arg);
 
             return py::convert(self->obj.MouseMoved(param0));
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseDevice_remove_MouseMoved(py::wrapper::Windows::Devices::Input::MouseDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.MouseDevice", L"MouseMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.MouseDevice", L"MouseMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MouseMoved(param0);
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* MouseEventArgs_get_MouseDelta(py::wrapper::Windows::Devices::Input::MouseEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseEventArgs", L"MouseDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.MouseEventArgs", L"MouseDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MouseDelta());
         }
         catch (...)
@@ -588,14 +588,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenButtonListener", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenButtonListener", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::PenButtonListener::GetDefault());
             }
             catch (...)
@@ -617,14 +617,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsSupported());
             }
             catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_add_IsSupportedChanged(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsSupportedChanged(param0));
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_remove_IsSupportedChanged(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsSupportedChanged(param0);
@@ -685,14 +685,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_add_TailButtonClicked(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>>(arg);
 
             return py::convert(self->obj.TailButtonClicked(param0));
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_remove_TailButtonClicked(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TailButtonClicked(param0);
@@ -728,14 +728,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_add_TailButtonDoubleClicked(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonDoubleClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonDoubleClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>>(arg);
 
             return py::convert(self->obj.TailButtonDoubleClicked(param0));
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_remove_TailButtonDoubleClicked(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonDoubleClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonDoubleClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TailButtonDoubleClicked(param0);
@@ -771,14 +771,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_add_TailButtonLongPressed(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonLongPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonLongPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenButtonListener, winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>>(arg);
 
             return py::convert(self->obj.TailButtonLongPressed(param0));
@@ -792,14 +792,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenButtonListener_remove_TailButtonLongPressed(py::wrapper::Windows::Devices::Input::PenButtonListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonLongPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenButtonListener", L"TailButtonLongPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TailButtonLongPressed(param0);
@@ -922,14 +922,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDevice", L"GetFromPointerId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDevice", L"GetFromPointerId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Input::PenDevice::GetFromPointerId(param0));
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDevice_get_PenId(py::wrapper::Windows::Devices::Input::PenDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PenDevice", L"PenId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PenDevice", L"PenId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenId());
         }
         catch (...)
@@ -968,14 +968,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDevice_get_SimpleHapticsController(py::wrapper::Windows::Devices::Input::PenDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PenDevice", L"SimpleHapticsController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PenDevice", L"SimpleHapticsController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SimpleHapticsController());
         }
         catch (...)
@@ -1088,14 +1088,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDockListener", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDockListener", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::PenDockListener::GetDefault());
             }
             catch (...)
@@ -1117,14 +1117,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsSupported());
             }
             catch (...)
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_add_Docked(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Docked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Docked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenDockedEventArgs>>(arg);
 
             return py::convert(self->obj.Docked(param0));
@@ -1163,14 +1163,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_remove_Docked(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Docked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Docked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Docked(param0);
@@ -1185,14 +1185,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_add_IsSupportedChanged(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsSupportedChanged(param0));
@@ -1206,14 +1206,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_remove_IsSupportedChanged(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsSupportedChanged(param0);
@@ -1228,14 +1228,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_add_Undocked(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Undocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Undocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::PenDockListener, winrt::Windows::Devices::Input::PenUndockedEventArgs>>(arg);
 
             return py::convert(self->obj.Undocked(param0));
@@ -1249,14 +1249,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PenDockListener_remove_Undocked(py::wrapper::Windows::Devices::Input::PenDockListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Undocked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.PenDockListener", L"Undocked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Undocked(param0);
@@ -1722,14 +1722,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PointerDevice", L"GetPointerDevice", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PointerDevice", L"GetPointerDevice", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Input::PointerDevice::GetPointerDevice(param0));
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Devices::Input
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PointerDevice", L"GetPointerDevices", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.PointerDevice", L"GetPointerDevices", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::PointerDevice::GetPointerDevices());
             }
             catch (...)
@@ -1778,14 +1778,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_IsIntegrated(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"IsIntegrated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"IsIntegrated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIntegrated());
         }
         catch (...)
@@ -1797,14 +1797,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_MaxContacts(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"MaxContacts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"MaxContacts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxContacts());
         }
         catch (...)
@@ -1816,14 +1816,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_PhysicalDeviceRect(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"PhysicalDeviceRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"PhysicalDeviceRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalDeviceRect());
         }
         catch (...)
@@ -1835,14 +1835,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_PointerDeviceType(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"PointerDeviceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"PointerDeviceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerDeviceType());
         }
         catch (...)
@@ -1854,14 +1854,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_ScreenRect(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"ScreenRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"ScreenRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScreenRect());
         }
         catch (...)
@@ -1873,14 +1873,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_SupportedUsages(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"SupportedUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"SupportedUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedUsages());
         }
         catch (...)
@@ -1892,14 +1892,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* PointerDevice_get_MaxPointersWithZDistance(py::wrapper::Windows::Devices::Input::PointerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"MaxPointersWithZDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.PointerDevice", L"MaxPointersWithZDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPointersWithZDistance());
         }
         catch (...)
@@ -2036,14 +2036,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* TouchCapabilities_get_Contacts(py::wrapper::Windows::Devices::Input::TouchCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.TouchCapabilities", L"Contacts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.TouchCapabilities", L"Contacts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contacts());
         }
         catch (...)
@@ -2055,14 +2055,14 @@ namespace py::cpp::Windows::Devices::Input
 
     static PyObject* TouchCapabilities_get_TouchPresent(py::wrapper::Windows::Devices::Input::TouchCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.TouchCapabilities", L"TouchPresent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.TouchCapabilities", L"TouchPresent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TouchPresent());
         }
         catch (...)

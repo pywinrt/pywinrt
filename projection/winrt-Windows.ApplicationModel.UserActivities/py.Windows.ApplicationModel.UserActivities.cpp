@@ -52,14 +52,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"CreateSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"CreateSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSession());
             }
             catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -110,14 +110,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ToJson", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ToJson", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToJson());
             }
             catch (...)
@@ -139,14 +139,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ToJsonArray", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ToJsonArray", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::UserActivities::UserActivity>>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::ToJsonArray(param0));
@@ -170,14 +170,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"TryParseFromJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"TryParseFromJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJson(param0));
@@ -201,14 +201,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"TryParseFromJsonArray", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"TryParseFromJsonArray", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivity::TryParseFromJsonArray(param0));
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_FallbackUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"FallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"FallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FallbackUri());
         }
         catch (...)
@@ -247,12 +247,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_FallbackUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"FallbackUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -261,6 +255,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"FallbackUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.FallbackUri(param0);
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_ContentUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentUri());
         }
         catch (...)
@@ -294,12 +294,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -308,6 +302,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ContentUri(param0);
@@ -322,14 +322,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_ContentType(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -341,12 +341,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentType(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -355,6 +349,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentType(param0);
@@ -369,14 +369,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_ContentInfo(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentInfo());
         }
         catch (...)
@@ -388,12 +388,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ContentInfo(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -402,6 +396,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ContentInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>(arg);
 
             self->obj.ContentInfo(param0);
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_ActivationUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationUri());
         }
         catch (...)
@@ -435,12 +435,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_ActivationUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -449,6 +443,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ActivationUri(param0);
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_ActivityId(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -482,14 +482,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_State(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -501,14 +501,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_VisualElements(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"VisualElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"VisualElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VisualElements());
         }
         catch (...)
@@ -520,14 +520,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivity_get_IsRoamable(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"IsRoamable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"IsRoamable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRoamable());
         }
         catch (...)
@@ -539,12 +539,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivity_put_IsRoamable(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"IsRoamable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -553,6 +547,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivity", L"IsRoamable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsRoamable(param0);
@@ -713,14 +713,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityAttribution_get_IconUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"IconUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"IconUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconUri());
         }
         catch (...)
@@ -732,12 +732,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_IconUri(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"IconUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -746,6 +740,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"IconUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.IconUri(param0);
@@ -760,14 +760,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityAttribution_get_AlternateText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AlternateText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AlternateText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateText());
         }
         catch (...)
@@ -779,12 +779,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_AlternateText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AlternateText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -793,6 +787,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AlternateText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AlternateText(param0);
@@ -807,14 +807,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityAttribution_get_AddImageQuery(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AddImageQuery"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AddImageQuery"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddImageQuery());
         }
         catch (...)
@@ -826,12 +826,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityAttribution_put_AddImageQuery(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AddImageQuery"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -840,6 +834,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityAttribution", L"AddImageQuery"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AddImageQuery(param0);
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DeleteActivityAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DeleteActivityAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteActivityAsync(param0));
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DeleteAllActivitiesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DeleteAllActivitiesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAllActivitiesAsync());
             }
             catch (...)
@@ -990,14 +990,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DisableAutoSessionCreation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"DisableAutoSessionCreation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::DisableAutoSessionCreation();
                 Py_RETURN_NONE;
             }
@@ -1020,14 +1020,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetDefault());
             }
             catch (...)
@@ -1049,14 +1049,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::GetForUser(param0));
@@ -1080,14 +1080,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetOrCreateUserActivityAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetOrCreateUserActivityAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetOrCreateUserActivityAsync(param0));
@@ -1111,14 +1111,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetRecentUserActivitiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetRecentUserActivitiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetRecentUserActivitiesAsync(param0));
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetSessionHistoryItemsForUserActivityAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"GetSessionHistoryItemsForUserActivityAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -1174,14 +1174,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"TryGetForWebAccount", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityChannel", L"TryGetForWebAccount", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel::TryGetForWebAccount(param0));
@@ -1308,14 +1308,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo", L"FromJson", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo", L"FromJson", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo::FromJson(param0));
@@ -1339,14 +1339,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo", L"ToJson", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityContentInfo", L"ToJson", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToJson());
             }
             catch (...)
@@ -1464,14 +1464,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequest", L"SetUserActivity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequest", L"SetUserActivity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivity>(args, 0);
 
                 self->obj.SetUserActivity(param0);
@@ -1566,14 +1566,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager::GetForCurrentView());
             }
             catch (...)
@@ -1591,14 +1591,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequestManager_add_UserActivityRequested(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"UserActivityRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"UserActivityRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager, winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.UserActivityRequested(param0));
@@ -1612,14 +1612,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequestManager_remove_UserActivityRequested(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"UserActivityRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestManager", L"UserActivityRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UserActivityRequested(param0);
@@ -1735,14 +1735,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1760,14 +1760,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityRequestedEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1854,14 +1854,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1880,14 +1880,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivitySession_get_ActivityId(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySession", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySession", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -1991,14 +1991,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivitySessionHistoryItem_get_EndTime(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTime());
         }
         catch (...)
@@ -2010,14 +2010,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivitySessionHistoryItem_get_StartTime(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -2029,14 +2029,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivitySessionHistoryItem_get_UserActivity(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"UserActivity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivitySessionHistoryItem", L"UserActivity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserActivity());
         }
         catch (...)
@@ -2120,14 +2120,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_DisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayText());
         }
         catch (...)
@@ -2139,12 +2139,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_DisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2153,6 +2147,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayText(param0);
@@ -2167,14 +2167,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_Description(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2186,12 +2186,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Description(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2200,6 +2194,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Description(param0);
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_Content(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -2233,12 +2233,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Content(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2247,6 +2241,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Shell::IAdaptiveCard>(arg);
 
             self->obj.Content(param0);
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_BackgroundColor(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -2280,12 +2280,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_BackgroundColor(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2294,6 +2288,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -2308,14 +2308,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_Attribution(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Attribution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Attribution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Attribution());
         }
         catch (...)
@@ -2327,12 +2327,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_Attribution(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Attribution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2341,6 +2335,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"Attribution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>(arg);
 
             self->obj.Attribution(param0);
@@ -2355,14 +2355,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static PyObject* UserActivityVisualElements_get_AttributionDisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"AttributionDisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"AttributionDisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributionDisplayText());
         }
         catch (...)
@@ -2374,12 +2374,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     static int UserActivityVisualElements_put_AttributionDisplayText(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"AttributionDisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2388,6 +2382,12 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserActivities.UserActivityVisualElements", L"AttributionDisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AttributionDisplayText(param0);
@@ -2481,14 +2481,14 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfo", L"ToJson", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserActivities.IUserActivityContentInfo", L"ToJson", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToJson());
             }
             catch (...)

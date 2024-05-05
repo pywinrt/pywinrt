@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ComponentLoadFailedEventArgs_get_Completion(py::wrapper::Windows::Media::Protection::ComponentLoadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ComponentLoadFailedEventArgs", L"Completion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ComponentLoadFailedEventArgs", L"Completion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completion());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ComponentLoadFailedEventArgs_get_Information(py::wrapper::Windows::Media::Protection::ComponentLoadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ComponentLoadFailedEventArgs", L"Information"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ComponentLoadFailedEventArgs", L"Information"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Information());
         }
         catch (...)
@@ -129,14 +129,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.ComponentRenewal", L"RenewSystemComponentsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.ComponentRenewal", L"RenewSystemComponentsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Protection::ComponentRenewal::RenewSystemComponentsAsync(param0));
@@ -250,14 +250,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"GetEffectiveProtection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"GetEffectiveProtection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetEffectiveProtection());
             }
             catch (...)
@@ -309,14 +309,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"IsEffectiveProtectionAtLeast", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"IsEffectiveProtectionAtLeast", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::HdcpProtection>(args, 0);
 
                 return py::convert(self->obj.IsEffectiveProtectionAtLeast(param0));
@@ -340,14 +340,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"SetDesiredMinProtectionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.HdcpSession", L"SetDesiredMinProtectionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Protection::HdcpProtection>(args, 0);
 
                 return py::convert(self->obj.SetDesiredMinProtectionAsync(param0));
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_add_ProtectionChanged(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.HdcpSession", L"ProtectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.HdcpSession", L"ProtectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Protection::HdcpSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ProtectionChanged(param0));
@@ -388,14 +388,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* HdcpSession_remove_ProtectionChanged(py::wrapper::Windows::Media::Protection::HdcpSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.HdcpSession", L"ProtectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.HdcpSession", L"ProtectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ProtectionChanged(param0);
@@ -528,14 +528,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_get_Properties(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.MediaProtectionManager", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.MediaProtectionManager", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -547,14 +547,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_add_ComponentLoadFailed(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ComponentLoadFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ComponentLoadFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::ComponentLoadFailedEventHandler>(arg);
 
             return py::convert(self->obj.ComponentLoadFailed(param0));
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_remove_ComponentLoadFailed(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ComponentLoadFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ComponentLoadFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ComponentLoadFailed(param0);
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_add_RebootNeeded(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"RebootNeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"RebootNeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::RebootNeededEventHandler>(arg);
 
             return py::convert(self->obj.RebootNeeded(param0));
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_remove_RebootNeeded(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"RebootNeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"RebootNeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RebootNeeded(param0);
@@ -633,14 +633,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_add_ServiceRequested(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ServiceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ServiceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Protection::ServiceRequestedEventHandler>(arg);
 
             return py::convert(self->obj.ServiceRequested(param0));
@@ -654,14 +654,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionManager_remove_ServiceRequested(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ServiceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Protection.MediaProtectionManager", L"ServiceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ServiceRequested(param0);
@@ -776,14 +776,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* MediaProtectionPMPServer_get_Properties(py::wrapper::Windows::Media::Protection::MediaProtectionPMPServer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.MediaProtectionPMPServer", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.MediaProtectionPMPServer", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -869,14 +869,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.MediaProtectionServiceCompletion", L"Complete", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.MediaProtectionServiceCompletion", L"Complete", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 self->obj.Complete(param0);
@@ -993,14 +993,14 @@ namespace py::cpp::Windows::Media::Protection
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.ProtectionCapabilities", L"IsTypeSupported", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Protection.ProtectionCapabilities", L"IsTypeSupported", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1091,14 +1091,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalInformation_get_Items(py::wrapper::Windows::Media::Protection::RevocationAndRenewalInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalInformation", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalInformation", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalItem_get_HeaderHash(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"HeaderHash"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"HeaderHash"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderHash());
         }
         catch (...)
@@ -1199,14 +1199,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalItem_get_Name(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1218,14 +1218,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalItem_get_PublicKeyHash(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"PublicKeyHash"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"PublicKeyHash"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PublicKeyHash());
         }
         catch (...)
@@ -1237,14 +1237,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalItem_get_Reasons(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"Reasons"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"Reasons"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reasons());
         }
         catch (...)
@@ -1256,14 +1256,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* RevocationAndRenewalItem_get_RenewalId(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"RenewalId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.RevocationAndRenewalItem", L"RenewalId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RenewalId());
         }
         catch (...)
@@ -1349,14 +1349,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ServiceRequestedEventArgs_get_Completion(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"Completion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"Completion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completion());
         }
         catch (...)
@@ -1368,14 +1368,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ServiceRequestedEventArgs_get_Request(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1387,14 +1387,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* ServiceRequestedEventArgs_get_MediaPlaybackItem(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"MediaPlaybackItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.ServiceRequestedEventArgs", L"MediaPlaybackItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaPlaybackItem());
         }
         catch (...)
@@ -1478,14 +1478,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* IMediaProtectionServiceRequest_get_ProtectionSystem(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"ProtectionSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"ProtectionSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtectionSystem());
         }
         catch (...)
@@ -1497,14 +1497,14 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyObject* IMediaProtectionServiceRequest_get_Type(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Protection.IMediaProtectionServiceRequest", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)

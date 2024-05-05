@@ -20,14 +20,14 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSddlForAppContainerNames", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSddlForAppContainerNames", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -53,14 +53,14 @@ namespace py::cpp::Microsoft::Windows::Security::AccessControl
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSecurityDescriptorBytesFromAppContainerNames", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Security.AccessControl.SecurityDescriptorHelpers", L"GetSecurityDescriptorBytesFromAppContainerNames", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::Windows::Security::AccessControl::AppContainerNameAndAccess, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);

@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"GetForIsland", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"GetForIsland", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Input::DragDrop::DragDropManager::GetForIsland(param0));
@@ -85,14 +85,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragDropManager_get_AreConcurrentOperationsEnabled(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"AreConcurrentOperationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"AreConcurrentOperationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreConcurrentOperationsEnabled());
         }
         catch (...)
@@ -104,12 +104,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragDropManager_put_AreConcurrentOperationsEnabled(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"AreConcurrentOperationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -118,6 +112,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"AreConcurrentOperationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreConcurrentOperationsEnabled(param0);
@@ -132,14 +132,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragDropManager_add_TargetRequested(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"TargetRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"TargetRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::DragDrop::DragDropManager, winrt::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TargetRequested(param0));
@@ -153,14 +153,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragDropManager_remove_TargetRequested(py::wrapper::Microsoft::UI::Input::DragDrop::DragDropManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"TargetRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.DragDrop.DragDropManager", L"TargetRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TargetRequested(param0);
@@ -295,14 +295,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragInfo_get_AllowedOperations(py::wrapper::Microsoft::UI::Input::DragDrop::DragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -314,14 +314,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragInfo_get_Data(py::wrapper::Microsoft::UI::Input::DragDrop::DragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -333,14 +333,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragInfo_get_Modifiers(py::wrapper::Microsoft::UI::Input::DragDrop::DragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Modifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Modifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Modifiers());
         }
         catch (...)
@@ -352,14 +352,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragInfo_get_Position(py::wrapper::Microsoft::UI::Input::DragDrop::DragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragInfo", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -470,14 +470,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -500,14 +500,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"SetDragUIContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"SetDragUIContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetDragUIContentFromSoftwareBitmap(param0);
@@ -521,14 +521,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"SetDragUIContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"SetDragUIContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -554,14 +554,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"StartAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"StartAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragDropManager>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 1);
 
@@ -582,14 +582,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_get_DragUIContentMode(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"DragUIContentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"DragUIContentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragUIContentMode());
         }
         catch (...)
@@ -601,12 +601,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragOperation_put_DragUIContentMode(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"DragUIContentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -615,6 +609,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"DragUIContentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragUIContentMode>(arg);
 
             self->obj.DragUIContentMode(param0);
@@ -629,14 +629,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_get_AllowedOperations(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -648,12 +648,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragOperation_put_AllowedOperations(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -662,6 +656,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
             self->obj.AllowedOperations(param0);
@@ -676,14 +676,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragOperation_get_Data(py::wrapper::Microsoft::UI::Input::DragDrop::DragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragOperation", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -795,14 +795,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -825,14 +825,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"SetContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"SetContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetContentFromSoftwareBitmap(param0);
@@ -846,14 +846,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"SetContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"SetContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -875,14 +875,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_get_IsGlyphVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGlyphVisible());
         }
         catch (...)
@@ -894,12 +894,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsGlyphVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -908,6 +902,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGlyphVisible(param0);
@@ -922,14 +922,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_get_IsContentVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsContentVisible());
         }
         catch (...)
@@ -941,12 +941,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsContentVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -955,6 +949,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsContentVisible(param0);
@@ -969,14 +969,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_get_IsCaptionVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptionVisible());
         }
         catch (...)
@@ -988,12 +988,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_IsCaptionVisible(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1002,6 +996,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCaptionVisible(param0);
@@ -1016,14 +1016,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyObject* DragUIOverride_get_Caption(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -1035,12 +1035,6 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static int DragUIOverride_put_Caption(py::wrapper::Microsoft::UI::Input::DragDrop::DragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1049,6 +1043,12 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.DragDrop.DragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Caption(param0);
@@ -1142,14 +1142,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs", L"SetTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.DropOperationTargetRequestedEventArgs", L"SetTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>(args, 0);
 
                 self->obj.SetTarget(param0);
@@ -1244,14 +1244,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"DropAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"DropAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragInfo>(args, 0);
 
                 return py::convert(self->obj.DropAsync(param0));
@@ -1275,14 +1275,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"EnterAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"EnterAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>(args, 1);
 
@@ -1307,14 +1307,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"LeaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"LeaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragInfo>(args, 0);
 
                 return py::convert(self->obj.LeaveAsync(param0));
@@ -1338,14 +1338,14 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"OverAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.DragDrop.IDropOperationTarget", L"OverAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>(args, 1);
 

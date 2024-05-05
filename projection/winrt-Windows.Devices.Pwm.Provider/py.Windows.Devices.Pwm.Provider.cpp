@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"AcquirePin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"AcquirePin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AcquirePin(param0);
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"DisablePin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"DisablePin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.DisablePin(param0);
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"EnablePin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"EnablePin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.EnablePin(param0);
@@ -124,14 +124,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"ReleasePin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"ReleasePin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.ReleasePin(param0);
@@ -156,14 +156,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"SetDesiredFrequency", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"SetDesiredFrequency", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.SetDesiredFrequency(param0));
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"SetPulseParameters", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"SetPulseParameters", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -217,14 +217,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_get_ActualFrequency(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"ActualFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"ActualFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualFrequency());
         }
         catch (...)
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_get_MaxFrequency(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"MaxFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"MaxFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxFrequency());
         }
         catch (...)
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_get_MinFrequency(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"MinFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"MinFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinFrequency());
         }
         catch (...)
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyObject* IPwmControllerProvider_get_PinCount(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"PinCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Pwm.Provider.IPwmControllerProvider", L"PinCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PinCount());
         }
         catch (...)
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmProvider", L"GetControllers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Pwm.Provider.IPwmProvider", L"GetControllers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetControllers());
             }
             catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromStreamAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromStreamAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromStreamAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromStreamAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -114,14 +114,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromUriAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromUriAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::CreateFromUriAsync(param0));
@@ -134,14 +134,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromUriAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CreateFromUriAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Http::HttpClient>(args, 1);
 
@@ -166,14 +166,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"GetCorrelatedTimes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"GetCorrelatedTimes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCorrelatedTimes());
             }
             catch (...)
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"IsContentTypeSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"IsContentTypeSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource::IsContentTypeSupported(param0));
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_InitialBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InitialBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InitialBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialBitrate());
         }
         catch (...)
@@ -241,12 +241,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_InitialBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InitialBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -255,6 +249,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InitialBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.InitialBitrate(param0);
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_InboundBitsPerSecondWindow(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecondWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecondWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InboundBitsPerSecondWindow());
         }
         catch (...)
@@ -288,12 +288,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_InboundBitsPerSecondWindow(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecondWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -302,6 +296,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecondWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.InboundBitsPerSecondWindow(param0);
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_DesiredMaxBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMaxBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMaxBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredMaxBitrate());
         }
         catch (...)
@@ -335,12 +335,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredMaxBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMaxBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -349,6 +343,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMaxBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.DesiredMaxBitrate(param0);
@@ -363,14 +363,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_DesiredLiveOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredLiveOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredLiveOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredLiveOffset());
         }
         catch (...)
@@ -382,12 +382,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredLiveOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredLiveOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -396,6 +390,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredLiveOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DesiredLiveOffset(param0);
@@ -410,14 +410,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_DesiredMinBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMinBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMinBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredMinBitrate());
         }
         catch (...)
@@ -429,12 +429,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredMinBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMinBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -443,6 +437,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredMinBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.DesiredMinBitrate(param0);
@@ -457,14 +457,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_CurrentPlaybackBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CurrentPlaybackBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CurrentPlaybackBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPlaybackBitrate());
         }
         catch (...)
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_AudioOnlyPlayback(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AudioOnlyPlayback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AudioOnlyPlayback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioOnlyPlayback());
         }
         catch (...)
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_InboundBitsPerSecond(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"InboundBitsPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InboundBitsPerSecond());
         }
         catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_AvailableBitrates(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AvailableBitrates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AvailableBitrates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableBitrates());
         }
         catch (...)
@@ -533,14 +533,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_CurrentDownloadBitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CurrentDownloadBitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"CurrentDownloadBitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentDownloadBitrate());
         }
         catch (...)
@@ -552,14 +552,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_IsLive(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"IsLive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"IsLive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLive());
         }
         catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_AdvancedSettings(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AdvancedSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"AdvancedSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdvancedSettings());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_DesiredSeekableWindowSize(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredSeekableWindowSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredSeekableWindowSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredSeekableWindowSize());
         }
         catch (...)
@@ -609,12 +609,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSource_put_DesiredSeekableWindowSize(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredSeekableWindowSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -623,6 +617,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DesiredSeekableWindowSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.DesiredSeekableWindowSize(param0);
@@ -637,14 +637,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_Diagnostics(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"Diagnostics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"Diagnostics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Diagnostics());
         }
         catch (...)
@@ -656,14 +656,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_MaxSeekableWindowSize(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"MaxSeekableWindowSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"MaxSeekableWindowSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSeekableWindowSize());
         }
         catch (...)
@@ -675,14 +675,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_get_MinLiveOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"MinLiveOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"MinLiveOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinLiveOffset());
         }
         catch (...)
@@ -694,14 +694,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_add_DownloadBitrateChanged(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadBitrateChanged(param0));
@@ -715,14 +715,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_remove_DownloadBitrateChanged(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadBitrateChanged(param0);
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_add_DownloadCompleted(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadCompleted(param0));
@@ -758,14 +758,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_remove_DownloadCompleted(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadCompleted(param0);
@@ -780,14 +780,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_add_DownloadFailed(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadFailed(param0));
@@ -801,14 +801,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_remove_DownloadFailed(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadFailed(param0);
@@ -823,14 +823,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_add_DownloadRequested(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.DownloadRequested(param0));
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_remove_DownloadRequested(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"DownloadRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DownloadRequested(param0);
@@ -866,14 +866,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_add_PlaybackBitrateChanged(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"PlaybackBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"PlaybackBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PlaybackBitrateChanged(param0));
@@ -887,14 +887,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSource_remove_PlaybackBitrateChanged(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"PlaybackBitrateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSource", L"PlaybackBitrateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PlaybackBitrateChanged(param0);
@@ -1055,14 +1055,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceAdvancedSettings_get_DesiredBitrateHeadroomRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"DesiredBitrateHeadroomRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"DesiredBitrateHeadroomRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredBitrateHeadroomRatio());
         }
         catch (...)
@@ -1074,12 +1074,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_DesiredBitrateHeadroomRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"DesiredBitrateHeadroomRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1088,6 +1082,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"DesiredBitrateHeadroomRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.DesiredBitrateHeadroomRatio(param0);
@@ -1102,14 +1102,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceAdvancedSettings_get_BitrateDowngradeTriggerRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"BitrateDowngradeTriggerRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"BitrateDowngradeTriggerRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitrateDowngradeTriggerRatio());
         }
         catch (...)
@@ -1121,12 +1121,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_BitrateDowngradeTriggerRatio(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"BitrateDowngradeTriggerRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1135,6 +1129,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"BitrateDowngradeTriggerRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
             self->obj.BitrateDowngradeTriggerRatio(param0);
@@ -1149,14 +1149,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceAdvancedSettings_get_AllSegmentsIndependent(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"AllSegmentsIndependent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"AllSegmentsIndependent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllSegmentsIndependent());
         }
         catch (...)
@@ -1168,12 +1168,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceAdvancedSettings_put_AllSegmentsIndependent(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"AllSegmentsIndependent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1182,6 +1176,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceAdvancedSettings", L"AllSegmentsIndependent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllSegmentsIndependent(param0);
@@ -1268,14 +1268,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCorrelatedTimes_get_Position(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -1287,14 +1287,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCorrelatedTimes_get_PresentationTimeStamp(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"PresentationTimeStamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"PresentationTimeStamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PresentationTimeStamp());
         }
         catch (...)
@@ -1306,14 +1306,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCorrelatedTimes_get_ProgramDateTime(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"ProgramDateTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCorrelatedTimes", L"ProgramDateTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProgramDateTime());
         }
         catch (...)
@@ -1397,14 +1397,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCreationResult_get_HttpResponseMessage(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"HttpResponseMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"HttpResponseMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HttpResponseMessage());
         }
         catch (...)
@@ -1416,14 +1416,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCreationResult_get_MediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"MediaSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"MediaSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSource());
         }
         catch (...)
@@ -1435,14 +1435,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCreationResult_get_Status(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1454,14 +1454,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceCreationResult_get_ExtendedError(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceCreationResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -1546,14 +1546,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_Bitrate(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -1565,14 +1565,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_DiagnosticType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"DiagnosticType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"DiagnosticType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DiagnosticType());
         }
         catch (...)
@@ -1584,14 +1584,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_Position(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -1603,14 +1603,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_RequestId(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"RequestId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"RequestId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestId());
         }
         catch (...)
@@ -1622,14 +1622,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeLength());
         }
         catch (...)
@@ -1641,14 +1641,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeOffset());
         }
         catch (...)
@@ -1660,14 +1660,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceType());
         }
         catch (...)
@@ -1679,14 +1679,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceUri());
         }
         catch (...)
@@ -1698,14 +1698,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_SegmentId(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"SegmentId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"SegmentId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SegmentId());
         }
         catch (...)
@@ -1717,14 +1717,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ExtendedError(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -1736,14 +1736,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceContentType());
         }
         catch (...)
@@ -1755,14 +1755,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnosticAvailableEventArgs_get_ResourceDuration(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs", L"ResourceDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceDuration());
         }
         catch (...)
@@ -1855,14 +1855,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnostics_add_DiagnosticAvailable(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics", L"DiagnosticAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics", L"DiagnosticAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics, winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>>(arg);
 
             return py::convert(self->obj.DiagnosticAvailable(param0));
@@ -1876,14 +1876,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDiagnostics_remove_DiagnosticAvailable(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics", L"DiagnosticAvailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDiagnostics", L"DiagnosticAvailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DiagnosticAvailable(param0);
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_NewValue(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -1988,14 +1988,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_OldValue(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"OldValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"OldValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldValue());
         }
         catch (...)
@@ -2007,14 +2007,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadBitrateChangedEventArgs_get_Reason(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -2098,14 +2098,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_HttpResponseMessage(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"HttpResponseMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"HttpResponseMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HttpResponseMessage());
         }
         catch (...)
@@ -2117,14 +2117,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeLength());
         }
         catch (...)
@@ -2136,14 +2136,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeOffset());
         }
         catch (...)
@@ -2155,14 +2155,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceType());
         }
         catch (...)
@@ -2174,14 +2174,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceUri());
         }
         catch (...)
@@ -2193,14 +2193,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_Position(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2212,14 +2212,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_RequestId(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"RequestId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"RequestId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestId());
         }
         catch (...)
@@ -2231,14 +2231,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_Statistics(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"Statistics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"Statistics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Statistics());
         }
         catch (...)
@@ -2250,14 +2250,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceContentType());
         }
         catch (...)
@@ -2269,14 +2269,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadCompletedEventArgs_get_ResourceDuration(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs", L"ResourceDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceDuration());
         }
         catch (...)
@@ -2367,14 +2367,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_HttpResponseMessage(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"HttpResponseMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"HttpResponseMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HttpResponseMessage());
         }
         catch (...)
@@ -2386,14 +2386,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeLength());
         }
         catch (...)
@@ -2405,14 +2405,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeOffset());
         }
         catch (...)
@@ -2424,14 +2424,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceType());
         }
         catch (...)
@@ -2443,14 +2443,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceUri());
         }
         catch (...)
@@ -2462,14 +2462,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ExtendedError(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2481,14 +2481,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_Position(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2500,14 +2500,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_RequestId(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"RequestId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"RequestId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestId());
         }
         catch (...)
@@ -2519,14 +2519,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_Statistics(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"Statistics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"Statistics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Statistics());
         }
         catch (...)
@@ -2538,14 +2538,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceContentType());
         }
         catch (...)
@@ -2557,14 +2557,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadFailedEventArgs_get_ResourceDuration(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs", L"ResourceDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceDuration());
         }
         catch (...)
@@ -2660,14 +2660,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -2760,14 +2760,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2785,14 +2785,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeLength());
         }
         catch (...)
@@ -2804,14 +2804,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeOffset());
         }
         catch (...)
@@ -2823,14 +2823,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceType());
         }
         catch (...)
@@ -2842,14 +2842,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceUri());
         }
         catch (...)
@@ -2861,14 +2861,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_Result(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -2880,14 +2880,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_Position(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2899,14 +2899,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_RequestId(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"RequestId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"RequestId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestId());
         }
         catch (...)
@@ -2918,14 +2918,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceContentType());
         }
         catch (...)
@@ -2937,14 +2937,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadRequestedEventArgs_get_ResourceDuration(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs", L"ResourceDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceDuration());
         }
         catch (...)
@@ -3035,14 +3035,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceUri());
         }
         catch (...)
@@ -3054,12 +3054,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceUri(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3068,6 +3062,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ResourceUri(param0);
@@ -3082,14 +3082,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_InputStream(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"InputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"InputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputStream());
         }
         catch (...)
@@ -3101,12 +3101,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_InputStream(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"InputStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3115,6 +3109,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"InputStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(arg);
 
             self->obj.InputStream(param0);
@@ -3129,14 +3129,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_ExtendedStatus(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ExtendedStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ExtendedStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedStatus());
         }
         catch (...)
@@ -3148,12 +3148,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ExtendedStatus(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ExtendedStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3162,6 +3156,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ExtendedStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ExtendedStatus(param0);
@@ -3176,14 +3176,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_ContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -3195,12 +3195,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ContentType(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3209,6 +3203,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContentType(param0);
@@ -3223,14 +3223,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_Buffer(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"Buffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"Buffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Buffer());
         }
         catch (...)
@@ -3242,12 +3242,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_Buffer(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"Buffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3256,6 +3250,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"Buffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Buffer(param0);
@@ -3270,14 +3270,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeOffset());
         }
         catch (...)
@@ -3289,12 +3289,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeOffset(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3303,6 +3297,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             self->obj.ResourceByteRangeOffset(param0);
@@ -3317,14 +3317,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadResult_get_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResourceByteRangeLength());
         }
         catch (...)
@@ -3336,12 +3336,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static int AdaptiveMediaSourceDownloadResult_put_ResourceByteRangeLength(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3350,6 +3344,12 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult", L"ResourceByteRangeLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint64_t>>(arg);
 
             self->obj.ResourceByteRangeLength(param0);
@@ -3440,14 +3440,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadStatistics_get_ContentBytesReceivedCount(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"ContentBytesReceivedCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"ContentBytesReceivedCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentBytesReceivedCount());
         }
         catch (...)
@@ -3459,14 +3459,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadStatistics_get_TimeToFirstByteReceived(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToFirstByteReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToFirstByteReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToFirstByteReceived());
         }
         catch (...)
@@ -3478,14 +3478,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadStatistics_get_TimeToHeadersReceived(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToHeadersReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToHeadersReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToHeadersReceived());
         }
         catch (...)
@@ -3497,14 +3497,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourceDownloadStatistics_get_TimeToLastByteReceived(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToLastByteReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadStatistics", L"TimeToLastByteReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToLastByteReceived());
         }
         catch (...)
@@ -3589,14 +3589,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_AudioOnly(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"AudioOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"AudioOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioOnly());
         }
         catch (...)
@@ -3608,14 +3608,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_NewValue(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -3627,14 +3627,14 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyObject* AdaptiveMediaSourcePlaybackBitrateChangedEventArgs_get_OldValue(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"OldValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Streaming.Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs", L"OldValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldValue());
         }
         catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"GetFeature", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"GetFeature", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"GetParameterDefinition", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"GetParameterDefinition", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentBindingFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentBindingFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentBindingFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentBindingFeature());
         }
         catch (...)
@@ -107,14 +107,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentCollateFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentCollateFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentCollateFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentCollateFeature());
         }
         catch (...)
@@ -126,14 +126,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentDuplexFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentDuplexFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentDuplexFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentDuplexFeature());
         }
         catch (...)
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentHolePunchFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentHolePunchFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentHolePunchFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentHolePunchFeature());
         }
         catch (...)
@@ -164,14 +164,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentInputBinFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentInputBinFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentInputBinFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentInputBinFeature());
         }
         catch (...)
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentNUpFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentNUpFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentNUpFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentNUpFeature());
         }
         catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_DocumentStapleFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentStapleFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"DocumentStapleFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentStapleFeature());
         }
         catch (...)
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_JobPasscodeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"JobPasscodeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"JobPasscodeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JobPasscodeFeature());
         }
         catch (...)
@@ -240,14 +240,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -259,14 +259,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageBorderlessFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageBorderlessFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageBorderlessFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageBorderlessFeature());
         }
         catch (...)
@@ -278,14 +278,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageMediaSizeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageMediaSizeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageMediaSizeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageMediaSizeFeature());
         }
         catch (...)
@@ -297,14 +297,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageMediaTypeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageMediaTypeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageMediaTypeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageMediaTypeFeature());
         }
         catch (...)
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageOrientationFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOrientationFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOrientationFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOrientationFeature());
         }
         catch (...)
@@ -335,14 +335,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageOutputColorFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOutputColorFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOutputColorFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOutputColorFeature());
         }
         catch (...)
@@ -354,14 +354,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageOutputQualityFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOutputQualityFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageOutputQualityFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOutputQualityFeature());
         }
         catch (...)
@@ -373,14 +373,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_PageResolutionFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageResolutionFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"PageResolutionFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageResolutionFeature());
         }
         catch (...)
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -411,14 +411,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketCapabilities_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketCapabilities", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -523,14 +523,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"GetOption", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"GetOption", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"GetSelectedOption", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"GetSelectedOption", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSelectedOption());
             }
             catch (...)
@@ -584,14 +584,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"SetSelectedOption", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"SetSelectedOption", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>(args, 0);
 
                 self->obj.SetSelectedOption(param0);
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_DisplayName(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -650,14 +650,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_Options(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -669,14 +669,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_SelectionType(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"SelectionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"SelectionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionType());
         }
         catch (...)
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketFeature_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketFeature", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -808,14 +808,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetPropertyNode", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetPropertyNode", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -840,14 +840,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetPropertyValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetPropertyValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -872,14 +872,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetScoredPropertyNode", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetScoredPropertyNode", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -904,14 +904,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetScoredPropertyValue", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"GetScoredPropertyValue", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -932,14 +932,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_get_DisplayName(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -951,14 +951,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -970,14 +970,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -989,14 +989,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketOption_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketOption", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_DataType(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"DataType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"DataType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataType());
         }
         catch (...)
@@ -1104,14 +1104,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1123,14 +1123,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_RangeMax(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"RangeMax"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"RangeMax"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RangeMax());
         }
         catch (...)
@@ -1142,14 +1142,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_RangeMin(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"RangeMin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"RangeMin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RangeMin());
         }
         catch (...)
@@ -1161,14 +1161,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_UnitType(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"UnitType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"UnitType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnitType());
         }
         catch (...)
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -1199,14 +1199,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterDefinition_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterDefinition", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -1294,14 +1294,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterInitializer_get_Value(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1313,12 +1313,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static int PrintTicketParameterInitializer_put_Value(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1327,6 +1321,12 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>(arg);
 
             self->obj.Value(param0);
@@ -1341,14 +1341,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterInitializer_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1360,14 +1360,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterInitializer_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -1379,14 +1379,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketParameterInitializer_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketParameterInitializer", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -1475,14 +1475,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"GetValueAsInteger", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"GetValueAsInteger", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetValueAsInteger());
             }
             catch (...)
@@ -1504,14 +1504,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"GetValueAsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"GetValueAsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetValueAsString());
             }
             catch (...)
@@ -1529,14 +1529,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* PrintTicketValue_get_Type(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.PrintTicketValue", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1624,14 +1624,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetCapabilities", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetCapabilities", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCapabilities());
             }
             catch (...)
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetFeature", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetFeature", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1685,14 +1685,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetParameterInitializer", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"GetParameterInitializer", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1717,14 +1717,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"MergeAndValidateTicket", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"MergeAndValidateTicket", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(args, 0);
 
                 return py::convert(self->obj.MergeAndValidateTicket(param0));
@@ -1748,14 +1748,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"NotifyXmlChangedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"NotifyXmlChangedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.NotifyXmlChangedAsync());
             }
             catch (...)
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"SetParameterInitializerAsInteger", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"SetParameterInitializerAsInteger", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -1810,14 +1810,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"SetParameterInitializerAsString", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"SetParameterInitializerAsString", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1843,14 +1843,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"ValidateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"ValidateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ValidateAsync());
             }
             catch (...)
@@ -1868,14 +1868,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentBindingFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentBindingFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentBindingFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentBindingFeature());
         }
         catch (...)
@@ -1887,14 +1887,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentCollateFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentCollateFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentCollateFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentCollateFeature());
         }
         catch (...)
@@ -1906,14 +1906,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentDuplexFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentDuplexFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentDuplexFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentDuplexFeature());
         }
         catch (...)
@@ -1925,14 +1925,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentHolePunchFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentHolePunchFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentHolePunchFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentHolePunchFeature());
         }
         catch (...)
@@ -1944,14 +1944,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentInputBinFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentInputBinFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentInputBinFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentInputBinFeature());
         }
         catch (...)
@@ -1963,14 +1963,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentNUpFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentNUpFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentNUpFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentNUpFeature());
         }
         catch (...)
@@ -1982,14 +1982,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_DocumentStapleFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentStapleFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"DocumentStapleFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentStapleFeature());
         }
         catch (...)
@@ -2001,14 +2001,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_JobPasscodeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"JobPasscodeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"JobPasscodeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.JobPasscodeFeature());
         }
         catch (...)
@@ -2020,14 +2020,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_Name(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2039,14 +2039,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageBorderlessFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageBorderlessFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageBorderlessFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageBorderlessFeature());
         }
         catch (...)
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageMediaSizeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageMediaSizeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageMediaSizeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageMediaSizeFeature());
         }
         catch (...)
@@ -2077,14 +2077,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageMediaTypeFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageMediaTypeFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageMediaTypeFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageMediaTypeFeature());
         }
         catch (...)
@@ -2096,14 +2096,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageOrientationFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOrientationFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOrientationFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOrientationFeature());
         }
         catch (...)
@@ -2115,14 +2115,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageOutputColorFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOutputColorFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOutputColorFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOutputColorFeature());
         }
         catch (...)
@@ -2134,14 +2134,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageOutputQualityFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOutputQualityFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageOutputQualityFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageOutputQualityFeature());
         }
         catch (...)
@@ -2153,14 +2153,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_PageResolutionFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageResolutionFeature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"PageResolutionFeature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageResolutionFeature());
         }
         catch (...)
@@ -2172,14 +2172,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_XmlNamespace(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"XmlNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"XmlNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNamespace());
         }
         catch (...)
@@ -2191,14 +2191,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicket_get_XmlNode(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"XmlNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicket", L"XmlNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XmlNode());
         }
         catch (...)
@@ -2305,14 +2305,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicketValidationResult_get_ExtendedError(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2324,14 +2324,14 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyObject* WorkflowPrintTicketValidationResult_get_Validated(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult", L"Validated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintTicket.WorkflowPrintTicketValidationResult", L"Validated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Validated());
         }
         catch (...)

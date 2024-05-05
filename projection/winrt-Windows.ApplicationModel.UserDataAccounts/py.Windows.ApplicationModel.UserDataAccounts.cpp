@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindAppointmentCalendarsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindAppointmentCalendarsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindAppointmentCalendarsAsync());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactAnnotationListsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactAnnotationListsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindContactAnnotationListsAsync());
             }
             catch (...)
@@ -115,14 +115,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactGroupsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactGroupsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindContactGroupsAsync());
             }
             catch (...)
@@ -144,14 +144,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactListsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindContactListsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindContactListsAsync());
             }
             catch (...)
@@ -173,14 +173,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindEmailMailboxesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindEmailMailboxesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindEmailMailboxesAsync());
             }
             catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindUserDataTaskListsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"FindUserDataTaskListsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindUserDataTaskListsAsync());
             }
             catch (...)
@@ -231,14 +231,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -260,14 +260,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"TryShowCreateContactGroupAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"TryShowCreateContactGroupAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryShowCreateContactGroupAsync());
             }
             catch (...)
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_UserDisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"UserDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"UserDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserDisplayName());
         }
         catch (...)
@@ -304,12 +304,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_UserDisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"UserDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -318,6 +312,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"UserDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserDisplayName(param0);
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"OtherAppReadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"OtherAppReadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OtherAppReadAccess());
         }
         catch (...)
@@ -351,12 +351,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"OtherAppReadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -365,6 +359,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"OtherAppReadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>(arg);
 
             self->obj.OtherAppReadAccess(param0);
@@ -379,14 +379,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_Icon(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -398,12 +398,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_Icon(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -412,6 +406,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
 
             self->obj.Icon(param0);
@@ -426,14 +426,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_DeviceAccountTypeId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DeviceAccountTypeId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DeviceAccountTypeId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAccountTypeId());
         }
         catch (...)
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_Id(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_PackageFamilyName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"PackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"PackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFamilyName());
         }
         catch (...)
@@ -483,14 +483,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_IsProtectedUnderLock(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"IsProtectedUnderLock"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"IsProtectedUnderLock"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsProtectedUnderLock());
         }
         catch (...)
@@ -502,12 +502,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_IsProtectedUnderLock(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"IsProtectedUnderLock"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -516,6 +510,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"IsProtectedUnderLock"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsProtectedUnderLock(param0);
@@ -530,14 +530,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_EnterpriseId(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"EnterpriseId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"EnterpriseId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnterpriseId());
         }
         catch (...)
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -568,12 +568,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -582,6 +576,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_ExplictReadAccessPackageFamilyNames(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"ExplictReadAccessPackageFamilyNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"ExplictReadAccessPackageFamilyNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExplictReadAccessPackageFamilyNames());
         }
         catch (...)
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_CanShowCreateContactGroup(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"CanShowCreateContactGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"CanShowCreateContactGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanShowCreateContactGroup());
         }
         catch (...)
@@ -634,12 +634,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static int UserDataAccount_put_CanShowCreateContactGroup(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"CanShowCreateContactGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -648,6 +642,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"CanShowCreateContactGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanShowCreateContactGroup(param0);
@@ -662,14 +662,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccount_get_ProviderProperties(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"ProviderProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccount", L"ProviderProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderProperties());
         }
         catch (...)
@@ -767,14 +767,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::GetForUser(param0));
@@ -798,14 +798,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"RequestStoreAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"RequestStoreAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::RequestStoreAsync(param0));
@@ -829,14 +829,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAccountErrorResolverAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAccountErrorResolverAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountErrorResolverAsync(param0));
@@ -860,14 +860,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAccountSettingsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAccountSettingsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAccountSettingsAsync(param0));
@@ -891,14 +891,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAddAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManager", L"ShowAddAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager::ShowAddAccountAsync(param0));
@@ -994,14 +994,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser", L"RequestStoreAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser", L"RequestStoreAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>(args, 0);
 
                 return py::convert(self->obj.RequestStoreAsync(param0));
@@ -1021,14 +1021,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountManagerForUser_get_User(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1115,14 +1115,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateAccountAsync(param0));
@@ -1135,14 +1135,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"CreateAccountAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1189,14 +1189,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"FindAccountsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"FindAccountsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindAccountsAsync());
             }
             catch (...)
@@ -1218,14 +1218,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"GetAccountAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"GetAccountAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetAccountAsync(param0));
@@ -1245,14 +1245,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_add_StoreChanged(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"StoreChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"StoreChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StoreChanged(param0));
@@ -1266,14 +1266,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
     static PyObject* UserDataAccountStore_remove_StoreChanged(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"StoreChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore", L"StoreChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StoreChanged(param0);
@@ -1366,14 +1366,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)

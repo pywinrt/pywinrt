@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationCompletion", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationCompletion", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -56,14 +56,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationCreation", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationCreation", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationRelation", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceOperationRelation", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -129,14 +129,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceSynchronousWorkCompletion", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceSynchronousWorkCompletion", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>(args, 2);
@@ -163,14 +163,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceSynchronousWorkStart", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TraceSynchronousWorkStart", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::CausalitySource>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_add_TracingStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TracingStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TracingStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0));
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* AsyncCausalityTracer_remove_TracingStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TracingStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.AsyncCausalityTracer", L"TracingStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer::TracingStatusChanged(param0);
@@ -316,14 +316,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"CreateFromHResultAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"CreateFromHResultAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Foundation::Diagnostics::ErrorDetails::CreateFromHResultAsync(param0));
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ErrorDetails_get_Description(py::wrapper::Windows::Foundation::Diagnostics::ErrorDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ErrorDetails_get_HelpUri(py::wrapper::Windows::Foundation::Diagnostics::ErrorDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"HelpUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"HelpUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HelpUri());
         }
         catch (...)
@@ -381,14 +381,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ErrorDetails_get_LongDescription(py::wrapper::Windows::Foundation::Diagnostics::ErrorDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"LongDescription"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ErrorDetails", L"LongDescription"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LongDescription());
         }
         catch (...)
@@ -526,14 +526,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.AddLoggingChannel(param0);
@@ -547,14 +547,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"AddLoggingChannel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -580,14 +580,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"CloseAndSaveToFileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"CloseAndSaveToFileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloseAndSaveToFileAsync());
             }
             catch (...)
@@ -639,14 +639,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"RemoveLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"RemoveLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.RemoveLoggingChannel(param0);
@@ -667,14 +667,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_get_Name(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -686,14 +686,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_add_LogFileGenerated(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
             return py::convert(self->obj.LogFileGenerated(param0));
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* FileLoggingSession_remove_LogFileGenerated(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.FileLoggingSession", L"LogFileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LogFileGenerated(param0);
@@ -826,14 +826,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LogFileGeneratedEventArgs_get_File(py::wrapper::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LogFileGeneratedEventArgs", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsEnabled());
             }
             catch (...)
@@ -1009,14 +1009,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert(self->obj.IsEnabled(param0));
@@ -1029,14 +1029,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"IsEnabled", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -1061,14 +1061,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogEvent(param0);
@@ -1082,14 +1082,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -1104,14 +1104,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1127,14 +1127,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"LogEvent", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1162,14 +1162,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.StartActivity(param0));
@@ -1182,14 +1182,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -1203,14 +1203,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1225,14 +1225,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StartActivity", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1259,14 +1259,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.StopActivity(param0);
@@ -1280,14 +1280,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -1302,14 +1302,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"StopActivity", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOptions>(args, 2);
@@ -1332,14 +1332,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_get_Id(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1351,14 +1351,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_get_Name(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1370,14 +1370,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingActivity_get_Channel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingActivity", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -1548,14 +1548,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1578,14 +1578,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsEnabled());
             }
             catch (...)
@@ -1596,14 +1596,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert(self->obj.IsEnabled(param0));
@@ -1616,14 +1616,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"IsEnabled", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -1648,14 +1648,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogEvent(param0);
@@ -1669,14 +1669,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1714,14 +1714,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogEvent", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1749,14 +1749,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogMessage(param0);
@@ -1770,14 +1770,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogMessage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -1803,14 +1803,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -1825,14 +1825,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LogValuePair", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1859,14 +1859,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.StartActivity(param0));
@@ -1879,14 +1879,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -1900,14 +1900,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1922,14 +1922,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"StartActivity", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_get_Enabled(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_get_Level(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Level"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Level"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Level());
         }
         catch (...)
@@ -1990,14 +1990,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_get_Name(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2009,14 +2009,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_get_Id(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2028,14 +2028,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_add_LoggingEnabled(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LoggingEnabled(param0));
@@ -2049,14 +2049,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannel_remove_LoggingEnabled(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.LoggingChannel", L"LoggingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LoggingEnabled(param0);
@@ -2210,14 +2210,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingChannelOptions_get_Group(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannelOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -2229,12 +2229,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingChannelOptions_put_Group(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannelOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2243,6 +2237,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingChannelOptions", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.Group(param0);
@@ -2353,14 +2353,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -2375,14 +2375,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2398,14 +2398,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2433,14 +2433,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
 
@@ -2455,14 +2455,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2478,14 +2478,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBooleanArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<bool, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2513,14 +2513,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
 
@@ -2535,14 +2535,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2558,14 +2558,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<char16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2593,14 +2593,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
 
@@ -2615,14 +2615,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2638,14 +2638,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<char16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2673,14 +2673,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -2695,14 +2695,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2718,14 +2718,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
 
@@ -2775,14 +2775,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2798,14 +2798,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTimeArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::DateTime, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2833,14 +2833,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -2855,14 +2855,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2878,14 +2878,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2913,14 +2913,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
 
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2958,14 +2958,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDoubleArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<double, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -2993,14 +2993,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddEmpty(param0);
@@ -3014,14 +3014,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
 
@@ -3036,14 +3036,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddEmpty", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -3070,14 +3070,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
 
@@ -3092,14 +3092,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3115,14 +3115,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::guid>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3150,14 +3150,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
 
@@ -3172,14 +3172,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3195,14 +3195,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuidArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::guid, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3230,14 +3230,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
 
@@ -3252,14 +3252,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3275,14 +3275,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3310,14 +3310,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
 
@@ -3332,14 +3332,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3355,14 +3355,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3390,14 +3390,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -3412,14 +3412,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3435,14 +3435,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3470,14 +3470,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
 
@@ -3492,14 +3492,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3515,14 +3515,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3550,14 +3550,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -3572,14 +3572,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3595,14 +3595,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3630,14 +3630,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
 
@@ -3652,14 +3652,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3675,14 +3675,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3710,14 +3710,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -3732,14 +3732,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3755,14 +3755,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3790,14 +3790,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
 
@@ -3812,14 +3812,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3835,14 +3835,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPointArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3870,14 +3870,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -3892,14 +3892,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3915,14 +3915,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3950,14 +3950,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
 
@@ -3972,14 +3972,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -3995,14 +3995,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRectArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Rect, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4030,14 +4030,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -4052,14 +4052,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4075,14 +4075,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4110,14 +4110,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
 
@@ -4132,14 +4132,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4155,14 +4155,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingleArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4190,14 +4190,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
 
@@ -4212,14 +4212,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4235,14 +4235,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4270,14 +4270,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
 
@@ -4292,14 +4292,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4315,14 +4315,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSizeArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Size, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4350,14 +4350,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4372,14 +4372,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4395,14 +4395,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4430,14 +4430,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
 
@@ -4452,14 +4452,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4475,14 +4475,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddStringArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4510,14 +4510,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -4532,14 +4532,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4555,14 +4555,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4590,14 +4590,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
 
@@ -4612,14 +4612,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4635,14 +4635,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpanArray", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4670,14 +4670,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -4692,14 +4692,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4715,14 +4715,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4750,14 +4750,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
 
@@ -4772,14 +4772,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4795,14 +4795,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint16_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4830,14 +4830,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -4852,14 +4852,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4875,14 +4875,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4910,14 +4910,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
 
@@ -4932,14 +4932,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4955,14 +4955,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint32_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -4990,14 +4990,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
 
@@ -5012,14 +5012,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5035,14 +5035,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint64_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5070,14 +5070,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
 
@@ -5092,14 +5092,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5115,14 +5115,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint64_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5150,14 +5150,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 
@@ -5172,14 +5172,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5195,14 +5195,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5230,14 +5230,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -5252,14 +5252,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5275,14 +5275,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8Array", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
@@ -5310,14 +5310,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.BeginStruct(param0);
@@ -5331,14 +5331,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"BeginStruct", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -5364,14 +5364,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -5394,14 +5394,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"EndStruct", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"EndStruct", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EndStruct();
                 Py_RETURN_NONE;
             }
@@ -5566,14 +5566,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_Task(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Task());
         }
         catch (...)
@@ -5585,12 +5585,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Task(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5599,6 +5593,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Task"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int16_t>(arg);
 
             self->obj.Task(param0);
@@ -5613,14 +5613,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_Tags(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tags());
         }
         catch (...)
@@ -5632,12 +5632,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Tags(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5646,6 +5640,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Tags"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Tags(param0);
@@ -5660,14 +5660,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_RelatedActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelatedActivityId());
         }
         catch (...)
@@ -5679,12 +5679,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_RelatedActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5693,6 +5687,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"RelatedActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.RelatedActivityId(param0);
@@ -5707,14 +5707,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_Opcode(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opcode());
         }
         catch (...)
@@ -5726,12 +5726,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Opcode(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5740,6 +5734,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Opcode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>(arg);
 
             self->obj.Opcode(param0);
@@ -5754,14 +5754,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_Keywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keywords());
         }
         catch (...)
@@ -5773,12 +5773,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_Keywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5787,6 +5781,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"Keywords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int64_t>(arg);
 
             self->obj.Keywords(param0);
@@ -5801,14 +5801,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingOptions_get_ActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityId());
         }
         catch (...)
@@ -5820,12 +5820,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static int LoggingOptions_put_ActivityId(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5834,6 +5828,12 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingOptions", L"ActivityId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.ActivityId(param0);
@@ -5951,14 +5951,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.AddLoggingChannel(param0);
@@ -5972,14 +5972,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"AddLoggingChannel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -6005,14 +6005,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6035,14 +6035,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"RemoveLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"RemoveLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.RemoveLoggingChannel(param0);
@@ -6067,14 +6067,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"SaveToFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"SaveToFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -6095,14 +6095,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* LoggingSession_get_Name(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.LoggingSession", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -6235,14 +6235,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"GetErrorOptions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"GetErrorOptions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetErrorOptions());
             }
             catch (...)
@@ -6264,14 +6264,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"SetErrorOptions", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings", L"SetErrorOptions", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
                 self->obj.SetErrorOptions(param0);
@@ -6363,14 +6363,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* TracingStatusChangedEventArgs_get_Enabled(py::wrapper::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -6382,14 +6382,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* TracingStatusChangedEventArgs_get_TraceLevel(py::wrapper::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"TraceLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs", L"TraceLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TraceLevel());
         }
         catch (...)
@@ -6476,14 +6476,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"GetErrorOptions", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"GetErrorOptions", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetErrorOptions());
             }
             catch (...)
@@ -6505,14 +6505,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"SetErrorOptions", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IErrorReportingSettings", L"SetErrorOptions", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ErrorOptions>(args, 0);
 
                 self->obj.SetErrorOptions(param0);
@@ -6608,14 +6608,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.AddLoggingChannel(param0);
@@ -6629,14 +6629,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"AddLoggingChannel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -6662,14 +6662,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6692,14 +6692,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"CloseAndSaveToFileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"CloseAndSaveToFileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloseAndSaveToFileAsync());
             }
             catch (...)
@@ -6721,14 +6721,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"RemoveLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"RemoveLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.RemoveLoggingChannel(param0);
@@ -6749,14 +6749,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_get_Name(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -6768,14 +6768,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_add_LogFileGenerated(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession, winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>>(arg);
 
             return py::convert(self->obj.LogFileGenerated(param0));
@@ -6789,14 +6789,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* IFileLoggingSession_remove_LogFileGenerated(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.IFileLoggingSession", L"LogFileGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LogFileGenerated(param0);
@@ -6912,14 +6912,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6942,14 +6942,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogMessage(param0);
@@ -6963,14 +6963,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogMessage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -6996,14 +6996,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -7018,14 +7018,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LogValuePair", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -7048,14 +7048,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_get_Enabled(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -7067,14 +7067,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_get_Level(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Level"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Level"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Level());
         }
         catch (...)
@@ -7086,14 +7086,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_get_Name(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -7105,14 +7105,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_add_LoggingEnabled(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::Diagnostics::ILoggingChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LoggingEnabled(param0));
@@ -7126,14 +7126,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingChannel_remove_LoggingEnabled(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Foundation.Diagnostics.ILoggingChannel", L"LoggingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LoggingEnabled(param0);
@@ -7250,14 +7250,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.AddLoggingChannel(param0);
@@ -7271,14 +7271,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"AddLoggingChannel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 1);
 
@@ -7304,14 +7304,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -7334,14 +7334,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"RemoveLoggingChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"RemoveLoggingChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>(args, 0);
 
                 self->obj.RemoveLoggingChannel(param0);
@@ -7366,14 +7366,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"SaveToFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"SaveToFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7394,14 +7394,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyObject* ILoggingSession_get_Name(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Foundation.Diagnostics.ILoggingSession", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -7512,14 +7512,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.IsEnabled());
             }
             catch (...)
@@ -7530,14 +7530,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
 
                 return py::convert(self->obj.IsEnabled(param0));
@@ -7550,14 +7550,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"IsEnabled", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 0);
                 auto param1 = py::convert_to<int64_t>(args, 1);
 
@@ -7582,14 +7582,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogEvent(param0);
@@ -7603,14 +7603,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -7625,14 +7625,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -7648,14 +7648,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"LogEvent", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -7683,14 +7683,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.StartActivity(param0));
@@ -7703,14 +7703,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
 
@@ -7724,14 +7724,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);
@@ -7746,14 +7746,14 @@ namespace py::cpp::Windows::Foundation::Diagnostics
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.ILoggingTarget", L"StartActivity", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFields>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingLevel>(args, 2);

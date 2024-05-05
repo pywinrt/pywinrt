@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdRegistrationResult_get_HasInstanceNameChanged(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"HasInstanceNameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"HasInstanceNameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasInstanceNameChanged());
         }
         catch (...)
@@ -94,14 +94,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdRegistrationResult_get_IPAddress(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"IPAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"IPAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IPAddress());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdRegistrationResult_get_Status(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -249,14 +249,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterDatagramSocketAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterDatagramSocketAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::DatagramSocket>(args, 0);
 
                 return py::convert(self->obj.RegisterDatagramSocketAsync(param0));
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterDatagramSocketAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterDatagramSocketAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::DatagramSocket>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
 
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterStreamSocketListenerAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterStreamSocketListenerAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::StreamSocketListener>(args, 0);
 
                 return py::convert(self->obj.RegisterStreamSocketListenerAsync(param0));
@@ -321,14 +321,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterStreamSocketListenerAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"RegisterStreamSocketListenerAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::StreamSocketListener>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
 
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -378,14 +378,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_Weight(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Weight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Weight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Weight());
         }
         catch (...)
@@ -397,12 +397,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Weight(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Weight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -411,6 +405,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Weight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.Weight(param0);
@@ -425,14 +425,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_Priority(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -444,12 +444,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Priority(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -458,6 +452,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.Priority(param0);
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_Port(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Port"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Port"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Port());
         }
         catch (...)
@@ -491,12 +491,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_Port(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Port"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -505,6 +499,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"Port"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint16_t>(arg);
 
             self->obj.Port(param0);
@@ -519,14 +519,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_HostName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"HostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"HostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostName());
         }
         catch (...)
@@ -538,12 +538,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_HostName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"HostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -552,6 +546,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"HostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             self->obj.HostName(param0);
@@ -566,14 +566,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_DnssdServiceInstanceName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"DnssdServiceInstanceName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"DnssdServiceInstanceName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DnssdServiceInstanceName());
         }
         catch (...)
@@ -585,12 +585,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static int DnssdServiceInstance_put_DnssdServiceInstanceName(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"DnssdServiceInstanceName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -599,6 +593,12 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"DnssdServiceInstanceName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DnssdServiceInstanceName(param0);
@@ -613,14 +613,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstance_get_TextAttributes(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"TextAttributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance", L"TextAttributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextAttributes());
         }
         catch (...)
@@ -728,14 +728,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -757,14 +757,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -788,14 +788,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance, true>>(args, 1);
 
@@ -820,14 +820,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>(args, 0);
                 uint32_t param1 {  };
 
@@ -860,14 +860,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceInstanceCollection_get_Size(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1070,14 +1070,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1100,14 +1100,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1126,14 +1126,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_get_Status(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1145,14 +1145,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_add_Added(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher, winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -1166,14 +1166,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_remove_Added(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -1188,14 +1188,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_add_EnumerationCompleted(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -1209,14 +1209,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_add_Stopped(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -1252,14 +1252,14 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyObject* DnssdServiceWatcher_remove_Stopped(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);

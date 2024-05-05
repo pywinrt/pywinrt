@@ -20,14 +20,14 @@ namespace py::cpp::Microsoft::UI::Input::Interop
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.Interop.PenDeviceInterop", L"FromPointerPoint", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Input.Interop.PenDeviceInterop", L"FromPointerPoint", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Input::Interop::PenDeviceInterop::FromPointerPoint(param0));

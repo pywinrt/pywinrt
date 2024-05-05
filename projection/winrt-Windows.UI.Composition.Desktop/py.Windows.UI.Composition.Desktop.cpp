@@ -24,14 +24,14 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
     static PyObject* DesktopWindowTarget_get_IsTopmost(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Desktop.DesktopWindowTarget", L"IsTopmost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Desktop.DesktopWindowTarget", L"IsTopmost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTopmost());
         }
         catch (...)

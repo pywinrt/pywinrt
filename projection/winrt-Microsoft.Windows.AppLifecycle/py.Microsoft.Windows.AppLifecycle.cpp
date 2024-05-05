@@ -20,14 +20,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForFileTypeActivation", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForFileTypeActivation", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -56,14 +56,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForProtocolActivation", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForProtocolActivation", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -91,14 +91,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForStartupActivation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"RegisterForStartupActivation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -124,14 +124,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForFileTypeActivation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForFileTypeActivation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -157,14 +157,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForProtocolActivation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForProtocolActivation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -190,14 +190,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForStartupActivation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.ActivationRegistrationManager", L"UnregisterForStartupActivation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Microsoft::Windows::AppLifecycle::ActivationRegistrationManager::UnregisterForStartupActivation(param0);
@@ -291,14 +291,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppActivationArguments_get_Data(py::wrapper::Microsoft::Windows::AppLifecycle::AppActivationArguments* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppActivationArguments", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppActivationArguments", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -310,14 +310,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppActivationArguments_get_Kind(py::wrapper::Microsoft::Windows::AppLifecycle::AppActivationArguments* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppActivationArguments", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppActivationArguments", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -404,14 +404,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"FindOrRegisterForKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"FindOrRegisterForKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::FindOrRegisterForKey(param0));
@@ -435,14 +435,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetActivatedEventArgs", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetActivatedEventArgs", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetActivatedEventArgs());
             }
             catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetCurrent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetCurrent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetCurrent());
             }
             catch (...)
@@ -493,14 +493,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetInstances", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"GetInstances", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::GetInstances());
             }
             catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"RedirectActivationToAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"RedirectActivationToAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>(args, 0);
 
                 return py::convert(self->obj.RedirectActivationToAsync(param0));
@@ -553,14 +553,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Restart", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Restart", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::AppLifecycle::AppInstance::Restart(param0));
@@ -584,14 +584,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"UnregisterKey", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"UnregisterKey", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UnregisterKey();
                 Py_RETURN_NONE;
             }
@@ -610,14 +610,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_get_IsCurrent(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"IsCurrent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"IsCurrent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCurrent());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_get_Key(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Key"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Key"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Key());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_get_ProcessId(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"ProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"ProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessId());
         }
         catch (...)
@@ -667,14 +667,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_add_Activated(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Microsoft::Windows::AppLifecycle::AppActivationArguments>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -688,14 +688,14 @@ namespace py::cpp::Microsoft::Windows::AppLifecycle
 
     static PyObject* AppInstance_remove_Activated(py::wrapper::Microsoft::Windows::AppLifecycle::AppInstance* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.AppLifecycle.AppInstance", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);

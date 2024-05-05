@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager::GetForCurrentView());
             }
             catch (...)
@@ -53,14 +53,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragDropManager_get_AreConcurrentOperationsEnabled(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"AreConcurrentOperationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"AreConcurrentOperationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreConcurrentOperationsEnabled());
         }
         catch (...)
@@ -72,12 +72,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragDropManager_put_AreConcurrentOperationsEnabled(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"AreConcurrentOperationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -86,6 +80,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"AreConcurrentOperationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreConcurrentOperationsEnabled(param0);
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragDropManager_add_TargetRequested(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"TargetRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"TargetRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager, winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.TargetRequested(param0));
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragDropManager_remove_TargetRequested(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"TargetRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragDropManager", L"TargetRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TargetRequested(param0);
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragInfo_get_Data(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -260,14 +260,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragInfo_get_Modifiers(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Modifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Modifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Modifiers());
         }
         catch (...)
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragInfo_get_Position(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragInfo_get_AllowedOperations(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragInfo", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -416,14 +416,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetDragUIContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetDragUIContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetDragUIContentFromSoftwareBitmap(param0);
@@ -437,14 +437,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetDragUIContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetDragUIContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -470,14 +470,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetPointerId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"SetPointerId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.SetPointerId(param0);
@@ -502,14 +502,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_get_DragUIContentMode(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"DragUIContentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"DragUIContentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragUIContentMode());
         }
         catch (...)
@@ -546,12 +546,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragOperation_put_DragUIContentMode(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"DragUIContentMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -560,6 +554,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"DragUIContentMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>(arg);
 
             self->obj.DragUIContentMode(param0);
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_get_Data(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragOperation_get_AllowedOperations(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowedOperations());
         }
         catch (...)
@@ -612,12 +612,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragOperation_put_AllowedOperations(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"AllowedOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -626,6 +620,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragOperation", L"AllowedOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>(arg);
 
             self->obj.AllowedOperations(param0);
@@ -719,14 +719,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -749,14 +749,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"SetContentFromSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"SetContentFromSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetContentFromSoftwareBitmap(param0);
@@ -770,14 +770,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"SetContentFromSoftwareBitmap", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"SetContentFromSoftwareBitmap", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_get_IsGlyphVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGlyphVisible());
         }
         catch (...)
@@ -818,12 +818,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragUIOverride_put_IsGlyphVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsGlyphVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -832,6 +826,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsGlyphVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGlyphVisible(param0);
@@ -846,14 +846,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_get_IsContentVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsContentVisible());
         }
         catch (...)
@@ -865,12 +865,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragUIOverride_put_IsContentVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsContentVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -879,6 +873,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsContentVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsContentVisible(param0);
@@ -893,14 +893,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_get_IsCaptionVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptionVisible());
         }
         catch (...)
@@ -912,12 +912,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragUIOverride_put_IsCaptionVisible(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsCaptionVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -926,6 +920,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"IsCaptionVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCaptionVisible(param0);
@@ -940,14 +940,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static PyObject* CoreDragUIOverride_get_Caption(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Caption());
         }
         catch (...)
@@ -959,12 +959,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
     static int CoreDragUIOverride_put_Caption(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Caption"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -973,6 +967,12 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDragUIOverride", L"Caption"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Caption(param0);
@@ -1066,14 +1066,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs", L"SetTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.CoreDropOperationTargetRequestedEventArgs", L"SetTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>(args, 0);
 
                 self->obj.SetTarget(param0);
@@ -1168,14 +1168,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"DropAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"DropAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
                 return py::convert(self->obj.DropAsync(param0));
@@ -1199,14 +1199,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"EnterAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"EnterAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"LeaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"LeaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
 
                 return py::convert(self->obj.LeaveAsync(param0));
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"OverAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DragDrop.Core.ICoreDropOperationTarget", L"OverAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>(args, 1);
 

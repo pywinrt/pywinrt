@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* CurrentTimeChangeRequestedEventArgs_get_Time(py::wrapper::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs", L"Time"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.CurrentTimeChangeRequestedEventArgs", L"Time"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Time());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* MuteChangeRequestedEventArgs_get_Mute(py::wrapper::Windows::Media::PlayTo::MuteChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.MuteChangeRequestedEventArgs", L"Mute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.MuteChangeRequestedEventArgs", L"Mute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mute());
         }
         catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_get_State(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnection", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnection", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_add_Error(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToConnection, winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>>(arg);
 
             return py::convert(self->obj.Error(param0));
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_remove_Error(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Error(param0);
@@ -264,14 +264,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_add_StateChanged(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToConnection, winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_remove_StateChanged(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -307,14 +307,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_add_Transferred(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Transferred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Transferred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToConnection, winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>>(arg);
 
             return py::convert(self->obj.Transferred(param0));
@@ -328,14 +328,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnection_remove_Transferred(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Transferred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToConnection", L"Transferred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Transferred(param0);
@@ -426,14 +426,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionErrorEventArgs_get_Code(py::wrapper::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionErrorEventArgs", L"Code"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionErrorEventArgs", L"Code"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Code());
         }
         catch (...)
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionErrorEventArgs_get_Message(py::wrapper::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionErrorEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionErrorEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -535,14 +535,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionStateChangedEventArgs_get_CurrentState(py::wrapper::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs", L"CurrentState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs", L"CurrentState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentState());
         }
         catch (...)
@@ -554,14 +554,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionStateChangedEventArgs_get_PreviousState(py::wrapper::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs", L"PreviousState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionStateChangedEventArgs", L"PreviousState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousState());
         }
         catch (...)
@@ -644,14 +644,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionTransferredEventArgs_get_CurrentSource(py::wrapper::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs", L"CurrentSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs", L"CurrentSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentSource());
         }
         catch (...)
@@ -663,14 +663,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToConnectionTransferredEventArgs_get_PreviousSource(py::wrapper::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs", L"PreviousSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToConnectionTransferredEventArgs", L"PreviousSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousSource());
         }
         catch (...)
@@ -757,14 +757,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToManager", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToManager", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::PlayTo::PlayToManager::GetForCurrentView());
             }
             catch (...)
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToManager", L"ShowPlayToUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToManager", L"ShowPlayToUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Media::PlayTo::PlayToManager::ShowPlayToUI();
                 Py_RETURN_NONE;
             }
@@ -812,14 +812,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_get_DefaultSourceSelection(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToManager", L"DefaultSourceSelection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToManager", L"DefaultSourceSelection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultSourceSelection());
         }
         catch (...)
@@ -831,12 +831,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToManager_put_DefaultSourceSelection(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToManager", L"DefaultSourceSelection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -845,6 +839,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToManager", L"DefaultSourceSelection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DefaultSourceSelection(param0);
@@ -859,14 +859,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_add_SourceRequested(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToManager, winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceRequested(param0));
@@ -880,14 +880,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_remove_SourceRequested(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceRequested(param0);
@@ -902,14 +902,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_add_SourceSelected(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToManager, winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceSelected(param0));
@@ -923,14 +923,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToManager_remove_SourceSelected(py::wrapper::Windows::Media::PlayTo::PlayToManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToManager", L"SourceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceSelected(param0);
@@ -1072,14 +1072,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyDurationChange", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyDurationChange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.NotifyDurationChange(param0);
@@ -1104,14 +1104,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyEnded", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyEnded", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyEnded();
                 Py_RETURN_NONE;
             }
@@ -1134,14 +1134,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyError", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyError", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyError();
                 Py_RETURN_NONE;
             }
@@ -1164,14 +1164,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyLoadedMetadata", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyLoadedMetadata", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyLoadedMetadata();
                 Py_RETURN_NONE;
             }
@@ -1194,14 +1194,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyPaused", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyPaused", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyPaused();
                 Py_RETURN_NONE;
             }
@@ -1224,14 +1224,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyPlaying", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyPlaying", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyPlaying();
                 Py_RETURN_NONE;
             }
@@ -1254,14 +1254,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyRateChange", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyRateChange", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.NotifyRateChange(param0);
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifySeeked", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifySeeked", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifySeeked();
                 Py_RETURN_NONE;
             }
@@ -1316,14 +1316,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifySeeking", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifySeeking", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifySeeking();
                 Py_RETURN_NONE;
             }
@@ -1346,14 +1346,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyStopped", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyStopped", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.NotifyStopped();
                 Py_RETURN_NONE;
             }
@@ -1376,14 +1376,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyTimeUpdate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyTimeUpdate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.NotifyTimeUpdate(param0);
@@ -1408,14 +1408,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyVolumeChange", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"NotifyVolumeChange", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1441,14 +1441,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -1470,14 +1470,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -1495,14 +1495,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_get_SupportsVideo(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsVideo());
         }
         catch (...)
@@ -1514,12 +1514,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToReceiver_put_SupportsVideo(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1528,6 +1522,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsVideo(param0);
@@ -1542,14 +1542,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_get_SupportsImage(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsImage());
         }
         catch (...)
@@ -1561,12 +1561,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToReceiver_put_SupportsImage(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1575,6 +1569,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsImage(param0);
@@ -1589,14 +1589,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_get_SupportsAudio(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsAudio());
         }
         catch (...)
@@ -1608,12 +1608,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToReceiver_put_SupportsAudio(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1622,6 +1616,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SupportsAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsAudio(param0);
@@ -1636,14 +1636,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_get_FriendlyName(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -1655,12 +1655,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToReceiver_put_FriendlyName(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1669,6 +1663,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -1683,14 +1683,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_get_Properties(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -1702,14 +1702,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_CurrentTimeChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"CurrentTimeChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"CurrentTimeChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.CurrentTimeChangeRequested(param0));
@@ -1723,14 +1723,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_CurrentTimeChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"CurrentTimeChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"CurrentTimeChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CurrentTimeChangeRequested(param0);
@@ -1745,14 +1745,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_MuteChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"MuteChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"MuteChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.MuteChangeRequested(param0));
@@ -1766,14 +1766,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_MuteChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"MuteChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"MuteChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MuteChangeRequested(param0);
@@ -1788,14 +1788,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_PauseRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PauseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PauseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.PauseRequested(param0));
@@ -1809,14 +1809,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_PauseRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PauseRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PauseRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PauseRequested(param0);
@@ -1831,14 +1831,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_PlayRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlayRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.PlayRequested(param0));
@@ -1852,14 +1852,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_PlayRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlayRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlayRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PlayRequested(param0);
@@ -1874,14 +1874,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_PlaybackRateChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlaybackRateChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlaybackRateChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.PlaybackRateChangeRequested(param0));
@@ -1895,14 +1895,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_PlaybackRateChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlaybackRateChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"PlaybackRateChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PlaybackRateChangeRequested(param0);
@@ -1917,14 +1917,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_SourceChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SourceChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SourceChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceChangeRequested(param0));
@@ -1938,14 +1938,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_SourceChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SourceChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"SourceChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceChangeRequested(param0);
@@ -1960,14 +1960,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_StopRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StopRequested(param0));
@@ -1981,14 +1981,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_StopRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"StopRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StopRequested(param0);
@@ -2003,14 +2003,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_TimeUpdateRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"TimeUpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"TimeUpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.TimeUpdateRequested(param0));
@@ -2024,14 +2024,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_TimeUpdateRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"TimeUpdateRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"TimeUpdateRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.TimeUpdateRequested(param0);
@@ -2046,14 +2046,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_add_VolumeChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"VolumeChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"VolumeChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::PlayTo::PlayToReceiver, winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.VolumeChangeRequested(param0));
@@ -2067,14 +2067,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToReceiver_remove_VolumeChangeRequested(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"VolumeChangeRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.PlayTo.PlayToReceiver", L"VolumeChangeRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VolumeChangeRequested(param0);
@@ -2199,14 +2199,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSource", L"PlayNext", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSource", L"PlayNext", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PlayNext();
                 Py_RETURN_NONE;
             }
@@ -2225,14 +2225,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSource_get_Next(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Next"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Next"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Next());
         }
         catch (...)
@@ -2244,12 +2244,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToSource_put_Next(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Next"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2258,6 +2252,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Next"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::PlayTo::PlayToSource>(arg);
 
             self->obj.Next(param0);
@@ -2272,14 +2272,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSource_get_Connection(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -2291,14 +2291,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSource_get_PreferredSourceUri(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"PreferredSourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"PreferredSourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredSourceUri());
         }
         catch (...)
@@ -2310,12 +2310,6 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static int PlayToSource_put_PreferredSourceUri(py::wrapper::Windows::Media::PlayTo::PlayToSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"PreferredSourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2324,6 +2318,12 @@ namespace py::cpp::Windows::Media::PlayTo
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSource", L"PreferredSourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.PreferredSourceUri(param0);
@@ -2415,14 +2415,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -2515,14 +2515,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"DisplayErrorString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"DisplayErrorString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.DisplayErrorString(param0);
@@ -2547,14 +2547,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2576,14 +2576,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"SetSource", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"SetSource", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::PlayTo::PlayToSource>(args, 0);
 
                 self->obj.SetSource(param0);
@@ -2604,14 +2604,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceRequest_get_Deadline(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceRequest", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -2696,14 +2696,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceRequestedEventArgs_get_SourceRequest(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceRequestedEventArgs", L"SourceRequest"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceRequestedEventArgs", L"SourceRequest"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceRequest());
         }
         catch (...)
@@ -2785,14 +2785,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceSelectedEventArgs_get_FriendlyName(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -2804,14 +2804,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceSelectedEventArgs_get_Icon(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -2823,14 +2823,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceSelectedEventArgs_get_SupportsAudio(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsAudio());
         }
         catch (...)
@@ -2842,14 +2842,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceSelectedEventArgs_get_SupportsImage(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsImage());
         }
         catch (...)
@@ -2861,14 +2861,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlayToSourceSelectedEventArgs_get_SupportsVideo(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlayToSourceSelectedEventArgs", L"SupportsVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsVideo());
         }
         catch (...)
@@ -2954,14 +2954,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* PlaybackRateChangeRequestedEventArgs_get_Rate(py::wrapper::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs", L"Rate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.PlaybackRateChangeRequestedEventArgs", L"Rate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rate());
         }
         catch (...)
@@ -3043,14 +3043,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Album(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Album"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Album"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Album());
         }
         catch (...)
@@ -3062,14 +3062,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Author(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -3081,14 +3081,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Date(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Date"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Date"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Date());
         }
         catch (...)
@@ -3100,14 +3100,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Description(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -3119,14 +3119,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Genre(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Genre"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Genre"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Genre());
         }
         catch (...)
@@ -3138,14 +3138,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Properties(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -3157,14 +3157,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Rating(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Rating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Rating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rating());
         }
         catch (...)
@@ -3176,14 +3176,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Stream(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Stream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Stream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Stream());
         }
         catch (...)
@@ -3195,14 +3195,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Thumbnail(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -3214,14 +3214,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* SourceChangeRequestedEventArgs_get_Title(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.SourceChangeRequestedEventArgs", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -3312,14 +3312,14 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyObject* VolumeChangeRequestedEventArgs_get_Volume(py::wrapper::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.VolumeChangeRequestedEventArgs", L"Volume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.PlayTo.VolumeChangeRequestedEventArgs", L"Volume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Volume());
         }
         catch (...)

@@ -24,14 +24,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AmbientLight_get_Color(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AmbientLight_put_Color(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AmbientLight_get_Intensity(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Intensity());
         }
         catch (...)
@@ -90,12 +90,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AmbientLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -104,6 +98,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AmbientLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Intensity(param0);
@@ -193,14 +193,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationController", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationController", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -223,14 +223,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationController", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationController", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -249,14 +249,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_get_ProgressBehavior(py::wrapper::Microsoft::UI::Composition::AnimationController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"ProgressBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"ProgressBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProgressBehavior());
         }
         catch (...)
@@ -268,12 +268,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_ProgressBehavior(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"ProgressBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -282,6 +276,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"ProgressBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationControllerProgressBehavior>(arg);
 
             self->obj.ProgressBehavior(param0);
@@ -296,14 +296,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_get_Progress(py::wrapper::Microsoft::UI::Composition::AnimationController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -315,12 +315,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_Progress(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -329,6 +323,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Progress(param0);
@@ -343,14 +343,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_get_PlaybackRate(py::wrapper::Microsoft::UI::Composition::AnimationController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"PlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"PlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackRate());
         }
         catch (...)
@@ -362,12 +362,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationController_put_PlaybackRate(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"PlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -376,6 +370,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"PlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PlaybackRate(param0);
@@ -390,14 +390,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_get_MaxPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"MaxPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"MaxPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::AnimationController::MaxPlaybackRate());
         }
         catch (...)
@@ -409,14 +409,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationController_get_MinPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"MinPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationController", L"MinPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::AnimationController::MinPlaybackRate());
         }
         catch (...)
@@ -533,14 +533,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"GetResolvedCompositionObject", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"GetResolvedCompositionObject", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResolvedCompositionObject());
             }
             catch (...)
@@ -562,14 +562,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"GetResolvedCompositionObjectProperty", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"GetResolvedCompositionObjectProperty", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResolvedCompositionObjectProperty());
             }
             catch (...)
@@ -587,14 +587,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* AnimationPropertyInfo_get_AccessMode(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"AccessMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"AccessMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessMode());
         }
         catch (...)
@@ -606,12 +606,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int AnimationPropertyInfo_put_AccessMode(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"AccessMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -620,6 +614,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.AnimationPropertyInfo", L"AccessMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyAccessMode>(arg);
 
             self->obj.AccessMode(param0);
@@ -706,14 +706,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BackEasingFunction_get_Amplitude(py::wrapper::Microsoft::UI::Composition::BackEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BackEasingFunction", L"Amplitude"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BackEasingFunction", L"Amplitude"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Amplitude());
         }
         catch (...)
@@ -725,14 +725,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BackEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::BackEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BackEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BackEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -819,14 +819,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.BooleanKeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.BooleanKeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -918,14 +918,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceEasingFunction_get_Bounces(py::wrapper::Microsoft::UI::Composition::BounceEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Bounces"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Bounces"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounces());
         }
         catch (...)
@@ -937,14 +937,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceEasingFunction_get_Bounciness(py::wrapper::Microsoft::UI::Composition::BounceEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Bounciness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Bounciness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounciness());
         }
         catch (...)
@@ -956,14 +956,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::BounceEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -1047,14 +1047,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceScalarNaturalMotionAnimation_get_Restitution(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Restitution());
         }
         catch (...)
@@ -1066,12 +1066,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceScalarNaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1080,6 +1074,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Restitution(param0);
@@ -1094,14 +1094,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceScalarNaturalMotionAnimation_get_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Acceleration());
         }
         catch (...)
@@ -1113,12 +1113,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceScalarNaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1127,6 +1121,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceScalarNaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Acceleration(param0);
@@ -1212,14 +1212,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceVector2NaturalMotionAnimation_get_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Restitution());
         }
         catch (...)
@@ -1231,12 +1231,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector2NaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1245,6 +1239,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Restitution(param0);
@@ -1259,14 +1259,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceVector2NaturalMotionAnimation_get_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Acceleration());
         }
         catch (...)
@@ -1278,12 +1278,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector2NaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1292,6 +1286,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector2NaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Acceleration(param0);
@@ -1377,14 +1377,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceVector3NaturalMotionAnimation_get_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Restitution());
         }
         catch (...)
@@ -1396,12 +1396,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector3NaturalMotionAnimation_put_Restitution(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Restitution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1410,6 +1404,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Restitution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Restitution(param0);
@@ -1424,14 +1424,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* BounceVector3NaturalMotionAnimation_get_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Acceleration());
         }
         catch (...)
@@ -1443,12 +1443,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int BounceVector3NaturalMotionAnimation_put_Acceleration(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Acceleration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1457,6 +1451,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.BounceVector3NaturalMotionAnimation", L"Acceleration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Acceleration(param0);
@@ -1542,14 +1542,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CircleEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::CircleEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CircleEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CircleEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -1635,14 +1635,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
@@ -1657,14 +1657,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -1687,14 +1687,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ColorKeyFrameAnimation_get_InterpolationColorSpace(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InterpolationColorSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InterpolationColorSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterpolationColorSpace());
         }
         catch (...)
@@ -1706,12 +1706,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ColorKeyFrameAnimation_put_InterpolationColorSpace(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InterpolationColorSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1720,6 +1714,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ColorKeyFrameAnimation", L"InterpolationColorSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorSpace>(arg);
 
             self->obj.InterpolationColorSpace(param0);
@@ -1809,14 +1809,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"ClearAllParameters", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"ClearAllParameters", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearAllParameters();
                 Py_RETURN_NONE;
             }
@@ -1839,14 +1839,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"ClearParameter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"ClearParameter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.ClearParameter(param0);
@@ -1871,14 +1871,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetBooleanParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetBooleanParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1904,14 +1904,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetColorParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetColorParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
@@ -1937,14 +1937,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetExpressionReferenceParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetExpressionReferenceParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::IAnimationObject>(args, 1);
 
@@ -1970,14 +1970,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetMatrix3x2Parameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetMatrix3x2Parameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
@@ -2003,14 +2003,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetMatrix4x4Parameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetMatrix4x4Parameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 1);
 
@@ -2036,14 +2036,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetQuaternionParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetQuaternionParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -2069,14 +2069,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetReferenceParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetReferenceParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionObject>(args, 1);
 
@@ -2102,14 +2102,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetScalarParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetScalarParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -2135,14 +2135,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector2Parameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector2Parameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
 
@@ -2168,14 +2168,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector3Parameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector3Parameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -2201,14 +2201,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector4Parameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"SetVector4Parameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
 
@@ -2230,14 +2230,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_get_Target(py::wrapper::Microsoft::UI::Composition::CompositionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -2249,12 +2249,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionAnimation_put_Target(py::wrapper::Microsoft::UI::Composition::CompositionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2263,6 +2257,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Target(param0);
@@ -2277,14 +2277,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimation_get_InitialValueExpressions(py::wrapper::Microsoft::UI::Composition::CompositionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"InitialValueExpressions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimation", L"InitialValueExpressions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialValueExpressions());
         }
         catch (...)
@@ -2384,14 +2384,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Add", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Add", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
 
                 self->obj.Add(param0);
@@ -2416,14 +2416,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2445,14 +2445,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 0);
 
                 self->obj.Remove(param0);
@@ -2477,14 +2477,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"RemoveAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"RemoveAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAll();
                 Py_RETURN_NONE;
             }
@@ -2503,14 +2503,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionAnimationGroup_get_Count(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Count"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionAnimationGroup", L"Count"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Count());
         }
         catch (...)
@@ -2602,14 +2602,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionApiInformation_get_ApiVersion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionApiInformation", L"ApiVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionApiInformation", L"ApiVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::CompositionApiInformation::ApiVersion());
         }
         catch (...)
@@ -2922,14 +2922,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"AreEffectsFast", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"AreEffectsFast", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AreEffectsFast());
             }
             catch (...)
@@ -2951,14 +2951,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"AreEffectsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"AreEffectsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AreEffectsSupported());
             }
             catch (...)
@@ -2976,14 +2976,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCapabilities_add_Changed(py::wrapper::Microsoft::UI::Composition::CompositionCapabilities* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::CompositionCapabilities, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -2997,14 +2997,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCapabilities_remove_Changed(py::wrapper::Microsoft::UI::Composition::CompositionCapabilities* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCapabilities", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -3092,14 +3092,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -3111,12 +3111,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3125,6 +3119,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -3139,14 +3139,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_Scale(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -3158,12 +3158,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_Scale(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3172,6 +3166,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Scale(param0);
@@ -3186,14 +3186,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -3205,12 +3205,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3219,6 +3213,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -3233,14 +3233,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -3252,12 +3252,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3266,6 +3260,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -3280,14 +3280,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -3299,12 +3299,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3313,6 +3307,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -3327,14 +3327,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -3346,12 +3346,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3360,6 +3354,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.CenterPoint(param0);
@@ -3374,14 +3374,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionClip_get_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnchorPoint());
         }
         catch (...)
@@ -3393,12 +3393,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionClip_put_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3407,6 +3401,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionClip", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.AnchorPoint(param0);
@@ -3497,14 +3497,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorBrush_get_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorBrush", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorBrush", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -3516,12 +3516,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorBrush_put_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorBrush", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3530,6 +3524,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorBrush", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -3614,14 +3614,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStop_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -3633,12 +3633,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorGradientStop_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3647,6 +3641,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Offset(param0);
@@ -3661,14 +3661,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStop_get_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -3680,12 +3680,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionColorGradientStop_put_Color(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3694,6 +3688,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStop", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -3783,14 +3783,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorGradientStop>(args, 0);
 
                 self->obj.Append(param0);
@@ -3815,14 +3815,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -3845,14 +3845,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -3874,14 +3874,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -3905,14 +3905,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::CompositionColorGradientStop, true>>(args, 1);
 
@@ -3937,14 +3937,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -3966,14 +3966,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorGradientStop>(args, 0);
                 uint32_t param1 {  };
 
@@ -4010,14 +4010,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorGradientStop>(args, 1);
 
@@ -4043,14 +4043,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -4075,14 +4075,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -4105,14 +4105,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::CompositionColorGradientStop, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -4137,14 +4137,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorGradientStop>(args, 1);
 
@@ -4166,14 +4166,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionColorGradientStopCollection_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStopCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionColorGradientStopCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -4396,14 +4396,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCommitBatch_get_IsActive(py::wrapper::Microsoft::UI::Composition::CompositionCommitBatch* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -4415,14 +4415,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCommitBatch_get_IsEnded(py::wrapper::Microsoft::UI::Composition::CompositionCommitBatch* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"IsEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"IsEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnded());
         }
         catch (...)
@@ -4434,14 +4434,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCommitBatch_add_Completed(py::wrapper::Microsoft::UI::Composition::CompositionCommitBatch* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Composition::CompositionBatchCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -4455,14 +4455,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionCommitBatch_remove_Completed(py::wrapper::Microsoft::UI::Composition::CompositionCommitBatch* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionCommitBatch", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -4550,14 +4550,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionContainerShape_get_Shapes(py::wrapper::Microsoft::UI::Composition::CompositionContainerShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionContainerShape", L"Shapes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionContainerShape", L"Shapes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shapes());
         }
         catch (...)
@@ -4643,14 +4643,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Resize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Resize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
 
                 self->obj.Resize(param0);
@@ -4675,14 +4675,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Scroll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Scroll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
 
                 self->obj.Scroll(param0);
@@ -4696,14 +4696,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Scroll", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Scroll", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
@@ -4729,14 +4729,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
@@ -4751,14 +4751,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
@@ -4781,14 +4781,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_get_AlphaMode(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"AlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"AlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlphaMode());
         }
         catch (...)
@@ -4800,14 +4800,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_get_PixelFormat(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"PixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"PixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelFormat());
         }
         catch (...)
@@ -4819,14 +4819,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -4838,14 +4838,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionDrawingSurface_get_SizeInt32(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"SizeInt32"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"SizeInt32"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SizeInt32());
         }
         catch (...)
@@ -4937,14 +4937,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateBackEasingFunction", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateBackEasingFunction", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -4970,14 +4970,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateBounceEasingFunction", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateBounceEasingFunction", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -5004,14 +5004,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateCircleEasingFunction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateCircleEasingFunction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
 
@@ -5036,14 +5036,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateCubicBezierEasingFunction", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateCubicBezierEasingFunction", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
@@ -5069,14 +5069,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateElasticEasingFunction", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateElasticEasingFunction", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -5103,14 +5103,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateExponentialEasingFunction", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateExponentialEasingFunction", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -5136,14 +5136,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateLinearEasingFunction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateLinearEasingFunction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::CompositionEasingFunction::CreateLinearEasingFunction(param0));
@@ -5167,14 +5167,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreatePowerEasingFunction", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreatePowerEasingFunction", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -5200,14 +5200,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateSineEasingFunction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateSineEasingFunction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunctionMode>(args, 1);
 
@@ -5232,14 +5232,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::CompositionEasingFunction::CreateStepEasingFunction(param0));
@@ -5252,14 +5252,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEasingFunction", L"CreateStepEasingFunction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -5388,14 +5388,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectBrush", L"GetSourceParameter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectBrush", L"GetSourceParameter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetSourceParameter(param0));
@@ -5419,14 +5419,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectBrush", L"SetSourceParameter", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectBrush", L"SetSourceParameter", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(args, 1);
 
@@ -5523,14 +5523,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"CreateBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"CreateBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBrush());
             }
             catch (...)
@@ -5548,14 +5548,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectFactory_get_ExtendedError(py::wrapper::Microsoft::UI::Composition::CompositionEffectFactory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -5567,14 +5567,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectFactory_get_LoadStatus(py::wrapper::Microsoft::UI::Composition::CompositionEffectFactory* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"LoadStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectFactory", L"LoadStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LoadStatus());
         }
         catch (...)
@@ -5682,14 +5682,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEffectSourceParameter_get_Name(py::wrapper::Microsoft::UI::Composition::CompositionEffectSourceParameter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectSourceParameter", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEffectSourceParameter", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -5771,14 +5771,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEllipseGeometry_get_Radius(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Radius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Radius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Radius());
         }
         catch (...)
@@ -5790,12 +5790,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionEllipseGeometry_put_Radius(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Radius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5804,6 +5798,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Radius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Radius(param0);
@@ -5818,14 +5818,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionEllipseGeometry_get_Center(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Center());
         }
         catch (...)
@@ -5837,12 +5837,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionEllipseGeometry_put_Center(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5851,6 +5845,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionEllipseGeometry", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Center(param0);
@@ -5936,14 +5936,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGeometricClip_get_ViewBox(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"ViewBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"ViewBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewBox());
         }
         catch (...)
@@ -5955,12 +5955,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometricClip_put_ViewBox(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"ViewBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5969,6 +5963,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"ViewBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionViewBox>(arg);
 
             self->obj.ViewBox(param0);
@@ -5983,14 +5983,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGeometricClip_get_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"Geometry"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"Geometry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geometry());
         }
         catch (...)
@@ -6002,12 +6002,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometricClip_put_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"Geometry"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6016,6 +6010,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometricClip", L"Geometry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionGeometry>(arg);
 
             self->obj.Geometry(param0);
@@ -6101,14 +6101,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGeometry_get_TrimStart(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimStart());
         }
         catch (...)
@@ -6120,12 +6120,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimStart(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6134,6 +6128,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TrimStart(param0);
@@ -6148,14 +6148,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGeometry_get_TrimOffset(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimOffset());
         }
         catch (...)
@@ -6167,12 +6167,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimOffset(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6181,6 +6175,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TrimOffset(param0);
@@ -6195,14 +6195,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGeometry_get_TrimEnd(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimEnd());
         }
         catch (...)
@@ -6214,12 +6214,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGeometry_put_TrimEnd(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimEnd"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6228,6 +6222,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGeometry", L"TrimEnd"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TrimEnd(param0);
@@ -6314,14 +6314,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -6333,12 +6333,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6347,6 +6341,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -6361,14 +6361,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_Scale(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -6380,12 +6380,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_Scale(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6394,6 +6388,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Scale(param0);
@@ -6408,14 +6408,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -6427,12 +6427,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6441,6 +6435,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -6455,14 +6455,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -6474,12 +6474,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6488,6 +6482,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -6502,14 +6502,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -6521,12 +6521,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6535,6 +6529,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -6549,14 +6549,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_InterpolationSpace(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"InterpolationSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"InterpolationSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterpolationSpace());
         }
         catch (...)
@@ -6568,12 +6568,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_InterpolationSpace(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"InterpolationSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6582,6 +6576,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"InterpolationSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorSpace>(arg);
 
             self->obj.InterpolationSpace(param0);
@@ -6596,14 +6596,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_ExtendMode(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ExtendMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ExtendMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendMode());
         }
         catch (...)
@@ -6615,12 +6615,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_ExtendMode(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ExtendMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6629,6 +6623,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ExtendMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionGradientExtendMode>(arg);
 
             self->obj.ExtendMode(param0);
@@ -6643,14 +6643,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -6662,12 +6662,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6676,6 +6670,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.CenterPoint(param0);
@@ -6690,14 +6690,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnchorPoint());
         }
         catch (...)
@@ -6709,12 +6709,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6723,6 +6717,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.AnchorPoint(param0);
@@ -6737,14 +6737,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_ColorStops(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ColorStops"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"ColorStops"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorStops());
         }
         catch (...)
@@ -6756,14 +6756,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGradientBrush_get_MappingMode(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"MappingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"MappingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MappingMode());
         }
         catch (...)
@@ -6775,12 +6775,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionGradientBrush_put_MappingMode(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"MappingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6789,6 +6783,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionGradientBrush", L"MappingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionMappingMode>(arg);
 
             self->obj.MappingMode(param0);
@@ -6887,14 +6887,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CaptureAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CaptureAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 2);
@@ -6922,14 +6922,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateDrawingSurface", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateDrawingSurface", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>(args, 2);
@@ -6955,14 +6955,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateDrawingSurface2", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateDrawingSurface2", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>(args, 2);
@@ -6988,14 +6988,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateMipmapSurface", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateMipmapSurface", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>(args, 2);
@@ -7021,14 +7021,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateVirtualDrawingSurface", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"CreateVirtualDrawingSurface", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXAlphaMode>(args, 2);
@@ -7054,14 +7054,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"Trim", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"Trim", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Trim();
                 Py_RETURN_NONE;
             }
@@ -7080,14 +7080,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_add_RenderingDeviceReplaced(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"RenderingDeviceReplaced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"RenderingDeviceReplaced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::CompositionGraphicsDevice, winrt::Microsoft::UI::Composition::RenderingDeviceReplacedEventArgs>>(arg);
 
             return py::convert(self->obj.RenderingDeviceReplaced(param0));
@@ -7101,14 +7101,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionGraphicsDevice_remove_RenderingDeviceReplaced(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"RenderingDeviceReplaced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionGraphicsDevice", L"RenderingDeviceReplaced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RenderingDeviceReplaced(param0);
@@ -7200,14 +7200,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLight_get_Targets(py::wrapper::Microsoft::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"Targets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"Targets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Targets());
         }
         catch (...)
@@ -7219,14 +7219,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLight_get_ExclusionsFromTargets(py::wrapper::Microsoft::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"ExclusionsFromTargets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"ExclusionsFromTargets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExclusionsFromTargets());
         }
         catch (...)
@@ -7238,14 +7238,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLight_get_IsEnabled(py::wrapper::Microsoft::UI::Composition::CompositionLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -7257,12 +7257,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLight_put_IsEnabled(py::wrapper::Microsoft::UI::Composition::CompositionLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7271,6 +7265,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLight", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -7357,14 +7357,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLineGeometry_get_Start(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"Start"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"Start"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Start());
         }
         catch (...)
@@ -7376,12 +7376,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLineGeometry_put_Start(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"Start"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7390,6 +7384,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"Start"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Start(param0);
@@ -7404,14 +7404,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLineGeometry_get_End(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"End"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"End"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.End());
         }
         catch (...)
@@ -7423,12 +7423,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLineGeometry_put_End(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"End"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7437,6 +7431,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLineGeometry", L"End"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.End(param0);
@@ -7522,14 +7522,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLinearGradientBrush_get_StartPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"StartPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"StartPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartPoint());
         }
         catch (...)
@@ -7541,12 +7541,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLinearGradientBrush_put_StartPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"StartPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7555,6 +7549,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"StartPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.StartPoint(param0);
@@ -7569,14 +7569,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionLinearGradientBrush_get_EndPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"EndPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"EndPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndPoint());
         }
         catch (...)
@@ -7588,12 +7588,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionLinearGradientBrush_put_EndPoint(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"EndPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7602,6 +7596,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionLinearGradientBrush", L"EndPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.EndPoint(param0);
@@ -7687,14 +7687,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMaskBrush_get_Source(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -7706,12 +7706,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionMaskBrush_put_Source(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7720,6 +7714,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Source(param0);
@@ -7734,14 +7734,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMaskBrush_get_Mask(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Mask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Mask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mask());
         }
         catch (...)
@@ -7753,12 +7753,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionMaskBrush_put_Mask(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Mask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7767,6 +7761,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMaskBrush", L"Mask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Mask(param0);
@@ -7856,14 +7856,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"GetDrawingSurfaceForLevel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"GetDrawingSurfaceForLevel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetDrawingSurfaceForLevel(param0));
@@ -7883,14 +7883,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMipmapSurface_get_AlphaMode(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"AlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"AlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlphaMode());
         }
         catch (...)
@@ -7902,14 +7902,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMipmapSurface_get_LevelCount(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"LevelCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"LevelCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LevelCount());
         }
         catch (...)
@@ -7921,14 +7921,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMipmapSurface_get_PixelFormat(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"PixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"PixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelFormat());
         }
         catch (...)
@@ -7940,14 +7940,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionMipmapSurface_get_SizeInt32(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"SizeInt32"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionMipmapSurface", L"SizeInt32"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SizeInt32());
         }
         catch (...)
@@ -8037,14 +8037,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsetScales", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsetScales", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 self->obj.SetInsetScales(param0);
@@ -8058,14 +8058,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsetScales", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsetScales", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -8093,14 +8093,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsets", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsets", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 self->obj.SetInsets(param0);
@@ -8114,14 +8114,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsets", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"SetInsets", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -8145,14 +8145,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_TopInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopInsetScale());
         }
         catch (...)
@@ -8164,12 +8164,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_TopInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8178,6 +8172,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TopInsetScale(param0);
@@ -8192,14 +8192,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_TopInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopInset());
         }
         catch (...)
@@ -8211,12 +8211,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_TopInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8225,6 +8219,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"TopInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TopInset(param0);
@@ -8239,14 +8239,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_Source(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -8258,12 +8258,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_Source(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8272,6 +8266,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Source(param0);
@@ -8286,14 +8286,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_RightInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightInsetScale());
         }
         catch (...)
@@ -8305,12 +8305,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_RightInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8319,6 +8313,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RightInsetScale(param0);
@@ -8333,14 +8333,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_RightInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightInset());
         }
         catch (...)
@@ -8352,12 +8352,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_RightInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8366,6 +8360,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"RightInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RightInset(param0);
@@ -8380,14 +8380,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_LeftInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftInsetScale());
         }
         catch (...)
@@ -8399,12 +8399,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_LeftInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8413,6 +8407,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LeftInsetScale(param0);
@@ -8427,14 +8427,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_LeftInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftInset());
         }
         catch (...)
@@ -8446,12 +8446,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_LeftInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8460,6 +8454,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"LeftInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LeftInset(param0);
@@ -8474,14 +8474,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_IsCenterHollow(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"IsCenterHollow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"IsCenterHollow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCenterHollow());
         }
         catch (...)
@@ -8493,12 +8493,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_IsCenterHollow(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"IsCenterHollow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8507,6 +8501,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"IsCenterHollow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCenterHollow(param0);
@@ -8521,14 +8521,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_BottomInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomInsetScale());
         }
         catch (...)
@@ -8540,12 +8540,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_BottomInsetScale(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInsetScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8554,6 +8548,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInsetScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BottomInsetScale(param0);
@@ -8568,14 +8568,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionNineGridBrush_get_BottomInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomInset());
         }
         catch (...)
@@ -8587,12 +8587,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionNineGridBrush_put_BottomInset(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8601,6 +8595,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionNineGridBrush", L"BottomInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BottomInset(param0);
@@ -8700,14 +8700,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -8730,14 +8730,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
@@ -8763,14 +8763,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
 
@@ -8785,14 +8785,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
@@ -8819,14 +8819,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
@@ -8851,14 +8851,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationGroupWithIAnimationObject", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationGroupWithIAnimationObject", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::IAnimationObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -8884,14 +8884,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationWithIAnimationObject", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimationWithIAnimationObject", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::IAnimationObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 2);
@@ -8918,14 +8918,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StopAnimation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StopAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.StopAnimation(param0);
@@ -8950,14 +8950,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StopAnimationGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StopAnimationGroup(param0);
@@ -8982,14 +8982,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"TryGetAnimationController", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryGetAnimationController(param0));
@@ -9009,14 +9009,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_get_Compositor(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Compositor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Compositor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compositor());
         }
         catch (...)
@@ -9028,14 +9028,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_get_Properties(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -9047,14 +9047,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_get_ImplicitAnimations(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"ImplicitAnimations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImplicitAnimations());
         }
         catch (...)
@@ -9066,12 +9066,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionObject_put_ImplicitAnimations(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"ImplicitAnimations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9080,6 +9074,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"ImplicitAnimations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ImplicitAnimationCollection>(arg);
 
             self->obj.ImplicitAnimations(param0);
@@ -9094,14 +9094,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_get_Comment(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -9113,12 +9113,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionObject_put_Comment(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9127,6 +9121,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Comment(param0);
@@ -9141,14 +9141,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionObject_get_DispatcherQueue(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionObject", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -9382,14 +9382,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionPathGeometry_get_Path(py::wrapper::Microsoft::UI::Composition::CompositionPathGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionPathGeometry", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionPathGeometry", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -9401,12 +9401,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionPathGeometry_put_Path(py::wrapper::Microsoft::UI::Composition::CompositionPathGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionPathGeometry", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9415,6 +9409,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionPathGeometry", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionPath>(arg);
 
             self->obj.Path(param0);
@@ -9499,14 +9499,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_MinBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinBlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinBlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinBlurRadius());
         }
         catch (...)
@@ -9518,12 +9518,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_MinBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinBlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9532,6 +9526,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MinBlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MinBlurRadius(param0);
@@ -9546,14 +9546,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_MaxBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxBlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxBlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBlurRadius());
         }
         catch (...)
@@ -9565,12 +9565,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_MaxBlurRadius(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxBlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9579,6 +9573,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"MaxBlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MaxBlurRadius(param0);
@@ -9593,14 +9593,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_LightSource(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"LightSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"LightSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LightSource());
         }
         catch (...)
@@ -9612,12 +9612,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_LightSource(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"LightSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9626,6 +9620,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"LightSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionLight>(arg);
 
             self->obj.LightSource(param0);
@@ -9640,14 +9640,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_BlurRadiusMultiplier(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"BlurRadiusMultiplier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"BlurRadiusMultiplier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BlurRadiusMultiplier());
         }
         catch (...)
@@ -9659,12 +9659,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadow_put_BlurRadiusMultiplier(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"BlurRadiusMultiplier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9673,6 +9667,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"BlurRadiusMultiplier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BlurRadiusMultiplier(param0);
@@ -9687,14 +9687,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_Casters(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"Casters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"Casters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Casters());
         }
         catch (...)
@@ -9706,14 +9706,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadow_get_Receivers(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"Receivers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadow", L"Receivers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Receivers());
         }
         catch (...)
@@ -9800,14 +9800,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCaster_get_CastingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"CastingVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"CastingVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CastingVisual());
         }
         catch (...)
@@ -9819,12 +9819,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowCaster_put_CastingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"CastingVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9833,6 +9827,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"CastingVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.CastingVisual(param0);
@@ -9847,14 +9847,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCaster_get_Brush(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Brush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Brush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Brush());
         }
         catch (...)
@@ -9866,12 +9866,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowCaster_put_Brush(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Brush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9880,6 +9874,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCaster", L"Brush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Brush(param0);
@@ -9969,14 +9969,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -9998,14 +9998,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAbove", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAbove", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 1);
 
@@ -10031,14 +10031,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAtBottom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAtBottom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 0);
 
                 self->obj.InsertAtBottom(param0);
@@ -10063,14 +10063,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAtTop", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertAtTop", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 0);
 
                 self->obj.InsertAtTop(param0);
@@ -10095,14 +10095,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertBelow", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"InsertBelow", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 1);
 
@@ -10128,14 +10128,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowCaster>(args, 0);
 
                 self->obj.Remove(param0);
@@ -10160,14 +10160,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"RemoveAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"RemoveAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAll();
                 Py_RETURN_NONE;
             }
@@ -10186,14 +10186,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_get_Count(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"Count"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"Count"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Count());
         }
         catch (...)
@@ -10205,14 +10205,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowCasterCollection_get_MaxRespectedCasters(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"MaxRespectedCasters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowCasterCollection", L"MaxRespectedCasters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection::MaxRespectedCasters());
         }
         catch (...)
@@ -10341,14 +10341,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiver_get_ReceivingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"ReceivingVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"ReceivingVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceivingVisual());
         }
         catch (...)
@@ -10360,12 +10360,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionProjectedShadowReceiver_put_ReceivingVisual(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"ReceivingVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10374,6 +10368,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiver", L"ReceivingVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.ReceivingVisual(param0);
@@ -10462,14 +10462,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Add", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Add", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowReceiver>(args, 0);
 
                 self->obj.Add(param0);
@@ -10494,14 +10494,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -10523,14 +10523,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionProjectedShadowReceiver>(args, 0);
 
                 self->obj.Remove(param0);
@@ -10555,14 +10555,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"RemoveAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"RemoveAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAll();
                 Py_RETURN_NONE;
             }
@@ -10581,14 +10581,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_get_Count(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Count"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionProjectedShadowReceiverUnorderedCollection", L"Count"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Count());
         }
         catch (...)
@@ -10692,14 +10692,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertBoolean", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertBoolean", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -10725,14 +10725,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertColor", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertColor", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
@@ -10758,14 +10758,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertMatrix3x2", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertMatrix3x2", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
@@ -10791,14 +10791,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertMatrix4x4", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertMatrix4x4", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 1);
 
@@ -10824,14 +10824,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertQuaternion", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertQuaternion", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -10857,14 +10857,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertScalar", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertScalar", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -10890,14 +10890,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector2", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector2", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
 
@@ -10923,14 +10923,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector3", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector3", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -10956,14 +10956,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector4", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"InsertVector4", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
 
@@ -10989,14 +10989,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetBoolean", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetBoolean", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 bool param1 {  };
 
@@ -11033,14 +11033,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetColor", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetColor", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::UI::Color param1 {  };
 
@@ -11077,14 +11077,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetMatrix3x2", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetMatrix3x2", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float3x2 param1 {  };
 
@@ -11121,14 +11121,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetMatrix4x4", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetMatrix4x4", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
 
@@ -11165,14 +11165,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetQuaternion", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetQuaternion", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::quaternion param1 {  };
 
@@ -11209,14 +11209,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetScalar", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetScalar", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 float param1 {  };
 
@@ -11253,14 +11253,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector2", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector2", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float2 param1 {  };
 
@@ -11297,14 +11297,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector3", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector3", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float3 param1 {  };
 
@@ -11341,14 +11341,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector4", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionPropertySet", L"TryGetVector4", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float4 param1 {  };
 
@@ -11468,14 +11468,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRadialGradientBrush_get_GradientOriginOffset(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"GradientOriginOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"GradientOriginOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GradientOriginOffset());
         }
         catch (...)
@@ -11487,12 +11487,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_GradientOriginOffset(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"GradientOriginOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11501,6 +11495,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"GradientOriginOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.GradientOriginOffset(param0);
@@ -11515,14 +11515,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRadialGradientBrush_get_EllipseRadius(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseRadius());
         }
         catch (...)
@@ -11534,12 +11534,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_EllipseRadius(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11548,6 +11542,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.EllipseRadius(param0);
@@ -11562,14 +11562,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRadialGradientBrush_get_EllipseCenter(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseCenter());
         }
         catch (...)
@@ -11581,12 +11581,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRadialGradientBrush_put_EllipseCenter(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11595,6 +11589,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRadialGradientBrush", L"EllipseCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.EllipseCenter(param0);
@@ -11681,14 +11681,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRectangleGeometry_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -11700,12 +11700,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRectangleGeometry_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11714,6 +11708,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Size(param0);
@@ -11728,14 +11728,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRectangleGeometry_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -11747,12 +11747,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRectangleGeometry_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11761,6 +11755,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRectangleGeometry", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -11846,14 +11846,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRoundedRectangleGeometry_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -11865,12 +11865,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11879,6 +11873,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Size(param0);
@@ -11893,14 +11893,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRoundedRectangleGeometry_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -11912,12 +11912,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11926,6 +11920,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -11940,14 +11940,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionRoundedRectangleGeometry_get_CornerRadius(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"CornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"CornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CornerRadius());
         }
         catch (...)
@@ -11959,12 +11959,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionRoundedRectangleGeometry_put_CornerRadius(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"CornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11973,6 +11967,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionRoundedRectangleGeometry", L"CornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.CornerRadius(param0);
@@ -12063,14 +12063,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"End", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"End", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.End();
                 Py_RETURN_NONE;
             }
@@ -12093,14 +12093,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -12123,14 +12123,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Suspend", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Suspend", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Suspend();
                 Py_RETURN_NONE;
             }
@@ -12149,14 +12149,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_get_IsActive(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"IsActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"IsActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsActive());
         }
         catch (...)
@@ -12168,14 +12168,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_get_IsEnded(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"IsEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"IsEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnded());
         }
         catch (...)
@@ -12187,14 +12187,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_add_Completed(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Microsoft::UI::Composition::CompositionBatchCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.Completed(param0));
@@ -12208,14 +12208,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionScopedBatch_remove_Completed(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.CompositionScopedBatch", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Completed(param0);
@@ -12375,14 +12375,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -12394,12 +12394,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12408,6 +12402,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -12422,14 +12422,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_Scale(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -12441,12 +12441,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_Scale(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12455,6 +12449,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Scale(param0);
@@ -12469,14 +12469,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -12488,12 +12488,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12502,6 +12496,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -12516,14 +12516,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -12535,12 +12535,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12549,6 +12543,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -12563,14 +12563,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -12582,12 +12582,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12596,6 +12590,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -12610,14 +12610,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShape_get_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -12629,12 +12629,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionShape_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12643,6 +12637,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShape", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.CenterPoint(param0);
@@ -12736,14 +12736,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShape>(args, 0);
 
                 self->obj.Append(param0);
@@ -12768,14 +12768,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -12798,14 +12798,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -12827,14 +12827,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -12858,14 +12858,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::CompositionShape, true>>(args, 1);
 
@@ -12890,14 +12890,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -12919,14 +12919,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShape>(args, 0);
                 uint32_t param1 {  };
 
@@ -12963,14 +12963,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShape>(args, 1);
 
@@ -12996,14 +12996,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -13028,14 +13028,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -13058,14 +13058,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::CompositionShape, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -13090,14 +13090,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShape>(args, 1);
 
@@ -13119,14 +13119,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionShapeCollection_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionShapeCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -13349,14 +13349,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeThickness(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeThickness());
         }
         catch (...)
@@ -13368,12 +13368,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeThickness(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13382,6 +13376,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.StrokeThickness(param0);
@@ -13396,14 +13396,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeStartCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeStartCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeStartCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeStartCap());
         }
         catch (...)
@@ -13415,12 +13415,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeStartCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeStartCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13429,6 +13423,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeStartCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStrokeCap>(arg);
 
             self->obj.StrokeStartCap(param0);
@@ -13443,14 +13443,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeMiterLimit(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeMiterLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeMiterLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeMiterLimit());
         }
         catch (...)
@@ -13462,12 +13462,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeMiterLimit(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeMiterLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13476,6 +13470,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeMiterLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.StrokeMiterLimit(param0);
@@ -13490,14 +13490,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeLineJoin(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeLineJoin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeLineJoin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeLineJoin());
         }
         catch (...)
@@ -13509,12 +13509,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeLineJoin(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeLineJoin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13523,6 +13517,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeLineJoin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStrokeLineJoin>(arg);
 
             self->obj.StrokeLineJoin(param0);
@@ -13537,14 +13537,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeEndCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeEndCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeEndCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeEndCap());
         }
         catch (...)
@@ -13556,12 +13556,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeEndCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeEndCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13570,6 +13564,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeEndCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStrokeCap>(arg);
 
             self->obj.StrokeEndCap(param0);
@@ -13584,14 +13584,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeDashOffset(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeDashOffset());
         }
         catch (...)
@@ -13603,12 +13603,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeDashOffset(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13617,6 +13611,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.StrokeDashOffset(param0);
@@ -13631,14 +13631,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeDashCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeDashCap());
         }
         catch (...)
@@ -13650,12 +13650,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeDashCap(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashCap"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13664,6 +13658,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashCap"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStrokeCap>(arg);
 
             self->obj.StrokeDashCap(param0);
@@ -13678,14 +13678,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeBrush());
         }
         catch (...)
@@ -13697,12 +13697,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_StrokeBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13711,6 +13705,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.StrokeBrush(param0);
@@ -13725,14 +13725,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_IsStrokeNonScaling(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"IsStrokeNonScaling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"IsStrokeNonScaling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStrokeNonScaling());
         }
         catch (...)
@@ -13744,12 +13744,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_IsStrokeNonScaling(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"IsStrokeNonScaling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13758,6 +13752,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"IsStrokeNonScaling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsStrokeNonScaling(param0);
@@ -13772,14 +13772,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"Geometry"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"Geometry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geometry());
         }
         catch (...)
@@ -13791,12 +13791,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_Geometry(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"Geometry"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13805,6 +13799,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"Geometry"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionGeometry>(arg);
 
             self->obj.Geometry(param0);
@@ -13819,14 +13819,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_FillBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"FillBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"FillBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FillBrush());
         }
         catch (...)
@@ -13838,12 +13838,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSpriteShape_put_FillBrush(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"FillBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13852,6 +13846,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"FillBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.FillBrush(param0);
@@ -13866,14 +13866,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSpriteShape_get_StrokeDashArray(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashArray"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSpriteShape", L"StrokeDashArray"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeDashArray());
         }
         catch (...)
@@ -13970,14 +13970,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 self->obj.Append(param0);
@@ -14002,14 +14002,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -14032,14 +14032,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -14061,14 +14061,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -14092,14 +14092,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<float, true>>(args, 1);
 
@@ -14124,14 +14124,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -14153,14 +14153,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 uint32_t param1 {  };
 
@@ -14197,14 +14197,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -14230,14 +14230,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -14262,14 +14262,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -14292,14 +14292,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<float, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -14324,14 +14324,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -14353,14 +14353,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionStrokeDashArray_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionStrokeDashArray", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -14583,14 +14583,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalAlignmentRatio());
         }
         catch (...)
@@ -14602,12 +14602,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14616,6 +14610,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.VerticalAlignmentRatio(param0);
@@ -14630,14 +14630,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_Surface(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Surface"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Surface"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Surface());
         }
         catch (...)
@@ -14649,12 +14649,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Surface(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Surface"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14663,6 +14657,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Surface"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSurface>(arg);
 
             self->obj.Surface(param0);
@@ -14677,14 +14677,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Stretch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Stretch());
         }
         catch (...)
@@ -14696,12 +14696,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Stretch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14710,6 +14704,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStretch>(arg);
 
             self->obj.Stretch(param0);
@@ -14724,14 +14724,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalAlignmentRatio());
         }
         catch (...)
@@ -14743,12 +14743,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14757,6 +14751,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.HorizontalAlignmentRatio(param0);
@@ -14771,14 +14771,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_BitmapInterpolationMode(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"BitmapInterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"BitmapInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapInterpolationMode());
         }
         catch (...)
@@ -14790,12 +14790,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_BitmapInterpolationMode(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"BitmapInterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14804,6 +14798,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"BitmapInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBitmapInterpolationMode>(arg);
 
             self->obj.BitmapInterpolationMode(param0);
@@ -14818,14 +14818,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -14837,12 +14837,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14851,6 +14845,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -14865,14 +14865,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_Scale(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -14884,12 +14884,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Scale(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14898,6 +14892,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Scale(param0);
@@ -14912,14 +14912,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -14931,12 +14931,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14945,6 +14939,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -14959,14 +14959,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -14978,12 +14978,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14992,6 +14986,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -15006,14 +15006,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -15025,12 +15025,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15039,6 +15033,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -15053,14 +15053,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -15072,12 +15072,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15086,6 +15080,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.CenterPoint(param0);
@@ -15100,14 +15100,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnchorPoint());
         }
         catch (...)
@@ -15119,12 +15119,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_AnchorPoint(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15133,6 +15127,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.AnchorPoint(param0);
@@ -15147,14 +15147,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionSurfaceBrush_get_SnapToPixels(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"SnapToPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"SnapToPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SnapToPixels());
         }
         catch (...)
@@ -15166,12 +15166,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionSurfaceBrush_put_SnapToPixels(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"SnapToPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15180,6 +15174,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionSurfaceBrush", L"SnapToPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SnapToPixels(param0);
@@ -15345,14 +15345,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionViewBox_get_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalAlignmentRatio());
         }
         catch (...)
@@ -15364,12 +15364,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_VerticalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"VerticalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15378,6 +15372,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"VerticalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.VerticalAlignmentRatio(param0);
@@ -15392,14 +15392,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionViewBox_get_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Stretch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Stretch());
         }
         catch (...)
@@ -15411,12 +15411,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Stretch(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Stretch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15425,6 +15419,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Stretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionStretch>(arg);
 
             self->obj.Stretch(param0);
@@ -15439,14 +15439,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionViewBox_get_Size(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -15458,12 +15458,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Size(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15472,6 +15466,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Size(param0);
@@ -15486,14 +15486,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionViewBox_get_Offset(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -15505,12 +15505,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_Offset(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15519,6 +15513,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Offset(param0);
@@ -15533,14 +15533,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionViewBox_get_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalAlignmentRatio());
         }
         catch (...)
@@ -15552,12 +15552,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionViewBox_put_HorizontalAlignmentRatio(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"HorizontalAlignmentRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15566,6 +15560,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionViewBox", L"HorizontalAlignmentRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.HorizontalAlignmentRatio(param0);
@@ -15658,14 +15658,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionVirtualDrawingSurface", L"Trim", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionVirtualDrawingSurface", L"Trim", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Graphics::RectInt32, false>>(args, 0);
 
                 self->obj.Trim(param0);
@@ -15756,14 +15756,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionVisualSurface_get_SourceVisual(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceVisual());
         }
         catch (...)
@@ -15775,12 +15775,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceVisual(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceVisual"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15789,6 +15783,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceVisual"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.SourceVisual(param0);
@@ -15803,14 +15803,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionVisualSurface_get_SourceSize(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceSize());
         }
         catch (...)
@@ -15822,12 +15822,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceSize(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15836,6 +15830,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.SourceSize(param0);
@@ -15850,14 +15850,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CompositionVisualSurface_get_SourceOffset(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceOffset());
         }
         catch (...)
@@ -15869,12 +15869,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int CompositionVisualSurface_put_SourceOffset(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15883,6 +15877,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CompositionVisualSurface", L"SourceOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.SourceOffset(param0);
@@ -15995,14 +15995,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -16025,14 +16025,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAmbientLight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAmbientLight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAmbientLight());
             }
             catch (...)
@@ -16054,14 +16054,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationController", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationController", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAnimationController());
             }
             catch (...)
@@ -16083,14 +16083,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationGroup", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationGroup", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAnimationGroup());
             }
             catch (...)
@@ -16112,14 +16112,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationPropertyInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateAnimationPropertyInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAnimationPropertyInfo());
             }
             catch (...)
@@ -16141,14 +16141,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBackdropBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBackdropBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBackdropBrush());
             }
             catch (...)
@@ -16170,14 +16170,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBooleanKeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBooleanKeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBooleanKeyFrameAnimation());
             }
             catch (...)
@@ -16199,14 +16199,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceScalarAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceScalarAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBounceScalarAnimation());
             }
             catch (...)
@@ -16228,14 +16228,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceVector2Animation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceVector2Animation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBounceVector2Animation());
             }
             catch (...)
@@ -16257,14 +16257,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceVector3Animation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateBounceVector3Animation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBounceVector3Animation());
             }
             catch (...)
@@ -16286,14 +16286,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateColorBrush());
             }
             catch (...)
@@ -16304,14 +16304,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorBrush", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorBrush", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
 
                 return py::convert(self->obj.CreateColorBrush(param0));
@@ -16335,14 +16335,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorGradientStop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorGradientStop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateColorGradientStop());
             }
             catch (...)
@@ -16353,14 +16353,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorGradientStop", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorGradientStop", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
@@ -16385,14 +16385,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorKeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateColorKeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateColorKeyFrameAnimation());
             }
             catch (...)
@@ -16414,14 +16414,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateContainerShape", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateContainerShape", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateContainerShape());
             }
             catch (...)
@@ -16443,14 +16443,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateContainerVisual", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateContainerVisual", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateContainerVisual());
             }
             catch (...)
@@ -16472,14 +16472,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateCubicBezierEasingFunction", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateCubicBezierEasingFunction", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
 
@@ -16504,14 +16504,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateDistantLight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateDistantLight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDistantLight());
             }
             catch (...)
@@ -16533,14 +16533,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateDropShadow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateDropShadow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDropShadow());
             }
             catch (...)
@@ -16562,14 +16562,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEffectFactory", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEffectFactory", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Effects::IGraphicsEffect>(args, 0);
 
                 return py::convert(self->obj.CreateEffectFactory(param0));
@@ -16582,14 +16582,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEffectFactory", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEffectFactory", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Effects::IGraphicsEffect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -16614,14 +16614,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEllipseGeometry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateEllipseGeometry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateEllipseGeometry());
             }
             catch (...)
@@ -16643,14 +16643,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateExpressionAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateExpressionAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateExpressionAnimation());
             }
             catch (...)
@@ -16661,14 +16661,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateExpressionAnimation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateExpressionAnimation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateExpressionAnimation(param0));
@@ -16692,14 +16692,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateGeometricClip", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateGeometricClip", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateGeometricClip());
             }
             catch (...)
@@ -16710,14 +16710,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateGeometricClip", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateGeometricClip", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionGeometry>(args, 0);
 
                 return py::convert(self->obj.CreateGeometricClip(param0));
@@ -16741,14 +16741,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateImplicitAnimationCollection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateImplicitAnimationCollection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateImplicitAnimationCollection());
             }
             catch (...)
@@ -16770,14 +16770,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateInsetClip", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateInsetClip", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateInsetClip());
             }
             catch (...)
@@ -16788,14 +16788,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateInsetClip", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateInsetClip", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -16822,14 +16822,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLayerVisual", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLayerVisual", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateLayerVisual());
             }
             catch (...)
@@ -16851,14 +16851,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLineGeometry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLineGeometry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateLineGeometry());
             }
             catch (...)
@@ -16880,14 +16880,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLinearEasingFunction", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLinearEasingFunction", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateLinearEasingFunction());
             }
             catch (...)
@@ -16909,14 +16909,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLinearGradientBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateLinearGradientBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateLinearGradientBrush());
             }
             catch (...)
@@ -16938,14 +16938,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateMaskBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateMaskBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateMaskBrush());
             }
             catch (...)
@@ -16967,14 +16967,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateNineGridBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateNineGridBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateNineGridBrush());
             }
             catch (...)
@@ -16996,14 +16996,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathGeometry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathGeometry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreatePathGeometry());
             }
             catch (...)
@@ -17014,14 +17014,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathGeometry", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathGeometry", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionPath>(args, 0);
 
                 return py::convert(self->obj.CreatePathGeometry(param0));
@@ -17045,14 +17045,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathKeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePathKeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreatePathKeyFrameAnimation());
             }
             catch (...)
@@ -17074,14 +17074,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePointLight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePointLight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreatePointLight());
             }
             catch (...)
@@ -17103,14 +17103,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadow", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadow", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateProjectedShadow());
             }
             catch (...)
@@ -17132,14 +17132,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadowCaster", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadowCaster", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateProjectedShadowCaster());
             }
             catch (...)
@@ -17161,14 +17161,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadowReceiver", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateProjectedShadowReceiver", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateProjectedShadowReceiver());
             }
             catch (...)
@@ -17190,14 +17190,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePropertySet", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreatePropertySet", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreatePropertySet());
             }
             catch (...)
@@ -17219,14 +17219,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateQuaternionKeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateQuaternionKeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateQuaternionKeyFrameAnimation());
             }
             catch (...)
@@ -17248,14 +17248,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRadialGradientBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRadialGradientBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateRadialGradientBrush());
             }
             catch (...)
@@ -17277,14 +17277,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateRectangleClip());
             }
             catch (...)
@@ -17295,14 +17295,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -17318,14 +17318,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 8)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 8))
-            {
-                py::set_arg_count_version_error(8);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleClip", 8))
+                {
+                    py::set_arg_count_version_error(8);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<float>(args, 2);
@@ -17356,14 +17356,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleGeometry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRectangleGeometry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateRectangleGeometry());
             }
             catch (...)
@@ -17385,14 +17385,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRedirectVisual", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRedirectVisual", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateRedirectVisual());
             }
             catch (...)
@@ -17403,14 +17403,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRedirectVisual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRedirectVisual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 return py::convert(self->obj.CreateRedirectVisual(param0));
@@ -17434,14 +17434,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRoundedRectangleGeometry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateRoundedRectangleGeometry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateRoundedRectangleGeometry());
             }
             catch (...)
@@ -17463,14 +17463,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateScalarKeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateScalarKeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateScalarKeyFrameAnimation());
             }
             catch (...)
@@ -17492,14 +17492,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateScopedBatch", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateScopedBatch", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBatchTypes>(args, 0);
 
                 return py::convert(self->obj.CreateScopedBatch(param0));
@@ -17523,14 +17523,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateShapeVisual", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateShapeVisual", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateShapeVisual());
             }
             catch (...)
@@ -17552,14 +17552,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpotLight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpotLight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpotLight());
             }
             catch (...)
@@ -17581,14 +17581,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringScalarAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringScalarAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpringScalarAnimation());
             }
             catch (...)
@@ -17610,14 +17610,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringVector2Animation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringVector2Animation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpringVector2Animation());
             }
             catch (...)
@@ -17639,14 +17639,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringVector3Animation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpringVector3Animation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpringVector3Animation());
             }
             catch (...)
@@ -17668,14 +17668,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteShape", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteShape", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpriteShape());
             }
             catch (...)
@@ -17686,14 +17686,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteShape", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteShape", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionGeometry>(args, 0);
 
                 return py::convert(self->obj.CreateSpriteShape(param0));
@@ -17717,14 +17717,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteVisual", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSpriteVisual", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSpriteVisual());
             }
             catch (...)
@@ -17746,14 +17746,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateStepEasingFunction", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateStepEasingFunction", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateStepEasingFunction());
             }
             catch (...)
@@ -17764,14 +17764,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateStepEasingFunction", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateStepEasingFunction", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.CreateStepEasingFunction(param0));
@@ -17795,14 +17795,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSurfaceBrush", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSurfaceBrush", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSurfaceBrush());
             }
             catch (...)
@@ -17813,14 +17813,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSurfaceBrush", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateSurfaceBrush", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSurface>(args, 0);
 
                 return py::convert(self->obj.CreateSurfaceBrush(param0));
@@ -17844,14 +17844,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector2KeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector2KeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateVector2KeyFrameAnimation());
             }
             catch (...)
@@ -17873,14 +17873,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector3KeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector3KeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateVector3KeyFrameAnimation());
             }
             catch (...)
@@ -17902,14 +17902,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector4KeyFrameAnimation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVector4KeyFrameAnimation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateVector4KeyFrameAnimation());
             }
             catch (...)
@@ -17931,14 +17931,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateViewBox", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateViewBox", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateViewBox());
             }
             catch (...)
@@ -17960,14 +17960,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVisualSurface", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"CreateVisualSurface", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateVisualSurface());
             }
             catch (...)
@@ -17989,14 +17989,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"GetCommitBatch", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"GetCommitBatch", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBatchTypes>(args, 0);
 
                 return py::convert(self->obj.GetCommitBatch(param0));
@@ -18020,14 +18020,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"RequestCommitAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Compositor", L"RequestCommitAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestCommitAsync());
             }
             catch (...)
@@ -18045,14 +18045,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_get_GlobalPlaybackRate(py::wrapper::Microsoft::UI::Composition::Compositor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"GlobalPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"GlobalPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GlobalPlaybackRate());
         }
         catch (...)
@@ -18064,12 +18064,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Compositor_put_GlobalPlaybackRate(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"GlobalPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18078,6 +18072,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"GlobalPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.GlobalPlaybackRate(param0);
@@ -18092,14 +18092,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_get_Comment(py::wrapper::Microsoft::UI::Composition::Compositor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Comment());
         }
         catch (...)
@@ -18111,12 +18111,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Compositor_put_Comment(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"Comment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18125,6 +18119,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"Comment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Comment(param0);
@@ -18139,14 +18139,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_get_DispatcherQueue(py::wrapper::Microsoft::UI::Composition::Compositor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -18158,14 +18158,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_get_MaxGlobalPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"MaxGlobalPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"MaxGlobalPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::Compositor::MaxGlobalPlaybackRate());
         }
         catch (...)
@@ -18177,14 +18177,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Compositor_get_MinGlobalPlaybackRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"MinGlobalPlaybackRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Compositor", L"MinGlobalPlaybackRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::UI::Composition::Compositor::MinGlobalPlaybackRate());
         }
         catch (...)
@@ -18377,14 +18377,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ContainerVisual_get_Children(py::wrapper::Microsoft::UI::Composition::ContainerVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ContainerVisual", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ContainerVisual", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -18466,14 +18466,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CubicBezierEasingFunction_get_ControlPoint1(py::wrapper::Microsoft::UI::Composition::CubicBezierEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CubicBezierEasingFunction", L"ControlPoint1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CubicBezierEasingFunction", L"ControlPoint1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlPoint1());
         }
         catch (...)
@@ -18485,14 +18485,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* CubicBezierEasingFunction_get_ControlPoint2(py::wrapper::Microsoft::UI::Composition::CubicBezierEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CubicBezierEasingFunction", L"ControlPoint2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.CubicBezierEasingFunction", L"ControlPoint2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ControlPoint2());
         }
         catch (...)
@@ -18575,14 +18575,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DistantLight_get_Direction(py::wrapper::Microsoft::UI::Composition::DistantLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -18594,12 +18594,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Direction(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18608,6 +18602,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Direction(param0);
@@ -18622,14 +18622,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DistantLight_get_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::DistantLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSpace());
         }
         catch (...)
@@ -18641,12 +18641,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18655,6 +18649,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.CoordinateSpace(param0);
@@ -18669,14 +18669,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DistantLight_get_Color(py::wrapper::Microsoft::UI::Composition::DistantLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -18688,12 +18688,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Color(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18702,6 +18696,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -18716,14 +18716,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DistantLight_get_Intensity(py::wrapper::Microsoft::UI::Composition::DistantLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Intensity());
         }
         catch (...)
@@ -18735,12 +18735,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DistantLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18749,6 +18743,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DistantLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Intensity(param0);
@@ -18836,14 +18836,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_Opacity(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -18855,12 +18855,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Opacity(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18869,6 +18863,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Opacity(param0);
@@ -18883,14 +18883,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_Offset(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -18902,12 +18902,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Offset(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18916,6 +18910,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Offset(param0);
@@ -18930,14 +18930,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_Mask(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Mask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Mask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mask());
         }
         catch (...)
@@ -18949,12 +18949,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Mask(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Mask"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18963,6 +18957,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Mask"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Mask(param0);
@@ -18977,14 +18977,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_Color(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -18996,12 +18996,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_Color(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19010,6 +19004,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -19024,14 +19024,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_BlurRadius(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"BlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"BlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BlurRadius());
         }
         catch (...)
@@ -19043,12 +19043,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_BlurRadius(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"BlurRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19057,6 +19051,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"BlurRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BlurRadius(param0);
@@ -19071,14 +19071,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* DropShadow_get_SourcePolicy(py::wrapper::Microsoft::UI::Composition::DropShadow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"SourcePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"SourcePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourcePolicy());
         }
         catch (...)
@@ -19090,12 +19090,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int DropShadow_put_SourcePolicy(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"SourcePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19104,6 +19098,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.DropShadow", L"SourcePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionDropShadowSourcePolicy>(arg);
 
             self->obj.SourcePolicy(param0);
@@ -19193,14 +19193,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ElasticEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::ElasticEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -19212,14 +19212,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ElasticEasingFunction_get_Oscillations(py::wrapper::Microsoft::UI::Composition::ElasticEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Oscillations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Oscillations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Oscillations());
         }
         catch (...)
@@ -19231,14 +19231,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ElasticEasingFunction_get_Springiness(py::wrapper::Microsoft::UI::Composition::ElasticEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Springiness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ElasticEasingFunction", L"Springiness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Springiness());
         }
         catch (...)
@@ -19322,14 +19322,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ExponentialEasingFunction_get_Exponent(py::wrapper::Microsoft::UI::Composition::ExponentialEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExponentialEasingFunction", L"Exponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExponentialEasingFunction", L"Exponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exponent());
         }
         catch (...)
@@ -19341,14 +19341,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ExponentialEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::ExponentialEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExponentialEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExponentialEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -19431,14 +19431,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ExpressionAnimation_get_Expression(py::wrapper::Microsoft::UI::Composition::ExpressionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExpressionAnimation", L"Expression"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExpressionAnimation", L"Expression"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Expression());
         }
         catch (...)
@@ -19450,12 +19450,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ExpressionAnimation_put_Expression(py::wrapper::Microsoft::UI::Composition::ExpressionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExpressionAnimation", L"Expression"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19464,6 +19458,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ExpressionAnimation", L"Expression"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Expression(param0);
@@ -19552,14 +19552,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -19582,14 +19582,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -19611,14 +19611,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -19640,14 +19640,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -19671,14 +19671,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 1);
 
@@ -19703,14 +19703,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -19734,14 +19734,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -19762,14 +19762,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ImplicitAnimationCollection_get_Size(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ImplicitAnimationCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -19968,14 +19968,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -19998,14 +19998,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -20027,14 +20027,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -20056,14 +20056,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -20087,14 +20087,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -20119,14 +20119,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -20150,14 +20150,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -20178,14 +20178,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InitialValueExpressionCollection_get_Size(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InitialValueExpressionCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -20380,14 +20380,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InsetClip_get_TopInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"TopInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"TopInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopInset());
         }
         catch (...)
@@ -20399,12 +20399,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_TopInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"TopInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20413,6 +20407,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"TopInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TopInset(param0);
@@ -20427,14 +20427,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InsetClip_get_RightInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"RightInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"RightInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightInset());
         }
         catch (...)
@@ -20446,12 +20446,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_RightInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"RightInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20460,6 +20454,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"RightInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RightInset(param0);
@@ -20474,14 +20474,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InsetClip_get_LeftInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"LeftInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"LeftInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LeftInset());
         }
         catch (...)
@@ -20493,12 +20493,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_LeftInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"LeftInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20507,6 +20501,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"LeftInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LeftInset(param0);
@@ -20521,14 +20521,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* InsetClip_get_BottomInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"BottomInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"BottomInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomInset());
         }
         catch (...)
@@ -20540,12 +20540,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int InsetClip_put_BottomInset(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"BottomInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20554,6 +20548,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.InsetClip", L"BottomInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.BottomInset(param0);
@@ -20645,14 +20645,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"InsertExpressionKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"InsertExpressionKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -20667,14 +20667,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"InsertExpressionKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"InsertExpressionKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -20697,14 +20697,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_StopBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"StopBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"StopBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StopBehavior());
         }
         catch (...)
@@ -20716,12 +20716,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_StopBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"StopBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20730,6 +20724,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"StopBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationStopBehavior>(arg);
 
             self->obj.StopBehavior(param0);
@@ -20744,14 +20744,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_IterationCount(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IterationCount());
         }
         catch (...)
@@ -20763,12 +20763,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_IterationCount(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20777,6 +20771,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IterationCount(param0);
@@ -20791,14 +20791,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_IterationBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IterationBehavior());
         }
         catch (...)
@@ -20810,12 +20810,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_IterationBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20824,6 +20818,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"IterationBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationIterationBehavior>(arg);
 
             self->obj.IterationBehavior(param0);
@@ -20838,14 +20838,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_Duration(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -20857,12 +20857,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_Duration(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20871,6 +20865,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Duration(param0);
@@ -20885,14 +20885,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_DelayTime(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DelayTime());
         }
         catch (...)
@@ -20904,12 +20904,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_DelayTime(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20918,6 +20912,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DelayTime(param0);
@@ -20932,14 +20932,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_KeyFrameCount(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"KeyFrameCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"KeyFrameCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyFrameCount());
         }
         catch (...)
@@ -20951,14 +20951,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_Direction(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -20970,12 +20970,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_Direction(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20984,6 +20978,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationDirection>(arg);
 
             self->obj.Direction(param0);
@@ -20998,14 +20998,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* KeyFrameAnimation_get_DelayBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DelayBehavior());
         }
         catch (...)
@@ -21017,12 +21017,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int KeyFrameAnimation_put_DelayBehavior(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21031,6 +21025,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.KeyFrameAnimation", L"DelayBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationDelayBehavior>(arg);
 
             self->obj.DelayBehavior(param0);
@@ -21123,14 +21123,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* LayerVisual_get_Effect(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Effect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Effect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Effect());
         }
         catch (...)
@@ -21142,12 +21142,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int LayerVisual_put_Effect(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Effect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21156,6 +21150,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Effect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEffectBrush>(arg);
 
             self->obj.Effect(param0);
@@ -21170,14 +21170,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* LayerVisual_get_Shadow(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shadow());
         }
         catch (...)
@@ -21189,12 +21189,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int LayerVisual_put_Shadow(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21203,6 +21197,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.LayerVisual", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShadow>(arg);
 
             self->obj.Shadow(param0);
@@ -21357,14 +21357,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* NaturalMotionAnimation_get_StopBehavior(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"StopBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"StopBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StopBehavior());
         }
         catch (...)
@@ -21376,12 +21376,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_StopBehavior(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"StopBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21390,6 +21384,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"StopBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationStopBehavior>(arg);
 
             self->obj.StopBehavior(param0);
@@ -21404,14 +21404,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* NaturalMotionAnimation_get_DelayTime(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DelayTime());
         }
         catch (...)
@@ -21423,12 +21423,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_DelayTime(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21437,6 +21431,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.DelayTime(param0);
@@ -21451,14 +21451,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* NaturalMotionAnimation_get_DelayBehavior(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DelayBehavior());
         }
         catch (...)
@@ -21470,12 +21470,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int NaturalMotionAnimation_put_DelayBehavior(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21484,6 +21478,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.NaturalMotionAnimation", L"DelayBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationDelayBehavior>(arg);
 
             self->obj.DelayBehavior(param0);
@@ -21574,14 +21574,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.PathKeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.PathKeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionPath>(args, 1);
 
@@ -21596,14 +21596,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.PathKeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.PathKeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionPath>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -21696,14 +21696,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"QuadraticAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"QuadraticAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuadraticAttenuation());
         }
         catch (...)
@@ -21715,12 +21715,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"QuadraticAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21729,6 +21723,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"QuadraticAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.QuadraticAttenuation(param0);
@@ -21743,14 +21743,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_Offset(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -21762,12 +21762,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Offset(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21776,6 +21770,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Offset(param0);
@@ -21790,14 +21790,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"LinearAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"LinearAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinearAttenuation());
         }
         catch (...)
@@ -21809,12 +21809,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"LinearAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21823,6 +21817,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"LinearAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LinearAttenuation(param0);
@@ -21837,14 +21837,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSpace());
         }
         catch (...)
@@ -21856,12 +21856,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21870,6 +21864,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.CoordinateSpace(param0);
@@ -21884,14 +21884,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"ConstantAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"ConstantAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConstantAttenuation());
         }
         catch (...)
@@ -21903,12 +21903,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"ConstantAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21917,6 +21911,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"ConstantAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.ConstantAttenuation(param0);
@@ -21931,14 +21931,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_Color(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -21950,12 +21950,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Color(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21964,6 +21958,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -21978,14 +21978,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_Intensity(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Intensity());
         }
         catch (...)
@@ -21997,12 +21997,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_Intensity(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Intensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22011,6 +22005,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"Intensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Intensity(param0);
@@ -22025,14 +22025,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MinAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MinAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinAttenuationCutoff());
         }
         catch (...)
@@ -22044,12 +22044,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MinAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22058,6 +22052,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MinAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MinAttenuationCutoff(param0);
@@ -22072,14 +22072,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PointLight_get_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MaxAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MaxAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAttenuationCutoff());
         }
         catch (...)
@@ -22091,12 +22091,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int PointLight_put_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MaxAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22105,6 +22099,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PointLight", L"MaxAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MaxAttenuationCutoff(param0);
@@ -22197,14 +22197,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PowerEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::PowerEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PowerEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PowerEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -22216,14 +22216,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* PowerEasingFunction_get_Power(py::wrapper::Microsoft::UI::Composition::PowerEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PowerEasingFunction", L"Power"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.PowerEasingFunction", L"Power"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Power());
         }
         catch (...)
@@ -22310,14 +22310,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.QuaternionKeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.QuaternionKeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
@@ -22332,14 +22332,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.QuaternionKeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.QuaternionKeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -22432,14 +22432,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_TopRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopRightRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopRightRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopRightRadius());
         }
         catch (...)
@@ -22451,12 +22451,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_TopRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopRightRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22465,6 +22459,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopRightRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.TopRightRadius(param0);
@@ -22479,14 +22479,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_TopLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopLeftRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopLeftRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TopLeftRadius());
         }
         catch (...)
@@ -22498,12 +22498,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_TopLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopLeftRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22512,6 +22506,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"TopLeftRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.TopLeftRadius(param0);
@@ -22526,14 +22526,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_Top(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Top"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Top"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Top());
         }
         catch (...)
@@ -22545,12 +22545,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Top(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Top"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22559,6 +22553,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Top"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Top(param0);
@@ -22573,14 +22573,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_Right(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Right"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Right"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Right());
         }
         catch (...)
@@ -22592,12 +22592,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Right(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Right"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22606,6 +22600,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Right"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Right(param0);
@@ -22620,14 +22620,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_Left(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Left"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Left"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Left());
         }
         catch (...)
@@ -22639,12 +22639,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Left(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Left"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22653,6 +22647,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Left"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Left(param0);
@@ -22667,14 +22667,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_BottomRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomRightRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomRightRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomRightRadius());
         }
         catch (...)
@@ -22686,12 +22686,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_BottomRightRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomRightRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22700,6 +22694,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomRightRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.BottomRightRadius(param0);
@@ -22714,14 +22714,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_BottomLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomLeftRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomLeftRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BottomLeftRadius());
         }
         catch (...)
@@ -22733,12 +22733,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_BottomLeftRadius(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomLeftRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22747,6 +22741,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"BottomLeftRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.BottomLeftRadius(param0);
@@ -22761,14 +22761,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RectangleClip_get_Bottom(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Bottom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Bottom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bottom());
         }
         catch (...)
@@ -22780,12 +22780,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RectangleClip_put_Bottom(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Bottom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22794,6 +22788,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RectangleClip", L"Bottom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Bottom(param0);
@@ -22885,14 +22885,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RedirectVisual_get_Source(py::wrapper::Microsoft::UI::Composition::RedirectVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RedirectVisual", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RedirectVisual", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -22904,12 +22904,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int RedirectVisual_put_Source(py::wrapper::Microsoft::UI::Composition::RedirectVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RedirectVisual", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -22918,6 +22912,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RedirectVisual", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.Source(param0);
@@ -23002,14 +23002,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* RenderingDeviceReplacedEventArgs_get_GraphicsDevice(py::wrapper::Microsoft::UI::Composition::RenderingDeviceReplacedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RenderingDeviceReplacedEventArgs", L"GraphicsDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.RenderingDeviceReplacedEventArgs", L"GraphicsDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GraphicsDevice());
         }
         catch (...)
@@ -23095,14 +23095,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ScalarKeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ScalarKeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -23117,14 +23117,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ScalarKeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ScalarKeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -23217,14 +23217,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ScalarNaturalMotionAnimation_get_InitialVelocity(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialVelocity());
         }
         catch (...)
@@ -23236,12 +23236,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_InitialVelocity(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23250,6 +23244,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InitialVelocity(param0);
@@ -23264,14 +23264,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ScalarNaturalMotionAnimation_get_InitialValue(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialValue());
         }
         catch (...)
@@ -23283,12 +23283,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_InitialValue(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23297,6 +23291,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
             self->obj.InitialValue(param0);
@@ -23311,14 +23311,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ScalarNaturalMotionAnimation_get_FinalValue(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalValue());
         }
         catch (...)
@@ -23330,12 +23330,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ScalarNaturalMotionAnimation_put_FinalValue(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23344,6 +23338,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ScalarNaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
             self->obj.FinalValue(param0);
@@ -23430,14 +23430,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ShapeVisual_get_ViewBox(py::wrapper::Microsoft::UI::Composition::ShapeVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"ViewBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"ViewBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewBox());
         }
         catch (...)
@@ -23449,12 +23449,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ShapeVisual_put_ViewBox(py::wrapper::Microsoft::UI::Composition::ShapeVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"ViewBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23463,6 +23457,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"ViewBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionViewBox>(arg);
 
             self->obj.ViewBox(param0);
@@ -23477,14 +23477,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ShapeVisual_get_Shapes(py::wrapper::Microsoft::UI::Composition::ShapeVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"Shapes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ShapeVisual", L"Shapes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shapes());
         }
         catch (...)
@@ -23567,14 +23567,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SineEasingFunction_get_Mode(py::wrapper::Microsoft::UI::Composition::SineEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SineEasingFunction", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SineEasingFunction", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -23656,14 +23656,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"QuadraticAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"QuadraticAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuadraticAttenuation());
         }
         catch (...)
@@ -23675,12 +23675,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_QuadraticAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"QuadraticAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23689,6 +23683,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"QuadraticAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.QuadraticAttenuation(param0);
@@ -23703,14 +23703,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_OuterConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterConeColor());
         }
         catch (...)
@@ -23722,12 +23722,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23736,6 +23730,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.OuterConeColor(param0);
@@ -23750,14 +23750,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_OuterConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterConeAngleInDegrees());
         }
         catch (...)
@@ -23769,12 +23769,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23783,6 +23777,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OuterConeAngleInDegrees(param0);
@@ -23797,14 +23797,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_OuterConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterConeAngle());
         }
         catch (...)
@@ -23816,12 +23816,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23830,6 +23824,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OuterConeAngle(param0);
@@ -23844,14 +23844,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_Offset(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -23863,12 +23863,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_Offset(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23877,6 +23871,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Offset(param0);
@@ -23891,14 +23891,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"LinearAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"LinearAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinearAttenuation());
         }
         catch (...)
@@ -23910,12 +23910,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_LinearAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"LinearAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23924,6 +23918,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"LinearAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LinearAttenuation(param0);
@@ -23938,14 +23938,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_InnerConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerConeColor());
         }
         catch (...)
@@ -23957,12 +23957,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeColor(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -23971,6 +23965,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.InnerConeColor(param0);
@@ -23985,14 +23985,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_InnerConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerConeAngleInDegrees());
         }
         catch (...)
@@ -24004,12 +24004,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeAngleInDegrees(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24018,6 +24012,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InnerConeAngleInDegrees(param0);
@@ -24032,14 +24032,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_InnerConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerConeAngle());
         }
         catch (...)
@@ -24051,12 +24051,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeAngle(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24065,6 +24059,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InnerConeAngle(param0);
@@ -24079,14 +24079,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_Direction(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -24098,12 +24098,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_Direction(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24112,6 +24106,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Direction(param0);
@@ -24126,14 +24126,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoordinateSpace());
         }
         catch (...)
@@ -24145,12 +24145,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_CoordinateSpace(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"CoordinateSpace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24159,6 +24153,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"CoordinateSpace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.CoordinateSpace(param0);
@@ -24173,14 +24173,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"ConstantAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"ConstantAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConstantAttenuation());
         }
         catch (...)
@@ -24192,12 +24192,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_ConstantAttenuation(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"ConstantAttenuation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24206,6 +24200,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"ConstantAttenuation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.ConstantAttenuation(param0);
@@ -24220,14 +24220,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_OuterConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeIntensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeIntensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterConeIntensity());
         }
         catch (...)
@@ -24239,12 +24239,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_OuterConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeIntensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24253,6 +24247,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"OuterConeIntensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OuterConeIntensity(param0);
@@ -24267,14 +24267,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_InnerConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeIntensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeIntensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerConeIntensity());
         }
         catch (...)
@@ -24286,12 +24286,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_InnerConeIntensity(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeIntensity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24300,6 +24294,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"InnerConeIntensity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.InnerConeIntensity(param0);
@@ -24314,14 +24314,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MinAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MinAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinAttenuationCutoff());
         }
         catch (...)
@@ -24333,12 +24333,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_MinAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MinAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24347,6 +24341,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MinAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MinAttenuationCutoff(param0);
@@ -24361,14 +24361,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpotLight_get_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MaxAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MaxAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAttenuationCutoff());
         }
         catch (...)
@@ -24380,12 +24380,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpotLight_put_MaxAttenuationCutoff(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MaxAttenuationCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24394,6 +24388,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpotLight", L"MaxAttenuationCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MaxAttenuationCutoff(param0);
@@ -24493,14 +24493,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringScalarNaturalMotionAnimation_get_Period(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Period());
         }
         catch (...)
@@ -24512,12 +24512,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringScalarNaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24526,6 +24520,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Period(param0);
@@ -24540,14 +24540,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringScalarNaturalMotionAnimation_get_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DampingRatio());
         }
         catch (...)
@@ -24559,12 +24559,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringScalarNaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24573,6 +24567,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringScalarNaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DampingRatio(param0);
@@ -24658,14 +24658,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringVector2NaturalMotionAnimation_get_Period(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Period());
         }
         catch (...)
@@ -24677,12 +24677,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector2NaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24691,6 +24685,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Period(param0);
@@ -24705,14 +24705,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringVector2NaturalMotionAnimation_get_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DampingRatio());
         }
         catch (...)
@@ -24724,12 +24724,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector2NaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24738,6 +24732,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector2NaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DampingRatio(param0);
@@ -24823,14 +24823,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringVector3NaturalMotionAnimation_get_Period(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Period());
         }
         catch (...)
@@ -24842,12 +24842,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector3NaturalMotionAnimation_put_Period(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"Period"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24856,6 +24850,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"Period"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.Period(param0);
@@ -24870,14 +24870,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpringVector3NaturalMotionAnimation_get_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DampingRatio());
         }
         catch (...)
@@ -24889,12 +24889,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpringVector3NaturalMotionAnimation_put_DampingRatio(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"DampingRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -24903,6 +24897,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpringVector3NaturalMotionAnimation", L"DampingRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DampingRatio(param0);
@@ -24988,14 +24988,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpriteVisual_get_Brush(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Brush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Brush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Brush());
         }
         catch (...)
@@ -25007,12 +25007,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpriteVisual_put_Brush(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Brush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25021,6 +25015,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Brush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBrush>(arg);
 
             self->obj.Brush(param0);
@@ -25035,14 +25035,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* SpriteVisual_get_Shadow(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shadow());
         }
         catch (...)
@@ -25054,12 +25054,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int SpriteVisual_put_Shadow(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Shadow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25068,6 +25062,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SpriteVisual", L"Shadow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionShadow>(arg);
 
             self->obj.Shadow(param0);
@@ -25153,14 +25153,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* StepEasingFunction_get_StepCount(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"StepCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"StepCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StepCount());
         }
         catch (...)
@@ -25172,12 +25172,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_StepCount(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"StepCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25186,6 +25180,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"StepCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.StepCount(param0);
@@ -25200,14 +25200,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* StepEasingFunction_get_IsInitialStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsInitialStepSingleFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsInitialStepSingleFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInitialStepSingleFrame());
         }
         catch (...)
@@ -25219,12 +25219,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_IsInitialStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsInitialStepSingleFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25233,6 +25227,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsInitialStepSingleFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInitialStepSingleFrame(param0);
@@ -25247,14 +25247,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* StepEasingFunction_get_IsFinalStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsFinalStepSingleFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsFinalStepSingleFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFinalStepSingleFrame());
         }
         catch (...)
@@ -25266,12 +25266,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_IsFinalStepSingleFrame(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsFinalStepSingleFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25280,6 +25274,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"IsFinalStepSingleFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsFinalStepSingleFrame(param0);
@@ -25294,14 +25294,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* StepEasingFunction_get_InitialStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"InitialStep"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"InitialStep"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialStep());
         }
         catch (...)
@@ -25313,12 +25313,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_InitialStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"InitialStep"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25327,6 +25321,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"InitialStep"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.InitialStep(param0);
@@ -25341,14 +25341,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* StepEasingFunction_get_FinalStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"FinalStep"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"FinalStep"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalStep());
         }
         catch (...)
@@ -25360,12 +25360,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int StepEasingFunction_put_FinalStep(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"FinalStep"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25374,6 +25368,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.StepEasingFunction", L"FinalStep"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FinalStep(param0);
@@ -25466,14 +25466,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector2KeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector2KeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
 
@@ -25488,14 +25488,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector2KeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector2KeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -25588,14 +25588,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector2NaturalMotionAnimation_get_InitialVelocity(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialVelocity());
         }
         catch (...)
@@ -25607,12 +25607,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_InitialVelocity(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25621,6 +25615,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.InitialVelocity(param0);
@@ -25635,14 +25635,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector2NaturalMotionAnimation_get_InitialValue(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialValue());
         }
         catch (...)
@@ -25654,12 +25654,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_InitialValue(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25668,6 +25662,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(arg);
 
             self->obj.InitialValue(param0);
@@ -25682,14 +25682,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector2NaturalMotionAnimation_get_FinalValue(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalValue());
         }
         catch (...)
@@ -25701,12 +25701,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector2NaturalMotionAnimation_put_FinalValue(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25715,6 +25709,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector2NaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(arg);
 
             self->obj.FinalValue(param0);
@@ -25805,14 +25805,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector3KeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector3KeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
@@ -25827,14 +25827,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector3KeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector3KeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -25927,14 +25927,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector3NaturalMotionAnimation_get_InitialVelocity(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialVelocity());
         }
         catch (...)
@@ -25946,12 +25946,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_InitialVelocity(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -25960,6 +25954,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.InitialVelocity(param0);
@@ -25974,14 +25974,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector3NaturalMotionAnimation_get_InitialValue(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialValue());
         }
         catch (...)
@@ -25993,12 +25993,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_InitialValue(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26007,6 +26001,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
             self->obj.InitialValue(param0);
@@ -26021,14 +26021,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Vector3NaturalMotionAnimation_get_FinalValue(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FinalValue());
         }
         catch (...)
@@ -26040,12 +26040,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Vector3NaturalMotionAnimation_put_FinalValue(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"FinalValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26054,6 +26048,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Vector3NaturalMotionAnimation", L"FinalValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
             self->obj.FinalValue(param0);
@@ -26144,14 +26144,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector4KeyFrameAnimation", L"InsertKeyFrame", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector4KeyFrameAnimation", L"InsertKeyFrame", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
 
@@ -26166,14 +26166,14 @@ namespace py::cpp::Microsoft::UI::Composition
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector4KeyFrameAnimation", L"InsertKeyFrame", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Vector4KeyFrameAnimation", L"InsertKeyFrame", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionEasingFunction>(args, 2);
@@ -26266,14 +26266,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_TransformMatrix(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransformMatrix());
         }
         catch (...)
@@ -26285,12 +26285,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_TransformMatrix(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"TransformMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26299,6 +26293,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"TransformMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
 
             self->obj.TransformMatrix(param0);
@@ -26313,14 +26313,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Size(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -26332,12 +26332,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Size(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26346,6 +26340,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.Size(param0);
@@ -26360,14 +26360,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Scale(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -26379,12 +26379,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Scale(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26393,6 +26387,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Scale(param0);
@@ -26407,14 +26407,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_RotationAxis(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAxis());
         }
         catch (...)
@@ -26426,12 +26426,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAxis(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26440,6 +26434,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.RotationAxis(param0);
@@ -26454,14 +26454,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -26473,12 +26473,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26487,6 +26481,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -26501,14 +26501,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -26520,12 +26520,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26534,6 +26528,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -26548,14 +26548,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Orientation(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -26567,12 +26567,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Orientation(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26581,6 +26575,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             self->obj.Orientation(param0);
@@ -26595,14 +26595,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Opacity(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -26614,12 +26614,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Opacity(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26628,6 +26622,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.Opacity(param0);
@@ -26642,14 +26642,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Offset(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Offset());
         }
         catch (...)
@@ -26661,12 +26661,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Offset(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Offset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26675,6 +26669,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Offset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Offset(param0);
@@ -26689,14 +26689,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_IsVisible(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -26708,12 +26708,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsVisible(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26722,6 +26716,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVisible(param0);
@@ -26736,14 +26736,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_CompositeMode(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CompositeMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompositeMode());
         }
         catch (...)
@@ -26755,12 +26755,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_CompositeMode(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CompositeMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26769,6 +26763,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CompositeMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionCompositeMode>(arg);
 
             self->obj.CompositeMode(param0);
@@ -26783,14 +26783,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Clip(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Clip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Clip());
         }
         catch (...)
@@ -26802,12 +26802,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_Clip(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Clip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26816,6 +26810,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Clip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionClip>(arg);
 
             self->obj.Clip(param0);
@@ -26830,14 +26830,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_CenterPoint(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterPoint());
         }
         catch (...)
@@ -26849,12 +26849,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_CenterPoint(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CenterPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26863,6 +26857,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"CenterPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.CenterPoint(param0);
@@ -26877,14 +26877,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_BorderMode(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BorderMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BorderMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BorderMode());
         }
         catch (...)
@@ -26896,12 +26896,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_BorderMode(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BorderMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26910,6 +26904,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BorderMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBorderMode>(arg);
 
             self->obj.BorderMode(param0);
@@ -26924,14 +26924,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_BackfaceVisibility(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BackfaceVisibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BackfaceVisibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackfaceVisibility());
         }
         catch (...)
@@ -26943,12 +26943,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_BackfaceVisibility(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BackfaceVisibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -26957,6 +26951,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"BackfaceVisibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBackfaceVisibility>(arg);
 
             self->obj.BackfaceVisibility(param0);
@@ -26971,14 +26971,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_AnchorPoint(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AnchorPoint());
         }
         catch (...)
@@ -26990,12 +26990,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_AnchorPoint(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"AnchorPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27004,6 +26998,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"AnchorPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.AnchorPoint(param0);
@@ -27018,14 +27018,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_Parent(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -27037,14 +27037,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_RelativeSizeAdjustment(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeSizeAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeSizeAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeSizeAdjustment());
         }
         catch (...)
@@ -27056,12 +27056,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RelativeSizeAdjustment(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeSizeAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27070,6 +27064,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeSizeAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
             self->obj.RelativeSizeAdjustment(param0);
@@ -27084,14 +27084,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_RelativeOffsetAdjustment(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeOffsetAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeOffsetAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeOffsetAdjustment());
         }
         catch (...)
@@ -27103,12 +27103,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_RelativeOffsetAdjustment(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeOffsetAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27117,6 +27111,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"RelativeOffsetAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.RelativeOffsetAdjustment(param0);
@@ -27131,14 +27131,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_ParentForTransform(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"ParentForTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"ParentForTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ParentForTransform());
         }
         catch (...)
@@ -27150,12 +27150,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_ParentForTransform(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"ParentForTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27164,6 +27158,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"ParentForTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(arg);
 
             self->obj.ParentForTransform(param0);
@@ -27178,14 +27178,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_IsHitTestVisible(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsHitTestVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHitTestVisible());
         }
         catch (...)
@@ -27197,12 +27197,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsHitTestVisible(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsHitTestVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27211,6 +27205,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsHitTestVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHitTestVisible(param0);
@@ -27225,14 +27225,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* Visual_get_IsPixelSnappingEnabled(py::wrapper::Microsoft::UI::Composition::Visual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsPixelSnappingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsPixelSnappingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPixelSnappingEnabled());
         }
         catch (...)
@@ -27244,12 +27244,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int Visual_put_IsPixelSnappingEnabled(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsPixelSnappingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -27258,6 +27252,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Visual", L"IsPixelSnappingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPixelSnappingEnabled(param0);
@@ -27367,14 +27367,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -27396,14 +27396,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAbove", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAbove", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 1);
 
@@ -27429,14 +27429,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAtBottom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAtBottom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.InsertAtBottom(param0);
@@ -27461,14 +27461,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAtTop", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertAtTop", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.InsertAtTop(param0);
@@ -27493,14 +27493,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertBelow", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"InsertBelow", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 1);
 
@@ -27526,14 +27526,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.Remove(param0);
@@ -27558,14 +27558,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"RemoveAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualCollection", L"RemoveAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAll();
                 Py_RETURN_NONE;
             }
@@ -27584,14 +27584,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualCollection_get_Count(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.VisualCollection", L"Count"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.VisualCollection", L"Count"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Count());
         }
         catch (...)
@@ -27698,14 +27698,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Add", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Add", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.Add(param0);
@@ -27730,14 +27730,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -27759,14 +27759,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Visual>(args, 0);
 
                 self->obj.Remove(param0);
@@ -27791,14 +27791,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"RemoveAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"RemoveAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAll();
                 Py_RETURN_NONE;
             }
@@ -27817,14 +27817,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* VisualUnorderedCollection_get_Count(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Count"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.VisualUnorderedCollection", L"Count"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Count());
         }
         catch (...)
@@ -27928,14 +27928,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.IAnimationObject", L"PopulatePropertyInfo", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.IAnimationObject", L"PopulatePropertyInfo", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
@@ -28096,14 +28096,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static PyObject* ICompositionSupportsSystemBackdrop_get_SystemBackdrop(py::wrapper::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemBackdrop());
         }
         catch (...)
@@ -28115,12 +28115,6 @@ namespace py::cpp::Microsoft::UI::Composition
 
     static int ICompositionSupportsSystemBackdrop_put_SystemBackdrop(py::wrapper::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop", L"SystemBackdrop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -28129,6 +28123,12 @@ namespace py::cpp::Microsoft::UI::Composition
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop", L"SystemBackdrop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBrush>(arg);
 
             self->obj.SystemBackdrop(param0);
@@ -28286,14 +28286,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ICompositionSurfaceFacade", L"GetRealSurface", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.ICompositionSurfaceFacade", L"GetRealSurface", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRealSurface());
             }
             catch (...)
@@ -28454,14 +28454,14 @@ namespace py::cpp::Microsoft::UI::Composition
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.IVisualElement2", L"GetVisualInternal", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.IVisualElement2", L"GetVisualInternal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVisualInternal());
             }
             catch (...)

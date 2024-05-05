@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"LaunchAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"LaunchAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.LaunchAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"LaunchForUserAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"LaunchForUserAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(self->obj.LaunchForUserAsync(param0));
@@ -84,14 +84,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* AppListEntry_get_DisplayInfo(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"DisplayInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"DisplayInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayInfo());
         }
         catch (...)
@@ -103,14 +103,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* AppListEntry_get_AppUserModelId(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"AppUserModelId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"AppUserModelId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppUserModelId());
         }
         catch (...)
@@ -122,14 +122,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* AppListEntry_get_AppInfo(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"AppInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.AppListEntry", L"AppInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppInfo());
         }
         catch (...)
@@ -211,14 +211,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView());
             }
             catch (...)
@@ -229,14 +229,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::CreateNewView(param0));
@@ -249,14 +249,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"CreateNewView", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"DecrementApplicationUseCount", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"DecrementApplicationUseCount", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::Core::CoreApplication::DecrementApplicationUseCount();
                 Py_RETURN_NONE;
             }
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnablePrelaunch", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnablePrelaunch", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 winrt::Windows::ApplicationModel::Core::CoreApplication::EnablePrelaunch(param0);
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exit", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exit", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::Core::CoreApplication::Exit();
                 Py_RETURN_NONE;
             }
@@ -373,14 +373,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"GetCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"GetCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::GetCurrentView());
             }
             catch (...)
@@ -402,14 +402,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"IncrementApplicationUseCount", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"IncrementApplicationUseCount", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::ApplicationModel::Core::CoreApplication::IncrementApplicationUseCount();
                 Py_RETURN_NONE;
             }
@@ -432,14 +432,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RequestRestartAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RequestRestartAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::RequestRestartAsync(param0));
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RequestRestartForUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RequestRestartForUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -495,14 +495,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Run", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Run", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>(args, 0);
 
                 winrt::Windows::ApplicationModel::Core::CoreApplication::Run(param0);
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RunWithActivationFactories", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"RunWithActivationFactories", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IGetActivationFactory>(args, 0);
 
                 winrt::Windows::ApplicationModel::Core::CoreApplication::RunWithActivationFactories(param0);
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_get_Id(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Id());
         }
         catch (...)
@@ -574,14 +574,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_get_Properties(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Properties());
         }
         catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_get_MainView(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"MainView"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"MainView"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::MainView());
         }
         catch (...)
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_get_Views(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Views"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Views"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Views());
         }
         catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_UnhandledErrorDetected(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"UnhandledErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"UnhandledErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0));
@@ -652,14 +652,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_UnhandledErrorDetected(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"UnhandledErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"UnhandledErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected(param0);
@@ -674,14 +674,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_Exiting(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exiting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exiting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0));
@@ -695,14 +695,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_Exiting(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exiting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Exiting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::Exiting(param0);
@@ -717,14 +717,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_BackgroundActivated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"BackgroundActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"BackgroundActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0));
@@ -738,14 +738,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_BackgroundActivated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"BackgroundActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"BackgroundActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::BackgroundActivated(param0);
@@ -760,14 +760,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_EnteredBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnteredBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnteredBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0));
@@ -781,14 +781,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_EnteredBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnteredBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"EnteredBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::EnteredBackground(param0);
@@ -803,14 +803,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_LeavingBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"LeavingBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"LeavingBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0));
@@ -824,14 +824,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_LeavingBackground(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"LeavingBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"LeavingBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::LeavingBackground(param0);
@@ -846,14 +846,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_Resuming(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Resuming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Resuming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0));
@@ -867,14 +867,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_Resuming(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Resuming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Resuming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::Resuming(param0);
@@ -889,14 +889,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_add_Suspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Suspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Suspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::SuspendingEventArgs>>(arg);
 
             return py::convert(winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0));
@@ -910,14 +910,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplication_remove_Suspending(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Suspending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplication", L"Suspending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::ApplicationModel::Core::CoreApplication::Suspending(param0);
@@ -1027,14 +1027,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_CoreWindow(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"CoreWindow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"CoreWindow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CoreWindow());
         }
         catch (...)
@@ -1046,14 +1046,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_IsHosted(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsHosted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsHosted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHosted());
         }
         catch (...)
@@ -1065,14 +1065,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_IsMain(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsMain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsMain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMain());
         }
         catch (...)
@@ -1084,14 +1084,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_Dispatcher(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -1103,14 +1103,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_IsComponent(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsComponent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"IsComponent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsComponent());
         }
         catch (...)
@@ -1122,14 +1122,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_TitleBar(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"TitleBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"TitleBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TitleBar());
         }
         catch (...)
@@ -1141,14 +1141,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_Properties(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -1160,14 +1160,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_get_DispatcherQueue(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_add_Activated(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>>(arg);
 
             return py::convert(self->obj.Activated(param0));
@@ -1200,14 +1200,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_remove_Activated(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Activated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"Activated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Activated(param0);
@@ -1222,14 +1222,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_add_HostedViewClosing(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"HostedViewClosing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"HostedViewClosing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationView, winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>>(arg);
 
             return py::convert(self->obj.HostedViewClosing(param0));
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationView_remove_HostedViewClosing(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"HostedViewClosing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationView", L"HostedViewClosing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HostedViewClosing(param0);
@@ -1346,14 +1346,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_get_ExtendViewIntoTitleBar(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"ExtendViewIntoTitleBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"ExtendViewIntoTitleBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendViewIntoTitleBar());
         }
         catch (...)
@@ -1365,12 +1365,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static int CoreApplicationViewTitleBar_put_ExtendViewIntoTitleBar(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"ExtendViewIntoTitleBar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1379,6 +1373,12 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"ExtendViewIntoTitleBar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ExtendViewIntoTitleBar(param0);
@@ -1393,14 +1393,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_get_Height(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -1412,14 +1412,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_get_IsVisible(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -1431,14 +1431,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_get_SystemOverlayLeftInset(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"SystemOverlayLeftInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"SystemOverlayLeftInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemOverlayLeftInset());
         }
         catch (...)
@@ -1450,14 +1450,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_get_SystemOverlayRightInset(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"SystemOverlayRightInset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"SystemOverlayRightInset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemOverlayRightInset());
         }
         catch (...)
@@ -1469,14 +1469,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_add_IsVisibleChanged(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisibleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisibleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsVisibleChanged(param0));
@@ -1490,14 +1490,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_remove_IsVisibleChanged(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisibleChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"IsVisibleChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsVisibleChanged(param0);
@@ -1512,14 +1512,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_add_LayoutMetricsChanged(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"LayoutMetricsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"LayoutMetricsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LayoutMetricsChanged(param0));
@@ -1533,14 +1533,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* CoreApplicationViewTitleBar_remove_LayoutMetricsChanged(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"LayoutMetricsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.CoreApplicationViewTitleBar", L"LayoutMetricsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LayoutMetricsChanged(param0);
@@ -1637,14 +1637,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.HostedViewClosingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.HostedViewClosingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1736,14 +1736,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.UnhandledError", L"Propagate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.UnhandledError", L"Propagate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Propagate();
                 Py_RETURN_NONE;
             }
@@ -1762,14 +1762,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* UnhandledError_get_Handled(py::wrapper::Windows::ApplicationModel::Core::UnhandledError* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.UnhandledError", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.UnhandledError", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1852,14 +1852,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* UnhandledErrorDetectedEventArgs_get_UnhandledError(py::wrapper::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs", L"UnhandledError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs", L"UnhandledError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnhandledError());
         }
         catch (...)
@@ -1941,14 +1941,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* ICoreApplicationUnhandledError_add_UnhandledErrorDetected(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.ICoreApplicationUnhandledError", L"UnhandledErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.ICoreApplicationUnhandledError", L"UnhandledErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>>(arg);
 
             return py::convert(self->obj.UnhandledErrorDetected(param0));
@@ -1962,14 +1962,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyObject* ICoreApplicationUnhandledError_remove_UnhandledErrorDetected(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.ICoreApplicationUnhandledError", L"UnhandledErrorDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Core.ICoreApplicationUnhandledError", L"UnhandledErrorDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnhandledErrorDetected(param0);
@@ -2059,14 +2059,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Initialize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Initialize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
                 self->obj.Initialize(param0);
@@ -2091,14 +2091,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Load", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Load", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Load(param0);
@@ -2123,14 +2123,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Run", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Run", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Run();
                 Py_RETURN_NONE;
             }
@@ -2153,14 +2153,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"SetWindow", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"SetWindow", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
 
                 self->obj.SetWindow(param0);
@@ -2185,14 +2185,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Uninitialize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkView", L"Uninitialize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Uninitialize();
                 Py_RETURN_NONE;
             }
@@ -2289,14 +2289,14 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkViewSource", L"CreateView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Core.IFrameworkViewSource", L"CreateView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateView());
             }
             catch (...)

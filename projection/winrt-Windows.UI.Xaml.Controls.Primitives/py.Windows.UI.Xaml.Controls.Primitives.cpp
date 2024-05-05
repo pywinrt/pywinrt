@@ -24,14 +24,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarButtonTemplateSettings_get_KeyboardAcceleratorTextMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAcceleratorTextMinWidth());
         }
         catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_ClipRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"ClipRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"ClipRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClipRect());
         }
         catch (...)
@@ -132,14 +132,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_CompactRootMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactRootMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactRootMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompactRootMargin());
         }
         catch (...)
@@ -151,14 +151,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_CompactVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"CompactVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompactVerticalDelta());
         }
         catch (...)
@@ -170,14 +170,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_HiddenRootMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenRootMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenRootMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HiddenRootMargin());
         }
         catch (...)
@@ -189,14 +189,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_HiddenVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"HiddenVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HiddenVerticalDelta());
         }
         catch (...)
@@ -208,14 +208,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_MinimalRootMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalRootMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalRootMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimalRootMargin());
         }
         catch (...)
@@ -227,14 +227,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_MinimalVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"MinimalVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimalVerticalDelta());
         }
         catch (...)
@@ -246,14 +246,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_NegativeCompactVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeCompactVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeCompactVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeCompactVerticalDelta());
         }
         catch (...)
@@ -265,14 +265,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_NegativeHiddenVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeHiddenVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeHiddenVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeHiddenVerticalDelta());
         }
         catch (...)
@@ -284,14 +284,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarTemplateSettings_get_NegativeMinimalVerticalDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeMinimalVerticalDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarTemplateSettings", L"NegativeMinimalVerticalDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeMinimalVerticalDelta());
         }
         catch (...)
@@ -382,14 +382,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* AppBarToggleButtonTemplateSettings_get_KeyboardAcceleratorTextMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.AppBarToggleButtonTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAcceleratorTextMinWidth());
         }
         catch (...)
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_CommandParameter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CommandParameter());
         }
         catch (...)
@@ -490,12 +490,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_CommandParameter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -504,6 +498,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.CommandParameter(param0);
@@ -518,14 +518,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_Command(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Command());
         }
         catch (...)
@@ -537,12 +537,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_Command(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Command"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -551,6 +545,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Command"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ICommand>(arg);
 
             self->obj.Command(param0);
@@ -565,14 +565,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_ClickMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClickMode());
         }
         catch (...)
@@ -584,12 +584,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ButtonBase_put_ClickMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -598,6 +592,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ClickMode>(arg);
 
             self->obj.ClickMode(param0);
@@ -612,14 +612,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_IsPointerOver(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPointerOver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPointerOver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPointerOver());
         }
         catch (...)
@@ -631,14 +631,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_IsPressed(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPressed());
         }
         catch (...)
@@ -650,14 +650,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_ClickModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"ClickModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase::ClickModeProperty());
         }
         catch (...)
@@ -669,14 +669,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_CommandParameterProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameterProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandParameterProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase::CommandParameterProperty());
         }
         catch (...)
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_CommandProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"CommandProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase::CommandProperty());
         }
         catch (...)
@@ -707,14 +707,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_IsPointerOverProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPointerOverProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPointerOverProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase::IsPointerOverProperty());
         }
         catch (...)
@@ -726,14 +726,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_get_IsPressedProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPressedProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"IsPressedProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase::IsPressedProperty());
         }
         catch (...)
@@ -745,14 +745,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_add_Click(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Click"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Click"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Click(param0));
@@ -766,14 +766,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ButtonBase_remove_Click(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Click"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ButtonBase", L"Click"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Click(param0);
@@ -985,14 +985,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_CenterX(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterX());
         }
         catch (...)
@@ -1004,14 +1004,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_CenterY(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"CenterY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CenterY());
         }
         catch (...)
@@ -1023,14 +1023,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_ClipRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"ClipRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"ClipRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClipRect());
         }
         catch (...)
@@ -1042,14 +1042,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_HasMoreContentAfter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentAfter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentAfter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasMoreContentAfter());
         }
         catch (...)
@@ -1061,14 +1061,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_HasMoreContentBefore(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentBefore"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreContentBefore"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasMoreContentBefore());
         }
         catch (...)
@@ -1080,14 +1080,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_HasMoreViews(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreViews"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HasMoreViews"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasMoreViews());
         }
         catch (...)
@@ -1099,14 +1099,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_HeaderText(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HeaderText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"HeaderText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderText());
         }
         catch (...)
@@ -1118,14 +1118,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_MinViewWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"MinViewWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"MinViewWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinViewWidth());
         }
         catch (...)
@@ -1137,14 +1137,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay1(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay1());
         }
         catch (...)
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay2(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay2());
         }
         catch (...)
@@ -1175,14 +1175,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay3(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay3());
         }
         catch (...)
@@ -1194,14 +1194,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay4(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay4());
         }
         catch (...)
@@ -1213,14 +1213,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay5(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay5"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay5"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay5());
         }
         catch (...)
@@ -1232,14 +1232,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay6(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay6"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay6"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay6());
         }
         catch (...)
@@ -1251,14 +1251,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CalendarViewTemplateSettings_get_WeekDay7(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay7"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CalendarViewTemplateSettings", L"WeekDay7"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekDay7());
         }
         catch (...)
@@ -1380,14 +1380,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetIrregularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetIrregularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -1412,14 +1412,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetRegularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"GetRegularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2 {  };
@@ -1457,14 +1457,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineDown();
                 Py_RETURN_NONE;
             }
@@ -1487,14 +1487,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineLeft();
                 Py_RETURN_NONE;
             }
@@ -1517,14 +1517,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineRight();
                 Py_RETURN_NONE;
             }
@@ -1547,14 +1547,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"LineUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineUp();
                 Py_RETURN_NONE;
             }
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MakeVisible", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MakeVisible", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -1609,14 +1609,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelDown();
                 Py_RETURN_NONE;
             }
@@ -1639,14 +1639,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelLeft();
                 Py_RETURN_NONE;
             }
@@ -1669,14 +1669,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelRight();
                 Py_RETURN_NONE;
             }
@@ -1699,14 +1699,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"MouseWheelUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelUp();
                 Py_RETURN_NONE;
             }
@@ -1729,14 +1729,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageDown();
                 Py_RETURN_NONE;
             }
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageLeft();
                 Py_RETURN_NONE;
             }
@@ -1789,14 +1789,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageRight();
                 Py_RETURN_NONE;
             }
@@ -1819,14 +1819,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"PageUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageUp();
                 Py_RETURN_NONE;
             }
@@ -1849,14 +1849,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetHorizontalOffset", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetHorizontalOffset", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.SetHorizontalOffset(param0);
@@ -1881,14 +1881,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetVerticalOffset", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"SetVerticalOffset", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.SetVerticalOffset(param0);
@@ -1909,14 +1909,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_ScrollOwner(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScrollOwner());
         }
         catch (...)
@@ -1928,12 +1928,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_ScrollOwner(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1942,6 +1936,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ScrollOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.ScrollOwner(param0);
@@ -1956,14 +1956,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_CanVerticallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanVerticallyScroll());
         }
         catch (...)
@@ -1975,12 +1975,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_CanVerticallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1989,6 +1983,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanVerticallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanVerticallyScroll(param0);
@@ -2003,14 +2003,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_CanHorizontallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanHorizontallyScroll());
         }
         catch (...)
@@ -2022,12 +2022,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int CarouselPanel_put_CanHorizontallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2036,6 +2030,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"CanHorizontallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanHorizontallyScroll(param0);
@@ -2050,14 +2050,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_ExtentHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtentHeight());
         }
         catch (...)
@@ -2069,14 +2069,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_ExtentWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ExtentWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtentWidth());
         }
         catch (...)
@@ -2088,14 +2088,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -2107,14 +2107,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -2126,14 +2126,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_ViewportHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewportHeight());
         }
         catch (...)
@@ -2145,14 +2145,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_ViewportWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"ViewportWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewportWidth());
         }
         catch (...)
@@ -2164,14 +2164,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreHorizontalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreHorizontalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHorizontalSnapPointsRegular());
         }
         catch (...)
@@ -2183,14 +2183,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreVerticalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"AreVerticalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreVerticalSnapPointsRegular());
         }
         catch (...)
@@ -2202,14 +2202,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_add_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
@@ -2223,14 +2223,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HorizontalSnapPointsChanged(param0);
@@ -2245,14 +2245,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_add_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VerticalSnapPointsChanged(param0));
@@ -2266,14 +2266,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CarouselPanel_remove_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.CarouselPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VerticalSnapPointsChanged(param0);
@@ -2411,14 +2411,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorPickerSlider_get_ColorChannel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorChannel());
         }
         catch (...)
@@ -2430,12 +2430,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorPickerSlider_put_ColorChannel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2444,6 +2438,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorPickerHsvChannel>(arg);
 
             self->obj.ColorChannel(param0);
@@ -2458,14 +2458,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorPickerSlider_get_ColorChannelProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannelProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorPickerSlider", L"ColorChannelProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider::ColorChannelProperty());
         }
         catch (...)
@@ -2595,14 +2595,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_Shape(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -2614,12 +2614,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Shape(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2628,6 +2622,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorSpectrumShape>(arg);
 
             self->obj.Shape(param0);
@@ -2642,14 +2642,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinValue());
         }
         catch (...)
@@ -2661,12 +2661,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2675,6 +2669,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MinValue(param0);
@@ -2689,14 +2689,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinSaturation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinSaturation());
         }
         catch (...)
@@ -2708,12 +2708,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinSaturation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2722,6 +2716,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MinSaturation(param0);
@@ -2736,14 +2736,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinHue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinHue());
         }
         catch (...)
@@ -2755,12 +2755,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MinHue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2769,6 +2763,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MinHue(param0);
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxValue());
         }
         catch (...)
@@ -2802,12 +2802,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2816,6 +2810,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxValue(param0);
@@ -2830,14 +2830,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxSaturation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSaturation());
         }
         catch (...)
@@ -2849,12 +2849,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxSaturation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2863,6 +2857,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxSaturation(param0);
@@ -2877,14 +2877,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxHue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxHue());
         }
         catch (...)
@@ -2896,12 +2896,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_MaxHue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2910,6 +2904,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxHue(param0);
@@ -2924,14 +2924,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_HsvColor(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HsvColor());
         }
         catch (...)
@@ -2943,12 +2943,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_HsvColor(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2957,6 +2951,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
 
             self->obj.HsvColor(param0);
@@ -2971,14 +2971,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_Components(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Components());
         }
         catch (...)
@@ -2990,12 +2990,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Components(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3004,6 +2998,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents>(arg);
 
             self->obj.Components(param0);
@@ -3018,14 +3018,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_Color(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -3037,12 +3037,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ColorSpectrum_put_Color(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3051,6 +3045,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -3065,14 +3065,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_ColorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::ColorProperty());
         }
         catch (...)
@@ -3084,14 +3084,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_ComponentsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ComponentsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ComponentsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::ComponentsProperty());
         }
         catch (...)
@@ -3103,14 +3103,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_HsvColorProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColorProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"HsvColorProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::HsvColorProperty());
         }
         catch (...)
@@ -3122,14 +3122,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxHueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxHueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MaxHueProperty());
         }
         catch (...)
@@ -3141,14 +3141,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxSaturationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxSaturationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MaxSaturationProperty());
         }
         catch (...)
@@ -3160,14 +3160,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MaxValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MaxValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MaxValueProperty());
         }
         catch (...)
@@ -3179,14 +3179,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinHueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinHueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MinHueProperty());
         }
         catch (...)
@@ -3198,14 +3198,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinSaturationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinSaturationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MinSaturationProperty());
         }
         catch (...)
@@ -3217,14 +3217,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_MinValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"MinValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::MinValueProperty());
         }
         catch (...)
@@ -3236,14 +3236,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_get_ShapeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ShapeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ShapeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum::ShapeProperty());
         }
         catch (...)
@@ -3255,14 +3255,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_add_ColorChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ColorChanged(param0));
@@ -3276,14 +3276,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ColorSpectrum_remove_ColorChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ColorSpectrum", L"ColorChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ColorChanged(param0);
@@ -3414,14 +3414,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxTemplateSettings_get_DropDownClosedHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownClosedHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownClosedHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DropDownClosedHeight());
         }
         catch (...)
@@ -3433,14 +3433,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxTemplateSettings_get_DropDownOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DropDownOffset());
         }
         catch (...)
@@ -3452,14 +3452,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxTemplateSettings_get_DropDownOpenedHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOpenedHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownOpenedHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DropDownOpenedHeight());
         }
         catch (...)
@@ -3471,14 +3471,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxTemplateSettings_get_SelectedItemDirection(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"SelectedItemDirection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"SelectedItemDirection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedItemDirection());
         }
         catch (...)
@@ -3490,14 +3490,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ComboBoxTemplateSettings_get_DropDownContentMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownContentMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings", L"DropDownContentMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DropDownContentMinWidth());
         }
         catch (...)
@@ -3605,14 +3605,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBar_get_FlyoutTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", L"FlyoutTemplateSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBar", L"FlyoutTemplateSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlyoutTemplateSettings());
         }
         catch (...)
@@ -3694,14 +3694,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_CloseAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CloseAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CloseAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CloseAnimationEndPosition());
         }
         catch (...)
@@ -3713,14 +3713,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ContentClipRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ContentClipRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ContentClipRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentClipRect());
         }
         catch (...)
@@ -3732,14 +3732,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_CurrentWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CurrentWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"CurrentWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentWidth());
         }
         catch (...)
@@ -3751,14 +3751,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandDownAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandDownAnimationEndPosition());
         }
         catch (...)
@@ -3770,14 +3770,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandDownAnimationHoldPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationHoldPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationHoldPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandDownAnimationHoldPosition());
         }
         catch (...)
@@ -3789,14 +3789,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandDownAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandDownAnimationStartPosition());
         }
         catch (...)
@@ -3808,14 +3808,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandDownOverflowVerticalPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownOverflowVerticalPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandDownOverflowVerticalPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandDownOverflowVerticalPosition());
         }
         catch (...)
@@ -3827,14 +3827,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandUpAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandUpAnimationEndPosition());
         }
         catch (...)
@@ -3846,14 +3846,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandUpAnimationHoldPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationHoldPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationHoldPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandUpAnimationHoldPosition());
         }
         catch (...)
@@ -3865,14 +3865,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandUpAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandUpAnimationStartPosition());
         }
         catch (...)
@@ -3884,14 +3884,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandUpOverflowVerticalPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpOverflowVerticalPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandUpOverflowVerticalPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandUpOverflowVerticalPosition());
         }
         catch (...)
@@ -3903,14 +3903,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_ExpandedWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandedWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"ExpandedWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpandedWidth());
         }
         catch (...)
@@ -3922,14 +3922,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_OpenAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenAnimationEndPosition());
         }
         catch (...)
@@ -3941,14 +3941,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_OpenAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OpenAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenAnimationStartPosition());
         }
         catch (...)
@@ -3960,14 +3960,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_OverflowContentClipRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OverflowContentClipRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"OverflowContentClipRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentClipRect());
         }
         catch (...)
@@ -3979,14 +3979,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_WidthExpansionAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidthExpansionAnimationEndPosition());
         }
         catch (...)
@@ -3998,14 +3998,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_WidthExpansionAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidthExpansionAnimationStartPosition());
         }
         catch (...)
@@ -4017,14 +4017,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_WidthExpansionDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidthExpansionDelta());
         }
         catch (...)
@@ -4036,14 +4036,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_WidthExpansionMoreButtonAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidthExpansionMoreButtonAnimationEndPosition());
         }
         catch (...)
@@ -4055,14 +4055,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarFlyoutCommandBarTemplateSettings_get_WidthExpansionMoreButtonAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarFlyoutCommandBarTemplateSettings", L"WidthExpansionMoreButtonAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WidthExpansionMoreButtonAnimationStartPosition());
         }
         catch (...)
@@ -4163,14 +4163,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_ContentHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"ContentHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"ContentHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentHeight());
         }
         catch (...)
@@ -4182,14 +4182,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_NegativeOverflowContentHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"NegativeOverflowContentHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"NegativeOverflowContentHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeOverflowContentHeight());
         }
         catch (...)
@@ -4201,14 +4201,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentClipRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentClipRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentClipRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentClipRect());
         }
         catch (...)
@@ -4220,14 +4220,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentHeight());
         }
         catch (...)
@@ -4239,14 +4239,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentHorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentHorizontalOffset());
         }
         catch (...)
@@ -4258,14 +4258,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentMaxHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentMaxHeight());
         }
         catch (...)
@@ -4277,14 +4277,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentMinWidth());
         }
         catch (...)
@@ -4296,14 +4296,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentMaxWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMaxWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentMaxWidth());
         }
         catch (...)
@@ -4315,14 +4315,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_EffectiveOverflowButtonVisibility(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"EffectiveOverflowButtonVisibility"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"EffectiveOverflowButtonVisibility"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectiveOverflowButtonVisibility());
         }
         catch (...)
@@ -4334,14 +4334,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentCompactYTranslation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentCompactYTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentCompactYTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentCompactYTranslation());
         }
         catch (...)
@@ -4353,14 +4353,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentHiddenYTranslation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHiddenYTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentHiddenYTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentHiddenYTranslation());
         }
         catch (...)
@@ -4372,14 +4372,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* CommandBarTemplateSettings_get_OverflowContentMinimalYTranslation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinimalYTranslation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.CommandBarTemplateSettings", L"OverflowContentMinimalYTranslation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverflowContentMinimalYTranslation());
         }
         catch (...)
@@ -4498,14 +4498,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragCompletedEventArgs_get_Canceled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Canceled());
         }
         catch (...)
@@ -4517,14 +4517,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragCompletedEventArgs_get_HorizontalChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"HorizontalChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"HorizontalChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalChange());
         }
         catch (...)
@@ -4536,14 +4536,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragCompletedEventArgs_get_VerticalChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"VerticalChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragCompletedEventArgs", L"VerticalChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalChange());
         }
         catch (...)
@@ -4652,14 +4652,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragDeltaEventArgs_get_HorizontalChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"HorizontalChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"HorizontalChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalChange());
         }
         catch (...)
@@ -4671,14 +4671,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragDeltaEventArgs_get_VerticalChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"VerticalChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragDeltaEventArgs", L"VerticalChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalChange());
         }
         catch (...)
@@ -4786,14 +4786,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragStartedEventArgs_get_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -4805,14 +4805,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* DragStartedEventArgs_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.DragStartedEventArgs", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -4899,14 +4899,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"GetAttachedFlyout", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"GetAttachedFlyout", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::GetAttachedFlyout(param0));
@@ -4930,14 +4930,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Hide", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Hide", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Hide();
                 Py_RETURN_NONE;
             }
@@ -4960,14 +4960,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"SetAttachedFlyout", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"SetAttachedFlyout", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>(args, 1);
 
@@ -4993,14 +4993,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
                 self->obj.ShowAt(param0);
@@ -5014,14 +5014,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>(args, 1);
 
@@ -5047,14 +5047,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAttachedFlyout", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowAttachedFlyout", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
                 winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::ShowAttachedFlyout(param0);
@@ -5079,14 +5079,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"TryInvokeKeyboardAccelerator", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"TryInvokeKeyboardAccelerator", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
 
                 self->obj.TryInvokeKeyboardAccelerator(param0);
@@ -5107,14 +5107,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_Placement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Placement());
         }
         catch (...)
@@ -5126,12 +5126,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_Placement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5140,6 +5134,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Placement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
             self->obj.Placement(param0);
@@ -5154,14 +5154,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LightDismissOverlayMode());
         }
         catch (...)
@@ -5173,12 +5173,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5187,6 +5181,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
             self->obj.LightDismissOverlayMode(param0);
@@ -5201,14 +5201,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ElementSoundMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementSoundMode());
         }
         catch (...)
@@ -5220,12 +5220,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ElementSoundMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5234,6 +5228,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementSoundMode>(arg);
 
             self->obj.ElementSoundMode(param0);
@@ -5248,14 +5248,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowFocusWhenDisabled());
         }
         catch (...)
@@ -5267,12 +5267,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AllowFocusWhenDisabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5281,6 +5275,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowFocusWhenDisabled(param0);
@@ -5295,14 +5295,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowFocusOnInteraction());
         }
         catch (...)
@@ -5314,12 +5314,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AllowFocusOnInteraction(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5328,6 +5322,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteraction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowFocusOnInteraction(param0);
@@ -5342,14 +5342,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_Target(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Target"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Target"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Target());
         }
         catch (...)
@@ -5361,14 +5361,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_OverlayInputPassThroughElement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverlayInputPassThroughElement());
         }
         catch (...)
@@ -5380,12 +5380,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_OverlayInputPassThroughElement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5394,6 +5388,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
             self->obj.OverlayInputPassThroughElement(param0);
@@ -5408,14 +5408,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ShowMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowMode());
         }
         catch (...)
@@ -5427,12 +5427,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ShowMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5441,6 +5435,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
             self->obj.ShowMode(param0);
@@ -5455,14 +5455,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AreOpenCloseAnimationsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreOpenCloseAnimationsEnabled());
         }
         catch (...)
@@ -5474,12 +5474,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_AreOpenCloseAnimationsEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5488,6 +5482,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreOpenCloseAnimationsEnabled(param0);
@@ -5502,14 +5502,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_InputDevicePrefersPrimaryCommands(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"InputDevicePrefersPrimaryCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"InputDevicePrefersPrimaryCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputDevicePrefersPrimaryCommands());
         }
         catch (...)
@@ -5521,14 +5521,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_IsOpen(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOpen());
         }
         catch (...)
@@ -5540,14 +5540,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_XamlRoot(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XamlRoot());
         }
         catch (...)
@@ -5559,12 +5559,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_XamlRoot(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5573,6 +5567,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"XamlRoot"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::XamlRoot>(arg);
 
             self->obj.XamlRoot(param0);
@@ -5587,14 +5587,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ShouldConstrainToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldConstrainToRootBounds());
         }
         catch (...)
@@ -5606,12 +5606,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBase_put_ShouldConstrainToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5620,6 +5614,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldConstrainToRootBounds(param0);
@@ -5634,14 +5634,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_IsConstrainedToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsConstrainedToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsConstrainedToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConstrainedToRootBounds());
         }
         catch (...)
@@ -5653,14 +5653,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AttachedFlyoutProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AttachedFlyoutProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AttachedFlyoutProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::AttachedFlyoutProperty());
         }
         catch (...)
@@ -5672,14 +5672,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_PlacementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"PlacementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"PlacementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::PlacementProperty());
         }
         catch (...)
@@ -5691,14 +5691,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AllowFocusOnInteractionProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteractionProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusOnInteractionProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::AllowFocusOnInteractionProperty());
         }
         catch (...)
@@ -5710,14 +5710,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AllowFocusWhenDisabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AllowFocusWhenDisabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::AllowFocusWhenDisabledProperty());
         }
         catch (...)
@@ -5729,14 +5729,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ElementSoundModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ElementSoundModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::ElementSoundModeProperty());
         }
         catch (...)
@@ -5748,14 +5748,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_LightDismissOverlayModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"LightDismissOverlayModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::LightDismissOverlayModeProperty());
         }
         catch (...)
@@ -5767,14 +5767,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_OverlayInputPassThroughElementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"OverlayInputPassThroughElementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::OverlayInputPassThroughElementProperty());
         }
         catch (...)
@@ -5786,14 +5786,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_AreOpenCloseAnimationsEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"AreOpenCloseAnimationsEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::AreOpenCloseAnimationsEnabledProperty());
         }
         catch (...)
@@ -5805,14 +5805,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_InputDevicePrefersPrimaryCommandsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"InputDevicePrefersPrimaryCommandsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"InputDevicePrefersPrimaryCommandsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::InputDevicePrefersPrimaryCommandsProperty());
         }
         catch (...)
@@ -5824,14 +5824,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_IsOpenProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsOpenProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"IsOpenProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::IsOpenProperty());
         }
         catch (...)
@@ -5843,14 +5843,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ShowModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShowModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::ShowModeProperty());
         }
         catch (...)
@@ -5862,14 +5862,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_TargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"TargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"TargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::TargetProperty());
         }
         catch (...)
@@ -5881,14 +5881,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_get_ShouldConstrainToRootBoundsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBoundsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"ShouldConstrainToRootBoundsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase::ShouldConstrainToRootBoundsProperty());
         }
         catch (...)
@@ -5900,14 +5900,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_add_Closed(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -5921,14 +5921,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_remove_Closed(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -5943,14 +5943,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_add_Opened(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Opened(param0));
@@ -5964,14 +5964,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_remove_Opened(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Opened(param0);
@@ -5986,14 +5986,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_add_Opening(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Opening(param0));
@@ -6007,14 +6007,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_remove_Opening(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Opening"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Opening(param0);
@@ -6029,14 +6029,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_add_Closing(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>>(arg);
 
             return py::convert(self->obj.Closing(param0));
@@ -6050,14 +6050,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBase_remove_Closing(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBase", L"Closing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closing(param0);
@@ -6207,14 +6207,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutBaseClosingEventArgs_get_Cancel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Cancel());
         }
         catch (...)
@@ -6226,12 +6226,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutBaseClosingEventArgs_put_Cancel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6240,6 +6234,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs", L"Cancel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Cancel(param0);
@@ -6346,14 +6346,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutShowOptions_get_ShowMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowMode());
         }
         catch (...)
@@ -6365,12 +6365,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_ShowMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6379,6 +6373,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ShowMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
             self->obj.ShowMode(param0);
@@ -6393,14 +6393,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutShowOptions_get_Position(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -6412,12 +6412,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_Position(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6426,6 +6420,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
             self->obj.Position(param0);
@@ -6440,14 +6440,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutShowOptions_get_Placement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Placement());
         }
         catch (...)
@@ -6459,12 +6459,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_Placement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6473,6 +6467,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"Placement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
             self->obj.Placement(param0);
@@ -6487,14 +6487,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* FlyoutShowOptions_get_ExclusionRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExclusionRect());
         }
         catch (...)
@@ -6506,12 +6506,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int FlyoutShowOptions_put_ExclusionRect(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6520,6 +6514,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.FlyoutShowOptions", L"ExclusionRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
             self->obj.ExclusionRect(param0);
@@ -6611,14 +6611,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.GeneratorPositionHelper", L"FromIndexAndOffset", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.GeneratorPositionHelper", L"FromIndexAndOffset", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -6756,14 +6756,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionCheckMarkVisualEnabled());
         }
         catch (...)
@@ -6775,12 +6775,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6789,6 +6783,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SelectionCheckMarkVisualEnabled(param0);
@@ -6803,14 +6803,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPointerOverBorderBrush());
         }
         catch (...)
@@ -6822,12 +6822,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6836,6 +6830,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPointerOverBorderBrush(param0);
@@ -6850,14 +6850,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedPointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPointerOverBackground());
         }
         catch (...)
@@ -6869,12 +6869,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedPointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6883,6 +6877,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPointerOverBackground(param0);
@@ -6897,14 +6897,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedForeground());
         }
         catch (...)
@@ -6916,12 +6916,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6930,6 +6924,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedForeground(param0);
@@ -6944,14 +6944,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedBorderThickness());
         }
         catch (...)
@@ -6963,12 +6963,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6977,6 +6971,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.SelectedBorderThickness(param0);
@@ -6991,14 +6991,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedBackground());
         }
         catch (...)
@@ -7010,12 +7010,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_SelectedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7024,6 +7018,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedBackground(param0);
@@ -7038,14 +7038,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_ReorderHintOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReorderHintOffset());
         }
         catch (...)
@@ -7057,12 +7057,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_ReorderHintOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7071,6 +7065,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ReorderHintOffset(param0);
@@ -7085,14 +7085,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PointerOverBackgroundMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverBackgroundMargin());
         }
         catch (...)
@@ -7104,12 +7104,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PointerOverBackgroundMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7118,6 +7112,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.PointerOverBackgroundMargin(param0);
@@ -7132,14 +7132,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverBackground());
         }
         catch (...)
@@ -7151,12 +7151,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7165,6 +7159,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PointerOverBackground(param0);
@@ -7179,14 +7179,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PlaceholderBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaceholderBackground());
         }
         catch (...)
@@ -7198,12 +7198,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_PlaceholderBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7212,6 +7206,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PlaceholderBackground(param0);
@@ -7226,14 +7226,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterVerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GridViewItemPresenterVerticalContentAlignment());
         }
         catch (...)
@@ -7245,12 +7245,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterVerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7259,6 +7253,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
 
             self->obj.GridViewItemPresenterVerticalContentAlignment(param0);
@@ -7273,14 +7273,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterPadding(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GridViewItemPresenterPadding());
         }
         catch (...)
@@ -7292,12 +7292,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterPadding(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7306,6 +7300,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPadding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.GridViewItemPresenterPadding(param0);
@@ -7320,14 +7320,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterHorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GridViewItemPresenterHorizontalContentAlignment());
         }
         catch (...)
@@ -7339,12 +7339,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_GridViewItemPresenterHorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7353,6 +7347,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
 
             self->obj.GridViewItemPresenterHorizontalContentAlignment(param0);
@@ -7367,14 +7367,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_FocusBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusBorderBrush());
         }
         catch (...)
@@ -7386,12 +7386,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_FocusBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7400,6 +7394,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.FocusBorderBrush(param0);
@@ -7414,14 +7414,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragOpacity());
         }
         catch (...)
@@ -7433,12 +7433,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7447,6 +7441,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DragOpacity(param0);
@@ -7461,14 +7461,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragForeground());
         }
         catch (...)
@@ -7480,12 +7480,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7494,6 +7488,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.DragForeground(param0);
@@ -7508,14 +7508,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragBackground());
         }
         catch (...)
@@ -7527,12 +7527,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DragBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7541,6 +7535,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.DragBackground(param0);
@@ -7555,14 +7555,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DisabledOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisabledOpacity());
         }
         catch (...)
@@ -7574,12 +7574,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_DisabledOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7588,6 +7582,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DisabledOpacity(param0);
@@ -7602,14 +7602,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_ContentMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentMargin());
         }
         catch (...)
@@ -7621,12 +7621,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_ContentMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7635,6 +7629,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.ContentMargin(param0);
@@ -7649,14 +7649,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckSelectingBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckSelectingBrush());
         }
         catch (...)
@@ -7668,12 +7668,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckSelectingBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7682,6 +7676,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckSelectingBrush(param0);
@@ -7696,14 +7696,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckHintBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckHintBrush());
         }
         catch (...)
@@ -7715,12 +7715,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckHintBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7729,6 +7723,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckHintBrush(param0);
@@ -7743,14 +7743,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBrush());
         }
         catch (...)
@@ -7762,12 +7762,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int GridViewItemPresenter_put_CheckBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7776,6 +7770,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBrush(param0);
@@ -7790,14 +7790,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::CheckBrushProperty());
         }
         catch (...)
@@ -7809,14 +7809,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckHintBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckHintBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::CheckHintBrushProperty());
         }
         catch (...)
@@ -7828,14 +7828,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_CheckSelectingBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"CheckSelectingBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::CheckSelectingBrushProperty());
         }
         catch (...)
@@ -7847,14 +7847,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_ContentMarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ContentMarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::ContentMarginProperty());
         }
         catch (...)
@@ -7866,14 +7866,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DisabledOpacityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DisabledOpacityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::DisabledOpacityProperty());
         }
         catch (...)
@@ -7885,14 +7885,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::DragBackgroundProperty());
         }
         catch (...)
@@ -7904,14 +7904,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragForegroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForegroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragForegroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::DragForegroundProperty());
         }
         catch (...)
@@ -7923,14 +7923,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_DragOpacityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"DragOpacityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::DragOpacityProperty());
         }
         catch (...)
@@ -7942,14 +7942,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_FocusBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"FocusBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::FocusBorderBrushProperty());
         }
         catch (...)
@@ -7961,14 +7961,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterHorizontalContentAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterHorizontalContentAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::GridViewItemPresenterHorizontalContentAlignmentProperty());
         }
         catch (...)
@@ -7980,14 +7980,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterPaddingProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPaddingProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterPaddingProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::GridViewItemPresenterPaddingProperty());
         }
         catch (...)
@@ -7999,14 +7999,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_GridViewItemPresenterVerticalContentAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"GridViewItemPresenterVerticalContentAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::GridViewItemPresenterVerticalContentAlignmentProperty());
         }
         catch (...)
@@ -8018,14 +8018,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PlaceholderBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PlaceholderBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::PlaceholderBackgroundProperty());
         }
         catch (...)
@@ -8037,14 +8037,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PointerOverBackgroundMarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundMarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::PointerOverBackgroundMarginProperty());
         }
         catch (...)
@@ -8056,14 +8056,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_PointerOverBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"PointerOverBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::PointerOverBackgroundProperty());
         }
         catch (...)
@@ -8075,14 +8075,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_ReorderHintOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"ReorderHintOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::ReorderHintOffsetProperty());
         }
         catch (...)
@@ -8094,14 +8094,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectedBackgroundProperty());
         }
         catch (...)
@@ -8113,14 +8113,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedBorderThicknessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThicknessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedBorderThicknessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectedBorderThicknessProperty());
         }
         catch (...)
@@ -8132,14 +8132,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedForegroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForegroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedForegroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectedForegroundProperty());
         }
         catch (...)
@@ -8151,14 +8151,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedPointerOverBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectedPointerOverBackgroundProperty());
         }
         catch (...)
@@ -8170,14 +8170,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectedPointerOverBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectedPointerOverBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectedPointerOverBorderBrushProperty());
         }
         catch (...)
@@ -8189,14 +8189,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemPresenter_get_SelectionCheckMarkVisualEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter", L"SelectionCheckMarkVisualEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter::SelectionCheckMarkVisualEnabledProperty());
         }
         catch (...)
@@ -8346,14 +8346,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* GridViewItemTemplateSettings_get_DragItemsCount(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings", L"DragItemsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.GridViewItemTemplateSettings", L"DragItemsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragItemsCount());
         }
         catch (...)
@@ -8435,14 +8435,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ItemsChangedEventArgs_get_Action(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -8454,14 +8454,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ItemsChangedEventArgs_get_ItemCount(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemCount());
         }
         catch (...)
@@ -8473,14 +8473,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ItemsChangedEventArgs_get_ItemUICount(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemUICount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"ItemUICount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemUICount());
         }
         catch (...)
@@ -8492,14 +8492,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ItemsChangedEventArgs_get_OldPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"OldPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"OldPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldPosition());
         }
         catch (...)
@@ -8511,14 +8511,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ItemsChangedEventArgs_get_Position(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ItemsChangedEventArgs", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -8630,14 +8630,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Convert", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Convert", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -8664,14 +8664,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"ConvertBack", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"ConvertBack", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -8694,14 +8694,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_get_Enabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -8713,12 +8713,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int JumpListItemBackgroundConverter_put_Enabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8727,6 +8721,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.Enabled(param0);
@@ -8741,14 +8741,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_get_Disabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Disabled());
         }
         catch (...)
@@ -8760,12 +8760,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int JumpListItemBackgroundConverter_put_Disabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8774,6 +8768,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.Disabled(param0);
@@ -8788,14 +8788,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_get_DisabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"DisabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"DisabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter::DisabledProperty());
         }
         catch (...)
@@ -8807,14 +8807,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemBackgroundConverter_get_EnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"EnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemBackgroundConverter", L"EnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter::EnabledProperty());
         }
         catch (...)
@@ -8952,14 +8952,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Convert", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Convert", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -8986,14 +8986,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"ConvertBack", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"ConvertBack", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Interop::TypeName>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -9016,14 +9016,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_get_Enabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -9035,12 +9035,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int JumpListItemForegroundConverter_put_Enabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9049,6 +9043,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.Enabled(param0);
@@ -9063,14 +9063,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_get_Disabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Disabled());
         }
         catch (...)
@@ -9082,12 +9082,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int JumpListItemForegroundConverter_put_Disabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9096,6 +9090,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"Disabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.Disabled(param0);
@@ -9110,14 +9110,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_get_DisabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"DisabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"DisabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter::DisabledProperty());
         }
         catch (...)
@@ -9129,14 +9129,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* JumpListItemForegroundConverter_get_EnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"EnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.JumpListItemForegroundConverter", L"EnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter::EnabledProperty());
         }
         catch (...)
@@ -9252,14 +9252,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetAvailableSize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetAvailableSize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation::GetAvailableSize(param0));
@@ -9283,14 +9283,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetLayoutExceptionElement", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetLayoutExceptionElement", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation::GetLayoutExceptionElement(param0));
@@ -9314,14 +9314,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetLayoutSlot", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LayoutInformation", L"GetLayoutSlot", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation::GetLayoutSlot(param0));
@@ -9460,14 +9460,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionCheckMarkVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionCheckMarkVisualEnabled());
         }
         catch (...)
@@ -9479,12 +9479,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionCheckMarkVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9493,6 +9487,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SelectionCheckMarkVisualEnabled(param0);
@@ -9507,14 +9507,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPointerOverBorderBrush());
         }
         catch (...)
@@ -9526,12 +9526,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9540,6 +9534,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPointerOverBorderBrush(param0);
@@ -9554,14 +9554,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPointerOverBackground());
         }
         catch (...)
@@ -9573,12 +9573,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9587,6 +9581,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPointerOverBackground(param0);
@@ -9601,14 +9601,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedForeground());
         }
         catch (...)
@@ -9620,12 +9620,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9634,6 +9628,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedForeground(param0);
@@ -9648,14 +9648,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedBorderThickness());
         }
         catch (...)
@@ -9667,12 +9667,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9681,6 +9675,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.SelectedBorderThickness(param0);
@@ -9695,14 +9695,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedBackground());
         }
         catch (...)
@@ -9714,12 +9714,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9728,6 +9722,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedBackground(param0);
@@ -9742,14 +9742,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ReorderHintOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReorderHintOffset());
         }
         catch (...)
@@ -9761,12 +9761,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ReorderHintOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9775,6 +9769,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ReorderHintOffset(param0);
@@ -9789,14 +9789,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBrush());
         }
         catch (...)
@@ -9808,12 +9808,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9822,6 +9816,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBrush(param0);
@@ -9836,14 +9836,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverBackground());
         }
         catch (...)
@@ -9855,12 +9855,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9869,6 +9863,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PointerOverBackground(param0);
@@ -9883,14 +9883,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PlaceholderBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaceholderBackground());
         }
         catch (...)
@@ -9902,12 +9902,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PlaceholderBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9916,6 +9910,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PlaceholderBackground(param0);
@@ -9930,14 +9930,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterVerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListViewItemPresenterVerticalContentAlignment());
         }
         catch (...)
@@ -9949,12 +9949,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterVerticalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9963,6 +9957,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
 
             self->obj.ListViewItemPresenterVerticalContentAlignment(param0);
@@ -9977,14 +9977,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterPadding(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListViewItemPresenterPadding());
         }
         catch (...)
@@ -9996,12 +9996,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterPadding(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10010,6 +10004,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPadding"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.ListViewItemPresenterPadding(param0);
@@ -10024,14 +10024,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterHorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListViewItemPresenterHorizontalContentAlignment());
         }
         catch (...)
@@ -10043,12 +10043,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ListViewItemPresenterHorizontalContentAlignment(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10057,6 +10051,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
 
             self->obj.ListViewItemPresenterHorizontalContentAlignment(param0);
@@ -10071,14 +10071,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_FocusBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusBorderBrush());
         }
         catch (...)
@@ -10090,12 +10090,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_FocusBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10104,6 +10098,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.FocusBorderBrush(param0);
@@ -10118,14 +10118,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragOpacity());
         }
         catch (...)
@@ -10137,12 +10137,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10151,6 +10145,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DragOpacity(param0);
@@ -10165,14 +10165,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragForeground());
         }
         catch (...)
@@ -10184,12 +10184,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10198,6 +10192,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.DragForeground(param0);
@@ -10212,14 +10212,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragBackground());
         }
         catch (...)
@@ -10231,12 +10231,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DragBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10245,6 +10239,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.DragBackground(param0);
@@ -10259,14 +10259,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DisabledOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisabledOpacity());
         }
         catch (...)
@@ -10278,12 +10278,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_DisabledOpacity(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10292,6 +10286,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DisabledOpacity(param0);
@@ -10306,14 +10306,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ContentMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentMargin());
         }
         catch (...)
@@ -10325,12 +10325,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_ContentMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10339,6 +10333,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.ContentMargin(param0);
@@ -10353,14 +10353,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckSelectingBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckSelectingBrush());
         }
         catch (...)
@@ -10372,12 +10372,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckSelectingBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10386,6 +10380,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckSelectingBrush(param0);
@@ -10400,14 +10400,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckHintBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckHintBrush());
         }
         catch (...)
@@ -10419,12 +10419,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckHintBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10433,6 +10427,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckHintBrush(param0);
@@ -10447,14 +10447,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBackgroundMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverBackgroundMargin());
         }
         catch (...)
@@ -10466,12 +10466,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBackgroundMargin(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10480,6 +10474,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMargin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.PointerOverBackgroundMargin(param0);
@@ -10494,14 +10494,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPressedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPressedBackground());
         }
         catch (...)
@@ -10513,12 +10513,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPressedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10527,6 +10521,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPressedBackground(param0);
@@ -10541,14 +10541,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PressedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PressedBackground());
         }
         catch (...)
@@ -10560,12 +10560,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PressedBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10574,6 +10568,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PressedBackground(param0);
@@ -10588,14 +10588,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverForeground());
         }
         catch (...)
@@ -10607,12 +10607,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10621,6 +10615,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PointerOverForeground(param0);
@@ -10635,14 +10635,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_FocusSecondaryBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FocusSecondaryBorderBrush());
         }
         catch (...)
@@ -10654,12 +10654,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_FocusSecondaryBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10668,6 +10662,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.FocusSecondaryBorderBrush(param0);
@@ -10682,14 +10682,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckMode());
         }
         catch (...)
@@ -10701,12 +10701,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10715,6 +10709,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>(arg);
 
             self->obj.CheckMode(param0);
@@ -10729,14 +10729,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxBrush());
         }
         catch (...)
@@ -10748,12 +10748,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10762,6 +10756,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxBrush(param0);
@@ -10776,14 +10776,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevealBackground());
         }
         catch (...)
@@ -10795,12 +10795,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10809,6 +10803,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.RevealBackground(param0);
@@ -10823,14 +10823,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBackgroundShowsAboveContent(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevealBackgroundShowsAboveContent());
         }
         catch (...)
@@ -10842,12 +10842,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBackgroundShowsAboveContent(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10856,6 +10850,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RevealBackgroundShowsAboveContent(param0);
@@ -10870,14 +10870,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevealBorderThickness());
         }
         catch (...)
@@ -10889,12 +10889,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10903,6 +10897,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
             self->obj.RevealBorderThickness(param0);
@@ -10917,14 +10917,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevealBorderBrush());
         }
         catch (...)
@@ -10936,12 +10936,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_RevealBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10950,6 +10944,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.RevealBorderBrush(param0);
@@ -10964,14 +10964,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckDisabledBrush());
         }
         catch (...)
@@ -10983,12 +10983,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10997,6 +10991,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckDisabledBrush(param0);
@@ -11011,14 +11011,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorPressedBrush());
         }
         catch (...)
@@ -11030,12 +11030,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11044,6 +11038,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectionIndicatorPressedBrush(param0);
@@ -11058,14 +11058,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorPointerOverBrush());
         }
         catch (...)
@@ -11077,12 +11077,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11091,6 +11085,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectionIndicatorPointerOverBrush(param0);
@@ -11105,14 +11105,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorMode());
         }
         catch (...)
@@ -11124,12 +11124,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11138,6 +11132,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>(arg);
 
             self->obj.SelectionIndicatorMode(param0);
@@ -11152,14 +11152,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorDisabledBrush());
         }
         catch (...)
@@ -11171,12 +11171,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11185,6 +11179,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectionIndicatorDisabledBrush(param0);
@@ -11199,14 +11199,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorCornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorCornerRadius());
         }
         catch (...)
@@ -11218,12 +11218,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorCornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11232,6 +11226,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(arg);
 
             self->obj.SelectionIndicatorCornerRadius(param0);
@@ -11246,14 +11246,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorBrush());
         }
         catch (...)
@@ -11265,12 +11265,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11279,6 +11273,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectionIndicatorBrush(param0);
@@ -11293,14 +11293,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPressedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedPressedBorderBrush());
         }
         catch (...)
@@ -11312,12 +11312,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedPressedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11326,6 +11320,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedPressedBorderBrush(param0);
@@ -11340,14 +11340,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedInnerBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedInnerBorderBrush());
         }
         catch (...)
@@ -11359,12 +11359,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedInnerBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11373,6 +11367,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedInnerBorderBrush(param0);
@@ -11387,14 +11387,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedDisabledBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedDisabledBorderBrush());
         }
         catch (...)
@@ -11406,12 +11406,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedDisabledBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11420,6 +11414,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedDisabledBorderBrush(param0);
@@ -11434,14 +11434,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedDisabledBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedDisabledBackground());
         }
         catch (...)
@@ -11453,12 +11453,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedDisabledBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11467,6 +11461,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedDisabledBackground(param0);
@@ -11481,14 +11481,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedBorderBrush());
         }
         catch (...)
@@ -11500,12 +11500,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11514,6 +11508,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.SelectedBorderBrush(param0);
@@ -11528,14 +11528,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerOverBorderBrush());
         }
         catch (...)
@@ -11547,12 +11547,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_PointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11561,6 +11555,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.PointerOverBorderBrush(param0);
@@ -11575,14 +11575,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckPressedBrush());
         }
         catch (...)
@@ -11594,12 +11594,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11608,6 +11602,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckPressedBrush(param0);
@@ -11622,14 +11622,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectionIndicatorVisualEnabled());
         }
         catch (...)
@@ -11641,12 +11641,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_SelectionIndicatorVisualEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11655,6 +11649,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SelectionIndicatorVisualEnabled(param0);
@@ -11669,14 +11669,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxSelectedPressedBrush());
         }
         catch (...)
@@ -11688,12 +11688,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11702,6 +11696,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxSelectedPressedBrush(param0);
@@ -11716,14 +11716,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxSelectedPointerOverBrush());
         }
         catch (...)
@@ -11735,12 +11735,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11749,6 +11743,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxSelectedPointerOverBrush(param0);
@@ -11763,14 +11763,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxSelectedDisabledBrush());
         }
         catch (...)
@@ -11782,12 +11782,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11796,6 +11790,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxSelectedDisabledBrush(param0);
@@ -11810,14 +11810,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxSelectedBrush());
         }
         catch (...)
@@ -11829,12 +11829,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxSelectedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11843,6 +11837,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxSelectedBrush(param0);
@@ -11857,14 +11857,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxPressedBrush());
         }
         catch (...)
@@ -11876,12 +11876,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPressedBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11890,6 +11884,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxPressedBrush(param0);
@@ -11904,14 +11904,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPressedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxPressedBorderBrush());
         }
         catch (...)
@@ -11923,12 +11923,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPressedBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11937,6 +11931,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxPressedBorderBrush(param0);
@@ -11951,14 +11951,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxPointerOverBrush());
         }
         catch (...)
@@ -11970,12 +11970,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPointerOverBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11984,6 +11978,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxPointerOverBrush(param0);
@@ -11998,14 +11998,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxPointerOverBorderBrush());
         }
         catch (...)
@@ -12017,12 +12017,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxPointerOverBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12031,6 +12025,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxPointerOverBorderBrush(param0);
@@ -12045,14 +12045,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxDisabledBrush());
         }
         catch (...)
@@ -12064,12 +12064,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxDisabledBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12078,6 +12072,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxDisabledBrush(param0);
@@ -12092,14 +12092,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxDisabledBorderBrush());
         }
         catch (...)
@@ -12111,12 +12111,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxDisabledBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12125,6 +12119,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxDisabledBorderBrush(param0);
@@ -12139,14 +12139,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxCornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxCornerRadius());
         }
         catch (...)
@@ -12158,12 +12158,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxCornerRadius(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12172,6 +12166,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(arg);
 
             self->obj.CheckBoxCornerRadius(param0);
@@ -12186,14 +12186,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CheckBoxBorderBrush());
         }
         catch (...)
@@ -12205,12 +12205,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ListViewItemPresenter_put_CheckBoxBorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12219,6 +12213,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.CheckBoxBorderBrush(param0);
@@ -12233,14 +12233,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPointerOverBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedPointerOverBorderBrushProperty());
         }
         catch (...)
@@ -12252,14 +12252,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPointerOverBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPointerOverBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedPointerOverBackgroundProperty());
         }
         catch (...)
@@ -12271,14 +12271,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedForegroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForegroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedForegroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedForegroundProperty());
         }
         catch (...)
@@ -12290,14 +12290,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBorderThicknessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThicknessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderThicknessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedBorderThicknessProperty());
         }
         catch (...)
@@ -12309,14 +12309,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedBackgroundProperty());
         }
         catch (...)
@@ -12328,14 +12328,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ReorderHintOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ReorderHintOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::ReorderHintOffsetProperty());
         }
         catch (...)
@@ -12347,14 +12347,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBackgroundMarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundMarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PointerOverBackgroundMarginProperty());
         }
         catch (...)
@@ -12366,14 +12366,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PointerOverBackgroundProperty());
         }
         catch (...)
@@ -12385,14 +12385,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PlaceholderBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PlaceholderBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PlaceholderBackgroundProperty());
         }
         catch (...)
@@ -12404,14 +12404,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterVerticalContentAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterVerticalContentAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::ListViewItemPresenterVerticalContentAlignmentProperty());
         }
         catch (...)
@@ -12423,14 +12423,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterPaddingProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPaddingProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterPaddingProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::ListViewItemPresenterPaddingProperty());
         }
         catch (...)
@@ -12442,14 +12442,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ListViewItemPresenterHorizontalContentAlignmentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignmentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ListViewItemPresenterHorizontalContentAlignmentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::ListViewItemPresenterHorizontalContentAlignmentProperty());
         }
         catch (...)
@@ -12461,14 +12461,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_FocusBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::FocusBorderBrushProperty());
         }
         catch (...)
@@ -12480,14 +12480,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragOpacityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragOpacityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::DragOpacityProperty());
         }
         catch (...)
@@ -12499,14 +12499,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragForegroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForegroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragForegroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::DragForegroundProperty());
         }
         catch (...)
@@ -12518,14 +12518,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DragBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DragBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::DragBackgroundProperty());
         }
         catch (...)
@@ -12537,14 +12537,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_DisabledOpacityProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacityProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"DisabledOpacityProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::DisabledOpacityProperty());
         }
         catch (...)
@@ -12556,14 +12556,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_ContentMarginProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMarginProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"ContentMarginProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::ContentMarginProperty());
         }
         catch (...)
@@ -12575,14 +12575,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckSelectingBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckSelectingBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckSelectingBrushProperty());
         }
         catch (...)
@@ -12594,14 +12594,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckHintBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckHintBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckHintBrushProperty());
         }
         catch (...)
@@ -12613,14 +12613,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBrushProperty());
         }
         catch (...)
@@ -12632,14 +12632,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionCheckMarkVisualEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionCheckMarkVisualEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionCheckMarkVisualEnabledProperty());
         }
         catch (...)
@@ -12651,14 +12651,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PressedBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PressedBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PressedBackgroundProperty());
         }
         catch (...)
@@ -12670,14 +12670,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPressedBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedPressedBackgroundProperty());
         }
         catch (...)
@@ -12689,14 +12689,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverForegroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForegroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverForegroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PointerOverForegroundProperty());
         }
         catch (...)
@@ -12708,14 +12708,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_FocusSecondaryBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"FocusSecondaryBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::FocusSecondaryBorderBrushProperty());
         }
         catch (...)
@@ -12727,14 +12727,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckModeProperty());
         }
         catch (...)
@@ -12746,14 +12746,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxBrushProperty());
         }
         catch (...)
@@ -12765,14 +12765,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBackgroundShowsAboveContentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContentProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundShowsAboveContentProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::RevealBackgroundShowsAboveContentProperty());
         }
         catch (...)
@@ -12784,14 +12784,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::RevealBorderBrushProperty());
         }
         catch (...)
@@ -12803,14 +12803,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBorderThicknessProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThicknessProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBorderThicknessProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::RevealBorderThicknessProperty());
         }
         catch (...)
@@ -12822,14 +12822,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_RevealBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"RevealBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::RevealBackgroundProperty());
         }
         catch (...)
@@ -12841,14 +12841,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorPressedBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPressedBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorPressedBrushProperty());
         }
         catch (...)
@@ -12860,14 +12860,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorPointerOverBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorPointerOverBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorPointerOverBrushProperty());
         }
         catch (...)
@@ -12879,14 +12879,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorModeProperty());
         }
         catch (...)
@@ -12898,14 +12898,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorCornerRadiusProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadiusProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorCornerRadiusProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorCornerRadiusProperty());
         }
         catch (...)
@@ -12917,14 +12917,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorDisabledBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorDisabledBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorDisabledBrushProperty());
         }
         catch (...)
@@ -12936,14 +12936,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorBrushProperty());
         }
         catch (...)
@@ -12955,14 +12955,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedPressedBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedPressedBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedPressedBorderBrushProperty());
         }
         catch (...)
@@ -12974,14 +12974,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedInnerBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedInnerBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedInnerBorderBrushProperty());
         }
         catch (...)
@@ -12993,14 +12993,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedDisabledBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedDisabledBorderBrushProperty());
         }
         catch (...)
@@ -13012,14 +13012,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedDisabledBackgroundProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackgroundProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedDisabledBackgroundProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedDisabledBackgroundProperty());
         }
         catch (...)
@@ -13031,14 +13031,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectedBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectedBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectedBorderBrushProperty());
         }
         catch (...)
@@ -13050,14 +13050,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_PointerOverBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"PointerOverBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::PointerOverBorderBrushProperty());
         }
         catch (...)
@@ -13069,14 +13069,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckPressedBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckPressedBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckPressedBrushProperty());
         }
         catch (...)
@@ -13088,14 +13088,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckDisabledBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckDisabledBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckDisabledBrushProperty());
         }
         catch (...)
@@ -13107,14 +13107,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPressedBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPressedBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxSelectedPressedBrushProperty());
         }
         catch (...)
@@ -13126,14 +13126,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedPointerOverBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedPointerOverBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxSelectedPointerOverBrushProperty());
         }
         catch (...)
@@ -13145,14 +13145,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedDisabledBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedDisabledBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxSelectedDisabledBrushProperty());
         }
         catch (...)
@@ -13164,14 +13164,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxSelectedBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxSelectedBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxSelectedBrushProperty());
         }
         catch (...)
@@ -13183,14 +13183,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPressedBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxPressedBorderBrushProperty());
         }
         catch (...)
@@ -13202,14 +13202,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPressedBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPressedBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxPressedBrushProperty());
         }
         catch (...)
@@ -13221,14 +13221,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxPointerOverBrushProperty());
         }
         catch (...)
@@ -13240,14 +13240,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxPointerOverBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxPointerOverBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxPointerOverBorderBrushProperty());
         }
         catch (...)
@@ -13259,14 +13259,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxDisabledBrushProperty());
         }
         catch (...)
@@ -13278,14 +13278,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxDisabledBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxDisabledBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxDisabledBorderBrushProperty());
         }
         catch (...)
@@ -13297,14 +13297,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxCornerRadiusProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadiusProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxCornerRadiusProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxCornerRadiusProperty());
         }
         catch (...)
@@ -13316,14 +13316,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_CheckBoxBorderBrushProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrushProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"CheckBoxBorderBrushProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::CheckBoxBorderBrushProperty());
         }
         catch (...)
@@ -13335,14 +13335,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemPresenter_get_SelectionIndicatorVisualEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter", L"SelectionIndicatorVisualEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter::SelectionIndicatorVisualEnabledProperty());
         }
         catch (...)
@@ -13566,14 +13566,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ListViewItemTemplateSettings_get_DragItemsCount(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings", L"DragItemsCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ListViewItemTemplateSettings", L"DragItemsCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DragItemsCount());
         }
         catch (...)
@@ -13655,14 +13655,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ShouldLoop(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldLoop());
         }
         catch (...)
@@ -13674,12 +13674,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ShouldLoop(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13688,6 +13682,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldLoop(param0);
@@ -13702,14 +13702,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_SelectedItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedItem());
         }
         catch (...)
@@ -13721,12 +13721,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_SelectedItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13735,6 +13729,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.SelectedItem(param0);
@@ -13749,14 +13749,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_SelectedIndex(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedIndex());
         }
         catch (...)
@@ -13768,12 +13768,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_SelectedIndex(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13782,6 +13776,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SelectedIndex(param0);
@@ -13796,14 +13796,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_Items(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -13815,12 +13815,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_Items(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13829,6 +13823,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IInspectable>>(arg);
 
             self->obj.Items(param0);
@@ -13843,14 +13843,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemWidth());
         }
         catch (...)
@@ -13862,12 +13862,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13876,6 +13870,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ItemWidth(param0);
@@ -13890,14 +13890,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemTemplate(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemTemplate());
         }
         catch (...)
@@ -13909,12 +13909,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemTemplate(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13923,6 +13917,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DataTemplate>(arg);
 
             self->obj.ItemTemplate(param0);
@@ -13937,14 +13937,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemHeight());
         }
         catch (...)
@@ -13956,12 +13956,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int LoopingSelector_put_ItemHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13970,6 +13964,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ItemHeight(param0);
@@ -13984,14 +13984,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemHeightProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeightProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemHeightProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::ItemHeightProperty());
         }
         catch (...)
@@ -14003,14 +14003,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemTemplateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplateProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemTemplateProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::ItemTemplateProperty());
         }
         catch (...)
@@ -14022,14 +14022,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemWidthProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidthProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemWidthProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::ItemWidthProperty());
         }
         catch (...)
@@ -14041,14 +14041,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ItemsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ItemsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::ItemsProperty());
         }
         catch (...)
@@ -14060,14 +14060,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_SelectedIndexProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndexProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedIndexProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::SelectedIndexProperty());
         }
         catch (...)
@@ -14079,14 +14079,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_SelectedItemProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItemProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectedItemProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::SelectedItemProperty());
         }
         catch (...)
@@ -14098,14 +14098,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_get_ShouldLoopProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoopProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"ShouldLoopProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector::ShouldLoopProperty());
         }
         catch (...)
@@ -14117,14 +14117,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_add_SelectionChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler>(arg);
 
             return py::convert(self->obj.SelectionChanged(param0));
@@ -14138,14 +14138,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelector_remove_SelectionChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelector", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SelectionChanged(param0);
@@ -14343,14 +14343,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetIrregularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetIrregularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -14375,14 +14375,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetRegularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"GetRegularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2 {  };
@@ -14416,14 +14416,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreHorizontalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreHorizontalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHorizontalSnapPointsRegular());
         }
         catch (...)
@@ -14435,14 +14435,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreVerticalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"AreVerticalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreVerticalSnapPointsRegular());
         }
         catch (...)
@@ -14454,14 +14454,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_add_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
@@ -14475,14 +14475,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HorizontalSnapPointsChanged(param0);
@@ -14497,14 +14497,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_add_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VerticalSnapPointsChanged(param0));
@@ -14518,14 +14518,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* LoopingSelectorPanel_remove_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.LoopingSelectorPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VerticalSnapPointsChanged(param0);
@@ -14617,14 +14617,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* MenuFlyoutItemTemplateSettings_get_KeyboardAcceleratorTextMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.MenuFlyoutItemTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.MenuFlyoutItemTemplateSettings", L"KeyboardAcceleratorTextMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyboardAcceleratorTextMinWidth());
         }
         catch (...)
@@ -14706,14 +14706,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* MenuFlyoutPresenterTemplateSettings_get_FlyoutContentMinWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings", L"FlyoutContentMinWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.MenuFlyoutPresenterTemplateSettings", L"FlyoutContentMinWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FlyoutContentMinWidth());
         }
         catch (...)
@@ -14817,14 +14817,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* NavigationViewItemPresenter_get_Icon(py::wrapper::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -14836,12 +14836,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int NavigationViewItemPresenter_put_Icon(py::wrapper::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14850,6 +14844,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconElement>(arg);
 
             self->obj.Icon(param0);
@@ -14864,14 +14864,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* NavigationViewItemPresenter_get_IconProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"IconProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.NavigationViewItemPresenter", L"IconProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter::IconProperty());
         }
         catch (...)
@@ -14983,14 +14983,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetInsertionIndexes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetInsertionIndexes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 int32_t param1 {  };
                 int32_t param2 {  };
@@ -15028,14 +15028,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetIrregularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetIrregularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -15060,14 +15060,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetRegularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"GetRegularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2 {  };
@@ -15105,14 +15105,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineDown();
                 Py_RETURN_NONE;
             }
@@ -15135,14 +15135,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineLeft();
                 Py_RETURN_NONE;
             }
@@ -15165,14 +15165,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineRight();
                 Py_RETURN_NONE;
             }
@@ -15195,14 +15195,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"LineUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LineUp();
                 Py_RETURN_NONE;
             }
@@ -15225,14 +15225,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MakeVisible", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MakeVisible", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
@@ -15257,14 +15257,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelDown();
                 Py_RETURN_NONE;
             }
@@ -15287,14 +15287,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelLeft();
                 Py_RETURN_NONE;
             }
@@ -15317,14 +15317,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelRight();
                 Py_RETURN_NONE;
             }
@@ -15347,14 +15347,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"MouseWheelUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MouseWheelUp();
                 Py_RETURN_NONE;
             }
@@ -15377,14 +15377,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageDown", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageDown", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageDown();
                 Py_RETURN_NONE;
             }
@@ -15407,14 +15407,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageLeft", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageLeft", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageLeft();
                 Py_RETURN_NONE;
             }
@@ -15437,14 +15437,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageRight", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageRight", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageRight();
                 Py_RETURN_NONE;
             }
@@ -15467,14 +15467,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageUp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"PageUp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.PageUp();
                 Py_RETURN_NONE;
             }
@@ -15497,14 +15497,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetHorizontalOffset", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetHorizontalOffset", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.SetHorizontalOffset(param0);
@@ -15529,14 +15529,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetVerticalOffset", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"SetVerticalOffset", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.SetVerticalOffset(param0);
@@ -15557,14 +15557,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_ScrollOwner(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScrollOwner());
         }
         catch (...)
@@ -15576,12 +15576,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_ScrollOwner(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15590,6 +15584,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ScrollOwner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.ScrollOwner(param0);
@@ -15604,14 +15604,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_CanVerticallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanVerticallyScroll());
         }
         catch (...)
@@ -15623,12 +15623,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_CanVerticallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15637,6 +15631,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanVerticallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanVerticallyScroll(param0);
@@ -15651,14 +15651,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_CanHorizontallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanHorizontallyScroll());
         }
         catch (...)
@@ -15670,12 +15670,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int OrientedVirtualizingPanel_put_CanHorizontallyScroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -15684,6 +15678,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"CanHorizontallyScroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CanHorizontallyScroll(param0);
@@ -15698,14 +15698,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_ExtentHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtentHeight());
         }
         catch (...)
@@ -15717,14 +15717,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_ExtentWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ExtentWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtentWidth());
         }
         catch (...)
@@ -15736,14 +15736,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -15755,14 +15755,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -15774,14 +15774,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_ViewportHeight(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewportHeight());
         }
         catch (...)
@@ -15793,14 +15793,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_ViewportWidth(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"ViewportWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewportWidth());
         }
         catch (...)
@@ -15812,14 +15812,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreHorizontalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreHorizontalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHorizontalSnapPointsRegular());
         }
         catch (...)
@@ -15831,14 +15831,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreVerticalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"AreVerticalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreVerticalSnapPointsRegular());
         }
         catch (...)
@@ -15850,14 +15850,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_add_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
@@ -15871,14 +15871,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HorizontalSnapPointsChanged(param0);
@@ -15893,14 +15893,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_add_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VerticalSnapPointsChanged(param0));
@@ -15914,14 +15914,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* OrientedVirtualizingPanel_remove_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.OrientedVirtualizingPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VerticalSnapPointsChanged(param0);
@@ -16042,14 +16042,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"GetTitle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"GetTitle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase::GetTitle(param0));
@@ -16073,14 +16073,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"SetTitle", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"SetTitle", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -16102,14 +16102,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PickerFlyoutBase_get_TitleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"TitleProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PickerFlyoutBase", L"TitleProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase::TitleProperty());
         }
         catch (...)
@@ -16426,14 +16426,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"GetIrregularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"GetIrregularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -16458,14 +16458,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"GetRegularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"GetRegularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2 {  };
@@ -16499,14 +16499,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_get_AreHorizontalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"AreHorizontalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"AreHorizontalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHorizontalSnapPointsRegular());
         }
         catch (...)
@@ -16518,14 +16518,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_get_AreVerticalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"AreVerticalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"AreVerticalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreVerticalSnapPointsRegular());
         }
         catch (...)
@@ -16537,14 +16537,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_add_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
@@ -16558,14 +16558,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_remove_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HorizontalSnapPointsChanged(param0);
@@ -16580,14 +16580,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_add_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VerticalSnapPointsChanged(param0));
@@ -16601,14 +16601,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* PivotPanel_remove_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.PivotPanel", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VerticalSnapPointsChanged(param0);
@@ -16722,14 +16722,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_VerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerticalOffset());
         }
         catch (...)
@@ -16741,12 +16741,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_VerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16755,6 +16749,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.VerticalOffset(param0);
@@ -16769,14 +16769,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_IsOpen(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOpen());
         }
         catch (...)
@@ -16788,12 +16788,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_IsOpen(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16802,6 +16796,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsOpen(param0);
@@ -16816,14 +16816,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_IsLightDismissEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLightDismissEnabled());
         }
         catch (...)
@@ -16835,12 +16835,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_IsLightDismissEnabled(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16849,6 +16843,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsLightDismissEnabled(param0);
@@ -16863,14 +16863,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HorizontalOffset());
         }
         catch (...)
@@ -16882,12 +16882,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_HorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16896,6 +16890,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.HorizontalOffset(param0);
@@ -16910,14 +16910,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ChildTransitions(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChildTransitions());
         }
         catch (...)
@@ -16929,12 +16929,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_ChildTransitions(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16943,6 +16937,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>(arg);
 
             self->obj.ChildTransitions(param0);
@@ -16957,14 +16957,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_Child(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Child"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Child"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Child());
         }
         catch (...)
@@ -16976,12 +16976,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_Child(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Child"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -16990,6 +16984,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Child"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(arg);
 
             self->obj.Child(param0);
@@ -17004,14 +17004,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LightDismissOverlayMode());
         }
         catch (...)
@@ -17023,12 +17023,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_LightDismissOverlayMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17037,6 +17031,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
             self->obj.LightDismissOverlayMode(param0);
@@ -17051,14 +17051,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ShouldConstrainToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldConstrainToRootBounds());
         }
         catch (...)
@@ -17070,12 +17070,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_ShouldConstrainToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17084,6 +17078,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldConstrainToRootBounds(param0);
@@ -17098,14 +17098,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_IsConstrainedToRootBounds(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsConstrainedToRootBounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsConstrainedToRootBounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConstrainedToRootBounds());
         }
         catch (...)
@@ -17117,14 +17117,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_PlacementTarget(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlacementTarget());
         }
         catch (...)
@@ -17136,12 +17136,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_PlacementTarget(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17150,6 +17144,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTarget"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(arg);
 
             self->obj.PlacementTarget(param0);
@@ -17164,14 +17164,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_DesiredPlacement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredPlacement());
         }
         catch (...)
@@ -17183,12 +17183,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Popup_put_DesiredPlacement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -17197,6 +17191,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>(arg);
 
             self->obj.DesiredPlacement(param0);
@@ -17211,14 +17211,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ActualPlacement(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualPlacement());
         }
         catch (...)
@@ -17230,14 +17230,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ChildProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::ChildProperty());
         }
         catch (...)
@@ -17249,14 +17249,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ChildTransitionsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitionsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ChildTransitionsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::ChildTransitionsProperty());
         }
         catch (...)
@@ -17268,14 +17268,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_HorizontalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"HorizontalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::HorizontalOffsetProperty());
         }
         catch (...)
@@ -17287,14 +17287,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_IsLightDismissEnabledProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabledProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsLightDismissEnabledProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::IsLightDismissEnabledProperty());
         }
         catch (...)
@@ -17306,14 +17306,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_IsOpenProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpenProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"IsOpenProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::IsOpenProperty());
         }
         catch (...)
@@ -17325,14 +17325,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_VerticalOffsetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffsetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"VerticalOffsetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::VerticalOffsetProperty());
         }
         catch (...)
@@ -17344,14 +17344,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_LightDismissOverlayModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"LightDismissOverlayModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::LightDismissOverlayModeProperty());
         }
         catch (...)
@@ -17363,14 +17363,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_ShouldConstrainToRootBoundsProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBoundsProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ShouldConstrainToRootBoundsProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::ShouldConstrainToRootBoundsProperty());
         }
         catch (...)
@@ -17382,14 +17382,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_DesiredPlacementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacementProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"DesiredPlacementProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::DesiredPlacementProperty());
         }
         catch (...)
@@ -17401,14 +17401,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_get_PlacementTargetProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTargetProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"PlacementTargetProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Popup::PlacementTargetProperty());
         }
         catch (...)
@@ -17420,14 +17420,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_add_Closed(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -17441,14 +17441,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_remove_Closed(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -17463,14 +17463,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_add_Opened(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Opened(param0));
@@ -17484,14 +17484,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_remove_Opened(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Opened"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"Opened"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Opened(param0);
@@ -17506,14 +17506,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_add_ActualPlacementChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ActualPlacementChanged(param0));
@@ -17527,14 +17527,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Popup_remove_ActualPlacementChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Popup", L"ActualPlacementChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActualPlacementChanged(param0);
@@ -17671,14 +17671,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_ContainerAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"ContainerAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"ContainerAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainerAnimationEndPosition());
         }
         catch (...)
@@ -17690,14 +17690,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_ContainerAnimationStartPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"ContainerAnimationStartPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"ContainerAnimationStartPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainerAnimationStartPosition());
         }
         catch (...)
@@ -17709,14 +17709,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_EllipseAnimationEndPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseAnimationEndPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseAnimationEndPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseAnimationEndPosition());
         }
         catch (...)
@@ -17728,14 +17728,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_EllipseAnimationWellPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseAnimationWellPosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseAnimationWellPosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseAnimationWellPosition());
         }
         catch (...)
@@ -17747,14 +17747,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_EllipseDiameter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseDiameter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseDiameter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseDiameter());
         }
         catch (...)
@@ -17766,14 +17766,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_EllipseOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"EllipseOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseOffset());
         }
         catch (...)
@@ -17785,14 +17785,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressBarTemplateSettings_get_IndicatorLengthDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"IndicatorLengthDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressBarTemplateSettings", L"IndicatorLengthDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IndicatorLengthDelta());
         }
         catch (...)
@@ -17880,14 +17880,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressRingTemplateSettings_get_EllipseDiameter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"EllipseDiameter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"EllipseDiameter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseDiameter());
         }
         catch (...)
@@ -17899,14 +17899,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressRingTemplateSettings_get_EllipseOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"EllipseOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"EllipseOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EllipseOffset());
         }
         catch (...)
@@ -17918,14 +17918,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ProgressRingTemplateSettings_get_MaxSideLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"MaxSideLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ProgressRingTemplateSettings", L"MaxSideLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSideLength());
         }
         catch (...)
@@ -18009,14 +18009,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_Value(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -18028,12 +18028,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Value(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18042,6 +18036,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Value(param0);
@@ -18056,14 +18056,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_SmallChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SmallChange());
         }
         catch (...)
@@ -18075,12 +18075,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_SmallChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18089,6 +18083,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SmallChange(param0);
@@ -18103,14 +18103,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_Minimum(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Minimum());
         }
         catch (...)
@@ -18122,12 +18122,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Minimum(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18136,6 +18130,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Minimum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Minimum(param0);
@@ -18150,14 +18150,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_Maximum(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Maximum());
         }
         catch (...)
@@ -18169,12 +18169,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_Maximum(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18183,6 +18177,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"Maximum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Maximum(param0);
@@ -18197,14 +18197,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_LargeChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LargeChange());
         }
         catch (...)
@@ -18216,12 +18216,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RangeBase_put_LargeChange(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18230,6 +18224,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.LargeChange(param0);
@@ -18244,14 +18244,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_LargeChangeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChangeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"LargeChangeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase::LargeChangeProperty());
         }
         catch (...)
@@ -18263,14 +18263,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_MaximumProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"MaximumProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"MaximumProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase::MaximumProperty());
         }
         catch (...)
@@ -18282,14 +18282,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_MinimumProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"MinimumProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"MinimumProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase::MinimumProperty());
         }
         catch (...)
@@ -18301,14 +18301,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_SmallChangeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChangeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"SmallChangeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase::SmallChangeProperty());
         }
         catch (...)
@@ -18320,14 +18320,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_get_ValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase::ValueProperty());
         }
         catch (...)
@@ -18339,14 +18339,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_add_ValueChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler>(arg);
 
             return py::convert(self->obj.ValueChanged(param0));
@@ -18360,14 +18360,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBase_remove_ValueChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBase", L"ValueChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ValueChanged(param0);
@@ -18488,14 +18488,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBaseValueChangedEventArgs_get_NewValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -18507,14 +18507,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RangeBaseValueChangedEventArgs_get_OldValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"OldValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs", L"OldValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldValue());
         }
         catch (...)
@@ -18619,14 +18619,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RepeatButton_get_Interval(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -18638,12 +18638,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RepeatButton_put_Interval(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18652,6 +18646,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Interval(param0);
@@ -18666,14 +18666,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RepeatButton_get_Delay(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -18685,12 +18685,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int RepeatButton_put_Delay(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18699,6 +18693,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Delay(param0);
@@ -18713,14 +18713,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RepeatButton_get_DelayProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"DelayProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"DelayProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton::DelayProperty());
         }
         catch (...)
@@ -18732,14 +18732,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* RepeatButton_get_IntervalProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"IntervalProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.RepeatButton", L"IntervalProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton::IntervalProperty());
         }
         catch (...)
@@ -18871,14 +18871,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_ViewportSize(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewportSize());
         }
         catch (...)
@@ -18890,12 +18890,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_ViewportSize(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18904,6 +18898,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ViewportSize(param0);
@@ -18918,14 +18918,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_Orientation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -18937,12 +18937,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_Orientation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18951,6 +18945,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(arg);
 
             self->obj.Orientation(param0);
@@ -18965,14 +18965,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_IndicatorMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IndicatorMode());
         }
         catch (...)
@@ -18984,12 +18984,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ScrollBar_put_IndicatorMode(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -18998,6 +18992,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode>(arg);
 
             self->obj.IndicatorMode(param0);
@@ -19012,14 +19012,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_IndicatorModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorModeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"IndicatorModeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar::IndicatorModeProperty());
         }
         catch (...)
@@ -19031,14 +19031,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_OrientationProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"OrientationProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"OrientationProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar::OrientationProperty());
         }
         catch (...)
@@ -19050,14 +19050,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_get_ViewportSizeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSizeProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"ViewportSizeProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar::ViewportSizeProperty());
         }
         catch (...)
@@ -19069,14 +19069,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_add_Scroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventHandler>(arg);
 
             return py::convert(self->obj.Scroll(param0));
@@ -19090,14 +19090,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollBar_remove_Scroll(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollBar", L"Scroll"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Scroll(param0);
@@ -19236,14 +19236,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollEventArgs_get_NewValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -19255,14 +19255,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ScrollEventArgs_get_ScrollEventType(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"ScrollEventType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ScrollEventArgs", L"ScrollEventType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScrollEventType());
         }
         catch (...)
@@ -19349,14 +19349,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"GetIsSelectionActive", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"GetIsSelectionActive", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::GetIsSelectionActive(param0));
@@ -19376,14 +19376,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedValuePath(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedValuePath());
         }
         catch (...)
@@ -19395,12 +19395,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedValuePath(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19409,6 +19403,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SelectedValuePath(param0);
@@ -19423,14 +19423,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedValue());
         }
         catch (...)
@@ -19442,12 +19442,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedValue(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19456,6 +19450,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.SelectedValue(param0);
@@ -19470,14 +19470,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedItem());
         }
         catch (...)
@@ -19489,12 +19489,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19503,6 +19497,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.SelectedItem(param0);
@@ -19517,14 +19517,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedIndex(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedIndex());
         }
         catch (...)
@@ -19536,12 +19536,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Selector_put_SelectedIndex(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19550,6 +19544,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SelectedIndex(param0);
@@ -19564,14 +19564,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_IsSynchronizedWithCurrentItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSynchronizedWithCurrentItem());
         }
         catch (...)
@@ -19583,12 +19583,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int Selector_put_IsSynchronizedWithCurrentItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19597,6 +19591,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsSynchronizedWithCurrentItem(param0);
@@ -19611,14 +19611,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_IsSynchronizedWithCurrentItemProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItemProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"IsSynchronizedWithCurrentItemProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::IsSynchronizedWithCurrentItemProperty());
         }
         catch (...)
@@ -19630,14 +19630,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedIndexProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndexProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedIndexProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::SelectedIndexProperty());
         }
         catch (...)
@@ -19649,14 +19649,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedItemProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItemProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedItemProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::SelectedItemProperty());
         }
         catch (...)
@@ -19668,14 +19668,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedValuePathProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePathProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValuePathProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::SelectedValuePathProperty());
         }
         catch (...)
@@ -19687,14 +19687,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_get_SelectedValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValueProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectedValueProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Selector::SelectedValueProperty());
         }
         catch (...)
@@ -19706,14 +19706,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_add_SelectionChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler>(arg);
 
             return py::convert(self->obj.SelectionChanged(param0));
@@ -19727,14 +19727,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Selector_remove_SelectionChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Selector", L"SelectionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SelectionChanged(param0);
@@ -19856,14 +19856,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SelectorItem_get_IsSelected(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SelectorItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSelected());
         }
         catch (...)
@@ -19875,12 +19875,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int SelectorItem_put_IsSelected(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SelectorItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -19889,6 +19883,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsSelected(param0);
@@ -19903,14 +19903,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SelectorItem_get_IsSelectedProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelectedProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SelectorItem", L"IsSelectedProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem::IsSelectedProperty());
         }
         catch (...)
@@ -20018,14 +20018,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_BorderBrush(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"BorderBrush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"BorderBrush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BorderBrush());
         }
         catch (...)
@@ -20037,14 +20037,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_BorderThickness(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"BorderThickness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"BorderThickness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BorderThickness());
         }
         catch (...)
@@ -20056,14 +20056,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_ContentTransitions(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"ContentTransitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"ContentTransitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentTransitions());
         }
         catch (...)
@@ -20075,14 +20075,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_HeaderBackground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"HeaderBackground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"HeaderBackground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderBackground());
         }
         catch (...)
@@ -20094,14 +20094,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_HeaderForeground(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"HeaderForeground"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"HeaderForeground"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderForeground());
         }
         catch (...)
@@ -20113,14 +20113,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SettingsFlyoutTemplateSettings_get_IconSource(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"IconSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SettingsFlyoutTemplateSettings", L"IconSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IconSource());
         }
         catch (...)
@@ -20207,14 +20207,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_CompactPaneGridLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"CompactPaneGridLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"CompactPaneGridLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompactPaneGridLength());
         }
         catch (...)
@@ -20226,14 +20226,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_NegativeOpenPaneLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeOpenPaneLength());
         }
         catch (...)
@@ -20245,14 +20245,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_NegativeOpenPaneLengthMinusCompactLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLengthMinusCompactLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"NegativeOpenPaneLengthMinusCompactLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NegativeOpenPaneLengthMinusCompactLength());
         }
         catch (...)
@@ -20264,14 +20264,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_OpenPaneGridLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneGridLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneGridLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenPaneGridLength());
         }
         catch (...)
@@ -20283,14 +20283,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_OpenPaneLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenPaneLength());
         }
         catch (...)
@@ -20302,14 +20302,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* SplitViewTemplateSettings_get_OpenPaneLengthMinusCompactLength(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLengthMinusCompactLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.SplitViewTemplateSettings", L"OpenPaneLengthMinusCompactLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OpenPaneLengthMinusCompactLength());
         }
         catch (...)
@@ -20422,14 +20422,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"CancelDrag", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"CancelDrag", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CancelDrag();
                 Py_RETURN_NONE;
             }
@@ -20448,14 +20448,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_get_IsDragging(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"IsDragging"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"IsDragging"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDragging());
         }
         catch (...)
@@ -20467,14 +20467,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_get_IsDraggingProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"IsDraggingProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"IsDraggingProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::Thumb::IsDraggingProperty());
         }
         catch (...)
@@ -20486,14 +20486,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_add_DragCompleted(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventHandler>(arg);
 
             return py::convert(self->obj.DragCompleted(param0));
@@ -20507,14 +20507,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_remove_DragCompleted(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragCompleted(param0);
@@ -20529,14 +20529,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_add_DragDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventHandler>(arg);
 
             return py::convert(self->obj.DragDelta(param0));
@@ -20550,14 +20550,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_remove_DragDelta(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragDelta"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragDelta(param0);
@@ -20572,14 +20572,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_add_DragStarted(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventHandler>(arg);
 
             return py::convert(self->obj.DragStarted(param0));
@@ -20593,14 +20593,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* Thumb_remove_DragStarted(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.Thumb", L"DragStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DragStarted(param0);
@@ -20740,14 +20740,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* TickBar_get_Fill(py::wrapper::Windows::UI::Xaml::Controls::Primitives::TickBar* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"Fill"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"Fill"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Fill());
         }
         catch (...)
@@ -20759,12 +20759,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int TickBar_put_Fill(py::wrapper::Windows::UI::Xaml::Controls::Primitives::TickBar* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"Fill"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20773,6 +20767,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"Fill"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
             self->obj.Fill(param0);
@@ -20787,14 +20787,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* TickBar_get_FillProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"FillProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.TickBar", L"FillProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::TickBar::FillProperty());
         }
         catch (...)
@@ -20924,14 +20924,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_get_IsThreeState(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsThreeState());
         }
         catch (...)
@@ -20943,12 +20943,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ToggleButton_put_IsThreeState(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -20957,6 +20951,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsThreeState(param0);
@@ -20971,14 +20971,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_get_IsChecked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsChecked());
         }
         catch (...)
@@ -20990,12 +20990,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static int ToggleButton_put_IsChecked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -21004,6 +20998,12 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsChecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsChecked(param0);
@@ -21018,14 +21018,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_get_IsCheckedProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsCheckedProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsCheckedProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton::IsCheckedProperty());
         }
         catch (...)
@@ -21037,14 +21037,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_get_IsThreeStateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeStateProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"IsThreeStateProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton::IsThreeStateProperty());
         }
         catch (...)
@@ -21056,14 +21056,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_add_Checked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Checked(param0));
@@ -21077,14 +21077,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_remove_Checked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Checked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Checked(param0);
@@ -21099,14 +21099,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_add_Indeterminate(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Indeterminate(param0));
@@ -21120,14 +21120,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_remove_Indeterminate(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Indeterminate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Indeterminate(param0);
@@ -21142,14 +21142,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_add_Unchecked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
             return py::convert(self->obj.Unchecked(param0));
@@ -21163,14 +21163,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleButton_remove_Unchecked(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleButton", L"Unchecked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Unchecked(param0);
@@ -21289,14 +21289,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_CurtainCurrentToOffOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOffOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOffOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurtainCurrentToOffOffset());
         }
         catch (...)
@@ -21308,14 +21308,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_CurtainCurrentToOnOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOnOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainCurrentToOnOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurtainCurrentToOnOffset());
         }
         catch (...)
@@ -21327,14 +21327,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_CurtainOffToOnOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOffToOnOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOffToOnOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurtainOffToOnOffset());
         }
         catch (...)
@@ -21346,14 +21346,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_CurtainOnToOffOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOnToOffOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"CurtainOnToOffOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurtainOnToOffOffset());
         }
         catch (...)
@@ -21365,14 +21365,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_KnobCurrentToOffOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOffOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOffOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnobCurrentToOffOffset());
         }
         catch (...)
@@ -21384,14 +21384,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_KnobCurrentToOnOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOnOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobCurrentToOnOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnobCurrentToOnOffset());
         }
         catch (...)
@@ -21403,14 +21403,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_KnobOffToOnOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOffToOnOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOffToOnOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnobOffToOnOffset());
         }
         catch (...)
@@ -21422,14 +21422,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToggleSwitchTemplateSettings_get_KnobOnToOffOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOnToOffOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToggleSwitchTemplateSettings", L"KnobOnToOffOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnobOnToOffOffset());
         }
         catch (...)
@@ -21518,14 +21518,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToolTipTemplateSettings_get_FromHorizontalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromHorizontalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromHorizontalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromHorizontalOffset());
         }
         catch (...)
@@ -21537,14 +21537,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* ToolTipTemplateSettings_get_FromVerticalOffset(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromVerticalOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.ToolTipTemplateSettings", L"FromVerticalOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FromVerticalOffset());
         }
         catch (...)
@@ -21631,14 +21631,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetIrregularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetIrregularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
@@ -21663,14 +21663,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetRegularSnapPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"GetRegularSnapPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2 {  };
@@ -21704,14 +21704,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_get_AreHorizontalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreHorizontalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreHorizontalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreHorizontalSnapPointsRegular());
         }
         catch (...)
@@ -21723,14 +21723,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_get_AreVerticalSnapPointsRegular(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreVerticalSnapPointsRegular"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"AreVerticalSnapPointsRegular"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreVerticalSnapPointsRegular());
         }
         catch (...)
@@ -21742,14 +21742,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_add_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
@@ -21763,14 +21763,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_remove_HorizontalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"HorizontalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.HorizontalSnapPointsChanged(param0);
@@ -21785,14 +21785,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_add_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VerticalSnapPointsChanged(param0));
@@ -21806,14 +21806,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static PyObject* IScrollSnapPointsInfo_remove_VerticalSnapPointsChanged(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo", L"VerticalSnapPointsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VerticalSnapPointsChanged(param0);

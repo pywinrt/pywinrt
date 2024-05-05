@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"GetAppStateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"GetAppStateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAppStateAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"RequestLaunchAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"RequestLaunchAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RequestLaunchAsync(param0));
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialApp", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -113,14 +113,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialApp_get_AppName(py::wrapper::Windows::Media::DialProtocol::DialApp* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialApp", L"AppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialApp", L"AppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppName());
         }
         catch (...)
@@ -205,14 +205,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialAppStateDetails_get_FullXml(py::wrapper::Windows::Media::DialProtocol::DialAppStateDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialAppStateDetails", L"FullXml"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialAppStateDetails", L"FullXml"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FullXml());
         }
         catch (...)
@@ -224,14 +224,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialAppStateDetails_get_State(py::wrapper::Windows::Media::DialProtocol::DialAppStateDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialAppStateDetails", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialAppStateDetails", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"DeviceInfoSupportsDialAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"DeviceInfoSupportsDialAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::DeviceInfoSupportsDialAsync(param0));
@@ -349,14 +349,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::FromIdAsync(param0));
@@ -380,14 +380,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::DialProtocol::DialDevice::GetDeviceSelector(param0));
@@ -411,14 +411,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"GetDialApp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevice", L"GetDialApp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetDialApp(param0));
@@ -438,14 +438,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_get_Id(py::wrapper::Windows::Media::DialProtocol::DialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -457,14 +457,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_get_FriendlyName(py::wrapper::Windows::Media::DialProtocol::DialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -476,14 +476,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevice_get_Thumbnail(py::wrapper::Windows::Media::DialProtocol::DialDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"Thumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevice", L"Thumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbnail());
         }
         catch (...)
@@ -622,14 +622,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Hide", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Hide", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Hide();
                 Py_RETURN_NONE;
             }
@@ -652,14 +652,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"PickSingleDialDeviceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"PickSingleDialDeviceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(self->obj.PickSingleDialDeviceAsync(param0));
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::Media::DialProtocol
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"PickSingleDialDeviceAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"PickSingleDialDeviceAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"SetDisplayStatus", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"SetDisplayStatus", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::DialProtocol::DialDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus>(args, 1);
 
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Show", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Show", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 self->obj.Show(param0);
@@ -758,14 +758,14 @@ namespace py::cpp::Windows::Media::DialProtocol
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Show", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Show", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -787,14 +787,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_get_Appearance(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Appearance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Appearance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Appearance());
         }
         catch (...)
@@ -806,14 +806,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_get_Filter(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Filter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"Filter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Filter());
         }
         catch (...)
@@ -825,14 +825,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_add_DialDevicePickerDismissed(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDevicePickerDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDevicePickerDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DialDevicePickerDismissed(param0));
@@ -846,14 +846,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_remove_DialDevicePickerDismissed(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDevicePickerDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDevicePickerDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DialDevicePickerDismissed(param0);
@@ -868,14 +868,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_add_DialDeviceSelected(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDeviceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDeviceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>>(arg);
 
             return py::convert(self->obj.DialDeviceSelected(param0));
@@ -889,14 +889,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_remove_DialDeviceSelected(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDeviceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DialDeviceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DialDeviceSelected(param0);
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_add_DisconnectButtonClicked(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DisconnectButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DisconnectButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::DialProtocol::DialDevicePicker, winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>>(arg);
 
             return py::convert(self->obj.DisconnectButtonClicked(param0));
@@ -932,14 +932,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePicker_remove_DisconnectButtonClicked(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DisconnectButtonClicked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.DialProtocol.DialDevicePicker", L"DisconnectButtonClicked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DisconnectButtonClicked(param0);
@@ -1035,14 +1035,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDevicePickerFilter_get_SupportedAppNames(py::wrapper::Windows::Media::DialProtocol::DialDevicePickerFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePickerFilter", L"SupportedAppNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDevicePickerFilter", L"SupportedAppNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedAppNames());
         }
         catch (...)
@@ -1124,14 +1124,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDeviceSelectedEventArgs_get_SelectedDialDevice(py::wrapper::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDeviceSelectedEventArgs", L"SelectedDialDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDeviceSelectedEventArgs", L"SelectedDialDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedDialDevice());
         }
         catch (...)
@@ -1213,14 +1213,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialDisconnectButtonClickedEventArgs_get_Device(py::wrapper::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialDisconnectButtonClickedEventArgs", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -1306,14 +1306,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"GetAdditionalDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"GetAdditionalDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAdditionalDataAsync());
             }
             catch (...)
@@ -1335,14 +1335,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"GetUniqueDeviceNameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"GetUniqueDeviceNameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetUniqueDeviceNameAsync());
             }
             catch (...)
@@ -1364,14 +1364,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"SetAdditionalDataAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"SetAdditionalDataAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(args, 0);
 
                 return py::convert(self->obj.SetAdditionalDataAsync(param0));
@@ -1391,14 +1391,14 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyObject* DialReceiverApp_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.DialProtocol.DialReceiverApp", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::DialProtocol::DialReceiverApp::Current());
         }
         catch (...)

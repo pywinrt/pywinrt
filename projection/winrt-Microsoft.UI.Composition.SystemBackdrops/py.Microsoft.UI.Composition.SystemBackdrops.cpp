@@ -50,14 +50,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"AddSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"AddSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.AddSystemBackdropTarget(param0));
@@ -81,14 +81,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -111,14 +111,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController::IsSupported());
             }
             catch (...)
@@ -140,14 +140,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"RemoveAllSystemBackdropTargets", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"RemoveAllSystemBackdropTargets", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAllSystemBackdropTargets();
                 Py_RETURN_NONE;
             }
@@ -170,14 +170,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"RemoveSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"RemoveSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
@@ -201,14 +201,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"ResetProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"ResetProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetProperties();
                 Py_RETURN_NONE;
             }
@@ -231,14 +231,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"SetSystemBackdropConfiguration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"SetSystemBackdropConfiguration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
                 self->obj.SetSystemBackdropConfiguration(param0);
@@ -263,14 +263,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"SetTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"SetTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
@@ -291,14 +291,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TintOpacity());
         }
         catch (...)
@@ -310,12 +310,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -324,6 +318,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TintOpacity(param0);
@@ -338,14 +338,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TintColor());
         }
         catch (...)
@@ -357,12 +357,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -371,6 +365,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"TintColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.TintColor(param0);
@@ -385,14 +385,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"LuminosityOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"LuminosityOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LuminosityOpacity());
         }
         catch (...)
@@ -404,12 +404,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"LuminosityOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -418,6 +412,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"LuminosityOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LuminosityOpacity(param0);
@@ -432,14 +432,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FallbackColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FallbackColor());
         }
         catch (...)
@@ -451,12 +451,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FallbackColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -465,6 +459,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.FallbackColor(param0);
@@ -479,14 +479,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -498,12 +498,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int DesktopAcrylicController_put_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -512,6 +506,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicKind>(arg);
 
             self->obj.Kind(param0);
@@ -526,14 +526,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_State(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -545,14 +545,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_get_IsClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -564,14 +564,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_add_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -585,14 +585,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_remove_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -607,14 +607,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_add_Closed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -628,14 +628,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_remove_Closed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -650,14 +650,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_add_FrameworkClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -671,14 +671,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* DesktopAcrylicController_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);
@@ -855,14 +855,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"AddSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"AddSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.AddSystemBackdropTarget(param0));
@@ -886,14 +886,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -916,14 +916,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController::IsSupported());
             }
             catch (...)
@@ -945,14 +945,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"RemoveAllSystemBackdropTargets", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"RemoveAllSystemBackdropTargets", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAllSystemBackdropTargets();
                 Py_RETURN_NONE;
             }
@@ -975,14 +975,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"RemoveSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"RemoveSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
@@ -1006,14 +1006,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"ResetProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"ResetProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetProperties();
                 Py_RETURN_NONE;
             }
@@ -1036,14 +1036,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"SetSystemBackdropConfiguration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"SetSystemBackdropConfiguration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
                 self->obj.SetSystemBackdropConfiguration(param0);
@@ -1068,14 +1068,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"SetTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"SetTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
@@ -1096,14 +1096,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TintOpacity());
         }
         catch (...)
@@ -1115,12 +1115,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_TintOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1129,6 +1123,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.TintOpacity(param0);
@@ -1143,14 +1143,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TintColor());
         }
         catch (...)
@@ -1162,12 +1162,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_TintColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1176,6 +1170,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"TintColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.TintColor(param0);
@@ -1190,14 +1190,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"LuminosityOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"LuminosityOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LuminosityOpacity());
         }
         catch (...)
@@ -1209,12 +1209,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_LuminosityOpacity(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"LuminosityOpacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1223,6 +1217,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"LuminosityOpacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LuminosityOpacity(param0);
@@ -1237,14 +1237,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FallbackColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FallbackColor());
         }
         catch (...)
@@ -1256,12 +1256,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_FallbackColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FallbackColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1270,6 +1264,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FallbackColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.FallbackColor(param0);
@@ -1284,14 +1284,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1303,12 +1303,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int MicaController_put_Kind(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1317,6 +1311,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>(arg);
 
             self->obj.Kind(param0);
@@ -1331,14 +1331,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_State(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -1350,14 +1350,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_get_IsClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"IsClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"IsClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClosed());
         }
         catch (...)
@@ -1369,14 +1369,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_add_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -1390,14 +1390,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_remove_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -1412,14 +1412,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_add_Closed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.Closed(param0));
@@ -1433,14 +1433,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_remove_Closed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Closed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"Closed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Closed(param0);
@@ -1455,14 +1455,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_add_FrameworkClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
             return py::convert(self->obj.FrameworkClosed(param0));
@@ -1476,14 +1476,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* MicaController_remove_FrameworkClosed(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FrameworkClosed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"FrameworkClosed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameworkClosed(param0);
@@ -1656,14 +1656,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* SystemBackdropConfiguration_get_Theme(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"Theme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"Theme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Theme());
         }
         catch (...)
@@ -1675,12 +1675,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_Theme(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"Theme"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1689,6 +1683,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"Theme"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropTheme>(arg);
 
             self->obj.Theme(param0);
@@ -1703,14 +1703,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* SystemBackdropConfiguration_get_IsInputActive(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsInputActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsInputActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputActive());
         }
         catch (...)
@@ -1722,12 +1722,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_IsInputActive(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsInputActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1736,6 +1730,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsInputActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputActive(param0);
@@ -1750,14 +1750,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* SystemBackdropConfiguration_get_IsHighContrast(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsHighContrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsHighContrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHighContrast());
         }
         catch (...)
@@ -1769,12 +1769,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_IsHighContrast(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsHighContrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1783,6 +1777,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"IsHighContrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsHighContrast(param0);
@@ -1797,14 +1797,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* SystemBackdropConfiguration_get_HighContrastBackgroundColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"HighContrastBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"HighContrastBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrastBackgroundColor());
         }
         catch (...)
@@ -1816,12 +1816,6 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static int SystemBackdropConfiguration_put_HighContrastBackgroundColor(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"HighContrastBackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1830,6 +1824,12 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration", L"HighContrastBackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::UI::Color>>(arg);
 
             self->obj.HighContrastBackgroundColor(param0);
@@ -1921,14 +1921,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1951,14 +1951,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
@@ -2075,14 +2075,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"AddSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"AddSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.AddSystemBackdropTarget(param0));
@@ -2106,14 +2106,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2136,14 +2136,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"RemoveAllSystemBackdropTargets", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"RemoveAllSystemBackdropTargets", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAllSystemBackdropTargets();
                 Py_RETURN_NONE;
             }
@@ -2166,14 +2166,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"RemoveSystemBackdropTarget", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"RemoveSystemBackdropTarget", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
 
                 return py::convert(self->obj.RemoveSystemBackdropTarget(param0));
@@ -2197,14 +2197,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"SetSystemBackdropConfiguration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"SetSystemBackdropConfiguration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>(args, 0);
 
                 self->obj.SetSystemBackdropConfiguration(param0);
@@ -2229,14 +2229,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
 
@@ -2257,14 +2257,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_get_State(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -2276,14 +2276,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_add_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -2297,14 +2297,14 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyObject* ISystemBackdropControllerWithTargets_remove_StateChanged(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropControllerWithTargets", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"DeleteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"DeleteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"GetAppStatusForItem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"GetAppStatusForItem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
                 return py::convert(self->obj.GetAppStatusForItem(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"GetItemsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"GetItemsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetItemsAsync());
             }
             catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ImportItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ImportItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(self->obj.ImportItemAsync(param0));
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"LaunchAppForItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"LaunchAppForItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Wallet::WalletItem>(args, 0);
 
                 return py::convert(self->obj.LaunchAppForItemAsync(param0));
@@ -177,14 +177,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_add_ItemsChanged(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ItemsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ItemsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ItemsChanged(param0));
@@ -198,14 +198,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyObject* WalletItemSystemStore_remove_ItemsChanged(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ItemsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Wallet.System.WalletItemSystemStore", L"ItemsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ItemsChanged(param0);
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletManagerSystem", L"RequestStoreAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Wallet.System.WalletManagerSystem", L"RequestStoreAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem::RequestStoreAsync());
             }
             catch (...)

@@ -20,14 +20,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"AddLicenseAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"AddLicenseAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::AddLicenseAsync(param0));
@@ -51,14 +51,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"GetSatisfactionInfosAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"GetSatisfactionInfosAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
 
@@ -83,14 +83,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"RefreshLicensesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseManager", L"RefreshLicensesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager::RefreshLicensesAsync(param0));
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_IsSatisfied(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"IsSatisfied"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"IsSatisfied"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSatisfied());
         }
         catch (...)
@@ -199,14 +199,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedByDevice(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedByDevice());
         }
         catch (...)
@@ -218,14 +218,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedByInstallMedia(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByInstallMedia"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByInstallMedia"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedByInstallMedia());
         }
         catch (...)
@@ -237,14 +237,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedByOpenLicense(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByOpenLicense"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByOpenLicense"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedByOpenLicense());
         }
         catch (...)
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedByPass(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByPass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByPass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedByPass());
         }
         catch (...)
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedBySignedInUser(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedBySignedInUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedBySignedInUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedBySignedInUser());
         }
         catch (...)
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionInfo_get_SatisfiedByTrial(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByTrial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo", L"SatisfiedByTrial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SatisfiedByTrial());
         }
         catch (...)
@@ -389,14 +389,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionResult_get_ExtendedError(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -408,14 +408,14 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyObject* LicenseSatisfactionResult_get_LicenseSatisfactionInfos(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult", L"LicenseSatisfactionInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult", L"LicenseSatisfactionInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LicenseSatisfactionInfos());
         }
         catch (...)

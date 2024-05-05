@@ -24,14 +24,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticActionResult_get_ExtendedError(py::wrapper::Windows::System::Diagnostics::DiagnosticActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticActionResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticActionResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticActionResult_get_Results(py::wrapper::Windows::System::Diagnostics::DiagnosticActionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticActionResult", L"Results"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticActionResult", L"Results"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Results());
         }
         catch (...)
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetDefault());
             }
             catch (...)
@@ -166,14 +166,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::GetForUser(param0));
@@ -197,14 +197,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"RunDiagnosticActionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"RunDiagnosticActionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Data::Json::JsonObject>(args, 0);
 
                 return py::convert(self->obj.RunDiagnosticActionAsync(param0));
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"RunDiagnosticActionFromStringAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"RunDiagnosticActionFromStringAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RunDiagnosticActionFromStringAsync(param0));
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* DiagnosticInvoker_get_IsSupported(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.DiagnosticInvoker", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Diagnostics::DiagnosticInvoker::IsSupported());
         }
         catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessCpuUsage", L"GetReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessCpuUsage", L"GetReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReport());
             }
             catch (...)
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessCpuUsageReport_get_KernelTime(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessCpuUsageReport", L"KernelTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessCpuUsageReport", L"KernelTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KernelTime());
         }
         catch (...)
@@ -491,14 +491,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessCpuUsageReport_get_UserTime(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessCpuUsageReport", L"UserTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessCpuUsageReport", L"UserTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserTime());
         }
         catch (...)
@@ -585,14 +585,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetAppDiagnosticInfos", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetAppDiagnosticInfos", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAppDiagnosticInfos());
             }
             catch (...)
@@ -614,14 +614,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetForCurrentProcess", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetForCurrentProcess", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForCurrentProcess());
             }
             catch (...)
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetForProcesses", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"GetForProcesses", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::GetForProcesses());
             }
             catch (...)
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"TryGetForProcessId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"TryGetForProcessId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo::TryGetForProcessId(param0));
@@ -699,14 +699,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_CpuUsage(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"CpuUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"CpuUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CpuUsage());
         }
         catch (...)
@@ -718,14 +718,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_DiskUsage(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"DiskUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"DiskUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DiskUsage());
         }
         catch (...)
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_ExecutableFileName(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ExecutableFileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ExecutableFileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExecutableFileName());
         }
         catch (...)
@@ -756,14 +756,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_MemoryUsage(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"MemoryUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"MemoryUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MemoryUsage());
         }
         catch (...)
@@ -775,14 +775,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_Parent(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -794,14 +794,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_ProcessId(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessId());
         }
         catch (...)
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_ProcessStartTime(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ProcessStartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"ProcessStartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProcessStartTime());
         }
         catch (...)
@@ -832,14 +832,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiagnosticInfo_get_IsPackaged(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"IsPackaged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiagnosticInfo", L"IsPackaged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPackaged());
         }
         catch (...)
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiskUsage", L"GetReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessDiskUsage", L"GetReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReport());
             }
             catch (...)
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_BytesReadCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"BytesReadCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"BytesReadCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReadCount());
         }
         catch (...)
@@ -1075,14 +1075,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_BytesWrittenCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"BytesWrittenCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"BytesWrittenCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesWrittenCount());
         }
         catch (...)
@@ -1094,14 +1094,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_OtherBytesCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"OtherBytesCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"OtherBytesCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OtherBytesCount());
         }
         catch (...)
@@ -1113,14 +1113,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_OtherOperationCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"OtherOperationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"OtherOperationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OtherOperationCount());
         }
         catch (...)
@@ -1132,14 +1132,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_ReadOperationCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"ReadOperationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"ReadOperationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadOperationCount());
         }
         catch (...)
@@ -1151,14 +1151,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessDiskUsageReport_get_WriteOperationCount(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"WriteOperationCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessDiskUsageReport", L"WriteOperationCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WriteOperationCount());
         }
         catch (...)
@@ -1249,14 +1249,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessMemoryUsage", L"GetReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.ProcessMemoryUsage", L"GetReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReport());
             }
             catch (...)
@@ -1344,14 +1344,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_NonPagedPoolSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"NonPagedPoolSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"NonPagedPoolSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonPagedPoolSizeInBytes());
         }
         catch (...)
@@ -1363,14 +1363,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PageFaultCount(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PageFaultCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PageFaultCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageFaultCount());
         }
         catch (...)
@@ -1382,14 +1382,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PageFileSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PageFileSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PageFileSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageFileSizeInBytes());
         }
         catch (...)
@@ -1401,14 +1401,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PagedPoolSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PagedPoolSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PagedPoolSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PagedPoolSizeInBytes());
         }
         catch (...)
@@ -1420,14 +1420,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PeakNonPagedPoolSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakNonPagedPoolSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakNonPagedPoolSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeakNonPagedPoolSizeInBytes());
         }
         catch (...)
@@ -1439,14 +1439,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PeakPageFileSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakPageFileSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakPageFileSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeakPageFileSizeInBytes());
         }
         catch (...)
@@ -1458,14 +1458,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PeakPagedPoolSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakPagedPoolSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakPagedPoolSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeakPagedPoolSizeInBytes());
         }
         catch (...)
@@ -1477,14 +1477,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PeakVirtualMemorySizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakVirtualMemorySizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakVirtualMemorySizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeakVirtualMemorySizeInBytes());
         }
         catch (...)
@@ -1496,14 +1496,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PeakWorkingSetSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakWorkingSetSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PeakWorkingSetSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PeakWorkingSetSizeInBytes());
         }
         catch (...)
@@ -1515,14 +1515,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_PrivatePageCount(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PrivatePageCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"PrivatePageCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrivatePageCount());
         }
         catch (...)
@@ -1534,14 +1534,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_VirtualMemorySizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"VirtualMemorySizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"VirtualMemorySizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VirtualMemorySizeInBytes());
         }
         catch (...)
@@ -1553,14 +1553,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* ProcessMemoryUsageReport_get_WorkingSetSizeInBytes(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"WorkingSetSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.ProcessMemoryUsageReport", L"WorkingSetSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WorkingSetSizeInBytes());
         }
         catch (...)
@@ -1657,14 +1657,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemCpuUsage", L"GetReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemCpuUsage", L"GetReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReport());
             }
             catch (...)
@@ -1752,14 +1752,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemCpuUsageReport_get_IdleTime(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"IdleTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"IdleTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IdleTime());
         }
         catch (...)
@@ -1771,14 +1771,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemCpuUsageReport_get_KernelTime(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"KernelTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"KernelTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KernelTime());
         }
         catch (...)
@@ -1790,14 +1790,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemCpuUsageReport_get_UserTime(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"UserTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemCpuUsageReport", L"UserTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserTime());
         }
         catch (...)
@@ -1885,14 +1885,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"GetForCurrentSystem", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"GetForCurrentSystem", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::GetForCurrentSystem());
             }
             catch (...)
@@ -1914,14 +1914,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"IsArchitectureSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"IsArchitectureSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::ProcessorArchitecture>(args, 0);
 
                 return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::IsArchitectureSupported(param0));
@@ -1941,14 +1941,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemDiagnosticInfo_get_CpuUsage(py::wrapper::Windows::System::Diagnostics::SystemDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"CpuUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"CpuUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CpuUsage());
         }
         catch (...)
@@ -1960,14 +1960,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemDiagnosticInfo_get_MemoryUsage(py::wrapper::Windows::System::Diagnostics::SystemDiagnosticInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"MemoryUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"MemoryUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MemoryUsage());
         }
         catch (...)
@@ -1979,14 +1979,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemDiagnosticInfo_get_PreferredArchitecture(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"PreferredArchitecture"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemDiagnosticInfo", L"PreferredArchitecture"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::System::Diagnostics::SystemDiagnosticInfo::PreferredArchitecture());
         }
         catch (...)
@@ -2101,14 +2101,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemMemoryUsage", L"GetReport", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Diagnostics.SystemMemoryUsage", L"GetReport", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReport());
             }
             catch (...)
@@ -2196,14 +2196,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemMemoryUsageReport_get_AvailableSizeInBytes(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"AvailableSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"AvailableSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableSizeInBytes());
         }
         catch (...)
@@ -2215,14 +2215,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemMemoryUsageReport_get_CommittedSizeInBytes(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"CommittedSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"CommittedSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CommittedSizeInBytes());
         }
         catch (...)
@@ -2234,14 +2234,14 @@ namespace py::cpp::Windows::System::Diagnostics
 
     static PyObject* SystemMemoryUsageReport_get_TotalPhysicalSizeInBytes(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"TotalPhysicalSizeInBytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Diagnostics.SystemMemoryUsageReport", L"TotalPhysicalSizeInBytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TotalPhysicalSizeInBytes());
         }
         catch (...)

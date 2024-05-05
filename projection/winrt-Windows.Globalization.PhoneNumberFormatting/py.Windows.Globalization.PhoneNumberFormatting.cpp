@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -70,14 +70,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>(args, 1);
 
@@ -102,14 +102,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatPartialString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatPartialString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FormatPartialString(param0));
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatString", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatString", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FormatString(param0));
@@ -164,14 +164,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatStringWithLeftToRightMarkers", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"FormatStringWithLeftToRightMarkers", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FormatStringWithLeftToRightMarkers(param0));
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetCountryCodeForRegion", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetCountryCodeForRegion", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::GetCountryCodeForRegion(param0));
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetNationalDirectDialingPrefixForRegion", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"GetNationalDirectDialingPrefixForRegion", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -258,14 +258,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"TryCreate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"TryCreate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter param1 { nullptr };
 
@@ -297,14 +297,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"WrapWithLeftToRightMarkers", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"WrapWithLeftToRightMarkers", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter::WrapWithLeftToRightMarkers(param0));
@@ -454,14 +454,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CheckNumberMatch", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CheckNumberMatch", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
 
                 return py::convert(self->obj.CheckNumberMatch(param0));
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetGeographicRegionCode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetGeographicRegionCode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetGeographicRegionCode());
             }
             catch (...)
@@ -514,14 +514,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfGeographicalAreaCode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfGeographicalAreaCode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetLengthOfGeographicalAreaCode());
             }
             catch (...)
@@ -543,14 +543,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfNationalDestinationCode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetLengthOfNationalDestinationCode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetLengthOfNationalDestinationCode());
             }
             catch (...)
@@ -572,14 +572,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetNationalSignificantNumber", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"GetNationalSignificantNumber", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNationalSignificantNumber());
             }
             catch (...)
@@ -601,14 +601,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PredictNumberKind", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PredictNumberKind", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PredictNumberKind());
             }
             catch (...)
@@ -630,14 +630,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"ToString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"ToString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ToString());
             }
             catch (...)
@@ -659,14 +659,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param1 { nullptr };
 
@@ -692,14 +692,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"TryParse", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo param2 { nullptr };
@@ -733,14 +733,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_get_CountryCode(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CountryCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"CountryCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CountryCode());
         }
         catch (...)
@@ -752,14 +752,14 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyObject* PhoneNumberInfo_get_PhoneNumber(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)

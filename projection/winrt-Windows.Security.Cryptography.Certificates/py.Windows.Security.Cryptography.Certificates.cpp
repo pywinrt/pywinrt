@@ -52,14 +52,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
 
                 return py::convert(self->obj.BuildChainAsync(param0));
@@ -72,14 +72,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"BuildChainAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>(args, 1);
 
@@ -104,14 +104,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetCertificateBlob", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetCertificateBlob", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCertificateBlob());
             }
             catch (...)
@@ -133,14 +133,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetHashValue());
             }
             catch (...)
@@ -151,14 +151,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"GetHashValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetHashValue(param0));
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -197,12 +197,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int Certificate_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -211,6 +205,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_EnhancedKeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"EnhancedKeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"EnhancedKeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnhancedKeyUsages());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_HasPrivateKey(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"HasPrivateKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"HasPrivateKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasPrivateKey());
         }
         catch (...)
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_IsStronglyProtected(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsStronglyProtected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsStronglyProtected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsStronglyProtected());
         }
         catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_Issuer(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Issuer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Issuer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Issuer());
         }
         catch (...)
@@ -301,14 +301,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_SerialNumber(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SerialNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SerialNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SerialNumber());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_Subject(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_ValidFrom(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidFrom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidFrom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidFrom());
         }
         catch (...)
@@ -358,14 +358,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_ValidTo(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidTo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"ValidTo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidTo());
         }
         catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_IsSecurityDeviceBound(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsSecurityDeviceBound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsSecurityDeviceBound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSecurityDeviceBound());
         }
         catch (...)
@@ -396,14 +396,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_KeyAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyAlgorithmName());
         }
         catch (...)
@@ -415,14 +415,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_KeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyUsages());
         }
         catch (...)
@@ -434,14 +434,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_SignatureAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignatureAlgorithmName());
         }
         catch (...)
@@ -453,14 +453,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_SignatureHashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureHashAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SignatureHashAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignatureHashAlgorithmName());
         }
         catch (...)
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_SubjectAlternativeName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SubjectAlternativeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"SubjectAlternativeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubjectAlternativeName());
         }
         catch (...)
@@ -491,14 +491,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_IsPerUser(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsPerUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"IsPerUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPerUser());
         }
         catch (...)
@@ -510,14 +510,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyStorageProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"KeyStorageProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStorageProviderName());
         }
         catch (...)
@@ -529,14 +529,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* Certificate_get_StoreName(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"StoreName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.Certificate", L"StoreName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreName());
         }
         catch (...)
@@ -642,14 +642,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"GetCertificates", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"GetCertificates", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(self->obj.GetCertificates(param0));
@@ -673,14 +673,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Validate());
             }
             catch (...)
@@ -691,14 +691,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateChain", L"Validate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>(args, 0);
 
                 return py::convert(self->obj.Validate(param0));
@@ -785,14 +785,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"CreateRequestAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"CreateRequestAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::CreateRequestAsync(param0));
@@ -816,14 +816,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"ImportPfxDataAsync", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -900,14 +900,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"InstallCertificateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"InstallCertificateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 1);
 
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateEnrollmentManager_get_UserCertificateEnrollmentManager(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"UserCertificateEnrollmentManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateEnrollmentManager", L"UserCertificateEnrollmentManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager::UserCertificateEnrollmentManager());
         }
         catch (...)
@@ -1044,14 +1044,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"EncodeValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"EncodeValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.EncodeValue(param0);
@@ -1072,14 +1072,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateExtension_get_Value(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1091,12 +1091,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_Value(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1105,6 +1099,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             self->obj.Value(param0);
@@ -1119,14 +1119,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateExtension_get_ObjectId(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ObjectId());
         }
         catch (...)
@@ -1138,12 +1138,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_ObjectId(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1152,6 +1146,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"ObjectId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ObjectId(param0);
@@ -1166,14 +1166,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateExtension_get_IsCritical(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCritical());
         }
         catch (...)
@@ -1185,12 +1185,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateExtension_put_IsCritical(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1199,6 +1193,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateExtension", L"IsCritical"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCritical(param0);
@@ -1308,14 +1308,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_NonRepudiation(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NonRepudiation());
         }
         catch (...)
@@ -1327,12 +1327,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_NonRepudiation(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1341,6 +1335,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"NonRepudiation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.NonRepudiation(param0);
@@ -1355,14 +1355,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_KeyEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyEncipherment());
         }
         catch (...)
@@ -1374,12 +1374,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1388,6 +1382,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyEncipherment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.KeyEncipherment(param0);
@@ -1402,14 +1402,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_KeyCertificateSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyCertificateSign());
         }
         catch (...)
@@ -1421,12 +1421,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyCertificateSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1435,6 +1429,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyCertificateSign"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.KeyCertificateSign(param0);
@@ -1449,14 +1449,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_KeyAgreement(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyAgreement());
         }
         catch (...)
@@ -1468,12 +1468,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_KeyAgreement(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1482,6 +1476,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"KeyAgreement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.KeyAgreement(param0);
@@ -1496,14 +1496,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_EncipherOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncipherOnly());
         }
         catch (...)
@@ -1515,12 +1515,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_EncipherOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1529,6 +1523,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"EncipherOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.EncipherOnly(param0);
@@ -1543,14 +1543,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_DigitalSignature(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DigitalSignature());
         }
         catch (...)
@@ -1562,12 +1562,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_DigitalSignature(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1576,6 +1570,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DigitalSignature"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DigitalSignature(param0);
@@ -1590,14 +1590,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_DataEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataEncipherment());
         }
         catch (...)
@@ -1609,12 +1609,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_DataEncipherment(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1623,6 +1617,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"DataEncipherment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DataEncipherment(param0);
@@ -1637,14 +1637,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateKeyUsages_get_CrlSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CrlSign());
         }
         catch (...)
@@ -1656,12 +1656,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateKeyUsages_put_CrlSign(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1670,6 +1664,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateKeyUsages", L"CrlSign"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CrlSign(param0);
@@ -1783,14 +1783,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_Thumbprint(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Thumbprint());
         }
         catch (...)
@@ -1802,12 +1802,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_Thumbprint(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1816,6 +1810,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"Thumbprint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             self->obj.Thumbprint(param0);
@@ -1830,14 +1830,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_IssuerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IssuerName());
         }
         catch (...)
@@ -1849,12 +1849,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IssuerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1863,6 +1857,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IssuerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.IssuerName(param0);
@@ -1877,14 +1877,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_HardwareOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareOnly());
         }
         catch (...)
@@ -1896,12 +1896,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_HardwareOnly(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1910,6 +1904,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"HardwareOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.HardwareOnly(param0);
@@ -1924,14 +1924,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -1943,12 +1943,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1957,6 +1951,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_EnhancedKeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"EnhancedKeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"EnhancedKeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnhancedKeyUsages());
         }
         catch (...)
@@ -1990,14 +1990,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_StoreName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StoreName());
         }
         catch (...)
@@ -2009,12 +2009,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_StoreName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2023,6 +2017,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"StoreName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.StoreName(param0);
@@ -2037,14 +2037,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_IncludeExpiredCertificates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeExpiredCertificates());
         }
         catch (...)
@@ -2056,12 +2056,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IncludeExpiredCertificates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2070,6 +2064,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeExpiredCertificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IncludeExpiredCertificates(param0);
@@ -2084,14 +2084,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateQuery_get_IncludeDuplicates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeDuplicates());
         }
         catch (...)
@@ -2103,12 +2103,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateQuery_put_IncludeDuplicates(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2117,6 +2111,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateQuery", L"IncludeDuplicates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IncludeDuplicates(param0);
@@ -2230,14 +2230,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_Subject(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -2249,12 +2249,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_Subject(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2263,6 +2257,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subject(param0);
@@ -2277,14 +2277,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_KeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyUsages());
         }
         catch (...)
@@ -2296,12 +2296,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2310,6 +2304,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>(arg);
 
             self->obj.KeyUsages(param0);
@@ -2324,14 +2324,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStorageProviderName());
         }
         catch (...)
@@ -2343,12 +2343,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2357,6 +2351,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyStorageProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.KeyStorageProviderName(param0);
@@ -2371,14 +2371,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_KeySize(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeySize());
         }
         catch (...)
@@ -2390,12 +2390,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeySize(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2404,6 +2398,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeySize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.KeySize(param0);
@@ -2418,14 +2418,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exportable());
         }
         catch (...)
@@ -2437,12 +2437,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2451,6 +2445,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Exportable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
             self->obj.Exportable(param0);
@@ -2465,14 +2465,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyProtectionLevel());
         }
         catch (...)
@@ -2484,12 +2484,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2498,6 +2492,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
             self->obj.KeyProtectionLevel(param0);
@@ -2512,14 +2512,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_KeyAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyAlgorithmName());
         }
         catch (...)
@@ -2531,12 +2531,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_KeyAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2545,6 +2539,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"KeyAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.KeyAlgorithmName(param0);
@@ -2559,14 +2559,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HashAlgorithmName());
         }
         catch (...)
@@ -2578,12 +2578,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2592,6 +2586,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"HashAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HashAlgorithmName(param0);
@@ -2606,14 +2606,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -2625,12 +2625,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2639,6 +2633,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -2653,14 +2653,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_AttestationCredentialCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttestationCredentialCertificate());
         }
         catch (...)
@@ -2672,12 +2672,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_AttestationCredentialCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2686,6 +2680,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"AttestationCredentialCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             self->obj.AttestationCredentialCertificate(param0);
@@ -2700,14 +2700,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_SigningCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SigningCertificate());
         }
         catch (...)
@@ -2719,12 +2719,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_SigningCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2733,6 +2727,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SigningCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             self->obj.SigningCertificate(param0);
@@ -2747,14 +2747,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_SmartcardReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SmartcardReaderName());
         }
         catch (...)
@@ -2766,12 +2766,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_SmartcardReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2780,6 +2774,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SmartcardReaderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SmartcardReaderName(param0);
@@ -2794,14 +2794,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_UseExistingKey(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UseExistingKey());
         }
         catch (...)
@@ -2813,12 +2813,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_UseExistingKey(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2827,6 +2821,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"UseExistingKey"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.UseExistingKey(param0);
@@ -2841,14 +2841,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_CurveParameters(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurveParameters());
         }
         catch (...)
@@ -2860,12 +2860,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_CurveParameters(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2874,6 +2868,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveParameters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(arg);
 
             self->obj.CurveParameters(param0);
@@ -2888,14 +2888,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_CurveName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurveName());
         }
         catch (...)
@@ -2907,12 +2907,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_CurveName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2921,6 +2915,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"CurveName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CurveName(param0);
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainerNamePrefix());
         }
         catch (...)
@@ -2954,12 +2954,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2968,6 +2962,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContainerNamePrefix(param0);
@@ -2982,14 +2982,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_ContainerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainerName());
         }
         catch (...)
@@ -3001,12 +3001,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CertificateRequestProperties_put_ContainerName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3015,6 +3009,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"ContainerName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContainerName(param0);
@@ -3029,14 +3029,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_Extensions(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Extensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"Extensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Extensions());
         }
         catch (...)
@@ -3048,14 +3048,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_SubjectAlternativeName(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SubjectAlternativeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SubjectAlternativeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubjectAlternativeName());
         }
         catch (...)
@@ -3067,14 +3067,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateRequestProperties_get_SuppressedDefaults(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SuppressedDefaults"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateRequestProperties", L"SuppressedDefaults"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuppressedDefaults());
         }
         catch (...)
@@ -3179,14 +3179,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Add", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Add", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 self->obj.Add(param0);
@@ -3211,14 +3211,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Delete", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Delete", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 self->obj.Delete(param0);
@@ -3239,14 +3239,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStore_get_Name(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateStore* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStore", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3326,14 +3326,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync());
             }
             catch (...)
@@ -3344,14 +3344,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"FindAllAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"FindAllAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::FindAllAsync(param0));
@@ -3375,14 +3375,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"GetStoreByName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"GetStoreByName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetStoreByName(param0));
@@ -3406,14 +3406,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"GetUserStoreByName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"GetUserStoreByName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::GetUserStoreByName(param0));
@@ -3433,14 +3433,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_get_IntermediateCertificationAuthorities(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"IntermediateCertificationAuthorities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"IntermediateCertificationAuthorities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::IntermediateCertificationAuthorities());
         }
         catch (...)
@@ -3452,14 +3452,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CertificateStores_get_TrustedRootCertificationAuthorities(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"TrustedRootCertificationAuthorities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CertificateStores", L"TrustedRootCertificationAuthorities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::CertificateStores::TrustedRootCertificationAuthorities());
         }
         catch (...)
@@ -3565,14 +3565,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_ValidationTimestamp(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidationTimestamp());
         }
         catch (...)
@@ -3584,12 +3584,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_ValidationTimestamp(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3598,6 +3592,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ValidationTimestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.ValidationTimestamp(param0);
@@ -3612,14 +3612,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_RevocationCheckEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RevocationCheckEnabled());
         }
         catch (...)
@@ -3631,12 +3631,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_RevocationCheckEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3645,6 +3639,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"RevocationCheckEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RevocationCheckEnabled(param0);
@@ -3659,14 +3659,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_NetworkRetrievalEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkRetrievalEnabled());
         }
         catch (...)
@@ -3678,12 +3678,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_NetworkRetrievalEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3692,6 +3686,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"NetworkRetrievalEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.NetworkRetrievalEnabled(param0);
@@ -3706,14 +3706,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_CurrentTimeValidationEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentTimeValidationEnabled());
         }
         catch (...)
@@ -3725,12 +3725,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_CurrentTimeValidationEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3739,6 +3733,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"CurrentTimeValidationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.CurrentTimeValidationEnabled(param0);
@@ -3753,14 +3753,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_AuthorityInformationAccessEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthorityInformationAccessEnabled());
         }
         catch (...)
@@ -3772,12 +3772,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainBuildingParameters_put_AuthorityInformationAccessEnabled(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3786,6 +3780,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"AuthorityInformationAccessEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AuthorityInformationAccessEnabled(param0);
@@ -3800,14 +3800,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_EnhancedKeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"EnhancedKeyUsages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"EnhancedKeyUsages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnhancedKeyUsages());
         }
         catch (...)
@@ -3819,14 +3819,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainBuildingParameters_get_ExclusiveTrustRoots(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ExclusiveTrustRoots"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainBuildingParameters", L"ExclusiveTrustRoots"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExclusiveTrustRoots());
         }
         catch (...)
@@ -3936,14 +3936,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainValidationParameters_get_ServerDnsName(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerDnsName());
         }
         catch (...)
@@ -3955,12 +3955,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainValidationParameters_put_ServerDnsName(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3969,6 +3963,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"ServerDnsName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             self->obj.ServerDnsName(param0);
@@ -3983,14 +3983,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* ChainValidationParameters_get_CertificateChainPolicy(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CertificateChainPolicy());
         }
         catch (...)
@@ -4002,12 +4002,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int ChainValidationParameters_put_CertificateChainPolicy(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4016,6 +4010,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.ChainValidationParameters", L"CertificateChainPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>(arg);
 
             self->obj.CertificateChainPolicy(param0);
@@ -4129,14 +4129,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"GenerateSignatureAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"GenerateSignatureAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 2);
@@ -4162,14 +4162,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"VerifySignature", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"VerifySignature", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.VerifySignature());
             }
             catch (...)
@@ -4187,14 +4187,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsAttachedSignature_get_Certificates(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Certificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Certificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificates());
         }
         catch (...)
@@ -4206,14 +4206,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsAttachedSignature_get_Content(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Content"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Content"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Content());
         }
         catch (...)
@@ -4225,14 +4225,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsAttachedSignature_get_Signers(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Signers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsAttachedSignature", L"Signers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Signers());
         }
         catch (...)
@@ -4371,14 +4371,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"GenerateSignatureAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"GenerateSignatureAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Cryptography::Certificates::Certificate>>(args, 2);
@@ -4404,14 +4404,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"VerifySignatureAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"VerifySignatureAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.VerifySignatureAsync(param0));
@@ -4431,14 +4431,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsDetachedSignature_get_Certificates(py::wrapper::Windows::Security::Cryptography::Certificates::CmsDetachedSignature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Certificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Certificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificates());
         }
         catch (...)
@@ -4450,14 +4450,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsDetachedSignature_get_Signers(py::wrapper::Windows::Security::Cryptography::Certificates::CmsDetachedSignature* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Signers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsDetachedSignature", L"Signers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Signers());
         }
         catch (...)
@@ -4589,14 +4589,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsSignerInfo_get_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HashAlgorithmName());
         }
         catch (...)
@@ -4608,12 +4608,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CmsSignerInfo_put_HashAlgorithmName(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4622,6 +4616,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"HashAlgorithmName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HashAlgorithmName(param0);
@@ -4636,14 +4636,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsSignerInfo_get_Certificate(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificate());
         }
         catch (...)
@@ -4655,12 +4655,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int CmsSignerInfo_put_Certificate(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4669,6 +4663,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"Certificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(arg);
 
             self->obj.Certificate(param0);
@@ -4683,14 +4683,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsSignerInfo_get_TimestampInfo(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"TimestampInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsSignerInfo", L"TimestampInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimestampInfo());
         }
         catch (...)
@@ -4774,14 +4774,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsTimestampInfo_get_Certificates(py::wrapper::Windows::Security::Cryptography::Certificates::CmsTimestampInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Certificates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Certificates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Certificates());
         }
         catch (...)
@@ -4793,14 +4793,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsTimestampInfo_get_SigningCertificate(py::wrapper::Windows::Security::Cryptography::Certificates::CmsTimestampInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"SigningCertificate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"SigningCertificate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SigningCertificate());
         }
         catch (...)
@@ -4812,14 +4812,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* CmsTimestampInfo_get_Timestamp(py::wrapper::Windows::Security::Cryptography::Certificates::CmsTimestampInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.CmsTimestampInfo", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4895,14 +4895,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Dsa(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Dsa"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Dsa"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Dsa());
         }
         catch (...)
@@ -4914,14 +4914,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdh256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh256());
         }
         catch (...)
@@ -4933,14 +4933,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdh384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh384());
         }
         catch (...)
@@ -4952,14 +4952,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdh521(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh521"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh521"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh521());
         }
         catch (...)
@@ -4971,14 +4971,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdsa256(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa256"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa256"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa256());
         }
         catch (...)
@@ -4990,14 +4990,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdsa384(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa384"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa384"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa384());
         }
         catch (...)
@@ -5009,14 +5009,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdsa521(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa521"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa521"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa521());
         }
         catch (...)
@@ -5028,14 +5028,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Rsa(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Rsa"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Rsa"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Rsa());
         }
         catch (...)
@@ -5047,14 +5047,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdh(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdh());
         }
         catch (...)
@@ -5066,14 +5066,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyAlgorithmNames_get_Ecdsa(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyAlgorithmNames", L"Ecdsa"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames::Ecdsa());
         }
         catch (...)
@@ -5158,14 +5158,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"DecryptTpmAttestationCredentialAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"DecryptTpmAttestationCredentialAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::DecryptTpmAttestationCredentialAsync(param0));
@@ -5178,14 +5178,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"DecryptTpmAttestationCredentialAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"DecryptTpmAttestationCredentialAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5210,14 +5210,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"GetTpmAttestationCredentialId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.KeyAttestationHelper", L"GetTpmAttestationCredentialId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper::GetTpmAttestationCredentialId(param0));
@@ -5298,14 +5298,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyStorageProviderNames_get_PlatformKeyStorageProvider(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"PlatformKeyStorageProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"PlatformKeyStorageProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PlatformKeyStorageProvider());
         }
         catch (...)
@@ -5317,14 +5317,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyStorageProviderNames_get_SmartcardKeyStorageProvider(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"SmartcardKeyStorageProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"SmartcardKeyStorageProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SmartcardKeyStorageProvider());
         }
         catch (...)
@@ -5336,14 +5336,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyStorageProviderNames_get_SoftwareKeyStorageProvider(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"SoftwareKeyStorageProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"SoftwareKeyStorageProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::SoftwareKeyStorageProvider());
         }
         catch (...)
@@ -5355,14 +5355,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* KeyStorageProviderNames_get_PassportKeyStorageProvider(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"PassportKeyStorageProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.KeyStorageProviderNames", L"PassportKeyStorageProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames::PassportKeyStorageProvider());
         }
         catch (...)
@@ -5467,14 +5467,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_ReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReaderName());
         }
         catch (...)
@@ -5486,12 +5486,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_ReaderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5500,6 +5494,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ReaderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ReaderName(param0);
@@ -5514,14 +5514,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyStorageProviderName());
         }
         catch (...)
@@ -5533,12 +5533,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_KeyStorageProviderName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5547,6 +5541,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyStorageProviderName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.KeyStorageProviderName(param0);
@@ -5561,14 +5561,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyProtectionLevel());
         }
         catch (...)
@@ -5580,12 +5580,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_KeyProtectionLevel(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5594,6 +5588,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"KeyProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>(arg);
 
             self->obj.KeyProtectionLevel(param0);
@@ -5608,14 +5608,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_InstallOptions(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstallOptions());
         }
         catch (...)
@@ -5627,12 +5627,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_InstallOptions(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5641,6 +5635,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"InstallOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(arg);
 
             self->obj.InstallOptions(param0);
@@ -5655,14 +5655,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -5674,12 +5674,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_FriendlyName(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5688,6 +5682,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -5702,14 +5702,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exportable());
         }
         catch (...)
@@ -5721,12 +5721,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_Exportable(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5735,6 +5729,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"Exportable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(arg);
 
             self->obj.Exportable(param0);
@@ -5749,14 +5749,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* PfxImportParameters_get_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContainerNamePrefix());
         }
         catch (...)
@@ -5768,12 +5768,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static int PfxImportParameters_put_ContainerNamePrefix(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5782,6 +5776,12 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.PfxImportParameters", L"ContainerNamePrefix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ContainerNamePrefix(param0);
@@ -5864,14 +5864,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* StandardCertificateStoreNames_get_IntermediateCertificationAuthorities(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"IntermediateCertificationAuthorities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"IntermediateCertificationAuthorities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::IntermediateCertificationAuthorities());
         }
         catch (...)
@@ -5883,14 +5883,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* StandardCertificateStoreNames_get_Personal(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"Personal"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"Personal"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::Personal());
         }
         catch (...)
@@ -5902,14 +5902,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* StandardCertificateStoreNames_get_TrustedRootCertificationAuthorities(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"TrustedRootCertificationAuthorities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames", L"TrustedRootCertificationAuthorities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames::TrustedRootCertificationAuthorities());
         }
         catch (...)
@@ -6013,14 +6013,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_DistinguishedName(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistinguishedName());
         }
         catch (...)
@@ -6032,14 +6032,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_DnsName(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DnsName());
         }
         catch (...)
@@ -6051,14 +6051,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_EmailName(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailName());
         }
         catch (...)
@@ -6070,14 +6070,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_IPAddress(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IPAddress());
         }
         catch (...)
@@ -6089,14 +6089,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_PrincipalName(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrincipalName());
         }
         catch (...)
@@ -6108,14 +6108,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_Url(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Url"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Url"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Url());
         }
         catch (...)
@@ -6127,14 +6127,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_DistinguishedNames(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DistinguishedNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistinguishedNames());
         }
         catch (...)
@@ -6146,14 +6146,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_DnsNames(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"DnsNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DnsNames());
         }
         catch (...)
@@ -6165,14 +6165,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_EmailNames(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"EmailNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmailNames());
         }
         catch (...)
@@ -6184,14 +6184,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_Extension(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Extension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Extension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Extension());
         }
         catch (...)
@@ -6203,14 +6203,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_IPAddresses(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddresses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"IPAddresses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IPAddresses());
         }
         catch (...)
@@ -6222,14 +6222,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_PrincipalNames(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalNames"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"PrincipalNames"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrincipalNames());
         }
         catch (...)
@@ -6241,14 +6241,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* SubjectAlternativeNameInfo_get_Urls(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Urls"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.SubjectAlternativeNameInfo", L"Urls"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Urls());
         }
         catch (...)
@@ -6346,14 +6346,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"CreateRequestAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"CreateRequestAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>(args, 0);
 
                 return py::convert(self->obj.CreateRequestAsync(param0));
@@ -6377,14 +6377,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>(args, 2);
@@ -6399,14 +6399,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 6)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 6))
-            {
-                py::set_arg_count_version_error(6);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 6))
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -6424,14 +6424,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
         }
         else if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"ImportPfxDataAsync", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::ExportOption>(args, 2);
@@ -6461,14 +6461,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"InstallCertificateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateEnrollmentManager", L"InstallCertificateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>(args, 1);
 
@@ -6565,14 +6565,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestAddAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestAddAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 return py::convert(self->obj.RequestAddAsync(param0));
@@ -6596,14 +6596,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestDeleteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"RequestDeleteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 0);
 
                 return py::convert(self->obj.RequestDeleteAsync(param0));
@@ -6623,14 +6623,14 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyObject* UserCertificateStore_get_Name(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateStore* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Cryptography.Certificates.UserCertificateStore", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)

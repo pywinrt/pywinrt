@@ -50,14 +50,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"CreateForPencil", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"CreateForPencil", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::Inking::InkDrawingAttributes::CreateForPencil());
             }
             catch (...)
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_Size(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -94,12 +94,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_Size(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -108,6 +102,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Size>(arg);
 
             self->obj.Size(param0);
@@ -122,14 +122,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_PenTip(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenTip());
         }
         catch (...)
@@ -141,12 +141,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_PenTip(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -155,6 +149,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::PenTipShape>(arg);
 
             self->obj.PenTip(param0);
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_IgnorePressure(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IgnorePressure());
         }
         catch (...)
@@ -188,12 +188,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_IgnorePressure(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -202,6 +196,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnorePressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IgnorePressure(param0);
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_FitToCurve(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FitToCurve());
         }
         catch (...)
@@ -235,12 +235,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_FitToCurve(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -249,6 +243,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"FitToCurve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.FitToCurve(param0);
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_Color(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Color());
         }
         catch (...)
@@ -282,12 +282,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_Color(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -296,6 +290,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Color"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.Color(param0);
@@ -310,14 +310,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_PenTipTransform(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenTipTransform());
         }
         catch (...)
@@ -329,12 +329,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_PenTipTransform(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -343,6 +337,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PenTipTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.PenTipTransform(param0);
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_DrawAsHighlighter(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DrawAsHighlighter());
         }
         catch (...)
@@ -376,12 +376,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_DrawAsHighlighter(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -390,6 +384,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"DrawAsHighlighter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DrawAsHighlighter(param0);
@@ -404,14 +404,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_Kind(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -423,14 +423,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_PencilProperties(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PencilProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"PencilProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PencilProperties());
         }
         catch (...)
@@ -442,14 +442,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_IgnoreTilt(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IgnoreTilt());
         }
         catch (...)
@@ -461,12 +461,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributes_put_IgnoreTilt(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -475,6 +469,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"IgnoreTilt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IgnoreTilt(param0);
@@ -489,14 +489,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributes_get_ModelerAttributes(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"ModelerAttributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributes", L"ModelerAttributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelerAttributes());
         }
         catch (...)
@@ -614,14 +614,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkDrawingAttributesPencilProperties_get_Opacity(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Opacity());
         }
         catch (...)
@@ -633,12 +633,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkDrawingAttributesPencilProperties_put_Opacity(py::wrapper::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -647,6 +641,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties", L"Opacity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Opacity(param0);
@@ -731,14 +731,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkInputConfiguration_get_IsPrimaryBarrelButtonInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPrimaryBarrelButtonInputEnabled());
         }
         catch (...)
@@ -750,12 +750,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsPrimaryBarrelButtonInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -764,6 +758,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPrimaryBarrelButtonInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPrimaryBarrelButtonInputEnabled(param0);
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkInputConfiguration_get_IsEraserInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEraserInputEnabled());
         }
         catch (...)
@@ -797,12 +797,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsEraserInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -811,6 +805,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsEraserInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEraserInputEnabled(param0);
@@ -825,14 +825,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkInputConfiguration_get_IsPenHapticFeedbackEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPenHapticFeedbackEnabled());
         }
         catch (...)
@@ -844,12 +844,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputConfiguration_put_IsPenHapticFeedbackEnabled(py::wrapper::Windows::UI::Input::Inking::InkInputConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -858,6 +852,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputConfiguration", L"IsPenHapticFeedbackEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPenHapticFeedbackEnabled(param0);
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkInputProcessingConfiguration_get_RightDragAction(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RightDragAction());
         }
         catch (...)
@@ -963,12 +963,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputProcessingConfiguration_put_RightDragAction(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -977,6 +971,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"RightDragAction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkInputRightDragAction>(arg);
 
             self->obj.RightDragAction(param0);
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkInputProcessingConfiguration_get_Mode(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -1010,12 +1010,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkInputProcessingConfiguration_put_Mode(py::wrapper::Windows::UI::Input::Inking::InkInputProcessingConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1024,6 +1018,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkInputProcessingConfiguration", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkInputProcessingMode>(arg);
 
             self->obj.Mode(param0);
@@ -1135,14 +1135,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"AddStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"AddStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 self->obj.AddStroke(param0);
@@ -1167,14 +1167,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CanPasteFromClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CanPasteFromClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CanPasteFromClipboard());
             }
             catch (...)
@@ -1196,14 +1196,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CopySelectedToClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"CopySelectedToClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CopySelectedToClipboard();
                 Py_RETURN_NONE;
             }
@@ -1226,14 +1226,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"DeleteSelected", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"DeleteSelected", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteSelected());
             }
             catch (...)
@@ -1255,14 +1255,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognitionResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognitionResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognitionResults());
             }
             catch (...)
@@ -1284,14 +1284,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognizers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetRecognizers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognizers());
             }
             catch (...)
@@ -1313,14 +1313,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetStrokes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"GetStrokes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokes());
             }
             catch (...)
@@ -1342,14 +1342,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"LoadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"LoadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.LoadAsync(param0));
@@ -1373,14 +1373,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"MoveSelected", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"MoveSelected", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.MoveSelected(param0));
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"PasteFromClipboard", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"PasteFromClipboard", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.PasteFromClipboard(param0));
@@ -1435,14 +1435,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerDown", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerDown", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 self->obj.ProcessPointerDown(param0);
@@ -1467,14 +1467,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.ProcessPointerUp(param0));
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUpdate", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"ProcessPointerUpdate", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.ProcessPointerUpdate(param0));
@@ -1529,14 +1529,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 0);
 
                 return py::convert(self->obj.RecognizeAsync(param0));
@@ -1549,14 +1549,14 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"RecognizeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
@@ -1581,14 +1581,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert(self->obj.SaveAsync(param0));
@@ -1612,14 +1612,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithLine", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithLine", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -1644,14 +1644,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithPolyLine", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SelectWithPolyLine", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert(self->obj.SelectWithPolyLine(param0));
@@ -1675,14 +1675,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultDrawingAttributes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultDrawingAttributes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 self->obj.SetDefaultDrawingAttributes(param0);
@@ -1707,14 +1707,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultRecognizer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"SetDefaultRecognizer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 self->obj.SetDefaultRecognizer(param0);
@@ -1739,14 +1739,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"UpdateRecognitionResults", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkManager", L"UpdateRecognitionResults", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 self->obj.UpdateRecognitionResults(param0);
@@ -1767,14 +1767,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_get_Mode(py::wrapper::Windows::UI::Input::Inking::InkManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -1786,12 +1786,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkManager_put_Mode(py::wrapper::Windows::UI::Input::Inking::InkManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1800,6 +1794,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkManipulationMode>(arg);
 
             self->obj.Mode(param0);
@@ -1814,14 +1814,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkManager_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::InkManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkManager", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -1924,14 +1924,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkModelerAttributes_get_ScalingFactor(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScalingFactor());
         }
         catch (...)
@@ -1943,12 +1943,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_ScalingFactor(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1957,6 +1951,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"ScalingFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.ScalingFactor(param0);
@@ -1971,14 +1971,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkModelerAttributes_get_PredictionTime(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PredictionTime());
         }
         catch (...)
@@ -1990,12 +1990,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_PredictionTime(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2004,6 +1998,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"PredictionTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.PredictionTime(param0);
@@ -2018,14 +2018,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkModelerAttributes_get_UseVelocityBasedPressure(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UseVelocityBasedPressure());
         }
         catch (...)
@@ -2037,12 +2037,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkModelerAttributes_put_UseVelocityBasedPressure(py::wrapper::Windows::UI::Input::Inking::InkModelerAttributes* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2051,6 +2045,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkModelerAttributes", L"UseVelocityBasedPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.UseVelocityBasedPressure(param0);
@@ -2181,14 +2181,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPoint_get_Position(py::wrapper::Windows::UI::Input::Inking::InkPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -2200,14 +2200,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPoint_get_Pressure(py::wrapper::Windows::UI::Input::Inking::InkPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -2219,14 +2219,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPoint_get_TiltX(py::wrapper::Windows::UI::Input::Inking::InkPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltX());
         }
         catch (...)
@@ -2238,14 +2238,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPoint_get_TiltY(py::wrapper::Windows::UI::Input::Inking::InkPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"TiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltY());
         }
         catch (...)
@@ -2257,14 +2257,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPoint_get_Timestamp(py::wrapper::Windows::UI::Input::Inking::InkPoint* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPoint", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2354,14 +2354,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"ActivateCustomDrying", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"ActivateCustomDrying", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ActivateCustomDrying());
             }
             catch (...)
@@ -2383,14 +2383,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"CopyDefaultDrawingAttributes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"CopyDefaultDrawingAttributes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CopyDefaultDrawingAttributes());
             }
             catch (...)
@@ -2412,14 +2412,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"SetPredefinedConfiguration", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"SetPredefinedConfiguration", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenterPredefinedConfiguration>(args, 0);
 
                 self->obj.SetPredefinedConfiguration(param0);
@@ -2444,14 +2444,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UpdateDefaultDrawingAttributes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UpdateDefaultDrawingAttributes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 self->obj.UpdateDefaultDrawingAttributes(param0);
@@ -2472,14 +2472,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_StrokeContainer(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeContainer());
         }
         catch (...)
@@ -2491,12 +2491,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_StrokeContainer(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2505,6 +2499,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeContainer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(arg);
 
             self->obj.StrokeContainer(param0);
@@ -2519,14 +2519,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_IsInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsInputEnabled());
         }
         catch (...)
@@ -2538,12 +2538,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_IsInputEnabled(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2552,6 +2546,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"IsInputEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsInputEnabled(param0);
@@ -2566,14 +2566,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_InputDeviceTypes(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputDeviceTypes());
         }
         catch (...)
@@ -2585,12 +2585,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_InputDeviceTypes(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2599,6 +2593,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputDeviceTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreInputDeviceTypes>(arg);
 
             self->obj.InputDeviceTypes(param0);
@@ -2613,14 +2613,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_InputProcessingConfiguration(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputProcessingConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputProcessingConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputProcessingConfiguration());
         }
         catch (...)
@@ -2632,14 +2632,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_StrokeInput(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeInput());
         }
         catch (...)
@@ -2651,14 +2651,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_UnprocessedInput(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UnprocessedInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"UnprocessedInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnprocessedInput());
         }
         catch (...)
@@ -2670,14 +2670,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_HighContrastAdjustment(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighContrastAdjustment());
         }
         catch (...)
@@ -2689,12 +2689,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenter_put_HighContrastAdjustment(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2703,6 +2697,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"HighContrastAdjustment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkHighContrastAdjustment>(arg);
 
             self->obj.HighContrastAdjustment(param0);
@@ -2717,14 +2717,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_get_InputConfiguration(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenter", L"InputConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputConfiguration());
         }
         catch (...)
@@ -2736,14 +2736,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_add_StrokesCollected(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkPresenter, winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>>(arg);
 
             return py::convert(self->obj.StrokesCollected(param0));
@@ -2757,14 +2757,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_remove_StrokesCollected(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesCollected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokesCollected(param0);
@@ -2779,14 +2779,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_add_StrokesErased(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkPresenter, winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>>(arg);
 
             return py::convert(self->obj.StrokesErased(param0));
@@ -2800,14 +2800,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenter_remove_StrokesErased(py::wrapper::Windows::UI::Input::Inking::InkPresenter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkPresenter", L"StrokesErased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokesErased(param0);
@@ -2931,14 +2931,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_Radius(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Radius());
         }
         catch (...)
@@ -2950,12 +2950,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_Radius(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2964,6 +2958,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Radius"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Radius(param0);
@@ -2978,14 +2978,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_IsResizable(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsResizable());
         }
         catch (...)
@@ -2997,12 +2997,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsResizable(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3011,6 +3005,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsResizable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsResizable(param0);
@@ -3025,14 +3025,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_IsCenterMarkerVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCenterMarkerVisible());
         }
         catch (...)
@@ -3044,12 +3044,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsCenterMarkerVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3058,6 +3052,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsCenterMarkerVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCenterMarkerVisible(param0);
@@ -3072,14 +3072,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_IsAngleReadoutVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAngleReadoutVisible());
         }
         catch (...)
@@ -3091,12 +3091,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsAngleReadoutVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3105,6 +3099,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsAngleReadoutVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAngleReadoutVisible(param0);
@@ -3119,14 +3119,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreTickMarksVisible());
         }
         catch (...)
@@ -3138,12 +3138,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3152,6 +3146,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreTickMarksVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreTickMarksVisible(param0);
@@ -3166,14 +3166,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_AreRaysVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreRaysVisible());
         }
         catch (...)
@@ -3185,12 +3185,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AreRaysVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3199,6 +3193,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AreRaysVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreRaysVisible(param0);
@@ -3213,14 +3213,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_AccentColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccentColor());
         }
         catch (...)
@@ -3232,12 +3232,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_AccentColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3246,6 +3240,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"AccentColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.AccentColor(param0);
@@ -3260,14 +3260,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transform());
         }
         catch (...)
@@ -3279,12 +3279,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3293,6 +3287,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.Transform(param0);
@@ -3307,14 +3307,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -3326,12 +3326,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3340,6 +3334,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVisible(param0);
@@ -3354,14 +3354,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundColor());
         }
         catch (...)
@@ -3373,12 +3373,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3387,6 +3381,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.ForegroundColor(param0);
@@ -3401,14 +3401,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -3420,12 +3420,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterProtractor_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3434,6 +3428,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -3448,14 +3448,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterProtractor_get_Kind(py::wrapper::Windows::UI::Input::Inking::InkPresenterProtractor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterProtractor", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3572,14 +3572,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_Width(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -3591,12 +3591,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Width(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3605,6 +3599,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Width(param0);
@@ -3619,14 +3619,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_Length(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Length());
         }
         catch (...)
@@ -3638,12 +3638,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Length(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3652,6 +3646,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Length"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Length(param0);
@@ -3666,14 +3666,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_IsCompassVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCompassVisible());
         }
         catch (...)
@@ -3685,12 +3685,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_IsCompassVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3699,6 +3693,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsCompassVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCompassVisible(param0);
@@ -3713,14 +3713,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreTickMarksVisible());
         }
         catch (...)
@@ -3732,12 +3732,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_AreTickMarksVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3746,6 +3740,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"AreTickMarksVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AreTickMarksVisible(param0);
@@ -3760,14 +3760,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transform());
         }
         catch (...)
@@ -3779,12 +3779,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_Transform(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3793,6 +3787,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.Transform(param0);
@@ -3807,14 +3807,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -3826,12 +3826,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3840,6 +3834,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVisible(param0);
@@ -3854,14 +3854,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundColor());
         }
         catch (...)
@@ -3873,12 +3873,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3887,6 +3881,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.ForegroundColor(param0);
@@ -3901,14 +3901,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -3920,12 +3920,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkPresenterRuler_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3934,6 +3928,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -3948,14 +3948,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkPresenterRuler_get_Kind(py::wrapper::Windows::UI::Input::Inking::InkPresenterRuler* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkPresenterRuler", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4049,14 +4049,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetStrokes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetStrokes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokes());
             }
             catch (...)
@@ -4078,14 +4078,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetTextCandidates", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"GetTextCandidates", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTextCandidates());
             }
             catch (...)
@@ -4103,14 +4103,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognitionResult_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::InkRecognitionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognitionResult", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -4194,14 +4194,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkRecognizer_get_Name(py::wrapper::Windows::UI::Input::Inking::InkRecognizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognizer", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkRecognizer", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -4309,14 +4309,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"GetRecognizers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"GetRecognizers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognizers());
             }
             catch (...)
@@ -4338,14 +4338,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"RecognizeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"RecognizeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
@@ -4370,14 +4370,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"SetDefaultRecognizer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkRecognizerContainer", L"SetDefaultRecognizer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 self->obj.SetDefaultRecognizer(param0);
@@ -4474,14 +4474,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"Clone", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"Clone", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Clone());
             }
             catch (...)
@@ -4503,14 +4503,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetInkPoints", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetInkPoints", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetInkPoints());
             }
             catch (...)
@@ -4532,14 +4532,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetRenderingSegments", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStroke", L"GetRenderingSegments", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRenderingSegments());
             }
             catch (...)
@@ -4557,14 +4557,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_Selected(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Selected());
         }
         catch (...)
@@ -4576,12 +4576,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_Selected(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4590,6 +4584,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Selected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Selected(param0);
@@ -4604,14 +4604,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_DrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DrawingAttributes());
         }
         catch (...)
@@ -4623,12 +4623,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_DrawingAttributes(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4637,6 +4631,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"DrawingAttributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(arg);
 
             self->obj.DrawingAttributes(param0);
@@ -4651,14 +4651,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -4670,14 +4670,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_Recognized(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Recognized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Recognized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Recognized());
         }
         catch (...)
@@ -4689,14 +4689,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_PointTransform(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointTransform());
         }
         catch (...)
@@ -4708,12 +4708,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_PointTransform(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4722,6 +4716,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.PointTransform(param0);
@@ -4736,14 +4736,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_StrokeStartedTime(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeStartedTime());
         }
         catch (...)
@@ -4755,12 +4755,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_StrokeStartedTime(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4769,6 +4763,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeStartedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.StrokeStartedTime(param0);
@@ -4783,14 +4783,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_StrokeDuration(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StrokeDuration());
         }
         catch (...)
@@ -4802,12 +4802,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int InkStroke_put_StrokeDuration(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4816,6 +4810,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"StrokeDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.StrokeDuration(param0);
@@ -4830,14 +4830,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_Id(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -4849,14 +4849,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStroke_get_PointerId(py::wrapper::Windows::UI::Input::Inking::InkStroke* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStroke", L"PointerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PointerId());
         }
         catch (...)
@@ -4975,14 +4975,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"AppendToStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"AppendToStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.AppendToStroke(param0));
@@ -5006,14 +5006,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"BeginStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"BeginStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 self->obj.BeginStroke(param0);
@@ -5038,14 +5038,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert(self->obj.CreateStroke(param0));
@@ -5069,14 +5069,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkPoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
@@ -5090,14 +5090,14 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"CreateStrokeFromInkPoints", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkPoint>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(args, 2);
@@ -5124,14 +5124,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"EndStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"EndStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
 
                 return py::convert(self->obj.EndStroke(param0));
@@ -5155,14 +5155,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"SetDefaultDrawingAttributes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeBuilder", L"SetDefaultDrawingAttributes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkDrawingAttributes>(args, 0);
 
                 self->obj.SetDefaultDrawingAttributes(param0);
@@ -5284,14 +5284,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 self->obj.AddStroke(param0);
@@ -5316,14 +5316,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStrokes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"AddStrokes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::UI::Input::Inking::InkStroke>>(args, 0);
 
                 self->obj.AddStrokes(param0);
@@ -5348,14 +5348,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CanPasteFromClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CanPasteFromClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CanPasteFromClipboard());
             }
             catch (...)
@@ -5377,14 +5377,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -5407,14 +5407,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CopySelectedToClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"CopySelectedToClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CopySelectedToClipboard();
                 Py_RETURN_NONE;
             }
@@ -5437,14 +5437,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"DeleteSelected", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"DeleteSelected", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteSelected());
             }
             catch (...)
@@ -5466,14 +5466,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetRecognitionResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetRecognitionResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognitionResults());
             }
             catch (...)
@@ -5495,14 +5495,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokeById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokeById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetStrokeById(param0));
@@ -5526,14 +5526,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"GetStrokes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokes());
             }
             catch (...)
@@ -5555,14 +5555,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"LoadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"LoadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.LoadAsync(param0));
@@ -5586,14 +5586,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"MoveSelected", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"MoveSelected", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.MoveSelected(param0));
@@ -5617,14 +5617,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"PasteFromClipboard", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"PasteFromClipboard", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.PasteFromClipboard(param0));
@@ -5648,14 +5648,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert(self->obj.SaveAsync(param0));
@@ -5668,14 +5668,14 @@ namespace py::cpp::Windows::UI::Input::Inking
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SaveAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPersistenceFormat>(args, 1);
 
@@ -5700,14 +5700,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithLine", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithLine", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -5732,14 +5732,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithPolyLine", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"SelectWithPolyLine", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert(self->obj.SelectWithPolyLine(param0));
@@ -5763,14 +5763,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"UpdateRecognitionResults", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"UpdateRecognitionResults", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 self->obj.UpdateRecognitionResults(param0);
@@ -5791,14 +5791,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeContainer_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::InkStrokeContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeContainer", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)
@@ -5896,14 +5896,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_get_InkPresenter(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"InkPresenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"InkPresenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InkPresenter());
         }
         catch (...)
@@ -5915,14 +5915,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_add_StrokeCanceled(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.StrokeCanceled(param0));
@@ -5936,14 +5936,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_remove_StrokeCanceled(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeCanceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokeCanceled(param0);
@@ -5958,14 +5958,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_add_StrokeContinued(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.StrokeContinued(param0));
@@ -5979,14 +5979,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_remove_StrokeContinued(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeContinued"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokeContinued(param0);
@@ -6001,14 +6001,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_add_StrokeEnded(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.StrokeEnded(param0));
@@ -6022,14 +6022,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_remove_StrokeEnded(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeEnded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokeEnded(param0);
@@ -6044,14 +6044,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_add_StrokeStarted(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkStrokeInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.StrokeStarted(param0));
@@ -6065,14 +6065,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeInput_remove_StrokeStarted(py::wrapper::Windows::UI::Input::Inking::InkStrokeInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkStrokeInput", L"StrokeStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StrokeStarted(param0);
@@ -6165,14 +6165,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_BezierControlPoint1(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BezierControlPoint1());
         }
         catch (...)
@@ -6184,14 +6184,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_BezierControlPoint2(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"BezierControlPoint2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BezierControlPoint2());
         }
         catch (...)
@@ -6203,14 +6203,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_Position(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -6222,14 +6222,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_Pressure(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Pressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Pressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pressure());
         }
         catch (...)
@@ -6241,14 +6241,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_TiltX(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltX());
         }
         catch (...)
@@ -6260,14 +6260,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_TiltY(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"TiltY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TiltY());
         }
         catch (...)
@@ -6279,14 +6279,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokeRenderingSegment_get_Twist(py::wrapper::Windows::UI::Input::Inking::InkStrokeRenderingSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Twist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokeRenderingSegment", L"Twist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Twist());
         }
         catch (...)
@@ -6374,14 +6374,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokesCollectedEventArgs_get_Strokes(py::wrapper::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesCollectedEventArgs", L"Strokes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesCollectedEventArgs", L"Strokes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Strokes());
         }
         catch (...)
@@ -6463,14 +6463,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkStrokesErasedEventArgs_get_Strokes(py::wrapper::Windows::UI::Input::Inking::InkStrokesErasedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesErasedEventArgs", L"Strokes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkStrokesErasedEventArgs", L"Strokes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Strokes());
         }
         catch (...)
@@ -6556,14 +6556,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"BeginDry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"BeginDry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.BeginDry());
             }
             catch (...)
@@ -6585,14 +6585,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"EndDry", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.InkSynchronizer", L"EndDry", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.EndDry();
                 Py_RETURN_NONE;
             }
@@ -6682,14 +6682,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_get_InkPresenter(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"InkPresenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"InkPresenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InkPresenter());
         }
         catch (...)
@@ -6701,14 +6701,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerEntered(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerEntered(param0));
@@ -6722,14 +6722,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerEntered(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerEntered(param0);
@@ -6744,14 +6744,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerExited(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerExited(param0));
@@ -6765,14 +6765,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerExited(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerExited(param0);
@@ -6787,14 +6787,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerHovered(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerHovered(param0));
@@ -6808,14 +6808,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerHovered(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerHovered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerHovered(param0);
@@ -6830,14 +6830,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerLost(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerLost(param0));
@@ -6851,14 +6851,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerLost(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerLost(param0);
@@ -6873,14 +6873,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerMoved(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerMoved(param0));
@@ -6894,14 +6894,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerMoved(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerMoved(param0);
@@ -6916,14 +6916,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerPressed(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerPressed(param0));
@@ -6937,14 +6937,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerPressed(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerPressed(param0);
@@ -6959,14 +6959,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_add_PointerReleased(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::Inking::InkUnprocessedInput, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
 
             return py::convert(self->obj.PointerReleased(param0));
@@ -6980,14 +6980,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* InkUnprocessedInput_remove_PointerReleased(py::wrapper::Windows::UI::Input::Inking::InkUnprocessedInput* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.Inking.InkUnprocessedInput", L"PointerReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PointerReleased(param0);
@@ -7090,14 +7090,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::Input::Inking::PenAndInkSettings::GetDefault());
             }
             catch (...)
@@ -7119,14 +7119,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"SetPenHandedness", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"SetPenHandedness", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::PenHandedness>(args, 0);
 
                 self->obj.SetPenHandedness(param0);
@@ -7147,14 +7147,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_FontFamilyName(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"FontFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"FontFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FontFamilyName());
         }
         catch (...)
@@ -7166,14 +7166,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_HandwritingLineHeight(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"HandwritingLineHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"HandwritingLineHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HandwritingLineHeight());
         }
         catch (...)
@@ -7185,14 +7185,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_IsHandwritingDirectlyIntoTextFieldEnabled(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsHandwritingDirectlyIntoTextFieldEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsHandwritingDirectlyIntoTextFieldEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHandwritingDirectlyIntoTextFieldEnabled());
         }
         catch (...)
@@ -7204,14 +7204,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_IsTouchHandwritingEnabled(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsTouchHandwritingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"IsTouchHandwritingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTouchHandwritingEnabled());
         }
         catch (...)
@@ -7223,14 +7223,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_PenHandedness(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"PenHandedness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"PenHandedness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PenHandedness());
         }
         catch (...)
@@ -7242,14 +7242,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* PenAndInkSettings_get_UserConsentsToHandwritingTelemetryCollection(py::wrapper::Windows::UI::Input::Inking::PenAndInkSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"UserConsentsToHandwritingTelemetryCollection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.PenAndInkSettings", L"UserConsentsToHandwritingTelemetryCollection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserConsentsToHandwritingTelemetryCollection());
         }
         catch (...)
@@ -7367,14 +7367,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPointFactory", L"CreateInkPoint", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPointFactory", L"CreateInkPoint", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
@@ -7469,14 +7469,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPresenterRulerFactory", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkPresenterRulerFactory", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkPresenter>(args, 0);
 
                 return py::convert(self->obj.Create(param0));
@@ -7566,14 +7566,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterStencil_get_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -7585,12 +7585,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_BackgroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7599,6 +7593,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -7613,14 +7613,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterStencil_get_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundColor());
         }
         catch (...)
@@ -7632,12 +7632,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_ForegroundColor(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7646,6 +7640,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.ForegroundColor(param0);
@@ -7660,14 +7660,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterStencil_get_IsVisible(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsVisible());
         }
         catch (...)
@@ -7679,12 +7679,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_IsVisible(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7693,6 +7687,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"IsVisible"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsVisible(param0);
@@ -7707,14 +7707,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterStencil_get_Kind(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7726,14 +7726,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkPresenterStencil_get_Transform(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transform());
         }
         catch (...)
@@ -7745,12 +7745,6 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static int IInkPresenterStencil_put_Transform(py::wrapper::Windows::UI::Input::Inking::IInkPresenterStencil* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7759,6 +7753,12 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkPresenterStencil", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
             self->obj.Transform(param0);
@@ -7851,14 +7851,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"GetRecognizers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"GetRecognizers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognizers());
             }
             catch (...)
@@ -7880,14 +7880,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"RecognizeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"RecognizeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStrokeContainer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognitionTarget>(args, 1);
 
@@ -7912,14 +7912,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"SetDefaultRecognizer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkRecognizerContainer", L"SetDefaultRecognizer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkRecognizer>(args, 0);
 
                 self->obj.SetDefaultRecognizer(param0);
@@ -8016,14 +8016,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"AddStroke", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"AddStroke", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::Input::Inking::InkStroke>(args, 0);
 
                 self->obj.AddStroke(param0);
@@ -8048,14 +8048,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CanPasteFromClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CanPasteFromClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CanPasteFromClipboard());
             }
             catch (...)
@@ -8077,14 +8077,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CopySelectedToClipboard", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"CopySelectedToClipboard", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CopySelectedToClipboard();
                 Py_RETURN_NONE;
             }
@@ -8107,14 +8107,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"DeleteSelected", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"DeleteSelected", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteSelected());
             }
             catch (...)
@@ -8136,14 +8136,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetRecognitionResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetRecognitionResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRecognitionResults());
             }
             catch (...)
@@ -8165,14 +8165,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetStrokes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"GetStrokes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStrokes());
             }
             catch (...)
@@ -8194,14 +8194,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"LoadAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"LoadAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 0);
 
                 return py::convert(self->obj.LoadAsync(param0));
@@ -8225,14 +8225,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"MoveSelected", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"MoveSelected", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.MoveSelected(param0));
@@ -8256,14 +8256,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"PasteFromClipboard", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"PasteFromClipboard", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.PasteFromClipboard(param0));
@@ -8287,14 +8287,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SaveAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SaveAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IOutputStream>(args, 0);
 
                 return py::convert(self->obj.SaveAsync(param0));
@@ -8318,14 +8318,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithLine", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithLine", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
 
@@ -8350,14 +8350,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithPolyLine", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"SelectWithPolyLine", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Point>>(args, 0);
 
                 return py::convert(self->obj.SelectWithPolyLine(param0));
@@ -8381,14 +8381,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"UpdateRecognitionResults", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"UpdateRecognitionResults", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Input::Inking::InkRecognitionResult>>(args, 0);
 
                 self->obj.UpdateRecognitionResults(param0);
@@ -8409,14 +8409,14 @@ namespace py::cpp::Windows::UI::Input::Inking
 
     static PyObject* IInkStrokeContainer_get_BoundingRect(py::wrapper::Windows::UI::Input::Inking::IInkStrokeContainer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"BoundingRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Inking.IInkStrokeContainer", L"BoundingRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingRect());
         }
         catch (...)

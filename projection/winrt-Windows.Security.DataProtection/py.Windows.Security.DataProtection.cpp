@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataAvailabilityStateChangedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -123,14 +123,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataBufferUnprotectResult_get_Status(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataBufferUnprotectResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataBufferUnprotectResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataBufferUnprotectResult_get_UnprotectedBuffer(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataBufferUnprotectResult", L"UnprotectedBuffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataBufferUnprotectResult", L"UnprotectedBuffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnprotectedBuffer());
         }
         catch (...)
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"GetStorageItemProtectionInfoAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"GetStorageItemProtectionInfoAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
 
                 return py::convert(self->obj.GetStorageItemProtectionInfoAsync(param0));
@@ -267,14 +267,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"IsContinuedDataAvailabilityExpected", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"IsContinuedDataAvailabilityExpected", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 0);
 
                 return py::convert(self->obj.IsContinuedDataAvailabilityExpected(param0));
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"ProtectBufferAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"ProtectBufferAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 1);
 
@@ -330,14 +330,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"ProtectStorageItemAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"ProtectStorageItemAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageItem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::DataProtection::UserDataAvailability>(args, 1);
 
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"TryGetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"TryGetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetDefault());
             }
             catch (...)
@@ -391,14 +391,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"TryGetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"TryGetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Security::DataProtection::UserDataProtectionManager::TryGetForUser(param0));
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"UnprotectBufferAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"UnprotectBufferAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.UnprotectBufferAsync(param0));
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_add_DataAvailabilityStateChanged(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"DataAvailabilityStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"DataAvailabilityStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Security::DataProtection::UserDataProtectionManager, winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.DataAvailabilityStateChanged(param0));
@@ -470,14 +470,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataProtectionManager_remove_DataAvailabilityStateChanged(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"DataAvailabilityStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Security.DataProtection.UserDataProtectionManager", L"DataAvailabilityStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DataAvailabilityStateChanged(param0);
@@ -595,14 +595,14 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyObject* UserDataStorageItemProtectionInfo_get_Availability(py::wrapper::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataStorageItemProtectionInfo", L"Availability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.DataProtection.UserDataStorageItemProtectionInfo", L"Availability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Availability());
         }
         catch (...)

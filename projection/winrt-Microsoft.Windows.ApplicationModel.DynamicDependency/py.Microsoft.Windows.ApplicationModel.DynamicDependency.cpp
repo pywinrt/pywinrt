@@ -46,14 +46,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* AddPackageDependencyOptions_get_Rank(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"Rank"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"Rank"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rank());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int AddPackageDependencyOptions_put_Rank(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"Rank"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"Rank"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Rank(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* AddPackageDependencyOptions_get_PrependIfRankCollision(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"PrependIfRankCollision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"PrependIfRankCollision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrependIfRankCollision());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int AddPackageDependencyOptions_put_PrependIfRankCollision(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"PrependIfRankCollision"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.AddPackageDependencyOptions", L"PrependIfRankCollision"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.PrependIfRankCollision(param0);
@@ -233,14 +233,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* CreatePackageDependencyOptions_get_VerifyDependencyResolution(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"VerifyDependencyResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"VerifyDependencyResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VerifyDependencyResolution());
         }
         catch (...)
@@ -252,12 +252,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_VerifyDependencyResolution(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"VerifyDependencyResolution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -266,6 +260,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"VerifyDependencyResolution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.VerifyDependencyResolution(param0);
@@ -280,14 +280,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* CreatePackageDependencyOptions_get_LifetimeArtifactKind(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifactKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifactKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LifetimeArtifactKind());
         }
         catch (...)
@@ -299,12 +299,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_LifetimeArtifactKind(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifactKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -313,6 +307,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifactKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyLifetimeArtifactKind>(arg);
 
             self->obj.LifetimeArtifactKind(param0);
@@ -327,14 +327,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* CreatePackageDependencyOptions_get_LifetimeArtifact(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LifetimeArtifact());
         }
         catch (...)
@@ -346,12 +346,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_LifetimeArtifact(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -360,6 +354,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"LifetimeArtifact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.LifetimeArtifact(param0);
@@ -374,14 +374,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* CreatePackageDependencyOptions_get_Architectures(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"Architectures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"Architectures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Architectures());
         }
         catch (...)
@@ -393,12 +393,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static int CreatePackageDependencyOptions_put_Architectures(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"Architectures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -407,6 +401,12 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.CreatePackageDependencyOptions", L"Architectures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>(arg);
 
             self->obj.Architectures(param0);
@@ -498,14 +498,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Add", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Add", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Add());
             }
             catch (...)
@@ -516,14 +516,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Add", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Add", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>(args, 0);
 
                 return py::convert(self->obj.Add(param0));
@@ -547,14 +547,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Create", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Create", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
 
@@ -568,14 +568,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Create", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Create", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 2);
@@ -601,14 +601,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"CreateForSystem", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"CreateForSystem", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::PackageVersion>(args, 1);
                 auto param2 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>(args, 2);
@@ -634,14 +634,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Delete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Delete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Delete();
                 Py_RETURN_NONE;
             }
@@ -664,14 +664,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GetFromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GetFromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromId(param0));
@@ -695,14 +695,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GetFromIdForSystem", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GetFromIdForSystem", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GetFromIdForSystem(param0));
@@ -722,14 +722,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependency_get_Id(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -741,14 +741,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependency_get_GenerationId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GenerationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"GenerationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::GenerationId());
         }
         catch (...)
@@ -760,14 +760,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependency_get_PackageGraphRevisionId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"PackageGraphRevisionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependency", L"PackageGraphRevisionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency::PackageGraphRevisionId());
         }
         catch (...)
@@ -910,14 +910,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"Remove", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"Remove", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Remove();
                 Py_RETURN_NONE;
             }
@@ -936,14 +936,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependencyContext_get_ContextId(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"ContextId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"ContextId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContextId());
         }
         catch (...)
@@ -955,14 +955,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependencyContext_get_PackageDependencyId(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"PackageDependencyId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"PackageDependencyId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageDependencyId());
         }
         catch (...)
@@ -974,14 +974,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependencyContext_get_PackageFullName(py::wrapper::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"PackageFullName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyContext", L"PackageFullName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PackageFullName());
         }
         catch (...)
@@ -1058,14 +1058,14 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::DynamicDependency
 
     static PyObject* PackageDependencyRank_get_Default(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank", L"Default"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.ApplicationModel.DynamicDependency.PackageDependencyRank", L"Default"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank::Default());
         }
         catch (...)

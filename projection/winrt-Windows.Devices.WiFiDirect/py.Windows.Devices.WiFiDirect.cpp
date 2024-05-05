@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisement_get_ListenStateDiscoverability(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"ListenStateDiscoverability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"ListenStateDiscoverability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListenStateDiscoverability());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_ListenStateDiscoverability(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"ListenStateDiscoverability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"ListenStateDiscoverability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementListenStateDiscoverability>(arg);
 
             self->obj.ListenStateDiscoverability(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisement_get_IsAutonomousGroupOwnerEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"IsAutonomousGroupOwnerEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"IsAutonomousGroupOwnerEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAutonomousGroupOwnerEnabled());
         }
         catch (...)
@@ -90,12 +90,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_IsAutonomousGroupOwnerEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"IsAutonomousGroupOwnerEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -104,6 +98,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"IsAutonomousGroupOwnerEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAutonomousGroupOwnerEnabled(param0);
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisement_get_InformationElements(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"InformationElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"InformationElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InformationElements());
         }
         catch (...)
@@ -137,12 +137,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectAdvertisement_put_InformationElements(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"InformationElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -151,6 +145,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"InformationElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement>>(arg);
 
             self->obj.InformationElements(param0);
@@ -165,14 +165,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisement_get_LegacySettings(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"LegacySettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"LegacySettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LegacySettings());
         }
         catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisement_get_SupportedConfigurationMethods(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"SupportedConfigurationMethods"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisement", L"SupportedConfigurationMethods"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedConfigurationMethods());
         }
         catch (...)
@@ -303,14 +303,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -333,14 +333,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -359,14 +359,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_get_Advertisement(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Advertisement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Advertisement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Advertisement());
         }
         catch (...)
@@ -378,14 +378,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_get_Status(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -397,14 +397,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_add_StatusChanged(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher, winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -418,14 +418,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisher_remove_StatusChanged(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisher", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -515,14 +515,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisherStatusChangedEventArgs_get_Error(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -534,14 +534,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectAdvertisementPublisherStatusChangedEventArgs_get_Status(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -646,14 +646,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionListener_add_ConnectionRequested(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener", L"ConnectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener", L"ConnectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener, winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ConnectionRequested(param0));
@@ -667,14 +667,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionListener_remove_ConnectionRequested(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener", L"ConnectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionListener", L"ConnectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionRequested(param0);
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GetDevicePairingKinds", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GetDevicePairingKinds", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectConfigurationMethod>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters::GetDevicePairingKinds(param0));
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionParameters_get_GroupOwnerIntent(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GroupOwnerIntent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GroupOwnerIntent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GroupOwnerIntent());
         }
         catch (...)
@@ -832,12 +832,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectConnectionParameters_put_GroupOwnerIntent(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GroupOwnerIntent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -846,6 +840,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"GroupOwnerIntent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int16_t>(arg);
 
             self->obj.GroupOwnerIntent(param0);
@@ -860,14 +860,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionParameters_get_PreferredPairingProcedure(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferredPairingProcedure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferredPairingProcedure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredPairingProcedure());
         }
         catch (...)
@@ -879,12 +879,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectConnectionParameters_put_PreferredPairingProcedure(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferredPairingProcedure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -893,6 +887,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferredPairingProcedure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectPairingProcedure>(arg);
 
             self->obj.PreferredPairingProcedure(param0);
@@ -907,14 +907,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionParameters_get_PreferenceOrderedConfigurationMethods(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferenceOrderedConfigurationMethods"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters", L"PreferenceOrderedConfigurationMethods"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferenceOrderedConfigurationMethods());
         }
         catch (...)
@@ -1028,14 +1028,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1054,14 +1054,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectConnectionRequest_get_DeviceInformation(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -1169,14 +1169,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs", L"GetConnectionRequest", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectConnectionRequestedEventArgs", L"GetConnectionRequest", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionRequest());
             }
             catch (...)
@@ -1268,14 +1268,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1298,14 +1298,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::FromIdAsync(param0));
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"FromIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"FromIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters>(args, 1);
 
@@ -1350,14 +1350,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetConnectionEndpointPairs", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetConnectionEndpointPairs", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionEndpointPairs());
             }
             catch (...)
@@ -1379,14 +1379,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector());
             }
             catch (...)
@@ -1397,14 +1397,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFiDirect::WiFiDirectDeviceSelectorType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice::GetDeviceSelector(param0));
@@ -1424,14 +1424,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_get_ConnectionStatus(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -1443,14 +1443,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_get_DeviceId(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_add_ConnectionStatusChanged(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConnectionStatusChanged(param0));
@@ -1483,14 +1483,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectDevice_remove_ConnectionStatusChanged(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFiDirect.WiFiDirectDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionStatusChanged(param0);
@@ -1654,14 +1654,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"CreateFromBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"CreateFromBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromBuffer(param0));
@@ -1685,14 +1685,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"CreateFromDeviceInformation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"CreateFromDeviceInformation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFiDirect::WiFiDirectInformationElement::CreateFromDeviceInformation(param0));
@@ -1712,14 +1712,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectInformationElement_get_Value(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -1731,12 +1731,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_Value(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1745,6 +1739,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Value(param0);
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectInformationElement_get_OuiType(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"OuiType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"OuiType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuiType());
         }
         catch (...)
@@ -1778,12 +1778,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_OuiType(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"OuiType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1792,6 +1786,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"OuiType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.OuiType(param0);
@@ -1806,14 +1806,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectInformationElement_get_Oui(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Oui"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Oui"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Oui());
         }
         catch (...)
@@ -1825,12 +1825,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectInformationElement_put_Oui(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Oui"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1839,6 +1833,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectInformationElement", L"Oui"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             self->obj.Oui(param0);
@@ -1952,14 +1952,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectLegacySettings_get_Ssid(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ssid());
         }
         catch (...)
@@ -1971,12 +1971,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_Ssid(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1985,6 +1979,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Ssid(param0);
@@ -1999,14 +1999,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectLegacySettings_get_Passphrase(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Passphrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Passphrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Passphrase());
         }
         catch (...)
@@ -2018,12 +2018,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_Passphrase(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Passphrase"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2032,6 +2026,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"Passphrase"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.Passphrase(param0);
@@ -2046,14 +2046,14 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static PyObject* WiFiDirectLegacySettings_get_IsEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -2065,12 +2065,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     static int WiFiDirectLegacySettings_put_IsEnabled(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2079,6 +2073,12 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFiDirect.WiFiDirectLegacySettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);

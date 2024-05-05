@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost::GetForCurrentView());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"RequestUnlock", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"RequestUnlock", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RequestUnlock();
                 Py_RETURN_NONE;
             }
@@ -83,14 +83,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockApplicationHost_add_Unlocking(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"Unlocking"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"Unlocking"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost, winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>>(arg);
 
             return py::convert(self->obj.Unlocking(param0));
@@ -104,14 +104,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockApplicationHost_remove_Unlocking(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"Unlocking"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockApplicationHost", L"Unlocking"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Unlocking(param0);
@@ -228,14 +228,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"LaunchApp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"LaunchApp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.LaunchApp();
                 Py_RETURN_NONE;
             }
@@ -254,14 +254,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenBadge_get_AutomationName(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"AutomationName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"AutomationName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationName());
         }
         catch (...)
@@ -273,14 +273,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenBadge_get_Glyph(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Glyph"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Glyph"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Glyph());
         }
         catch (...)
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenBadge_get_Logo(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo());
         }
         catch (...)
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenBadge_get_Number(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Number"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenBadge", L"Number"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Number());
         }
         catch (...)
@@ -404,14 +404,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_get_AlarmIcon(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIcon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIcon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlarmIcon());
         }
         catch (...)
@@ -423,14 +423,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_get_Badges(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"Badges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"Badges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Badges());
         }
         catch (...)
@@ -442,14 +442,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_get_DetailText(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DetailText());
         }
         catch (...)
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_get_LockScreenImage(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockScreenImage());
         }
         catch (...)
@@ -480,14 +480,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_add_AlarmIconChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIconChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIconChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AlarmIconChanged(param0));
@@ -501,14 +501,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_remove_AlarmIconChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIconChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"AlarmIconChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AlarmIconChanged(param0);
@@ -523,14 +523,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_add_BadgesChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"BadgesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"BadgesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BadgesChanged(param0));
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_remove_BadgesChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"BadgesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"BadgesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BadgesChanged(param0);
@@ -566,14 +566,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_add_DetailTextChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailTextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailTextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DetailTextChanged(param0));
@@ -587,14 +587,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_remove_DetailTextChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailTextChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"DetailTextChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DetailTextChanged(param0);
@@ -609,14 +609,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_add_LockScreenImageChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.LockScreenImageChanged(param0));
@@ -630,14 +630,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenInfo_remove_LockScreenImageChanged(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImageChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.LockScreen.LockScreenInfo", L"LockScreenImageChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.LockScreenImageChanged(param0);
@@ -737,14 +737,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -837,14 +837,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -862,14 +862,14 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyObject* LockScreenUnlockingEventArgs_get_Deadline(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.LockScreen.LockScreenUnlockingEventArgs", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)

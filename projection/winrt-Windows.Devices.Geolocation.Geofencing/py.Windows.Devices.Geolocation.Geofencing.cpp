@@ -107,14 +107,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_Duration(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -126,14 +126,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_DwellTime(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"DwellTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"DwellTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DwellTime());
         }
         catch (...)
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_Geoshape(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Geoshape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Geoshape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geoshape());
         }
         catch (...)
@@ -164,14 +164,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_Id(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_MonitoredStates(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"MonitoredStates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"MonitoredStates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MonitoredStates());
         }
         catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_SingleUse(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"SingleUse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"SingleUse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SingleUse());
         }
         catch (...)
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* Geofence_get_StartTime(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.Geofence", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"ReadReports", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"ReadReports", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReadReports());
             }
             catch (...)
@@ -345,14 +345,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_get_Geofences(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Geofences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Geofences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geofences());
         }
         catch (...)
@@ -364,14 +364,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_get_LastKnownGeoposition(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"LastKnownGeoposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"LastKnownGeoposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastKnownGeoposition());
         }
         catch (...)
@@ -383,14 +383,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_get_Status(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -402,14 +402,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_get_Current(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Current"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"Current"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor::Current());
         }
         catch (...)
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_add_GeofenceStateChanged(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"GeofenceStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"GeofenceStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.GeofenceStateChanged(param0));
@@ -442,14 +442,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_remove_GeofenceStateChanged(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"GeofenceStateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"GeofenceStateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GeofenceStateChanged(param0);
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_add_StatusChanged(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -485,14 +485,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceMonitor_remove_StatusChanged(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceMonitor", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceStateChangeReport_get_Geofence(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"Geofence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"Geofence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geofence());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceStateChangeReport_get_Geoposition(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"Geoposition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"Geoposition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Geoposition());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceStateChangeReport_get_NewState(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"NewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"NewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewState());
         }
         catch (...)
@@ -667,14 +667,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyObject* GeofenceStateChangeReport_get_RemovalReason(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"RemovalReason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Geofencing.GeofenceStateChangeReport", L"RemovalReason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemovalReason());
         }
         catch (...)

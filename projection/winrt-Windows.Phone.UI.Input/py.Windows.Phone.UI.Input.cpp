@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* BackPressedEventArgs_get_Handled(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.UI.Input.BackPressedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.UI.Input.BackPressedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static int BackPressedEventArgs_put_Handled(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.UI.Input.BackPressedEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -57,6 +51,12 @@ namespace py::cpp::Windows::Phone::UI::Input
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.UI.Input.BackPressedEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -202,14 +202,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_add_BackPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"BackPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"BackPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0));
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_remove_BackPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"BackPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"BackPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Phone::UI::Input::HardwareButtons::BackPressed(param0);
@@ -245,14 +245,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_add_CameraHalfPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraHalfPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraHalfPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0));
@@ -266,14 +266,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_remove_CameraHalfPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraHalfPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraHalfPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Phone::UI::Input::HardwareButtons::CameraHalfPressed(param0);
@@ -288,14 +288,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_add_CameraPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0));
@@ -309,14 +309,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_remove_CameraPressed(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraPressed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraPressed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Phone::UI::Input::HardwareButtons::CameraPressed(param0);
@@ -331,14 +331,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_add_CameraReleased(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Phone::UI::Input::CameraEventArgs>>(arg);
 
             return py::convert(winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0));
@@ -352,14 +352,14 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyObject* HardwareButtons_remove_CameraReleased(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraReleased"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.UI.Input.HardwareButtons", L"CameraReleased"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Phone::UI::Input::HardwareButtons::CameraReleased(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
 
@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Devices::WiFi
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 2);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices::WiFi
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 2);
@@ -94,14 +94,14 @@ namespace py::cpp::Windows::Devices::WiFi
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 2);
@@ -129,14 +129,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"Disconnect", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"Disconnect", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Disconnect();
                 Py_RETURN_NONE;
             }
@@ -159,14 +159,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"FindAllAdaptersAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"FindAllAdaptersAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::WiFi::WiFiAdapter::FindAllAdaptersAsync());
             }
             catch (...)
@@ -188,14 +188,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFi::WiFiAdapter::FromIdAsync(param0));
@@ -219,14 +219,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::WiFi::WiFiAdapter::GetDeviceSelector());
             }
             catch (...)
@@ -248,14 +248,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"GetWpsConfigurationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"GetWpsConfigurationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
 
                 return py::convert(self->obj.GetWpsConfigurationAsync(param0));
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::WiFi::WiFiAdapter::RequestAccessAsync());
             }
             catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ScanAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ScanAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ScanAsync());
             }
             catch (...)
@@ -333,14 +333,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_get_NetworkAdapter(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"NetworkAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"NetworkAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapter());
         }
         catch (...)
@@ -352,14 +352,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_get_NetworkReport(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"NetworkReport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"NetworkReport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkReport());
         }
         catch (...)
@@ -371,14 +371,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_add_AvailableNetworksChanged(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"AvailableNetworksChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"AvailableNetworksChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::WiFi::WiFiAdapter, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AvailableNetworksChanged(param0));
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAdapter_remove_AvailableNetworksChanged(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"AvailableNetworksChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"AvailableNetworksChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AvailableNetworksChanged(param0);
@@ -520,14 +520,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_BeaconInterval(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"BeaconInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"BeaconInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BeaconInterval());
         }
         catch (...)
@@ -539,14 +539,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_Bssid(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Bssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Bssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bssid());
         }
         catch (...)
@@ -558,14 +558,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_ChannelCenterFrequencyInKilohertz(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"ChannelCenterFrequencyInKilohertz"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"ChannelCenterFrequencyInKilohertz"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelCenterFrequencyInKilohertz());
         }
         catch (...)
@@ -577,14 +577,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_IsWiFiDirect(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"IsWiFiDirect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"IsWiFiDirect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWiFiDirect());
         }
         catch (...)
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_NetworkKind(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"NetworkKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"NetworkKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkKind());
         }
         catch (...)
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_NetworkRssiInDecibelMilliwatts(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"NetworkRssiInDecibelMilliwatts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"NetworkRssiInDecibelMilliwatts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkRssiInDecibelMilliwatts());
         }
         catch (...)
@@ -634,14 +634,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_PhyKind(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"PhyKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"PhyKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhyKind());
         }
         catch (...)
@@ -653,14 +653,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_SecuritySettings(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"SecuritySettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"SecuritySettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SecuritySettings());
         }
         catch (...)
@@ -672,14 +672,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_SignalBars(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"SignalBars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"SignalBars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignalBars());
         }
         catch (...)
@@ -691,14 +691,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_Ssid(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ssid());
         }
         catch (...)
@@ -710,14 +710,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiAvailableNetwork_get_Uptime(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Uptime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiAvailableNetwork", L"Uptime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uptime());
         }
         catch (...)
@@ -809,14 +809,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiConnectionResult_get_ConnectionStatus(py::wrapper::Windows::Devices::WiFi::WiFiConnectionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiConnectionResult", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiConnectionResult", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -898,14 +898,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiNetworkReport_get_AvailableNetworks(py::wrapper::Windows::Devices::WiFi::WiFiNetworkReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiNetworkReport", L"AvailableNetworks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiNetworkReport", L"AvailableNetworks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableNetworks());
         }
         catch (...)
@@ -917,14 +917,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiNetworkReport_get_Timestamp(py::wrapper::Windows::Devices::WiFi::WiFiNetworkReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiNetworkReport", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiNetworkReport", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"Connect", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"Connect", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Connect());
             }
             catch (...)
@@ -1040,14 +1040,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"ConnectAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"ConnectAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ConnectAsync());
             }
             catch (...)
@@ -1069,14 +1069,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"ReportError", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"ReportError", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus>(args, 0);
 
                 self->obj.ReportError(param0);
@@ -1097,14 +1097,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotConnectTriggerDetails_get_RequestedNetwork(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"RequestedNetwork"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails", L"RequestedNetwork"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedNetwork());
         }
         catch (...)
@@ -1189,14 +1189,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotConnectionResult_get_Status(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectionResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1282,14 +1282,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"GetOrCreateById", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"GetOrCreateById", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork::GetOrCreateById(param0));
@@ -1313,14 +1313,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"GetProperties", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"GetProperties", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetProperties());
             }
             catch (...)
@@ -1342,14 +1342,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"UpdateProperties", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"UpdateProperties", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>(args, 0);
 
                 self->obj.UpdateProperties(param0);
@@ -1370,14 +1370,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetwork_get_Id(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetwork", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1487,14 +1487,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_Ssid(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ssid());
         }
         catch (...)
@@ -1506,12 +1506,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Ssid(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Ssid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1520,6 +1514,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Ssid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Ssid(param0);
@@ -1534,14 +1534,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_RemainingBatteryPercent(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"RemainingBatteryPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"RemainingBatteryPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemainingBatteryPercent());
         }
         catch (...)
@@ -1553,12 +1553,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_RemainingBatteryPercent(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"RemainingBatteryPercent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1567,6 +1561,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"RemainingBatteryPercent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.RemainingBatteryPercent(param0);
@@ -1581,14 +1581,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_Password(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Password());
         }
         catch (...)
@@ -1600,12 +1600,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Password(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1614,6 +1608,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.Password(param0);
@@ -1628,14 +1628,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_IsMetered(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"IsMetered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"IsMetered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsMetered());
         }
         catch (...)
@@ -1647,12 +1647,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_IsMetered(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"IsMetered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1661,6 +1655,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"IsMetered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsMetered(param0);
@@ -1675,14 +1675,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_DisplayName(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -1694,12 +1694,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_DisplayName(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1708,6 +1702,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -1722,14 +1722,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_CellularBars(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"CellularBars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"CellularBars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CellularBars());
         }
         catch (...)
@@ -1741,12 +1741,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_CellularBars(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"CellularBars"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1755,6 +1749,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"CellularBars"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars>>(arg);
 
             self->obj.CellularBars(param0);
@@ -1769,14 +1769,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiOnDemandHotspotNetworkProperties_get_Availability(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Availability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Availability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Availability());
         }
         catch (...)
@@ -1788,12 +1788,6 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static int WiFiOnDemandHotspotNetworkProperties_put_Availability(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Availability"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1802,6 +1796,12 @@ namespace py::cpp::Windows::Devices::WiFi
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiOnDemandHotspotNetworkProperties", L"Availability"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotAvailability>(arg);
 
             self->obj.Availability(param0);
@@ -1892,14 +1892,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiWpsConfigurationResult_get_Status(py::wrapper::Windows::Devices::WiFi::WiFiWpsConfigurationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiWpsConfigurationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiWpsConfigurationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1911,14 +1911,14 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyObject* WiFiWpsConfigurationResult_get_SupportedWpsKinds(py::wrapper::Windows::Devices::WiFi::WiFiWpsConfigurationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiWpsConfigurationResult", L"SupportedWpsKinds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.WiFi.WiFiWpsConfigurationResult", L"SupportedWpsKinds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedWpsKinds());
         }
         catch (...)

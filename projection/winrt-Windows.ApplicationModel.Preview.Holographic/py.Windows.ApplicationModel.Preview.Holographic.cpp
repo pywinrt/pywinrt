@@ -20,14 +20,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsCurrentViewPresentedOnHolographicDisplay", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsCurrentViewPresentedOnHolographicDisplay", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsCurrentViewPresentedOnHolographicDisplay());
             }
             catch (...)
@@ -49,14 +49,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsHolographicActivation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicApplicationPreview", L"IsHolographicActivation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview::IsHolographicActivation(param0));
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview::GetForCurrentView());
             }
             catch (...)
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"ResetPlacementOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"ResetPlacementOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetPlacementOverride();
                 Py_RETURN_NONE;
             }
@@ -208,14 +208,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
@@ -231,14 +231,14 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Preview.Holographic.HolographicKeyboardPlacementOverridePreview", L"SetPlacementOverride", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);

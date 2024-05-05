@@ -24,14 +24,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneBoundingBox_get_Center(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Center"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Center"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Center());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneBoundingBox_get_Extents(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Extents"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Extents"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Extents());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneBoundingBox_get_Max(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Max"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Max"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Max());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneBoundingBox_get_Min(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Min"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Min"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Min());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneBoundingBox_get_Size(py::wrapper::Microsoft::UI::Composition::Scenes::SceneBoundingBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneBoundingBox", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -193,14 +193,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponent_get_ComponentType(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneComponent", L"ComponentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneComponent", L"ComponentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ComponentType());
         }
         catch (...)
@@ -286,14 +286,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>(args, 0);
 
                 self->obj.Append(param0);
@@ -318,14 +318,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -348,14 +348,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -408,14 +408,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::Scenes::SceneComponent, true>>(args, 1);
 
@@ -440,14 +440,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -469,14 +469,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>(args, 0);
                 uint32_t param1 {  };
 
@@ -513,14 +513,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>(args, 1);
 
@@ -546,14 +546,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -578,14 +578,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -608,14 +608,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::Scenes::SceneComponent, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -640,14 +640,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneComponent>(args, 1);
 
@@ -669,14 +669,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneComponentCollection_get_Size(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponentCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneComponentCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1041,14 +1041,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneMesh::Create(param0));
@@ -1072,14 +1072,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"FillMeshAttribute", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"FillMeshAttribute", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneAttributeSemantic>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::MemoryBuffer>(args, 2);
@@ -1102,14 +1102,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMesh_get_PrimitiveTopology(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"PrimitiveTopology"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"PrimitiveTopology"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimitiveTopology());
         }
         catch (...)
@@ -1121,12 +1121,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMesh_put_PrimitiveTopology(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMesh* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"PrimitiveTopology"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1135,6 +1129,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"PrimitiveTopology"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::Graphics::DirectX::DirectXPrimitiveTopology>(arg);
 
             self->obj.PrimitiveTopology(param0);
@@ -1149,14 +1149,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMesh_get_Bounds(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMesh* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMesh", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -1270,14 +1270,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -1300,14 +1300,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -1329,14 +1329,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -1358,14 +1358,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -1389,14 +1389,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneAttributeSemantic>(args, 1);
 
@@ -1421,14 +1421,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -1452,14 +1452,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -1480,14 +1480,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshMaterialAttributeMap_get_Size(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshMaterialAttributeMap", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -1686,14 +1686,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent::Create(param0));
@@ -1713,14 +1713,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshRendererComponent_get_Mesh(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Mesh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Mesh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mesh());
         }
         catch (...)
@@ -1732,12 +1732,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMeshRendererComponent_put_Mesh(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Mesh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1746,6 +1740,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Mesh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMesh>(arg);
 
             self->obj.Mesh(param0);
@@ -1760,14 +1760,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshRendererComponent_get_Material(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Material"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Material"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Material());
         }
         catch (...)
@@ -1779,12 +1779,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMeshRendererComponent_put_Material(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Material"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1793,6 +1787,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"Material"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterial>(arg);
 
             self->obj.Material(param0);
@@ -1807,14 +1807,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMeshRendererComponent_get_UVMappings(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMeshRendererComponent* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"UVMappings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMeshRendererComponent", L"UVMappings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UVMappings());
         }
         catch (...)
@@ -1928,14 +1928,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial::Create(param0));
@@ -1955,14 +1955,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_get_RoughnessFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"RoughnessFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"RoughnessFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoughnessFactor());
         }
         catch (...)
@@ -1974,12 +1974,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_RoughnessFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"RoughnessFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1988,6 +1982,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"RoughnessFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RoughnessFactor(param0);
@@ -2002,14 +2002,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_get_MetallicRoughnessInput(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicRoughnessInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicRoughnessInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MetallicRoughnessInput());
         }
         catch (...)
@@ -2021,12 +2021,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_MetallicRoughnessInput(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicRoughnessInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2035,6 +2029,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicRoughnessInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
             self->obj.MetallicRoughnessInput(param0);
@@ -2049,14 +2049,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_get_MetallicFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MetallicFactor());
         }
         catch (...)
@@ -2068,12 +2068,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_MetallicFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2082,6 +2076,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"MetallicFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.MetallicFactor(param0);
@@ -2096,14 +2096,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_get_BaseColorInput(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseColorInput());
         }
         catch (...)
@@ -2115,12 +2115,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_BaseColorInput(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2129,6 +2123,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
             self->obj.BaseColorInput(param0);
@@ -2143,14 +2143,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneMetallicRoughnessMaterial_get_BaseColorFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseColorFactor());
         }
         catch (...)
@@ -2162,12 +2162,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneMetallicRoughnessMaterial_put_BaseColorFactor(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2176,6 +2170,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneMetallicRoughnessMaterial", L"BaseColorFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
 
             self->obj.BaseColorFactor(param0);
@@ -2290,14 +2290,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_Translation(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Translation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Translation());
         }
         catch (...)
@@ -2309,12 +2309,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Translation(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Translation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2323,6 +2317,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Translation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Translation(param0);
@@ -2337,14 +2337,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_Scale(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Scale());
         }
         catch (...)
@@ -2356,12 +2356,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Scale(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Scale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2370,6 +2364,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Scale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Scale(param0);
@@ -2384,14 +2384,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_RotationAxis(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAxis());
         }
         catch (...)
@@ -2403,12 +2403,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAxis(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAxis"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2417,6 +2411,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAxis"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.RotationAxis(param0);
@@ -2431,14 +2431,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngleInDegrees());
         }
         catch (...)
@@ -2450,12 +2450,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAngleInDegrees(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2464,6 +2458,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngleInDegrees(param0);
@@ -2478,14 +2478,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_RotationAngle(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationAngle());
         }
         catch (...)
@@ -2497,12 +2497,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_RotationAngle(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2511,6 +2505,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"RotationAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RotationAngle(param0);
@@ -2525,14 +2525,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneModelTransform_get_Orientation(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -2544,12 +2544,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneModelTransform_put_Orientation(py::wrapper::Microsoft::UI::Composition::Scenes::SceneModelTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2558,6 +2552,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneModelTransform", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             self->obj.Orientation(param0);
@@ -2651,14 +2651,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneNode::Create(param0));
@@ -2682,14 +2682,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"FindFirstComponentOfType", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"FindFirstComponentOfType", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneComponentType>(args, 0);
 
                 return py::convert(self->obj.FindFirstComponentOfType(param0));
@@ -2709,14 +2709,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_get_Children(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Children"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Children"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Children());
         }
         catch (...)
@@ -2728,14 +2728,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_get_Components(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Components"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Components"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Components());
         }
         catch (...)
@@ -2747,14 +2747,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_get_Parent(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Parent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Parent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Parent());
         }
         catch (...)
@@ -2766,14 +2766,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNode_get_Transform(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Transform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNode", L"Transform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transform());
         }
         catch (...)
@@ -2889,14 +2889,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneNode>(args, 0);
 
                 self->obj.Append(param0);
@@ -2921,14 +2921,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -2951,14 +2951,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2980,14 +2980,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetAt(param0));
@@ -3011,14 +3011,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetMany", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetMany", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::Scenes::SceneNode, true>>(args, 1);
 
@@ -3043,14 +3043,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -3072,14 +3072,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"IndexOf", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"IndexOf", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneNode>(args, 0);
                 uint32_t param1 {  };
 
@@ -3116,14 +3116,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"InsertAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"InsertAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneNode>(args, 1);
 
@@ -3149,14 +3149,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"RemoveAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"RemoveAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 self->obj.RemoveAt(param0);
@@ -3181,14 +3181,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RemoveAtEnd();
                 Py_RETURN_NONE;
             }
@@ -3211,14 +3211,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"ReplaceAll", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"ReplaceAll", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Microsoft::UI::Composition::Scenes::SceneNode, false>>(args, 0);
 
                 self->obj.ReplaceAll(param0);
@@ -3243,14 +3243,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"SetAt", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"SetAt", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneNode>(args, 1);
 
@@ -3272,14 +3272,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneNodeCollection_get_Size(py::wrapper::Microsoft::UI::Composition::Scenes::SceneNodeCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneNodeCollection", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -3571,14 +3571,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_OcclusionStrength(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionStrength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionStrength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OcclusionStrength());
         }
         catch (...)
@@ -3590,12 +3590,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_OcclusionStrength(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionStrength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3604,6 +3598,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionStrength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.OcclusionStrength(param0);
@@ -3618,14 +3618,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_OcclusionInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OcclusionInput());
         }
         catch (...)
@@ -3637,12 +3637,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_OcclusionInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3651,6 +3645,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"OcclusionInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
             self->obj.OcclusionInput(param0);
@@ -3665,14 +3665,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_NormalScale(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalScale());
         }
         catch (...)
@@ -3684,12 +3684,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_NormalScale(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3698,6 +3692,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.NormalScale(param0);
@@ -3712,14 +3712,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_NormalInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalInput());
         }
         catch (...)
@@ -3731,12 +3731,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_NormalInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3745,6 +3739,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"NormalInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
             self->obj.NormalInput(param0);
@@ -3759,14 +3759,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_IsDoubleSided(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"IsDoubleSided"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"IsDoubleSided"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDoubleSided());
         }
         catch (...)
@@ -3778,12 +3778,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_IsDoubleSided(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"IsDoubleSided"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3792,6 +3786,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"IsDoubleSided"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDoubleSided(param0);
@@ -3806,14 +3806,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_EmissiveInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmissiveInput());
         }
         catch (...)
@@ -3825,12 +3825,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_EmissiveInput(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3839,6 +3833,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
             self->obj.EmissiveInput(param0);
@@ -3853,14 +3853,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_EmissiveFactor(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EmissiveFactor());
         }
         catch (...)
@@ -3872,12 +3872,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_EmissiveFactor(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3886,6 +3880,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"EmissiveFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.EmissiveFactor(param0);
@@ -3900,14 +3900,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_AlphaMode(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlphaMode());
         }
         catch (...)
@@ -3919,12 +3919,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_AlphaMode(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3933,6 +3927,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneAlphaMode>(arg);
 
             self->obj.AlphaMode(param0);
@@ -3947,14 +3947,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* ScenePbrMaterial_get_AlphaCutoff(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlphaCutoff());
         }
         catch (...)
@@ -3966,12 +3966,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int ScenePbrMaterial_put_AlphaCutoff(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3980,6 +3974,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.ScenePbrMaterial", L"AlphaCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.AlphaCutoff(param0);
@@ -4145,14 +4145,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput::Create(param0));
@@ -4172,14 +4172,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneSurfaceMaterialInput_get_WrappingVMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingVMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingVMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WrappingVMode());
         }
         catch (...)
@@ -4191,12 +4191,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_WrappingVMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingVMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4205,6 +4199,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingVMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneWrappingMode>(arg);
 
             self->obj.WrappingVMode(param0);
@@ -4219,14 +4219,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneSurfaceMaterialInput_get_WrappingUMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingUMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingUMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WrappingUMode());
         }
         catch (...)
@@ -4238,12 +4238,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_WrappingUMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingUMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4252,6 +4246,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"WrappingUMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneWrappingMode>(arg);
 
             self->obj.WrappingUMode(param0);
@@ -4266,14 +4266,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneSurfaceMaterialInput_get_Surface(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Surface"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Surface"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Surface());
         }
         catch (...)
@@ -4285,12 +4285,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_Surface(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Surface"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4299,6 +4293,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"Surface"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSurface>(arg);
 
             self->obj.Surface(param0);
@@ -4313,14 +4313,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneSurfaceMaterialInput_get_BitmapInterpolationMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"BitmapInterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"BitmapInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapInterpolationMode());
         }
         catch (...)
@@ -4332,12 +4332,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneSurfaceMaterialInput_put_BitmapInterpolationMode(py::wrapper::Microsoft::UI::Composition::Scenes::SceneSurfaceMaterialInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"BitmapInterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4346,6 +4340,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneSurfaceMaterialInput", L"BitmapInterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionBitmapInterpolationMode>(arg);
 
             self->obj.BitmapInterpolationMode(param0);
@@ -4463,14 +4463,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Create", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Create", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Compositor>(args, 0);
 
                 return py::convert(winrt::Microsoft::UI::Composition::Scenes::SceneVisual::Create(param0));
@@ -4490,14 +4490,14 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static PyObject* SceneVisual_get_Root(py::wrapper::Microsoft::UI::Composition::Scenes::SceneVisual* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Root"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Root"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Root());
         }
         catch (...)
@@ -4509,12 +4509,6 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
     static int SceneVisual_put_Root(py::wrapper::Microsoft::UI::Composition::Scenes::SceneVisual* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Root"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4523,6 +4517,12 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Composition.Scenes.SceneVisual", L"Root"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Scenes::SceneNode>(arg);
 
             self->obj.Root(param0);

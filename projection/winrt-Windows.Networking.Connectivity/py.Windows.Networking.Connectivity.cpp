@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* AttributedNetworkUsage_get_AttributionId(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributionId());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* AttributedNetworkUsage_get_AttributionName(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributionName());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* AttributedNetworkUsage_get_AttributionThumbnail(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionThumbnail"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"AttributionThumbnail"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributionThumbnail());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* AttributedNetworkUsage_get_BytesReceived(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* AttributedNetworkUsage_get_BytesSent(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"BytesSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.AttributedNetworkUsage", L"BytesSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesSent());
         }
         catch (...)
@@ -215,14 +215,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_UserName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserName());
         }
         catch (...)
@@ -234,12 +234,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_UserName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"UserName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -248,6 +242,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"UserName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.UserName(param0);
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_ProviderId(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -281,12 +281,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_ProviderId(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -295,6 +289,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProviderId(param0);
@@ -309,14 +309,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_Password(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Password());
         }
         catch (...)
@@ -328,12 +328,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_Password(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"Password"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -342,6 +336,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"Password"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Password(param0);
@@ -356,14 +356,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_IsCompressionEnabled(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"IsCompressionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"IsCompressionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCompressionEnabled());
         }
         catch (...)
@@ -375,12 +375,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_IsCompressionEnabled(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"IsCompressionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -389,6 +383,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"IsCompressionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsCompressionEnabled(param0);
@@ -403,14 +403,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_AuthenticationType(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AuthenticationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AuthenticationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticationType());
         }
         catch (...)
@@ -422,12 +422,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_AuthenticationType(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AuthenticationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -436,6 +430,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AuthenticationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType>(arg);
 
             self->obj.AuthenticationType(param0);
@@ -450,14 +450,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_AccessPointName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AccessPointName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AccessPointName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessPointName());
         }
         catch (...)
@@ -469,12 +469,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_AccessPointName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AccessPointName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -483,6 +477,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"AccessPointName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.AccessPointName(param0);
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* CellularApnContext_get_ProfileName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -516,12 +516,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int CellularApnContext_put_ProfileName(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -530,6 +524,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.CellularApnContext", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProfileName(param0);
@@ -620,14 +620,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionCost_get_ApproachingDataLimit(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"ApproachingDataLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"ApproachingDataLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApproachingDataLimit());
         }
         catch (...)
@@ -639,14 +639,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionCost_get_NetworkCostType(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"NetworkCostType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"NetworkCostType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkCostType());
         }
         catch (...)
@@ -658,14 +658,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionCost_get_OverDataLimit(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"OverDataLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"OverDataLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OverDataLimit());
         }
         catch (...)
@@ -677,14 +677,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionCost_get_Roaming(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"Roaming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"Roaming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Roaming());
         }
         catch (...)
@@ -696,14 +696,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionCost_get_BackgroundDataUsageRestricted(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"BackgroundDataUsageRestricted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionCost", L"BackgroundDataUsageRestricted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundDataUsageRestricted());
         }
         catch (...)
@@ -793,14 +793,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetAttributedNetworkUsageAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetAttributedNetworkUsageAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
@@ -826,14 +826,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetConnectionCost", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetConnectionCost", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionCost());
             }
             catch (...)
@@ -855,14 +855,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetConnectivityIntervalsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetConnectivityIntervalsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
@@ -888,14 +888,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetDataPlanStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetDataPlanStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDataPlanStatus());
             }
             catch (...)
@@ -917,14 +917,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetDomainConnectivityLevel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetDomainConnectivityLevel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDomainConnectivityLevel());
             }
             catch (...)
@@ -946,14 +946,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetLocalUsage", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetLocalUsage", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
 
@@ -967,14 +967,14 @@ namespace py::cpp::Windows::Networking::Connectivity
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetLocalUsage", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetLocalUsage", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::RoamingStates>(args, 2);
@@ -1000,14 +1000,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkConnectivityLevel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkConnectivityLevel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNetworkConnectivityLevel());
             }
             catch (...)
@@ -1029,14 +1029,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkNames", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkNames", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNetworkNames());
             }
             catch (...)
@@ -1058,14 +1058,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkUsageAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetNetworkUsageAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::DataUsageGranularity>(args, 2);
@@ -1092,14 +1092,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetProviderNetworkUsageAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetProviderNetworkUsageAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkUsageStates>(args, 2);
@@ -1125,14 +1125,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetSignalBars", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"GetSignalBars", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSignalBars());
             }
             catch (...)
@@ -1154,14 +1154,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsDomainAuthenticatedBy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsDomainAuthenticatedBy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::DomainAuthenticationKind>(args, 0);
 
                 return py::convert(self->obj.IsDomainAuthenticatedBy(param0));
@@ -1185,14 +1185,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"TryDeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"TryDeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryDeleteAsync());
             }
             catch (...)
@@ -1210,14 +1210,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_NetworkAdapter(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"NetworkAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"NetworkAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapter());
         }
         catch (...)
@@ -1229,14 +1229,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_NetworkSecuritySettings(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"NetworkSecuritySettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"NetworkSecuritySettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkSecuritySettings());
         }
         catch (...)
@@ -1248,14 +1248,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_ProfileName(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -1267,14 +1267,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_IsWlanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsWlanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsWlanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWlanConnectionProfile());
         }
         catch (...)
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_IsWwanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsWwanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"IsWwanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWwanConnectionProfile());
         }
         catch (...)
@@ -1305,14 +1305,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_ServiceProviderGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"ServiceProviderGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"ServiceProviderGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceProviderGuid());
         }
         catch (...)
@@ -1324,14 +1324,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_WlanConnectionProfileDetails(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"WlanConnectionProfileDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"WlanConnectionProfileDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WlanConnectionProfileDetails());
         }
         catch (...)
@@ -1343,14 +1343,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_WwanConnectionProfileDetails(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"WwanConnectionProfileDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"WwanConnectionProfileDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WwanConnectionProfileDetails());
         }
         catch (...)
@@ -1362,14 +1362,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfile_get_CanDelete(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"CanDelete"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfile", L"CanDelete"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanDelete());
         }
         catch (...)
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_ServiceProviderGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"ServiceProviderGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"ServiceProviderGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceProviderGuid());
         }
         catch (...)
@@ -1513,12 +1513,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_ServiceProviderGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"ServiceProviderGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1527,6 +1521,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"ServiceProviderGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::guid>>(arg);
 
             self->obj.ServiceProviderGuid(param0);
@@ -1541,14 +1541,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_NetworkCostType(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"NetworkCostType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"NetworkCostType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkCostType());
         }
         catch (...)
@@ -1560,12 +1560,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_NetworkCostType(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"NetworkCostType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1574,6 +1568,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"NetworkCostType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkCostType>(arg);
 
             self->obj.NetworkCostType(param0);
@@ -1588,14 +1588,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsWwanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWwanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWwanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWwanConnectionProfile());
         }
         catch (...)
@@ -1607,12 +1607,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsWwanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWwanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1621,6 +1615,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWwanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsWwanConnectionProfile(param0);
@@ -1635,14 +1635,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsWlanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWlanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWlanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWlanConnectionProfile());
         }
         catch (...)
@@ -1654,12 +1654,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsWlanConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWlanConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1668,6 +1662,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsWlanConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsWlanConnectionProfile(param0);
@@ -1682,14 +1682,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsConnected(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnected());
         }
         catch (...)
@@ -1701,12 +1701,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsConnected(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1715,6 +1709,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsConnected(param0);
@@ -1729,14 +1729,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsRoaming(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsRoaming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsRoaming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRoaming());
         }
         catch (...)
@@ -1748,12 +1748,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsRoaming(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsRoaming"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1762,6 +1756,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsRoaming"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsRoaming(param0);
@@ -1776,14 +1776,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsOverDataLimit(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsOverDataLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsOverDataLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOverDataLimit());
         }
         catch (...)
@@ -1795,12 +1795,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsOverDataLimit(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsOverDataLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1809,6 +1803,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsOverDataLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsOverDataLimit(param0);
@@ -1823,14 +1823,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_IsBackgroundDataUsageRestricted(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsBackgroundDataUsageRestricted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsBackgroundDataUsageRestricted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBackgroundDataUsageRestricted());
         }
         catch (...)
@@ -1842,12 +1842,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_IsBackgroundDataUsageRestricted(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsBackgroundDataUsageRestricted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1856,6 +1850,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"IsBackgroundDataUsageRestricted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
             self->obj.IsBackgroundDataUsageRestricted(param0);
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_RawData(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"RawData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"RawData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawData());
         }
         catch (...)
@@ -1889,14 +1889,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionProfileFilter_get_PurposeGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"PurposeGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"PurposeGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PurposeGuid());
         }
         catch (...)
@@ -1908,12 +1908,6 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static int ConnectionProfileFilter_put_PurposeGuid(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"PurposeGuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1922,6 +1916,12 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionProfileFilter", L"PurposeGuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::guid>>(arg);
 
             self->obj.PurposeGuid(param0);
@@ -2019,14 +2019,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectionSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2045,14 +2045,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectionSession_get_ConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionSession", L"ConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectionSession", L"ConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionProfile());
         }
         catch (...)
@@ -2156,14 +2156,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectivityInterval_get_ConnectionDuration(py::wrapper::Windows::Networking::Connectivity::ConnectivityInterval* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectivityInterval", L"ConnectionDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectivityInterval", L"ConnectionDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionDuration());
         }
         catch (...)
@@ -2175,14 +2175,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ConnectivityInterval_get_StartTime(py::wrapper::Windows::Networking::Connectivity::ConnectivityInterval* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectivityInterval", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ConnectivityInterval", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AcquireConnectionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AcquireConnectionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::CellularApnContext>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::Connectivity::ConnectivityManager::AcquireConnectionAsync(param0));
@@ -2292,14 +2292,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AddHttpRoutePolicy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"AddHttpRoutePolicy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
                 winrt::Windows::Networking::Connectivity::ConnectivityManager::AddHttpRoutePolicy(param0);
@@ -2324,14 +2324,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"RemoveHttpRoutePolicy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.ConnectivityManager", L"RemoveHttpRoutePolicy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::RoutePolicy>(args, 0);
 
                 winrt::Windows::Networking::Connectivity::ConnectivityManager::RemoveHttpRoutePolicy(param0);
@@ -2422,14 +2422,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_DataLimitInMegabytes(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"DataLimitInMegabytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"DataLimitInMegabytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataLimitInMegabytes());
         }
         catch (...)
@@ -2441,14 +2441,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_DataPlanUsage(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"DataPlanUsage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"DataPlanUsage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataPlanUsage());
         }
         catch (...)
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_InboundBitsPerSecond(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"InboundBitsPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"InboundBitsPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InboundBitsPerSecond());
         }
         catch (...)
@@ -2479,14 +2479,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_MaxTransferSizeInMegabytes(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"MaxTransferSizeInMegabytes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"MaxTransferSizeInMegabytes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxTransferSizeInMegabytes());
         }
         catch (...)
@@ -2498,14 +2498,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_NextBillingCycle(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"NextBillingCycle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"NextBillingCycle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextBillingCycle());
         }
         catch (...)
@@ -2517,14 +2517,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanStatus_get_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"OutboundBitsPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanStatus", L"OutboundBitsPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutboundBitsPerSecond());
         }
         catch (...)
@@ -2611,14 +2611,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanUsage_get_LastSyncTime(py::wrapper::Windows::Networking::Connectivity::DataPlanUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanUsage", L"LastSyncTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanUsage", L"LastSyncTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastSyncTime());
         }
         catch (...)
@@ -2630,14 +2630,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataPlanUsage_get_MegabytesUsed(py::wrapper::Windows::Networking::Connectivity::DataPlanUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanUsage", L"MegabytesUsed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataPlanUsage", L"MegabytesUsed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MegabytesUsed());
         }
         catch (...)
@@ -2720,14 +2720,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataUsage_get_BytesReceived(py::wrapper::Windows::Networking::Connectivity::DataUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataUsage", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataUsage", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -2739,14 +2739,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* DataUsage_get_BytesSent(py::wrapper::Windows::Networking::Connectivity::DataUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataUsage", L"BytesSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.DataUsage", L"BytesSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesSent());
         }
         catch (...)
@@ -2829,14 +2829,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* IPInformation_get_NetworkAdapter(py::wrapper::Windows::Networking::Connectivity::IPInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.IPInformation", L"NetworkAdapter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.IPInformation", L"NetworkAdapter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapter());
         }
         catch (...)
@@ -2848,14 +2848,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* IPInformation_get_PrefixLength(py::wrapper::Windows::Networking::Connectivity::IPInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.IPInformation", L"PrefixLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.IPInformation", L"PrefixLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrefixLength());
         }
         catch (...)
@@ -2938,14 +2938,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* LanIdentifier_get_InfrastructureId(py::wrapper::Windows::Networking::Connectivity::LanIdentifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"InfrastructureId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"InfrastructureId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InfrastructureId());
         }
         catch (...)
@@ -2957,14 +2957,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* LanIdentifier_get_NetworkAdapterId(py::wrapper::Windows::Networking::Connectivity::LanIdentifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"NetworkAdapterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"NetworkAdapterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapterId());
         }
         catch (...)
@@ -2976,14 +2976,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* LanIdentifier_get_PortId(py::wrapper::Windows::Networking::Connectivity::LanIdentifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"PortId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifier", L"PortId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PortId());
         }
         catch (...)
@@ -3067,14 +3067,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* LanIdentifierData_get_Type(py::wrapper::Windows::Networking::Connectivity::LanIdentifierData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifierData", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifierData", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3086,14 +3086,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* LanIdentifierData_get_Value(py::wrapper::Windows::Networking::Connectivity::LanIdentifierData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifierData", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.LanIdentifierData", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -3180,14 +3180,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"GetConnectedProfileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"GetConnectedProfileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectedProfileAsync());
             }
             catch (...)
@@ -3205,14 +3205,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_get_IanaInterfaceType(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"IanaInterfaceType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"IanaInterfaceType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IanaInterfaceType());
         }
         catch (...)
@@ -3224,14 +3224,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_get_InboundMaxBitsPerSecond(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"InboundMaxBitsPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"InboundMaxBitsPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InboundMaxBitsPerSecond());
         }
         catch (...)
@@ -3243,14 +3243,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_get_NetworkAdapterId(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"NetworkAdapterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"NetworkAdapterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAdapterId());
         }
         catch (...)
@@ -3262,14 +3262,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_get_NetworkItem(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"NetworkItem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"NetworkItem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkItem());
         }
         catch (...)
@@ -3281,14 +3281,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkAdapter_get_OutboundMaxBitsPerSecond(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"OutboundMaxBitsPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkAdapter", L"OutboundMaxBitsPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutboundMaxBitsPerSecond());
         }
         catch (...)
@@ -3371,14 +3371,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"FindConnectionProfilesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"FindConnectionProfilesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::FindConnectionProfilesAsync(param0));
@@ -3402,14 +3402,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetConnectionProfiles", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetConnectionProfiles", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetConnectionProfiles());
             }
             catch (...)
@@ -3431,14 +3431,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetHostNames", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetHostNames", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetHostNames());
             }
             catch (...)
@@ -3460,14 +3460,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetInternetConnectionProfile", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetInternetConnectionProfile", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetInternetConnectionProfile());
             }
             catch (...)
@@ -3489,14 +3489,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetLanIdentifiers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetLanIdentifiers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetLanIdentifiers());
             }
             catch (...)
@@ -3518,14 +3518,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetProxyConfigurationAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetProxyConfigurationAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::GetProxyConfigurationAsync(param0));
@@ -3549,14 +3549,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetSortedEndpointPairs", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"GetSortedEndpointPairs", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::EndpointPair>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::HostNameSortOptions>(args, 1);
 
@@ -3577,14 +3577,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_add_NetworkStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler>(arg);
 
             return py::convert(winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0));
@@ -3598,14 +3598,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkInformation_remove_NetworkStatusChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Connectivity.NetworkInformation", L"NetworkStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Networking::Connectivity::NetworkInformation::NetworkStatusChanged(param0);
@@ -3700,14 +3700,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkItem", L"GetNetworkTypes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.NetworkItem", L"GetNetworkTypes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNetworkTypes());
             }
             catch (...)
@@ -3725,14 +3725,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkItem_get_NetworkId(py::wrapper::Windows::Networking::Connectivity::NetworkItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkItem", L"NetworkId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkItem", L"NetworkId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkId());
         }
         catch (...)
@@ -3815,14 +3815,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkSecuritySettings_get_NetworkAuthenticationType(py::wrapper::Windows::Networking::Connectivity::NetworkSecuritySettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkSecuritySettings", L"NetworkAuthenticationType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkSecuritySettings", L"NetworkAuthenticationType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAuthenticationType());
         }
         catch (...)
@@ -3834,14 +3834,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkSecuritySettings_get_NetworkEncryptionType(py::wrapper::Windows::Networking::Connectivity::NetworkSecuritySettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkSecuritySettings", L"NetworkEncryptionType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkSecuritySettings", L"NetworkEncryptionType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkEncryptionType());
         }
         catch (...)
@@ -3924,14 +3924,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewConnectionCost(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewConnectionCost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewConnectionCost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewConnectionCost());
         }
         catch (...)
@@ -3943,14 +3943,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewDomainConnectivityLevel(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewDomainConnectivityLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewDomainConnectivityLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewDomainConnectivityLevel());
         }
         catch (...)
@@ -3962,14 +3962,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewHostNameList(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewHostNameList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewHostNameList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewHostNameList());
         }
         catch (...)
@@ -3981,14 +3981,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewInternetConnectionProfile(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewInternetConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewInternetConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewInternetConnectionProfile());
         }
         catch (...)
@@ -4000,14 +4000,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewNetworkConnectivityLevel(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewNetworkConnectivityLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewNetworkConnectivityLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewNetworkConnectivityLevel());
         }
         catch (...)
@@ -4019,14 +4019,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewWwanRegistrationState(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewWwanRegistrationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewWwanRegistrationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewWwanRegistrationState());
         }
         catch (...)
@@ -4038,14 +4038,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewTetheringClientCount(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewTetheringClientCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewTetheringClientCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewTetheringClientCount());
         }
         catch (...)
@@ -4057,14 +4057,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkStateChangeEventDetails_get_HasNewTetheringOperationalState(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewTetheringOperationalState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkStateChangeEventDetails", L"HasNewTetheringOperationalState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HasNewTetheringOperationalState());
         }
         catch (...)
@@ -4153,14 +4153,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkUsage_get_BytesReceived(py::wrapper::Windows::Networking::Connectivity::NetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -4172,14 +4172,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkUsage_get_BytesSent(py::wrapper::Windows::Networking::Connectivity::NetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"BytesSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"BytesSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesSent());
         }
         catch (...)
@@ -4191,14 +4191,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* NetworkUsage_get_ConnectionDuration(py::wrapper::Windows::Networking::Connectivity::NetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"ConnectionDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.NetworkUsage", L"ConnectionDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionDuration());
         }
         catch (...)
@@ -4282,14 +4282,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ProviderNetworkUsage_get_BytesReceived(py::wrapper::Windows::Networking::Connectivity::ProviderNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"BytesReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"BytesReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesReceived());
         }
         catch (...)
@@ -4301,14 +4301,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ProviderNetworkUsage_get_BytesSent(py::wrapper::Windows::Networking::Connectivity::ProviderNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"BytesSent"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"BytesSent"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BytesSent());
         }
         catch (...)
@@ -4320,14 +4320,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ProviderNetworkUsage_get_ProviderId(py::wrapper::Windows::Networking::Connectivity::ProviderNetworkUsage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"ProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProviderNetworkUsage", L"ProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderId());
         }
         catch (...)
@@ -4411,14 +4411,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ProxyConfiguration_get_CanConnectDirectly(py::wrapper::Windows::Networking::Connectivity::ProxyConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProxyConfiguration", L"CanConnectDirectly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProxyConfiguration", L"CanConnectDirectly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanConnectDirectly());
         }
         catch (...)
@@ -4430,14 +4430,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* ProxyConfiguration_get_ProxyUris(py::wrapper::Windows::Networking::Connectivity::ProxyConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProxyConfiguration", L"ProxyUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.ProxyConfiguration", L"ProxyUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyUris());
         }
         catch (...)
@@ -4546,14 +4546,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* RoutePolicy_get_ConnectionProfile(py::wrapper::Windows::Networking::Connectivity::RoutePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"ConnectionProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"ConnectionProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionProfile());
         }
         catch (...)
@@ -4565,14 +4565,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* RoutePolicy_get_HostName(py::wrapper::Windows::Networking::Connectivity::RoutePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"HostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"HostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostName());
         }
         catch (...)
@@ -4584,14 +4584,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* RoutePolicy_get_HostNameType(py::wrapper::Windows::Networking::Connectivity::RoutePolicy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"HostNameType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.RoutePolicy", L"HostNameType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostNameType());
         }
         catch (...)
@@ -4679,14 +4679,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WlanConnectionProfileDetails", L"GetConnectedSsid", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WlanConnectionProfileDetails", L"GetConnectedSsid", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectedSsid());
             }
             catch (...)
@@ -4778,14 +4778,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"GetCurrentDataClass", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"GetCurrentDataClass", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentDataClass());
             }
             catch (...)
@@ -4807,14 +4807,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"GetNetworkRegistrationState", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"GetNetworkRegistrationState", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetNetworkRegistrationState());
             }
             catch (...)
@@ -4832,14 +4832,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_get_AccessPointName(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"AccessPointName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"AccessPointName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccessPointName());
         }
         catch (...)
@@ -4851,14 +4851,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_get_HomeProviderId(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"HomeProviderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"HomeProviderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HomeProviderId());
         }
         catch (...)
@@ -4870,14 +4870,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_get_IPKind(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"IPKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"IPKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IPKind());
         }
         catch (...)
@@ -4889,14 +4889,14 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static PyObject* WwanConnectionProfileDetails_get_PurposeGuids(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"PurposeGuids"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Connectivity.WwanConnectionProfileDetails", L"PurposeGuids"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PurposeGuids());
         }
         catch (...)

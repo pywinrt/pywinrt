@@ -65,14 +65,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CancelAsyncOperations", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CancelAsyncOperations", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.CancelAsyncOperations();
                 Py_RETURN_NONE;
             }
@@ -95,14 +95,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateMediaResourceAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateMediaResourceAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -129,14 +129,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateResourceAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"CreateResourceAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 2);
@@ -162,14 +162,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.DeleteResourceAsync(param0));
@@ -193,14 +193,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"DeleteResourceItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 0);
 
                 return py::convert(self->obj.DeleteResourceItemAsync(param0));
@@ -224,14 +224,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveFeedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveFeedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveFeedAsync(param0));
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveMediaResourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveMediaResourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveMediaResourceAsync(param0));
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveResourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveResourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveResourceAsync(param0));
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveServiceDocumentAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"RetrieveServiceDocumentAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.RetrieveServiceDocumentAsync(param0));
@@ -348,14 +348,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -381,14 +381,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateMediaResourceAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateMediaResourceAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 2);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 1);
 
@@ -446,14 +446,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceItemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.AtomPubClient", L"UpdateResourceItemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationItem>(args, 0);
 
                 return py::convert(self->obj.UpdateResourceItemAsync(param0));
@@ -473,14 +473,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_get_Timeout(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timeout());
         }
         catch (...)
@@ -492,12 +492,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_Timeout(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -506,6 +500,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"Timeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Timeout(param0);
@@ -520,14 +520,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_get_ServerCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -539,12 +539,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_ServerCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -553,6 +547,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -567,14 +567,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_get_ProxyCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -586,12 +586,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_ProxyCredential(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -600,6 +594,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -614,14 +614,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_get_MaxResponseBufferSize(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxResponseBufferSize());
         }
         catch (...)
@@ -633,12 +633,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_MaxResponseBufferSize(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -647,6 +641,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"MaxResponseBufferSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.MaxResponseBufferSize(param0);
@@ -661,14 +661,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* AtomPubClient_get_BypassCacheOnRetrieve(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BypassCacheOnRetrieve());
         }
         catch (...)
@@ -680,12 +680,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int AtomPubClient_put_BypassCacheOnRetrieve(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -694,6 +688,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.AtomPubClient", L"BypassCacheOnRetrieve"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.BypassCacheOnRetrieve(param0);
@@ -799,14 +799,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ResourceCollection", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ResourceCollection", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -826,14 +826,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_Accepts(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Accepts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Accepts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Accepts());
         }
         catch (...)
@@ -845,14 +845,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_Categories(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Categories"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Categories"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Categories());
         }
         catch (...)
@@ -864,14 +864,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_Title(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -883,14 +883,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_Uri(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -902,14 +902,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_BaseUri(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -921,12 +921,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_BaseUri(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -935,6 +929,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_NodeValue(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -968,12 +968,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeValue(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -982,6 +976,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -996,14 +996,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -1015,12 +1015,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1029,6 +1023,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -1043,14 +1043,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_NodeName(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -1062,12 +1062,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_NodeName(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1076,6 +1070,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -1090,14 +1090,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_Language(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -1109,12 +1109,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ResourceCollection_put_Language(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1123,6 +1117,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -1137,14 +1137,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_AttributeExtensions(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ResourceCollection_get_ElementExtensions(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ResourceCollection", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -1260,14 +1260,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ServiceDocument", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.ServiceDocument", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -1287,14 +1287,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_Workspaces(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Workspaces"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Workspaces"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Workspaces());
         }
         catch (...)
@@ -1306,14 +1306,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_NodeValue(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -1325,12 +1325,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeValue(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1339,6 +1333,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -1353,14 +1353,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -1372,12 +1372,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1386,6 +1380,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -1400,14 +1400,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_NodeName(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -1419,12 +1419,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_NodeName(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1433,6 +1427,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -1447,14 +1447,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_Language(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -1466,12 +1466,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_Language(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1480,6 +1474,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_BaseUri(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -1513,12 +1513,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int ServiceDocument_put_BaseUri(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1527,6 +1521,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -1541,14 +1541,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_AttributeExtensions(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -1560,14 +1560,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* ServiceDocument_get_ElementExtensions(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.ServiceDocument", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)
@@ -1661,14 +1661,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.Workspace", L"GetXmlDocument", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Web.AtomPub.Workspace", L"GetXmlDocument", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Web::Syndication::SyndicationFormat>(args, 0);
 
                 return py::convert(self->obj.GetXmlDocument(param0));
@@ -1688,14 +1688,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_Collections(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Collections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Collections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Collections());
         }
         catch (...)
@@ -1707,14 +1707,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_Title(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Title"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Title"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Title());
         }
         catch (...)
@@ -1726,14 +1726,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_NodeValue(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeValue());
         }
         catch (...)
@@ -1745,12 +1745,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeValue(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1759,6 +1753,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeValue(param0);
@@ -1773,14 +1773,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_NodeNamespace(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeNamespace());
         }
         catch (...)
@@ -1792,12 +1792,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeNamespace(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1806,6 +1800,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeNamespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeNamespace(param0);
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_NodeName(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NodeName());
         }
         catch (...)
@@ -1839,12 +1839,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_NodeName(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1853,6 +1847,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"NodeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NodeName(param0);
@@ -1867,14 +1867,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_Language(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -1886,12 +1886,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_Language(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1900,6 +1894,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Language(param0);
@@ -1914,14 +1914,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_BaseUri(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BaseUri());
         }
         catch (...)
@@ -1933,12 +1933,6 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static int Workspace_put_BaseUri(py::wrapper::Windows::Web::AtomPub::Workspace* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1947,6 +1941,12 @@ namespace py::cpp::Windows::Web::AtomPub
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"BaseUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.BaseUri(param0);
@@ -1961,14 +1961,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_AttributeExtensions(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"AttributeExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"AttributeExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AttributeExtensions());
         }
         catch (...)
@@ -1980,14 +1980,14 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyObject* Workspace_get_ElementExtensions(py::wrapper::Windows::Web::AtomPub::Workspace* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"ElementExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Web.AtomPub.Workspace", L"ElementExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementExtensions());
         }
         catch (...)

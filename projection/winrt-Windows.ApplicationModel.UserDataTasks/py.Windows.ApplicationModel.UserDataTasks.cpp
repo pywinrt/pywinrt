@@ -46,14 +46,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_RegenerationProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RegenerationProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RegenerationProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RegenerationProperties());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RegenerationProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RegenerationProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RegenerationProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>(arg);
 
             self->obj.RegenerationProperties(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Priority(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Priority(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskPriority>(arg);
 
             self->obj.Priority(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_CompletedDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"CompletedDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"CompletedDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletedDate());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_CompletedDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"CompletedDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"CompletedDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.CompletedDate(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_DueDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DueDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DueDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DueDate());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_DueDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DueDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DueDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.DueDate(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_DetailsKind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DetailsKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DetailsKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DetailsKind());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_DetailsKind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DetailsKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"DetailsKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDetailsKind>(arg);
 
             self->obj.DetailsKind(param0);
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_StartDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"StartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"StartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartDate());
         }
         catch (...)
@@ -300,12 +300,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_StartDate(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"StartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -314,6 +308,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"StartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.StartDate(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Details(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Details());
         }
         catch (...)
@@ -347,12 +347,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Details(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -361,6 +355,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Details(param0);
@@ -375,14 +375,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Subject(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subject());
         }
         catch (...)
@@ -394,12 +394,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Subject(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Subject"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -408,6 +402,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Subject"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subject(param0);
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Sensitivity(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Sensitivity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Sensitivity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Sensitivity());
         }
         catch (...)
@@ -441,12 +441,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Sensitivity(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Sensitivity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -455,6 +449,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Sensitivity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskSensitivity>(arg);
 
             self->obj.Sensitivity(param0);
@@ -469,14 +469,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_RemoteId(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteId());
         }
         catch (...)
@@ -488,12 +488,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RemoteId(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RemoteId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -502,6 +496,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RemoteId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.RemoteId(param0);
@@ -516,14 +516,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Reminder(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Reminder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Reminder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reminder());
         }
         catch (...)
@@ -535,12 +535,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_Reminder(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Reminder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -549,6 +543,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Reminder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Reminder(param0);
@@ -563,14 +563,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_RecurrenceProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RecurrenceProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RecurrenceProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecurrenceProperties());
         }
         catch (...)
@@ -582,12 +582,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTask_put_RecurrenceProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RecurrenceProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -596,6 +590,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"RecurrenceProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>(arg);
 
             self->obj.RecurrenceProperties(param0);
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Id(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTask_get_ListId(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"ListId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTask", L"ListId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListId());
         }
         catch (...)
@@ -751,14 +751,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskBatch_get_Tasks(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch", L"Tasks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskBatch", L"Tasks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tasks());
         }
         catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
@@ -873,14 +873,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DeleteTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DeleteTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.DeleteTaskAsync(param0));
@@ -904,14 +904,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetTaskAsync(param0));
@@ -935,14 +935,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskReader", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskReader", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTaskReader());
             }
             catch (...)
@@ -953,14 +953,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskReader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"GetTaskReader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>(args, 0);
 
                 return py::convert(self->obj.GetTaskReader(param0));
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"RegisterSyncManagerAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"RegisterSyncManagerAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RegisterSyncManagerAsync());
             }
             catch (...)
@@ -1013,14 +1013,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -1042,14 +1042,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SaveTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SaveTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>(args, 0);
 
                 return py::convert(self->obj.SaveTaskAsync(param0));
@@ -1069,14 +1069,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppWriteAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppWriteAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OtherAppWriteAccess());
         }
         catch (...)
@@ -1088,12 +1088,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_OtherAppWriteAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppWriteAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1102,6 +1096,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppWriteAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppWriteAccess>(arg);
 
             self->obj.OtherAppWriteAccess(param0);
@@ -1116,14 +1116,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppReadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppReadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OtherAppReadAccess());
         }
         catch (...)
@@ -1135,12 +1135,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_OtherAppReadAccess(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppReadAccess"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1149,6 +1143,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"OtherAppReadAccess"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppReadAccess>(arg);
 
             self->obj.OtherAppReadAccess(param0);
@@ -1163,14 +1163,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -1182,12 +1182,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskList_put_DisplayName(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1196,6 +1190,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -1210,14 +1210,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_Id(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1229,14 +1229,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_LimitedWriteOperations(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"LimitedWriteOperations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"LimitedWriteOperations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LimitedWriteOperations());
         }
         catch (...)
@@ -1248,14 +1248,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_SourceDisplayName(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SourceDisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SourceDisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceDisplayName());
         }
         catch (...)
@@ -1267,14 +1267,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_SyncManager(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SyncManager"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"SyncManager"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SyncManager());
         }
         catch (...)
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskList_get_UserDataAccountId(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"UserDataAccountId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskList", L"UserDataAccountId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserDataAccountId());
         }
         catch (...)
@@ -1393,14 +1393,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryCompleteTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryCompleteTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryCompleteTaskAsync(param0));
@@ -1424,14 +1424,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryCreateOrUpdateTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryCreateOrUpdateTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>(args, 0);
 
                 return py::convert(self->obj.TryCreateOrUpdateTaskAsync(param0));
@@ -1455,14 +1455,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryDeleteTaskAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TryDeleteTaskAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryDeleteTaskAsync(param0));
@@ -1486,14 +1486,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TrySkipOccurrenceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListLimitedWriteOperations", L"TrySkipOccurrenceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TrySkipOccurrenceAsync(param0));
@@ -1590,14 +1590,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SyncAsync());
             }
             catch (...)
@@ -1615,14 +1615,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_get_Status(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1634,12 +1634,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_Status(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1648,6 +1642,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus>(arg);
 
             self->obj.Status(param0);
@@ -1662,14 +1662,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_get_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastSuccessfulSyncTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastSuccessfulSyncTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastSuccessfulSyncTime());
         }
         catch (...)
@@ -1681,12 +1681,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_LastSuccessfulSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastSuccessfulSyncTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1695,6 +1689,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastSuccessfulSyncTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.LastSuccessfulSyncTime(param0);
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_get_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastAttemptedSyncTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastAttemptedSyncTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastAttemptedSyncTime());
         }
         catch (...)
@@ -1728,12 +1728,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskListSyncManager_put_LastAttemptedSyncTime(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastAttemptedSyncTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1742,6 +1736,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"LastAttemptedSyncTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
 
             self->obj.LastAttemptedSyncTime(param0);
@@ -1756,14 +1756,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_add_SyncStatusChanged(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SyncStatusChanged(param0));
@@ -1777,14 +1777,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskListSyncManager_remove_SyncStatusChanged(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskListSyncManager", L"SyncStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SyncStatusChanged(param0);
@@ -1878,14 +1878,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetDefault());
             }
             catch (...)
@@ -1907,14 +1907,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager::GetForUser(param0));
@@ -1938,14 +1938,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"RequestStoreAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"RequestStoreAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStoreAccessType>(args, 0);
 
                 return py::convert(self->obj.RequestStoreAsync(param0));
@@ -1965,14 +1965,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskManager_get_User(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskManager", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2104,14 +2104,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskQueryOptions_get_SortProperty(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"SortProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"SortProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SortProperty());
         }
         catch (...)
@@ -2123,12 +2123,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskQueryOptions_put_SortProperty(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"SortProperty"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2137,6 +2131,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"SortProperty"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQuerySortProperty>(arg);
 
             self->obj.SortProperty(param0);
@@ -2151,14 +2151,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskQueryOptions_get_Kind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2170,12 +2170,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskQueryOptions_put_Kind(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2184,6 +2178,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskQueryOptions", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryKind>(arg);
 
             self->obj.Kind(param0);
@@ -2273,14 +2273,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskReader", L"ReadBatchAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskReader", L"ReadBatchAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReadBatchAsync());
             }
             catch (...)
@@ -2390,14 +2390,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_WeekOfMonth(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"WeekOfMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"WeekOfMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WeekOfMonth());
         }
         catch (...)
@@ -2409,12 +2409,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_WeekOfMonth(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"WeekOfMonth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2423,6 +2417,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"WeekOfMonth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth>>(arg);
 
             self->obj.WeekOfMonth(param0);
@@ -2437,14 +2437,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Until"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Until"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Until());
         }
         catch (...)
@@ -2456,12 +2456,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Until"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2470,6 +2464,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Until"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Until(param0);
@@ -2484,14 +2484,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Unit());
         }
         catch (...)
@@ -2503,12 +2503,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2517,6 +2511,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceUnit>(arg);
 
             self->obj.Unit(param0);
@@ -2531,14 +2531,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Occurrences());
         }
         catch (...)
@@ -2550,12 +2550,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2564,6 +2558,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.Occurrences(param0);
@@ -2578,14 +2578,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Month(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Month"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Month"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Month());
         }
         catch (...)
@@ -2597,12 +2597,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Month(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Month"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2611,6 +2605,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Month"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.Month(param0);
@@ -2625,14 +2625,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -2644,12 +2644,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2658,6 +2652,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Interval(param0);
@@ -2672,14 +2672,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_DaysOfWeek(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"DaysOfWeek"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"DaysOfWeek"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DaysOfWeek());
         }
         catch (...)
@@ -2691,12 +2691,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_DaysOfWeek(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"DaysOfWeek"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2705,6 +2699,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"DaysOfWeek"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek>>(arg);
 
             self->obj.DaysOfWeek(param0);
@@ -2719,14 +2719,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRecurrenceProperties_get_Day(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Day"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Day"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Day());
         }
         catch (...)
@@ -2738,12 +2738,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRecurrenceProperties_put_Day(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Day"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2752,6 +2746,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRecurrenceProperties", L"Day"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.Day(param0);
@@ -2865,14 +2865,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRegenerationProperties_get_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Until"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Until"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Until());
         }
         catch (...)
@@ -2884,12 +2884,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Until(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Until"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2898,6 +2892,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Until"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Until(param0);
@@ -2912,14 +2912,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRegenerationProperties_get_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Unit());
         }
         catch (...)
@@ -2931,12 +2931,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Unit(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Unit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2945,6 +2939,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Unit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit>(arg);
 
             self->obj.Unit(param0);
@@ -2959,14 +2959,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRegenerationProperties_get_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Occurrences());
         }
         catch (...)
@@ -2978,12 +2978,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Occurrences(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Occurrences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2992,6 +2986,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Occurrences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.Occurrences(param0);
@@ -3006,14 +3006,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyObject* UserDataTaskRegenerationProperties_get_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Interval());
         }
         catch (...)
@@ -3025,12 +3025,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static int UserDataTaskRegenerationProperties_put_Interval(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Interval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3039,6 +3033,12 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskRegenerationProperties", L"Interval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Interval(param0);
@@ -3130,14 +3130,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"CreateListAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"CreateListAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateListAsync(param0));
@@ -3150,14 +3150,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"CreateListAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"CreateListAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3182,14 +3182,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"FindListsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"FindListsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FindListsAsync());
             }
             catch (...)
@@ -3211,14 +3211,14 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"GetListAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.UserDataTasks.UserDataTaskStore", L"GetListAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetListAsync(param0));

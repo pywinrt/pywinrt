@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"GetPage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"GetPage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetPage(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromFileAsync(param0));
@@ -79,14 +79,14 @@ namespace py::cpp::Windows::Data::Pdf
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromFileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromFileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::Data::Pdf::PdfDocument::LoadFromStreamAsync(param0));
@@ -131,14 +131,14 @@ namespace py::cpp::Windows::Data::Pdf
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfDocument", L"LoadFromStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -159,14 +159,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_get_IsPasswordProtected(py::wrapper::Windows::Data::Pdf::PdfDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfDocument", L"IsPasswordProtected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfDocument", L"IsPasswordProtected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPasswordProtected());
         }
         catch (...)
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfDocument_get_PageCount(py::wrapper::Windows::Data::Pdf::PdfDocument* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfDocument", L"PageCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfDocument", L"PageCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PageCount());
         }
         catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -330,14 +330,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"PreparePageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"PreparePageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PreparePageAsync());
             }
             catch (...)
@@ -359,14 +359,14 @@ namespace py::cpp::Windows::Data::Pdf
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"RenderToStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"RenderToStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(self->obj.RenderToStreamAsync(param0));
@@ -379,14 +379,14 @@ namespace py::cpp::Windows::Data::Pdf
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"RenderToStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Data.Pdf.PdfPage", L"RenderToStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Data::Pdf::PdfPageRenderOptions>(args, 1);
 
@@ -407,14 +407,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_get_Dimensions(py::wrapper::Windows::Data::Pdf::PdfPage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Dimensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Dimensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dimensions());
         }
         catch (...)
@@ -426,14 +426,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_get_Index(py::wrapper::Windows::Data::Pdf::PdfPage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Index"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Index"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Index());
         }
         catch (...)
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_get_PreferredZoom(py::wrapper::Windows::Data::Pdf::PdfPage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"PreferredZoom"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"PreferredZoom"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredZoom());
         }
         catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_get_Rotation(py::wrapper::Windows::Data::Pdf::PdfPage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rotation());
         }
         catch (...)
@@ -483,14 +483,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPage_get_Size(py::wrapper::Windows::Data::Pdf::PdfPage* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPage", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -600,14 +600,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageDimensions_get_ArtBox(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"ArtBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"ArtBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ArtBox());
         }
         catch (...)
@@ -619,14 +619,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageDimensions_get_BleedBox(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"BleedBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"BleedBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BleedBox());
         }
         catch (...)
@@ -638,14 +638,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageDimensions_get_CropBox(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"CropBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"CropBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CropBox());
         }
         catch (...)
@@ -657,14 +657,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageDimensions_get_MediaBox(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"MediaBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"MediaBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaBox());
         }
         catch (...)
@@ -676,14 +676,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageDimensions_get_TrimBox(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"TrimBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageDimensions", L"TrimBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimBox());
         }
         catch (...)
@@ -791,14 +791,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_SourceRect(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"SourceRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"SourceRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceRect());
         }
         catch (...)
@@ -810,12 +810,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_SourceRect(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"SourceRect"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -824,6 +818,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"SourceRect"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
             self->obj.SourceRect(param0);
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_IsIgnoringHighContrast(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"IsIgnoringHighContrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"IsIgnoringHighContrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsIgnoringHighContrast());
         }
         catch (...)
@@ -857,12 +857,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_IsIgnoringHighContrast(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"IsIgnoringHighContrast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -871,6 +865,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"IsIgnoringHighContrast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsIgnoringHighContrast(param0);
@@ -885,14 +885,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_DestinationWidth(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DestinationWidth());
         }
         catch (...)
@@ -904,12 +904,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_DestinationWidth(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -918,6 +912,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DestinationWidth(param0);
@@ -932,14 +932,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_DestinationHeight(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DestinationHeight());
         }
         catch (...)
@@ -951,12 +951,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_DestinationHeight(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -965,6 +959,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"DestinationHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.DestinationHeight(param0);
@@ -979,14 +979,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_BitmapEncoderId(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BitmapEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BitmapEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapEncoderId());
         }
         catch (...)
@@ -998,12 +998,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_BitmapEncoderId(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BitmapEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1012,6 +1006,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BitmapEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.BitmapEncoderId(param0);
@@ -1026,14 +1026,14 @@ namespace py::cpp::Windows::Data::Pdf
 
     static PyObject* PdfPageRenderOptions_get_BackgroundColor(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -1045,12 +1045,6 @@ namespace py::cpp::Windows::Data::Pdf
 
     static int PdfPageRenderOptions_put_BackgroundColor(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1059,6 +1053,12 @@ namespace py::cpp::Windows::Data::Pdf
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Data.Pdf.PdfPageRenderOptions", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);

@@ -24,14 +24,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderAddAppointmentActivatedEventArgs_get_AddAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddAppointmentOperation());
         }
         catch (...)
@@ -213,14 +213,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -251,14 +251,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -270,14 +270,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderRemoveAppointmentActivatedEventArgs_get_RemoveAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoveAppointmentOperation());
         }
         catch (...)
@@ -402,14 +402,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -440,14 +440,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -459,14 +459,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ReplaceAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReplaceAppointmentOperation());
         }
         catch (...)
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -667,14 +667,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -686,14 +686,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_InstanceStartDate(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceStartDate());
         }
         catch (...)
@@ -705,14 +705,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_LocalId(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalId());
         }
         catch (...)
@@ -724,14 +724,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_RoamingId(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoamingId());
         }
         catch (...)
@@ -820,14 +820,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -839,14 +839,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -858,14 +858,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -877,14 +877,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -915,14 +915,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_Duration(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -934,14 +934,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* AppointmentsProviderShowTimeFrameActivatedEventArgs_get_TimeToShow(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToShow());
         }
         catch (...)
@@ -1029,14 +1029,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BackgroundActivatedEventArgs_get_TaskInstance(py::wrapper::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs", L"TaskInstance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs", L"TaskInstance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskInstance());
         }
         catch (...)
@@ -1118,14 +1118,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BarcodeScannerPreviewActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1137,14 +1137,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BarcodeScannerPreviewActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BarcodeScannerPreviewActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -1175,14 +1175,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BarcodeScannerPreviewActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1194,14 +1194,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* BarcodeScannerPreviewActivatedEventArgs_get_ConnectionId(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.BarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionId());
         }
         catch (...)
@@ -1287,14 +1287,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CachedFileUpdaterActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1306,14 +1306,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -1325,14 +1325,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CachedFileUpdaterActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -1344,14 +1344,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CachedFileUpdaterActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1363,14 +1363,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CachedFileUpdaterUI());
         }
         catch (...)
@@ -1456,14 +1456,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CameraSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1475,14 +1475,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CameraSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -1494,14 +1494,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CameraSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -1513,14 +1513,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CameraSettingsActivatedEventArgs_get_VideoDeviceController(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"VideoDeviceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"VideoDeviceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceController());
         }
         catch (...)
@@ -1532,14 +1532,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CameraSettingsActivatedEventArgs_get_VideoDeviceExtension(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceExtension());
         }
         catch (...)
@@ -1625,14 +1625,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -1644,14 +1644,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -1663,14 +1663,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -1682,14 +1682,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -1701,14 +1701,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -1798,14 +1798,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1823,14 +1823,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivationOperation_get_ExitCode(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"ExitCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"ExitCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitCode());
         }
         catch (...)
@@ -1842,12 +1842,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static int CommandLineActivationOperation_put_ExitCode(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"ExitCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1856,6 +1850,12 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"ExitCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ExitCode(param0);
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivationOperation_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -1889,14 +1889,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* CommandLineActivationOperation_get_CurrentDirectoryPath(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"CurrentDirectoryPath"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.CommandLineActivationOperation", L"CurrentDirectoryPath"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentDirectoryPath());
         }
         catch (...)
@@ -1981,14 +1981,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2000,14 +2000,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2019,14 +2019,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2038,14 +2038,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2057,14 +2057,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -2076,14 +2076,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -2095,14 +2095,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -2190,14 +2190,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2209,14 +2209,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2228,14 +2228,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2247,14 +2247,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2266,14 +2266,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_Address(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -2285,14 +2285,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMapActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -2379,14 +2379,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2398,14 +2398,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2417,14 +2417,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2436,14 +2436,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -2455,14 +2455,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -2474,14 +2474,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -2493,14 +2493,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactMessageActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -2588,14 +2588,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2607,14 +2607,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2626,14 +2626,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2645,14 +2645,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2664,14 +2664,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -2683,14 +2683,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPanelActivatedEventArgs_get_ContactPanel(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"ContactPanel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPanelActivatedEventArgs", L"ContactPanel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPanel());
         }
         catch (...)
@@ -2777,14 +2777,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2796,14 +2796,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2815,14 +2815,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2834,14 +2834,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPickerActivatedEventArgs_get_ContactPickerUI(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"ContactPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs", L"ContactPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPickerUI());
         }
         catch (...)
@@ -2926,14 +2926,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -2945,14 +2945,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -2964,14 +2964,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -2983,14 +2983,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -3002,14 +3002,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -3021,14 +3021,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -3040,14 +3040,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactPostActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -3135,14 +3135,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3154,14 +3154,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3173,14 +3173,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3192,14 +3192,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -3211,14 +3211,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -3230,14 +3230,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -3249,14 +3249,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ContactVideoCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -3344,14 +3344,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3363,14 +3363,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3382,14 +3382,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3401,14 +3401,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3420,14 +3420,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -3439,14 +3439,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_DeviceInformationId(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"DeviceInformationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"DeviceInformationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformationId());
         }
         catch (...)
@@ -3458,14 +3458,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -3477,14 +3477,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DeviceActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DeviceActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -3573,14 +3573,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DevicePairingActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3592,14 +3592,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DevicePairingActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3611,14 +3611,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DevicePairingActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3630,14 +3630,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DevicePairingActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3649,14 +3649,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DevicePairingActivatedEventArgs_get_DeviceInformation(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DevicePairingActivatedEventArgs", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -3742,14 +3742,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -3761,14 +3761,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -3780,14 +3780,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -3799,14 +3799,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -3818,14 +3818,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -3837,14 +3837,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_AppName(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"AppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"AppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppName());
         }
         catch (...)
@@ -3856,14 +3856,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -3875,14 +3875,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -3894,14 +3894,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* DialReceiverActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -3991,14 +3991,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4010,14 +4010,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4029,14 +4029,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4048,14 +4048,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4067,14 +4067,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -4086,14 +4086,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_Files(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -4105,14 +4105,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -4124,14 +4124,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -4143,14 +4143,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_NeighboringFilesQuery(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"NeighboringFilesQuery"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"NeighboringFilesQuery"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringFilesQuery());
         }
         catch (...)
@@ -4162,14 +4162,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -4260,14 +4260,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4279,14 +4279,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4298,14 +4298,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4317,14 +4317,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4336,14 +4336,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_FileOpenPickerUI(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileOpenPickerUI());
         }
         catch (...)
@@ -4355,14 +4355,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -4449,14 +4449,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4468,14 +4468,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4487,14 +4487,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4506,14 +4506,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4525,14 +4525,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -4544,14 +4544,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileOpenPickerContinuationEventArgs_get_Files(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileOpenPickerContinuationEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -4638,14 +4638,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4657,14 +4657,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4676,14 +4676,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4695,14 +4695,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4714,14 +4714,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_FileSavePickerUI(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileSavePickerUI());
         }
         catch (...)
@@ -4733,14 +4733,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -4752,14 +4752,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerActivatedEventArgs_get_EnterpriseId(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"EnterpriseId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs", L"EnterpriseId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnterpriseId());
         }
         catch (...)
@@ -4847,14 +4847,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -4866,14 +4866,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -4885,14 +4885,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -4904,14 +4904,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -4923,14 +4923,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -4942,14 +4942,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FileSavePickerContinuationEventArgs_get_File(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FileSavePickerContinuationEventArgs", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -5036,14 +5036,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5055,14 +5055,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5074,14 +5074,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5093,14 +5093,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5112,14 +5112,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -5131,14 +5131,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* FolderPickerContinuationEventArgs_get_Folder(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"Folder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.FolderPickerContinuationEventArgs", L"Folder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Folder());
         }
         catch (...)
@@ -5225,14 +5225,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5244,14 +5244,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5263,14 +5263,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5282,14 +5282,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5301,14 +5301,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -5320,14 +5320,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -5339,14 +5339,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -5358,14 +5358,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_TileActivatedInfo(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"TileActivatedInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"TileActivatedInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileActivatedInfo());
         }
         catch (...)
@@ -5377,14 +5377,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_PrelaunchActivated(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"PrelaunchActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"PrelaunchActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrelaunchActivated());
         }
         catch (...)
@@ -5396,14 +5396,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LaunchActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LaunchActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -5494,14 +5494,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5513,14 +5513,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5532,14 +5532,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5551,14 +5551,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5570,14 +5570,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenActivatedEventArgs_get_Info(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"Info"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenActivatedEventArgs", L"Info"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Info());
         }
         catch (...)
@@ -5663,14 +5663,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5682,14 +5682,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5701,14 +5701,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5720,14 +5720,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -5739,14 +5739,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -5758,14 +5758,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -5777,14 +5777,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_CallUI(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"CallUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"CallUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallUI());
         }
         catch (...)
@@ -5796,14 +5796,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenCallActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -5892,14 +5892,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenComponentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5911,14 +5911,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenComponentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5930,14 +5930,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* LockScreenComponentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.LockScreenComponentActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6021,14 +6021,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PhoneCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6040,14 +6040,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PhoneCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6059,14 +6059,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PhoneCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6078,14 +6078,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PhoneCallActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6097,14 +6097,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PhoneCallActivatedEventArgs_get_LineId(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PhoneCallActivatedEventArgs", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -6190,14 +6190,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PickerReturnedActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6209,14 +6209,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PickerReturnedActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6228,14 +6228,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PickerReturnedActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6247,14 +6247,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PickerReturnedActivatedEventArgs_get_PickerOperationId(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"PickerOperationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PickerReturnedActivatedEventArgs", L"PickerOperationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PickerOperationId());
         }
         catch (...)
@@ -6339,14 +6339,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* Print3DWorkflowActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6358,14 +6358,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* Print3DWorkflowActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6377,14 +6377,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* Print3DWorkflowActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6396,14 +6396,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* Print3DWorkflowActivatedEventArgs_get_Workflow(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"Workflow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs", L"Workflow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Workflow());
         }
         catch (...)
@@ -6488,14 +6488,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PrintTaskSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6507,14 +6507,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PrintTaskSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6526,14 +6526,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PrintTaskSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6545,14 +6545,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* PrintTaskSettingsActivatedEventArgs_get_Configuration(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -6637,14 +6637,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6656,14 +6656,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6675,14 +6675,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6694,14 +6694,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6713,14 +6713,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -6732,14 +6732,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_Uri(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -6751,14 +6751,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -6770,14 +6770,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_Data(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -6789,14 +6789,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -6886,14 +6886,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6905,14 +6905,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -6924,14 +6924,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -6943,14 +6943,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -6962,14 +6962,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -6981,14 +6981,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_Uri(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -7000,14 +7000,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -7019,14 +7019,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_Data(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -7038,14 +7038,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_ProtocolForResultsOperation(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolForResultsOperation());
         }
         catch (...)
@@ -7057,14 +7057,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ProtocolForResultsActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ProtocolForResultsActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -7155,14 +7155,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* RestrictedLaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7174,14 +7174,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* RestrictedLaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7193,14 +7193,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* RestrictedLaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7212,14 +7212,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* RestrictedLaunchActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7231,14 +7231,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* RestrictedLaunchActivatedEventArgs_get_SharedContext(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"SharedContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.RestrictedLaunchActivatedEventArgs", L"SharedContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedContext());
         }
         catch (...)
@@ -7324,14 +7324,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7343,14 +7343,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7362,14 +7362,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7381,14 +7381,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7400,14 +7400,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -7419,14 +7419,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_Language(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -7438,14 +7438,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_QueryText(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"QueryText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"QueryText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QueryText());
         }
         catch (...)
@@ -7457,14 +7457,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_LinguisticDetails(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"LinguisticDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"LinguisticDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinguisticDetails());
         }
         catch (...)
@@ -7476,14 +7476,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SearchActivatedEventArgs_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SearchActivatedEventArgs", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -7573,14 +7573,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ShareTargetActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7592,14 +7592,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ShareTargetActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7611,14 +7611,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ShareTargetActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7630,14 +7630,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ShareTargetActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7649,14 +7649,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ShareTargetActivatedEventArgs_get_ShareOperation(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"ShareOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs", L"ShareOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShareOperation());
         }
         catch (...)
@@ -7742,14 +7742,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SplashScreen_get_ImageLocation(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"ImageLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"ImageLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageLocation());
         }
         catch (...)
@@ -7761,14 +7761,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SplashScreen_add_Dismissed(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"Dismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"Dismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Activation::SplashScreen, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Dismissed(param0));
@@ -7782,14 +7782,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* SplashScreen_remove_Dismissed(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"Dismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Activation.SplashScreen", L"Dismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Dismissed(param0);
@@ -7876,14 +7876,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* StartupTaskActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -7895,14 +7895,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* StartupTaskActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -7914,14 +7914,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* StartupTaskActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -7933,14 +7933,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* StartupTaskActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -7952,14 +7952,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* StartupTaskActivatedEventArgs_get_TaskId(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"TaskId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.StartupTaskActivatedEventArgs", L"TaskId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskId());
         }
         catch (...)
@@ -8045,14 +8045,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* TileActivatedInfo_get_RecentlyShownNotifications(py::wrapper::Windows::ApplicationModel::Activation::TileActivatedInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.TileActivatedInfo", L"RecentlyShownNotifications"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.TileActivatedInfo", L"RecentlyShownNotifications"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecentlyShownNotifications());
         }
         catch (...)
@@ -8134,14 +8134,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8153,14 +8153,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8172,14 +8172,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8191,14 +8191,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -8210,14 +8210,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -8229,14 +8229,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_Argument(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"Argument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"Argument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Argument());
         }
         catch (...)
@@ -8248,14 +8248,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ToastNotificationActivatedEventArgs_get_UserInput(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"UserInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs", L"UserInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserInput());
         }
         catch (...)
@@ -8343,14 +8343,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* UserDataAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8362,14 +8362,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* UserDataAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8381,14 +8381,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* UserDataAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8400,14 +8400,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* UserDataAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -8492,14 +8492,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* VoiceCommandActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8511,14 +8511,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* VoiceCommandActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8530,14 +8530,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* VoiceCommandActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8549,14 +8549,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* VoiceCommandActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -8568,14 +8568,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* VoiceCommandActivatedEventArgs_get_Result(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.VoiceCommandActivatedEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -8661,14 +8661,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8680,14 +8680,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8699,14 +8699,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8718,14 +8718,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_ActionId(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ActionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ActionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionId());
         }
         catch (...)
@@ -8737,14 +8737,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_ActionKind(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ActionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ActionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionKind());
         }
         catch (...)
@@ -8756,14 +8756,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WalletActionActivatedEventArgs_get_ItemId(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ItemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WalletActionActivatedEventArgs", L"ItemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemId());
         }
         catch (...)
@@ -8850,14 +8850,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -8869,14 +8869,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -8888,14 +8888,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -8907,14 +8907,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAccountProviderActivatedEventArgs_get_User(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -8926,14 +8926,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -9019,14 +9019,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAuthenticationBrokerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9038,14 +9038,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAuthenticationBrokerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9057,14 +9057,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAuthenticationBrokerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9076,14 +9076,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAuthenticationBrokerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -9095,14 +9095,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* WebAuthenticationBrokerContinuationEventArgs_get_WebAuthenticationResult(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.WebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAuthenticationResult());
         }
         catch (...)
@@ -9188,14 +9188,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9207,14 +9207,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9226,14 +9226,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9317,14 +9317,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgsWithUser_get_User(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -9336,14 +9336,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgsWithUser_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9355,14 +9355,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgsWithUser_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9374,14 +9374,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IActivatedEventArgsWithUser_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9466,14 +9466,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IApplicationViewActivatedEventArgs_get_CurrentlyShownApplicationViewId(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IApplicationViewActivatedEventArgs", L"CurrentlyShownApplicationViewId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentlyShownApplicationViewId());
         }
         catch (...)
@@ -9485,14 +9485,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IApplicationViewActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9504,14 +9504,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IApplicationViewActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9523,14 +9523,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IApplicationViewActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9615,14 +9615,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -9634,14 +9634,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9653,14 +9653,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9672,14 +9672,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9764,14 +9764,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderAddAppointmentActivatedEventArgs_get_AddAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs", L"AddAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddAppointmentOperation());
         }
         catch (...)
@@ -9783,14 +9783,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderAddAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -9802,14 +9802,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderAddAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9821,14 +9821,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderAddAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -9840,14 +9840,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderAddAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -9933,14 +9933,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_RemoveAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs", L"RemoveAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoveAppointmentOperation());
         }
         catch (...)
@@ -9952,14 +9952,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -9971,14 +9971,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -9990,14 +9990,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10009,14 +10009,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderRemoveAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10102,14 +10102,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_ReplaceAppointmentOperation(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs", L"ReplaceAppointmentOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReplaceAppointmentOperation());
         }
         catch (...)
@@ -10121,14 +10121,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -10140,14 +10140,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10159,14 +10159,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10178,14 +10178,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderReplaceAppointmentActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10271,14 +10271,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_InstanceStartDate(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"InstanceStartDate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstanceStartDate());
         }
         catch (...)
@@ -10290,14 +10290,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_LocalId(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"LocalId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalId());
         }
         catch (...)
@@ -10309,14 +10309,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_RoamingId(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs", L"RoamingId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoamingId());
         }
         catch (...)
@@ -10328,14 +10328,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -10347,14 +10347,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10366,14 +10366,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10385,14 +10385,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10480,14 +10480,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Duration(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -10499,14 +10499,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_TimeToShow(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs", L"TimeToShow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToShow());
         }
         catch (...)
@@ -10518,14 +10518,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IAppointmentsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -10537,14 +10537,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10556,14 +10556,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10575,14 +10575,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IAppointmentsProviderShowTimeFrameActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10669,14 +10669,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IBackgroundActivatedEventArgs_get_TaskInstance(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs", L"TaskInstance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs", L"TaskInstance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskInstance());
         }
         catch (...)
@@ -10758,14 +10758,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IBarcodeScannerPreviewActivatedEventArgs_get_ConnectionId(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IBarcodeScannerPreviewActivatedEventArgs", L"ConnectionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionId());
         }
         catch (...)
@@ -10777,14 +10777,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IBarcodeScannerPreviewActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10796,14 +10796,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IBarcodeScannerPreviewActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10815,14 +10815,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IBarcodeScannerPreviewActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -10907,14 +10907,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs", L"CachedFileUpdaterUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CachedFileUpdaterUI());
         }
         catch (...)
@@ -10926,14 +10926,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICachedFileUpdaterActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -10945,14 +10945,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -10964,14 +10964,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICachedFileUpdaterActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11056,14 +11056,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICameraSettingsActivatedEventArgs_get_VideoDeviceController(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs", L"VideoDeviceController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs", L"VideoDeviceController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceController());
         }
         catch (...)
@@ -11075,14 +11075,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICameraSettingsActivatedEventArgs_get_VideoDeviceExtension(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs", L"VideoDeviceExtension"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoDeviceExtension());
         }
         catch (...)
@@ -11094,14 +11094,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICameraSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11113,14 +11113,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICameraSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11132,14 +11132,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICameraSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11225,14 +11225,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICommandLineActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ICommandLineActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -11244,14 +11244,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICommandLineActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11263,14 +11263,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICommandLineActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11282,14 +11282,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ICommandLineActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11374,14 +11374,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -11393,14 +11393,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11412,14 +11412,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11431,14 +11431,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11523,14 +11523,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -11542,14 +11542,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -11561,14 +11561,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -11580,14 +11580,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -11599,14 +11599,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11618,14 +11618,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11637,14 +11637,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11732,14 +11732,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_Address(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -11751,14 +11751,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -11770,14 +11770,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -11789,14 +11789,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -11808,14 +11808,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -11827,14 +11827,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMapActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -11921,14 +11921,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -11940,14 +11940,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -11959,14 +11959,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -11978,14 +11978,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -11997,14 +11997,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12016,14 +12016,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -12035,14 +12035,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactMessageActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -12130,14 +12130,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPanelActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -12149,14 +12149,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPanelActivatedEventArgs_get_ContactPanel(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs", L"ContactPanel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPanelActivatedEventArgs", L"ContactPanel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPanel());
         }
         catch (...)
@@ -12239,14 +12239,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPickerActivatedEventArgs_get_ContactPickerUI(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs", L"ContactPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs", L"ContactPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactPickerUI());
         }
         catch (...)
@@ -12258,14 +12258,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12277,14 +12277,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -12296,14 +12296,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -12388,14 +12388,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -12407,14 +12407,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -12426,14 +12426,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -12445,14 +12445,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -12464,14 +12464,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12483,14 +12483,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -12502,14 +12502,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactPostActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -12597,14 +12597,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_Contact(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -12616,14 +12616,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_ServiceId(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -12635,14 +12635,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_ServiceUserId(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"ServiceUserId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs", L"ServiceUserId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceUserId());
         }
         catch (...)
@@ -12654,14 +12654,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -12673,14 +12673,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12692,14 +12692,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -12711,14 +12711,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactVideoCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -12806,14 +12806,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactsProviderActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -12825,14 +12825,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactsProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12844,14 +12844,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactsProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -12863,14 +12863,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContactsProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -12955,14 +12955,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContinuationActivatedEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -12974,14 +12974,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContinuationActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -12993,14 +12993,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContinuationActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13012,14 +13012,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IContinuationActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13104,14 +13104,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDeviceActivatedEventArgs_get_DeviceInformationId(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs", L"DeviceInformationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs", L"DeviceInformationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformationId());
         }
         catch (...)
@@ -13123,14 +13123,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDeviceActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDeviceActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -13142,14 +13142,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDeviceActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13161,14 +13161,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDeviceActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13180,14 +13180,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDeviceActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13273,14 +13273,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDevicePairingActivatedEventArgs_get_DeviceInformation(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDevicePairingActivatedEventArgs", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -13292,14 +13292,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDevicePairingActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13311,14 +13311,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDevicePairingActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13330,14 +13330,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDevicePairingActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13422,14 +13422,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_AppName(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs", L"AppName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IDialReceiverActivatedEventArgs", L"AppName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppName());
         }
         catch (...)
@@ -13441,14 +13441,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -13460,14 +13460,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -13479,14 +13479,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13498,14 +13498,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13517,14 +13517,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IDialReceiverActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13611,14 +13611,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgs_get_Files(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -13630,14 +13630,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgs_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -13649,14 +13649,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13668,14 +13668,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13687,14 +13687,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13780,14 +13780,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithCallerPackageFamilyName_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithCallerPackageFamilyName", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -13799,14 +13799,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithCallerPackageFamilyName_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -13818,14 +13818,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithCallerPackageFamilyName_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -13837,14 +13837,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithCallerPackageFamilyName_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -13929,14 +13929,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_NeighboringFilesQuery(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles", L"NeighboringFilesQuery"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgsWithNeighboringFiles", L"NeighboringFilesQuery"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NeighboringFilesQuery());
         }
         catch (...)
@@ -13948,14 +13948,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_Files(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -13967,14 +13967,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_Verb(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Verb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileActivatedEventArgs", L"Verb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Verb());
         }
         catch (...)
@@ -13986,14 +13986,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -14005,14 +14005,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -14024,14 +14024,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileActivatedEventArgsWithNeighboringFiles_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -14118,14 +14118,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs", L"FileOpenPickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileOpenPickerUI());
         }
         catch (...)
@@ -14137,14 +14137,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -14156,14 +14156,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -14175,14 +14175,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -14267,14 +14267,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerActivatedEventArgs2_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs2", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -14356,14 +14356,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerContinuationEventArgs_get_Files(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs", L"Files"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileOpenPickerContinuationEventArgs", L"Files"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Files());
         }
         catch (...)
@@ -14375,14 +14375,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -14394,14 +14394,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -14413,14 +14413,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -14432,14 +14432,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileOpenPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -14525,14 +14525,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs_get_FileSavePickerUI(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs", L"FileSavePickerUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileSavePickerUI());
         }
         catch (...)
@@ -14544,14 +14544,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -14563,14 +14563,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -14582,14 +14582,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -14674,14 +14674,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs2_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -14693,14 +14693,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerActivatedEventArgs2_get_EnterpriseId(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2", L"EnterpriseId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs2", L"EnterpriseId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EnterpriseId());
         }
         catch (...)
@@ -14783,14 +14783,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerContinuationEventArgs_get_File(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFileSavePickerContinuationEventArgs", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -14802,14 +14802,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -14821,14 +14821,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -14840,14 +14840,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -14859,14 +14859,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFileSavePickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -14952,14 +14952,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFolderPickerContinuationEventArgs_get_Folder(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs", L"Folder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IFolderPickerContinuationEventArgs", L"Folder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Folder());
         }
         catch (...)
@@ -14971,14 +14971,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFolderPickerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -14990,14 +14990,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFolderPickerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15009,14 +15009,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFolderPickerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15028,14 +15028,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IFolderPickerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15121,14 +15121,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -15140,14 +15140,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -15159,14 +15159,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15178,14 +15178,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15197,14 +15197,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15290,14 +15290,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_TileActivatedInfo(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2", L"TileActivatedInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2", L"TileActivatedInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileActivatedInfo());
         }
         catch (...)
@@ -15309,14 +15309,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -15328,14 +15328,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -15347,14 +15347,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15366,14 +15366,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15385,14 +15385,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILaunchActivatedEventArgs2_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15479,14 +15479,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenActivatedEventArgs_get_Info(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs", L"Info"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILockScreenActivatedEventArgs", L"Info"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Info());
         }
         catch (...)
@@ -15498,14 +15498,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15517,14 +15517,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15536,14 +15536,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15628,14 +15628,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_CallUI(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs", L"CallUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs", L"CallUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallUI());
         }
         catch (...)
@@ -15647,14 +15647,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_Arguments(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -15666,14 +15666,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_TileId(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -15685,14 +15685,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15704,14 +15704,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15723,14 +15723,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ILockScreenCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15817,14 +15817,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPhoneCallActivatedEventArgs_get_LineId(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPhoneCallActivatedEventArgs", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -15836,14 +15836,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPhoneCallActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -15855,14 +15855,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPhoneCallActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -15874,14 +15874,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPhoneCallActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -15966,14 +15966,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPickerReturnedActivatedEventArgs_get_PickerOperationId(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs", L"PickerOperationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPickerReturnedActivatedEventArgs", L"PickerOperationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PickerOperationId());
         }
         catch (...)
@@ -15985,14 +15985,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPickerReturnedActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16004,14 +16004,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPickerReturnedActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16023,14 +16023,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPickerReturnedActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16115,14 +16115,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrelaunchActivatedEventArgs_get_PrelaunchActivated(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs", L"PrelaunchActivated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrelaunchActivatedEventArgs", L"PrelaunchActivated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrelaunchActivated());
         }
         catch (...)
@@ -16134,14 +16134,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrelaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16153,14 +16153,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrelaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16172,14 +16172,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrelaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16264,14 +16264,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrint3DWorkflowActivatedEventArgs_get_Workflow(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs", L"Workflow"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs", L"Workflow"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Workflow());
         }
         catch (...)
@@ -16283,14 +16283,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrint3DWorkflowActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16302,14 +16302,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrint3DWorkflowActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16321,14 +16321,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrint3DWorkflowActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16413,14 +16413,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrintTaskSettingsActivatedEventArgs_get_Configuration(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -16432,14 +16432,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrintTaskSettingsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16451,14 +16451,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrintTaskSettingsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16470,14 +16470,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IPrintTaskSettingsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16562,14 +16562,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgs_get_Uri(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgs", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -16581,14 +16581,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16600,14 +16600,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16619,14 +16619,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16711,14 +16711,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_CallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData", L"CallerPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData", L"CallerPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallerPackageFamilyName());
         }
         catch (...)
@@ -16730,14 +16730,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_Data(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData", L"Data"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData", L"Data"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Data());
         }
         catch (...)
@@ -16749,14 +16749,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16768,14 +16768,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16787,14 +16787,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -16880,14 +16880,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolForResultsActivatedEventArgs_get_ProtocolForResultsOperation(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IProtocolForResultsActivatedEventArgs", L"ProtocolForResultsOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtocolForResultsOperation());
         }
         catch (...)
@@ -16899,14 +16899,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolForResultsActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -16918,14 +16918,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolForResultsActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -16937,14 +16937,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IProtocolForResultsActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17029,14 +17029,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IRestrictedLaunchActivatedEventArgs_get_SharedContext(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs", L"SharedContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IRestrictedLaunchActivatedEventArgs", L"SharedContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedContext());
         }
         catch (...)
@@ -17048,14 +17048,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IRestrictedLaunchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17067,14 +17067,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IRestrictedLaunchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17086,14 +17086,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IRestrictedLaunchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17178,14 +17178,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgs_get_Language(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgs", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgs", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)
@@ -17197,14 +17197,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgs_get_QueryText(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgs", L"QueryText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgs", L"QueryText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QueryText());
         }
         catch (...)
@@ -17216,14 +17216,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17235,14 +17235,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17254,14 +17254,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17347,14 +17347,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* ISearchActivatedEventArgsWithLinguisticDetails_get_LinguisticDetails(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails", L"LinguisticDetails"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.ISearchActivatedEventArgsWithLinguisticDetails", L"LinguisticDetails"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinguisticDetails());
         }
         catch (...)
@@ -17436,14 +17436,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IShareTargetActivatedEventArgs_get_ShareOperation(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs", L"ShareOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs", L"ShareOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShareOperation());
         }
         catch (...)
@@ -17455,14 +17455,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IShareTargetActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17474,14 +17474,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IShareTargetActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17493,14 +17493,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IShareTargetActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17585,14 +17585,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IStartupTaskActivatedEventArgs_get_TaskId(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs", L"TaskId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IStartupTaskActivatedEventArgs", L"TaskId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TaskId());
         }
         catch (...)
@@ -17604,14 +17604,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IStartupTaskActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17623,14 +17623,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IStartupTaskActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17642,14 +17642,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IStartupTaskActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17734,14 +17734,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IToastNotificationActivatedEventArgs_get_Argument(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs", L"Argument"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs", L"Argument"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Argument());
         }
         catch (...)
@@ -17753,14 +17753,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IToastNotificationActivatedEventArgs_get_UserInput(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs", L"UserInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IToastNotificationActivatedEventArgs", L"UserInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserInput());
         }
         catch (...)
@@ -17772,14 +17772,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IToastNotificationActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17791,14 +17791,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IToastNotificationActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17810,14 +17810,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IToastNotificationActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -17903,14 +17903,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IUserDataAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -17922,14 +17922,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IUserDataAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -17941,14 +17941,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IUserDataAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -17960,14 +17960,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IUserDataAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -18052,14 +18052,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IViewSwitcherProvider_get_ViewSwitcher(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IViewSwitcherProvider", L"ViewSwitcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IViewSwitcherProvider", L"ViewSwitcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ViewSwitcher());
         }
         catch (...)
@@ -18071,14 +18071,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IViewSwitcherProvider_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -18090,14 +18090,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IViewSwitcherProvider_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -18109,14 +18109,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IViewSwitcherProvider_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -18201,14 +18201,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IVoiceCommandActivatedEventArgs_get_Result(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs", L"Result"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IVoiceCommandActivatedEventArgs", L"Result"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Result());
         }
         catch (...)
@@ -18220,14 +18220,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IVoiceCommandActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -18239,14 +18239,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IVoiceCommandActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -18258,14 +18258,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IVoiceCommandActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -18350,14 +18350,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_ActionId(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ActionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ActionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionId());
         }
         catch (...)
@@ -18369,14 +18369,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_ActionKind(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ActionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ActionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActionKind());
         }
         catch (...)
@@ -18388,14 +18388,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_ItemId(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ItemId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWalletActionActivatedEventArgs", L"ItemId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ItemId());
         }
         catch (...)
@@ -18407,14 +18407,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -18426,14 +18426,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -18445,14 +18445,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWalletActionActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -18539,14 +18539,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAccountProviderActivatedEventArgs_get_Operation(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs", L"Operation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWebAccountProviderActivatedEventArgs", L"Operation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Operation());
         }
         catch (...)
@@ -18558,14 +18558,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAccountProviderActivatedEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -18577,14 +18577,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAccountProviderActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -18596,14 +18596,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAccountProviderActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -18688,14 +18688,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAuthenticationBrokerContinuationEventArgs_get_WebAuthenticationResult(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IWebAuthenticationBrokerContinuationEventArgs", L"WebAuthenticationResult"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAuthenticationResult());
         }
         catch (...)
@@ -18707,14 +18707,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAuthenticationBrokerContinuationEventArgs_get_ContinuationData(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs", L"ContinuationData"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContinuationData());
         }
         catch (...)
@@ -18726,14 +18726,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAuthenticationBrokerContinuationEventArgs_get_Kind(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -18745,14 +18745,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAuthenticationBrokerContinuationEventArgs_get_PreviousExecutionState(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -18764,14 +18764,14 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyObject* IWebAuthenticationBrokerContinuationEventArgs_get_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Activation.IActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)

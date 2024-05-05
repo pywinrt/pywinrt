@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoCapturedEventArgs_get_CaptureTimeOffset(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"CaptureTimeOffset"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"CaptureTimeOffset"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CaptureTimeOffset());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoCapturedEventArgs_get_CapturedFrameControlValues(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"CapturedFrameControlValues"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"CapturedFrameControlValues"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CapturedFrameControlValues());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoCapturedEventArgs_get_Frame(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoCapturedEventArgs_get_UsedFrameControllerIndex(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"UsedFrameControllerIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Capture.Core.VariablePhotoCapturedEventArgs", L"UsedFrameControllerIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsedFrameControllerIndex());
         }
         catch (...)
@@ -177,14 +177,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"FinishAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"FinishAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinishAsync());
             }
             catch (...)
@@ -206,14 +206,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -235,14 +235,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"StopAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"StopAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StopAsync());
             }
             catch (...)
@@ -264,14 +264,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"UpdateSettingsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"UpdateSettingsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.UpdateSettingsAsync());
             }
             catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_add_PhotoCaptured(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"PhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"PhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture, winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>>(arg);
 
             return py::convert(self->obj.PhotoCaptured(param0));
@@ -310,14 +310,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_remove_PhotoCaptured(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"PhotoCaptured"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"PhotoCaptured"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PhotoCaptured(param0);
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_add_Stopped(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -353,14 +353,14 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyObject* VariablePhotoSequenceCapture_remove_Stopped(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Capture.Core.VariablePhotoSequenceCapture", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);

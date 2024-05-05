@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::GetForCurrentView());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"Show", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"Show", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::Show();
                 Py_RETURN_NONE;
             }
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountAsync());
             }
             catch (...)
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountForUserAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowAddAccountForUserAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowAddAccountForUserAsync(param0));
@@ -147,14 +147,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsAsync());
             }
             catch (...)
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsForUserAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"ShowManageAccountsForUserAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane::ShowManageAccountsForUserAsync(param0));
@@ -203,14 +203,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_add_AccountCommandsRequested(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPane* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"AccountCommandsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"AccountCommandsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane, winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AccountCommandsRequested(param0));
@@ -224,14 +224,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPane_remove_AccountCommandsRequested(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPane* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"AccountCommandsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPane", L"AccountCommandsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AccountCommandsRequested(param0);
@@ -352,14 +352,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_HeaderText(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"HeaderText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"HeaderText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeaderText());
         }
         catch (...)
@@ -396,12 +396,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int AccountsSettingsPaneCommandsRequestedEventArgs_put_HeaderText(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"HeaderText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -410,6 +404,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"HeaderText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.HeaderText(param0);
@@ -424,14 +424,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_Commands(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"Commands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"Commands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Commands());
         }
         catch (...)
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_CredentialCommands(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"CredentialCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"CredentialCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialCommands());
         }
         catch (...)
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_WebAccountCommands(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"WebAccountCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"WebAccountCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccountCommands());
         }
         catch (...)
@@ -481,14 +481,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_WebAccountProviderCommands(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"WebAccountProviderCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"WebAccountProviderCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccountProviderCommands());
         }
         catch (...)
@@ -500,14 +500,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* AccountsSettingsPaneCommandsRequestedEventArgs_get_User(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneCommandsRequestedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -599,14 +599,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.AccountsSettingsPaneEventDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -735,14 +735,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* CredentialCommand_get_CredentialDeleted(py::wrapper::Windows::UI::ApplicationSettings::CredentialCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.CredentialCommand", L"CredentialDeleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.CredentialCommand", L"CredentialDeleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CredentialDeleted());
         }
         catch (...)
@@ -754,14 +754,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* CredentialCommand_get_PasswordCredential(py::wrapper::Windows::UI::ApplicationSettings::CredentialCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.CredentialCommand", L"PasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.CredentialCommand", L"PasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PasswordCredential());
         }
         catch (...)
@@ -870,14 +870,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsCommand_get_Label(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -889,12 +889,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Label(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -903,6 +897,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -917,14 +917,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsCommand_get_Invoked(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Invoked());
         }
         catch (...)
@@ -936,12 +936,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Invoked(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -950,6 +944,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Popups::UICommandInvokedHandler>(arg);
 
             self->obj.Invoked(param0);
@@ -964,14 +964,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsCommand_get_Id(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -983,12 +983,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static int SettingsCommand_put_Id(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -997,6 +991,12 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.Id(param0);
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsCommand_get_AccountsCommand(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"AccountsCommand"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsCommand", L"AccountsCommand"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsCommand::AccountsCommand());
         }
         catch (...)
@@ -1132,14 +1132,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsPane::GetForCurrentView());
             }
             catch (...)
@@ -1161,14 +1161,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Show", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Show", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::UI::ApplicationSettings::SettingsPane::Show();
                 Py_RETURN_NONE;
             }
@@ -1187,14 +1187,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_get_Edge(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Edge"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"Edge"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::UI::ApplicationSettings::SettingsPane::Edge());
         }
         catch (...)
@@ -1206,14 +1206,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_add_CommandsRequested(py::wrapper::Windows::UI::ApplicationSettings::SettingsPane* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"CommandsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"CommandsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::ApplicationSettings::SettingsPane, winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.CommandsRequested(param0));
@@ -1227,14 +1227,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPane_remove_CommandsRequested(py::wrapper::Windows::UI::ApplicationSettings::SettingsPane* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"CommandsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.ApplicationSettings.SettingsPane", L"CommandsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CommandsRequested(param0);
@@ -1348,14 +1348,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPaneCommandsRequest_get_ApplicationCommands(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest", L"ApplicationCommands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest", L"ApplicationCommands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationCommands());
         }
         catch (...)
@@ -1437,14 +1437,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* SettingsPaneCommandsRequestedEventArgs_get_Request(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1552,14 +1552,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountCommand_get_Actions(py::wrapper::Windows::UI::ApplicationSettings::WebAccountCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"Actions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"Actions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Actions());
         }
         catch (...)
@@ -1571,14 +1571,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountCommand_get_Invoked(py::wrapper::Windows::UI::ApplicationSettings::WebAccountCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Invoked());
         }
         catch (...)
@@ -1590,14 +1590,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountCommand_get_WebAccount(py::wrapper::Windows::UI::ApplicationSettings::WebAccountCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"WebAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountCommand", L"WebAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccount());
         }
         catch (...)
@@ -1681,14 +1681,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountInvokedArgs_get_Action(py::wrapper::Windows::UI::ApplicationSettings::WebAccountInvokedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountInvokedArgs", L"Action"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountInvokedArgs", L"Action"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Action());
         }
         catch (...)
@@ -1795,14 +1795,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountProviderCommand_get_Invoked(py::wrapper::Windows::UI::ApplicationSettings::WebAccountProviderCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountProviderCommand", L"Invoked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountProviderCommand", L"Invoked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Invoked());
         }
         catch (...)
@@ -1814,14 +1814,14 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     static PyObject* WebAccountProviderCommand_get_WebAccountProvider(py::wrapper::Windows::UI::ApplicationSettings::WebAccountProviderCommand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountProviderCommand", L"WebAccountProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ApplicationSettings.WebAccountProviderCommand", L"WebAccountProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebAccountProvider());
         }
         catch (...)

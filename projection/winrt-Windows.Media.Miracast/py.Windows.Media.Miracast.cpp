@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"ClearKnownTransmitters", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"ClearKnownTransmitters", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearKnownTransmitters();
                 Py_RETURN_NONE;
             }
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"CreateSession", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"CreateSession", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
                 return py::convert(self->obj.CreateSession(param0));
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"CreateSessionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"CreateSessionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
                 return py::convert(self->obj.CreateSessionAsync(param0));
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"DisconnectAllAndApplySettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"DisconnectAllAndApplySettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverSettings>(args, 0);
 
                 return py::convert(self->obj.DisconnectAllAndApplySettings(param0));
@@ -173,14 +173,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"DisconnectAllAndApplySettingsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"DisconnectAllAndApplySettingsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverSettings>(args, 0);
 
                 return py::convert(self->obj.DisconnectAllAndApplySettingsAsync(param0));
@@ -204,14 +204,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetCurrentSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetCurrentSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentSettings());
             }
             catch (...)
@@ -233,14 +233,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetCurrentSettingsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetCurrentSettingsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentSettingsAsync());
             }
             catch (...)
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetDefaultSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetDefaultSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDefaultSettings());
             }
             catch (...)
@@ -291,14 +291,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStatus());
             }
             catch (...)
@@ -320,14 +320,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetStatusAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"GetStatusAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStatusAsync());
             }
             catch (...)
@@ -349,14 +349,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"RemoveKnownTransmitter", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiver", L"RemoveKnownTransmitter", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastTransmitter>(args, 0);
 
                 self->obj.RemoveKnownTransmitter(param0);
@@ -377,14 +377,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_add_StatusChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiver", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiver", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiver, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StatusChanged(param0));
@@ -398,14 +398,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiver_remove_StatusChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiver", L"StatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiver", L"StatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StatusChanged(param0);
@@ -502,14 +502,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverApplySettingsResult_get_ExtendedError(py::wrapper::Windows::Media::Miracast::MiracastReceiverApplySettingsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverApplySettingsResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverApplySettingsResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -521,14 +521,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverApplySettingsResult_get_Status(py::wrapper::Windows::Media::Miracast::MiracastReceiverApplySettingsResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverApplySettingsResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverApplySettingsResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -615,14 +615,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -645,14 +645,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Disconnect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Disconnect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>(args, 0);
 
                 self->obj.Disconnect(param0);
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::Media::Miracast
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Disconnect", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Disconnect", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectReason>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -699,14 +699,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -729,14 +729,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"PauseAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"PauseAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.PauseAsync());
             }
             catch (...)
@@ -758,14 +758,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -788,14 +788,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"ResumeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"ResumeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ResumeAsync());
             }
             catch (...)
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_get_CursorImageChannel(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"CursorImageChannel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"CursorImageChannel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CursorImageChannel());
         }
         catch (...)
@@ -832,14 +832,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_get_InputDevices(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"InputDevices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"InputDevices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputDevices());
         }
         catch (...)
@@ -851,14 +851,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_get_StreamControl(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"StreamControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"StreamControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StreamControl());
         }
         catch (...)
@@ -870,14 +870,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnection_get_Transmitter(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Transmitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnection", L"Transmitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Transmitter());
         }
         catch (...)
@@ -993,14 +993,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1018,14 +1018,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnectionCreatedEventArgs_get_Connection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -1037,14 +1037,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverConnectionCreatedEventArgs_get_Pin(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"Pin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverConnectionCreatedEventArgs", L"Pin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Pin());
         }
         catch (...)
@@ -1128,14 +1128,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_get_ImageStream(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStream"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStream"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ImageStream());
         }
         catch (...)
@@ -1147,14 +1147,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_get_IsEnabled(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -1166,14 +1166,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_get_MaxImageSize(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"MaxImageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"MaxImageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxImageSize());
         }
         catch (...)
@@ -1185,14 +1185,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_get_Position(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -1204,14 +1204,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_add_ImageStreamChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStreamChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStreamChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ImageStreamChanged(param0));
@@ -1225,14 +1225,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_remove_ImageStreamChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStreamChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"ImageStreamChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ImageStreamChanged(param0);
@@ -1247,14 +1247,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_add_PositionChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"PositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"PositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.PositionChanged(param0));
@@ -1268,14 +1268,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannel_remove_PositionChanged(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"PositionChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannel", L"PositionChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PositionChanged(param0);
@@ -1367,14 +1367,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannelSettings_get_MaxImageSize(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"MaxImageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"MaxImageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxImageSize());
         }
         catch (...)
@@ -1386,12 +1386,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverCursorImageChannelSettings_put_MaxImageSize(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"MaxImageSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1400,6 +1394,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"MaxImageSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
             self->obj.MaxImageSize(param0);
@@ -1414,14 +1414,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverCursorImageChannelSettings_get_IsEnabled(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -1433,12 +1433,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverCursorImageChannelSettings_put_IsEnabled(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1447,6 +1441,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverCursorImageChannelSettings", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsEnabled(param0);
@@ -1532,14 +1532,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverDisconnectedEventArgs_get_Connection(py::wrapper::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverDisconnectedEventArgs", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -1621,14 +1621,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_get_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"TransmitInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"TransmitInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransmitInput());
         }
         catch (...)
@@ -1640,12 +1640,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverGameControllerDevice_put_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"TransmitInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1654,6 +1648,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"TransmitInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.TransmitInput(param0);
@@ -1668,14 +1668,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_get_Mode(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -1687,12 +1687,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverGameControllerDevice_put_Mode(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1701,6 +1695,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDeviceUsageMode>(arg);
 
             self->obj.Mode(param0);
@@ -1715,14 +1715,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_get_IsRequestedByTransmitter(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"IsRequestedByTransmitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"IsRequestedByTransmitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequestedByTransmitter());
         }
         catch (...)
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_get_IsTransmittingInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"IsTransmittingInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"IsTransmittingInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTransmittingInput());
         }
         catch (...)
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_add_Changed(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -1774,14 +1774,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverGameControllerDevice_remove_Changed(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverGameControllerDevice", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -1871,14 +1871,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverInputDevices_get_GameController(py::wrapper::Windows::Media::Miracast::MiracastReceiverInputDevices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverInputDevices", L"GameController"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverInputDevices", L"GameController"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GameController());
         }
         catch (...)
@@ -1890,14 +1890,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverInputDevices_get_Keyboard(py::wrapper::Windows::Media::Miracast::MiracastReceiverInputDevices* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverInputDevices", L"Keyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverInputDevices", L"Keyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Keyboard());
         }
         catch (...)
@@ -1980,14 +1980,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverKeyboardDevice_get_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"TransmitInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"TransmitInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransmitInput());
         }
         catch (...)
@@ -1999,12 +1999,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverKeyboardDevice_put_TransmitInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"TransmitInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2013,6 +2007,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"TransmitInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.TransmitInput(param0);
@@ -2027,14 +2027,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverKeyboardDevice_get_IsRequestedByTransmitter(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"IsRequestedByTransmitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"IsRequestedByTransmitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequestedByTransmitter());
         }
         catch (...)
@@ -2046,14 +2046,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverKeyboardDevice_get_IsTransmittingInput(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"IsTransmittingInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"IsTransmittingInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTransmittingInput());
         }
         catch (...)
@@ -2065,14 +2065,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverKeyboardDevice_add_Changed(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Changed(param0));
@@ -2086,14 +2086,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverKeyboardDevice_remove_Changed(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"Changed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverKeyboardDevice", L"Changed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Changed(param0);
@@ -2186,14 +2186,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -2211,14 +2211,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverMediaSourceCreatedEventArgs_get_Connection(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -2230,14 +2230,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverMediaSourceCreatedEventArgs_get_CursorImageChannelSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"CursorImageChannelSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"CursorImageChannelSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CursorImageChannelSettings());
         }
         catch (...)
@@ -2249,14 +2249,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverMediaSourceCreatedEventArgs_get_MediaSource(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"MediaSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverMediaSourceCreatedEventArgs", L"MediaSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSource());
         }
         catch (...)
@@ -2345,14 +2345,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2375,14 +2375,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Start());
             }
             catch (...)
@@ -2404,14 +2404,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -2429,14 +2429,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_get_MaxSimultaneousConnections(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MaxSimultaneousConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MaxSimultaneousConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSimultaneousConnections());
         }
         catch (...)
@@ -2448,12 +2448,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSession_put_MaxSimultaneousConnections(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MaxSimultaneousConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2462,6 +2456,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MaxSimultaneousConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxSimultaneousConnections(param0);
@@ -2476,14 +2476,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_get_AllowConnectionTakeover(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"AllowConnectionTakeover"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"AllowConnectionTakeover"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowConnectionTakeover());
         }
         catch (...)
@@ -2495,12 +2495,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSession_put_AllowConnectionTakeover(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"AllowConnectionTakeover"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2509,6 +2503,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"AllowConnectionTakeover"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowConnectionTakeover(param0);
@@ -2523,14 +2523,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_add_ConnectionCreated(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"ConnectionCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"ConnectionCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>>(arg);
 
             return py::convert(self->obj.ConnectionCreated(param0));
@@ -2544,14 +2544,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_remove_ConnectionCreated(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"ConnectionCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"ConnectionCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionCreated(param0);
@@ -2566,14 +2566,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_add_Disconnected(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>>(arg);
 
             return py::convert(self->obj.Disconnected(param0));
@@ -2587,14 +2587,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_remove_Disconnected(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Disconnected(param0);
@@ -2609,14 +2609,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_add_MediaSourceCreated(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MediaSourceCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MediaSourceCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Miracast::MiracastReceiverSession, winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>>(arg);
 
             return py::convert(self->obj.MediaSourceCreated(param0));
@@ -2630,14 +2630,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSession_remove_MediaSourceCreated(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MediaSourceCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Miracast.MiracastReceiverSession", L"MediaSourceCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MediaSourceCreated(param0);
@@ -2753,14 +2753,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSessionStartResult_get_ExtendedError(py::wrapper::Windows::Media::Miracast::MiracastReceiverSessionStartResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSessionStartResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSessionStartResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -2772,14 +2772,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSessionStartResult_get_Status(py::wrapper::Windows::Media::Miracast::MiracastReceiverSessionStartResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSessionStartResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSessionStartResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2862,14 +2862,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSettings_get_RequireAuthorizationFromKnownTransmitters(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"RequireAuthorizationFromKnownTransmitters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"RequireAuthorizationFromKnownTransmitters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequireAuthorizationFromKnownTransmitters());
         }
         catch (...)
@@ -2881,12 +2881,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_RequireAuthorizationFromKnownTransmitters(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"RequireAuthorizationFromKnownTransmitters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2895,6 +2889,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"RequireAuthorizationFromKnownTransmitters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequireAuthorizationFromKnownTransmitters(param0);
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSettings_get_ModelNumber(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelNumber());
         }
         catch (...)
@@ -2928,12 +2928,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_ModelNumber(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2942,6 +2936,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ModelNumber(param0);
@@ -2956,14 +2956,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSettings_get_ModelName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelName());
         }
         catch (...)
@@ -2975,12 +2975,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_ModelName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2989,6 +2983,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"ModelName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ModelName(param0);
@@ -3003,14 +3003,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSettings_get_FriendlyName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -3022,12 +3022,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_FriendlyName(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3036,6 +3030,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.FriendlyName(param0);
@@ -3050,14 +3050,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverSettings_get_AuthorizationMethod(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"AuthorizationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"AuthorizationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthorizationMethod());
         }
         catch (...)
@@ -3069,12 +3069,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverSettings_put_AuthorizationMethod(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"AuthorizationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3083,6 +3077,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverSettings", L"AuthorizationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverAuthorizationMethod>(arg);
 
             self->obj.AuthorizationMethod(param0);
@@ -3171,14 +3171,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStatus_get_IsConnectionTakeoverSupported(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"IsConnectionTakeoverSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"IsConnectionTakeoverSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConnectionTakeoverSupported());
         }
         catch (...)
@@ -3190,14 +3190,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStatus_get_KnownTransmitters(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"KnownTransmitters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"KnownTransmitters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KnownTransmitters());
         }
         catch (...)
@@ -3209,14 +3209,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStatus_get_ListeningStatus(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"ListeningStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"ListeningStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ListeningStatus());
         }
         catch (...)
@@ -3228,14 +3228,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStatus_get_MaxSimultaneousConnections(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"MaxSimultaneousConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"MaxSimultaneousConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxSimultaneousConnections());
         }
         catch (...)
@@ -3247,14 +3247,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStatus_get_WiFiStatus(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"WiFiStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStatus", L"WiFiStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WiFiStatus());
         }
         catch (...)
@@ -3344,14 +3344,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"GetVideoStreamSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"GetVideoStreamSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVideoStreamSettings());
             }
             catch (...)
@@ -3373,14 +3373,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"GetVideoStreamSettingsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"GetVideoStreamSettingsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVideoStreamSettingsAsync());
             }
             catch (...)
@@ -3402,14 +3402,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"SuggestVideoStreamSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"SuggestVideoStreamSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>(args, 0);
 
                 self->obj.SuggestVideoStreamSettings(param0);
@@ -3434,14 +3434,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"SuggestVideoStreamSettingsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"SuggestVideoStreamSettingsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>(args, 0);
 
                 return py::convert(self->obj.SuggestVideoStreamSettingsAsync(param0));
@@ -3461,14 +3461,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverStreamControl_get_MuteAudio(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"MuteAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"MuteAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MuteAudio());
         }
         catch (...)
@@ -3480,12 +3480,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverStreamControl_put_MuteAudio(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"MuteAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3494,6 +3488,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverStreamControl", L"MuteAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.MuteAudio(param0);
@@ -3582,14 +3582,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverVideoStreamSettings_get_Size(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -3601,12 +3601,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverVideoStreamSettings_put_Size(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3615,6 +3609,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
             self->obj.Size(param0);
@@ -3629,14 +3629,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastReceiverVideoStreamSettings_get_Bitrate(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -3648,12 +3648,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastReceiverVideoStreamSettings_put_Bitrate(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3662,6 +3656,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastReceiverVideoStreamSettings", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.Bitrate(param0);
@@ -3751,14 +3751,14 @@ namespace py::cpp::Windows::Media::Miracast
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"GetConnections", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"GetConnections", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnections());
             }
             catch (...)
@@ -3776,14 +3776,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastTransmitter_get_Name(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -3795,12 +3795,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastTransmitter_put_Name(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3809,6 +3803,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -3823,14 +3823,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastTransmitter_get_AuthorizationStatus(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"AuthorizationStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"AuthorizationStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthorizationStatus());
         }
         catch (...)
@@ -3842,12 +3842,6 @@ namespace py::cpp::Windows::Media::Miracast
 
     static int MiracastTransmitter_put_AuthorizationStatus(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"AuthorizationStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3856,6 +3850,12 @@ namespace py::cpp::Windows::Media::Miracast
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"AuthorizationStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Miracast::MiracastTransmitterAuthorizationStatus>(arg);
 
             self->obj.AuthorizationStatus(param0);
@@ -3870,14 +3870,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastTransmitter_get_LastConnectionTime(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"LastConnectionTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"LastConnectionTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastConnectionTime());
         }
         catch (...)
@@ -3889,14 +3889,14 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyObject* MiracastTransmitter_get_MacAddress(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"MacAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Miracast.MiracastTransmitter", L"MacAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MacAddress());
         }
         catch (...)

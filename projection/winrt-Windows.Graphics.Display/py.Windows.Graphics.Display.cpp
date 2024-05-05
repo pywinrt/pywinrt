@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"IsAdvancedColorKindAvailable", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"IsAdvancedColorKindAvailable", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::AdvancedColorKind>(args, 0);
 
                 return py::convert(self->obj.IsAdvancedColorKindAvailable(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"IsHdrMetadataFormatCurrentlySupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"IsHdrMetadataFormatCurrentlySupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::HdrMetadataFormat>(args, 0);
 
                 return py::convert(self->obj.IsHdrMetadataFormatCurrentlySupported(param0));
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_BluePrimary(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"BluePrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"BluePrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluePrimary());
         }
         catch (...)
@@ -105,14 +105,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_CurrentAdvancedColorKind(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"CurrentAdvancedColorKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"CurrentAdvancedColorKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentAdvancedColorKind());
         }
         catch (...)
@@ -124,14 +124,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_GreenPrimary(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"GreenPrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"GreenPrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GreenPrimary());
         }
         catch (...)
@@ -143,14 +143,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_MaxAverageFullFrameLuminanceInNits(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MaxAverageFullFrameLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MaxAverageFullFrameLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAverageFullFrameLuminanceInNits());
         }
         catch (...)
@@ -162,14 +162,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_MaxLuminanceInNits(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MaxLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MaxLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxLuminanceInNits());
         }
         catch (...)
@@ -181,14 +181,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_MinLuminanceInNits(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MinLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"MinLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinLuminanceInNits());
         }
         catch (...)
@@ -200,14 +200,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_RedPrimary(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"RedPrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"RedPrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedPrimary());
         }
         catch (...)
@@ -219,14 +219,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_SdrWhiteLevelInNits(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"SdrWhiteLevelInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"SdrWhiteLevelInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SdrWhiteLevelInNits());
         }
         catch (...)
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* AdvancedColorInfo_get_WhitePoint(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"WhitePoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.AdvancedColorInfo", L"WhitePoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhitePoint());
         }
         catch (...)
@@ -341,14 +341,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetDefaultForSystem", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetDefaultForSystem", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::GetDefaultForSystem());
             }
             catch (...)
@@ -370,14 +370,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::GetForCurrentView());
             }
             catch (...)
@@ -399,14 +399,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetLevelForScenario", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"GetLevelForScenario", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>(args, 0);
 
                 return py::convert(self->obj.GetLevelForScenario(param0));
@@ -430,14 +430,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SaveForSystemAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SaveForSystemAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::BrightnessOverride>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverride::SaveForSystemAsync(param0));
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SetBrightnessLevel", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SetBrightnessLevel", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>(args, 1);
 
@@ -494,14 +494,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SetBrightnessScenario", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"SetBrightnessScenario", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessScenario>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideOptions>(args, 1);
 
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"StartOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"StartOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartOverride();
                 Py_RETURN_NONE;
             }
@@ -557,14 +557,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"StopOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverride", L"StopOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopOverride();
                 Py_RETURN_NONE;
             }
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_get_BrightnessLevel(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrightnessLevel());
         }
         catch (...)
@@ -602,14 +602,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_get_IsOverrideActive(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOverrideActive());
         }
         catch (...)
@@ -621,14 +621,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_get_IsSupported(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSupported());
         }
         catch (...)
@@ -640,14 +640,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_add_BrightnessLevelChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.BrightnessLevelChanged(param0));
@@ -661,14 +661,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_remove_BrightnessLevelChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"BrightnessLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.BrightnessLevelChanged(param0);
@@ -683,14 +683,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_add_IsOverrideActiveChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsOverrideActiveChanged(param0));
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_remove_IsOverrideActiveChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsOverrideActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsOverrideActiveChanged(param0);
@@ -726,14 +726,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_add_IsSupportedChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::BrightnessOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsSupportedChanged(param0));
@@ -747,14 +747,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverride_remove_IsSupportedChanged(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupportedChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.BrightnessOverride", L"IsSupportedChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsSupportedChanged(param0);
@@ -884,14 +884,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromDisplayBrightnessOverrideScenario", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromDisplayBrightnessOverrideScenario", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayBrightnessOverrideScenario>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromDisplayBrightnessOverrideScenario(param0));
@@ -915,14 +915,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromLevel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromLevel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromLevel(param0));
@@ -946,14 +946,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromNits", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"CreateFromNits", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Display::BrightnessOverrideSettings::CreateFromNits(param0));
@@ -973,14 +973,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverrideSettings_get_DesiredLevel(py::wrapper::Windows::Graphics::Display::BrightnessOverrideSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"DesiredLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"DesiredLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredLevel());
         }
         catch (...)
@@ -992,14 +992,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* BrightnessOverrideSettings_get_DesiredNits(py::wrapper::Windows::Graphics::Display::BrightnessOverrideSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"DesiredNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.BrightnessOverrideSettings", L"DesiredNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredNits());
         }
         catch (...)
@@ -1114,14 +1114,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.ColorOverrideSettings", L"CreateFromDisplayColorOverrideScenario", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.ColorOverrideSettings", L"CreateFromDisplayColorOverrideScenario", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayColorOverrideScenario>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Display::ColorOverrideSettings::CreateFromDisplayColorOverrideScenario(param0));
@@ -1141,14 +1141,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* ColorOverrideSettings_get_DesiredDisplayColorOverrideScenario(py::wrapper::Windows::Graphics::Display::ColorOverrideSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.ColorOverrideSettings", L"DesiredDisplayColorOverrideScenario"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.ColorOverrideSettings", L"DesiredDisplayColorOverrideScenario"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredDisplayColorOverrideScenario());
         }
         catch (...)
@@ -1260,14 +1260,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"GetCurrentDisplayEnhancementOverrideCapabilities", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"GetCurrentDisplayEnhancementOverrideCapabilities", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentDisplayEnhancementOverrideCapabilities());
             }
             catch (...)
@@ -1289,14 +1289,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::DisplayEnhancementOverride::GetForCurrentView());
             }
             catch (...)
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"RequestOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"RequestOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RequestOverride();
                 Py_RETURN_NONE;
             }
@@ -1348,14 +1348,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"StopOverride", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"StopOverride", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopOverride();
                 Py_RETURN_NONE;
             }
@@ -1374,14 +1374,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_get_ColorOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"ColorOverrideSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"ColorOverrideSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ColorOverrideSettings());
         }
         catch (...)
@@ -1393,12 +1393,6 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayEnhancementOverride_put_ColorOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"ColorOverrideSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1407,6 +1401,12 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"ColorOverrideSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::ColorOverrideSettings>(arg);
 
             self->obj.ColorOverrideSettings(param0);
@@ -1421,14 +1421,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_get_BrightnessOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"BrightnessOverrideSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"BrightnessOverrideSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BrightnessOverrideSettings());
         }
         catch (...)
@@ -1440,12 +1440,6 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayEnhancementOverride_put_BrightnessOverrideSettings(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"BrightnessOverrideSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1454,6 +1448,12 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"BrightnessOverrideSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>(arg);
 
             self->obj.BrightnessOverrideSettings(param0);
@@ -1468,14 +1468,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_get_CanOverride(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverride"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverride"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanOverride());
         }
         catch (...)
@@ -1487,14 +1487,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_get_IsOverrideActive(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOverrideActive());
         }
         catch (...)
@@ -1506,14 +1506,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_add_CanOverrideChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverrideChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverrideChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CanOverrideChanged(param0));
@@ -1527,14 +1527,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_remove_CanOverrideChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverrideChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"CanOverrideChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CanOverrideChanged(param0);
@@ -1549,14 +1549,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_add_DisplayEnhancementOverrideCapabilitiesChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"DisplayEnhancementOverrideCapabilitiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"DisplayEnhancementOverrideCapabilitiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0));
@@ -1570,14 +1570,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_remove_DisplayEnhancementOverrideCapabilitiesChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"DisplayEnhancementOverrideCapabilitiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"DisplayEnhancementOverrideCapabilitiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DisplayEnhancementOverrideCapabilitiesChanged(param0);
@@ -1592,14 +1592,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_add_IsOverrideActiveChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayEnhancementOverride, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsOverrideActiveChanged(param0));
@@ -1613,14 +1613,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverride_remove_IsOverrideActiveChanged(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayEnhancementOverride", L"IsOverrideActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsOverrideActiveChanged(param0);
@@ -1747,14 +1747,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"GetSupportedNitRanges", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"GetSupportedNitRanges", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSupportedNitRanges());
             }
             catch (...)
@@ -1772,14 +1772,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverrideCapabilities_get_IsBrightnessControlSupported(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"IsBrightnessControlSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"IsBrightnessControlSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBrightnessControlSupported());
         }
         catch (...)
@@ -1791,14 +1791,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverrideCapabilities_get_IsBrightnessNitsControlSupported(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"IsBrightnessNitsControlSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilities", L"IsBrightnessNitsControlSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBrightnessNitsControlSupported());
         }
         catch (...)
@@ -1882,14 +1882,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayEnhancementOverrideCapabilitiesChangedEventArgs_get_Capabilities(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs", L"Capabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs", L"Capabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Capabilities());
         }
         catch (...)
@@ -1975,14 +1975,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetAdvancedColorInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetAdvancedColorInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAdvancedColorInfo());
             }
             catch (...)
@@ -2004,14 +2004,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetColorProfileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetColorProfileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetColorProfileAsync());
             }
             catch (...)
@@ -2033,14 +2033,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayInformation", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::GetForCurrentView());
             }
             catch (...)
@@ -2058,14 +2058,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_CurrentOrientation(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"CurrentOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"CurrentOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentOrientation());
         }
         catch (...)
@@ -2077,14 +2077,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_LogicalDpi(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"LogicalDpi"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"LogicalDpi"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LogicalDpi());
         }
         catch (...)
@@ -2096,14 +2096,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_NativeOrientation(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"NativeOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"NativeOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NativeOrientation());
         }
         catch (...)
@@ -2115,14 +2115,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_RawDpiX(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawDpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawDpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawDpiX());
         }
         catch (...)
@@ -2134,14 +2134,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_RawDpiY(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawDpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawDpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawDpiY());
         }
         catch (...)
@@ -2153,14 +2153,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_ResolutionScale(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ResolutionScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ResolutionScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolutionScale());
         }
         catch (...)
@@ -2172,14 +2172,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_StereoEnabled(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StereoEnabled());
         }
         catch (...)
@@ -2191,14 +2191,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_RawPixelsPerViewPixel(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawPixelsPerViewPixel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"RawPixelsPerViewPixel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawPixelsPerViewPixel());
         }
         catch (...)
@@ -2210,14 +2210,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_DiagonalSizeInInches(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"DiagonalSizeInInches"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"DiagonalSizeInInches"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DiagonalSizeInInches());
         }
         catch (...)
@@ -2229,14 +2229,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_ScreenHeightInRawPixels(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ScreenHeightInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ScreenHeightInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScreenHeightInRawPixels());
         }
         catch (...)
@@ -2248,14 +2248,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_ScreenWidthInRawPixels(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ScreenWidthInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"ScreenWidthInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScreenWidthInRawPixels());
         }
         catch (...)
@@ -2267,14 +2267,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_get_AutoRotationPreferences(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"AutoRotationPreferences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"AutoRotationPreferences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences());
         }
         catch (...)
@@ -2286,12 +2286,6 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayInformation_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"AutoRotationPreferences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2300,6 +2294,12 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayInformation", L"AutoRotationPreferences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             winrt::Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences(param0);
@@ -2314,14 +2314,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_ColorProfileChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"ColorProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"ColorProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ColorProfileChanged(param0));
@@ -2335,14 +2335,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_ColorProfileChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"ColorProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"ColorProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ColorProfileChanged(param0);
@@ -2357,14 +2357,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_DpiChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DpiChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DpiChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DpiChanged(param0));
@@ -2378,14 +2378,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_DpiChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DpiChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DpiChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DpiChanged(param0);
@@ -2400,14 +2400,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_OrientationChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.OrientationChanged(param0));
@@ -2421,14 +2421,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_OrientationChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.OrientationChanged(param0);
@@ -2443,14 +2443,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_StereoEnabledChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabledChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabledChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StereoEnabledChanged(param0));
@@ -2464,14 +2464,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_StereoEnabledChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabledChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"StereoEnabledChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StereoEnabledChanged(param0);
@@ -2486,14 +2486,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_AdvancedColorInfoChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"AdvancedColorInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"AdvancedColorInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AdvancedColorInfoChanged(param0));
@@ -2507,14 +2507,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_AdvancedColorInfoChanged(py::wrapper::Windows::Graphics::Display::DisplayInformation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"AdvancedColorInfoChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"AdvancedColorInfoChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AdvancedColorInfoChanged(param0);
@@ -2529,14 +2529,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_add_DisplayContentsInvalidated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DisplayContentsInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DisplayContentsInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Display::DisplayInformation, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0));
@@ -2550,14 +2550,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayInformation_remove_DisplayContentsInvalidated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DisplayContentsInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayInformation", L"DisplayContentsInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayInformation::DisplayContentsInvalidated(param0);
@@ -2689,14 +2689,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayProperties", L"GetColorProfileAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayProperties", L"GetColorProfileAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::GetColorProfileAsync());
             }
             catch (...)
@@ -2714,14 +2714,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_AutoRotationPreferences(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"AutoRotationPreferences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"AutoRotationPreferences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences());
         }
         catch (...)
@@ -2733,12 +2733,6 @@ namespace py::cpp::Windows::Graphics::Display
 
     static int DisplayProperties_put_AutoRotationPreferences(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"AutoRotationPreferences"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2747,6 +2741,12 @@ namespace py::cpp::Windows::Graphics::Display
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"AutoRotationPreferences"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences(param0);
@@ -2761,14 +2761,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_CurrentOrientation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"CurrentOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"CurrentOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::CurrentOrientation());
         }
         catch (...)
@@ -2780,14 +2780,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_LogicalDpi(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpi"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpi"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpi());
         }
         catch (...)
@@ -2799,14 +2799,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_NativeOrientation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"NativeOrientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"NativeOrientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::NativeOrientation());
         }
         catch (...)
@@ -2818,14 +2818,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_ResolutionScale(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"ResolutionScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"ResolutionScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::ResolutionScale());
         }
         catch (...)
@@ -2837,14 +2837,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_get_StereoEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabled());
         }
         catch (...)
@@ -2856,14 +2856,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_add_ColorProfileChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"ColorProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"ColorProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0));
@@ -2877,14 +2877,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_remove_ColorProfileChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"ColorProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"ColorProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::ColorProfileChanged(param0);
@@ -2899,14 +2899,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_add_DisplayContentsInvalidated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"DisplayContentsInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"DisplayContentsInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0));
@@ -2920,14 +2920,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_remove_DisplayContentsInvalidated(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"DisplayContentsInvalidated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"DisplayContentsInvalidated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::DisplayContentsInvalidated(param0);
@@ -2942,14 +2942,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_add_LogicalDpiChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpiChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpiChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0));
@@ -2963,14 +2963,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_remove_LogicalDpiChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpiChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"LogicalDpiChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::LogicalDpiChanged(param0);
@@ -2985,14 +2985,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_add_OrientationChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0));
@@ -3006,14 +3006,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_remove_OrientationChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::OrientationChanged(param0);
@@ -3028,14 +3028,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_add_StereoEnabledChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabledChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabledChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayPropertiesEventHandler>(arg);
 
             return py::convert(winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0));
@@ -3049,14 +3049,14 @@ namespace py::cpp::Windows::Graphics::Display
 
     static PyObject* DisplayProperties_remove_StereoEnabledChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabledChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Display.DisplayProperties", L"StereoEnabledChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Graphics::Display::DisplayProperties::StereoEnabledChanged(param0);
@@ -3159,14 +3159,14 @@ namespace py::cpp::Windows::Graphics::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayServices", L"FindAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Display.DisplayServices", L"FindAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Display::DisplayServices::FindAll());
             }
             catch (...)

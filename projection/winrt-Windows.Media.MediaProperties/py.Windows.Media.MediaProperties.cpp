@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Copy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Copy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Copy());
             }
             catch (...)
@@ -79,14 +79,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAac", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAac", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAacAdts", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAacAdts", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -145,14 +145,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAlac", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateAlac", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateFlac", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateFlac", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -211,14 +211,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateMp3", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateMp3", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreatePcm", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreatePcm", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateWma", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"CreateWma", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -310,14 +310,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"GetFormatUserData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"GetFormatUserData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::com_array<uint8_t> param0 { };
 
                 self->obj.GetFormatUserData(param0);
@@ -348,14 +348,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SetFormatUserData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SetFormatUserData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetFormatUserData(param0);
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_SampleRate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SampleRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SampleRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SampleRate());
         }
         catch (...)
@@ -395,12 +395,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_SampleRate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SampleRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -409,6 +403,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"SampleRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.SampleRate(param0);
@@ -423,14 +423,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_ChannelCount(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"ChannelCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"ChannelCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelCount());
         }
         catch (...)
@@ -442,12 +442,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_ChannelCount(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"ChannelCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -456,6 +450,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"ChannelCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ChannelCount(param0);
@@ -470,14 +470,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_BitsPerSample(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"BitsPerSample"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"BitsPerSample"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitsPerSample());
         }
         catch (...)
@@ -489,12 +489,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_BitsPerSample(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"BitsPerSample"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -503,6 +497,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"BitsPerSample"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.BitsPerSample(param0);
@@ -517,14 +517,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_Bitrate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -536,12 +536,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_Bitrate(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -550,6 +544,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Bitrate(param0);
@@ -564,14 +564,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_IsSpatial(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"IsSpatial"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"IsSpatial"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSpatial());
         }
         catch (...)
@@ -583,14 +583,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -602,12 +602,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int AudioEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -616,6 +610,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -630,14 +630,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -649,14 +649,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* AudioEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.AudioEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -772,14 +772,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_HighChromaSubsampling444BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"HighChromaSubsampling444BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"HighChromaSubsampling444BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth10());
         }
         catch (...)
@@ -791,14 +791,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_HighChromaSubsampling444BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"HighChromaSubsampling444BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"HighChromaSubsampling444BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::HighChromaSubsampling444BitDepth8());
         }
         catch (...)
@@ -810,14 +810,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_MainChromaSubsampling400BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling400BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling400BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth10());
         }
         catch (...)
@@ -829,14 +829,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_MainChromaSubsampling400BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling400BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling400BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling400BitDepth8());
         }
         catch (...)
@@ -848,14 +848,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_MainChromaSubsampling420BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling420BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling420BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth10());
         }
         catch (...)
@@ -867,14 +867,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_MainChromaSubsampling420BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling420BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"MainChromaSubsampling420BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::MainChromaSubsampling420BitDepth8());
         }
         catch (...)
@@ -886,14 +886,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling400BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling400BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling400BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling400BitDepth12());
         }
         catch (...)
@@ -905,14 +905,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling420BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling420BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling420BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling420BitDepth12());
         }
         catch (...)
@@ -924,14 +924,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling422BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth10());
         }
         catch (...)
@@ -943,14 +943,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling422BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth12());
         }
         catch (...)
@@ -962,14 +962,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling422BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling422BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling422BitDepth8());
         }
         catch (...)
@@ -981,14 +981,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Av1ProfileIds_get_ProfessionalChromaSubsampling444BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling444BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Av1ProfileIds", L"ProfessionalChromaSubsampling444BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Av1ProfileIds::ProfessionalChromaSubsampling444BitDepth12());
         }
         catch (...)
@@ -1105,14 +1105,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Copy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Copy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Copy());
             }
             catch (...)
@@ -1130,14 +1130,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ContainerEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -1149,12 +1149,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ContainerEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1163,6 +1157,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -1177,14 +1177,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ContainerEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -1196,14 +1196,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ContainerEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ContainerEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1280,14 +1280,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_Baseline(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Baseline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Baseline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Baseline());
         }
         catch (...)
@@ -1299,14 +1299,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_ConstrainedBaseline(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"ConstrainedBaseline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"ConstrainedBaseline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::ConstrainedBaseline());
         }
         catch (...)
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_Extended(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Extended"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Extended"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Extended());
         }
         catch (...)
@@ -1337,14 +1337,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_High(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High());
         }
         catch (...)
@@ -1356,14 +1356,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_High10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High10());
         }
         catch (...)
@@ -1375,14 +1375,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_High422(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High422"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High422"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High422());
         }
         catch (...)
@@ -1394,14 +1394,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_High444(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High444"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"High444"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::High444());
         }
         catch (...)
@@ -1413,14 +1413,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_Main(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Main"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"Main"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::Main());
         }
         catch (...)
@@ -1432,14 +1432,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_MultiviewHigh(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"MultiviewHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"MultiviewHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::MultiviewHigh());
         }
         catch (...)
@@ -1451,14 +1451,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* H264ProfileIds_get_StereoHigh(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"StereoHigh"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.H264ProfileIds", L"StereoHigh"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::H264ProfileIds::StereoHigh());
         }
         catch (...)
@@ -1539,14 +1539,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling420BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth10());
         }
         catch (...)
@@ -1558,14 +1558,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling420BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth12());
         }
         catch (...)
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling420BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling420BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling420BitDepth8());
         }
         catch (...)
@@ -1596,14 +1596,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling422BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling422BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling422BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth10());
         }
         catch (...)
@@ -1615,14 +1615,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling422BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling422BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling422BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling422BitDepth12());
         }
         catch (...)
@@ -1634,14 +1634,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling444BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth10());
         }
         catch (...)
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling444BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth12());
         }
         catch (...)
@@ -1672,14 +1672,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainChromaSubsampling444BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainChromaSubsampling444BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainChromaSubsampling444BitDepth8());
         }
         catch (...)
@@ -1691,14 +1691,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling420BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth10());
         }
         catch (...)
@@ -1710,14 +1710,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling420BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth12());
         }
         catch (...)
@@ -1729,14 +1729,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling420BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling420BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling420BitDepth8());
         }
         catch (...)
@@ -1748,14 +1748,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling422BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling422BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling422BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth10());
         }
         catch (...)
@@ -1767,14 +1767,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling422BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling422BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling422BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling422BitDepth12());
         }
         catch (...)
@@ -1786,14 +1786,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling444BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth10());
         }
         catch (...)
@@ -1805,14 +1805,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling444BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth12());
         }
         catch (...)
@@ -1824,14 +1824,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling444BitDepth16(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth16"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth16"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth16());
         }
         catch (...)
@@ -1843,14 +1843,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainIntraChromaSubsampling444BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainIntraChromaSubsampling444BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainIntraChromaSubsampling444BitDepth8());
         }
         catch (...)
@@ -1862,14 +1862,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainStillChromaSubsampling420BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling420BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling420BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling420BitDepth8());
         }
         catch (...)
@@ -1881,14 +1881,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainStillChromaSubsampling444BitDepth16(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling444BitDepth16"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling444BitDepth16"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth16());
         }
         catch (...)
@@ -1900,14 +1900,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MainStillChromaSubsampling444BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling444BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MainStillChromaSubsampling444BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MainStillChromaSubsampling444BitDepth8());
         }
         catch (...)
@@ -1919,14 +1919,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MonochromeBitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MonochromeBitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MonochromeBitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth12());
         }
         catch (...)
@@ -1938,14 +1938,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* HevcProfileIds_get_MonochromeBitDepth16(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MonochromeBitDepth16"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.HevcProfileIds", L"MonochromeBitDepth16"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::HevcProfileIds::MonochromeBitDepth16());
         }
         catch (...)
@@ -2072,14 +2072,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Copy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Copy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Copy());
             }
             catch (...)
@@ -2101,14 +2101,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateBmp", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateBmp", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateBmp());
             }
             catch (...)
@@ -2130,14 +2130,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateHeif", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateHeif", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateHeif());
             }
             catch (...)
@@ -2159,14 +2159,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateJpeg", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateJpeg", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpeg());
             }
             catch (...)
@@ -2188,14 +2188,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateJpegXR", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateJpegXR", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateJpegXR());
             }
             catch (...)
@@ -2217,14 +2217,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreatePng", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreatePng", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreatePng());
             }
             catch (...)
@@ -2246,14 +2246,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateUncompressed", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"CreateUncompressed", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaPixelFormat>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::ImageEncodingProperties::CreateUncompressed(param0));
@@ -2273,14 +2273,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_get_Width(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -2292,12 +2292,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Width(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2306,6 +2300,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Width(param0);
@@ -2320,14 +2320,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_get_Height(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -2339,12 +2339,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Height(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2353,6 +2347,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Height(param0);
@@ -2367,14 +2367,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -2386,12 +2386,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int ImageEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2400,6 +2394,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -2414,14 +2414,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -2433,14 +2433,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* ImageEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.ImageEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -2584,14 +2584,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAlac", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAlac", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAlac(param0));
@@ -2615,14 +2615,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAv1", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAv1", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAv1(param0));
@@ -2646,14 +2646,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAvi", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateAvi", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateAvi(param0));
@@ -2677,14 +2677,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFlac", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFlac", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFlac(param0));
@@ -2708,14 +2708,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFromFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFromFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromFileAsync(param0));
@@ -2739,14 +2739,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFromStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateFromStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateFromStreamAsync(param0));
@@ -2770,14 +2770,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateHevc", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateHevc", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateHevc(param0));
@@ -2801,14 +2801,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateM4a", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateM4a", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateM4a(param0));
@@ -2832,14 +2832,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateMp3", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateMp3", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp3(param0));
@@ -2863,14 +2863,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateMp4", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateMp4", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateMp4(param0));
@@ -2894,14 +2894,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateVp9", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateVp9", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateVp9(param0));
@@ -2925,14 +2925,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWav", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWav", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWav(param0));
@@ -2956,14 +2956,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWma", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWma", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWma(param0));
@@ -2987,14 +2987,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWmv", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"CreateWmv", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingProfile::CreateWmv(param0));
@@ -3018,14 +3018,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetAudioTracks", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetAudioTracks", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetAudioTracks());
             }
             catch (...)
@@ -3047,14 +3047,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetTimedMetadataTracks", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetTimedMetadataTracks", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetTimedMetadataTracks());
             }
             catch (...)
@@ -3076,14 +3076,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetVideoTracks", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"GetVideoTracks", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVideoTracks());
             }
             catch (...)
@@ -3105,14 +3105,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetAudioTracks", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetAudioTracks", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::AudioStreamDescriptor>>(args, 0);
 
                 self->obj.SetAudioTracks(param0);
@@ -3137,14 +3137,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetTimedMetadataTracks", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetTimedMetadataTracks", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>>(args, 0);
 
                 self->obj.SetTimedMetadataTracks(param0);
@@ -3169,14 +3169,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetVideoTracks", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"SetVideoTracks", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Media::Core::VideoStreamDescriptor>>(args, 0);
 
                 self->obj.SetVideoTracks(param0);
@@ -3197,14 +3197,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_get_Video(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Video"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Video"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Video());
         }
         catch (...)
@@ -3216,12 +3216,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Video(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Video"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3230,6 +3224,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Video"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(arg);
 
             self->obj.Video(param0);
@@ -3244,14 +3244,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_get_Container(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Container"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Container"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Container());
         }
         catch (...)
@@ -3263,12 +3263,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Container(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Container"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3277,6 +3271,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Container"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>(arg);
 
             self->obj.Container(param0);
@@ -3291,14 +3291,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingProfile_get_Audio(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Audio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Audio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Audio());
         }
         catch (...)
@@ -3310,12 +3310,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaEncodingProfile_put_Audio(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Audio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3324,6 +3318,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingProfile", L"Audio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(arg);
 
             self->obj.Audio(param0);
@@ -3447,14 +3447,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Argb32(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Argb32"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Argb32"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Argb32());
         }
         catch (...)
@@ -3466,14 +3466,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Aac(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Aac"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Aac"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Aac());
         }
         catch (...)
@@ -3485,14 +3485,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_AacAdts(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AacAdts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AacAdts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AacAdts());
         }
         catch (...)
@@ -3504,14 +3504,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Ac3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Ac3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Ac3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ac3());
         }
         catch (...)
@@ -3523,14 +3523,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_AmrNb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AmrNb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AmrNb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrNb());
         }
         catch (...)
@@ -3542,14 +3542,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_AmrWb(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AmrWb"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"AmrWb"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::AmrWb());
         }
         catch (...)
@@ -3561,14 +3561,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mpeg(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg());
         }
         catch (...)
@@ -3580,14 +3580,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Asf(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Asf"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Asf"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Asf());
         }
         catch (...)
@@ -3599,14 +3599,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Avi(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Avi"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Avi"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Avi());
         }
         catch (...)
@@ -3618,14 +3618,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Bgra8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Bgra8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Bgra8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bgra8());
         }
         catch (...)
@@ -3637,14 +3637,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Bmp(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Bmp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Bmp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Bmp());
         }
         catch (...)
@@ -3656,14 +3656,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Eac3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Eac3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Eac3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Eac3());
         }
         catch (...)
@@ -3675,14 +3675,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Float(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Float"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Float"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Float());
         }
         catch (...)
@@ -3694,14 +3694,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Gif(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Gif"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Gif"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Gif());
         }
         catch (...)
@@ -3713,14 +3713,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_H263(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H263"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H263"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H263());
         }
         catch (...)
@@ -3732,14 +3732,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_H264(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H264"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H264"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264());
         }
         catch (...)
@@ -3751,14 +3751,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_H264Es(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H264Es"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"H264Es"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::H264Es());
         }
         catch (...)
@@ -3770,14 +3770,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Hevc(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Hevc"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Hevc"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Hevc());
         }
         catch (...)
@@ -3789,14 +3789,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_HevcEs(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"HevcEs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"HevcEs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::HevcEs());
         }
         catch (...)
@@ -3808,14 +3808,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Iyuv(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Iyuv"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Iyuv"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Iyuv());
         }
         catch (...)
@@ -3827,14 +3827,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Jpeg(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Jpeg"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Jpeg"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Jpeg());
         }
         catch (...)
@@ -3846,14 +3846,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_JpegXr(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"JpegXr"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"JpegXr"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::JpegXr());
         }
         catch (...)
@@ -3865,14 +3865,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mjpg(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mjpg"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mjpg"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mjpg());
         }
         catch (...)
@@ -3884,14 +3884,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mp3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mp3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mp3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mp3());
         }
         catch (...)
@@ -3903,14 +3903,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mpeg1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg1());
         }
         catch (...)
@@ -3922,14 +3922,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mpeg2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg2());
         }
         catch (...)
@@ -3941,14 +3941,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Mpeg4(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg4"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Mpeg4"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Mpeg4());
         }
         catch (...)
@@ -3960,14 +3960,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Nv12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Nv12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Nv12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Nv12());
         }
         catch (...)
@@ -3979,14 +3979,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Pcm(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Pcm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Pcm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pcm());
         }
         catch (...)
@@ -3998,14 +3998,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Png(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Png"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Png"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Png());
         }
         catch (...)
@@ -4017,14 +4017,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Rgb24(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Rgb24"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Rgb24"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb24());
         }
         catch (...)
@@ -4036,14 +4036,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Rgb32(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Rgb32"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Rgb32"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Rgb32());
         }
         catch (...)
@@ -4055,14 +4055,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Tiff(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Tiff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Tiff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Tiff());
         }
         catch (...)
@@ -4074,14 +4074,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Wave(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wave"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wave"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wave());
         }
         catch (...)
@@ -4093,14 +4093,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Wma8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wma8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wma8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma8());
         }
         catch (...)
@@ -4112,14 +4112,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Wma9(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wma9"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wma9"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wma9());
         }
         catch (...)
@@ -4131,14 +4131,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Wmv3(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wmv3"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wmv3"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wmv3());
         }
         catch (...)
@@ -4150,14 +4150,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Wvc1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wvc1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Wvc1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Wvc1());
         }
         catch (...)
@@ -4169,14 +4169,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Yuy2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Yuy2"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Yuy2"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yuy2());
         }
         catch (...)
@@ -4188,14 +4188,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Yv12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Yv12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Yv12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Yv12());
         }
         catch (...)
@@ -4207,14 +4207,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_D16(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"D16"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"D16"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::D16());
         }
         catch (...)
@@ -4226,14 +4226,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_L16(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"L16"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"L16"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L16());
         }
         catch (...)
@@ -4245,14 +4245,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_L8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"L8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"L8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::L8());
         }
         catch (...)
@@ -4264,14 +4264,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Vp9(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Vp9"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Vp9"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Vp9());
         }
         catch (...)
@@ -4283,14 +4283,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Alac(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Alac"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Alac"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Alac());
         }
         catch (...)
@@ -4302,14 +4302,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Flac(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Flac"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Flac"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Flac());
         }
         catch (...)
@@ -4321,14 +4321,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_P010(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"P010"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"P010"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::P010());
         }
         catch (...)
@@ -4340,14 +4340,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Heif(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Heif"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Heif"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Heif());
         }
         catch (...)
@@ -4359,14 +4359,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Pgs(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Pgs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Pgs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Pgs());
         }
         catch (...)
@@ -4378,14 +4378,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Srt(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Srt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Srt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Srt());
         }
         catch (...)
@@ -4397,14 +4397,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Ssa(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Ssa"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Ssa"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Ssa());
         }
         catch (...)
@@ -4416,14 +4416,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_VobSub(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"VobSub"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"VobSub"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::VobSub());
         }
         catch (...)
@@ -4435,14 +4435,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaEncodingSubtypes_get_Av1(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Av1"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaEncodingSubtypes", L"Av1"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes::Av1());
         }
         catch (...)
@@ -4600,14 +4600,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -4630,14 +4630,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -4659,14 +4659,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -4688,14 +4688,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -4719,14 +4719,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -4751,14 +4751,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -4782,14 +4782,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 self->obj.Remove(param0);
@@ -4810,14 +4810,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaPropertySet_get_Size(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaPropertySet", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -5012,14 +5012,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaRatio_get_Numerator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Numerator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Numerator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Numerator());
         }
         catch (...)
@@ -5031,12 +5031,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaRatio_put_Numerator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Numerator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5045,6 +5039,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Numerator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Numerator(param0);
@@ -5059,14 +5059,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* MediaRatio_get_Denominator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Denominator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Denominator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Denominator());
         }
         catch (...)
@@ -5078,12 +5078,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int MediaRatio_put_Denominator(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Denominator"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5092,6 +5086,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.MediaRatio", L"Denominator"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Denominator(param0);
@@ -5169,14 +5169,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Mpeg2ProfileIds_get_High(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"High"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"High"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::High());
         }
         catch (...)
@@ -5188,14 +5188,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Mpeg2ProfileIds_get_Main(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"Main"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"Main"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Main());
         }
         catch (...)
@@ -5207,14 +5207,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Mpeg2ProfileIds_get_SignalNoiseRatioScalable(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"SignalNoiseRatioScalable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"SignalNoiseRatioScalable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SignalNoiseRatioScalable());
         }
         catch (...)
@@ -5226,14 +5226,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Mpeg2ProfileIds_get_Simple(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"Simple"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"Simple"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::Simple());
         }
         catch (...)
@@ -5245,14 +5245,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Mpeg2ProfileIds_get_SpatiallyScalable(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"SpatiallyScalable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Mpeg2ProfileIds", L"SpatiallyScalable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds::SpatiallyScalable());
         }
         catch (...)
@@ -5362,14 +5362,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Copy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Copy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Copy());
             }
             catch (...)
@@ -5391,14 +5391,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreatePgs", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreatePgs", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreatePgs());
             }
             catch (...)
@@ -5420,14 +5420,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateSrt", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateSrt", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSrt());
             }
             catch (...)
@@ -5449,14 +5449,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateSsa", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateSsa", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateSsa(param0));
@@ -5480,14 +5480,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateVobSub", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"CreateVobSub", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties::CreateVobSub(param0));
@@ -5511,14 +5511,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"GetFormatUserData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"GetFormatUserData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::com_array<uint8_t> param0 { };
 
                 self->obj.GetFormatUserData(param0);
@@ -5549,14 +5549,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"SetFormatUserData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"SetFormatUserData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetFormatUserData(param0);
@@ -5577,14 +5577,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -5596,12 +5596,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int TimedMetadataEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5610,6 +5604,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -5624,14 +5624,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -5643,14 +5643,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* TimedMetadataEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.TimedMetadataEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -5792,14 +5792,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Copy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Copy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Copy());
             }
             catch (...)
@@ -5821,14 +5821,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateAv1", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateAv1", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateAv1());
             }
             catch (...)
@@ -5850,14 +5850,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateH264", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateH264", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateH264());
             }
             catch (...)
@@ -5879,14 +5879,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateHevc", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateHevc", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateHevc());
             }
             catch (...)
@@ -5908,14 +5908,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateMpeg2", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateMpeg2", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateMpeg2());
             }
             catch (...)
@@ -5937,14 +5937,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateUncompressed", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateUncompressed", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -5970,14 +5970,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateVp9", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"CreateVp9", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::MediaProperties::VideoEncodingProperties::CreateVp9());
             }
             catch (...)
@@ -5999,14 +5999,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"GetFormatUserData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"GetFormatUserData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::com_array<uint8_t> param0 { };
 
                 self->obj.GetFormatUserData(param0);
@@ -6037,14 +6037,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"SetFormatUserData", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"SetFormatUserData", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.SetFormatUserData(param0);
@@ -6065,14 +6065,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -6084,12 +6084,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6098,6 +6092,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -6112,14 +6112,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -6131,14 +6131,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -6150,14 +6150,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Width(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -6169,12 +6169,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Width(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6183,6 +6177,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Width(param0);
@@ -6197,14 +6197,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Height(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -6216,12 +6216,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Height(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6230,6 +6224,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Height(param0);
@@ -6244,14 +6244,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_Bitrate(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bitrate());
         }
         catch (...)
@@ -6263,12 +6263,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_Bitrate(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Bitrate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6277,6 +6271,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"Bitrate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Bitrate(param0);
@@ -6291,14 +6291,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_PixelAspectRatio(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"PixelAspectRatio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"PixelAspectRatio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelAspectRatio());
         }
         catch (...)
@@ -6310,14 +6310,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_FrameRate(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"FrameRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"FrameRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameRate());
         }
         catch (...)
@@ -6329,14 +6329,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_ProfileId(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"ProfileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"ProfileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileId());
         }
         catch (...)
@@ -6348,12 +6348,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int VideoEncodingProperties_put_ProfileId(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"ProfileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6362,6 +6356,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"ProfileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ProfileId(param0);
@@ -6376,14 +6376,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_StereoscopicVideoPackingMode(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"StereoscopicVideoPackingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"StereoscopicVideoPackingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StereoscopicVideoPackingMode());
         }
         catch (...)
@@ -6395,14 +6395,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* VideoEncodingProperties_get_SphericalVideoFrameFormat(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"SphericalVideoFrameFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.VideoEncodingProperties", L"SphericalVideoFrameFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SphericalVideoFrameFormat());
         }
         catch (...)
@@ -6520,14 +6520,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Vp9ProfileIds_get_Profile0ChromaSubsampling420BitDepth8(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile0ChromaSubsampling420BitDepth8"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile0ChromaSubsampling420BitDepth8"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile0ChromaSubsampling420BitDepth8());
         }
         catch (...)
@@ -6539,14 +6539,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Vp9ProfileIds_get_Profile2ChromaSubsampling420BitDepth10(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile2ChromaSubsampling420BitDepth10"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile2ChromaSubsampling420BitDepth10"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth10());
         }
         catch (...)
@@ -6558,14 +6558,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* Vp9ProfileIds_get_Profile2ChromaSubsampling420BitDepth12(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile2ChromaSubsampling420BitDepth12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.Vp9ProfileIds", L"Profile2ChromaSubsampling420BitDepth12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::MediaProperties::Vp9ProfileIds::Profile2ChromaSubsampling420BitDepth12());
         }
         catch (...)
@@ -6647,14 +6647,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* IMediaEncodingProperties_get_Properties(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -6666,14 +6666,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* IMediaEncodingProperties_get_Subtype(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Subtype());
         }
         catch (...)
@@ -6685,12 +6685,6 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static int IMediaEncodingProperties_put_Subtype(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Subtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6699,6 +6693,12 @@ namespace py::cpp::Windows::Media::MediaProperties
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Subtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Subtype(param0);
@@ -6713,14 +6713,14 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyObject* IMediaEncodingProperties_get_Type(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.MediaProperties.IMediaEncodingProperties", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)

@@ -24,14 +24,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationConnection_get_AppUserModelId(py::wrapper::Windows::UI::UIAutomation::AutomationConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"AppUserModelId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"AppUserModelId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppUserModelId());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationConnection_get_ExecutableFileName(py::wrapper::Windows::UI::UIAutomation::AutomationConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"ExecutableFileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"ExecutableFileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExecutableFileName());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationConnection_get_IsRemoteSystem(py::wrapper::Windows::UI::UIAutomation::AutomationConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"IsRemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnection", L"IsRemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRemoteSystem());
         }
         catch (...)
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationConnectionBoundObject_get_Connection(py::wrapper::Windows::UI::UIAutomation::AutomationConnectionBoundObject* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnectionBoundObject", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationConnectionBoundObject", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationElement_get_AppUserModelId(py::wrapper::Windows::UI::UIAutomation::AutomationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"AppUserModelId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"AppUserModelId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppUserModelId());
         }
         catch (...)
@@ -261,14 +261,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationElement_get_ExecutableFileName(py::wrapper::Windows::UI::UIAutomation::AutomationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"ExecutableFileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"ExecutableFileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExecutableFileName());
         }
         catch (...)
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyObject* AutomationElement_get_IsRemoteSystem(py::wrapper::Windows::UI::UIAutomation::AutomationElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"IsRemoteSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.AutomationElement", L"IsRemoteSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRemoteSystem());
         }
         catch (...)

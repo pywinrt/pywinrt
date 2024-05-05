@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::FromIdAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDefault());
             }
             catch (...)
@@ -106,14 +106,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDefault", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDefault", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::AccelerometerReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDefault(param0));
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Accelerometer", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::AccelerometerReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Accelerometer::GetDeviceSelector(param0));
@@ -164,14 +164,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -183,12 +183,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -197,6 +191,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -211,14 +211,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -230,14 +230,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -249,12 +249,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -263,6 +257,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -277,14 +277,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -296,12 +296,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Accelerometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -310,6 +304,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -324,14 +324,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -343,14 +343,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_ReadingType(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingType());
         }
         catch (...)
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -381,14 +381,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Accelerometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -400,14 +400,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Accelerometer, winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -443,14 +443,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_add_Shaken(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"Shaken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"Shaken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Accelerometer, winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>>(arg);
 
             return py::convert(self->obj.Shaken(param0));
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Accelerometer_remove_Shaken(py::wrapper::Windows::Devices::Sensors::Accelerometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"Shaken"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Accelerometer", L"Shaken"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Shaken(param0);
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerDataThreshold_get_ZAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"ZAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"ZAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZAxisInGForce());
         }
         catch (...)
@@ -615,12 +615,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_ZAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"ZAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -629,6 +623,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"ZAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ZAxisInGForce(param0);
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerDataThreshold_get_YAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"YAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"YAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YAxisInGForce());
         }
         catch (...)
@@ -662,12 +662,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_YAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"YAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -676,6 +670,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"YAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.YAxisInGForce(param0);
@@ -690,14 +690,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerDataThreshold_get_XAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"XAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"XAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XAxisInGForce());
         }
         catch (...)
@@ -709,12 +709,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AccelerometerDataThreshold_put_XAxisInGForce(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"XAxisInGForce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -723,6 +717,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerDataThreshold", L"XAxisInGForce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.XAxisInGForce(param0);
@@ -809,14 +809,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_AccelerationX(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccelerationX());
         }
         catch (...)
@@ -828,14 +828,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_AccelerationY(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccelerationY());
         }
         catch (...)
@@ -847,14 +847,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_AccelerationZ(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"AccelerationZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AccelerationZ());
         }
         catch (...)
@@ -866,14 +866,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -885,14 +885,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -904,14 +904,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReading_get_Properties(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -998,14 +998,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -1087,14 +1087,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AccelerometerShakenEventArgs_get_Timestamp(py::wrapper::Windows::Devices::Sensors::AccelerometerShakenEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerShakenEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AccelerometerShakenEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1180,14 +1180,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::FromIdAsync(param0));
@@ -1211,14 +1211,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetCurrentReadingAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetCurrentReadingAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReadingAsync());
             }
             catch (...)
@@ -1240,14 +1240,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetDefaultAsync());
             }
             catch (...)
@@ -1269,14 +1269,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetDeviceSelector());
             }
             catch (...)
@@ -1298,14 +1298,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetSystemHistoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetSystemHistoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::ActivitySensor::GetSystemHistoryAsync(param0));
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetSystemHistoryAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensor", L"GetSystemHistoryAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -1346,14 +1346,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -1365,14 +1365,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -1384,14 +1384,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_get_PowerInMilliwatts(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"PowerInMilliwatts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"PowerInMilliwatts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerInMilliwatts());
         }
         catch (...)
@@ -1403,14 +1403,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_get_SubscribedActivities(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"SubscribedActivities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"SubscribedActivities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubscribedActivities());
         }
         catch (...)
@@ -1422,14 +1422,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_get_SupportedActivities(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"SupportedActivities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensor", L"SupportedActivities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedActivities());
         }
         catch (...)
@@ -1441,14 +1441,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ActivitySensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ActivitySensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::ActivitySensor, winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ActivitySensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ActivitySensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -1590,14 +1590,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorReading_get_Activity(py::wrapper::Windows::Devices::Sensors::ActivitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Activity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Activity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Activity());
         }
         catch (...)
@@ -1609,14 +1609,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorReading_get_Confidence(py::wrapper::Windows::Devices::Sensors::ActivitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Confidence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Confidence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Confidence());
         }
         catch (...)
@@ -1628,14 +1628,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::ActivitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -1719,14 +1719,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorReadingChangeReport_get_Reading(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangeReport* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReadingChangeReport", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReadingChangeReport", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -1808,14 +1808,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ActivitySensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ActivitySensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -1901,14 +1901,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensorTriggerDetails", L"ReadReports", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ActivitySensorTriggerDetails", L"ReadReports", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReadReports());
             }
             catch (...)
@@ -1996,14 +1996,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AdaptiveDimmingOptions_get_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::AdaptiveDimmingOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AdaptiveDimmingOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AdaptiveDimmingOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowWhenExternalDisplayConnected());
         }
         catch (...)
@@ -2015,12 +2015,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int AdaptiveDimmingOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::AdaptiveDimmingOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AdaptiveDimmingOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2029,6 +2023,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AdaptiveDimmingOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowWhenExternalDisplayConnected(param0);
@@ -2117,14 +2117,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Altimeter", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Altimeter", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -2146,14 +2146,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Altimeter", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Altimeter", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Altimeter::GetDefault());
             }
             catch (...)
@@ -2171,14 +2171,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Altimeter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -2190,12 +2190,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Altimeter_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2204,6 +2198,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -2218,14 +2218,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Altimeter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -2237,14 +2237,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Altimeter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -2256,14 +2256,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Altimeter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -2275,12 +2275,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Altimeter_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2289,6 +2283,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -2303,14 +2303,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Altimeter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Altimeter", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -2322,14 +2322,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Altimeter", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Altimeter", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Altimeter, winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -2343,14 +2343,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Altimeter_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Altimeter* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Altimeter", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Altimeter", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -2468,14 +2468,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AltimeterReading_get_AltitudeChangeInMeters(py::wrapper::Windows::Devices::Sensors::AltimeterReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"AltitudeChangeInMeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"AltitudeChangeInMeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AltitudeChangeInMeters());
         }
         catch (...)
@@ -2487,14 +2487,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AltimeterReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::AltimeterReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -2506,14 +2506,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AltimeterReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::AltimeterReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -2525,14 +2525,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AltimeterReading_get_Properties(py::wrapper::Windows::Devices::Sensors::AltimeterReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -2617,14 +2617,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* AltimeterReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.AltimeterReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -2710,14 +2710,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Barometer::FromIdAsync(param0));
@@ -2741,14 +2741,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -2770,14 +2770,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Barometer::GetDefault());
             }
             catch (...)
@@ -2799,14 +2799,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Barometer", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Barometer::GetDeviceSelector());
             }
             catch (...)
@@ -2824,14 +2824,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -2843,12 +2843,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Barometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2857,6 +2851,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -2871,14 +2871,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -2890,14 +2890,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -2928,12 +2928,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Barometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2942,6 +2936,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -2956,14 +2956,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -2975,14 +2975,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Barometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Barometer", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -2994,14 +2994,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Barometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Barometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Barometer, winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -3015,14 +3015,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Barometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Barometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Barometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Barometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -3143,14 +3143,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerDataThreshold_get_Hectopascals(py::wrapper::Windows::Devices::Sensors::BarometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerDataThreshold", L"Hectopascals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerDataThreshold", L"Hectopascals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Hectopascals());
         }
         catch (...)
@@ -3162,12 +3162,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int BarometerDataThreshold_put_Hectopascals(py::wrapper::Windows::Devices::Sensors::BarometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerDataThreshold", L"Hectopascals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3176,6 +3170,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerDataThreshold", L"Hectopascals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Hectopascals(param0);
@@ -3260,14 +3260,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerReading_get_StationPressureInHectopascals(py::wrapper::Windows::Devices::Sensors::BarometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"StationPressureInHectopascals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"StationPressureInHectopascals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StationPressureInHectopascals());
         }
         catch (...)
@@ -3279,14 +3279,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::BarometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -3298,14 +3298,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::BarometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -3317,14 +3317,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerReading_get_Properties(py::wrapper::Windows::Devices::Sensors::BarometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -3409,14 +3409,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* BarometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::BarometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.BarometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -3502,14 +3502,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Compass::FromIdAsync(param0));
@@ -3533,14 +3533,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -3562,14 +3562,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Compass::GetDefault());
             }
             catch (...)
@@ -3591,14 +3591,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Compass", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Compass::GetDeviceSelector());
             }
             catch (...)
@@ -3616,14 +3616,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -3635,12 +3635,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3649,6 +3643,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -3663,14 +3663,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -3682,14 +3682,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -3701,12 +3701,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3715,6 +3709,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -3729,14 +3729,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -3748,12 +3748,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Compass_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3762,6 +3756,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -3776,14 +3776,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -3795,14 +3795,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -3814,14 +3814,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Compass* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Compass", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -3833,14 +3833,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Compass", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Compass", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Compass, winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -3854,14 +3854,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Compass_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Compass* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Compass", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Compass", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -3983,14 +3983,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassDataThreshold_get_Degrees(py::wrapper::Windows::Devices::Sensors::CompassDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassDataThreshold", L"Degrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassDataThreshold", L"Degrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Degrees());
         }
         catch (...)
@@ -4002,12 +4002,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int CompassDataThreshold_put_Degrees(py::wrapper::Windows::Devices::Sensors::CompassDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassDataThreshold", L"Degrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4016,6 +4010,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassDataThreshold", L"Degrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Degrees(param0);
@@ -4100,14 +4100,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_HeadingMagneticNorth(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingMagneticNorth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingMagneticNorth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeadingMagneticNorth());
         }
         catch (...)
@@ -4119,14 +4119,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_HeadingTrueNorth(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingTrueNorth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingTrueNorth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeadingTrueNorth());
         }
         catch (...)
@@ -4138,14 +4138,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -4157,14 +4157,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -4176,14 +4176,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_Properties(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -4195,14 +4195,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReading_get_HeadingAccuracy(py::wrapper::Windows::Devices::Sensors::CompassReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReading", L"HeadingAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeadingAccuracy());
         }
         catch (...)
@@ -4289,14 +4289,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* CompassReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::CompassReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.CompassReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -4382,14 +4382,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::FromIdAsync(param0));
@@ -4413,14 +4413,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -4442,14 +4442,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::GetDefault());
             }
             catch (...)
@@ -4471,14 +4471,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Gyrometer", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Gyrometer::GetDeviceSelector());
             }
             catch (...)
@@ -4496,14 +4496,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -4515,12 +4515,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4529,6 +4523,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -4543,14 +4543,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -4562,14 +4562,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -4581,12 +4581,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4595,6 +4589,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -4609,14 +4609,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -4628,12 +4628,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Gyrometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4642,6 +4636,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -4656,14 +4656,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -4675,14 +4675,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -4694,14 +4694,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Gyrometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -4713,14 +4713,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Gyrometer, winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -4734,14 +4734,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Gyrometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Gyrometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Gyrometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -4863,14 +4863,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerDataThreshold_get_ZAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"ZAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"ZAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZAxisInDegreesPerSecond());
         }
         catch (...)
@@ -4882,12 +4882,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_ZAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"ZAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4896,6 +4890,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"ZAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ZAxisInDegreesPerSecond(param0);
@@ -4910,14 +4910,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerDataThreshold_get_YAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"YAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"YAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YAxisInDegreesPerSecond());
         }
         catch (...)
@@ -4929,12 +4929,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_YAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"YAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4943,6 +4937,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"YAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.YAxisInDegreesPerSecond(param0);
@@ -4957,14 +4957,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerDataThreshold_get_XAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"XAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"XAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XAxisInDegreesPerSecond());
         }
         catch (...)
@@ -4976,12 +4976,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int GyrometerDataThreshold_put_XAxisInDegreesPerSecond(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"XAxisInDegreesPerSecond"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4990,6 +4984,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerDataThreshold", L"XAxisInDegreesPerSecond"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.XAxisInDegreesPerSecond(param0);
@@ -5076,14 +5076,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_AngularVelocityX(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AngularVelocityX());
         }
         catch (...)
@@ -5095,14 +5095,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_AngularVelocityY(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AngularVelocityY());
         }
         catch (...)
@@ -5114,14 +5114,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_AngularVelocityZ(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"AngularVelocityZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AngularVelocityZ());
         }
         catch (...)
@@ -5133,14 +5133,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -5152,14 +5152,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -5171,14 +5171,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReading_get_Properties(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -5265,14 +5265,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* GyrometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.GyrometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -5354,14 +5354,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleReading_get_AngleInDegrees(py::wrapper::Windows::Devices::Sensors::HingeAngleReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"AngleInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"AngleInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AngleInDegrees());
         }
         catch (...)
@@ -5373,14 +5373,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleReading_get_Properties(py::wrapper::Windows::Devices::Sensors::HingeAngleReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -5392,14 +5392,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::HingeAngleReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -5487,14 +5487,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::FromIdAsync(param0));
@@ -5518,14 +5518,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetCurrentReadingAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetCurrentReadingAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReadingAsync());
             }
             catch (...)
@@ -5547,14 +5547,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDefaultAsync());
             }
             catch (...)
@@ -5576,14 +5576,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HingeAngleSensor::GetDeviceSelector());
             }
             catch (...)
@@ -5605,14 +5605,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetRelatedToAdjacentPanelsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"GetRelatedToAdjacentPanelsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -5633,14 +5633,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_get_ReportThresholdInDegrees(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReportThresholdInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReportThresholdInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThresholdInDegrees());
         }
         catch (...)
@@ -5652,12 +5652,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HingeAngleSensor_put_ReportThresholdInDegrees(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReportThresholdInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5666,6 +5660,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReportThresholdInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ReportThresholdInDegrees(param0);
@@ -5680,14 +5680,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -5699,14 +5699,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_get_MinReportThresholdInDegrees(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"MinReportThresholdInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"MinReportThresholdInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinReportThresholdInDegrees());
         }
         catch (...)
@@ -5718,14 +5718,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::HingeAngleSensor, winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -5739,14 +5739,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HingeAngleSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -5865,14 +5865,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HingeAngleSensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -5954,14 +5954,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_IsAttentionAwareDimmingSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsAttentionAwareDimmingSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsAttentionAwareDimmingSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAttentionAwareDimmingSupported());
         }
         catch (...)
@@ -5973,14 +5973,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_IsLockOnLeaveSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsLockOnLeaveSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsLockOnLeaveSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLockOnLeaveSupported());
         }
         catch (...)
@@ -5992,14 +5992,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_IsWakeOnApproachSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsWakeOnApproachSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsWakeOnApproachSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWakeOnApproachSupported());
         }
         catch (...)
@@ -6011,14 +6011,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_SensorId(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"SensorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"SensorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SensorId());
         }
         catch (...)
@@ -6030,14 +6030,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_SupportedWakeOrLockDistancesInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"SupportedWakeOrLockDistancesInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"SupportedWakeOrLockDistancesInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedWakeOrLockDistancesInMillimeters());
         }
         catch (...)
@@ -6049,14 +6049,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceFeatures_get_IsAdaptiveDimmingSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsAdaptiveDimmingSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceFeatures", L"IsAdaptiveDimmingSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAdaptiveDimmingSupported());
         }
         catch (...)
@@ -6147,14 +6147,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromId(param0));
@@ -6178,14 +6178,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::FromIdAsync(param0));
@@ -6209,14 +6209,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -6238,14 +6238,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefault());
             }
             catch (...)
@@ -6267,14 +6267,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDefaultAsync());
             }
             catch (...)
@@ -6296,14 +6296,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSensor::GetDeviceSelector());
             }
             catch (...)
@@ -6321,14 +6321,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -6340,14 +6340,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_get_MaxDetectableDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MaxDetectableDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MaxDetectableDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDetectableDistanceInMillimeters());
         }
         catch (...)
@@ -6359,14 +6359,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_get_MinDetectableDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MinDetectableDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MinDetectableDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinDetectableDistanceInMillimeters());
         }
         catch (...)
@@ -6378,14 +6378,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_get_IsEngagementSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"IsEngagementSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"IsEngagementSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEngagementSupported());
         }
         catch (...)
@@ -6397,14 +6397,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_get_IsPresenceSupported(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"IsPresenceSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"IsPresenceSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPresenceSupported());
         }
         catch (...)
@@ -6416,14 +6416,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::HumanPresenceSensor, winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -6437,14 +6437,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -6566,14 +6566,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReading_get_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"DistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"DistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceInMillimeters());
         }
         catch (...)
@@ -6585,14 +6585,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReading_get_Engagement(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Engagement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Engagement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Engagement());
         }
         catch (...)
@@ -6604,14 +6604,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReading_get_Presence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Presence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Presence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Presence());
         }
         catch (...)
@@ -6623,14 +6623,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -6642,14 +6642,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReading_get_Properties(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -6735,14 +6735,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -6846,14 +6846,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReadingUpdate_get_Timestamp(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -6865,12 +6865,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Timestamp(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6879,6 +6873,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(arg);
 
             self->obj.Timestamp(param0);
@@ -6893,14 +6893,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReadingUpdate_get_Presence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Presence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Presence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Presence());
         }
         catch (...)
@@ -6912,12 +6912,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Presence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Presence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6926,6 +6920,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Presence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>>(arg);
 
             self->obj.Presence(param0);
@@ -6940,14 +6940,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReadingUpdate_get_Engagement(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Engagement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Engagement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Engagement());
         }
         catch (...)
@@ -6959,12 +6959,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_Engagement(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Engagement"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6973,6 +6967,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"Engagement"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement>>(arg);
 
             self->obj.Engagement(param0);
@@ -6987,14 +6987,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSensorReadingUpdate_get_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"DistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"DistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceInMillimeters());
         }
         catch (...)
@@ -7006,12 +7006,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSensorReadingUpdate_put_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"DistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7020,6 +7014,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate", L"DistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.DistanceInMillimeters(param0);
@@ -7111,14 +7111,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetCurrentSettings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetCurrentSettings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettings());
             }
             catch (...)
@@ -7140,14 +7140,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetCurrentSettingsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetCurrentSettingsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetCurrentSettingsAsync());
             }
             catch (...)
@@ -7169,14 +7169,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedFeaturesForSensorId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedFeaturesForSensorId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorId(param0));
@@ -7200,14 +7200,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedFeaturesForSensorIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedFeaturesForSensorIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedFeaturesForSensorIdAsync(param0));
@@ -7231,14 +7231,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedLockOnLeaveTimeouts", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"GetSupportedLockOnLeaveTimeouts", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::GetSupportedLockOnLeaveTimeouts());
             }
             catch (...)
@@ -7260,14 +7260,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"UpdateSettings", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"UpdateSettings", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSettings>(args, 0);
 
                 winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettings(param0);
@@ -7292,14 +7292,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"UpdateSettingsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"UpdateSettingsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSettings>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::UpdateSettingsAsync(param0));
@@ -7319,14 +7319,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_WakeOnApproachDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOnApproachDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOnApproachDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WakeOnApproachDistanceInMillimeters());
         }
         catch (...)
@@ -7338,12 +7338,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_WakeOnApproachDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOnApproachDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7352,6 +7346,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOnApproachDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.WakeOnApproachDistanceInMillimeters(param0);
@@ -7366,14 +7366,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_SensorId(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SensorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SensorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SensorId());
         }
         catch (...)
@@ -7385,12 +7385,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_SensorId(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SensorId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7399,6 +7393,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SensorId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.SensorId(param0);
@@ -7413,14 +7413,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_LockOnLeaveTimeout(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockOnLeaveTimeout());
         }
         catch (...)
@@ -7432,12 +7432,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_LockOnLeaveTimeout(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7446,6 +7440,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.LockOnLeaveTimeout(param0);
@@ -7460,14 +7460,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_LockOnLeaveDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockOnLeaveDistanceInMillimeters());
         }
         catch (...)
@@ -7479,12 +7479,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_LockOnLeaveDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7493,6 +7487,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOnLeaveDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(arg);
 
             self->obj.LockOnLeaveDistanceInMillimeters(param0);
@@ -7507,14 +7507,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_IsWakeOnApproachEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsWakeOnApproachEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsWakeOnApproachEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsWakeOnApproachEnabled());
         }
         catch (...)
@@ -7526,12 +7526,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsWakeOnApproachEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsWakeOnApproachEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7540,6 +7534,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsWakeOnApproachEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsWakeOnApproachEnabled(param0);
@@ -7554,14 +7554,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_IsLockOnLeaveEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsLockOnLeaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsLockOnLeaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLockOnLeaveEnabled());
         }
         catch (...)
@@ -7573,12 +7573,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsLockOnLeaveEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsLockOnLeaveEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7587,6 +7581,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsLockOnLeaveEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsLockOnLeaveEnabled(param0);
@@ -7601,14 +7601,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_IsAttentionAwareDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAttentionAwareDimmingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAttentionAwareDimmingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAttentionAwareDimmingEnabled());
         }
         catch (...)
@@ -7620,12 +7620,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsAttentionAwareDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAttentionAwareDimmingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7634,6 +7628,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAttentionAwareDimmingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAttentionAwareDimmingEnabled(param0);
@@ -7648,14 +7648,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_IsAdaptiveDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAdaptiveDimmingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAdaptiveDimmingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAdaptiveDimmingEnabled());
         }
         catch (...)
@@ -7667,12 +7667,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int HumanPresenceSettings_put_IsAdaptiveDimmingEnabled(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAdaptiveDimmingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7681,6 +7675,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"IsAdaptiveDimmingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsAdaptiveDimmingEnabled(param0);
@@ -7695,14 +7695,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_DimmingOptions(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"DimmingOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"DimmingOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DimmingOptions());
         }
         catch (...)
@@ -7714,14 +7714,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_LockOptions(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"LockOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockOptions());
         }
         catch (...)
@@ -7733,14 +7733,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_get_WakeOptions(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"WakeOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WakeOptions());
         }
         catch (...)
@@ -7752,14 +7752,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_add_SettingsChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SettingsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SettingsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0));
@@ -7773,14 +7773,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* HumanPresenceSettings_remove_SettingsChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SettingsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.HumanPresenceSettings", L"SettingsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Devices::Sensors::HumanPresenceSettings::SettingsChanged(param0);
@@ -7913,14 +7913,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::FromIdAsync(param0));
@@ -7944,14 +7944,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -7973,14 +7973,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault());
             }
             catch (...)
@@ -7991,14 +7991,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault(param0));
@@ -8022,14 +8022,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefaultForRelativeReadings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefaultForRelativeReadings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefaultForRelativeReadings());
             }
             catch (...)
@@ -8051,14 +8051,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDeviceSelector(param0));
@@ -8078,14 +8078,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -8097,12 +8097,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8111,6 +8105,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -8125,14 +8125,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -8144,14 +8144,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -8163,12 +8163,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8177,6 +8171,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -8191,14 +8191,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_ReadingType(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingType());
         }
         catch (...)
@@ -8210,14 +8210,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -8229,12 +8229,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Inclinometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8243,6 +8237,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -8257,14 +8257,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -8276,14 +8276,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -8295,14 +8295,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Inclinometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -8314,14 +8314,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Inclinometer, winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -8335,14 +8335,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Inclinometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Inclinometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Inclinometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -8466,14 +8466,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerDataThreshold_get_YawInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"YawInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"YawInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YawInDegrees());
         }
         catch (...)
@@ -8485,12 +8485,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_YawInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"YawInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8499,6 +8493,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"YawInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.YawInDegrees(param0);
@@ -8513,14 +8513,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerDataThreshold_get_RollInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"RollInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"RollInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RollInDegrees());
         }
         catch (...)
@@ -8532,12 +8532,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_RollInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"RollInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8546,6 +8540,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"RollInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.RollInDegrees(param0);
@@ -8560,14 +8560,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerDataThreshold_get_PitchInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"PitchInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"PitchInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PitchInDegrees());
         }
         catch (...)
@@ -8579,12 +8579,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int InclinometerDataThreshold_put_PitchInDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"PitchInDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8593,6 +8587,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerDataThreshold", L"PitchInDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.PitchInDegrees(param0);
@@ -8679,14 +8679,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_PitchDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"PitchDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"PitchDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PitchDegrees());
         }
         catch (...)
@@ -8698,14 +8698,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_RollDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"RollDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"RollDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RollDegrees());
         }
         catch (...)
@@ -8717,14 +8717,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -8736,14 +8736,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_YawDegrees(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"YawDegrees"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"YawDegrees"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YawDegrees());
         }
         catch (...)
@@ -8755,14 +8755,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -8774,14 +8774,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_Properties(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -8793,14 +8793,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReading_get_YawAccuracy(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"YawAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReading", L"YawAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YawAccuracy());
         }
         catch (...)
@@ -8888,14 +8888,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* InclinometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.InclinometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -8981,14 +8981,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::LightSensor::FromIdAsync(param0));
@@ -9012,14 +9012,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -9041,14 +9041,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::LightSensor::GetDefault());
             }
             catch (...)
@@ -9070,14 +9070,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.LightSensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::LightSensor::GetDeviceSelector());
             }
             catch (...)
@@ -9095,14 +9095,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -9114,12 +9114,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensor_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9128,6 +9122,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -9142,14 +9142,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -9161,14 +9161,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -9180,12 +9180,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensor_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9194,6 +9188,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -9208,14 +9208,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -9227,14 +9227,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -9246,14 +9246,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::LightSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -9265,14 +9265,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.LightSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.LightSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::LightSensor, winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -9286,14 +9286,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::LightSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.LightSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.LightSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -9414,14 +9414,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorDataThreshold_get_LuxPercentage(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"LuxPercentage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"LuxPercentage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LuxPercentage());
         }
         catch (...)
@@ -9433,12 +9433,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensorDataThreshold_put_LuxPercentage(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"LuxPercentage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9447,6 +9441,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"LuxPercentage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.LuxPercentage(param0);
@@ -9461,14 +9461,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorDataThreshold_get_AbsoluteLux(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"AbsoluteLux"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"AbsoluteLux"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AbsoluteLux());
         }
         catch (...)
@@ -9480,12 +9480,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LightSensorDataThreshold_put_AbsoluteLux(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"AbsoluteLux"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9494,6 +9488,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorDataThreshold", L"AbsoluteLux"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.AbsoluteLux(param0);
@@ -9579,14 +9579,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorReading_get_IlluminanceInLux(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"IlluminanceInLux"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"IlluminanceInLux"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IlluminanceInLux());
         }
         catch (...)
@@ -9598,14 +9598,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -9617,14 +9617,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -9636,14 +9636,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorReading_get_Properties(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -9728,14 +9728,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LightSensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LightSensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -9817,14 +9817,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* LockOnLeaveOptions_get_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::LockOnLeaveOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LockOnLeaveOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LockOnLeaveOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowWhenExternalDisplayConnected());
         }
         catch (...)
@@ -9836,12 +9836,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int LockOnLeaveOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::LockOnLeaveOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LockOnLeaveOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9850,6 +9844,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.LockOnLeaveOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowWhenExternalDisplayConnected(param0);
@@ -9938,14 +9938,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::FromIdAsync(param0));
@@ -9969,14 +9969,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -9998,14 +9998,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::GetDefault());
             }
             catch (...)
@@ -10027,14 +10027,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Magnetometer", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Magnetometer::GetDeviceSelector());
             }
             catch (...)
@@ -10052,14 +10052,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -10071,12 +10071,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10085,6 +10079,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -10099,14 +10099,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -10118,14 +10118,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -10137,12 +10137,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10151,6 +10145,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -10165,14 +10165,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -10184,12 +10184,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Magnetometer_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10198,6 +10192,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -10212,14 +10212,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -10231,14 +10231,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_ReportThreshold(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportThreshold"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReportThreshold"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportThreshold());
         }
         catch (...)
@@ -10250,14 +10250,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Magnetometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -10269,14 +10269,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Magnetometer, winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -10290,14 +10290,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Magnetometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Magnetometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Magnetometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -10419,14 +10419,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerDataThreshold_get_ZAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"ZAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"ZAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ZAxisMicroteslas());
         }
         catch (...)
@@ -10438,12 +10438,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_ZAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"ZAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10452,6 +10446,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"ZAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.ZAxisMicroteslas(param0);
@@ -10466,14 +10466,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerDataThreshold_get_YAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"YAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"YAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YAxisMicroteslas());
         }
         catch (...)
@@ -10485,12 +10485,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_YAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"YAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10499,6 +10493,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"YAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.YAxisMicroteslas(param0);
@@ -10513,14 +10513,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerDataThreshold_get_XAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"XAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"XAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.XAxisMicroteslas());
         }
         catch (...)
@@ -10532,12 +10532,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int MagnetometerDataThreshold_put_XAxisMicroteslas(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"XAxisMicroteslas"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10546,6 +10540,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerDataThreshold", L"XAxisMicroteslas"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.XAxisMicroteslas(param0);
@@ -10632,14 +10632,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_DirectionalAccuracy(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"DirectionalAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"DirectionalAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DirectionalAccuracy());
         }
         catch (...)
@@ -10651,14 +10651,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_MagneticFieldX(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MagneticFieldX());
         }
         catch (...)
@@ -10670,14 +10670,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_MagneticFieldY(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MagneticFieldY());
         }
         catch (...)
@@ -10689,14 +10689,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_MagneticFieldZ(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldZ"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"MagneticFieldZ"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MagneticFieldZ());
         }
         catch (...)
@@ -10708,14 +10708,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -10727,14 +10727,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -10746,14 +10746,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReading_get_Properties(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -10841,14 +10841,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* MagnetometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.MagnetometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -10934,14 +10934,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::FromIdAsync(param0));
@@ -10965,14 +10965,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -10994,14 +10994,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault());
             }
             catch (...)
@@ -11012,14 +11012,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0));
@@ -11032,14 +11032,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
 
@@ -11064,14 +11064,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefaultForRelativeReadings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefaultForRelativeReadings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefaultForRelativeReadings());
             }
             catch (...)
@@ -11093,14 +11093,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDeviceSelector(param0));
@@ -11113,14 +11113,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDeviceSelector", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDeviceSelector", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
 
@@ -11141,14 +11141,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -11160,12 +11160,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11174,6 +11168,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -11188,14 +11188,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -11207,14 +11207,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -11226,12 +11226,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11240,6 +11234,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -11254,14 +11254,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_ReadingType(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingType());
         }
         catch (...)
@@ -11273,14 +11273,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_ReportLatency(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportLatency());
         }
         catch (...)
@@ -11292,12 +11292,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int OrientationSensor_put_ReportLatency(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11306,6 +11300,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReportLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportLatency(param0);
@@ -11320,14 +11320,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_MaxBatchSize(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -11339,14 +11339,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -11358,14 +11358,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::OrientationSensor, winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -11379,14 +11379,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.OrientationSensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -11509,14 +11509,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_Quaternion(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Quaternion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Quaternion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Quaternion());
         }
         catch (...)
@@ -11528,14 +11528,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_RotationMatrix(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"RotationMatrix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"RotationMatrix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RotationMatrix());
         }
         catch (...)
@@ -11547,14 +11547,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -11566,14 +11566,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_PerformanceCount(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"PerformanceCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"PerformanceCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PerformanceCount());
         }
         catch (...)
@@ -11585,14 +11585,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_Properties(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -11604,14 +11604,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReading_get_YawAccuracy(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"YawAccuracy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReading", L"YawAccuracy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.YawAccuracy());
         }
         catch (...)
@@ -11698,14 +11698,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* OrientationSensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -11791,14 +11791,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Pedometer::FromIdAsync(param0));
@@ -11822,14 +11822,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetCurrentReadings", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetCurrentReadings", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReadings());
             }
             catch (...)
@@ -11851,14 +11851,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetDefaultAsync());
             }
             catch (...)
@@ -11880,14 +11880,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetDeviceSelector());
             }
             catch (...)
@@ -11909,14 +11909,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetReadingsFromTriggerDetails", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetReadingsFromTriggerDetails", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetReadingsFromTriggerDetails(param0));
@@ -11940,14 +11940,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetSystemHistoryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetSystemHistoryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::Pedometer::GetSystemHistoryAsync(param0));
@@ -11960,14 +11960,14 @@ namespace py::cpp::Windows::Devices::Sensors
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetSystemHistoryAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Pedometer", L"GetSystemHistoryAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
@@ -11988,14 +11988,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_get_ReportInterval(py::wrapper::Windows::Devices::Sensors::Pedometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReportInterval());
         }
         catch (...)
@@ -12007,12 +12007,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int Pedometer_put_ReportInterval(py::wrapper::Windows::Devices::Sensors::Pedometer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"ReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12021,6 +12015,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"ReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReportInterval(param0);
@@ -12035,14 +12035,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_get_DeviceId(py::wrapper::Windows::Devices::Sensors::Pedometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -12054,14 +12054,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_get_MinimumReportInterval(py::wrapper::Windows::Devices::Sensors::Pedometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"MinimumReportInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"MinimumReportInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimumReportInterval());
         }
         catch (...)
@@ -12073,14 +12073,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_get_PowerInMilliwatts(py::wrapper::Windows::Devices::Sensors::Pedometer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"PowerInMilliwatts"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.Pedometer", L"PowerInMilliwatts"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PowerInMilliwatts());
         }
         catch (...)
@@ -12092,14 +12092,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Pedometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Pedometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Pedometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::Pedometer, winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -12113,14 +12113,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* Pedometer_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::Pedometer* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Pedometer", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.Pedometer", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -12335,14 +12335,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* PedometerReading_get_CumulativeSteps(py::wrapper::Windows::Devices::Sensors::PedometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"CumulativeSteps"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"CumulativeSteps"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CumulativeSteps());
         }
         catch (...)
@@ -12354,14 +12354,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* PedometerReading_get_CumulativeStepsDuration(py::wrapper::Windows::Devices::Sensors::PedometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"CumulativeStepsDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"CumulativeStepsDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CumulativeStepsDuration());
         }
         catch (...)
@@ -12373,14 +12373,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* PedometerReading_get_StepKind(py::wrapper::Windows::Devices::Sensors::PedometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"StepKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"StepKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StepKind());
         }
         catch (...)
@@ -12392,14 +12392,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* PedometerReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::PedometerReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -12484,14 +12484,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* PedometerReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::PedometerReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.PedometerReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -12577,14 +12577,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"CreateDisplayOnOffController", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"CreateDisplayOnOffController", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDisplayOnOffController());
             }
             catch (...)
@@ -12606,14 +12606,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::FromId(param0));
@@ -12637,14 +12637,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetCurrentReading", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetCurrentReading", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentReading());
             }
             catch (...)
@@ -12666,14 +12666,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::GetDeviceSelector());
             }
             catch (...)
@@ -12695,14 +12695,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetReadingsFromTriggerDetails", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensor", L"GetReadingsFromTriggerDetails", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::ProximitySensor::GetReadingsFromTriggerDetails(param0));
@@ -12722,14 +12722,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -12741,14 +12741,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_get_MaxDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"MaxDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"MaxDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxDistanceInMillimeters());
         }
         catch (...)
@@ -12760,14 +12760,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_get_MinDistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"MinDistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensor", L"MinDistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinDistanceInMillimeters());
         }
         catch (...)
@@ -12779,14 +12779,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ProximitySensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ProximitySensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::ProximitySensor, winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.ReadingChanged(param0));
@@ -12800,14 +12800,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensor_remove_ReadingChanged(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ProximitySensor", L"ReadingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.ProximitySensor", L"ReadingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ReadingChanged(param0);
@@ -13023,14 +13023,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensorDisplayOnOffController", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.ProximitySensorDisplayOnOffController", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -13140,14 +13140,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensorReading_get_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::ProximitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"DistanceInMillimeters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"DistanceInMillimeters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceInMillimeters());
         }
         catch (...)
@@ -13159,14 +13159,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensorReading_get_IsDetected(py::wrapper::Windows::Devices::Sensors::ProximitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"IsDetected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"IsDetected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDetected());
         }
         catch (...)
@@ -13178,14 +13178,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensorReading_get_Timestamp(py::wrapper::Windows::Devices::Sensors::ProximitySensorReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -13269,14 +13269,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* ProximitySensorReadingChangedEventArgs_get_Reading(py::wrapper::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.ProximitySensorReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)
@@ -13358,14 +13358,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorDataThresholdTriggerDetails_get_DeviceId(py::wrapper::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorDataThresholdTriggerDetails", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorDataThresholdTriggerDetails", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -13377,14 +13377,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorDataThresholdTriggerDetails_get_SensorType(py::wrapper::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorDataThresholdTriggerDetails", L"SensorType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorDataThresholdTriggerDetails", L"SensorType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SensorType());
         }
         catch (...)
@@ -13467,14 +13467,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorQuaternion_get_W(py::wrapper::Windows::Devices::Sensors::SensorQuaternion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"W"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"W"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.W());
         }
         catch (...)
@@ -13486,14 +13486,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorQuaternion_get_X(py::wrapper::Windows::Devices::Sensors::SensorQuaternion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"X"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"X"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.X());
         }
         catch (...)
@@ -13505,14 +13505,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorQuaternion_get_Y(py::wrapper::Windows::Devices::Sensors::SensorQuaternion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"Y"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"Y"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Y());
         }
         catch (...)
@@ -13524,14 +13524,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorQuaternion_get_Z(py::wrapper::Windows::Devices::Sensors::SensorQuaternion* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"Z"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorQuaternion", L"Z"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Z());
         }
         catch (...)
@@ -13616,14 +13616,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M11(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M11"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M11"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M11());
         }
         catch (...)
@@ -13635,14 +13635,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M12(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M12"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M12"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M12());
         }
         catch (...)
@@ -13654,14 +13654,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M13(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M13"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M13"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M13());
         }
         catch (...)
@@ -13673,14 +13673,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M21(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M21"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M21"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M21());
         }
         catch (...)
@@ -13692,14 +13692,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M22(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M22"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M22"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M22());
         }
         catch (...)
@@ -13711,14 +13711,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M23(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M23"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M23"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M23());
         }
         catch (...)
@@ -13730,14 +13730,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M31(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M31"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M31"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M31());
         }
         catch (...)
@@ -13749,14 +13749,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M32(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M32"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M32"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M32());
         }
         catch (...)
@@ -13768,14 +13768,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SensorRotationMatrix_get_M33(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M33"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SensorRotationMatrix", L"M33"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.M33());
         }
         catch (...)
@@ -13869,14 +13869,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::FromIdAsync(param0));
@@ -13900,14 +13900,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetCurrentOrientation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetCurrentOrientation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentOrientation());
             }
             catch (...)
@@ -13929,14 +13929,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDefault());
             }
             catch (...)
@@ -13958,14 +13958,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Sensors::SimpleOrientationSensor::GetDeviceSelector());
             }
             catch (...)
@@ -13983,14 +13983,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_get_ReadingTransform(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReadingTransform());
         }
         catch (...)
@@ -14002,12 +14002,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int SimpleOrientationSensor_put_ReadingTransform(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"ReadingTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14016,6 +14010,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"ReadingTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Display::DisplayOrientations>(arg);
 
             self->obj.ReadingTransform(param0);
@@ -14030,14 +14030,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_get_DeviceId(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -14049,14 +14049,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_add_OrientationChanged(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Sensors::SimpleOrientationSensor, winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>>(arg);
 
             return py::convert(self->obj.OrientationChanged(param0));
@@ -14070,14 +14070,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensor_remove_OrientationChanged(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"OrientationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Sensors.SimpleOrientationSensor", L"OrientationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.OrientationChanged(param0);
@@ -14194,14 +14194,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensorOrientationChangedEventArgs_get_Orientation(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -14213,14 +14213,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* SimpleOrientationSensorOrientationChangedEventArgs_get_Timestamp(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.SimpleOrientationSensorOrientationChangedEventArgs", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -14303,14 +14303,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* WakeOnApproachOptions_get_DisableWhenBatterySaverOn(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"DisableWhenBatterySaverOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"DisableWhenBatterySaverOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisableWhenBatterySaverOn());
         }
         catch (...)
@@ -14322,12 +14322,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int WakeOnApproachOptions_put_DisableWhenBatterySaverOn(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"DisableWhenBatterySaverOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14336,6 +14330,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"DisableWhenBatterySaverOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DisableWhenBatterySaverOn(param0);
@@ -14350,14 +14350,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyObject* WakeOnApproachOptions_get_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowWhenExternalDisplayConnected());
         }
         catch (...)
@@ -14369,12 +14369,6 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static int WakeOnApproachOptions_put_AllowWhenExternalDisplayConnected(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"AllowWhenExternalDisplayConnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14383,6 +14377,12 @@ namespace py::cpp::Windows::Devices::Sensors
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.WakeOnApproachOptions", L"AllowWhenExternalDisplayConnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowWhenExternalDisplayConnected(param0);
@@ -14472,14 +14472,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Initialize", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Initialize", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Initialize(param0);
@@ -14504,14 +14504,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"ProcessReading", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"ProcessReading", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>(args, 0);
 
                 return py::convert(self->obj.ProcessReading(param0));
@@ -14535,14 +14535,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"ProcessReadingTimeoutExpired", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"ProcessReadingTimeoutExpired", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>(args, 0);
 
                 self->obj.ProcessReadingTimeoutExpired(param0);
@@ -14567,14 +14567,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -14597,14 +14597,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -14627,14 +14627,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -14657,14 +14657,14 @@ namespace py::cpp::Windows::Devices::Sensors
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Uninitialize", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.IHumanPresenceSensorExtension", L"Uninitialize", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Uninitialize();
                 Py_RETURN_NONE;
             }

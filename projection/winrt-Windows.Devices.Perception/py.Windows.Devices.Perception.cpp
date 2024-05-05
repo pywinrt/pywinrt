@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownCameraIntrinsicsProperties_get_FocalLength(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"FocalLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"FocalLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties::FocalLength());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownCameraIntrinsicsProperties_get_PrincipalPoint(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"PrincipalPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"PrincipalPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties::PrincipalPoint());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownCameraIntrinsicsProperties_get_RadialDistortion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"RadialDistortion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"RadialDistortion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties::RadialDistortion());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownCameraIntrinsicsProperties_get_TangentialDistortion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"TangentialDistortion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownCameraIntrinsicsProperties", L"TangentialDistortion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties::TangentialDistortion());
         }
         catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionColorFrameSourceProperties_get_AutoExposureEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"AutoExposureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"AutoExposureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties::AutoExposureEnabled());
         }
         catch (...)
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionColorFrameSourceProperties_get_Exposure(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"Exposure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"Exposure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties::Exposure());
         }
         catch (...)
@@ -193,14 +193,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionColorFrameSourceProperties_get_ExposureCompensation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"ExposureCompensation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionColorFrameSourceProperties", L"ExposureCompensation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties::ExposureCompensation());
         }
         catch (...)
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionDepthFrameSourceProperties_get_MaxDepth(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties", L"MaxDepth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties", L"MaxDepth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties::MaxDepth());
         }
         catch (...)
@@ -293,14 +293,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionDepthFrameSourceProperties_get_MinDepth(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties", L"MinDepth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionDepthFrameSourceProperties", L"MinDepth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties::MinDepth());
         }
         catch (...)
@@ -373,14 +373,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_DeviceModelVersion(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"DeviceModelVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"DeviceModelVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::DeviceModelVersion());
         }
         catch (...)
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_EnclosureLocation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"EnclosureLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"EnclosureLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::EnclosureLocation());
         }
         catch (...)
@@ -411,14 +411,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_FrameKind(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"FrameKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"FrameKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::FrameKind());
         }
         catch (...)
@@ -430,14 +430,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_Id(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::Id());
         }
         catch (...)
@@ -449,14 +449,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_PhysicalDeviceIds(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"PhysicalDeviceIds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"PhysicalDeviceIds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::PhysicalDeviceIds());
         }
         catch (...)
@@ -468,14 +468,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionFrameSourceProperties_get_DeviceId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionFrameSourceProperties", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties::DeviceId());
         }
         catch (...)
@@ -552,14 +552,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_ActiveIlluminationEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"ActiveIlluminationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"ActiveIlluminationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::ActiveIlluminationEnabled());
         }
         catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_AmbientSubtractionEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"AmbientSubtractionEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"AmbientSubtractionEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::AmbientSubtractionEnabled());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_AutoExposureEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"AutoExposureEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"AutoExposureEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::AutoExposureEnabled());
         }
         catch (...)
@@ -609,14 +609,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_Exposure(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"Exposure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"Exposure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::Exposure());
         }
         catch (...)
@@ -628,14 +628,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_ExposureCompensation(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"ExposureCompensation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"ExposureCompensation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::ExposureCompensation());
         }
         catch (...)
@@ -647,14 +647,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_InterleavedIlluminationEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"InterleavedIlluminationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"InterleavedIlluminationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::InterleavedIlluminationEnabled());
         }
         catch (...)
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionInfraredFrameSourceProperties_get_StructureLightPatternEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"StructureLightPatternEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionInfraredFrameSourceProperties", L"StructureLightPatternEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties::StructureLightPatternEnabled());
         }
         catch (...)
@@ -751,14 +751,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoFrameSourceProperties_get_AvailableVideoProfiles(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"AvailableVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"AvailableVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties::AvailableVideoProfiles());
         }
         catch (...)
@@ -770,14 +770,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoFrameSourceProperties_get_CameraIntrinsics(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"CameraIntrinsics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"CameraIntrinsics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties::CameraIntrinsics());
         }
         catch (...)
@@ -789,14 +789,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoFrameSourceProperties_get_IsMirrored(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"IsMirrored"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"IsMirrored"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties::IsMirrored());
         }
         catch (...)
@@ -808,14 +808,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoFrameSourceProperties_get_SupportedVideoProfiles(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"SupportedVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"SupportedVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties::SupportedVideoProfiles());
         }
         catch (...)
@@ -827,14 +827,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoFrameSourceProperties_get_VideoProfile(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoFrameSourceProperties", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties::VideoProfile());
         }
         catch (...)
@@ -910,14 +910,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoProfileProperties_get_BitmapAlphaMode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties::BitmapAlphaMode());
         }
         catch (...)
@@ -929,14 +929,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoProfileProperties_get_BitmapPixelFormat(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties::BitmapPixelFormat());
         }
         catch (...)
@@ -948,14 +948,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoProfileProperties_get_FrameDuration(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"FrameDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"FrameDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties::FrameDuration());
         }
         catch (...)
@@ -967,14 +967,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoProfileProperties_get_Height(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties::Height());
         }
         catch (...)
@@ -986,14 +986,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* KnownPerceptionVideoProfileProperties_get_Width(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.KnownPerceptionVideoProfileProperties", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties::Width());
         }
         catch (...)
@@ -1081,14 +1081,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrame", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrame", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1107,14 +1107,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrame_get_VideoFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrame", L"VideoFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrame", L"VideoFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoFrame());
         }
         catch (...)
@@ -1222,14 +1222,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs", L"TryOpenFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs", L"TryOpenFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryOpenFrame());
             }
             catch (...)
@@ -1247,14 +1247,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameArrivedEventArgs_get_RelativeTime(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs", L"RelativeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameArrivedEventArgs", L"RelativeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTime());
         }
         catch (...)
@@ -1341,14 +1341,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1371,14 +1371,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"TryReadLatestFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"TryReadLatestFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryReadLatestFrame());
             }
             catch (...)
@@ -1396,14 +1396,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_get_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPaused());
         }
         catch (...)
@@ -1415,12 +1415,6 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionColorFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1429,6 +1423,12 @@ namespace py::cpp::Windows::Devices::Perception
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPaused(param0);
@@ -1443,14 +1443,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_get_Source(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -1462,14 +1462,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_add_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameReader, winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameArrived(param0));
@@ -1483,14 +1483,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameReader_remove_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameArrived(param0);
@@ -1605,14 +1605,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AcquireControlSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AcquireControlSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AcquireControlSession());
             }
             catch (...)
@@ -1634,14 +1634,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CanControlIndependentlyFrom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CanControlIndependentlyFrom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CanControlIndependentlyFrom(param0));
@@ -1665,14 +1665,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionColorFrameSource::CreateWatcher());
             }
             catch (...)
@@ -1694,14 +1694,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionColorFrameSource::FindAllAsync());
             }
             catch (...)
@@ -1723,14 +1723,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionColorFrameSource::FromIdAsync(param0));
@@ -1754,14 +1754,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"IsCorrelatedWith", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"IsCorrelatedWith", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsCorrelatedWith(param0));
@@ -1785,14 +1785,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"OpenReader", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"OpenReader", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenReader());
             }
             catch (...)
@@ -1814,14 +1814,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionColorFrameSource::RequestAccessAsync());
             }
             catch (...)
@@ -1843,14 +1843,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 0);
 
                 return py::convert(self->obj.TryGetDepthCorrelatedCameraIntrinsicsAsync(param0));
@@ -1874,14 +1874,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 1);
 
@@ -1906,14 +1906,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetTransformTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TryGetTransformTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
 
@@ -1950,14 +1950,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TrySetVideoProfileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"TrySetVideoProfileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionControlSession>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionVideoProfile>(args, 1);
 
@@ -1978,14 +1978,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_Active(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Active"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Active"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Active());
         }
         catch (...)
@@ -1997,14 +1997,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_Available(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Available"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Available"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Available());
         }
         catch (...)
@@ -2016,14 +2016,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_AvailableVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableVideoProfiles());
         }
         catch (...)
@@ -2035,14 +2035,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_CameraIntrinsics(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraIntrinsics());
         }
         catch (...)
@@ -2054,14 +2054,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_DeviceKind(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DeviceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DeviceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceKind());
         }
         catch (...)
@@ -2073,14 +2073,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_DisplayName(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -2092,14 +2092,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_Id(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_IsControlled(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"IsControlled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"IsControlled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsControlled());
         }
         catch (...)
@@ -2130,14 +2130,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_Properties(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -2149,14 +2149,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_SupportedVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"SupportedVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"SupportedVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedVideoProfiles());
         }
         catch (...)
@@ -2168,14 +2168,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_VideoProfile(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoProfile());
         }
         catch (...)
@@ -2187,14 +2187,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_get_DeviceId(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -2206,14 +2206,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_add_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ActiveChanged(param0));
@@ -2227,14 +2227,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_remove_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActiveChanged(param0);
@@ -2249,14 +2249,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_add_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AvailableChanged(param0));
@@ -2270,14 +2270,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_remove_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AvailableChanged(param0);
@@ -2292,14 +2292,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_add_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CameraIntrinsicsChanged(param0));
@@ -2313,14 +2313,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_remove_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CameraIntrinsicsChanged(param0);
@@ -2335,14 +2335,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_add_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PropertiesChanged(param0));
@@ -2356,14 +2356,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_remove_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PropertiesChanged(param0);
@@ -2378,14 +2378,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_add_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoProfileChanged(param0));
@@ -2399,14 +2399,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSource_remove_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoProfileChanged(param0);
@@ -2549,14 +2549,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceAddedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceAddedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -2638,14 +2638,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceRemovedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceRemovedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -2731,14 +2731,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2761,14 +2761,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2787,14 +2787,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_get_Status(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2806,14 +2806,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_add_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -2827,14 +2827,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -2849,14 +2849,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_add_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceAdded(param0));
@@ -2870,14 +2870,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_remove_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceAdded(param0);
@@ -2892,14 +2892,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_add_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceRemoved(param0));
@@ -2913,14 +2913,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_remove_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceRemoved(param0);
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_add_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -2956,14 +2956,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionColorFrameSourceWatcher_remove_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionColorFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -3062,14 +3062,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3092,14 +3092,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"TrySetPropertyAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"TrySetPropertyAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -3120,14 +3120,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionControlSession_add_ControlLost(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"ControlLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"ControlLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionControlSession, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ControlLost(param0));
@@ -3141,14 +3141,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionControlSession_remove_ControlLost(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"ControlLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionControlSession", L"ControlLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ControlLost(param0);
@@ -3261,14 +3261,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectAllPixelsAtCorrelatedDepthAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectAllPixelsAtCorrelatedDepthAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Numerics::float3, true>>(args, 1);
 
@@ -3293,14 +3293,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectPixelAtCorrelatedDepth", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectPixelAtCorrelatedDepth", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
 
@@ -3325,14 +3325,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectPixelsAtCorrelatedDepth", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectPixelsAtCorrelatedDepth", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Numerics::float3, true>>(args, 2);
@@ -3359,14 +3359,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectRegionPixelsAtCorrelatedDepthAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics", L"UnprojectRegionPixelsAtCorrelatedDepthAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Numerics::float3, true>>(args, 2);
@@ -3465,14 +3465,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapAllPixelsToTargetAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapAllPixelsToTargetAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, true>>(args, 1);
 
@@ -3497,14 +3497,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapPixelToTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapPixelToTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
 
@@ -3529,14 +3529,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapPixelsToTarget", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapPixelsToTarget", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, true>>(args, 2);
@@ -3563,14 +3563,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapRegionOfPixelsToTargetAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthCorrelatedCoordinateMapper", L"MapRegionOfPixelsToTargetAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrame>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, true>>(args, 2);
@@ -3669,14 +3669,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrame", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrame", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3695,14 +3695,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrame_get_VideoFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrame", L"VideoFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrame", L"VideoFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoFrame());
         }
         catch (...)
@@ -3810,14 +3810,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs", L"TryOpenFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs", L"TryOpenFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryOpenFrame());
             }
             catch (...)
@@ -3835,14 +3835,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameArrivedEventArgs_get_RelativeTime(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs", L"RelativeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameArrivedEventArgs", L"RelativeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTime());
         }
         catch (...)
@@ -3929,14 +3929,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3959,14 +3959,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"TryReadLatestFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"TryReadLatestFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryReadLatestFrame());
             }
             catch (...)
@@ -3984,14 +3984,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_get_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPaused());
         }
         catch (...)
@@ -4003,12 +4003,6 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionDepthFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4017,6 +4011,12 @@ namespace py::cpp::Windows::Devices::Perception
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPaused(param0);
@@ -4031,14 +4031,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_get_Source(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -4050,14 +4050,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_add_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader, winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameArrived(param0));
@@ -4071,14 +4071,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameReader_remove_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameArrived(param0);
@@ -4193,14 +4193,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AcquireControlSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AcquireControlSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AcquireControlSession());
             }
             catch (...)
@@ -4222,14 +4222,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CanControlIndependentlyFrom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CanControlIndependentlyFrom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CanControlIndependentlyFrom(param0));
@@ -4253,14 +4253,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionDepthFrameSource::CreateWatcher());
             }
             catch (...)
@@ -4282,14 +4282,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionDepthFrameSource::FindAllAsync());
             }
             catch (...)
@@ -4311,14 +4311,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionDepthFrameSource::FromIdAsync(param0));
@@ -4342,14 +4342,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"IsCorrelatedWith", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"IsCorrelatedWith", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsCorrelatedWith(param0));
@@ -4373,14 +4373,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"OpenReader", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"OpenReader", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenReader());
             }
             catch (...)
@@ -4402,14 +4402,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionDepthFrameSource::RequestAccessAsync());
             }
             catch (...)
@@ -4431,14 +4431,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 0);
 
                 return py::convert(self->obj.TryGetDepthCorrelatedCameraIntrinsicsAsync(param0));
@@ -4462,14 +4462,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 1);
 
@@ -4494,14 +4494,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetTransformTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TryGetTransformTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
 
@@ -4538,14 +4538,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TrySetVideoProfileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"TrySetVideoProfileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionControlSession>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionVideoProfile>(args, 1);
 
@@ -4566,14 +4566,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_Active(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Active"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Active"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Active());
         }
         catch (...)
@@ -4585,14 +4585,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_Available(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Available"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Available"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Available());
         }
         catch (...)
@@ -4604,14 +4604,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_AvailableVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableVideoProfiles());
         }
         catch (...)
@@ -4623,14 +4623,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_CameraIntrinsics(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraIntrinsics());
         }
         catch (...)
@@ -4642,14 +4642,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_DeviceKind(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DeviceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DeviceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceKind());
         }
         catch (...)
@@ -4661,14 +4661,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_DisplayName(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -4680,14 +4680,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_Id(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -4699,14 +4699,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_IsControlled(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"IsControlled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"IsControlled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsControlled());
         }
         catch (...)
@@ -4718,14 +4718,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_Properties(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -4737,14 +4737,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_SupportedVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"SupportedVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"SupportedVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedVideoProfiles());
         }
         catch (...)
@@ -4756,14 +4756,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_VideoProfile(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoProfile());
         }
         catch (...)
@@ -4775,14 +4775,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_get_DeviceId(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -4794,14 +4794,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_add_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ActiveChanged(param0));
@@ -4815,14 +4815,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_remove_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActiveChanged(param0);
@@ -4837,14 +4837,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_add_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AvailableChanged(param0));
@@ -4858,14 +4858,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_remove_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AvailableChanged(param0);
@@ -4880,14 +4880,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_add_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CameraIntrinsicsChanged(param0));
@@ -4901,14 +4901,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_remove_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CameraIntrinsicsChanged(param0);
@@ -4923,14 +4923,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_add_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PropertiesChanged(param0));
@@ -4944,14 +4944,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_remove_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PropertiesChanged(param0);
@@ -4966,14 +4966,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_add_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoProfileChanged(param0));
@@ -4987,14 +4987,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSource_remove_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoProfileChanged(param0);
@@ -5137,14 +5137,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceAddedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceAddedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -5226,14 +5226,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceRemovedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceRemovedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -5319,14 +5319,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -5349,14 +5349,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -5375,14 +5375,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_get_Status(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5394,14 +5394,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_add_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -5415,14 +5415,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -5437,14 +5437,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_add_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceAdded(param0));
@@ -5458,14 +5458,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_remove_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceAdded(param0);
@@ -5480,14 +5480,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_add_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceRemoved(param0));
@@ -5501,14 +5501,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_remove_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceRemoved(param0);
@@ -5523,14 +5523,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_add_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -5544,14 +5544,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionDepthFrameSourceWatcher_remove_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionDepthFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -5646,14 +5646,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionFrameSourcePropertiesChangedEventArgs_get_CollectionChange(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs", L"CollectionChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs", L"CollectionChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CollectionChange());
         }
         catch (...)
@@ -5665,14 +5665,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionFrameSourcePropertiesChangedEventArgs_get_Key(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs", L"Key"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertiesChangedEventArgs", L"Key"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Key());
         }
         catch (...)
@@ -5755,14 +5755,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionFrameSourcePropertyChangeResult_get_NewValue(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult", L"NewValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult", L"NewValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewValue());
         }
         catch (...)
@@ -5774,14 +5774,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionFrameSourcePropertyChangeResult_get_Status(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionFrameSourcePropertyChangeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5868,14 +5868,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrame", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrame", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -5894,14 +5894,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrame_get_VideoFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrame", L"VideoFrame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrame", L"VideoFrame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoFrame());
         }
         catch (...)
@@ -6009,14 +6009,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs", L"TryOpenFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs", L"TryOpenFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryOpenFrame());
             }
             catch (...)
@@ -6034,14 +6034,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameArrivedEventArgs_get_RelativeTime(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs", L"RelativeTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs", L"RelativeTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RelativeTime());
         }
         catch (...)
@@ -6128,14 +6128,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -6158,14 +6158,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"TryReadLatestFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"TryReadLatestFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TryReadLatestFrame());
             }
             catch (...)
@@ -6183,14 +6183,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_get_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPaused());
         }
         catch (...)
@@ -6202,12 +6202,6 @@ namespace py::cpp::Windows::Devices::Perception
 
     static int PerceptionInfraredFrameReader_put_IsPaused(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"IsPaused"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6216,6 +6210,12 @@ namespace py::cpp::Windows::Devices::Perception
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"IsPaused"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsPaused(param0);
@@ -6230,14 +6230,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_get_Source(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -6249,14 +6249,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_add_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader, winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>>(arg);
 
             return py::convert(self->obj.FrameArrived(param0));
@@ -6270,14 +6270,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameReader_remove_FrameArrived(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"FrameArrived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameReader", L"FrameArrived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FrameArrived(param0);
@@ -6392,14 +6392,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AcquireControlSession", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AcquireControlSession", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AcquireControlSession());
             }
             catch (...)
@@ -6421,14 +6421,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CanControlIndependentlyFrom", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CanControlIndependentlyFrom", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CanControlIndependentlyFrom(param0));
@@ -6452,14 +6452,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource::CreateWatcher());
             }
             catch (...)
@@ -6481,14 +6481,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource::FindAllAsync());
             }
             catch (...)
@@ -6510,14 +6510,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource::FromIdAsync(param0));
@@ -6541,14 +6541,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"IsCorrelatedWith", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"IsCorrelatedWith", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsCorrelatedWith(param0));
@@ -6572,14 +6572,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"OpenReader", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"OpenReader", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenReader());
             }
             catch (...)
@@ -6601,14 +6601,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource::RequestAccessAsync());
             }
             catch (...)
@@ -6630,14 +6630,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetDepthCorrelatedCameraIntrinsicsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 0);
 
                 return py::convert(self->obj.TryGetDepthCorrelatedCameraIntrinsicsAsync(param0));
@@ -6661,14 +6661,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetDepthCorrelatedCoordinateMapperAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>(args, 1);
 
@@ -6693,14 +6693,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetTransformTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TryGetTransformTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 winrt::Windows::Foundation::Numerics::float4x4 param1 {  };
 
@@ -6737,14 +6737,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TrySetVideoProfileAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"TrySetVideoProfileAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionControlSession>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionVideoProfile>(args, 1);
 
@@ -6765,14 +6765,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_Active(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Active"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Active"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Active());
         }
         catch (...)
@@ -6784,14 +6784,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_Available(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Available"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Available"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Available());
         }
         catch (...)
@@ -6803,14 +6803,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_AvailableVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AvailableVideoProfiles());
         }
         catch (...)
@@ -6822,14 +6822,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_CameraIntrinsics(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CameraIntrinsics());
         }
         catch (...)
@@ -6841,14 +6841,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_DeviceKind(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DeviceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DeviceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceKind());
         }
         catch (...)
@@ -6860,14 +6860,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_DisplayName(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -6879,14 +6879,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_Id(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -6898,14 +6898,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_IsControlled(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"IsControlled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"IsControlled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsControlled());
         }
         catch (...)
@@ -6917,14 +6917,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_Properties(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -6936,14 +6936,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_SupportedVideoProfiles(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"SupportedVideoProfiles"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"SupportedVideoProfiles"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedVideoProfiles());
         }
         catch (...)
@@ -6955,14 +6955,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_VideoProfile(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoProfile());
         }
         catch (...)
@@ -6974,14 +6974,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_get_DeviceId(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -6993,14 +6993,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_add_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ActiveChanged(param0));
@@ -7014,14 +7014,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_remove_ActiveChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"ActiveChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"ActiveChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActiveChanged(param0);
@@ -7036,14 +7036,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_add_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.AvailableChanged(param0));
@@ -7057,14 +7057,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_remove_AvailableChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"AvailableChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AvailableChanged(param0);
@@ -7079,14 +7079,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_add_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CameraIntrinsicsChanged(param0));
@@ -7100,14 +7100,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_remove_CameraIntrinsicsChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsicsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"CameraIntrinsicsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CameraIntrinsicsChanged(param0);
@@ -7122,14 +7122,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_add_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PropertiesChanged(param0));
@@ -7143,14 +7143,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_remove_PropertiesChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"PropertiesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"PropertiesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PropertiesChanged(param0);
@@ -7165,14 +7165,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_add_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.VideoProfileChanged(param0));
@@ -7186,14 +7186,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSource_remove_VideoProfileChanged(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfileChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSource", L"VideoProfileChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VideoProfileChanged(param0);
@@ -7336,14 +7336,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceAddedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceAddedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -7425,14 +7425,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceRemovedEventArgs_get_FrameSource(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs", L"FrameSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceRemovedEventArgs", L"FrameSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameSource());
         }
         catch (...)
@@ -7518,14 +7518,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -7548,14 +7548,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -7574,14 +7574,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_get_Status(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -7593,14 +7593,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_add_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -7614,14 +7614,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_remove_EnumerationCompleted(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -7636,14 +7636,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_add_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceAdded(param0));
@@ -7657,14 +7657,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_remove_SourceAdded(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceAdded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceAdded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceAdded(param0);
@@ -7679,14 +7679,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_add_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>>(arg);
 
             return py::convert(self->obj.SourceRemoved(param0));
@@ -7700,14 +7700,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_remove_SourceRemoved(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceRemoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"SourceRemoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SourceRemoved(param0);
@@ -7722,14 +7722,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_add_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Stopped(param0));
@@ -7743,14 +7743,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionInfraredFrameSourceWatcher_remove_Stopped(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stopped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Perception.PerceptionInfraredFrameSourceWatcher", L"Stopped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Stopped(param0);
@@ -7849,14 +7849,14 @@ namespace py::cpp::Windows::Devices::Perception
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"IsEqual", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"IsEqual", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Perception::PerceptionVideoProfile>(args, 0);
 
                 return py::convert(self->obj.IsEqual(param0));
@@ -7876,14 +7876,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_get_BitmapAlphaMode(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -7895,14 +7895,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_get_BitmapPixelFormat(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -7914,14 +7914,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_get_FrameDuration(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"FrameDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"FrameDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameDuration());
         }
         catch (...)
@@ -7933,14 +7933,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_get_Height(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -7952,14 +7952,14 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyObject* PerceptionVideoProfile_get_Width(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Perception.PerceptionVideoProfile", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)

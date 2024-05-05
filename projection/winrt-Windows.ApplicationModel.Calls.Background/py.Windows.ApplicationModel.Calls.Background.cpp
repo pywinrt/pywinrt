@@ -24,14 +24,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneCallBlockedTriggerDetails_get_CallBlockedReason(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"CallBlockedReason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"CallBlockedReason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallBlockedReason());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneCallBlockedTriggerDetails_get_LineId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneCallBlockedTriggerDetails_get_PhoneNumber(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneCallOriginDataRequestTriggerDetails_get_PhoneNumber(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -172,14 +172,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneCallOriginDataRequestTriggerDetails_get_RequestId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails", L"RequestId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails", L"RequestId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestId());
         }
         catch (...)
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_DismissalTime(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"DismissalTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"DismissalTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DismissalTime());
         }
         catch (...)
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_DisplayName(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_LineId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_PhoneNumber(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_Reason(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"Reason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"Reason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reason());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallDismissedTriggerDetails_get_TextReplyMessage(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"TextReplyMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails", L"TextReplyMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TextReplyMessage());
         }
         catch (...)
@@ -451,14 +451,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallNotificationTriggerDetails_get_CallId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails", L"CallId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails", L"CallId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CallId());
         }
         catch (...)
@@ -470,14 +470,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneIncomingCallNotificationTriggerDetails_get_LineId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneIncomingCallNotificationTriggerDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -564,14 +564,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"HasLinePropertyChanged", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"HasLinePropertyChanged", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineProperties>(args, 0);
 
                 return py::convert(self->obj.HasLinePropertyChanged(param0));
@@ -591,14 +591,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneLineChangedTriggerDetails_get_ChangeType(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"ChangeType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"ChangeType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChangeType());
         }
         catch (...)
@@ -610,14 +610,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneLineChangedTriggerDetails_get_LineId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -701,14 +701,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneNewVoicemailMessageTriggerDetails_get_LineId(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"LineId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"LineId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LineId());
         }
         catch (...)
@@ -720,14 +720,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneNewVoicemailMessageTriggerDetails_get_OperatorMessage(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"OperatorMessage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"OperatorMessage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OperatorMessage());
         }
         catch (...)
@@ -739,14 +739,14 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyObject* PhoneNewVoicemailMessageTriggerDetails_get_VoicemailCount(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"VoicemailCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails", L"VoicemailCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VoicemailCount());
         }
         catch (...)

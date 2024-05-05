@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::Input::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"CreateForView", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"CreateForView", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::CoreApplicationView>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource::CreateForView(param0));
@@ -55,14 +55,14 @@ namespace py::cpp::Windows::UI::Input::Core
 
     static PyObject* RadialControllerIndependentInputSource_get_Controller(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Controller"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Controller"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Controller());
         }
         catch (...)
@@ -74,14 +74,14 @@ namespace py::cpp::Windows::UI::Input::Core
 
     static PyObject* RadialControllerIndependentInputSource_get_Dispatcher(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Dispatcher"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"Dispatcher"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Dispatcher());
         }
         catch (...)
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::UI::Input::Core
 
     static PyObject* RadialControllerIndependentInputSource_get_DispatcherQueue(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"DispatcherQueue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.Core.RadialControllerIndependentInputSource", L"DispatcherQueue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"AcquireChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"AcquireChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.AcquireChannel(param0);
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"IsChannelModeSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"IsChannelModeSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode>(args, 0);
 
                 return py::convert(self->obj.IsChannelModeSupported(param0));
@@ -91,14 +91,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ReadValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ReadValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.ReadValue(param0));
@@ -122,14 +122,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ReleaseChannel", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ReleaseChannel", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 self->obj.ReleaseChannel(param0);
@@ -150,14 +150,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_get_ChannelCount(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelCount());
         }
         catch (...)
@@ -169,14 +169,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_get_ChannelMode(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChannelMode());
         }
         catch (...)
@@ -188,12 +188,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static int IAdcControllerProvider_put_ChannelMode(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -202,6 +196,12 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ChannelMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Adc::Provider::ProviderAdcChannelMode>(arg);
 
             self->obj.ChannelMode(param0);
@@ -216,14 +216,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_get_MaxValue(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"MaxValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"MaxValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxValue());
         }
         catch (...)
@@ -235,14 +235,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_get_MinValue(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"MinValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"MinValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinValue());
         }
         catch (...)
@@ -254,14 +254,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyObject* IAdcControllerProvider_get_ResolutionInBits(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ResolutionInBits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Adc.Provider.IAdcControllerProvider", L"ResolutionInBits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolutionInBits());
         }
         catch (...)
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcProvider", L"GetControllers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Adc.Provider.IAdcProvider", L"GetControllers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetControllers());
             }
             catch (...)

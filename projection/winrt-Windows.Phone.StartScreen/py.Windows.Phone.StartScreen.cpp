@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateAsync());
             }
             catch (...)
@@ -79,14 +79,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateBadgeUpdaterForSim1", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateBadgeUpdaterForSim1", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim1());
             }
             catch (...)
@@ -108,14 +108,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateBadgeUpdaterForSim2", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateBadgeUpdaterForSim2", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateBadgeUpdaterForSim2());
             }
             catch (...)
@@ -137,14 +137,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateTileUpdaterForSim1", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateTileUpdaterForSim1", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim1());
             }
             catch (...)
@@ -166,14 +166,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateTileUpdaterForSim2", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateTileUpdaterForSim2", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateTileUpdaterForSim2());
             }
             catch (...)
@@ -195,14 +195,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateToastNotifierForSim1", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateToastNotifierForSim1", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim1());
             }
             catch (...)
@@ -224,14 +224,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateToastNotifierForSim2", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"CreateToastNotifierForSim2", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::CreateToastNotifierForSim2());
             }
             catch (...)
@@ -253,14 +253,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
@@ -282,14 +282,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"GetTileForSim2", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"GetTileForSim2", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::GetTileForSim2());
             }
             catch (...)
@@ -311,14 +311,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"UpdateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"UpdateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.UpdateAsync());
             }
             catch (...)
@@ -340,14 +340,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"UpdateDisplayNameForSim1Async", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.DualSimTile", L"UpdateDisplayNameForSim1Async", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Phone::StartScreen::DualSimTile::UpdateDisplayNameForSim1Async(param0));
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_get_DisplayName(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -386,12 +386,6 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static int DualSimTile_put_DisplayName(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -400,6 +394,12 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     static PyObject* DualSimTile_get_IsPinnedToStart(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"IsPinnedToStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.StartScreen.DualSimTile", L"IsPinnedToStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPinnedToStart());
         }
         catch (...)
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::Phone::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.IToastNotificationManagerStatics3", L"CreateToastNotifierForSecondaryTile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.StartScreen.IToastNotificationManagerStatics3", L"CreateToastNotifierForSecondaryTile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateToastNotifierForSecondaryTile(param0));

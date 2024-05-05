@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::FromIdAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Devices::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"FromInterfaceIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"FromInterfaceIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::FromInterfaceIdAsync(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Devices::Display
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"GetDescriptor", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"GetDescriptor", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>(args, 0);
 
                 return py::convert(self->obj.GetDescriptor(param0));
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Devices::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.DisplayMonitor", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Display::DisplayMonitor::GetDeviceSelector());
             }
             catch (...)
@@ -146,14 +146,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_BluePrimary(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"BluePrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"BluePrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluePrimary());
         }
         catch (...)
@@ -165,14 +165,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_ConnectionKind(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"ConnectionKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"ConnectionKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionKind());
         }
         catch (...)
@@ -184,14 +184,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_DeviceId(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -203,14 +203,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_DisplayAdapterDeviceId(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAdapterDeviceId());
         }
         catch (...)
@@ -222,14 +222,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_DisplayAdapterId(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAdapterId());
         }
         catch (...)
@@ -241,14 +241,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_DisplayAdapterTargetId(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterTargetId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayAdapterTargetId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayAdapterTargetId());
         }
         catch (...)
@@ -260,14 +260,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_DisplayName(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -279,14 +279,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_GreenPrimary(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"GreenPrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"GreenPrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GreenPrimary());
         }
         catch (...)
@@ -298,14 +298,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_MaxAverageFullFrameLuminanceInNits(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MaxAverageFullFrameLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MaxAverageFullFrameLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAverageFullFrameLuminanceInNits());
         }
         catch (...)
@@ -317,14 +317,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_MaxLuminanceInNits(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MaxLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MaxLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxLuminanceInNits());
         }
         catch (...)
@@ -336,14 +336,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_MinLuminanceInNits(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MinLuminanceInNits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"MinLuminanceInNits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinLuminanceInNits());
         }
         catch (...)
@@ -355,14 +355,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_NativeResolutionInRawPixels(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"NativeResolutionInRawPixels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"NativeResolutionInRawPixels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NativeResolutionInRawPixels());
         }
         catch (...)
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_PhysicalConnector(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"PhysicalConnector"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"PhysicalConnector"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalConnector());
         }
         catch (...)
@@ -393,14 +393,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_PhysicalSizeInInches(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"PhysicalSizeInInches"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"PhysicalSizeInInches"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhysicalSizeInInches());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_RawDpiX(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RawDpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RawDpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawDpiX());
         }
         catch (...)
@@ -431,14 +431,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_RawDpiY(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RawDpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RawDpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawDpiY());
         }
         catch (...)
@@ -450,14 +450,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_RedPrimary(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RedPrimary"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"RedPrimary"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RedPrimary());
         }
         catch (...)
@@ -469,14 +469,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_UsageKind(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"UsageKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"UsageKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UsageKind());
         }
         catch (...)
@@ -488,14 +488,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_WhitePoint(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"WhitePoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"WhitePoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WhitePoint());
         }
         catch (...)
@@ -507,14 +507,14 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyObject* DisplayMonitor_get_IsDolbyVisionSupportedInHdrMode(py::wrapper::Windows::Devices::Display::DisplayMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"IsDolbyVisionSupportedInHdrMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.DisplayMonitor", L"IsDolbyVisionSupportedInHdrMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDolbyVisionSupportedInHdrMode());
         }
         catch (...)

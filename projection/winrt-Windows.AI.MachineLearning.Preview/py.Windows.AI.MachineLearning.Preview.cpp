@@ -24,14 +24,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_BitmapPixelFormat(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_Height(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Height"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Height"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Height());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_Width(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Width"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Width"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Width());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -138,14 +138,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ImageVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -233,14 +233,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* InferencingOptionsPreview_get_ReclaimMemoryAfterEvaluation(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"ReclaimMemoryAfterEvaluation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"ReclaimMemoryAfterEvaluation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReclaimMemoryAfterEvaluation());
         }
         catch (...)
@@ -252,12 +252,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int InferencingOptionsPreview_put_ReclaimMemoryAfterEvaluation(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"ReclaimMemoryAfterEvaluation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -266,6 +260,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"ReclaimMemoryAfterEvaluation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ReclaimMemoryAfterEvaluation(param0);
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* InferencingOptionsPreview_get_PreferredDeviceKind(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"PreferredDeviceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"PreferredDeviceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredDeviceKind());
         }
         catch (...)
@@ -299,12 +299,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int InferencingOptionsPreview_put_PreferredDeviceKind(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"PreferredDeviceKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -313,6 +307,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"PreferredDeviceKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview>(arg);
 
             self->obj.PreferredDeviceKind(param0);
@@ -327,14 +327,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* InferencingOptionsPreview_get_MinimizeMemoryAllocation(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MinimizeMemoryAllocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MinimizeMemoryAllocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinimizeMemoryAllocation());
         }
         catch (...)
@@ -346,12 +346,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int InferencingOptionsPreview_put_MinimizeMemoryAllocation(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MinimizeMemoryAllocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -360,6 +354,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MinimizeMemoryAllocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.MinimizeMemoryAllocation(param0);
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* InferencingOptionsPreview_get_MaxBatchSize(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxBatchSize());
         }
         catch (...)
@@ -393,12 +393,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int InferencingOptionsPreview_put_MaxBatchSize(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MaxBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -407,6 +401,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"MaxBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.MaxBatchSize(param0);
@@ -421,14 +421,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* InferencingOptionsPreview_get_IsTracingEnabled(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"IsTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"IsTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTracingEnabled());
         }
         catch (...)
@@ -440,12 +440,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int InferencingOptionsPreview_put_IsTracingEnabled(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"IsTracingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -454,6 +448,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.InferencingOptionsPreview", L"IsTracingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTracingEnabled(param0);
@@ -570,14 +570,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Bind", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Bind", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -592,14 +592,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Bind", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Bind", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -626,14 +626,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -656,14 +656,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -685,14 +685,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -716,14 +716,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -747,14 +747,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Split", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Split", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param0 { nullptr };
                 winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::Windows::Foundation::IInspectable> param1 { nullptr };
 
@@ -787,14 +787,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelBindingPreview_get_Size(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelBindingPreview", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Author(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Author"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Author"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Author());
         }
         catch (...)
@@ -980,14 +980,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -999,14 +999,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Domain(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Domain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Domain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Domain());
         }
         catch (...)
@@ -1018,14 +1018,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_InputFeatures(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"InputFeatures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"InputFeatures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InputFeatures());
         }
         catch (...)
@@ -1037,14 +1037,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Metadata(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Metadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Metadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metadata());
         }
         catch (...)
@@ -1056,14 +1056,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1075,14 +1075,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_OutputFeatures(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"OutputFeatures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"OutputFeatures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutputFeatures());
         }
         catch (...)
@@ -1094,14 +1094,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelDescriptionPreview_get_Version(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Version"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview", L"Version"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Version());
         }
         catch (...)
@@ -1190,14 +1190,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelEvaluationResultPreview_get_CorrelationId(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview", L"CorrelationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview", L"CorrelationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CorrelationId());
         }
         catch (...)
@@ -1209,14 +1209,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelEvaluationResultPreview_get_Outputs(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview", L"Outputs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview", L"Outputs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Outputs());
         }
         catch (...)
@@ -1303,14 +1303,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"EvaluateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"EvaluateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1335,14 +1335,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"EvaluateFeaturesAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"EvaluateFeaturesAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IMap<winrt::hstring, winrt::Windows::Foundation::IInspectable>>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1367,14 +1367,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"LoadModelFromStorageFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"LoadModelFromStorageFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStorageFileAsync(param0));
@@ -1398,14 +1398,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"LoadModelFromStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"LoadModelFromStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
 
                 return py::convert(winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview::LoadModelFromStreamAsync(param0));
@@ -1425,14 +1425,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_get_InferencingOptions(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"InferencingOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"InferencingOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InferencingOptions());
         }
         catch (...)
@@ -1444,12 +1444,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static int LearningModelPreview_put_InferencingOptions(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"InferencingOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1458,6 +1452,12 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"InferencingOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>(arg);
 
             self->obj.InferencingOptions(param0);
@@ -1472,14 +1472,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1591,14 +1591,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1610,14 +1610,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -1629,14 +1629,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -1648,14 +1648,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* LearningModelVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1740,14 +1740,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -1778,14 +1778,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -1797,14 +1797,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1816,14 +1816,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_Fields(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Fields"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"Fields"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Fields());
         }
         catch (...)
@@ -1835,14 +1835,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_KeyKind(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"KeyKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"KeyKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.KeyKind());
         }
         catch (...)
@@ -1854,14 +1854,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_ValidIntegerKeys(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ValidIntegerKeys"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ValidIntegerKeys"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidIntegerKeys());
         }
         catch (...)
@@ -1873,14 +1873,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* MapVariableDescriptorPreview_get_ValidStringKeys(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ValidStringKeys"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview", L"ValidStringKeys"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValidStringKeys());
         }
         catch (...)
@@ -1969,14 +1969,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* SequenceVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1988,14 +1988,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* SequenceVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -2007,14 +2007,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* SequenceVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -2026,14 +2026,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* SequenceVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2045,14 +2045,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* SequenceVariableDescriptorPreview_get_ElementType(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"ElementType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview", L"ElementType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElementType());
         }
         catch (...)
@@ -2138,14 +2138,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2157,14 +2157,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -2176,14 +2176,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -2195,14 +2195,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -2214,14 +2214,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_DataType(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"DataType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"DataType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataType());
         }
         catch (...)
@@ -2233,14 +2233,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* TensorVariableDescriptorPreview_get_Shape(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -2327,14 +2327,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ILearningModelVariableDescriptorPreview_get_Description(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -2346,14 +2346,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ILearningModelVariableDescriptorPreview_get_IsRequired(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"IsRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"IsRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRequired());
         }
         catch (...)
@@ -2365,14 +2365,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ILearningModelVariableDescriptorPreview_get_ModelFeatureKind(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"ModelFeatureKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"ModelFeatureKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModelFeatureKind());
         }
         catch (...)
@@ -2384,14 +2384,14 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyObject* ILearningModelVariableDescriptorPreview_get_Name(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)

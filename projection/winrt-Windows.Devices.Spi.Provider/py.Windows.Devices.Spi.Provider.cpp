@@ -48,14 +48,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ProviderSpiConnectionSettings_get_SharingMode(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharingMode());
         }
         catch (...)
@@ -67,12 +67,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static int ProviderSpiConnectionSettings_put_SharingMode(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"SharingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -81,6 +75,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"SharingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode>(arg);
 
             self->obj.SharingMode(param0);
@@ -95,14 +95,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ProviderSpiConnectionSettings_get_Mode(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -114,12 +114,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static int ProviderSpiConnectionSettings_put_Mode(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -128,6 +122,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode>(arg);
 
             self->obj.Mode(param0);
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ProviderSpiConnectionSettings_get_DataBitLength(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"DataBitLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"DataBitLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataBitLength());
         }
         catch (...)
@@ -161,12 +161,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static int ProviderSpiConnectionSettings_put_DataBitLength(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"DataBitLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -175,6 +169,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"DataBitLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DataBitLength(param0);
@@ -189,14 +189,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ProviderSpiConnectionSettings_get_ClockFrequency(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ClockFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ClockFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClockFrequency());
         }
         catch (...)
@@ -208,12 +208,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static int ProviderSpiConnectionSettings_put_ClockFrequency(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ClockFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -222,6 +216,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ClockFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ClockFrequency(param0);
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ProviderSpiConnectionSettings_get_ChipSelectLine(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ChipSelectLine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ChipSelectLine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ChipSelectLine());
         }
         catch (...)
@@ -255,12 +255,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static int ProviderSpiConnectionSettings_put_ChipSelectLine(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ChipSelectLine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -269,6 +263,12 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings", L"ChipSelectLine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.ChipSelectLine(param0);
@@ -361,14 +361,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiControllerProvider", L"GetDeviceProvider", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiControllerProvider", L"GetDeviceProvider", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>(args, 0);
 
                 return py::convert(self->obj.GetDeviceProvider(param0));
@@ -462,14 +462,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -492,14 +492,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"Read", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"Read", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
                 self->obj.Read(param0);
@@ -524,14 +524,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"TransferFullDuplex", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"TransferFullDuplex", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
@@ -557,14 +557,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"TransferSequential", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"TransferSequential", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 1);
 
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"Write", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"Write", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.Write(param0);
@@ -618,14 +618,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ISpiDeviceProvider_get_ConnectionSettings(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"ConnectionSettings"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"ConnectionSettings"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionSettings());
         }
         catch (...)
@@ -637,14 +637,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyObject* ISpiDeviceProvider_get_DeviceId(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Spi.Provider.ISpiDeviceProvider", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -757,14 +757,14 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiProvider", L"GetControllersAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Spi.Provider.ISpiProvider", L"GetControllersAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetControllersAsync());
             }
             catch (...)

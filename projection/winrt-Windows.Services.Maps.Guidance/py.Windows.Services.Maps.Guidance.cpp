@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceAudioNotificationRequestedEventArgs_get_AudioFilePaths(py::wrapper::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioFilePaths"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioFilePaths"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioFilePaths());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceAudioNotificationRequestedEventArgs_get_AudioNotification(py::wrapper::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioNotification());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceAudioNotificationRequestedEventArgs_get_AudioText(py::wrapper::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceAudioNotificationRequestedEventArgs", L"AudioText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioText());
         }
         catch (...)
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceLaneInfo_get_IsOnRoute(py::wrapper::Windows::Services::Maps::Guidance::GuidanceLaneInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceLaneInfo", L"IsOnRoute"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceLaneInfo", L"IsOnRoute"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOnRoute());
         }
         catch (...)
@@ -172,14 +172,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceLaneInfo_get_LaneMarkers(py::wrapper::Windows::Services::Maps::Guidance::GuidanceLaneInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceLaneInfo", L"LaneMarkers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceLaneInfo", L"LaneMarkers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaneMarkers());
         }
         catch (...)
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_DepartureRoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DepartureRoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DepartureRoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DepartureRoadName());
         }
         catch (...)
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_DepartureShortRoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DepartureShortRoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DepartureShortRoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DepartureShortRoadName());
         }
         catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_DistanceFromPreviousManeuver(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DistanceFromPreviousManeuver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DistanceFromPreviousManeuver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceFromPreviousManeuver());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_DistanceFromRouteStart(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DistanceFromRouteStart"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"DistanceFromRouteStart"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceFromRouteStart());
         }
         catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_EndAngle(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"EndAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"EndAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndAngle());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_InstructionText(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"InstructionText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"InstructionText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InstructionText());
         }
         catch (...)
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_Kind(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_NextRoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"NextRoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"NextRoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextRoadName());
         }
         catch (...)
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_NextShortRoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"NextShortRoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"NextShortRoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextShortRoadName());
         }
         catch (...)
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_RoadSignpost(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"RoadSignpost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"RoadSignpost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoadSignpost());
         }
         catch (...)
@@ -452,14 +452,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_StartAngle(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"StartAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"StartAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartAngle());
         }
         catch (...)
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceManeuver_get_StartLocation(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"StartLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceManeuver", L"StartLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartLocation());
         }
         catch (...)
@@ -571,14 +571,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceMapMatchedCoordinate_get_CurrentHeading(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"CurrentHeading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"CurrentHeading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentHeading());
         }
         catch (...)
@@ -590,14 +590,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceMapMatchedCoordinate_get_CurrentSpeed(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"CurrentSpeed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"CurrentSpeed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentSpeed());
         }
         catch (...)
@@ -609,14 +609,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceMapMatchedCoordinate_get_IsOnStreet(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"IsOnStreet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"IsOnStreet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOnStreet());
         }
         catch (...)
@@ -628,14 +628,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceMapMatchedCoordinate_get_Location(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"Location"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"Location"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Location());
         }
         catch (...)
@@ -647,14 +647,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceMapMatchedCoordinate_get_Road(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"Road"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceMapMatchedCoordinate", L"Road"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Road());
         }
         catch (...)
@@ -744,14 +744,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GetCurrent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GetCurrent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::GetCurrent());
             }
             catch (...)
@@ -773,14 +773,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -803,14 +803,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RepeatLastAudioNotification", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RepeatLastAudioNotification", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RepeatLastAudioNotification();
                 Py_RETURN_NONE;
             }
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"SetGuidanceVoice", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"SetGuidanceVoice", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartNavigating", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartNavigating", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>(args, 0);
 
                 self->obj.StartNavigating(param0);
@@ -928,14 +928,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartSimulating", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartSimulating", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>(args, 0);
                 auto param1 = py::convert_to<int32_t>(args, 1);
 
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartTracking", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"StartTracking", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StartTracking();
                 Py_RETURN_NONE;
             }
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1021,14 +1021,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UpdateUserLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UpdateUserLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocoordinate>(args, 0);
 
                 self->obj.UpdateUserLocation(param0);
@@ -1042,14 +1042,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UpdateUserLocation", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UpdateUserLocation", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocoordinate>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 1);
 
@@ -1071,14 +1071,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_get_AudioNotifications(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotifications"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotifications"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioNotifications());
         }
         catch (...)
@@ -1090,12 +1090,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_AudioNotifications(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotifications"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1104,6 +1098,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotifications"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotifications>(arg);
 
             self->obj.AudioNotifications(param0);
@@ -1118,14 +1118,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_get_AudioMeasurementSystem(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioMeasurementSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioMeasurementSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioMeasurementSystem());
         }
         catch (...)
@@ -1137,12 +1137,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_AudioMeasurementSystem(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioMeasurementSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1151,6 +1145,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioMeasurementSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Services::Maps::Guidance::GuidanceAudioMeasurementSystem>(arg);
 
             self->obj.AudioMeasurementSystem(param0);
@@ -1165,14 +1165,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_get_IsGuidanceAudioMuted(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"IsGuidanceAudioMuted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"IsGuidanceAudioMuted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGuidanceAudioMuted());
         }
         catch (...)
@@ -1184,12 +1184,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceNavigator_put_IsGuidanceAudioMuted(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"IsGuidanceAudioMuted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1198,6 +1192,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"IsGuidanceAudioMuted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGuidanceAudioMuted(param0);
@@ -1212,14 +1212,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_get_UseAppProvidedVoice(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UseAppProvidedVoice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UseAppProvidedVoice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceNavigator::UseAppProvidedVoice());
         }
         catch (...)
@@ -1231,14 +1231,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_DestinationReached(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"DestinationReached"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"DestinationReached"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.DestinationReached(param0));
@@ -1252,14 +1252,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_DestinationReached(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"DestinationReached"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"DestinationReached"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DestinationReached(param0);
@@ -1274,14 +1274,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_GuidanceUpdated(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GuidanceUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GuidanceUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>>(arg);
 
             return py::convert(self->obj.GuidanceUpdated(param0));
@@ -1295,14 +1295,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_GuidanceUpdated(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GuidanceUpdated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"GuidanceUpdated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GuidanceUpdated(param0);
@@ -1317,14 +1317,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_RerouteFailed(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RerouteFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RerouteFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.RerouteFailed(param0));
@@ -1338,14 +1338,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_RerouteFailed(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RerouteFailed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"RerouteFailed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RerouteFailed(param0);
@@ -1360,14 +1360,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_Rerouted(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>>(arg);
 
             return py::convert(self->obj.Rerouted(param0));
@@ -1381,14 +1381,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_Rerouted(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Rerouted(param0);
@@ -1403,14 +1403,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_Rerouting(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.Rerouting(param0));
@@ -1424,14 +1424,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_Rerouting(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"Rerouting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Rerouting(param0);
@@ -1446,14 +1446,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_UserLocationLost(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UserLocationLost(param0));
@@ -1467,14 +1467,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_UserLocationLost(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationLost"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationLost"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UserLocationLost(param0);
@@ -1489,14 +1489,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_UserLocationRestored(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationRestored"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationRestored"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.UserLocationRestored(param0));
@@ -1510,14 +1510,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_UserLocationRestored(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationRestored"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"UserLocationRestored"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UserLocationRestored(param0);
@@ -1532,14 +1532,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_add_AudioNotificationRequested(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator, winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.AudioNotificationRequested(param0));
@@ -1553,14 +1553,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceNavigator_remove_AudioNotificationRequested(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotificationRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Services.Maps.Guidance.GuidanceNavigator", L"AudioNotificationRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AudioNotificationRequested(param0);
@@ -1699,14 +1699,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceReroutedEventArgs_get_Route(py::wrapper::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs", L"Route"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceReroutedEventArgs", L"Route"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Route());
         }
         catch (...)
@@ -1788,14 +1788,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_Id(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1807,14 +1807,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_IsHighway(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsHighway"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsHighway"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsHighway());
         }
         catch (...)
@@ -1826,14 +1826,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_IsTollRoad(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsTollRoad"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsTollRoad"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTollRoad());
         }
         catch (...)
@@ -1845,14 +1845,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_IsTunnel(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsTunnel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsTunnel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTunnel());
         }
         catch (...)
@@ -1864,14 +1864,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_Path(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -1883,14 +1883,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_RoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"RoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"RoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoadName());
         }
         catch (...)
@@ -1902,14 +1902,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_ShortRoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"ShortRoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"ShortRoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShortRoadName());
         }
         catch (...)
@@ -1921,14 +1921,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_SpeedLimit(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"SpeedLimit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"SpeedLimit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeedLimit());
         }
         catch (...)
@@ -1940,14 +1940,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_TravelTime(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"TravelTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"TravelTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TravelTime());
         }
         catch (...)
@@ -1959,14 +1959,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSegment_get_IsScenic(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsScenic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSegment", L"IsScenic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsScenic());
         }
         catch (...)
@@ -2057,14 +2057,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSignpost_get_BackgroundColor(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -2076,14 +2076,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSignpost_get_Exit(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"Exit"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"Exit"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Exit());
         }
         catch (...)
@@ -2095,14 +2095,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSignpost_get_ExitDirections(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ExitDirections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ExitDirections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitDirections());
         }
         catch (...)
@@ -2114,14 +2114,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSignpost_get_ExitNumber(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ExitNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ExitNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExitNumber());
         }
         catch (...)
@@ -2133,14 +2133,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoadSignpost_get_ForegroundColor(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ForegroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoadSignpost", L"ForegroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundColor());
         }
         catch (...)
@@ -2230,14 +2230,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"CanCreateFromMapRoute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"CanCreateFromMapRoute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceRoute::CanCreateFromMapRoute(param0));
@@ -2261,14 +2261,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"ConvertToMapRoute", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"ConvertToMapRoute", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ConvertToMapRoute());
             }
             catch (...)
@@ -2290,14 +2290,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"TryCreateFromMapRoute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"TryCreateFromMapRoute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::MapRoute>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceRoute::TryCreateFromMapRoute(param0));
@@ -2317,14 +2317,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_BoundingBox(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingBox());
         }
         catch (...)
@@ -2336,14 +2336,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_Distance(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Distance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Distance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Distance());
         }
         catch (...)
@@ -2355,14 +2355,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_Duration(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -2374,14 +2374,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_Maneuvers(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Maneuvers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Maneuvers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Maneuvers());
         }
         catch (...)
@@ -2393,14 +2393,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_Path(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Path"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"Path"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Path());
         }
         catch (...)
@@ -2412,14 +2412,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceRoute_get_RoadSegments(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"RoadSegments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceRoute", L"RoadSegments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoadSegments());
         }
         catch (...)
@@ -2538,14 +2538,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"ClearLocalData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"ClearLocalData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearLocalData();
                 Py_RETURN_NONE;
             }
@@ -2568,14 +2568,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"GetCurrent", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"GetCurrent", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector::GetCurrent());
             }
             catch (...)
@@ -2593,14 +2593,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceTelemetryCollector_get_UploadFrequency(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"UploadFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"UploadFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UploadFrequency());
         }
         catch (...)
@@ -2612,12 +2612,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_UploadFrequency(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"UploadFrequency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2626,6 +2620,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"UploadFrequency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.UploadFrequency(param0);
@@ -2640,14 +2640,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceTelemetryCollector_get_SpeedTrigger(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"SpeedTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"SpeedTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeedTrigger());
         }
         catch (...)
@@ -2659,12 +2659,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_SpeedTrigger(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"SpeedTrigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2673,6 +2667,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"SpeedTrigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SpeedTrigger(param0);
@@ -2687,14 +2687,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceTelemetryCollector_get_Enabled(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Enabled());
         }
         catch (...)
@@ -2706,12 +2706,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static int GuidanceTelemetryCollector_put_Enabled(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"Enabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2720,6 +2714,12 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceTelemetryCollector", L"Enabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Enabled(param0);
@@ -2833,14 +2833,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_AfterNextManeuver(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"AfterNextManeuver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"AfterNextManeuver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AfterNextManeuver());
         }
         catch (...)
@@ -2852,14 +2852,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_AfterNextManeuverDistance(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"AfterNextManeuverDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"AfterNextManeuverDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AfterNextManeuverDistance());
         }
         catch (...)
@@ -2871,14 +2871,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_CurrentLocation(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"CurrentLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"CurrentLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentLocation());
         }
         catch (...)
@@ -2890,14 +2890,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_DistanceToDestination(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"DistanceToDestination"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"DistanceToDestination"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceToDestination());
         }
         catch (...)
@@ -2909,14 +2909,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_ElapsedDistance(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"ElapsedDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"ElapsedDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElapsedDistance());
         }
         catch (...)
@@ -2928,14 +2928,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_ElapsedTime(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"ElapsedTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"ElapsedTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ElapsedTime());
         }
         catch (...)
@@ -2947,14 +2947,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_IsNewManeuver(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"IsNewManeuver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"IsNewManeuver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsNewManeuver());
         }
         catch (...)
@@ -2966,14 +2966,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_LaneInfo(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"LaneInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"LaneInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LaneInfo());
         }
         catch (...)
@@ -2985,14 +2985,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_Mode(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -3004,14 +3004,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_NextManeuver(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"NextManeuver"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"NextManeuver"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextManeuver());
         }
         catch (...)
@@ -3023,14 +3023,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_NextManeuverDistance(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"NextManeuverDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"NextManeuverDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NextManeuverDistance());
         }
         catch (...)
@@ -3042,14 +3042,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_RoadName(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"RoadName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"RoadName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoadName());
         }
         catch (...)
@@ -3061,14 +3061,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_Route(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"Route"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"Route"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Route());
         }
         catch (...)
@@ -3080,14 +3080,14 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyObject* GuidanceUpdatedEventArgs_get_TimeToDestination(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"TimeToDestination"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.Guidance.GuidanceUpdatedEventArgs", L"TimeToDestination"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeToDestination());
         }
         catch (...)

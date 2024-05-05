@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnAppId_get_Value(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -68,12 +68,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnAppId_put_Value(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -82,6 +76,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Value(param0);
@@ -96,14 +96,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnAppId_get_Type(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -115,12 +115,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnAppId_put_Type(py::wrapper::Windows::Networking::Vpn::VpnAppId* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -129,6 +123,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnAppId", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppIdType>(arg);
 
             self->obj.Type(param0);
@@ -218,14 +218,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivateForeground", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivateForeground", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 1);
 
@@ -250,14 +250,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AddAndAssociateTransport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AddAndAssociateTransport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -283,14 +283,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnReceivePacketBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnReceivePacketBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 self->obj.AppendVpnReceivePacketBuffer(param0);
@@ -315,14 +315,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnSendPacketBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AppendVpnSendPacketBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 self->obj.AppendVpnSendPacketBuffer(param0);
@@ -347,14 +347,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AssociateTransport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"AssociateTransport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -380,14 +380,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnReceivePacketBuffers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnReceivePacketBuffers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.FlushVpnReceivePacketBuffers();
                 Py_RETURN_NONE;
             }
@@ -410,14 +410,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnSendPacketBuffers", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"FlushVpnSendPacketBuffers", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.FlushVpnSendPacketBuffers();
                 Py_RETURN_NONE;
             }
@@ -440,14 +440,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetSlotTypeForTransportContext", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetSlotTypeForTransportContext", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
                 return py::convert(self->obj.GetSlotTypeForTransportContext(param0));
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnReceivePacketBuffer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnReceivePacketBuffer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVpnReceivePacketBuffer());
             }
             catch (...)
@@ -500,14 +500,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnSendPacketBuffer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"GetVpnSendPacketBuffer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetVpnSendPacketBuffer());
             }
             catch (...)
@@ -529,14 +529,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"LogDiagnosticMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"LogDiagnosticMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.LogDiagnosticMessage(param0);
@@ -561,14 +561,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ProcessEventAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ProcessEventAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -594,14 +594,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ReplaceAndAssociateTransport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"ReplaceAndAssociateTransport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -627,14 +627,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentials", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentials", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<bool>(args, 2);
@@ -661,14 +661,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
 
                 return py::convert(self->obj.RequestCredentialsAsync(param0));
@@ -681,14 +681,14 @@ namespace py::cpp::Windows::Networking::Vpn
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::Networking::Vpn
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 2);
@@ -735,14 +735,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPrompt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPrompt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>>(args, 0);
 
                 self->obj.RequestCustomPrompt(param0);
@@ -767,14 +767,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPromptAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCustomPromptAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>>(args, 0);
 
                 return py::convert(self->obj.RequestCustomPromptAsync(param0));
@@ -798,14 +798,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestVpnPacketBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestVpnPacketBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDataPathType>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1 { nullptr };
 
@@ -837,14 +837,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetAllowedSslTlsVersions", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetAllowedSslTlsVersions", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -870,14 +870,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetErrorMessage", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"SetErrorMessage", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.SetErrorMessage(param0);
@@ -902,14 +902,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 10)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Start", 10))
-            {
-                py::set_arg_count_version_error(10);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Start", 10))
+                {
+                    py::set_arg_count_version_error(10);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -943,14 +943,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 8)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartExistingTransports", 8))
-            {
-                py::set_arg_count_version_error(8);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartExistingTransports", 8))
+                {
+                    py::set_arg_count_version_error(8);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -982,14 +982,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartReconnectingTransport", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartReconnectingTransport", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -1015,14 +1015,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 9)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithMainTransport", 9))
-            {
-                py::set_arg_count_version_error(9);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithMainTransport", 9))
+                {
+                    py::set_arg_count_version_error(9);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1055,14 +1055,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 10)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 10))
-            {
-                py::set_arg_count_version_error(10);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 10))
+                {
+                    py::set_arg_count_version_error(10);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::Networking::Vpn
         }
         else if (arg_count == 11)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 11))
-            {
-                py::set_arg_count_version_error(11);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"StartWithTrafficFilter", 11))
+                {
+                    py::set_arg_count_version_error(11);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnInterfaceId>(args, 2);
@@ -1127,14 +1127,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1157,14 +1157,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"TerminateConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"TerminateConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.TerminateConnection(param0);
@@ -1185,14 +1185,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_get_PlugInContext(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlugInContext());
         }
         catch (...)
@@ -1204,12 +1204,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnChannel_put_PlugInContext(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1218,6 +1212,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"PlugInContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.PlugInContext(param0);
@@ -1232,14 +1232,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_get_Configuration(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Configuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Configuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Configuration());
         }
         catch (...)
@@ -1251,14 +1251,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_get_Id(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1270,14 +1270,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_get_SystemHealth(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"SystemHealth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"SystemHealth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemHealth());
         }
         catch (...)
@@ -1289,14 +1289,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_get_CurrentRequestTransportContext(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"CurrentRequestTransportContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannel", L"CurrentRequestTransportContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentRequestTransportContext());
         }
         catch (...)
@@ -1308,14 +1308,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_add_ActivityChange(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>>(arg);
 
             return py::convert(self->obj.ActivityChange(param0));
@@ -1329,14 +1329,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_remove_ActivityChange(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActivityChange(param0);
@@ -1351,14 +1351,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_add_ActivityStateChange(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::Vpn::VpnChannel, winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>>(arg);
 
             return py::convert(self->obj.ActivityStateChange(param0));
@@ -1372,14 +1372,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannel_remove_ActivityStateChange(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.Vpn.VpnChannel", L"ActivityStateChange"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ActivityStateChange(param0);
@@ -1524,14 +1524,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelActivityEventArgs_get_Type(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityEventArgs", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityEventArgs", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -1613,14 +1613,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelActivityStateChangedArgs_get_ActivityState(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs", L"ActivityState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs", L"ActivityState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivityState());
         }
         catch (...)
@@ -1702,14 +1702,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelConfiguration_get_CustomField(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"CustomField"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"CustomField"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomField());
         }
         catch (...)
@@ -1721,14 +1721,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelConfiguration_get_ServerHostNameList(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerHostNameList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerHostNameList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerHostNameList());
         }
         catch (...)
@@ -1740,14 +1740,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelConfiguration_get_ServerServiceName(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerServiceName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerServiceName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerServiceName());
         }
         catch (...)
@@ -1759,14 +1759,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnChannelConfiguration_get_ServerUris(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnChannelConfiguration", L"ServerUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerUris());
         }
         catch (...)
@@ -1851,14 +1851,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCredential_get_AdditionalPin(py::wrapper::Windows::Networking::Vpn::VpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"AdditionalPin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"AdditionalPin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalPin());
         }
         catch (...)
@@ -1870,14 +1870,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCredential_get_CertificateCredential(py::wrapper::Windows::Networking::Vpn::VpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"CertificateCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"CertificateCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CertificateCredential());
         }
         catch (...)
@@ -1889,14 +1889,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCredential_get_OldPasswordCredential(py::wrapper::Windows::Networking::Vpn::VpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"OldPasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"OldPasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldPasswordCredential());
         }
         catch (...)
@@ -1908,14 +1908,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCredential_get_PasskeyCredential(py::wrapper::Windows::Networking::Vpn::VpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"PasskeyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCredential", L"PasskeyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PasskeyCredential());
         }
         catch (...)
@@ -2022,14 +2022,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomCheckBox_get_InitialCheckState(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialCheckState());
         }
         catch (...)
@@ -2041,12 +2041,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_InitialCheckState(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2055,6 +2049,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"InitialCheckState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InitialCheckState(param0);
@@ -2069,14 +2069,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomCheckBox_get_Checked(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Checked"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Checked"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Checked());
         }
         catch (...)
@@ -2088,14 +2088,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomCheckBox_get_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -2107,12 +2107,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2121,6 +2115,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -2135,14 +2135,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomCheckBox_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -2154,12 +2154,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2168,6 +2162,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -2182,14 +2182,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomCheckBox_get_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -2201,12 +2201,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomCheckBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2215,6 +2209,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomCheckBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -2325,14 +2325,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomComboBox_get_OptionsText(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OptionsText());
         }
         catch (...)
@@ -2344,12 +2344,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_OptionsText(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2358,6 +2352,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"OptionsText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(arg);
 
             self->obj.OptionsText(param0);
@@ -2372,14 +2372,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomComboBox_get_Selected(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Selected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Selected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Selected());
         }
         catch (...)
@@ -2391,14 +2391,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomComboBox_get_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -2410,12 +2410,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2424,6 +2418,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -2438,14 +2438,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomComboBox_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -2457,12 +2457,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2471,6 +2465,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -2485,14 +2485,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomComboBox_get_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -2504,12 +2504,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomComboBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2518,6 +2512,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomComboBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -2628,14 +2628,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_NoEcho(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NoEcho());
         }
         catch (...)
@@ -2647,12 +2647,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_NoEcho(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2661,6 +2655,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"NoEcho"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.NoEcho(param0);
@@ -2675,14 +2675,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_DefaultText(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultText());
         }
         catch (...)
@@ -2694,12 +2694,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_DefaultText(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2708,6 +2702,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"DefaultText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DefaultText(param0);
@@ -2722,14 +2722,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_Text(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -2741,14 +2741,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -2760,12 +2760,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2774,6 +2768,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -2788,14 +2788,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -2807,12 +2807,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2821,6 +2815,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -2835,14 +2835,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomEditBox_get_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -2854,12 +2854,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomEditBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2868,6 +2862,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomEditBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -2979,14 +2979,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomErrorBox_get_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -2998,12 +2998,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3012,6 +3006,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -3026,14 +3026,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomErrorBox_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -3045,12 +3045,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3059,6 +3053,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -3073,14 +3073,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomErrorBox_get_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -3092,12 +3092,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomErrorBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3106,6 +3100,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomErrorBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -3214,14 +3214,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptBooleanInput_get_InitialValue(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitialValue());
         }
         catch (...)
@@ -3233,12 +3233,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_InitialValue(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3247,6 +3241,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"InitialValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.InitialValue(param0);
@@ -3261,14 +3261,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptBooleanInput_get_Value(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -3280,14 +3280,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptBooleanInput_get_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emphasized());
         }
         catch (...)
@@ -3299,12 +3299,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3313,6 +3307,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Emphasized(param0);
@@ -3327,14 +3327,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptBooleanInput_get_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3346,12 +3346,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3360,6 +3354,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3374,14 +3374,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptBooleanInput_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -3393,12 +3393,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptBooleanInput_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3407,6 +3401,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptBooleanInput", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -3517,14 +3517,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptOptionSelector_get_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emphasized());
         }
         catch (...)
@@ -3536,12 +3536,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3550,6 +3544,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Emphasized(param0);
@@ -3564,14 +3564,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptOptionSelector_get_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3583,12 +3583,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3597,6 +3591,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3611,14 +3611,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptOptionSelector_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -3630,12 +3630,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptOptionSelector_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3644,6 +3638,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -3658,14 +3658,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptOptionSelector_get_Options(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -3677,14 +3677,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptOptionSelector_get_SelectedIndex(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"SelectedIndex"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptOptionSelector", L"SelectedIndex"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedIndex());
         }
         catch (...)
@@ -3792,14 +3792,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptText_get_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emphasized());
         }
         catch (...)
@@ -3811,12 +3811,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3825,6 +3819,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Emphasized(param0);
@@ -3839,14 +3839,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptText_get_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -3858,12 +3858,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3872,6 +3866,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -3886,14 +3886,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptText_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -3905,12 +3905,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3919,6 +3913,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -3933,14 +3933,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptText_get_Text(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -3952,12 +3952,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptText_put_Text(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3966,6 +3960,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptText", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Text(param0);
@@ -4075,14 +4075,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emphasized());
         }
         catch (...)
@@ -4094,12 +4094,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_Emphasized(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4108,6 +4102,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Emphasized(param0);
@@ -4122,14 +4122,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -4141,12 +4141,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_DisplayName(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4155,6 +4149,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -4169,14 +4169,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -4188,12 +4188,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4202,6 +4196,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -4216,14 +4216,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_PlaceholderText(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaceholderText());
         }
         catch (...)
@@ -4235,12 +4235,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_PlaceholderText(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4249,6 +4243,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"PlaceholderText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PlaceholderText(param0);
@@ -4263,14 +4263,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_IsTextHidden(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTextHidden());
         }
         catch (...)
@@ -4282,12 +4282,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomPromptTextInput_put_IsTextHidden(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4296,6 +4290,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"IsTextHidden"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsTextHidden(param0);
@@ -4310,14 +4310,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomPromptTextInput_get_Text(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Text"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomPromptTextInput", L"Text"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Text());
         }
         catch (...)
@@ -4426,14 +4426,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomTextBox_get_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -4445,12 +4445,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Label(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4459,6 +4453,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -4473,14 +4473,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomTextBox_get_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -4492,12 +4492,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Compulsory(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4506,6 +4500,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -4520,14 +4520,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomTextBox_get_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -4539,12 +4539,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_Bordered(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4553,6 +4547,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -4567,14 +4567,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnCustomTextBox_get_DisplayText(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayText());
         }
         catch (...)
@@ -4586,12 +4586,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnCustomTextBox_put_DisplayText(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4600,6 +4594,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnCustomTextBox", L"DisplayText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayText(param0);
@@ -4709,14 +4709,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameAssignment_get_ProxyAutoConfigurationUri(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyAutoConfigurationUri());
         }
         catch (...)
@@ -4728,12 +4728,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameAssignment_put_ProxyAutoConfigurationUri(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4742,6 +4736,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"ProxyAutoConfigurationUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ProxyAutoConfigurationUri(param0);
@@ -4756,14 +4756,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameAssignment_get_DomainNameList(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"DomainNameList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameAssignment", L"DomainNameList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainNameList());
         }
         catch (...)
@@ -4873,14 +4873,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameInfo_get_DomainNameType(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainNameType());
         }
         catch (...)
@@ -4892,12 +4892,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameInfo_put_DomainNameType(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4906,6 +4900,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainNameType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameType>(arg);
 
             self->obj.DomainNameType(param0);
@@ -4920,14 +4920,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameInfo_get_DomainName(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainName());
         }
         catch (...)
@@ -4939,12 +4939,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnDomainNameInfo_put_DomainName(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4953,6 +4947,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DomainName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             self->obj.DomainName(param0);
@@ -4967,14 +4967,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameInfo_get_DnsServers(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DnsServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"DnsServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DnsServers());
         }
         catch (...)
@@ -4986,14 +4986,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameInfo_get_WebProxyServers(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebProxyServers());
         }
         catch (...)
@@ -5005,14 +5005,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnDomainNameInfo_get_WebProxyUris(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnDomainNameInfo", L"WebProxyUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebProxyUris());
         }
         catch (...)
@@ -5098,14 +5098,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_Kind(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -5117,14 +5117,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_PreviousExecutionState(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"PreviousExecutionState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"PreviousExecutionState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreviousExecutionState());
         }
         catch (...)
@@ -5136,14 +5136,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_SplashScreen(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SplashScreen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SplashScreen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SplashScreen());
         }
         catch (...)
@@ -5155,14 +5155,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_User(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -5174,14 +5174,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_ActivationOperation(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ActivationOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ActivationOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationOperation());
         }
         catch (...)
@@ -5193,14 +5193,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -5212,14 +5212,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnForegroundActivatedEventArgs_get_SharedContext(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SharedContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnForegroundActivatedEventArgs", L"SharedContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SharedContext());
         }
         catch (...)
@@ -5311,14 +5311,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnForegroundActivationOperation", L"Complete", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnForegroundActivationOperation", L"Complete", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 0);
 
                 self->obj.Complete(param0);
@@ -5437,14 +5437,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnInterfaceId", L"GetAddressInfo", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnInterfaceId", L"GetAddressInfo", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::com_array<uint8_t> param0 { };
 
                 self->obj.GetAddressInfo(param0);
@@ -5567,14 +5567,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromObjectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromObjectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert(self->obj.AddProfileFromObjectAsync(param0));
@@ -5598,14 +5598,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromXmlAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"AddProfileFromXmlAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.AddProfileFromXmlAsync(param0));
@@ -5629,14 +5629,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert(self->obj.ConnectProfileAsync(param0));
@@ -5660,14 +5660,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileWithPasswordCredentialAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"ConnectProfileWithPasswordCredentialAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 1);
 
@@ -5692,14 +5692,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DeleteProfileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DeleteProfileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert(self->obj.DeleteProfileAsync(param0));
@@ -5723,14 +5723,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DisconnectProfileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"DisconnectProfileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert(self->obj.DisconnectProfileAsync(param0));
@@ -5754,14 +5754,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"GetProfilesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"GetProfilesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetProfilesAsync());
             }
             catch (...)
@@ -5783,14 +5783,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromObjectAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromObjectAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::IVpnProfile>(args, 0);
 
                 return py::convert(self->obj.UpdateProfileFromObjectAsync(param0));
@@ -5814,14 +5814,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromXmlAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnManagementAgent", L"UpdateProfileFromXmlAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.UpdateProfileFromXmlAsync(param0));
@@ -5941,14 +5941,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNamespaceAssignment_get_ProxyAutoConfigUri(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyAutoConfigUri());
         }
         catch (...)
@@ -5960,12 +5960,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceAssignment_put_ProxyAutoConfigUri(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5974,6 +5968,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"ProxyAutoConfigUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.ProxyAutoConfigUri(param0);
@@ -5988,14 +5988,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNamespaceAssignment_get_NamespaceList(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NamespaceList());
         }
         catch (...)
@@ -6007,12 +6007,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceAssignment_put_NamespaceList(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6021,6 +6015,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceAssignment", L"NamespaceList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnNamespaceInfo>>(arg);
 
             self->obj.NamespaceList(param0);
@@ -6132,14 +6132,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNamespaceInfo_get_WebProxyServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WebProxyServers());
         }
         catch (...)
@@ -6151,12 +6151,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_WebProxyServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6165,6 +6159,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"WebProxyServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
             self->obj.WebProxyServers(param0);
@@ -6179,14 +6179,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNamespaceInfo_get_Namespace(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Namespace());
         }
         catch (...)
@@ -6198,12 +6198,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_Namespace(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6212,6 +6206,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"Namespace"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Namespace(param0);
@@ -6226,14 +6226,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNamespaceInfo_get_DnsServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DnsServers());
         }
         catch (...)
@@ -6245,12 +6245,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNamespaceInfo_put_DnsServers(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6259,6 +6253,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNamespaceInfo", L"DnsServers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(arg);
 
             self->obj.DnsServers(param0);
@@ -6367,14 +6367,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_UserAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UserAuthenticationMethod());
         }
         catch (...)
@@ -6386,12 +6386,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_UserAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6400,6 +6394,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"UserAuthenticationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
             self->obj.UserAuthenticationMethod(param0);
@@ -6414,14 +6414,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_TunnelAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TunnelAuthenticationMethod());
         }
         catch (...)
@@ -6433,12 +6433,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_TunnelAuthenticationMethod(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6447,6 +6441,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TunnelAuthenticationMethod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAuthenticationMethod>(arg);
 
             self->obj.TunnelAuthenticationMethod(param0);
@@ -6461,14 +6461,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoutingPolicyType());
         }
         catch (...)
@@ -6480,12 +6480,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6494,6 +6488,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RoutingPolicyType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
             self->obj.RoutingPolicyType(param0);
@@ -6508,14 +6508,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_EapConfiguration(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EapConfiguration());
         }
         catch (...)
@@ -6527,12 +6527,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_EapConfiguration(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6541,6 +6535,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"EapConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.EapConfiguration(param0);
@@ -6555,14 +6555,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_NativeProtocolType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NativeProtocolType());
         }
         catch (...)
@@ -6574,12 +6574,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_NativeProtocolType(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6588,6 +6582,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"NativeProtocolType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnNativeProtocolType>(arg);
 
             self->obj.NativeProtocolType(param0);
@@ -6602,14 +6602,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_Servers(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Servers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Servers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Servers());
         }
         catch (...)
@@ -6621,14 +6621,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequireVpnClientAppUI());
         }
         catch (...)
@@ -6640,12 +6640,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6654,6 +6648,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RequireVpnClientAppUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequireVpnClientAppUI(param0);
@@ -6668,14 +6668,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_ConnectionStatus(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -6687,14 +6687,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -6706,12 +6706,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6720,6 +6714,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProfileName(param0);
@@ -6734,14 +6734,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RememberCredentials());
         }
         catch (...)
@@ -6753,12 +6753,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6767,6 +6761,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RememberCredentials(param0);
@@ -6781,14 +6781,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysOn());
         }
         catch (...)
@@ -6800,12 +6800,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnNativeProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6814,6 +6808,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysOn(param0);
@@ -6828,14 +6828,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_Routes(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Routes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"Routes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Routes());
         }
         catch (...)
@@ -6847,14 +6847,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_AppTriggers(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AppTriggers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"AppTriggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppTriggers());
         }
         catch (...)
@@ -6866,14 +6866,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_TrafficFilters(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TrafficFilters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"TrafficFilters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficFilters());
         }
         catch (...)
@@ -6885,14 +6885,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnNativeProfile_get_DomainNameInfoList(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"DomainNameInfoList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnNativeProfile", L"DomainNameInfoList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainNameInfoList());
         }
         catch (...)
@@ -7014,14 +7014,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBuffer_get_TransportAffinity(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransportAffinity());
         }
         catch (...)
@@ -7033,12 +7033,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_TransportAffinity(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7047,6 +7041,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportAffinity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TransportAffinity(param0);
@@ -7061,14 +7061,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBuffer_get_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -7080,12 +7080,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7094,6 +7088,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
             self->obj.Status(param0);
@@ -7108,14 +7108,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBuffer_get_Buffer(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Buffer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"Buffer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Buffer());
         }
         catch (...)
@@ -7127,14 +7127,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBuffer_get_AppId(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -7146,14 +7146,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBuffer_get_TransportContext(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransportContext());
         }
         catch (...)
@@ -7165,12 +7165,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBuffer_put_TransportContext(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7179,6 +7173,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBuffer", L"TransportContext"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
             self->obj.TransportContext(param0);
@@ -7271,14 +7271,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"AddAtBegin", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"AddAtBegin", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 self->obj.AddAtBegin(param0);
@@ -7303,14 +7303,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Append", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Append", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
 
                 self->obj.Append(param0);
@@ -7335,14 +7335,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -7365,14 +7365,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -7394,14 +7394,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtBegin", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtBegin", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RemoveAtBegin());
             }
             catch (...)
@@ -7423,14 +7423,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtEnd", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"RemoveAtEnd", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RemoveAtEnd());
             }
             catch (...)
@@ -7448,14 +7448,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_get_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -7467,12 +7467,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPacketBufferList_put_Status(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7481,6 +7475,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferStatus>(arg);
 
             self->obj.Status(param0);
@@ -7495,14 +7495,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPacketBufferList_get_Size(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPacketBufferList", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -7605,14 +7605,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPickedCredential_get_AdditionalPin(py::wrapper::Windows::Networking::Vpn::VpnPickedCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"AdditionalPin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"AdditionalPin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalPin());
         }
         catch (...)
@@ -7624,14 +7624,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPickedCredential_get_OldPasswordCredential(py::wrapper::Windows::Networking::Vpn::VpnPickedCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"OldPasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"OldPasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldPasswordCredential());
         }
         catch (...)
@@ -7643,14 +7643,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPickedCredential_get_PasskeyCredential(py::wrapper::Windows::Networking::Vpn::VpnPickedCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"PasskeyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPickedCredential", L"PasskeyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PasskeyCredential());
         }
         catch (...)
@@ -7756,14 +7756,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_VpnPluginPackageFamilyName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VpnPluginPackageFamilyName());
         }
         catch (...)
@@ -7775,12 +7775,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_VpnPluginPackageFamilyName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7789,6 +7783,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"VpnPluginPackageFamilyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.VpnPluginPackageFamilyName(param0);
@@ -7803,14 +7803,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_CustomConfiguration(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CustomConfiguration());
         }
         catch (...)
@@ -7822,12 +7822,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_CustomConfiguration(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7836,6 +7830,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"CustomConfiguration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.CustomConfiguration(param0);
@@ -7850,14 +7850,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_ServerUris(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ServerUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ServerUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerUris());
         }
         catch (...)
@@ -7869,14 +7869,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequireVpnClientAppUI());
         }
         catch (...)
@@ -7888,12 +7888,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_RequireVpnClientAppUI(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7902,6 +7896,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RequireVpnClientAppUI"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RequireVpnClientAppUI(param0);
@@ -7916,14 +7916,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_ConnectionStatus(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -7935,14 +7935,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -7954,12 +7954,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -7968,6 +7962,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProfileName(param0);
@@ -7982,14 +7982,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RememberCredentials());
         }
         catch (...)
@@ -8001,12 +8001,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8015,6 +8009,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RememberCredentials(param0);
@@ -8029,14 +8029,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysOn());
         }
         catch (...)
@@ -8048,12 +8048,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnPlugInProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8062,6 +8056,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysOn(param0);
@@ -8076,14 +8076,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_AppTriggers(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AppTriggers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"AppTriggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppTriggers());
         }
         catch (...)
@@ -8095,14 +8095,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_DomainNameInfoList(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"DomainNameInfoList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"DomainNameInfoList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainNameInfoList());
         }
         catch (...)
@@ -8114,14 +8114,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_Routes(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"Routes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"Routes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Routes());
         }
         catch (...)
@@ -8133,14 +8133,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnPlugInProfile_get_TrafficFilters(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"TrafficFilters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnPlugInProfile", L"TrafficFilters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficFilters());
         }
         catch (...)
@@ -8258,14 +8258,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRoute_get_PrefixSize(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrefixSize());
         }
         catch (...)
@@ -8277,12 +8277,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRoute_put_PrefixSize(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8291,6 +8285,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"PrefixSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.PrefixSize(param0);
@@ -8305,14 +8305,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRoute_get_Address(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -8324,12 +8324,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRoute_put_Address(py::wrapper::Windows::Networking::Vpn::VpnRoute* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8338,6 +8332,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRoute", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(arg);
 
             self->obj.Address(param0);
@@ -8445,14 +8445,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRouteAssignment_get_Ipv6InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ipv6InclusionRoutes());
         }
         catch (...)
@@ -8464,12 +8464,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv6InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8478,6 +8472,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6InclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             self->obj.Ipv6InclusionRoutes(param0);
@@ -8492,14 +8492,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRouteAssignment_get_Ipv6ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ipv6ExclusionRoutes());
         }
         catch (...)
@@ -8511,12 +8511,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv6ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8525,6 +8519,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv6ExclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             self->obj.Ipv6ExclusionRoutes(param0);
@@ -8539,14 +8539,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRouteAssignment_get_Ipv4InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ipv4InclusionRoutes());
         }
         catch (...)
@@ -8558,12 +8558,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv4InclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8572,6 +8566,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4InclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             self->obj.Ipv4InclusionRoutes(param0);
@@ -8586,14 +8586,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRouteAssignment_get_Ipv4ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ipv4ExclusionRoutes());
         }
         catch (...)
@@ -8605,12 +8605,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_Ipv4ExclusionRoutes(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8619,6 +8613,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"Ipv4ExclusionRoutes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::Vpn::VpnRoute>>(arg);
 
             self->obj.Ipv4ExclusionRoutes(param0);
@@ -8633,14 +8633,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnRouteAssignment_get_ExcludeLocalSubnets(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExcludeLocalSubnets());
         }
         catch (...)
@@ -8652,12 +8652,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnRouteAssignment_put_ExcludeLocalSubnets(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8666,6 +8660,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnRouteAssignment", L"ExcludeLocalSubnets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ExcludeLocalSubnets(param0);
@@ -8754,14 +8754,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnSystemHealth_get_StatementOfHealth(py::wrapper::Windows::Networking::Vpn::VpnSystemHealth* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnSystemHealth", L"StatementOfHealth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnSystemHealth", L"StatementOfHealth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatementOfHealth());
         }
         catch (...)
@@ -8867,14 +8867,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoutingPolicyType());
         }
         catch (...)
@@ -8886,12 +8886,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_RoutingPolicyType(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8900,6 +8894,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RoutingPolicyType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnRoutingPolicyType>(arg);
 
             self->obj.RoutingPolicyType(param0);
@@ -8914,14 +8914,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_Protocol(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Protocol());
         }
         catch (...)
@@ -8933,12 +8933,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_Protocol(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8947,6 +8941,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"Protocol"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnIPProtocol>(arg);
 
             self->obj.Protocol(param0);
@@ -8961,14 +8961,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_AppId(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppId());
         }
         catch (...)
@@ -8980,12 +8980,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilter_put_AppId(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8994,6 +8988,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnAppId>(arg);
 
             self->obj.AppId(param0);
@@ -9008,14 +9008,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_AppClaims(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppClaims"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"AppClaims"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppClaims());
         }
         catch (...)
@@ -9027,14 +9027,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_LocalAddressRanges(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalAddressRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalAddressRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalAddressRanges());
         }
         catch (...)
@@ -9046,14 +9046,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_LocalPortRanges(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalPortRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"LocalPortRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalPortRanges());
         }
         catch (...)
@@ -9065,14 +9065,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_RemoteAddressRanges(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemoteAddressRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemoteAddressRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteAddressRanges());
         }
         catch (...)
@@ -9084,14 +9084,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilter_get_RemotePortRanges(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemotePortRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilter", L"RemotePortRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemotePortRanges());
         }
         catch (...)
@@ -9202,14 +9202,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilterAssignment_get_AllowOutbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowOutbound());
         }
         catch (...)
@@ -9221,12 +9221,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilterAssignment_put_AllowOutbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9235,6 +9229,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowOutbound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowOutbound(param0);
@@ -9249,14 +9249,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilterAssignment_get_AllowInbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AllowInbound());
         }
         catch (...)
@@ -9268,12 +9268,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int VpnTrafficFilterAssignment_put_AllowInbound(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9282,6 +9276,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"AllowInbound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AllowInbound(param0);
@@ -9296,14 +9296,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* VpnTrafficFilterAssignment_get_TrafficFilterList(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"TrafficFilterList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.VpnTrafficFilterAssignment", L"TrafficFilterList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficFilterList());
         }
         catch (...)
@@ -9391,14 +9391,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnChannelStatics", L"ProcessEventAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnChannelStatics", L"ProcessEventAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -9490,14 +9490,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCredential_get_AdditionalPin(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"AdditionalPin"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"AdditionalPin"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdditionalPin());
         }
         catch (...)
@@ -9509,14 +9509,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCredential_get_CertificateCredential(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"CertificateCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"CertificateCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CertificateCredential());
         }
         catch (...)
@@ -9528,14 +9528,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCredential_get_OldPasswordCredential(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"OldPasswordCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"OldPasswordCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldPasswordCredential());
         }
         catch (...)
@@ -9547,14 +9547,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCredential_get_PasskeyCredential(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"PasskeyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCredential", L"PasskeyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PasskeyCredential());
         }
         catch (...)
@@ -9639,14 +9639,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPrompt_get_Bordered(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bordered());
         }
         catch (...)
@@ -9658,12 +9658,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Bordered(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9672,6 +9666,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Bordered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Bordered(param0);
@@ -9686,14 +9686,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPrompt_get_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -9705,12 +9705,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9719,6 +9713,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -9733,14 +9733,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPrompt_get_Label(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Label());
         }
         catch (...)
@@ -9752,12 +9752,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPrompt_put_Label(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9766,6 +9760,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPrompt", L"Label"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Label(param0);
@@ -9852,14 +9852,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPromptElement_get_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Compulsory());
         }
         catch (...)
@@ -9871,12 +9871,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_Compulsory(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9885,6 +9879,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Compulsory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Compulsory(param0);
@@ -9899,14 +9899,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPromptElement_get_DisplayName(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -9918,12 +9918,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_DisplayName(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9932,6 +9926,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -9946,14 +9946,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnCustomPromptElement_get_Emphasized(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emphasized());
         }
         catch (...)
@@ -9965,12 +9965,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnCustomPromptElement_put_Emphasized(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9979,6 +9973,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnCustomPromptElement", L"Emphasized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Emphasized(param0);
@@ -10069,14 +10069,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnDomainNameInfoFactory", L"CreateVpnDomainNameInfo", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnDomainNameInfoFactory", L"CreateVpnDomainNameInfo", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnDomainNameType>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::HostName>>(args, 2);
@@ -10173,14 +10173,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnInterfaceIdFactory", L"CreateVpnInterfaceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnInterfaceIdFactory", L"CreateVpnInterfaceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(self->obj.CreateVpnInterfaceId(param0));
@@ -10274,14 +10274,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnNamespaceInfoFactory", L"CreateVpnNamespaceInfo", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnNamespaceInfoFactory", L"CreateVpnNamespaceInfo", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Networking::HostName>>(args, 2);
@@ -10377,14 +10377,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPacketBufferFactory", L"CreateVpnPacketBuffer", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPacketBufferFactory", L"CreateVpnPacketBuffer", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -10480,14 +10480,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Connect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Connect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
                 self->obj.Connect(param0);
@@ -10512,14 +10512,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Decapsulate", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Decapsulate", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBuffer>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
@@ -10547,14 +10547,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Disconnect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Disconnect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
 
                 self->obj.Disconnect(param0);
@@ -10579,14 +10579,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Encapsulate", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"Encapsulate", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::Vpn::VpnPacketBufferList>(args, 2);
@@ -10613,14 +10613,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"GetKeepAlivePayload", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugIn", L"GetKeepAlivePayload", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
                 winrt::Windows::Networking::Vpn::VpnPacketBuffer param1 { nullptr };
 
@@ -10722,14 +10722,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_AlwaysOn(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysOn());
         }
         catch (...)
@@ -10741,12 +10741,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_AlwaysOn(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10755,6 +10749,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AlwaysOn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysOn(param0);
@@ -10769,14 +10769,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_AppTriggers(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AppTriggers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"AppTriggers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppTriggers());
         }
         catch (...)
@@ -10788,14 +10788,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_DomainNameInfoList(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"DomainNameInfoList"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"DomainNameInfoList"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DomainNameInfoList());
         }
         catch (...)
@@ -10807,14 +10807,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_ProfileName(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProfileName());
         }
         catch (...)
@@ -10826,12 +10826,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_ProfileName(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10840,6 +10834,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"ProfileName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ProfileName(param0);
@@ -10854,14 +10854,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_RememberCredentials(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RememberCredentials());
         }
         catch (...)
@@ -10873,12 +10873,6 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static int IVpnProfile_put_RememberCredentials(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10887,6 +10881,12 @@ namespace py::cpp::Windows::Networking::Vpn
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"RememberCredentials"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RememberCredentials(param0);
@@ -10901,14 +10901,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_Routes(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"Routes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"Routes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Routes());
         }
         catch (...)
@@ -10920,14 +10920,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyObject* IVpnProfile_get_TrafficFilters(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"TrafficFilters"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.Vpn.IVpnProfile", L"TrafficFilters"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrafficFilters());
         }
         catch (...)
@@ -11019,14 +11019,14 @@ namespace py::cpp::Windows::Networking::Vpn
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnRouteFactory", L"CreateVpnRoute", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnRouteFactory", L"CreateVpnRoute", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<uint8_t>(args, 1);
 

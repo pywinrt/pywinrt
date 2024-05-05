@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"ClearOverridePosition", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"ClearOverridePosition", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearOverridePosition();
                 Py_RETURN_NONE;
             }
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"SetOverridePosition", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"SetOverridePosition", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::BasicGeoposition>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::PositionSource>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -109,14 +109,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
     static PyObject* GeolocationProvider_get_IsOverridden(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverridden"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverridden"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsOverridden());
         }
         catch (...)
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
     static PyObject* GeolocationProvider_add_IsOverriddenChanged(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverriddenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverriddenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsOverriddenChanged(param0));
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
 
     static PyObject* GeolocationProvider_remove_IsOverriddenChanged(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverriddenChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Geolocation.Provider.GeolocationProvider", L"IsOverriddenChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsOverriddenChanged(param0);

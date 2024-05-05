@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::JumpList::IsSupported());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"LoadCurrentAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"LoadCurrentAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::JumpList::LoadCurrentAsync());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"SaveAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpList", L"SaveAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SaveAsync());
             }
             catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpList_get_SystemGroupKind(py::wrapper::Windows::UI::StartScreen::JumpList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"SystemGroupKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"SystemGroupKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SystemGroupKind());
         }
         catch (...)
@@ -130,12 +130,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpList_put_SystemGroupKind(py::wrapper::Windows::UI::StartScreen::JumpList* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"SystemGroupKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -144,6 +138,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"SystemGroupKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::JumpListSystemGroupKind>(arg);
 
             self->obj.SystemGroupKind(param0);
@@ -158,14 +158,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpList_get_Items(py::wrapper::Windows::UI::StartScreen::JumpList* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"Items"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpList", L"Items"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Items());
         }
         catch (...)
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpListItem", L"CreateSeparator", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpListItem", L"CreateSeparator", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::JumpListItem::CreateSeparator());
             }
             catch (...)
@@ -309,14 +309,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpListItem", L"CreateWithArguments", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.JumpListItem", L"CreateWithArguments", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -337,14 +337,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_Logo(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo());
         }
         catch (...)
@@ -356,12 +356,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_Logo(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -370,6 +364,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Logo(param0);
@@ -384,14 +384,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_GroupName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"GroupName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"GroupName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GroupName());
         }
         catch (...)
@@ -403,12 +403,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_GroupName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"GroupName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -417,6 +411,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"GroupName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.GroupName(param0);
@@ -431,14 +431,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_DisplayName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -450,12 +450,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_DisplayName(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -464,6 +458,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -478,14 +478,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_Description(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -497,12 +497,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int JumpListItem_put_Description(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -511,6 +505,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Description(param0);
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_Arguments(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -544,14 +544,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_Kind(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -563,14 +563,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* JumpListItem_get_RemovedByUser(py::wrapper::Windows::UI::StartScreen::JumpListItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"RemovedByUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.JumpListItem", L"RemovedByUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemovedByUser());
         }
         catch (...)
@@ -786,14 +786,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Exists", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Exists", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::Exists(param0));
@@ -817,14 +817,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync());
             }
             catch (...)
@@ -835,14 +835,14 @@ namespace py::cpp::Windows::UI::StartScreen
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllAsync(param0));
@@ -866,14 +866,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllForPackageAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"FindAllForPackageAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::SecondaryTile::FindAllForPackageAsync());
             }
             catch (...)
@@ -895,14 +895,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestCreateAsync());
             }
             catch (...)
@@ -913,14 +913,14 @@ namespace py::cpp::Windows::UI::StartScreen
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.RequestCreateAsync(param0));
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateForSelectionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateForSelectionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(self->obj.RequestCreateForSelectionAsync(param0));
@@ -964,14 +964,14 @@ namespace py::cpp::Windows::UI::StartScreen
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateForSelectionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestCreateForSelectionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -996,14 +996,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestDeleteAsync());
             }
             catch (...)
@@ -1014,14 +1014,14 @@ namespace py::cpp::Windows::UI::StartScreen
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
                 return py::convert(self->obj.RequestDeleteAsync(param0));
@@ -1045,14 +1045,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteForSelectionAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteForSelectionAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 return py::convert(self->obj.RequestDeleteForSelectionAsync(param0));
@@ -1065,14 +1065,14 @@ namespace py::cpp::Windows::UI::StartScreen
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteForSelectionAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RequestDeleteForSelectionAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -1097,14 +1097,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"UpdateAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.SecondaryTile", L"UpdateAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.UpdateAsync());
             }
             catch (...)
@@ -1122,14 +1122,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_ShortName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ShortName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ShortName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShortName());
         }
         catch (...)
@@ -1141,12 +1141,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_ShortName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ShortName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1155,6 +1149,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ShortName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.ShortName(param0);
@@ -1169,14 +1169,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Logo());
         }
         catch (...)
@@ -1188,12 +1188,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1202,6 +1196,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Logo(param0);
@@ -1216,14 +1216,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_TileId(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileId());
         }
         catch (...)
@@ -1235,12 +1235,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_TileId(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1249,6 +1243,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.TileId(param0);
@@ -1263,14 +1263,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_LockScreenDisplayBadgeAndTileText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenDisplayBadgeAndTileText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenDisplayBadgeAndTileText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockScreenDisplayBadgeAndTileText());
         }
         catch (...)
@@ -1282,12 +1282,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_LockScreenDisplayBadgeAndTileText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenDisplayBadgeAndTileText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1296,6 +1290,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenDisplayBadgeAndTileText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.LockScreenDisplayBadgeAndTileText(param0);
@@ -1310,14 +1310,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_LockScreenBadgeLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenBadgeLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenBadgeLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LockScreenBadgeLogo());
         }
         catch (...)
@@ -1329,12 +1329,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_LockScreenBadgeLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenBadgeLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1343,6 +1337,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"LockScreenBadgeLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.LockScreenBadgeLogo(param0);
@@ -1357,14 +1357,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_Arguments(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Arguments());
         }
         catch (...)
@@ -1376,12 +1376,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_Arguments(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Arguments"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1390,6 +1384,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"Arguments"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Arguments(param0);
@@ -1404,14 +1404,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ForegroundText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ForegroundText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundText());
         }
         catch (...)
@@ -1423,12 +1423,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ForegroundText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1437,6 +1431,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"ForegroundText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::ForegroundText>(arg);
 
             self->obj.ForegroundText(param0);
@@ -1451,14 +1451,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_DisplayName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -1470,12 +1470,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_DisplayName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1484,6 +1478,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.DisplayName(param0);
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -1517,12 +1517,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1531,6 +1525,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -1545,14 +1545,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_WideLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"WideLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"WideLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WideLogo());
         }
         catch (...)
@@ -1564,12 +1564,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_WideLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"WideLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1578,6 +1572,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"WideLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.WideLogo(param0);
@@ -1592,14 +1592,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_TileOptions(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TileOptions());
         }
         catch (...)
@@ -1611,12 +1611,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_TileOptions(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileOptions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1625,6 +1619,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"TileOptions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::TileOptions>(arg);
 
             self->obj.TileOptions(param0);
@@ -1639,14 +1639,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_SmallLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"SmallLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"SmallLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SmallLogo());
         }
         catch (...)
@@ -1658,12 +1658,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_SmallLogo(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"SmallLogo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1672,6 +1666,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"SmallLogo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.SmallLogo(param0);
@@ -1686,14 +1686,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_RoamingEnabled(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RoamingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RoamingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoamingEnabled());
         }
         catch (...)
@@ -1705,12 +1705,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_RoamingEnabled(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RoamingEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1719,6 +1713,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"RoamingEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.RoamingEnabled(param0);
@@ -1733,14 +1733,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_PhoneticName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"PhoneticName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"PhoneticName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneticName());
         }
         catch (...)
@@ -1752,12 +1752,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTile_put_PhoneticName(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"PhoneticName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1766,6 +1760,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"PhoneticName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.PhoneticName(param0);
@@ -1780,14 +1780,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_get_VisualElements(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VisualElements());
         }
         catch (...)
@@ -1799,14 +1799,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_add_VisualElementsRequested(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElementsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElementsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::StartScreen::SecondaryTile, winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.VisualElementsRequested(param0));
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTile_remove_VisualElementsRequested(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElementsRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.StartScreen.SecondaryTile", L"VisualElementsRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.VisualElementsRequested(param0);
@@ -1961,14 +1961,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square150x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square150x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square150x150Logo());
         }
         catch (...)
@@ -1980,12 +1980,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square150x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1994,6 +1988,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square150x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square150x150Logo(param0);
@@ -2008,14 +2008,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_ShowNameOnWide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnWide310x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnWide310x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowNameOnWide310x150Logo());
         }
         catch (...)
@@ -2027,12 +2027,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnWide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnWide310x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2041,6 +2035,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnWide310x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowNameOnWide310x150Logo(param0);
@@ -2055,14 +2055,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_ShowNameOnSquare310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare310x310Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare310x310Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowNameOnSquare310x310Logo());
         }
         catch (...)
@@ -2074,12 +2074,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnSquare310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare310x310Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2088,6 +2082,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare310x310Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowNameOnSquare310x310Logo(param0);
@@ -2102,14 +2102,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_ShowNameOnSquare150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare150x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare150x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShowNameOnSquare150x150Logo());
         }
         catch (...)
@@ -2121,12 +2121,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ShowNameOnSquare150x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare150x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2135,6 +2129,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ShowNameOnSquare150x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShowNameOnSquare150x150Logo(param0);
@@ -2149,14 +2149,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ForegroundText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ForegroundText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ForegroundText());
         }
         catch (...)
@@ -2168,12 +2168,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_ForegroundText(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ForegroundText"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2182,6 +2176,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"ForegroundText"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::ForegroundText>(arg);
 
             self->obj.ForegroundText(param0);
@@ -2196,14 +2196,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BackgroundColor());
         }
         catch (...)
@@ -2215,12 +2215,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_BackgroundColor(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"BackgroundColor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2229,6 +2223,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"BackgroundColor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
             self->obj.BackgroundColor(param0);
@@ -2243,14 +2243,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Wide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Wide310x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Wide310x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Wide310x150Logo());
         }
         catch (...)
@@ -2262,12 +2262,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Wide310x150Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Wide310x150Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2276,6 +2270,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Wide310x150Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Wide310x150Logo(param0);
@@ -2290,14 +2290,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square70x70Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square70x70Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square70x70Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square70x70Logo());
         }
         catch (...)
@@ -2309,12 +2309,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square70x70Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square70x70Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2323,6 +2317,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square70x70Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square70x70Logo(param0);
@@ -2337,14 +2337,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square310x310Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square310x310Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square310x310Logo());
         }
         catch (...)
@@ -2356,12 +2356,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square310x310Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square310x310Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2370,6 +2364,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square310x310Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square310x310Logo(param0);
@@ -2384,14 +2384,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square30x30Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square30x30Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square30x30Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square30x30Logo());
         }
         catch (...)
@@ -2403,12 +2403,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square30x30Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square30x30Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2417,6 +2411,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square30x30Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square30x30Logo(param0);
@@ -2431,14 +2431,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square71x71Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square71x71Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square71x71Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square71x71Logo());
         }
         catch (...)
@@ -2450,12 +2450,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square71x71Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square71x71Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2464,6 +2458,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square71x71Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square71x71Logo(param0);
@@ -2478,14 +2478,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_Square44x44Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square44x44Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square44x44Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Square44x44Logo());
         }
         catch (...)
@@ -2497,12 +2497,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int SecondaryTileVisualElements_put_Square44x44Logo(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square44x44Logo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2511,6 +2505,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"Square44x44Logo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Square44x44Logo(param0);
@@ -2525,14 +2525,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* SecondaryTileVisualElements_get_MixedRealityModel(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"MixedRealityModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.SecondaryTileVisualElements", L"MixedRealityModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MixedRealityModel());
         }
         catch (...)
@@ -2630,14 +2630,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"ContainsAppListEntryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"ContainsAppListEntryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
                 return py::convert(self->obj.ContainsAppListEntryAsync(param0));
@@ -2661,14 +2661,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"ContainsSecondaryTileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"ContainsSecondaryTileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ContainsSecondaryTileAsync(param0));
@@ -2692,14 +2692,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::UI::StartScreen::StartScreenManager::GetDefault());
             }
             catch (...)
@@ -2721,14 +2721,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::UI::StartScreen::StartScreenManager::GetForUser(param0));
@@ -2752,14 +2752,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"RequestAddAppListEntryAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"RequestAddAppListEntryAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
                 return py::convert(self->obj.RequestAddAppListEntryAsync(param0));
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"SupportsAppListEntry", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"SupportsAppListEntry", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Core::AppListEntry>(args, 0);
 
                 return py::convert(self->obj.SupportsAppListEntry(param0));
@@ -2814,14 +2814,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"TryRemoveSecondaryTileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.StartScreenManager", L"TryRemoveSecondaryTileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TryRemoveSecondaryTileAsync(param0));
@@ -2841,14 +2841,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* StartScreenManager_get_User(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.StartScreenManager", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.StartScreenManager", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -2962,14 +2962,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* TileMixedRealityModel_get_Uri(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -2981,12 +2981,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_Uri(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2995,6 +2989,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.Uri(param0);
@@ -3009,14 +3009,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* TileMixedRealityModel_get_BoundingBox(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BoundingBox());
         }
         catch (...)
@@ -3028,12 +3028,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_BoundingBox(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"BoundingBox"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3042,6 +3036,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"BoundingBox"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Perception::Spatial::SpatialBoundingBox>>(arg);
 
             self->obj.BoundingBox(param0);
@@ -3056,14 +3056,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* TileMixedRealityModel_get_ActivationBehavior(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"ActivationBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"ActivationBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivationBehavior());
         }
         catch (...)
@@ -3075,12 +3075,6 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static int TileMixedRealityModel_put_ActivationBehavior(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"ActivationBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3089,6 +3083,12 @@ namespace py::cpp::Windows::UI::StartScreen
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.TileMixedRealityModel", L"ActivationBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior>(arg);
 
             self->obj.ActivationBehavior(param0);
@@ -3179,14 +3179,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -3204,14 +3204,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequest_get_AlternateVisualElements(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"AlternateVisualElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"AlternateVisualElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlternateVisualElements());
         }
         catch (...)
@@ -3223,14 +3223,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequest_get_Deadline(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"Deadline"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"Deadline"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Deadline());
         }
         catch (...)
@@ -3242,14 +3242,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequest_get_VisualElements(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"VisualElements"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequest", L"VisualElements"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VisualElements());
         }
         catch (...)
@@ -3338,14 +3338,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.VisualElementsRequestDeferral", L"Complete", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.StartScreen.VisualElementsRequestDeferral", L"Complete", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Complete();
                 Py_RETURN_NONE;
             }
@@ -3434,14 +3434,14 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyObject* VisualElementsRequestedEventArgs_get_Request(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequestedEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.StartScreen.VisualElementsRequestedEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

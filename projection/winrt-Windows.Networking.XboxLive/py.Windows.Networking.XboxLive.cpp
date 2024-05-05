@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"Compare", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"Compare", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
                 return py::convert(self->obj.Compare(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBase64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBase64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBase64(param0));
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBuffer(param0));
@@ -121,14 +121,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBytes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"CreateFromSnapshotBytes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::CreateFromSnapshotBytes(param0));
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetLocal", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetLocal", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::GetLocal());
             }
             catch (...)
@@ -181,14 +181,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBase64", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBase64", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSnapshotAsBase64());
             }
             catch (...)
@@ -210,14 +210,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBuffer", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBuffer", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSnapshotAsBuffer());
             }
             catch (...)
@@ -239,14 +239,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBytes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"GetSnapshotAsBytes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
                 uint32_t param1 {  };
 
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_get_IsLocal(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"IsLocal"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"IsLocal"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLocal());
         }
         catch (...)
@@ -293,14 +293,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_get_IsValid(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"IsValid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"IsValid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsValid());
         }
         catch (...)
@@ -312,14 +312,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_get_NetworkAccessKind(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"NetworkAccessKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"NetworkAccessKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NetworkAccessKind());
         }
         catch (...)
@@ -331,14 +331,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_get_MaxSnapshotBytesSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"MaxSnapshotBytesSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"MaxSnapshotBytesSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress::MaxSnapshotBytesSize());
         }
         catch (...)
@@ -350,14 +350,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_add_SnapshotChanged(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"SnapshotChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"SnapshotChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SnapshotChanged(param0));
@@ -371,14 +371,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveDeviceAddress_remove_SnapshotChanged(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"SnapshotChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveDeviceAddress", L"SnapshotChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SnapshotChanged(param0);
@@ -505,14 +505,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"DeleteAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"DeleteAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
@@ -534,14 +534,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"FindEndpointPairByHostNamesAndPorts", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"FindEndpointPairByHostNamesAndPorts", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Networking::HostName>(args, 2);
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"FindEndpointPairBySocketAddressBytes", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"FindEndpointPairBySocketAddressBytes", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
                 auto param1 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 1);
 
@@ -600,14 +600,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"GetLocalSocketAddressBytes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"GetLocalSocketAddressBytes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
                 self->obj.GetLocalSocketAddressBytes(param0);
@@ -632,14 +632,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"GetRemoteSocketAddressBytes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"GetRemoteSocketAddressBytes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, true>>(args, 0);
 
                 self->obj.GetRemoteSocketAddressBytes(param0);
@@ -660,14 +660,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_LocalHostName(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"LocalHostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"LocalHostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalHostName());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_LocalPort(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"LocalPort"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"LocalPort"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalPort());
         }
         catch (...)
@@ -698,14 +698,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_RemoteDeviceAddress(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemoteDeviceAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemoteDeviceAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteDeviceAddress());
         }
         catch (...)
@@ -717,14 +717,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_RemoteHostName(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemoteHostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemoteHostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteHostName());
         }
         catch (...)
@@ -736,14 +736,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_RemotePort(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemotePort"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"RemotePort"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemotePort());
         }
         catch (...)
@@ -755,14 +755,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_State(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -774,14 +774,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_get_Template(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"Template"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"Template"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Template());
         }
         catch (...)
@@ -793,14 +793,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_add_StateChanged(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair, winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -814,14 +814,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPair_remove_StateChanged(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPair", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairCreationResult_get_DeviceAddress(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"DeviceAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"DeviceAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAddress());
         }
         catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairCreationResult_get_EndpointPair(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"EndpointPair"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"EndpointPair"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointPair());
         }
         catch (...)
@@ -982,14 +982,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairCreationResult_get_IsExistingPathEvaluation(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"IsExistingPathEvaluation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"IsExistingPathEvaluation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsExistingPathEvaluation());
         }
         catch (...)
@@ -1001,14 +1001,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairCreationResult_get_Status(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1093,14 +1093,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairStateChangedEventArgs_get_NewState(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs", L"NewState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs", L"NewState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NewState());
         }
         catch (...)
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairStateChangedEventArgs_get_OldState(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs", L"OldState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs", L"OldState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OldState());
         }
         catch (...)
@@ -1206,14 +1206,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
                 return py::convert(self->obj.CreateEndpointPairAsync(param0));
@@ -1226,14 +1226,14 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 1);
 
@@ -1258,14 +1258,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairForPortsAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairForPortsAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1280,14 +1280,14 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairForPortsAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairForPortsAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1314,14 +1314,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"GetTemplateByName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"GetTemplateByName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::GetTemplateByName(param0));
@@ -1341,14 +1341,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_AcceptorBoundPortRangeLower(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"AcceptorBoundPortRangeLower"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"AcceptorBoundPortRangeLower"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcceptorBoundPortRangeLower());
         }
         catch (...)
@@ -1360,14 +1360,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_AcceptorBoundPortRangeUpper(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"AcceptorBoundPortRangeUpper"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"AcceptorBoundPortRangeUpper"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AcceptorBoundPortRangeUpper());
         }
         catch (...)
@@ -1379,14 +1379,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_EndpointPairs(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"EndpointPairs"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"EndpointPairs"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointPairs());
         }
         catch (...)
@@ -1398,14 +1398,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_InitiatorBoundPortRangeLower(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InitiatorBoundPortRangeLower"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InitiatorBoundPortRangeLower"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitiatorBoundPortRangeLower());
         }
         catch (...)
@@ -1417,14 +1417,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_InitiatorBoundPortRangeUpper(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InitiatorBoundPortRangeUpper"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InitiatorBoundPortRangeUpper"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InitiatorBoundPortRangeUpper());
         }
         catch (...)
@@ -1436,14 +1436,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_Name(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1455,14 +1455,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_SocketKind(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"SocketKind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"SocketKind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SocketKind());
         }
         catch (...)
@@ -1474,14 +1474,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_get_Templates(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"Templates"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"Templates"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate::Templates());
         }
         catch (...)
@@ -1493,14 +1493,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_add_InboundEndpointPairCreated(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InboundEndpointPairCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InboundEndpointPairCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate, winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>>(arg);
 
             return py::convert(self->obj.InboundEndpointPairCreated(param0));
@@ -1514,14 +1514,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveEndpointPairTemplate_remove_InboundEndpointPairCreated(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InboundEndpointPairCreated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"InboundEndpointPairCreated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.InboundEndpointPairCreated(param0);
@@ -1643,14 +1643,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveInboundEndpointPairCreatedEventArgs_get_EndpointPair(py::wrapper::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs", L"EndpointPair"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs", L"EndpointPair"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndpointPair());
         }
         catch (...)
@@ -1758,14 +1758,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ClearPrivatePayload", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ClearPrivatePayload", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::ClearPrivatePayload();
                 Py_RETURN_NONE;
             }
@@ -1788,14 +1788,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResult", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResult", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>(args, 1);
 
@@ -1820,14 +1820,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResultsForDevice", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResultsForDevice", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
                 return py::convert(self->obj.GetMetricResultsForDevice(param0));
@@ -1851,14 +1851,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResultsForMetric", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetMetricResultsForMetric", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetric>(args, 0);
 
                 return py::convert(self->obj.GetMetricResultsForMetric(param0));
@@ -1882,14 +1882,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetPrivatePayloadResult", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"GetPrivatePayloadResult", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
 
                 return py::convert(self->obj.GetPrivatePayloadResult(param0));
@@ -1913,14 +1913,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MeasureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MeasureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.MeasureAsync());
             }
             catch (...)
@@ -1942,14 +1942,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishPrivatePayloadBytes", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishPrivatePayloadBytes", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishPrivatePayloadBytes(param0);
@@ -1970,14 +1970,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_TimeoutInMilliseconds(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"TimeoutInMilliseconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"TimeoutInMilliseconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimeoutInMilliseconds());
         }
         catch (...)
@@ -1989,12 +1989,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_TimeoutInMilliseconds(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"TimeoutInMilliseconds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2003,6 +1997,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"TimeoutInMilliseconds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.TimeoutInMilliseconds(param0);
@@ -2017,14 +2017,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_ShouldRequestPrivatePayloads(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ShouldRequestPrivatePayloads"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ShouldRequestPrivatePayloads"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ShouldRequestPrivatePayloads());
         }
         catch (...)
@@ -2036,12 +2036,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_ShouldRequestPrivatePayloads(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ShouldRequestPrivatePayloads"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2050,6 +2044,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"ShouldRequestPrivatePayloads"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ShouldRequestPrivatePayloads(param0);
@@ -2064,14 +2064,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_NumberOfProbesToAttempt(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfProbesToAttempt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfProbesToAttempt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfProbesToAttempt());
         }
         catch (...)
@@ -2083,12 +2083,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_NumberOfProbesToAttempt(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfProbesToAttempt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2097,6 +2091,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfProbesToAttempt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.NumberOfProbesToAttempt(param0);
@@ -2111,14 +2111,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_DeviceAddresses(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"DeviceAddresses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"DeviceAddresses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAddresses());
         }
         catch (...)
@@ -2130,14 +2130,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_MetricResults(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MetricResults"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MetricResults"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MetricResults());
         }
         catch (...)
@@ -2149,14 +2149,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_Metrics(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"Metrics"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"Metrics"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metrics());
         }
         catch (...)
@@ -2168,14 +2168,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_NumberOfResultsPending(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfResultsPending"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"NumberOfResultsPending"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberOfResultsPending());
         }
         catch (...)
@@ -2187,14 +2187,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_PrivatePayloadResults(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PrivatePayloadResults"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PrivatePayloadResults"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrivatePayloadResults());
         }
         catch (...)
@@ -2206,14 +2206,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_PublishedPrivatePayload(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishedPrivatePayload"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishedPrivatePayload"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload());
         }
         catch (...)
@@ -2225,12 +2225,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_PublishedPrivatePayload(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishedPrivatePayload"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2239,6 +2233,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"PublishedPrivatePayload"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::PublishedPrivatePayload(param0);
@@ -2253,14 +2253,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_MaxSimultaneousProbeConnections(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxSimultaneousProbeConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxSimultaneousProbeConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections());
         }
         catch (...)
@@ -2272,12 +2272,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_MaxSimultaneousProbeConnections(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxSimultaneousProbeConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2286,6 +2280,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxSimultaneousProbeConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxSimultaneousProbeConnections(param0);
@@ -2300,14 +2300,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_IsSystemOutboundBandwidthConstrained(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemOutboundBandwidthConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemOutboundBandwidthConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained());
         }
         catch (...)
@@ -2319,12 +2319,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_IsSystemOutboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemOutboundBandwidthConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2333,6 +2327,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemOutboundBandwidthConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemOutboundBandwidthConstrained(param0);
@@ -2347,14 +2347,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_IsSystemInboundBandwidthConstrained(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemInboundBandwidthConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemInboundBandwidthConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained());
         }
         catch (...)
@@ -2366,12 +2366,6 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static int XboxLiveQualityOfServiceMeasurement_put_IsSystemInboundBandwidthConstrained(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemInboundBandwidthConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2380,6 +2374,12 @@ namespace py::cpp::Windows::Networking::XboxLive
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"IsSystemInboundBandwidthConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::IsSystemInboundBandwidthConstrained(param0);
@@ -2394,14 +2394,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMeasurement_get_MaxPrivatePayloadSize(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxPrivatePayloadSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement", L"MaxPrivatePayloadSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement::MaxPrivatePayloadSize());
         }
         catch (...)
@@ -2527,14 +2527,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMetricResult_get_DeviceAddress(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"DeviceAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"DeviceAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAddress());
         }
         catch (...)
@@ -2546,14 +2546,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMetricResult_get_Metric(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Metric"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Metric"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metric());
         }
         catch (...)
@@ -2565,14 +2565,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMetricResult_get_Status(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2584,14 +2584,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServiceMetricResult_get_Value(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServiceMetricResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -2676,14 +2676,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServicePrivatePayloadResult_get_DeviceAddress(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"DeviceAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"DeviceAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAddress());
         }
         catch (...)
@@ -2695,14 +2695,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServicePrivatePayloadResult_get_Status(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -2714,14 +2714,14 @@ namespace py::cpp::Windows::Networking::XboxLive
 
     static PyObject* XboxLiveQualityOfServicePrivatePayloadResult_get_Value(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.XboxLive.XboxLiveQualityOfServicePrivatePayloadResult", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)

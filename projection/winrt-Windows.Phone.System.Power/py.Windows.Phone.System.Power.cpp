@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyObject* PowerManager_get_PowerSavingMode(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingMode());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyObject* PowerManager_get_PowerSavingModeEnabled(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeEnabled());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyObject* PowerManager_add_PowerSavingModeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0));
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyObject* PowerManager_remove_PowerSavingModeChanged(PyObject* /*unused*/, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Phone.System.Power.PowerManager", L"PowerSavingModeChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             winrt::Windows::Phone::System::Power::PowerManager::PowerSavingModeChanged(param0);

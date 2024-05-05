@@ -529,14 +529,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Cancel();
                     Py_RETURN_NONE;
                 }
@@ -558,14 +558,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Close();
                     Py_RETURN_NONE;
                 }
@@ -587,14 +587,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncActionWithProgress`1", L"GetResults", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncActionWithProgress`1", L"GetResults", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.GetResults();
                     Py_RETURN_NONE;
                 }
@@ -727,14 +727,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Cancel();
                     Py_RETURN_NONE;
                 }
@@ -756,14 +756,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Close();
                     Py_RETURN_NONE;
                 }
@@ -785,14 +785,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperationWithProgress`2", L"GetResults", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperationWithProgress`2", L"GetResults", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetResults());
                 }
                 catch (...)
@@ -924,14 +924,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Cancel", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Cancel();
                     Py_RETURN_NONE;
                 }
@@ -953,14 +953,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncInfo", L"Close", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     _obj.Close();
                     Py_RETURN_NONE;
                 }
@@ -982,14 +982,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperation`1", L"GetResults", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IAsyncOperation`1", L"GetResults", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetResults());
                 }
                 catch (...)
@@ -1088,14 +1088,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetBoolean());
                 }
                 catch (...)
@@ -1116,14 +1116,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<bool> param0 { };
 
                     _obj.GetBooleanArray(param0);
@@ -1153,14 +1153,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetChar16());
                 }
                 catch (...)
@@ -1181,14 +1181,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<char16_t> param0 { };
 
                     _obj.GetChar16Array(param0);
@@ -1218,14 +1218,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetDateTime());
                 }
                 catch (...)
@@ -1246,14 +1246,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::DateTime> param0 { };
 
                     _obj.GetDateTimeArray(param0);
@@ -1283,14 +1283,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetDouble());
                 }
                 catch (...)
@@ -1311,14 +1311,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<double> param0 { };
 
                     _obj.GetDoubleArray(param0);
@@ -1348,14 +1348,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetGuid());
                 }
                 catch (...)
@@ -1376,14 +1376,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::guid> param0 { };
 
                     _obj.GetGuidArray(param0);
@@ -1413,14 +1413,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::IInspectable> param0 { };
 
                     _obj.GetInspectableArray(param0);
@@ -1450,14 +1450,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt16());
                 }
                 catch (...)
@@ -1478,14 +1478,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int16_t> param0 { };
 
                     _obj.GetInt16Array(param0);
@@ -1515,14 +1515,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt32());
                 }
                 catch (...)
@@ -1543,14 +1543,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int32_t> param0 { };
 
                     _obj.GetInt32Array(param0);
@@ -1580,14 +1580,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt64());
                 }
                 catch (...)
@@ -1608,14 +1608,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int64_t> param0 { };
 
                     _obj.GetInt64Array(param0);
@@ -1645,14 +1645,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetPoint());
                 }
                 catch (...)
@@ -1673,14 +1673,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Point> param0 { };
 
                     _obj.GetPointArray(param0);
@@ -1710,14 +1710,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetRect());
                 }
                 catch (...)
@@ -1738,14 +1738,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Rect> param0 { };
 
                     _obj.GetRectArray(param0);
@@ -1775,14 +1775,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetSingle());
                 }
                 catch (...)
@@ -1803,14 +1803,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<float> param0 { };
 
                     _obj.GetSingleArray(param0);
@@ -1840,14 +1840,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetSize());
                 }
                 catch (...)
@@ -1868,14 +1868,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Size> param0 { };
 
                     _obj.GetSizeArray(param0);
@@ -1905,14 +1905,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetString());
                 }
                 catch (...)
@@ -1933,14 +1933,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::hstring> param0 { };
 
                     _obj.GetStringArray(param0);
@@ -1970,14 +1970,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetTimeSpan());
                 }
                 catch (...)
@@ -1998,14 +1998,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::TimeSpan> param0 { };
 
                     _obj.GetTimeSpanArray(param0);
@@ -2035,14 +2035,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt16());
                 }
                 catch (...)
@@ -2063,14 +2063,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint16_t> param0 { };
 
                     _obj.GetUInt16Array(param0);
@@ -2100,14 +2100,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt32());
                 }
                 catch (...)
@@ -2128,14 +2128,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint32_t> param0 { };
 
                     _obj.GetUInt32Array(param0);
@@ -2165,14 +2165,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt64());
                 }
                 catch (...)
@@ -2193,14 +2193,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint64_t> param0 { };
 
                     _obj.GetUInt64Array(param0);
@@ -2230,14 +2230,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt8());
                 }
                 catch (...)
@@ -2258,14 +2258,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint8_t> param0 { };
 
                     _obj.GetUInt8Array(param0);
@@ -2339,14 +2339,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBoolean", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetBoolean());
                 }
                 catch (...)
@@ -2367,14 +2367,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetBooleanArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<bool> param0 { };
 
                     _obj.GetBooleanArray(param0);
@@ -2404,14 +2404,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetChar16());
                 }
                 catch (...)
@@ -2432,14 +2432,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetChar16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<char16_t> param0 { };
 
                     _obj.GetChar16Array(param0);
@@ -2469,14 +2469,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTime", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetDateTime());
                 }
                 catch (...)
@@ -2497,14 +2497,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDateTimeArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::DateTime> param0 { };
 
                     _obj.GetDateTimeArray(param0);
@@ -2534,14 +2534,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDouble", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetDouble());
                 }
                 catch (...)
@@ -2562,14 +2562,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetDoubleArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<double> param0 { };
 
                     _obj.GetDoubleArray(param0);
@@ -2599,14 +2599,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuid", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetGuid());
                 }
                 catch (...)
@@ -2627,14 +2627,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetGuidArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::guid> param0 { };
 
                     _obj.GetGuidArray(param0);
@@ -2664,14 +2664,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInspectableArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::IInspectable> param0 { };
 
                     _obj.GetInspectableArray(param0);
@@ -2701,14 +2701,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt16());
                 }
                 catch (...)
@@ -2729,14 +2729,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int16_t> param0 { };
 
                     _obj.GetInt16Array(param0);
@@ -2766,14 +2766,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt32());
                 }
                 catch (...)
@@ -2794,14 +2794,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt32Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int32_t> param0 { };
 
                     _obj.GetInt32Array(param0);
@@ -2831,14 +2831,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetInt64());
                 }
                 catch (...)
@@ -2859,14 +2859,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetInt64Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<int64_t> param0 { };
 
                     _obj.GetInt64Array(param0);
@@ -2896,14 +2896,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPoint", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetPoint());
                 }
                 catch (...)
@@ -2924,14 +2924,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetPointArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Point> param0 { };
 
                     _obj.GetPointArray(param0);
@@ -2961,14 +2961,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRect", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetRect());
                 }
                 catch (...)
@@ -2989,14 +2989,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetRectArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Rect> param0 { };
 
                     _obj.GetRectArray(param0);
@@ -3026,14 +3026,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingle", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetSingle());
                 }
                 catch (...)
@@ -3054,14 +3054,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSingleArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<float> param0 { };
 
                     _obj.GetSingleArray(param0);
@@ -3091,14 +3091,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSize", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetSize());
                 }
                 catch (...)
@@ -3119,14 +3119,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetSizeArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::Size> param0 { };
 
                     _obj.GetSizeArray(param0);
@@ -3156,14 +3156,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetString", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetString());
                 }
                 catch (...)
@@ -3184,14 +3184,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetStringArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::hstring> param0 { };
 
                     _obj.GetStringArray(param0);
@@ -3221,14 +3221,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpan", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetTimeSpan());
                 }
                 catch (...)
@@ -3249,14 +3249,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetTimeSpanArray", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<winrt::Windows::Foundation::TimeSpan> param0 { };
 
                     _obj.GetTimeSpanArray(param0);
@@ -3286,14 +3286,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt16());
                 }
                 catch (...)
@@ -3314,14 +3314,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt16Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint16_t> param0 { };
 
                     _obj.GetUInt16Array(param0);
@@ -3351,14 +3351,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt32());
                 }
                 catch (...)
@@ -3379,14 +3379,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt32Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint32_t> param0 { };
 
                     _obj.GetUInt32Array(param0);
@@ -3416,14 +3416,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt64());
                 }
                 catch (...)
@@ -3444,14 +3444,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt64Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint64_t> param0 { };
 
                     _obj.GetUInt64Array(param0);
@@ -3481,14 +3481,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     return py::convert(_obj.GetUInt8());
                 }
                 catch (...)
@@ -3509,14 +3509,14 @@ namespace py::impl::Windows::Foundation
 
             if (arg_count == 0)
             {
-                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
                 try
                 {
+                    if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IPropertyValue", L"GetUInt8Array", 0))
+                    {
+                        py::set_arg_count_version_error(0);
+                        return nullptr;
+                    }
+
                     winrt::com_array<uint8_t> param0 { };
 
                     _obj.GetUInt8Array(param0);

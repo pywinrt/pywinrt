@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -49,14 +49,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -144,14 +144,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -176,14 +176,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -208,14 +208,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -238,14 +238,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -268,14 +268,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_Device(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -313,14 +313,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_Emitter(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -351,14 +351,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -370,12 +370,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -384,6 +378,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -398,14 +398,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -417,12 +417,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -431,6 +425,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -445,14 +445,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceInputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceInputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -592,14 +592,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -622,14 +622,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -654,14 +654,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -686,14 +686,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -716,14 +716,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -746,14 +746,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -772,14 +772,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_Device(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -791,14 +791,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -810,12 +810,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -824,6 +818,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -838,14 +838,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -857,12 +857,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -871,6 +865,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -885,14 +885,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -904,14 +904,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -923,14 +923,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioDeviceOutputNode_get_Listener(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Listener());
         }
         catch (...)
@@ -942,12 +942,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioDeviceOutputNode_put_Listener(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -956,6 +950,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioDeviceOutputNode", L"Listener"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
             self->obj.Listener(param0);
@@ -1076,14 +1076,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -1097,14 +1097,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -1130,14 +1130,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1160,14 +1160,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -1192,14 +1192,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -1224,14 +1224,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -1256,14 +1256,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.Seek(param0);
@@ -1318,14 +1318,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -1348,14 +1348,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -1374,14 +1374,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackSpeedFactor());
         }
         catch (...)
@@ -1393,12 +1393,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1407,6 +1401,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.PlaybackSpeedFactor(param0);
@@ -1421,14 +1421,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_LoopCount(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LoopCount());
         }
         catch (...)
@@ -1440,12 +1440,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_LoopCount(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1454,6 +1448,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"LoopCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.LoopCount(param0);
@@ -1468,14 +1468,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_EndTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTime());
         }
         catch (...)
@@ -1487,12 +1487,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_EndTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1501,6 +1495,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.EndTime(param0);
@@ -1515,14 +1515,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_StartTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -1534,12 +1534,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_StartTime(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1548,6 +1542,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.StartTime(param0);
@@ -1562,14 +1562,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_Position(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -1581,14 +1581,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_SourceFile(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"SourceFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"SourceFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceFile());
         }
         catch (...)
@@ -1600,14 +1600,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_Duration(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -1619,14 +1619,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -1638,14 +1638,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_Emitter(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -1657,14 +1657,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -1676,12 +1676,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1690,6 +1684,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -1704,14 +1704,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -1723,12 +1723,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1737,6 +1731,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -1751,14 +1751,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -1770,14 +1770,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileInputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -1789,14 +1789,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_add_FileCompleted(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFileInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.FileCompleted(param0));
@@ -1810,14 +1810,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileInputNode_remove_FileCompleted(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFileInputNode", L"FileCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.FileCompleted(param0);
@@ -1950,14 +1950,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1980,14 +1980,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -2012,14 +2012,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -2044,14 +2044,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FinalizeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FinalizeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FinalizeAsync());
             }
             catch (...)
@@ -2073,14 +2073,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -2103,14 +2103,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2133,14 +2133,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2159,14 +2159,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_File(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -2178,14 +2178,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_FileEncodingProfile(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FileEncodingProfile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"FileEncodingProfile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileEncodingProfile());
         }
         catch (...)
@@ -2197,14 +2197,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -2216,12 +2216,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2230,6 +2224,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -2244,14 +2244,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -2263,12 +2263,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFileOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2277,6 +2271,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -2291,14 +2291,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -2310,14 +2310,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFileOutputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFileOutputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -2432,14 +2432,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameCompletedEventArgs_get_Frame(py::wrapper::Windows::Media::Audio::AudioFrameCompletedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameCompletedEventArgs", L"Frame"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameCompletedEventArgs", L"Frame"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Frame());
         }
         catch (...)
@@ -2525,14 +2525,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddFrame", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddFrame", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::AudioFrame>(args, 0);
 
                 self->obj.AddFrame(param0);
@@ -2557,14 +2557,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -2578,14 +2578,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -2611,14 +2611,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -2641,14 +2641,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -2673,14 +2673,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DiscardQueuedFrames", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"DiscardQueuedFrames", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.DiscardQueuedFrames();
                 Py_RETURN_NONE;
             }
@@ -2703,14 +2703,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -2735,14 +2735,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -2767,14 +2767,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -2797,14 +2797,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -2827,14 +2827,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -2853,14 +2853,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackSpeedFactor());
         }
         catch (...)
@@ -2872,12 +2872,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2886,6 +2880,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.PlaybackSpeedFactor(param0);
@@ -2900,14 +2900,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_QueuedSampleCount(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QueuedSampleCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QueuedSampleCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QueuedSampleCount());
         }
         catch (...)
@@ -2919,14 +2919,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -2938,14 +2938,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_Emitter(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -2957,14 +2957,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -2976,12 +2976,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2990,6 +2984,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -3004,14 +3004,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -3023,12 +3023,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3037,6 +3031,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -3051,14 +3051,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -3070,14 +3070,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -3089,14 +3089,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_add_AudioFrameCompleted(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>>(arg);
 
             return py::convert(self->obj.AudioFrameCompleted(param0));
@@ -3110,14 +3110,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_remove_AudioFrameCompleted(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"AudioFrameCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.AudioFrameCompleted(param0);
@@ -3132,14 +3132,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_add_QuantumStarted(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioFrameInputNode, winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>>(arg);
 
             return py::convert(self->obj.QuantumStarted(param0));
@@ -3153,14 +3153,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameInputNode_remove_QuantumStarted(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioFrameInputNode", L"QuantumStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.QuantumStarted(param0);
@@ -3291,14 +3291,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3321,14 +3321,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -3353,14 +3353,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -3385,14 +3385,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"GetFrame", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"GetFrame", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetFrame());
             }
             catch (...)
@@ -3414,14 +3414,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -3444,14 +3444,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -3474,14 +3474,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -3500,14 +3500,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -3519,12 +3519,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameOutputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3533,6 +3527,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -3547,14 +3547,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -3566,12 +3566,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioFrameOutputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3580,6 +3574,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -3594,14 +3594,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -3613,14 +3613,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioFrameOutputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioFrameOutputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -3737,14 +3737,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3767,14 +3767,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioGraphSettings>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Audio::AudioGraph::CreateAsync(param0));
@@ -3798,14 +3798,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateBatchUpdater", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateBatchUpdater", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateBatchUpdater());
             }
             catch (...)
@@ -3827,14 +3827,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
 
                 return py::convert(self->obj.CreateDeviceInputNodeAsync(param0));
@@ -3847,14 +3847,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
 
@@ -3868,14 +3868,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
@@ -3890,14 +3890,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceInputNodeAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 2);
@@ -3924,14 +3924,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceOutputNodeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateDeviceOutputNodeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateDeviceOutputNodeAsync());
             }
             catch (...)
@@ -3953,14 +3953,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.CreateFileInputNodeAsync(param0));
@@ -3973,14 +3973,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileInputNodeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
@@ -4005,14 +4005,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 return py::convert(self->obj.CreateFileOutputNodeAsync(param0));
@@ -4025,14 +4025,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFileOutputNodeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 1);
 
@@ -4057,14 +4057,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateFrameInputNode());
             }
             catch (...)
@@ -4075,14 +4075,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.CreateFrameInputNode(param0));
@@ -4095,14 +4095,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameInputNode", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
@@ -4127,14 +4127,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateFrameOutputNode());
             }
             catch (...)
@@ -4145,14 +4145,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateFrameOutputNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.CreateFrameOutputNode(param0));
@@ -4176,14 +4176,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
 
                 return py::convert(self->obj.CreateMediaSourceAudioInputNodeAsync(param0));
@@ -4196,14 +4196,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateMediaSourceAudioInputNodeAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::MediaSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
@@ -4228,14 +4228,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateSubmixNode());
             }
             catch (...)
@@ -4246,14 +4246,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
 
                 return py::convert(self->obj.CreateSubmixNode(param0));
@@ -4266,14 +4266,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"CreateSubmixNode", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeEmitter>(args, 1);
 
@@ -4298,14 +4298,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"ResetAllNodes", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"ResetAllNodes", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ResetAllNodes();
                 Py_RETURN_NONE;
             }
@@ -4328,14 +4328,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -4358,14 +4358,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraph", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -4384,14 +4384,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_CompletedQuantumCount(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"CompletedQuantumCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"CompletedQuantumCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletedQuantumCount());
         }
         catch (...)
@@ -4403,14 +4403,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -4422,14 +4422,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_LatencyInSamples(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"LatencyInSamples"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"LatencyInSamples"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LatencyInSamples());
         }
         catch (...)
@@ -4441,14 +4441,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_PrimaryRenderDevice(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"PrimaryRenderDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"PrimaryRenderDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryRenderDevice());
         }
         catch (...)
@@ -4460,14 +4460,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_RenderDeviceAudioProcessing(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"RenderDeviceAudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"RenderDeviceAudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RenderDeviceAudioProcessing());
         }
         catch (...)
@@ -4479,14 +4479,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_get_SamplesPerQuantum(py::wrapper::Windows::Media::Audio::AudioGraph* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"SamplesPerQuantum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraph", L"SamplesPerQuantum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SamplesPerQuantum());
         }
         catch (...)
@@ -4498,14 +4498,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_add_QuantumProcessed(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.QuantumProcessed(param0));
@@ -4519,14 +4519,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_remove_QuantumProcessed(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumProcessed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.QuantumProcessed(param0);
@@ -4541,14 +4541,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_add_QuantumStarted(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.QuantumStarted(param0));
@@ -4562,14 +4562,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_remove_QuantumStarted(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"QuantumStarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.QuantumStarted(param0);
@@ -4584,14 +4584,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_add_UnrecoverableErrorOccurred(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioGraph, winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>>(arg);
 
             return py::convert(self->obj.UnrecoverableErrorOccurred(param0));
@@ -4605,14 +4605,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraph_remove_UnrecoverableErrorOccurred(py::wrapper::Windows::Media::Audio::AudioGraph* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioGraph", L"UnrecoverableErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.UnrecoverableErrorOccurred(param0);
@@ -4772,14 +4772,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraphBatchUpdater", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioGraphBatchUpdater", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4889,14 +4889,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphConnection_get_Gain(py::wrapper::Windows::Media::Audio::AudioGraphConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Gain());
         }
         catch (...)
@@ -4908,12 +4908,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphConnection_put_Gain(py::wrapper::Windows::Media::Audio::AudioGraphConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4922,6 +4916,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Gain(param0);
@@ -4936,14 +4936,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphConnection_get_Destination(py::wrapper::Windows::Media::Audio::AudioGraphConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Destination"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphConnection", L"Destination"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Destination());
         }
         catch (...)
@@ -5050,14 +5050,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_QuantumSizeSelectionMode(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QuantumSizeSelectionMode());
         }
         catch (...)
@@ -5069,12 +5069,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_QuantumSizeSelectionMode(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5083,6 +5077,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"QuantumSizeSelectionMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::QuantumSizeSelectionMode>(arg);
 
             self->obj.QuantumSizeSelectionMode(param0);
@@ -5097,14 +5097,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_PrimaryRenderDevice(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PrimaryRenderDevice());
         }
         catch (...)
@@ -5116,12 +5116,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_PrimaryRenderDevice(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5130,6 +5124,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"PrimaryRenderDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(arg);
 
             self->obj.PrimaryRenderDevice(param0);
@@ -5144,14 +5144,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -5163,12 +5163,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5177,6 +5171,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(arg);
 
             self->obj.EncodingProperties(param0);
@@ -5191,14 +5191,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_DesiredSamplesPerQuantum(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredSamplesPerQuantum());
         }
         catch (...)
@@ -5210,12 +5210,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_DesiredSamplesPerQuantum(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5224,6 +5218,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredSamplesPerQuantum"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.DesiredSamplesPerQuantum(param0);
@@ -5238,14 +5238,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_DesiredRenderDeviceAudioProcessing(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DesiredRenderDeviceAudioProcessing());
         }
         catch (...)
@@ -5257,12 +5257,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_DesiredRenderDeviceAudioProcessing(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5271,6 +5265,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"DesiredRenderDeviceAudioProcessing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::AudioProcessing>(arg);
 
             self->obj.DesiredRenderDeviceAudioProcessing(param0);
@@ -5285,14 +5285,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_AudioRenderCategory(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioRenderCategory());
         }
         catch (...)
@@ -5304,12 +5304,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_AudioRenderCategory(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5318,6 +5312,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"AudioRenderCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(arg);
 
             self->obj.AudioRenderCategory(param0);
@@ -5332,14 +5332,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphSettings_get_MaxPlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxPlaybackSpeedFactor());
         }
         catch (...)
@@ -5351,12 +5351,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioGraphSettings_put_MaxPlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5365,6 +5359,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphSettings", L"MaxPlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.MaxPlaybackSpeedFactor(param0);
@@ -5455,14 +5455,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioGraphUnrecoverableErrorOccurredEventArgs_get_Error(py::wrapper::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -5583,14 +5583,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_Position(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -5602,12 +5602,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Position(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5616,6 +5610,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Position(param0);
@@ -5630,14 +5630,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_Gain(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Gain());
         }
         catch (...)
@@ -5649,12 +5649,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Gain(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5663,6 +5657,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Gain(param0);
@@ -5677,14 +5677,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DopplerVelocity());
         }
         catch (...)
@@ -5696,12 +5696,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5710,6 +5704,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.DopplerVelocity(param0);
@@ -5724,14 +5724,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_DopplerScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DopplerScale());
         }
         catch (...)
@@ -5743,12 +5743,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DopplerScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5757,6 +5751,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DopplerScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DopplerScale(param0);
@@ -5771,14 +5771,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_DistanceScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DistanceScale());
         }
         catch (...)
@@ -5790,12 +5790,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_DistanceScale(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5804,6 +5798,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DistanceScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DistanceScale(param0);
@@ -5818,14 +5818,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_Direction(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Direction());
         }
         catch (...)
@@ -5837,12 +5837,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_Direction(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5851,6 +5845,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Direction"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Direction(param0);
@@ -5865,14 +5865,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_DecayModel(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DecayModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"DecayModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecayModel());
         }
         catch (...)
@@ -5884,14 +5884,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_IsDopplerDisabled(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"IsDopplerDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"IsDopplerDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDopplerDisabled());
         }
         catch (...)
@@ -5903,14 +5903,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_Shape(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Shape"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"Shape"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Shape());
         }
         catch (...)
@@ -5922,14 +5922,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitter_get_SpatialAudioModel(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpatialAudioModel());
         }
         catch (...)
@@ -5941,12 +5941,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeEmitter_put_SpatialAudioModel(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5955,6 +5949,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitter", L"SpatialAudioModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::SpatialAudioModel>(arg);
 
             self->obj.SpatialAudioModel(param0);
@@ -6048,14 +6048,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterConeProperties_get_InnerAngle(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"InnerAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"InnerAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InnerAngle());
         }
         catch (...)
@@ -6067,14 +6067,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterConeProperties_get_OuterAngle(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterAngle());
         }
         catch (...)
@@ -6086,14 +6086,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterConeProperties_get_OuterAngleGain(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngleGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterConeProperties", L"OuterAngleGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OuterAngleGain());
         }
         catch (...)
@@ -6181,14 +6181,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"CreateCustom", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"CreateCustom", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -6213,14 +6213,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"CreateNatural", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"CreateNatural", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -6243,14 +6243,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_get_Kind(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6262,14 +6262,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_get_MaxGain(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MaxGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MaxGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxGain());
         }
         catch (...)
@@ -6281,14 +6281,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_get_MinGain(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MinGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"MinGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinGain());
         }
         catch (...)
@@ -6300,14 +6300,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterDecayModel_get_NaturalProperties(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"NaturalProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterDecayModel", L"NaturalProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NaturalProperties());
         }
         catch (...)
@@ -6419,14 +6419,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterNaturalDecayModelProperties_get_CutoffDistance(py::wrapper::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"CutoffDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"CutoffDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CutoffDistance());
         }
         catch (...)
@@ -6438,14 +6438,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterNaturalDecayModelProperties_get_UnityGainDistance(py::wrapper::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"UnityGainDistance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties", L"UnityGainDistance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UnityGainDistance());
         }
         catch (...)
@@ -6532,14 +6532,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"CreateCone", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"CreateCone", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
                 auto param2 = py::convert_to<double>(args, 2);
@@ -6565,14 +6565,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"CreateOmnidirectional", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"CreateOmnidirectional", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Audio::AudioNodeEmitterShape::CreateOmnidirectional());
             }
             catch (...)
@@ -6590,14 +6590,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterShape_get_ConeProperties(py::wrapper::Windows::Media::Audio::AudioNodeEmitterShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"ConeProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"ConeProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConeProperties());
         }
         catch (...)
@@ -6609,14 +6609,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeEmitterShape_get_Kind(py::wrapper::Windows::Media::Audio::AudioNodeEmitterShape* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"Kind"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeEmitterShape", L"Kind"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Kind());
         }
         catch (...)
@@ -6748,14 +6748,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeListener_get_SpeedOfSound(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeedOfSound());
         }
         catch (...)
@@ -6767,12 +6767,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_SpeedOfSound(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6781,6 +6775,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"SpeedOfSound"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SpeedOfSound(param0);
@@ -6795,14 +6795,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeListener_get_Position(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -6814,12 +6814,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_Position(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6828,6 +6822,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.Position(param0);
@@ -6842,14 +6842,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeListener_get_Orientation(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Orientation());
         }
         catch (...)
@@ -6861,12 +6861,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_Orientation(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6875,6 +6869,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
             self->obj.Orientation(param0);
@@ -6889,14 +6889,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioNodeListener_get_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DopplerVelocity());
         }
         catch (...)
@@ -6908,12 +6908,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioNodeListener_put_DopplerVelocity(py::wrapper::Windows::Media::Audio::AudioNodeListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -6922,6 +6916,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioNodeListener", L"DopplerVelocity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
             self->obj.DopplerVelocity(param0);
@@ -7013,14 +7013,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -7043,14 +7043,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Audio::AudioPlaybackConnection::GetDeviceSelector());
             }
             catch (...)
@@ -7072,14 +7072,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Open", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Open", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.Open());
             }
             catch (...)
@@ -7101,14 +7101,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"OpenAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"OpenAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.OpenAsync());
             }
             catch (...)
@@ -7130,14 +7130,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -7160,14 +7160,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -7189,14 +7189,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"TryCreateFromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"TryCreateFromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Audio::AudioPlaybackConnection::TryCreateFromId(param0));
@@ -7216,14 +7216,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_get_DeviceId(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -7235,14 +7235,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_get_State(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -7254,14 +7254,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_add_StateChanged(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioPlaybackConnection, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -7275,14 +7275,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnection_remove_StateChanged(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioPlaybackConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -7423,14 +7423,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnectionOpenResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::AudioPlaybackConnectionOpenResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -7442,14 +7442,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioPlaybackConnectionOpenResult_get_Status(py::wrapper::Windows::Media::Audio::AudioPlaybackConnectionOpenResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioPlaybackConnectionOpenResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -7536,14 +7536,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring());
             }
             catch (...)
@@ -7554,14 +7554,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForCaptureMonitoring(param0));
@@ -7574,14 +7574,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoring", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
 
@@ -7606,14 +7606,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoringWithCategoryAndDeviceId", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForCaptureMonitoringWithCategoryAndDeviceId", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Capture::MediaCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7638,14 +7638,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring());
             }
             catch (...)
@@ -7656,14 +7656,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Audio::AudioStateMonitor::CreateForRenderMonitoring(param0));
@@ -7676,14 +7676,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoring", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Media::Devices::AudioDeviceRole>(args, 1);
 
@@ -7708,14 +7708,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoringWithCategoryAndDeviceId", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioStateMonitor", L"CreateForRenderMonitoringWithCategoryAndDeviceId", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Render::AudioRenderCategory>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -7736,14 +7736,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_get_SoundLevel(py::wrapper::Windows::Media::Audio::AudioStateMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SoundLevel());
         }
         catch (...)
@@ -7755,14 +7755,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_add_SoundLevelChanged(py::wrapper::Windows::Media::Audio::AudioStateMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioStateMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SoundLevelChanged(param0));
@@ -7776,14 +7776,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioStateMonitor_remove_SoundLevelChanged(py::wrapper::Windows::Media::Audio::AudioStateMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioStateMonitor", L"SoundLevelChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SoundLevelChanged(param0);
@@ -7903,14 +7903,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -7924,14 +7924,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -7957,14 +7957,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -7987,14 +7987,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -8019,14 +8019,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -8051,14 +8051,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -8083,14 +8083,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -8113,14 +8113,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -8143,14 +8143,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -8169,14 +8169,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -8188,14 +8188,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_Emitter(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -8207,14 +8207,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -8226,12 +8226,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioSubmixNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8240,6 +8234,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -8254,14 +8254,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -8273,12 +8273,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int AudioSubmixNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -8287,6 +8281,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -8301,14 +8301,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -8320,14 +8320,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* AudioSubmixNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioSubmixNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -8443,14 +8443,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceInputNodeResult_get_DeviceInputNode(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"DeviceInputNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"DeviceInputNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInputNode());
         }
         catch (...)
@@ -8462,14 +8462,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceInputNodeResult_get_Status(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -8481,14 +8481,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceInputNodeResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceInputNodeResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -8572,14 +8572,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceOutputNodeResult_get_DeviceOutputNode(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"DeviceOutputNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"DeviceOutputNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceOutputNode());
         }
         catch (...)
@@ -8591,14 +8591,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceOutputNodeResult_get_Status(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -8610,14 +8610,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioDeviceOutputNodeResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioDeviceOutputNodeResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -8701,14 +8701,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileInputNodeResult_get_FileInputNode(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"FileInputNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"FileInputNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileInputNode());
         }
         catch (...)
@@ -8720,14 +8720,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileInputNodeResult_get_Status(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -8739,14 +8739,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileInputNodeResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileInputNodeResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -8830,14 +8830,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileOutputNodeResult_get_FileOutputNode(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"FileOutputNode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"FileOutputNode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileOutputNode());
         }
         catch (...)
@@ -8849,14 +8849,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileOutputNodeResult_get_Status(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -8868,14 +8868,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioFileOutputNodeResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioFileOutputNodeResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -8959,14 +8959,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioGraphResult_get_Graph(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Graph"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Graph"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Graph());
         }
         catch (...)
@@ -8978,14 +8978,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioGraphResult_get_Status(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -8997,14 +8997,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateAudioGraphResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateAudioGraphResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -9088,14 +9088,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateMediaSourceAudioInputNodeResult_get_Node(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Node"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Node"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Node());
         }
         catch (...)
@@ -9107,14 +9107,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateMediaSourceAudioInputNodeResult_get_Status(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -9126,14 +9126,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* CreateMediaSourceAudioInputNodeResult_get_ExtendedError(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.CreateMediaSourceAudioInputNodeResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -9241,14 +9241,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EchoEffectDefinition_get_WetDryMix(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WetDryMix());
         }
         catch (...)
@@ -9260,12 +9260,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_WetDryMix(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9274,6 +9268,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"WetDryMix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.WetDryMix(param0);
@@ -9288,14 +9288,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EchoEffectDefinition_get_Feedback(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Feedback());
         }
         catch (...)
@@ -9307,12 +9307,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_Feedback(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9321,6 +9315,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Feedback"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Feedback(param0);
@@ -9335,14 +9335,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EchoEffectDefinition_get_Delay(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Delay());
         }
         catch (...)
@@ -9354,12 +9354,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EchoEffectDefinition_put_Delay(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9368,6 +9362,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Delay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Delay(param0);
@@ -9382,14 +9382,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EchoEffectDefinition_get_ActivatableClassId(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"ActivatableClassId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"ActivatableClassId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatableClassId());
         }
         catch (...)
@@ -9401,14 +9401,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EchoEffectDefinition_get_Properties(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EchoEffectDefinition", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -9494,14 +9494,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerBand_get_Gain(py::wrapper::Windows::Media::Audio::EqualizerBand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Gain());
         }
         catch (...)
@@ -9513,12 +9513,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_Gain(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9527,6 +9521,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Gain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Gain(param0);
@@ -9541,14 +9541,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerBand_get_FrequencyCenter(py::wrapper::Windows::Media::Audio::EqualizerBand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrequencyCenter());
         }
         catch (...)
@@ -9560,12 +9560,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_FrequencyCenter(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9574,6 +9568,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"FrequencyCenter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.FrequencyCenter(param0);
@@ -9588,14 +9588,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerBand_get_Bandwidth(py::wrapper::Windows::Media::Audio::EqualizerBand* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bandwidth());
         }
         catch (...)
@@ -9607,12 +9607,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int EqualizerBand_put_Bandwidth(py::wrapper::Windows::Media::Audio::EqualizerBand* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -9621,6 +9615,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerBand", L"Bandwidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Bandwidth(param0);
@@ -9731,14 +9731,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerEffectDefinition_get_Bands(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Bands"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Bands"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bands());
         }
         catch (...)
@@ -9750,14 +9750,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerEffectDefinition_get_ActivatableClassId(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"ActivatableClassId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"ActivatableClassId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatableClassId());
         }
         catch (...)
@@ -9769,14 +9769,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* EqualizerEffectDefinition_get_Properties(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.EqualizerEffectDefinition", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -9860,14 +9860,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* FrameInputNodeQuantumStartedEventArgs_get_RequiredSamples(py::wrapper::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs", L"RequiredSamples"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs", L"RequiredSamples"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequiredSamples());
         }
         catch (...)
@@ -9973,14 +9973,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* LimiterEffectDefinition_get_Release(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Release());
         }
         catch (...)
@@ -9992,12 +9992,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int LimiterEffectDefinition_put_Release(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10006,6 +10000,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Release"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Release(param0);
@@ -10020,14 +10020,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* LimiterEffectDefinition_get_Loudness(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Loudness());
         }
         catch (...)
@@ -10039,12 +10039,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int LimiterEffectDefinition_put_Loudness(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10053,6 +10047,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Loudness"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.Loudness(param0);
@@ -10067,14 +10067,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* LimiterEffectDefinition_get_ActivatableClassId(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"ActivatableClassId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"ActivatableClassId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatableClassId());
         }
         catch (...)
@@ -10086,14 +10086,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* LimiterEffectDefinition_get_Properties(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.LimiterEffectDefinition", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -10182,14 +10182,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -10203,14 +10203,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -10236,14 +10236,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -10266,14 +10266,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -10298,14 +10298,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -10330,14 +10330,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -10362,14 +10362,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -10392,14 +10392,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
 
                 self->obj.Seek(param0);
@@ -10424,14 +10424,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -10454,14 +10454,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -10480,14 +10480,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -10499,14 +10499,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_Emitter(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -10518,14 +10518,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -10537,12 +10537,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10551,6 +10545,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -10565,14 +10565,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -10584,12 +10584,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10598,6 +10592,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -10612,14 +10612,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -10631,14 +10631,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -10650,14 +10650,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_StartTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StartTime());
         }
         catch (...)
@@ -10669,12 +10669,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_StartTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10683,6 +10677,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"StartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.StartTime(param0);
@@ -10697,14 +10697,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PlaybackSpeedFactor());
         }
         catch (...)
@@ -10716,12 +10716,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_PlaybackSpeedFactor(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10730,6 +10724,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"PlaybackSpeedFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.PlaybackSpeedFactor(param0);
@@ -10744,14 +10744,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_LoopCount(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LoopCount());
         }
         catch (...)
@@ -10763,12 +10763,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_LoopCount(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10777,6 +10771,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"LoopCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int32_t>>(arg);
 
             self->obj.LoopCount(param0);
@@ -10791,14 +10791,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_EndTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EndTime());
         }
         catch (...)
@@ -10810,12 +10810,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int MediaSourceAudioInputNode_put_EndTime(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -10824,6 +10818,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"EndTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.EndTime(param0);
@@ -10838,14 +10838,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_Duration(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -10857,14 +10857,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_MediaSource(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaSource());
         }
         catch (...)
@@ -10876,14 +10876,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_get_Position(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -10895,14 +10895,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_add_MediaSourceCompleted(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::MediaSourceAudioInputNode, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.MediaSourceCompleted(param0));
@@ -10916,14 +10916,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* MediaSourceAudioInputNode_remove_MediaSourceCompleted(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.MediaSourceAudioInputNode", L"MediaSourceCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.MediaSourceCompleted(param0);
@@ -11076,14 +11076,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_HighEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighEQGain());
         }
         catch (...)
@@ -11095,12 +11095,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_HighEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11109,6 +11103,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.HighEQGain(param0);
@@ -11123,14 +11123,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_HighEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HighEQCutoff());
         }
         catch (...)
@@ -11142,12 +11142,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_HighEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11156,6 +11150,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"HighEQCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.HighEQCutoff(param0);
@@ -11170,14 +11170,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_DisableLateField(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisableLateField());
         }
         catch (...)
@@ -11189,12 +11189,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_DisableLateField(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11203,6 +11197,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DisableLateField"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.DisableLateField(param0);
@@ -11217,14 +11217,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_Density(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Density());
         }
         catch (...)
@@ -11236,12 +11236,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_Density(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11250,6 +11244,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Density"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Density(param0);
@@ -11264,14 +11264,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_PositionRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionRight());
         }
         catch (...)
@@ -11283,12 +11283,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11297,6 +11291,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.PositionRight(param0);
@@ -11311,14 +11311,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_DecayTime(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecayTime());
         }
         catch (...)
@@ -11330,12 +11330,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_DecayTime(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11344,6 +11338,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"DecayTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DecayTime(param0);
@@ -11358,14 +11358,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_LateDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LateDiffusion());
         }
         catch (...)
@@ -11377,12 +11377,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LateDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11391,6 +11385,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LateDiffusion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.LateDiffusion(param0);
@@ -11405,14 +11405,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_PositionMatrixRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionMatrixRight());
         }
         catch (...)
@@ -11424,12 +11424,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionMatrixRight(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11438,6 +11432,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixRight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.PositionMatrixRight(param0);
@@ -11452,14 +11452,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_PositionMatrixLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionMatrixLeft());
         }
         catch (...)
@@ -11471,12 +11471,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionMatrixLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11485,6 +11479,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionMatrixLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.PositionMatrixLeft(param0);
@@ -11499,14 +11499,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_PositionLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PositionLeft());
         }
         catch (...)
@@ -11518,12 +11518,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_PositionLeft(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11532,6 +11526,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"PositionLeft"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.PositionLeft(param0);
@@ -11546,14 +11546,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_LowEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LowEQGain());
         }
         catch (...)
@@ -11565,12 +11565,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LowEQGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11579,6 +11573,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.LowEQGain(param0);
@@ -11593,14 +11593,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_LowEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LowEQCutoff());
         }
         catch (...)
@@ -11612,12 +11612,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_LowEQCutoff(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11626,6 +11620,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"LowEQCutoff"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.LowEQCutoff(param0);
@@ -11640,14 +11640,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_RoomFilterFreq(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoomFilterFreq());
         }
         catch (...)
@@ -11659,12 +11659,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterFreq(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11673,6 +11667,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterFreq"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RoomFilterFreq(param0);
@@ -11687,14 +11687,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_ReverbGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReverbGain());
         }
         catch (...)
@@ -11706,12 +11706,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReverbGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11720,6 +11714,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ReverbGain(param0);
@@ -11734,14 +11734,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_ReverbDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReverbDelay());
         }
         catch (...)
@@ -11753,12 +11753,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReverbDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11767,6 +11761,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReverbDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.ReverbDelay(param0);
@@ -11781,14 +11781,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_ReflectionsGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReflectionsGain());
         }
         catch (...)
@@ -11800,12 +11800,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReflectionsGain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11814,6 +11808,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.ReflectionsGain(param0);
@@ -11828,14 +11828,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_ReflectionsDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReflectionsDelay());
         }
         catch (...)
@@ -11847,12 +11847,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_ReflectionsDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11861,6 +11855,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ReflectionsDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ReflectionsDelay(param0);
@@ -11875,14 +11875,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_RearDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RearDelay());
         }
         catch (...)
@@ -11894,12 +11894,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RearDelay(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11908,6 +11902,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RearDelay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.RearDelay(param0);
@@ -11922,14 +11922,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_WetDryMix(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WetDryMix());
         }
         catch (...)
@@ -11941,12 +11941,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_WetDryMix(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -11955,6 +11949,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"WetDryMix"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.WetDryMix(param0);
@@ -11969,14 +11969,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_EarlyDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EarlyDiffusion());
         }
         catch (...)
@@ -11988,12 +11988,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_EarlyDiffusion(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12002,6 +11996,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"EarlyDiffusion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint8_t>(arg);
 
             self->obj.EarlyDiffusion(param0);
@@ -12016,14 +12016,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_RoomSize(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoomSize());
         }
         catch (...)
@@ -12035,12 +12035,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomSize(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12049,6 +12043,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RoomSize(param0);
@@ -12063,14 +12063,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_RoomFilterMain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoomFilterMain());
         }
         catch (...)
@@ -12082,12 +12082,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterMain(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12096,6 +12090,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterMain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RoomFilterMain(param0);
@@ -12110,14 +12110,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_RoomFilterHF(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoomFilterHF());
         }
         catch (...)
@@ -12129,12 +12129,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int ReverbEffectDefinition_put_RoomFilterHF(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12143,6 +12137,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"RoomFilterHF"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.RoomFilterHF(param0);
@@ -12157,14 +12157,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_ActivatableClassId(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ActivatableClassId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"ActivatableClassId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActivatableClassId());
         }
         catch (...)
@@ -12176,14 +12176,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* ReverbEffectDefinition_get_Properties(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Properties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.ReverbEffectDefinition", L"Properties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Properties());
         }
         catch (...)
@@ -12289,14 +12289,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SetDefaultSpatialAudioFormatResult_get_Status(py::wrapper::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SetDefaultSpatialAudioFormatResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SetDefaultSpatialAudioFormatResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -12382,14 +12382,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"GetForDeviceId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"GetForDeviceId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration::GetForDeviceId(param0));
@@ -12413,14 +12413,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioFormatSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioFormatSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.IsSpatialAudioFormatSupported(param0));
@@ -12444,14 +12444,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"SetDefaultSpatialAudioFormatAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"SetDefaultSpatialAudioFormatAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SetDefaultSpatialAudioFormatAsync(param0));
@@ -12471,14 +12471,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_get_ActiveSpatialAudioFormat(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ActiveSpatialAudioFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ActiveSpatialAudioFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActiveSpatialAudioFormat());
         }
         catch (...)
@@ -12490,14 +12490,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_get_DefaultSpatialAudioFormat(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DefaultSpatialAudioFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DefaultSpatialAudioFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DefaultSpatialAudioFormat());
         }
         catch (...)
@@ -12509,14 +12509,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_get_DeviceId(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -12528,14 +12528,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_get_IsSpatialAudioSupported(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"IsSpatialAudioSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsSpatialAudioSupported());
         }
         catch (...)
@@ -12547,14 +12547,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_add_ConfigurationChanged(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConfigurationChanged(param0));
@@ -12568,14 +12568,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioDeviceConfiguration_remove_ConfigurationChanged(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.SpatialAudioDeviceConfiguration", L"ConfigurationChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConfigurationChanged(param0);
@@ -12697,14 +12697,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration::GetDefault());
             }
             catch (...)
@@ -12726,14 +12726,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportConfigurationChangedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportConfigurationChangedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ReportConfigurationChangedAsync(param0));
@@ -12757,14 +12757,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportLicenseChangedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"ReportLicenseChangedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ReportLicenseChangedAsync(param0));
@@ -12784,14 +12784,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatConfiguration_get_MixedRealityExclusiveModePolicy(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MixedRealityExclusiveModePolicy());
         }
         catch (...)
@@ -12803,12 +12803,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int SpatialAudioFormatConfiguration_put_MixedRealityExclusiveModePolicy(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -12817,6 +12811,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatConfiguration", L"MixedRealityExclusiveModePolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::MixedRealitySpatialAudioFormatPolicy>(arg);
 
             self->obj.MixedRealityExclusiveModePolicy(param0);
@@ -12921,14 +12921,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DTSHeadphoneX(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSHeadphoneX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSHeadphoneX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSHeadphoneX());
         }
         catch (...)
@@ -12940,14 +12940,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DTSXUltra(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSXUltra"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSXUltra"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXUltra());
         }
         catch (...)
@@ -12959,14 +12959,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DolbyAtmosForHeadphones(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForHeadphones"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForHeadphones"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHeadphones());
         }
         catch (...)
@@ -12978,14 +12978,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DolbyAtmosForHomeTheater(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForHomeTheater"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForHomeTheater"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForHomeTheater());
         }
         catch (...)
@@ -12997,14 +12997,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DolbyAtmosForSpeakers(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForSpeakers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DolbyAtmosForSpeakers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DolbyAtmosForSpeakers());
         }
         catch (...)
@@ -13016,14 +13016,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_WindowsSonic(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"WindowsSonic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"WindowsSonic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::WindowsSonic());
         }
         catch (...)
@@ -13035,14 +13035,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* SpatialAudioFormatSubtype_get_DTSXForHomeTheater(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSXForHomeTheater"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.SpatialAudioFormatSubtype", L"DTSXForHomeTheater"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::Audio::SpatialAudioFormatSubtype::DTSXForHomeTheater());
         }
         catch (...)
@@ -13132,14 +13132,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -13153,14 +13153,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -13186,14 +13186,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -13216,14 +13216,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -13248,14 +13248,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -13280,14 +13280,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -13312,14 +13312,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -13342,14 +13342,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -13372,14 +13372,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -13398,14 +13398,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -13417,14 +13417,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -13436,12 +13436,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13450,6 +13444,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -13464,14 +13464,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -13483,14 +13483,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -13502,14 +13502,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -13521,12 +13521,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13535,6 +13529,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -13656,14 +13656,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.AddOutgoingConnection(param0);
@@ -13677,14 +13677,14 @@ namespace py::cpp::Windows::Media::Audio
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"AddOutgoingConnection", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
@@ -13710,14 +13710,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -13740,14 +13740,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -13772,14 +13772,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -13804,14 +13804,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioInputNode", L"RemoveOutgoingConnection", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Audio::IAudioNode>(args, 0);
 
                 self->obj.RemoveOutgoingConnection(param0);
@@ -13836,14 +13836,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -13866,14 +13866,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -13896,14 +13896,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -13922,14 +13922,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_Emitter(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode2", L"Emitter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode2", L"Emitter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Emitter());
         }
         catch (...)
@@ -13941,14 +13941,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -13960,12 +13960,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode2_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -13974,6 +13968,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -13988,14 +13988,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -14007,14 +14007,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_EncodingProperties(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -14026,14 +14026,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -14045,12 +14045,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioInputNode2_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14059,6 +14053,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -14073,14 +14073,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioInputNode2_get_OutgoingConnections(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioInputNode", L"OutgoingConnections"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingConnections());
         }
         catch (...)
@@ -14200,14 +14200,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -14230,14 +14230,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -14262,14 +14262,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -14294,14 +14294,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -14324,14 +14324,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -14354,14 +14354,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -14380,14 +14380,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_get_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -14399,12 +14399,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNode_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14413,6 +14407,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -14427,14 +14427,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::IAudioNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -14446,14 +14446,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_get_EncodingProperties(py::wrapper::Windows::Media::Audio::IAudioNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -14465,14 +14465,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNode_get_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNode* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -14484,12 +14484,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNode_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNode* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14498,6 +14492,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);
@@ -14616,14 +14616,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.IClosable", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -14646,14 +14646,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"DisableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.DisableEffectsByDefinition(param0);
@@ -14678,14 +14678,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"EnableEffectsByDefinition", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Effects::IAudioEffectDefinition>(args, 0);
 
                 self->obj.EnableEffectsByDefinition(param0);
@@ -14710,14 +14710,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Reset", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Reset();
                 Py_RETURN_NONE;
             }
@@ -14740,14 +14740,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -14770,14 +14770,14 @@ namespace py::cpp::Windows::Media::Audio
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.IAudioNode", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -14796,14 +14796,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_get_Listener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Listener());
         }
         catch (...)
@@ -14815,12 +14815,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_Listener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14829,6 +14823,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNodeWithListener", L"Listener"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Audio::AudioNodeListener>(arg);
 
             self->obj.Listener(param0);
@@ -14843,14 +14843,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_get_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConsumeInput());
         }
         catch (...)
@@ -14862,12 +14862,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_ConsumeInput(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14876,6 +14870,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"ConsumeInput"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.ConsumeInput(param0);
@@ -14890,14 +14890,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_get_EffectDefinitions(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EffectDefinitions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EffectDefinitions());
         }
         catch (...)
@@ -14909,14 +14909,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_get_EncodingProperties(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"EncodingProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncodingProperties());
         }
         catch (...)
@@ -14928,14 +14928,14 @@ namespace py::cpp::Windows::Media::Audio
 
     static PyObject* IAudioNodeWithListener_get_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutgoingGain());
         }
         catch (...)
@@ -14947,12 +14947,6 @@ namespace py::cpp::Windows::Media::Audio
 
     static int IAudioNodeWithListener_put_OutgoingGain(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -14961,6 +14955,12 @@ namespace py::cpp::Windows::Media::Audio
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.IAudioNode", L"OutgoingGain"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.OutgoingGain(param0);

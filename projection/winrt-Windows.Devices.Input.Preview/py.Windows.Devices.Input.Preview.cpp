@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"GetBooleanControlDescriptions", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"GetBooleanControlDescriptions", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -60,14 +60,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"GetNumericControlDescriptions", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"GetNumericControlDescriptions", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"RequestCalibrationAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"RequestCalibrationAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestCalibrationAsync());
             }
             catch (...)
@@ -117,14 +117,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_get_CanTrackEyes(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"CanTrackEyes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"CanTrackEyes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanTrackEyes());
         }
         catch (...)
@@ -136,14 +136,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_get_CanTrackHead(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"CanTrackHead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"CanTrackHead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanTrackHead());
         }
         catch (...)
@@ -155,14 +155,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_get_ConfigurationState(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"ConfigurationState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"ConfigurationState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConfigurationState());
         }
         catch (...)
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDevicePreview_get_Id(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDevicePreview", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -269,14 +269,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherAddedPreviewEventArgs_get_Device(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherAddedPreviewEventArgs", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -362,14 +362,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -392,14 +392,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -418,14 +418,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_add_Added(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.Added(param0));
@@ -439,14 +439,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_remove_Added(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Added"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Added"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Added(param0);
@@ -461,14 +461,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_add_EnumerationCompleted(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.EnumerationCompleted(param0));
@@ -482,14 +482,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_remove_EnumerationCompleted(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"EnumerationCompleted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"EnumerationCompleted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.EnumerationCompleted(param0);
@@ -504,14 +504,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_add_Removed(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.Removed(param0));
@@ -525,14 +525,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_remove_Removed(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Removed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Removed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Removed(param0);
@@ -547,14 +547,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_add_Updated(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview, winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.Updated(param0));
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherPreview_remove_Updated(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Updated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherPreview", L"Updated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Updated(param0);
@@ -669,14 +669,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherRemovedPreviewEventArgs_get_Device(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherRemovedPreviewEventArgs", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -758,14 +758,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeDeviceWatcherUpdatedPreviewEventArgs_get_Device(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeDeviceWatcherUpdatedPreviewEventArgs", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -847,14 +847,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeEnteredPreviewEventArgs_get_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -866,12 +866,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeEnteredPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -880,6 +874,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -894,14 +894,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeEnteredPreviewEventArgs_get_CurrentPoint(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"CurrentPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeEnteredPreviewEventArgs", L"CurrentPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPoint());
         }
         catch (...)
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeExitedPreviewEventArgs_get_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1003,12 +1003,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeExitedPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1017,6 +1011,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1031,14 +1031,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeExitedPreviewEventArgs_get_CurrentPoint(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"CurrentPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeExitedPreviewEventArgs", L"CurrentPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPoint());
         }
         catch (...)
@@ -1125,14 +1125,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"CreateWatcher", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"CreateWatcher", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview::CreateWatcher());
             }
             catch (...)
@@ -1154,14 +1154,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GetForCurrentView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GetForCurrentView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview::GetForCurrentView());
             }
             catch (...)
@@ -1179,14 +1179,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_add_GazeEntered(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview, winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.GazeEntered(param0));
@@ -1200,14 +1200,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_remove_GazeEntered(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeEntered"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeEntered"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GazeEntered(param0);
@@ -1222,14 +1222,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_add_GazeExited(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview, winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.GazeExited(param0));
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_remove_GazeExited(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeExited"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeExited"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GazeExited(param0);
@@ -1265,14 +1265,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_add_GazeMoved(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview, winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>>(arg);
 
             return py::convert(self->obj.GazeMoved(param0));
@@ -1286,14 +1286,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeInputSourcePreview_remove_GazeMoved(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeMoved"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Input.Preview.GazeInputSourcePreview", L"GazeMoved"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GazeMoved(param0);
@@ -1414,14 +1414,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"GetIntermediatePoints", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"GetIntermediatePoints", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetIntermediatePoints());
             }
             catch (...)
@@ -1439,14 +1439,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeMovedPreviewEventArgs_get_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Handled());
         }
         catch (...)
@@ -1458,12 +1458,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static int GazeMovedPreviewEventArgs_put_Handled(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"Handled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1472,6 +1466,12 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"Handled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.Handled(param0);
@@ -1486,14 +1486,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazeMovedPreviewEventArgs_get_CurrentPoint(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"CurrentPoint"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazeMovedPreviewEventArgs", L"CurrentPoint"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentPoint());
         }
         catch (...)
@@ -1577,14 +1577,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazePointPreview_get_EyeGazePosition(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"EyeGazePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"EyeGazePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EyeGazePosition());
         }
         catch (...)
@@ -1596,14 +1596,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazePointPreview_get_HeadGazePosition(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"HeadGazePosition"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"HeadGazePosition"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HeadGazePosition());
         }
         catch (...)
@@ -1615,14 +1615,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazePointPreview_get_HidInputReport(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"HidInputReport"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"HidInputReport"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HidInputReport());
         }
         catch (...)
@@ -1634,14 +1634,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazePointPreview_get_SourceDevice(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"SourceDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"SourceDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceDevice());
         }
         catch (...)
@@ -1653,14 +1653,14 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyObject* GazePointPreview_get_Timestamp(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Input.Preview.GazePointPreview", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)

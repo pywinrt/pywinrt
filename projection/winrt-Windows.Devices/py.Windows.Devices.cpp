@@ -52,14 +52,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesAggregateProvider_get_AdcControllerProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"AdcControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"AdcControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdcControllerProvider());
         }
         catch (...)
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesAggregateProvider_get_GpioControllerProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"GpioControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"GpioControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GpioControllerProvider());
         }
         catch (...)
@@ -90,14 +90,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesAggregateProvider_get_I2cControllerProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"I2cControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"I2cControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.I2cControllerProvider());
         }
         catch (...)
@@ -109,14 +109,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesAggregateProvider_get_PwmControllerProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"PwmControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"PwmControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PwmControllerProvider());
         }
         catch (...)
@@ -128,14 +128,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesAggregateProvider_get_SpiControllerProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"SpiControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesAggregateProvider", L"SpiControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpiControllerProvider());
         }
         catch (...)
@@ -221,14 +221,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* LowLevelDevicesController_get_DefaultProvider(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesController", L"DefaultProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesController", L"DefaultProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider());
         }
         catch (...)
@@ -240,12 +240,6 @@ namespace py::cpp::Windows::Devices
 
     static int LowLevelDevicesController_put_DefaultProvider(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesController", L"DefaultProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -254,6 +248,12 @@ namespace py::cpp::Windows::Devices
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.LowLevelDevicesController", L"DefaultProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>(arg);
 
             winrt::Windows::Devices::LowLevelDevicesController::DefaultProvider(param0);
@@ -363,14 +363,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* ILowLevelDevicesAggregateProvider_get_AdcControllerProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"AdcControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"AdcControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AdcControllerProvider());
         }
         catch (...)
@@ -382,14 +382,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* ILowLevelDevicesAggregateProvider_get_GpioControllerProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"GpioControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"GpioControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GpioControllerProvider());
         }
         catch (...)
@@ -401,14 +401,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* ILowLevelDevicesAggregateProvider_get_I2cControllerProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"I2cControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"I2cControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.I2cControllerProvider());
         }
         catch (...)
@@ -420,14 +420,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* ILowLevelDevicesAggregateProvider_get_PwmControllerProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"PwmControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"PwmControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PwmControllerProvider());
         }
         catch (...)
@@ -439,14 +439,14 @@ namespace py::cpp::Windows::Devices
 
     static PyObject* ILowLevelDevicesAggregateProvider_get_SpiControllerProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"SpiControllerProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.ILowLevelDevicesAggregateProvider", L"SpiControllerProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpiControllerProvider());
         }
         catch (...)

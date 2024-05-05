@@ -46,14 +46,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_Name(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -65,12 +65,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_Name(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -79,6 +73,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Name(param0);
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_SpecularShine(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpecularShine());
         }
         catch (...)
@@ -112,12 +112,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_SpecularShine(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -126,6 +120,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularShine"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.SpecularShine(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_SpecularAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpecularAmount());
         }
         catch (...)
@@ -159,12 +159,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_SpecularAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -173,6 +167,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"SpecularAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.SpecularAmount(param0);
@@ -187,14 +187,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_NormalMapSource(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NormalMapSource());
         }
         catch (...)
@@ -206,12 +206,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_NormalMapSource(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -220,6 +214,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"NormalMapSource"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>(arg);
 
             self->obj.NormalMapSource(param0);
@@ -234,14 +234,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_DiffuseAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DiffuseAmount());
         }
         catch (...)
@@ -253,12 +253,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_DiffuseAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -267,6 +261,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"DiffuseAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.DiffuseAmount(param0);
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_AmbientAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AmbientAmount());
         }
         catch (...)
@@ -300,12 +300,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_AmbientAmount(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -314,6 +308,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"AmbientAmount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<float>(arg);
 
             self->obj.AmbientAmount(param0);
@@ -328,14 +328,14 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static PyObject* SceneLightingEffect_get_ReflectanceModel(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReflectanceModel());
         }
         catch (...)
@@ -347,12 +347,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
     static int SceneLightingEffect_put_ReflectanceModel(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -361,6 +355,12 @@ namespace py::cpp::Windows::UI::Composition::Effects
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Composition.Effects.SceneLightingEffect", L"ReflectanceModel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>(arg);
 
             self->obj.ReflectanceModel(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"DisconnectAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"DisconnectAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DisconnectAsync());
             }
             catch (...)
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"RequestStartCastingAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingConnection", L"RequestStartCastingAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(args, 0);
 
                 return py::convert(self->obj.RequestStartCastingAsync(param0));
@@ -114,14 +114,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_get_Source(py::wrapper::Windows::Media::Casting::CastingConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Source());
         }
         catch (...)
@@ -133,12 +133,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingConnection_put_Source(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Source"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -147,6 +141,12 @@ namespace py::cpp::Windows::Media::Casting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Source"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(arg);
 
             self->obj.Source(param0);
@@ -161,14 +161,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_get_Device(py::wrapper::Windows::Media::Casting::CastingConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_get_State(py::wrapper::Windows::Media::Casting::CastingConnection* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"State"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnection", L"State"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.State());
         }
         catch (...)
@@ -199,14 +199,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_add_ErrorOccurred(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"ErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"ErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingConnection, winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>>(arg);
 
             return py::convert(self->obj.ErrorOccurred(param0));
@@ -220,14 +220,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_remove_ErrorOccurred(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"ErrorOccurred"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"ErrorOccurred"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ErrorOccurred(param0);
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_add_StateChanged(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingConnection, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.StateChanged(param0));
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnection_remove_StateChanged(py::wrapper::Windows::Media::Casting::CastingConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"StateChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingConnection", L"StateChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.StateChanged(param0);
@@ -385,14 +385,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnectionErrorOccurredEventArgs_get_ErrorStatus(py::wrapper::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs", L"ErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs", L"ErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorStatus());
         }
         catch (...)
@@ -404,14 +404,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingConnectionErrorOccurredEventArgs_get_Message(py::wrapper::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs", L"Message"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingConnectionErrorOccurredEventArgs", L"Message"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Message());
         }
         catch (...)
@@ -498,14 +498,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"CreateCastingConnection", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"CreateCastingConnection", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateCastingConnection());
             }
             catch (...)
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"DeviceInfoSupportsCastingAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"DeviceInfoSupportsCastingAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Casting::CastingDevice::DeviceInfoSupportsCastingAsync(param0));
@@ -558,14 +558,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Casting::CastingDevice::FromIdAsync(param0));
@@ -589,14 +589,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingPlaybackTypes>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelector(param0));
@@ -620,14 +620,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetDeviceSelectorFromCastingSourceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetDeviceSelectorFromCastingSourceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Casting::CastingSource>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Casting::CastingDevice::GetDeviceSelectorFromCastingSourceAsync(param0));
@@ -651,14 +651,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetSupportedCastingPlaybackTypesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevice", L"GetSupportedCastingPlaybackTypesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSupportedCastingPlaybackTypesAsync());
             }
             catch (...)
@@ -676,14 +676,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_get_FriendlyName(py::wrapper::Windows::Media::Casting::CastingDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -695,14 +695,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_get_Icon(py::wrapper::Windows::Media::Casting::CastingDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"Icon"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"Icon"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Icon());
         }
         catch (...)
@@ -714,14 +714,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevice_get_Id(py::wrapper::Windows::Media::Casting::CastingDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevice", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -862,14 +862,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Hide", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Hide", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Hide();
                 Py_RETURN_NONE;
             }
@@ -892,14 +892,14 @@ namespace py::cpp::Windows::Media::Casting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Show", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Show", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
                 self->obj.Show(param0);
@@ -913,14 +913,14 @@ namespace py::cpp::Windows::Media::Casting
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Show", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Show", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 1);
 
@@ -942,14 +942,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_get_Appearance(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Appearance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Appearance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Appearance());
         }
         catch (...)
@@ -961,14 +961,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_get_Filter(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Filter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePicker", L"Filter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Filter());
         }
         catch (...)
@@ -980,14 +980,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_add_CastingDevicePickerDismissed(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDevicePickerDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDevicePickerDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingDevicePicker, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.CastingDevicePickerDismissed(param0));
@@ -1001,14 +1001,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_remove_CastingDevicePickerDismissed(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDevicePickerDismissed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDevicePickerDismissed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CastingDevicePickerDismissed(param0);
@@ -1023,14 +1023,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_add_CastingDeviceSelected(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDeviceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDeviceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Casting::CastingDevicePicker, winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>>(arg);
 
             return py::convert(self->obj.CastingDeviceSelected(param0));
@@ -1044,14 +1044,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePicker_remove_CastingDeviceSelected(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDeviceSelected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Casting.CastingDevicePicker", L"CastingDeviceSelected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CastingDeviceSelected(param0);
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePickerFilter_get_SupportsVideo(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsVideo());
         }
         catch (...)
@@ -1162,12 +1162,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsVideo(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsVideo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1176,6 +1170,12 @@ namespace py::cpp::Windows::Media::Casting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsVideo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsVideo(param0);
@@ -1190,14 +1190,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePickerFilter_get_SupportsPictures(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsPictures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsPictures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsPictures());
         }
         catch (...)
@@ -1209,12 +1209,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsPictures(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsPictures"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1223,6 +1217,12 @@ namespace py::cpp::Windows::Media::Casting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsPictures"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsPictures(param0);
@@ -1237,14 +1237,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePickerFilter_get_SupportsAudio(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportsAudio());
         }
         catch (...)
@@ -1256,12 +1256,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingDevicePickerFilter_put_SupportsAudio(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsAudio"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1270,6 +1264,12 @@ namespace py::cpp::Windows::Media::Casting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportsAudio"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.SupportsAudio(param0);
@@ -1284,14 +1284,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDevicePickerFilter_get_SupportedCastingSources(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportedCastingSources"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDevicePickerFilter", L"SupportedCastingSources"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedCastingSources());
         }
         catch (...)
@@ -1376,14 +1376,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingDeviceSelectedEventArgs_get_SelectedCastingDevice(py::wrapper::Windows::Media::Casting::CastingDeviceSelectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDeviceSelectedEventArgs", L"SelectedCastingDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingDeviceSelectedEventArgs", L"SelectedCastingDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SelectedCastingDevice());
         }
         catch (...)
@@ -1465,14 +1465,14 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyObject* CastingSource_get_PreferredSourceUri(py::wrapper::Windows::Media::Casting::CastingSource* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingSource", L"PreferredSourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingSource", L"PreferredSourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PreferredSourceUri());
         }
         catch (...)
@@ -1484,12 +1484,6 @@ namespace py::cpp::Windows::Media::Casting
 
     static int CastingSource_put_PreferredSourceUri(py::wrapper::Windows::Media::Casting::CastingSource* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingSource", L"PreferredSourceUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1498,6 +1492,12 @@ namespace py::cpp::Windows::Media::Casting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Casting.CastingSource", L"PreferredSourceUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.PreferredSourceUri(param0);

@@ -65,14 +65,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownload", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 2);
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownloadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CreateDownloadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 2);
@@ -152,14 +152,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync());
             }
             catch (...)
@@ -170,14 +170,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsAsync(param0));
@@ -201,14 +201,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsForTransferGroupAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"GetCurrentDownloadsForTransferGroupAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::GetCurrentDownloadsForTransferGroupAsync(param0));
@@ -232,14 +232,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"RequestUnconstrainedDownloadsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"RequestUnconstrainedDownloadsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundDownloader::RequestUnconstrainedDownloadsAsync(param0));
@@ -263,14 +263,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -292,14 +292,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureToastNotification());
         }
         catch (...)
@@ -311,12 +311,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -325,6 +319,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
             self->obj.FailureToastNotification(param0);
@@ -339,14 +339,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuccessTileNotification());
         }
         catch (...)
@@ -358,12 +358,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -372,6 +366,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
             self->obj.SuccessTileNotification(param0);
@@ -386,14 +386,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuccessToastNotification());
         }
         catch (...)
@@ -405,12 +405,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -419,6 +413,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"SuccessToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
             self->obj.SuccessToastNotification(param0);
@@ -433,14 +433,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferGroup());
         }
         catch (...)
@@ -452,12 +452,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -466,6 +460,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(arg);
 
             self->obj.TransferGroup(param0);
@@ -480,14 +480,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureTileNotification());
         }
         catch (...)
@@ -499,12 +499,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -513,6 +507,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"FailureTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
             self->obj.FailureTileNotification(param0);
@@ -527,14 +527,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_CompletionGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CompletionGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CompletionGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletionGroup());
         }
         catch (...)
@@ -546,14 +546,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -565,12 +565,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -579,6 +573,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -612,12 +612,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -626,6 +620,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Group(param0);
@@ -640,14 +640,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -659,12 +659,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -673,6 +667,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Method(param0);
@@ -687,14 +687,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -706,12 +706,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -720,6 +714,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -734,14 +734,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundDownloader_get_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -753,12 +753,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundDownloader_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -767,6 +761,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundDownloader", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -918,14 +918,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"Enable", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"Enable", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Enable();
                 Py_RETURN_NONE;
             }
@@ -944,14 +944,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferCompletionGroup_get_IsEnabled(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"IsEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"IsEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsEnabled());
         }
         catch (...)
@@ -963,14 +963,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferCompletionGroup_get_Trigger(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"Trigger"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup", L"Trigger"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Trigger());
         }
         catch (...)
@@ -1054,14 +1054,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferCompletionGroupTriggerDetails_get_Downloads(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails", L"Downloads"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails", L"Downloads"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Downloads());
         }
         catch (...)
@@ -1073,14 +1073,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferCompletionGroupTriggerDetails_get_Uploads(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails", L"Uploads"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails", L"Uploads"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uploads());
         }
         catch (...)
@@ -1220,14 +1220,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetFile", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetFile", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
 
                 self->obj.SetFile(param0);
@@ -1252,14 +1252,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -1285,14 +1285,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetText", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart", L"SetText", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.SetText(param0);
@@ -1381,14 +1381,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferError", L"GetStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferError", L"GetStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError::GetStatus(param0));
@@ -1480,14 +1480,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"CreateGroup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"CreateGroup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup::CreateGroup(param0));
@@ -1507,14 +1507,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferGroup_get_TransferBehavior(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"TransferBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"TransferBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferBehavior());
         }
         catch (...)
@@ -1526,12 +1526,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundTransferGroup_put_TransferBehavior(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"TransferBehavior"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1540,6 +1534,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"TransferBehavior"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferBehavior>(arg);
 
             self->obj.TransferBehavior(param0);
@@ -1554,14 +1554,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferGroup_get_Name(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferGroup", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1674,14 +1674,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1699,14 +1699,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferRangesDownloadedEventArgs_get_AddedRanges(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"AddedRanges"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"AddedRanges"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AddedRanges());
         }
         catch (...)
@@ -1718,14 +1718,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundTransferRangesDownloadedEventArgs_get_WasDownloadRestarted(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"WasDownloadRestarted"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs", L"WasDownloadRestarted"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WasDownloadRestarted());
         }
         catch (...)
@@ -1850,14 +1850,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUpload", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUpload", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
 
@@ -1882,14 +1882,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
 
@@ -1903,14 +1903,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1925,14 +1925,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         else if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart>>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -1959,14 +1959,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadFromStreamAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CreateUploadFromStreamAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IInputStream>(args, 1);
 
@@ -1991,14 +1991,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync());
             }
             catch (...)
@@ -2009,14 +2009,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsAsync(param0));
@@ -2040,14 +2040,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsForTransferGroupAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"GetCurrentUploadsForTransferGroupAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::GetCurrentUploadsForTransferGroupAsync(param0));
@@ -2071,14 +2071,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"RequestUnconstrainedUploadsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"RequestUnconstrainedUploadsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>>(args, 0);
 
                 return py::convert(winrt::Windows::Networking::BackgroundTransfer::BackgroundUploader::RequestUnconstrainedUploadsAsync(param0));
@@ -2102,14 +2102,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -2131,14 +2131,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -2150,12 +2150,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2164,6 +2158,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -2178,14 +2178,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -2197,12 +2197,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2211,6 +2205,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -2225,14 +2225,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -2244,12 +2244,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2258,6 +2252,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Method(param0);
@@ -2272,14 +2272,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -2291,12 +2291,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2305,6 +2299,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Group(param0);
@@ -2319,14 +2319,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -2338,12 +2338,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2352,6 +2346,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -2366,14 +2366,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureTileNotification());
         }
         catch (...)
@@ -2385,12 +2385,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_FailureTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2399,6 +2393,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
             self->obj.FailureTileNotification(param0);
@@ -2413,14 +2413,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferGroup());
         }
         catch (...)
@@ -2432,12 +2432,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2446,6 +2440,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>(arg);
 
             self->obj.TransferGroup(param0);
@@ -2460,14 +2460,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuccessToastNotification());
         }
         catch (...)
@@ -2479,12 +2479,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_SuccessToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2493,6 +2487,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
             self->obj.SuccessToastNotification(param0);
@@ -2507,14 +2507,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuccessTileNotification());
         }
         catch (...)
@@ -2526,12 +2526,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_SuccessTileNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessTileNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2540,6 +2534,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"SuccessTileNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::TileNotification>(arg);
 
             self->obj.SuccessTileNotification(param0);
@@ -2554,14 +2554,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureToastNotification());
         }
         catch (...)
@@ -2573,12 +2573,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int BackgroundUploader_put_FailureToastNotification(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureToastNotification"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2587,6 +2581,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"FailureToastNotification"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::UI::Notifications::ToastNotification>(arg);
 
             self->obj.FailureToastNotification(param0);
@@ -2601,14 +2601,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* BackgroundUploader_get_CompletionGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CompletionGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.BackgroundUploader", L"CompletionGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CompletionGroup());
         }
         catch (...)
@@ -2724,14 +2724,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ContentPrefetcher_get_IndirectContentUri(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri());
         }
         catch (...)
@@ -2743,12 +2743,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int ContentPrefetcher_put_IndirectContentUri(PyObject* /*unused*/, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2757,6 +2751,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"IndirectContentUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::IndirectContentUri(param0);
@@ -2771,14 +2771,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ContentPrefetcher_get_ContentUris(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"ContentUris"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"ContentUris"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::ContentUris());
         }
         catch (...)
@@ -2790,14 +2790,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ContentPrefetcher_get_LastSuccessfulPrefetchTime(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"LastSuccessfulPrefetchTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ContentPrefetcher", L"LastSuccessfulPrefetchTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher::LastSuccessfulPrefetchTime());
         }
         catch (...)
@@ -2883,14 +2883,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"AttachAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"AttachAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AttachAsync());
             }
             catch (...)
@@ -2912,14 +2912,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetDownloadedRanges", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetDownloadedRanges", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDownloadedRanges());
             }
             catch (...)
@@ -2941,14 +2941,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResponseInformation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResponseInformation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResponseInformation());
             }
             catch (...)
@@ -2970,14 +2970,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResultRandomAccessStreamReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResultRandomAccessStreamReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResultRandomAccessStreamReference());
             }
             catch (...)
@@ -2999,14 +2999,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResultStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"GetResultStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetResultStreamAt(param0));
@@ -3030,14 +3030,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"MakeCurrentInTransferGroup", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"MakeCurrentInTransferGroup", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MakeCurrentInTransferGroup();
                 Py_RETURN_NONE;
             }
@@ -3060,14 +3060,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Pause", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Pause", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Pause();
                 Py_RETURN_NONE;
             }
@@ -3090,14 +3090,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RemoveRequestHeader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RemoveRequestHeader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveRequestHeader(param0);
@@ -3122,14 +3122,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Resume", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Resume", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Resume();
                 Py_RETURN_NONE;
             }
@@ -3152,14 +3152,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -3185,14 +3185,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -3210,14 +3210,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -3229,12 +3229,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3243,6 +3237,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -3257,14 +3257,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_RequestedUri(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RequestedUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RequestedUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedUri());
         }
         catch (...)
@@ -3276,12 +3276,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_RequestedUri(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RequestedUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3290,6 +3284,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RequestedUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
             self->obj.RequestedUri(param0);
@@ -3304,14 +3304,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -3323,14 +3323,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -3342,14 +3342,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_Guid(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Guid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Guid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Guid());
         }
         catch (...)
@@ -3361,14 +3361,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -3380,12 +3380,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3394,6 +3388,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
             self->obj.Priority(param0);
@@ -3408,14 +3408,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_Progress(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -3427,14 +3427,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_ResultFile(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"ResultFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"ResultFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResultFile());
         }
         catch (...)
@@ -3446,14 +3446,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferGroup());
         }
         catch (...)
@@ -3465,14 +3465,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_IsRandomAccessRequired(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"IsRandomAccessRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"IsRandomAccessRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsRandomAccessRequired());
         }
         catch (...)
@@ -3484,12 +3484,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int DownloadOperation_put_IsRandomAccessRequired(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"IsRandomAccessRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3498,6 +3492,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"IsRandomAccessRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsRandomAccessRequired(param0);
@@ -3512,14 +3512,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_CurrentWebErrorStatus(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CurrentWebErrorStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"CurrentWebErrorStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CurrentWebErrorStatus());
         }
         catch (...)
@@ -3531,14 +3531,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_get_RecoverableWebErrorStatuses(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RecoverableWebErrorStatuses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RecoverableWebErrorStatuses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RecoverableWebErrorStatuses());
         }
         catch (...)
@@ -3550,14 +3550,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_add_RangesDownloaded(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RangesDownloaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RangesDownloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation, winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>>(arg);
 
             return py::convert(self->obj.RangesDownloaded(param0));
@@ -3571,14 +3571,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* DownloadOperation_remove_RangesDownloaded(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RangesDownloaded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.BackgroundTransfer.DownloadOperation", L"RangesDownloaded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.RangesDownloaded(param0);
@@ -3687,14 +3687,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ResponseInformation_get_ActualUri(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"ActualUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"ActualUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ActualUri());
         }
         catch (...)
@@ -3706,14 +3706,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ResponseInformation_get_Headers(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"Headers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"Headers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Headers());
         }
         catch (...)
@@ -3725,14 +3725,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ResponseInformation_get_IsResumable(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"IsResumable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"IsResumable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsResumable());
         }
         catch (...)
@@ -3744,14 +3744,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* ResponseInformation_get_StatusCode(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"StatusCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.ResponseInformation", L"StatusCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.StatusCode());
         }
         catch (...)
@@ -3836,14 +3836,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UnconstrainedTransferRequestResult_get_IsUnconstrained(py::wrapper::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult", L"IsUnconstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UnconstrainedTransferRequestResult", L"IsUnconstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUnconstrained());
         }
         catch (...)
@@ -3929,14 +3929,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"AttachAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"AttachAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AttachAsync());
             }
             catch (...)
@@ -3958,14 +3958,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"GetResponseInformation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"GetResponseInformation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResponseInformation());
             }
             catch (...)
@@ -3987,14 +3987,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"GetResultStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"GetResultStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetResultStreamAt(param0));
@@ -4018,14 +4018,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"MakeCurrentInTransferGroup", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"MakeCurrentInTransferGroup", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.MakeCurrentInTransferGroup();
                 Py_RETURN_NONE;
             }
@@ -4048,14 +4048,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"RemoveRequestHeader", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"RemoveRequestHeader", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.RemoveRequestHeader(param0);
@@ -4080,14 +4080,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4113,14 +4113,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"StartAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"StartAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.StartAsync());
             }
             catch (...)
@@ -4138,14 +4138,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -4157,12 +4157,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int UploadOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4171,6 +4165,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -4185,14 +4185,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -4204,14 +4204,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_Guid(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Guid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Guid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Guid());
         }
         catch (...)
@@ -4223,14 +4223,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -4242,14 +4242,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_RequestedUri(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"RequestedUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"RequestedUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedUri());
         }
         catch (...)
@@ -4261,14 +4261,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -4280,12 +4280,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int UploadOperation_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4294,6 +4288,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
             self->obj.Priority(param0);
@@ -4308,14 +4308,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_Progress(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Progress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"Progress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Progress());
         }
         catch (...)
@@ -4327,14 +4327,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_SourceFile(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"SourceFile"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"SourceFile"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SourceFile());
         }
         catch (...)
@@ -4346,14 +4346,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* UploadOperation_get_TransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"TransferGroup"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.UploadOperation", L"TransferGroup"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransferGroup());
         }
         catch (...)
@@ -4454,14 +4454,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"SetRequestHeader", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"SetRequestHeader", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4483,14 +4483,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -4502,12 +4502,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4516,6 +4510,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -4530,14 +4530,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -4549,12 +4549,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_Group(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4563,6 +4557,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Group(param0);
@@ -4577,14 +4577,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -4596,12 +4596,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_Method(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4610,6 +4604,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Method(param0);
@@ -4624,14 +4624,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_get_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProxyCredential());
         }
         catch (...)
@@ -4643,12 +4643,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_ProxyCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ProxyCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4657,6 +4651,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ProxyCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ProxyCredential(param0);
@@ -4671,14 +4671,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferBase_get_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServerCredential());
         }
         catch (...)
@@ -4690,12 +4690,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferBase_put_ServerCredential(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ServerCredential"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4704,6 +4698,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferBase", L"ServerCredential"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(arg);
 
             self->obj.ServerCredential(param0);
@@ -4797,14 +4797,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory", L"CreateWithName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory", L"CreateWithName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateWithName(param0));
@@ -4828,14 +4828,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory", L"CreateWithNameAndFileName", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPartFactory", L"CreateWithNameAndFileName", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
@@ -4931,14 +4931,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"GetResponseInformation", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"GetResponseInformation", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResponseInformation());
             }
             catch (...)
@@ -4960,14 +4960,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"GetResultStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"GetResultStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetResultStreamAt(param0));
@@ -4987,14 +4987,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_get_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CostPolicy());
         }
         catch (...)
@@ -5006,12 +5006,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferOperation_put_CostPolicy(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"CostPolicy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5020,6 +5014,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"CostPolicy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCostPolicy>(arg);
 
             self->obj.CostPolicy(param0);
@@ -5034,14 +5034,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_get_Group(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Group"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Group"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Group());
         }
         catch (...)
@@ -5053,14 +5053,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_get_Guid(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Guid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Guid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Guid());
         }
         catch (...)
@@ -5072,14 +5072,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_get_Method(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Method"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"Method"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Method());
         }
         catch (...)
@@ -5091,14 +5091,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperation_get_RequestedUri(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"RequestedUri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperation", L"RequestedUri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RequestedUri());
         }
         catch (...)
@@ -5186,14 +5186,14 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyObject* IBackgroundTransferOperationPriority_get_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Priority());
         }
         catch (...)
@@ -5205,12 +5205,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static int IBackgroundTransferOperationPriority_put_Priority(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority", L"Priority"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5219,6 +5213,12 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority", L"Priority"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferPriority>(arg);
 
             self->obj.Priority(param0);

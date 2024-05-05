@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"GetQualifierValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"GetQualifierValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.GetQualifierValue(param0));
@@ -55,14 +55,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceCandidate_get_Metadata(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Metadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Metadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Metadata());
         }
         catch (...)
@@ -74,14 +74,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceCandidate_get_Qualifiers(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Qualifiers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Qualifiers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Qualifiers());
         }
         catch (...)
@@ -93,14 +93,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceCandidate_get_Type(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -112,14 +112,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceCandidate_get_Uri(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -131,14 +131,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceCandidate_get_ValueAsString(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"ValueAsString"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceCandidate", L"ValueAsString"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ValueAsString());
         }
         catch (...)
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceQualifier_get_QualifierName(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier", L"QualifierName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier", L"QualifierName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QualifierName());
         }
         catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
     static PyObject* IndexedResourceQualifier_get_QualifierValue(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier", L"QualifierValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Resources.Management.IndexedResourceQualifier", L"QualifierValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.QualifierValue());
         }
         catch (...)
@@ -378,14 +378,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.ResourceIndexer", L"IndexFileContentsAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.ResourceIndexer", L"IndexFileContentsAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.IndexFileContentsAsync(param0));
@@ -409,14 +409,14 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.ResourceIndexer", L"IndexFilePath", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Management.ResourceIndexer", L"IndexFilePath", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.IndexFilePath(param0));

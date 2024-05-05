@@ -50,14 +50,14 @@ namespace py::cpp::Windows::System::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Display.DisplayRequest", L"RequestActive", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Display.DisplayRequest", L"RequestActive", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RequestActive();
                 Py_RETURN_NONE;
             }
@@ -80,14 +80,14 @@ namespace py::cpp::Windows::System::Display
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Display.DisplayRequest", L"RequestRelease", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Display.DisplayRequest", L"RequestRelease", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.RequestRelease();
                 Py_RETURN_NONE;
             }

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"GetOperand", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"GetOperand", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
                 return py::convert(self->obj.GetOperand(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"HasOperand", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"HasOperand", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
                 return py::convert(self->obj.HasOperand(param0));
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* AutomationRemoteOperationResult_get_ErrorLocation(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"ErrorLocation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"ErrorLocation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorLocation());
         }
         catch (...)
@@ -105,14 +105,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* AutomationRemoteOperationResult_get_ExtendedError(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -124,14 +124,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* AutomationRemoteOperationResult_get_Status(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.AutomationRemoteOperationResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -213,14 +213,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRegistrar", L"RegisterAnnotationType", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRegistrar", L"RegisterAnnotationType", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::RegisterAnnotationType(param0));
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRegistrar", L"UnregisterAnnotationType", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRegistrar", L"UnregisterAnnotationType", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(args, 0);
 
                 winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar::UnregisterAnnotationType(param0);
@@ -367,14 +367,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"AddToResults", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"AddToResults", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
                 self->obj.AddToResults(param0);
@@ -399,14 +399,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"Execute", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"Execute", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 return py::convert(self->obj.Execute(param0));
@@ -430,14 +430,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportConnectionBoundObject", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportConnectionBoundObject", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>(args, 1);
 
@@ -463,14 +463,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportElement", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportElement", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationElement>(args, 1);
 
@@ -496,14 +496,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportTextRange", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"ImportTextRange", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::AutomationTextRange>(args, 1);
 
@@ -529,14 +529,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"IsOpcodeSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperation", L"IsOpcodeSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.IsOpcodeSupported(param0));
@@ -635,14 +635,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"GetOperand", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"GetOperand", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
 
                 return py::convert(self->obj.GetOperand(param0));
@@ -666,14 +666,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"SetOperand", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"SetOperand", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
 
@@ -688,14 +688,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"SetOperand", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.CoreAutomationRemoteOperationContext", L"SetOperand", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::guid>(args, 2);
@@ -833,14 +833,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"CreateWindowAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"CreateWindowAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
@@ -866,14 +866,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -896,14 +896,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Stop", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Stop", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Stop();
                 Py_RETURN_NONE;
             }
@@ -922,14 +922,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_get_SessionId(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -941,14 +941,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_add_ConnectionRequested(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"ConnectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"ConnectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>>(arg);
 
             return py::convert(self->obj.ConnectionRequested(param0));
@@ -962,14 +962,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_remove_ConnectionRequested(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"ConnectionRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"ConnectionRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionRequested(param0);
@@ -984,14 +984,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_add_Disconnected(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>>(arg);
 
             return py::convert(self->obj.Disconnected(param0));
@@ -1005,14 +1005,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationClientSession_remove_Disconnected(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Disconnected"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationClientSession", L"Disconnected"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Disconnected(param0);
@@ -1104,14 +1104,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationConnectionRequestedEventArgs_get_LocalPipeName(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs", L"LocalPipeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs", L"LocalPipeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalPipeName());
         }
         catch (...)
@@ -1123,14 +1123,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationConnectionRequestedEventArgs_get_RemoteProcessId(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs", L"RemoteProcessId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationConnectionRequestedEventArgs", L"RemoteProcessId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RemoteProcessId());
         }
         catch (...)
@@ -1213,14 +1213,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationDisconnectedEventArgs_get_LocalPipeName(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs", L"LocalPipeName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationDisconnectedEventArgs", L"LocalPipeName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalPipeName());
         }
         catch (...)
@@ -1298,14 +1298,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationServer", L"ReportSession", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationServer", L"ReportSession", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer::ReportSession(param0);
@@ -1398,14 +1398,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationWindow", L"UnregisterAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationWindow", L"UnregisterAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.UnregisterAsync());
             }
             catch (...)
@@ -1423,14 +1423,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* RemoteAutomationWindow_get_AutomationProvider(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationWindow* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationWindow", L"AutomationProvider"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.RemoteAutomationWindow", L"AutomationProvider"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AutomationProvider());
         }
         catch (...)
@@ -1513,14 +1513,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static PyObject* ICoreAutomationConnectionBoundObjectProvider_get_IsComThreadingRequired(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider", L"IsComThreadingRequired"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationConnectionBoundObjectProvider", L"IsComThreadingRequired"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsComThreadingRequired());
         }
         catch (...)
@@ -1606,14 +1606,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider", L"CallExtension", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider", L"CallExtension", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>(args, 1);
                 auto param2 = py::convert_to<py::pybuf_view<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId, false>>(args, 2);
@@ -1640,14 +1640,14 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider", L"IsExtensionSupported", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.UIAutomation.Core.ICoreAutomationRemoteOperationExtensionProvider", L"IsExtensionSupported", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.IsExtensionSupported(param0));

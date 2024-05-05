@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothAdapter::FromIdAsync(param0));
@@ -59,14 +59,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothAdapter::GetDefaultAsync());
             }
             catch (...)
@@ -88,14 +88,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothAdapter::GetDeviceSelector());
             }
             catch (...)
@@ -117,14 +117,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetRadioAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"GetRadioAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRadioAsync());
             }
             catch (...)
@@ -142,14 +142,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_BluetoothAddress(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"BluetoothAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"BluetoothAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothAddress());
         }
         catch (...)
@@ -161,14 +161,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_DeviceId(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsAdvertisementOffloadSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsAdvertisementOffloadSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsAdvertisementOffloadSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAdvertisementOffloadSupported());
         }
         catch (...)
@@ -199,14 +199,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsCentralRoleSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsCentralRoleSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsCentralRoleSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCentralRoleSupported());
         }
         catch (...)
@@ -218,14 +218,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsClassicSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsClassicSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsClassicSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClassicSupported());
         }
         catch (...)
@@ -237,14 +237,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsLowEnergySupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsLowEnergySupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsLowEnergySupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLowEnergySupported());
         }
         catch (...)
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsPeripheralRoleSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsPeripheralRoleSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsPeripheralRoleSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsPeripheralRoleSupported());
         }
         catch (...)
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_AreClassicSecureConnectionsSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"AreClassicSecureConnectionsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"AreClassicSecureConnectionsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreClassicSecureConnectionsSupported());
         }
         catch (...)
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_AreLowEnergySecureConnectionsSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"AreLowEnergySecureConnectionsSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"AreLowEnergySecureConnectionsSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AreLowEnergySecureConnectionsSupported());
         }
         catch (...)
@@ -313,14 +313,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_IsExtendedAdvertisingSupported(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsExtendedAdvertisingSupported"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"IsExtendedAdvertisingSupported"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsExtendedAdvertisingSupported());
         }
         catch (...)
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothAdapter_get_MaxAdvertisementDataLength(py::wrapper::Windows::Devices::Bluetooth::BluetoothAdapter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"MaxAdvertisementDataLength"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothAdapter", L"MaxAdvertisementDataLength"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxAdvertisementDataLength());
         }
         catch (...)
@@ -464,14 +464,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"FromParts", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"FromParts", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothMajorClass>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothMinorClass>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities>(args, 2);
@@ -497,14 +497,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"FromRawValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"FromRawValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice::FromRawValue(param0));
@@ -524,14 +524,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_get_MajorClass(py::wrapper::Windows::Devices::Bluetooth::BluetoothClassOfDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"MajorClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"MajorClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MajorClass());
         }
         catch (...)
@@ -543,14 +543,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_get_MinorClass(py::wrapper::Windows::Devices::Bluetooth::BluetoothClassOfDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"MinorClass"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"MinorClass"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinorClass());
         }
         catch (...)
@@ -562,14 +562,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_get_RawValue(py::wrapper::Windows::Devices::Bluetooth::BluetoothClassOfDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"RawValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"RawValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawValue());
         }
         catch (...)
@@ -581,14 +581,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothClassOfDevice_get_ServiceCapabilities(py::wrapper::Windows::Devices::Bluetooth::BluetoothClassOfDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"ServiceCapabilities"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothClassOfDevice", L"ServiceCapabilities"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceCapabilities());
         }
         catch (...)
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -734,14 +734,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromBluetoothAddressAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromBluetoothAddressAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::FromBluetoothAddressAsync(param0));
@@ -765,14 +765,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromHostNameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromHostNameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::FromHostNameAsync(param0));
@@ -796,14 +796,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::FromIdAsync(param0));
@@ -827,14 +827,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelector());
             }
             catch (...)
@@ -856,14 +856,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromBluetoothAddress", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromBluetoothAddress", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelectorFromBluetoothAddress(param0));
@@ -887,14 +887,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromClassOfDevice", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromClassOfDevice", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelectorFromClassOfDevice(param0));
@@ -918,14 +918,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromConnectionStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromConnectionStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothConnectionStatus>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelectorFromConnectionStatus(param0));
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromDeviceName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromDeviceName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelectorFromDeviceName(param0));
@@ -980,14 +980,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromPairingState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetDeviceSelectorFromPairingState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDevice::GetDeviceSelectorFromPairingState(param0));
@@ -1011,14 +1011,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetRfcommServicesAsync());
             }
             catch (...)
@@ -1029,14 +1029,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert(self->obj.GetRfcommServicesAsync(param0));
@@ -1060,14 +1060,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesForIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesForIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 0);
 
                 return py::convert(self->obj.GetRfcommServicesForIdAsync(param0));
@@ -1080,14 +1080,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesForIdAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"GetRfcommServicesForIdAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
@@ -1112,14 +1112,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestAccessAsync());
             }
             catch (...)
@@ -1137,14 +1137,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_BluetoothAddress(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"BluetoothAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"BluetoothAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothAddress());
         }
         catch (...)
@@ -1156,14 +1156,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_ClassOfDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ClassOfDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ClassOfDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ClassOfDevice());
         }
         catch (...)
@@ -1175,14 +1175,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_ConnectionStatus(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -1194,14 +1194,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_DeviceId(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -1213,14 +1213,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_HostName(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"HostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"HostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HostName());
         }
         catch (...)
@@ -1232,14 +1232,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_Name(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -1251,14 +1251,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_RfcommServices(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"RfcommServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"RfcommServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RfcommServices());
         }
         catch (...)
@@ -1270,14 +1270,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_SdpRecords(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecords"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecords"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SdpRecords());
         }
         catch (...)
@@ -1289,14 +1289,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_DeviceInformation(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -1308,14 +1308,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_DeviceAccessInformation(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceAccessInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"DeviceAccessInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAccessInformation());
         }
         catch (...)
@@ -1327,14 +1327,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_BluetoothDeviceId(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"BluetoothDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"BluetoothDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothDeviceId());
         }
         catch (...)
@@ -1346,14 +1346,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_get_WasSecureConnectionUsedForPairing(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"WasSecureConnectionUsedForPairing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"WasSecureConnectionUsedForPairing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WasSecureConnectionUsedForPairing());
         }
         catch (...)
@@ -1365,14 +1365,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_add_ConnectionStatusChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConnectionStatusChanged(param0));
@@ -1386,14 +1386,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_remove_ConnectionStatusChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionStatusChanged(param0);
@@ -1408,14 +1408,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_add_NameChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.NameChanged(param0));
@@ -1429,14 +1429,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_remove_NameChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NameChanged(param0);
@@ -1451,14 +1451,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_add_SdpRecordsChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecordsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecordsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.SdpRecordsChanged(param0));
@@ -1472,14 +1472,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDevice_remove_SdpRecordsChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecordsChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothDevice", L"SdpRecordsChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SdpRecordsChanged(param0);
@@ -1644,14 +1644,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"FromId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"FromId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothDeviceId::FromId(param0));
@@ -1671,14 +1671,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDeviceId_get_Id(py::wrapper::Windows::Devices::Bluetooth::BluetoothDeviceId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1690,14 +1690,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDeviceId_get_IsClassicDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDeviceId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"IsClassicDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"IsClassicDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsClassicDevice());
         }
         catch (...)
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothDeviceId_get_IsLowEnergyDevice(py::wrapper::Windows::Devices::Bluetooth::BluetoothDeviceId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"IsLowEnergyDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothDeviceId", L"IsLowEnergyDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsLowEnergyDevice());
         }
         catch (...)
@@ -1830,14 +1830,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"FromParts", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"FromParts", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
                 auto param1 = py::convert_to<uint16_t>(args, 1);
 
@@ -1862,14 +1862,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"FromRawValue", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"FromRawValue", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint16_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance::FromRawValue(param0));
@@ -1889,14 +1889,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearance_get_Category(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEAppearance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -1908,14 +1908,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearance_get_RawValue(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEAppearance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"RawValue"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"RawValue"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RawValue());
         }
         catch (...)
@@ -1927,14 +1927,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearance_get_SubCategory(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEAppearance* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"SubCategory"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearance", L"SubCategory"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SubCategory());
         }
         catch (...)
@@ -2037,14 +2037,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_BarcodeScanner(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"BarcodeScanner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"BarcodeScanner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::BarcodeScanner());
         }
         catch (...)
@@ -2056,14 +2056,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_BloodPressure(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"BloodPressure"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"BloodPressure"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::BloodPressure());
         }
         catch (...)
@@ -2075,14 +2075,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Clock(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Clock"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Clock"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Clock());
         }
         catch (...)
@@ -2094,14 +2094,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Computer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Computer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Computer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Computer());
         }
         catch (...)
@@ -2113,14 +2113,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Cycling(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Cycling"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Cycling"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Cycling());
         }
         catch (...)
@@ -2132,14 +2132,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Display(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Display"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Display"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Display());
         }
         catch (...)
@@ -2151,14 +2151,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_EyeGlasses(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"EyeGlasses"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"EyeGlasses"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::EyeGlasses());
         }
         catch (...)
@@ -2170,14 +2170,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_GlucoseMeter(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"GlucoseMeter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"GlucoseMeter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::GlucoseMeter());
         }
         catch (...)
@@ -2189,14 +2189,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_HeartRate(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"HeartRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"HeartRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::HeartRate());
         }
         catch (...)
@@ -2208,14 +2208,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_HumanInterfaceDevice(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"HumanInterfaceDevice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"HumanInterfaceDevice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::HumanInterfaceDevice());
         }
         catch (...)
@@ -2227,14 +2227,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Keyring(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Keyring"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Keyring"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Keyring());
         }
         catch (...)
@@ -2246,14 +2246,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_MediaPlayer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"MediaPlayer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"MediaPlayer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::MediaPlayer());
         }
         catch (...)
@@ -2265,14 +2265,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_OutdoorSportActivity(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"OutdoorSportActivity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"OutdoorSportActivity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::OutdoorSportActivity());
         }
         catch (...)
@@ -2284,14 +2284,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Phone(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Phone"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Phone"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Phone());
         }
         catch (...)
@@ -2303,14 +2303,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_PulseOximeter(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"PulseOximeter"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"PulseOximeter"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::PulseOximeter());
         }
         catch (...)
@@ -2322,14 +2322,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_RemoteControl(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"RemoteControl"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"RemoteControl"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::RemoteControl());
         }
         catch (...)
@@ -2341,14 +2341,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_RunningWalking(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"RunningWalking"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"RunningWalking"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::RunningWalking());
         }
         catch (...)
@@ -2360,14 +2360,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Tag(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Tag"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Tag"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Tag());
         }
         catch (...)
@@ -2379,14 +2379,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Thermometer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Thermometer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Thermometer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Thermometer());
         }
         catch (...)
@@ -2398,14 +2398,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Uncategorized(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Uncategorized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Uncategorized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Uncategorized());
         }
         catch (...)
@@ -2417,14 +2417,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_Watch(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Watch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"Watch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::Watch());
         }
         catch (...)
@@ -2436,14 +2436,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceCategories_get_WeightScale(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"WeightScale"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceCategories", L"WeightScale"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories::WeightScale());
         }
         catch (...)
@@ -2536,14 +2536,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_BarcodeScanner(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BarcodeScanner"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BarcodeScanner"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::BarcodeScanner());
         }
         catch (...)
@@ -2555,14 +2555,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_BloodPressureArm(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BloodPressureArm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BloodPressureArm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::BloodPressureArm());
         }
         catch (...)
@@ -2574,14 +2574,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_BloodPressureWrist(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BloodPressureWrist"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"BloodPressureWrist"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::BloodPressureWrist());
         }
         catch (...)
@@ -2593,14 +2593,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CardReader(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CardReader"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CardReader"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CardReader());
         }
         catch (...)
@@ -2612,14 +2612,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CyclingCadenceSensor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingCadenceSensor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingCadenceSensor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CyclingCadenceSensor());
         }
         catch (...)
@@ -2631,14 +2631,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CyclingComputer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingComputer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingComputer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CyclingComputer());
         }
         catch (...)
@@ -2650,14 +2650,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CyclingPowerSensor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingPowerSensor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingPowerSensor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CyclingPowerSensor());
         }
         catch (...)
@@ -2669,14 +2669,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CyclingSpeedCadenceSensor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingSpeedCadenceSensor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingSpeedCadenceSensor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CyclingSpeedCadenceSensor());
         }
         catch (...)
@@ -2688,14 +2688,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_CyclingSpeedSensor(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingSpeedSensor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"CyclingSpeedSensor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::CyclingSpeedSensor());
         }
         catch (...)
@@ -2707,14 +2707,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_DigitalPen(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"DigitalPen"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"DigitalPen"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::DigitalPen());
         }
         catch (...)
@@ -2726,14 +2726,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_DigitizerTablet(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"DigitizerTablet"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"DigitizerTablet"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::DigitizerTablet());
         }
         catch (...)
@@ -2745,14 +2745,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_Gamepad(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Gamepad"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Gamepad"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::Gamepad());
         }
         catch (...)
@@ -2764,14 +2764,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_Generic(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Generic"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Generic"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::Generic());
         }
         catch (...)
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_HeartRateBelt(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"HeartRateBelt"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"HeartRateBelt"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::HeartRateBelt());
         }
         catch (...)
@@ -2802,14 +2802,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_Joystick(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Joystick"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Joystick"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::Joystick());
         }
         catch (...)
@@ -2821,14 +2821,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_Keyboard(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Keyboard"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Keyboard"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::Keyboard());
         }
         catch (...)
@@ -2840,14 +2840,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_LocationDisplay(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationDisplay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationDisplay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::LocationDisplay());
         }
         catch (...)
@@ -2859,14 +2859,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_LocationNavigationDisplay(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationNavigationDisplay"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationNavigationDisplay"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::LocationNavigationDisplay());
         }
         catch (...)
@@ -2878,14 +2878,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_LocationNavigationPod(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationNavigationPod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationNavigationPod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::LocationNavigationPod());
         }
         catch (...)
@@ -2897,14 +2897,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_LocationPod(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationPod"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"LocationPod"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::LocationPod());
         }
         catch (...)
@@ -2916,14 +2916,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_Mouse(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Mouse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"Mouse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::Mouse());
         }
         catch (...)
@@ -2935,14 +2935,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_OximeterFingertip(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"OximeterFingertip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"OximeterFingertip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::OximeterFingertip());
         }
         catch (...)
@@ -2954,14 +2954,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_OximeterWristWorn(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"OximeterWristWorn"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"OximeterWristWorn"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::OximeterWristWorn());
         }
         catch (...)
@@ -2973,14 +2973,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_RunningWalkingInShoe(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingInShoe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingInShoe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::RunningWalkingInShoe());
         }
         catch (...)
@@ -2992,14 +2992,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_RunningWalkingOnHip(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingOnHip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingOnHip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::RunningWalkingOnHip());
         }
         catch (...)
@@ -3011,14 +3011,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_RunningWalkingOnShoe(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingOnShoe"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"RunningWalkingOnShoe"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::RunningWalkingOnShoe());
         }
         catch (...)
@@ -3030,14 +3030,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_SportsWatch(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"SportsWatch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"SportsWatch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::SportsWatch());
         }
         catch (...)
@@ -3049,14 +3049,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEAppearanceSubcategories_get_ThermometerEar(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"ThermometerEar"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEAppearanceSubcategories", L"ThermometerEar"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories::ThermometerEar());
         }
         catch (...)
@@ -3163,14 +3163,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionParameters_get_ConnectionInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"ConnectionInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"ConnectionInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionInterval());
         }
         catch (...)
@@ -3182,14 +3182,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionParameters_get_ConnectionLatency(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"ConnectionLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"ConnectionLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionLatency());
         }
         catch (...)
@@ -3201,14 +3201,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionParameters_get_LinkTimeout(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"LinkTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionParameters", L"LinkTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinkTimeout());
         }
         catch (...)
@@ -3292,14 +3292,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionPhy_get_ReceiveInfo(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhy", L"ReceiveInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhy", L"ReceiveInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ReceiveInfo());
         }
         catch (...)
@@ -3311,14 +3311,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionPhy_get_TransmitInfo(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhy", L"TransmitInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhy", L"TransmitInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TransmitInfo());
         }
         catch (...)
@@ -3401,14 +3401,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionPhyInfo_get_IsCodedPhy(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsCodedPhy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsCodedPhy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCodedPhy());
         }
         catch (...)
@@ -3420,14 +3420,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionPhyInfo_get_IsUncoded1MPhy(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsUncoded1MPhy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsUncoded1MPhy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUncoded1MPhy());
         }
         catch (...)
@@ -3439,14 +3439,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEConnectionPhyInfo_get_IsUncoded2MPhy(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsUncoded2MPhy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEConnectionPhyInfo", L"IsUncoded2MPhy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsUncoded2MPhy());
         }
         catch (...)
@@ -3534,14 +3534,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3564,14 +3564,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromBluetoothAddressAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromBluetoothAddressAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::FromBluetoothAddressAsync(param0));
@@ -3584,14 +3584,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromBluetoothAddressAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromBluetoothAddressAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothAddressType>(args, 1);
 
@@ -3616,14 +3616,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::FromIdAsync(param0));
@@ -3647,14 +3647,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetConnectionParameters", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetConnectionParameters", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionParameters());
             }
             catch (...)
@@ -3676,14 +3676,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetConnectionPhy", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetConnectionPhy", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetConnectionPhy());
             }
             catch (...)
@@ -3705,14 +3705,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelector", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelector", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelector());
             }
             catch (...)
@@ -3734,14 +3734,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromAppearance", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromAppearance", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelectorFromAppearance(param0));
@@ -3765,14 +3765,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromBluetoothAddress", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromBluetoothAddress", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelectorFromBluetoothAddress(param0));
@@ -3785,14 +3785,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromBluetoothAddress", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromBluetoothAddress", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothAddressType>(args, 1);
 
@@ -3817,14 +3817,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromConnectionStatus", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromConnectionStatus", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothConnectionStatus>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelectorFromConnectionStatus(param0));
@@ -3848,14 +3848,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromDeviceName", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromDeviceName", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelectorFromDeviceName(param0));
@@ -3879,14 +3879,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromPairingState", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetDeviceSelectorFromPairingState", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<bool>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEDevice::GetDeviceSelectorFromPairingState(param0));
@@ -3910,14 +3910,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattService", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattService", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.GetGattService(param0));
@@ -3941,14 +3941,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetGattServicesAsync());
             }
             catch (...)
@@ -3959,14 +3959,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert(self->obj.GetGattServicesAsync(param0));
@@ -3990,14 +3990,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesForUuidAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesForUuidAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.GetGattServicesForUuidAsync(param0));
@@ -4010,14 +4010,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesForUuidAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GetGattServicesForUuidAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
@@ -4042,14 +4042,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestAccessAsync());
             }
             catch (...)
@@ -4071,14 +4071,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"RequestPreferredConnectionParameters", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"RequestPreferredConnectionParameters", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>(args, 0);
 
                 return py::convert(self->obj.RequestPreferredConnectionParameters(param0));
@@ -4098,14 +4098,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_BluetoothAddress(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothAddress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothAddress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothAddress());
         }
         catch (...)
@@ -4117,14 +4117,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_ConnectionStatus(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatus"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatus"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionStatus());
         }
         catch (...)
@@ -4136,14 +4136,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_DeviceId(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceId());
         }
         catch (...)
@@ -4155,14 +4155,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_GattServices(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GattServices());
         }
         catch (...)
@@ -4174,14 +4174,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_Name(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Name"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Name"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Name());
         }
         catch (...)
@@ -4193,14 +4193,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_Appearance(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Appearance"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"Appearance"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Appearance());
         }
         catch (...)
@@ -4212,14 +4212,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_BluetoothAddressType(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothAddressType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothAddressType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothAddressType());
         }
         catch (...)
@@ -4231,14 +4231,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_DeviceInformation(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceInformation());
         }
         catch (...)
@@ -4250,14 +4250,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_DeviceAccessInformation(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceAccessInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"DeviceAccessInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAccessInformation());
         }
         catch (...)
@@ -4269,14 +4269,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_BluetoothDeviceId(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothDeviceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"BluetoothDeviceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BluetoothDeviceId());
         }
         catch (...)
@@ -4288,14 +4288,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_get_WasSecureConnectionUsedForPairing(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"WasSecureConnectionUsedForPairing"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"WasSecureConnectionUsedForPairing"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.WasSecureConnectionUsedForPairing());
         }
         catch (...)
@@ -4307,14 +4307,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_add_ConnectionStatusChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConnectionStatusChanged(param0));
@@ -4328,14 +4328,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_remove_ConnectionStatusChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatusChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionStatusChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionStatusChanged(param0);
@@ -4350,14 +4350,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_add_GattServicesChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServicesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServicesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.GattServicesChanged(param0));
@@ -4371,14 +4371,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_remove_GattServicesChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServicesChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"GattServicesChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.GattServicesChanged(param0);
@@ -4393,14 +4393,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_add_NameChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.NameChanged(param0));
@@ -4414,14 +4414,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_remove_NameChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"NameChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"NameChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.NameChanged(param0);
@@ -4436,14 +4436,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_add_ConnectionParametersChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionParametersChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionParametersChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConnectionParametersChanged(param0));
@@ -4457,14 +4457,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_remove_ConnectionParametersChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionParametersChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionParametersChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionParametersChanged(param0);
@@ -4479,14 +4479,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_add_ConnectionPhyChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionPhyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionPhyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.ConnectionPhyChanged(param0));
@@ -4500,14 +4500,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEDevice_remove_ConnectionPhyChanged(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEDevice* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionPhyChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Bluetooth.BluetoothLEDevice", L"ConnectionPhyChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ConnectionPhyChanged(param0);
@@ -4674,14 +4674,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_ConnectionLatency(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"ConnectionLatency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"ConnectionLatency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionLatency());
         }
         catch (...)
@@ -4693,14 +4693,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_LinkTimeout(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"LinkTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"LinkTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LinkTimeout());
         }
         catch (...)
@@ -4712,14 +4712,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_MaxConnectionInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"MaxConnectionInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"MaxConnectionInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxConnectionInterval());
         }
         catch (...)
@@ -4731,14 +4731,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_MinConnectionInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"MinConnectionInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"MinConnectionInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MinConnectionInterval());
         }
         catch (...)
@@ -4750,14 +4750,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_Balanced(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"Balanced"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"Balanced"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters::Balanced());
         }
         catch (...)
@@ -4769,14 +4769,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_PowerOptimized(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"PowerOptimized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"PowerOptimized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters::PowerOptimized());
         }
         catch (...)
@@ -4788,14 +4788,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParameters_get_ThroughputOptimized(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"ThroughputOptimized"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParameters", L"ThroughputOptimized"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters::ThroughputOptimized());
         }
         catch (...)
@@ -4912,14 +4912,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4938,14 +4938,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothLEPreferredConnectionParametersRequest_get_Status(py::wrapper::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothLEPreferredConnectionParametersRequest", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -5071,14 +5071,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothSignalStrengthFilter_get_SamplingInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"SamplingInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"SamplingInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SamplingInterval());
         }
         catch (...)
@@ -5090,12 +5090,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_SamplingInterval(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"SamplingInterval"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5104,6 +5098,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"SamplingInterval"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.SamplingInterval(param0);
@@ -5118,14 +5118,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothSignalStrengthFilter_get_OutOfRangeTimeout(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutOfRangeTimeout());
         }
         catch (...)
@@ -5137,12 +5137,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_OutOfRangeTimeout(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeTimeout"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5151,6 +5145,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeTimeout"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
             self->obj.OutOfRangeTimeout(param0);
@@ -5165,14 +5165,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothSignalStrengthFilter_get_OutOfRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeThresholdInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeThresholdInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OutOfRangeThresholdInDBm());
         }
         catch (...)
@@ -5184,12 +5184,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_OutOfRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeThresholdInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5198,6 +5192,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"OutOfRangeThresholdInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int16_t>>(arg);
 
             self->obj.OutOfRangeThresholdInDBm(param0);
@@ -5212,14 +5212,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static PyObject* BluetoothSignalStrengthFilter_get_InRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"InRangeThresholdInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"InRangeThresholdInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InRangeThresholdInDBm());
         }
         catch (...)
@@ -5231,12 +5231,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
     static int BluetoothSignalStrengthFilter_put_InRangeThresholdInDBm(py::wrapper::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"InRangeThresholdInDBm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5245,6 +5239,12 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter", L"InRangeThresholdInDBm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<int16_t>>(arg);
 
             self->obj.InRangeThresholdInDBm(param0);
@@ -5328,14 +5328,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothUuidHelper", L"FromShortId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothUuidHelper", L"FromShortId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper::FromShortId(param0));
@@ -5359,14 +5359,14 @@ namespace py::cpp::Windows::Devices::Bluetooth
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothUuidHelper", L"TryGetShortId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.BluetoothUuidHelper", L"TryGetShortId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper::TryGetShortId(param0));

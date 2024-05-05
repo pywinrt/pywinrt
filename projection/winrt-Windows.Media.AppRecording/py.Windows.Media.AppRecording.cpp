@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::AppRecording::AppRecordingManager::GetDefault());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"GetStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"GetStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStatus());
             }
             catch (...)
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"RecordTimeSpanToFileAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"RecordTimeSpanToFileAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 2);
@@ -119,14 +119,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"SaveScreenshotToFilesAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"SaveScreenshotToFilesAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFolder>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption>(args, 2);
@@ -153,14 +153,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"StartRecordingToFileAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"StartRecordingToFileAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
 
                 return py::convert(self->obj.StartRecordingToFileAsync(param0));
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingManager_get_SupportedScreenshotMediaEncodingSubtypes(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"SupportedScreenshotMediaEncodingSubtypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingManager", L"SupportedScreenshotMediaEncodingSubtypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SupportedScreenshotMediaEncodingSubtypes());
         }
         catch (...)
@@ -299,14 +299,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingResult_get_Duration(py::wrapper::Windows::Media::AppRecording::AppRecordingResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"Duration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"Duration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Duration());
         }
         catch (...)
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingResult_get_ExtendedError(py::wrapper::Windows::Media::AppRecording::AppRecordingResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -337,14 +337,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingResult_get_IsFileTruncated(py::wrapper::Windows::Media::AppRecording::AppRecordingResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"IsFileTruncated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"IsFileTruncated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsFileTruncated());
         }
         catch (...)
@@ -356,14 +356,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingResult_get_Succeeded(py::wrapper::Windows::Media::AppRecording::AppRecordingResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingResult", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -448,14 +448,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingSaveScreenshotResult_get_ExtendedError(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -467,14 +467,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingSaveScreenshotResult_get_SavedScreenshotInfos(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"SavedScreenshotInfos"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"SavedScreenshotInfos"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SavedScreenshotInfos());
         }
         catch (...)
@@ -486,14 +486,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingSaveScreenshotResult_get_Succeeded(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"Succeeded"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult", L"Succeeded"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Succeeded());
         }
         catch (...)
@@ -577,14 +577,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingSavedScreenshotInfo_get_File(py::wrapper::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo", L"File"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo", L"File"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.File());
         }
         catch (...)
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingSavedScreenshotInfo_get_MediaEncodingSubtype(py::wrapper::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo", L"MediaEncodingSubtype"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo", L"MediaEncodingSubtype"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MediaEncodingSubtype());
         }
         catch (...)
@@ -686,14 +686,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatus_get_CanRecord(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"CanRecord"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"CanRecord"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRecord());
         }
         catch (...)
@@ -705,14 +705,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatus_get_CanRecordTimeSpan(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"CanRecordTimeSpan"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"CanRecordTimeSpan"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRecordTimeSpan());
         }
         catch (...)
@@ -724,14 +724,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatus_get_Details(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Details());
         }
         catch (...)
@@ -743,14 +743,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatus_get_HistoricalBufferDuration(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"HistoricalBufferDuration"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatus", L"HistoricalBufferDuration"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HistoricalBufferDuration());
         }
         catch (...)
@@ -835,14 +835,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsAnyAppBroadcasting(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsAnyAppBroadcasting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsAnyAppBroadcasting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAnyAppBroadcasting());
         }
         catch (...)
@@ -854,14 +854,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsAppInactive(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsAppInactive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsAppInactive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAppInactive());
         }
         catch (...)
@@ -873,14 +873,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsBlockedForApp(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsBlockedForApp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsBlockedForApp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBlockedForApp());
         }
         catch (...)
@@ -892,14 +892,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsCaptureResourceUnavailable(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsCaptureResourceUnavailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsCaptureResourceUnavailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptureResourceUnavailable());
         }
         catch (...)
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsDisabledBySystem(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsDisabledBySystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsDisabledBySystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledBySystem());
         }
         catch (...)
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsDisabledByUser(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsDisabledByUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsDisabledByUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledByUser());
         }
         catch (...)
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsGameStreamInProgress(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsGameStreamInProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsGameStreamInProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGameStreamInProgress());
         }
         catch (...)
@@ -968,14 +968,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsGpuConstrained(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsGpuConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsGpuConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGpuConstrained());
         }
         catch (...)
@@ -987,14 +987,14 @@ namespace py::cpp::Windows::Media::AppRecording
 
     static PyObject* AppRecordingStatusDetails_get_IsTimeSpanRecordingDisabled(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsTimeSpanRecordingDisabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppRecording.AppRecordingStatusDetails", L"IsTimeSpanRecordingDisabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsTimeSpanRecordingDisabled());
         }
         catch (...)

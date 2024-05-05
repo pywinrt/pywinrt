@@ -46,14 +46,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingMonitor_get_IsCurrentAppBroadcasting(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcasting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcasting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCurrentAppBroadcasting());
         }
         catch (...)
@@ -65,14 +65,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingMonitor_add_IsCurrentAppBroadcastingChanged(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcastingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcastingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable>>(arg);
 
             return py::convert(self->obj.IsCurrentAppBroadcastingChanged(param0));
@@ -86,14 +86,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingMonitor_remove_IsCurrentAppBroadcastingChanged(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcastingChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingMonitor", L"IsCurrentAppBroadcastingChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.IsCurrentAppBroadcastingChanged(param0);
@@ -180,14 +180,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatus_get_CanStartBroadcast(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatus", L"CanStartBroadcast"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatus", L"CanStartBroadcast"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanStartBroadcast());
         }
         catch (...)
@@ -199,14 +199,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatus_get_Details(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatus* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatus", L"Details"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatus", L"Details"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Details());
         }
         catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsAnyAppBroadcasting(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsAnyAppBroadcasting"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsAnyAppBroadcasting"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAnyAppBroadcasting());
         }
         catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsAppInactive(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsAppInactive"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsAppInactive"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsAppInactive());
         }
         catch (...)
@@ -327,14 +327,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsBlockedForApp(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsBlockedForApp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsBlockedForApp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBlockedForApp());
         }
         catch (...)
@@ -346,14 +346,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsCaptureResourceUnavailable(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsCaptureResourceUnavailable"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsCaptureResourceUnavailable"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsCaptureResourceUnavailable());
         }
         catch (...)
@@ -365,14 +365,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsDisabledBySystem(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsDisabledBySystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsDisabledBySystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledBySystem());
         }
         catch (...)
@@ -384,14 +384,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsDisabledByUser(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsDisabledByUser"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsDisabledByUser"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDisabledByUser());
         }
         catch (...)
@@ -403,14 +403,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsGameStreamInProgress(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsGameStreamInProgress"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsGameStreamInProgress"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGameStreamInProgress());
         }
         catch (...)
@@ -422,14 +422,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyObject* AppBroadcastingStatusDetails_get_IsGpuConstrained(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsGpuConstrained"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails", L"IsGpuConstrained"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGpuConstrained());
         }
         catch (...)
@@ -522,14 +522,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetDefault", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetDefault", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetDefault());
             }
             catch (...)
@@ -551,14 +551,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI::GetForUser(param0));
@@ -582,14 +582,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetStatus", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"GetStatus", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetStatus());
             }
             catch (...)
@@ -611,14 +611,14 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"ShowBroadcastUI", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.AppBroadcasting.AppBroadcastingUI", L"ShowBroadcastUI", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ShowBroadcastUI();
                 Py_RETURN_NONE;
             }

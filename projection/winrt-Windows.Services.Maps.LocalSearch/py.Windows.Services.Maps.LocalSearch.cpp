@@ -16,14 +16,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_All(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"All"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"All"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::All());
         }
         catch (...)
@@ -35,14 +35,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_BankAndCreditUnions(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"BankAndCreditUnions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"BankAndCreditUnions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::BankAndCreditUnions());
         }
         catch (...)
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_EatDrink(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"EatDrink"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"EatDrink"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::EatDrink());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_Hospitals(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Hospitals"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Hospitals"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Hospitals());
         }
         catch (...)
@@ -92,14 +92,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_HotelsAndMotels(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"HotelsAndMotels"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"HotelsAndMotels"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::HotelsAndMotels());
         }
         catch (...)
@@ -111,14 +111,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_Parking(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Parking"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Parking"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Parking());
         }
         catch (...)
@@ -130,14 +130,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_SeeDo(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"SeeDo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"SeeDo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::SeeDo());
         }
         catch (...)
@@ -149,14 +149,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalCategories_get_Shop(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Shop"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalCategories", L"Shop"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Services::Maps::LocalSearch::LocalCategories::Shop());
         }
         catch (...)
@@ -243,14 +243,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_Address(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Address"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Address"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Address());
         }
         catch (...)
@@ -262,14 +262,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_DataAttribution(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"DataAttribution"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"DataAttribution"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DataAttribution());
         }
         catch (...)
@@ -281,14 +281,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_Description(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_DisplayName(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_Identifier(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Identifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Identifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identifier());
         }
         catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_PhoneNumber(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"PhoneNumber"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"PhoneNumber"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PhoneNumber());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_Point(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Point"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Point"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Point());
         }
         catch (...)
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_Category(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Category"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"Category"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Category());
         }
         catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_HoursOfOperation(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"HoursOfOperation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"HoursOfOperation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HoursOfOperation());
         }
         catch (...)
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocation_get_RatingInfo(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"RatingInfo"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocation", L"RatingInfo"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RatingInfo());
         }
         catch (...)
@@ -508,14 +508,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinder", L"FindLocalLocationsAsync", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinder", L"FindLocalLocationsAsync", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geocircle>(args, 1);
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
@@ -606,14 +606,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationFinderResult_get_LocalLocations(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinderResult", L"LocalLocations"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinderResult", L"LocalLocations"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LocalLocations());
         }
         catch (...)
@@ -625,14 +625,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationFinderResult_get_Status(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinderResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationFinderResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -715,14 +715,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationHoursOfOperationItem_get_Day(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Day"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Day"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Day());
         }
         catch (...)
@@ -734,14 +734,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationHoursOfOperationItem_get_Span(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Span"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Span"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Span());
         }
         catch (...)
@@ -753,14 +753,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationHoursOfOperationItem_get_Start(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Start"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem", L"Start"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Start());
         }
         catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationRatingInfo_get_AggregateRating(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"AggregateRating"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"AggregateRating"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AggregateRating());
         }
         catch (...)
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationRatingInfo_get_ProviderIdentifier(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"ProviderIdentifier"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"ProviderIdentifier"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProviderIdentifier());
         }
         catch (...)
@@ -882,14 +882,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     static PyObject* LocalLocationRatingInfo_get_RatingCount(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"RatingCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo", L"RatingCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RatingCount());
         }
         catch (...)
@@ -969,14 +969,14 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.LocalSearch.PlaceInfoHelper", L"CreateFromLocalLocation", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.LocalSearch.PlaceInfoHelper", L"CreateFromLocalLocation", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>(args, 0);
 
                 return py::convert(winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper::CreateFromLocalLocation(param0));

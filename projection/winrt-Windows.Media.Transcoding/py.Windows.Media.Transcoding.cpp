@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddAudioEffect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddAudioEffect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddAudioEffect(param0);
@@ -71,14 +71,14 @@ namespace py::cpp::Windows::Media::Transcoding
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddAudioEffect", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddAudioEffect", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -105,14 +105,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddVideoEffect", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddVideoEffect", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.AddVideoEffect(param0);
@@ -126,14 +126,14 @@ namespace py::cpp::Windows::Media::Transcoding
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddVideoEffect", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AddVideoEffect", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IPropertySet>(args, 2);
@@ -160,14 +160,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"ClearEffects", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"ClearEffects", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.ClearEffects();
                 Py_RETURN_NONE;
             }
@@ -190,14 +190,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareFileTranscodeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareFileTranscodeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::IStorageFile>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareMediaStreamSourceTranscodeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareMediaStreamSourceTranscodeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::Core::IMediaSource>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareStreamTranscodeAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"PrepareStreamTranscodeAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>(args, 2);
@@ -285,14 +285,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_get_TrimStopTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStopTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStopTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimStopTime());
         }
         catch (...)
@@ -304,12 +304,6 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_TrimStopTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStopTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -318,6 +312,12 @@ namespace py::cpp::Windows::Media::Transcoding
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStopTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimStopTime(param0);
@@ -332,14 +332,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_get_TrimStartTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TrimStartTime());
         }
         catch (...)
@@ -351,12 +351,6 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_TrimStartTime(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStartTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -365,6 +359,12 @@ namespace py::cpp::Windows::Media::Transcoding
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"TrimStartTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
             self->obj.TrimStartTime(param0);
@@ -379,14 +379,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_get_HardwareAccelerationEnabled(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"HardwareAccelerationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"HardwareAccelerationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HardwareAccelerationEnabled());
         }
         catch (...)
@@ -398,12 +398,6 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_HardwareAccelerationEnabled(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"HardwareAccelerationEnabled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -412,6 +406,12 @@ namespace py::cpp::Windows::Media::Transcoding
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"HardwareAccelerationEnabled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.HardwareAccelerationEnabled(param0);
@@ -426,14 +426,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_get_AlwaysReencode(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AlwaysReencode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AlwaysReencode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AlwaysReencode());
         }
         catch (...)
@@ -445,12 +445,6 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_AlwaysReencode(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AlwaysReencode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -459,6 +453,12 @@ namespace py::cpp::Windows::Media::Transcoding
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"AlwaysReencode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.AlwaysReencode(param0);
@@ -473,14 +473,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* MediaTranscoder_get_VideoProcessingAlgorithm(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"VideoProcessingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"VideoProcessingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.VideoProcessingAlgorithm());
         }
         catch (...)
@@ -492,12 +492,6 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static int MediaTranscoder_put_VideoProcessingAlgorithm(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"VideoProcessingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -506,6 +500,12 @@ namespace py::cpp::Windows::Media::Transcoding
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.MediaTranscoder", L"VideoProcessingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>(arg);
 
             self->obj.VideoProcessingAlgorithm(param0);
@@ -604,14 +604,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"TranscodeAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"TranscodeAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.TranscodeAsync());
             }
             catch (...)
@@ -629,14 +629,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* PrepareTranscodeResult_get_CanTranscode(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"CanTranscode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"CanTranscode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanTranscode());
         }
         catch (...)
@@ -648,14 +648,14 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyObject* PrepareTranscodeResult_get_FailureReason(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"FailureReason"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Transcoding.PrepareTranscodeResult", L"FailureReason"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FailureReason());
         }
         catch (...)

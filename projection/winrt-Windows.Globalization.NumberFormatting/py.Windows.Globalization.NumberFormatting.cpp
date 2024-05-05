@@ -69,14 +69,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ApplyRoundingForCurrency", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ApplyRoundingForCurrency", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(args, 0);
 
                 self->obj.ApplyRoundingForCurrency(param0);
@@ -101,14 +101,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -132,14 +132,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.FormatDouble(param0));
@@ -163,14 +163,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.FormatInt(param0));
@@ -194,14 +194,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.FormatUInt(param0));
@@ -225,14 +225,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseDouble(param0));
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseInt(param0));
@@ -287,14 +287,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ParseUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseUInt(param0));
@@ -314,14 +314,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_Currency(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Currency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Currency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Currency());
         }
         catch (...)
@@ -333,12 +333,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_Currency(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Currency"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -347,6 +341,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Currency"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.Currency(param0);
@@ -361,14 +361,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_Mode(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Mode());
         }
         catch (...)
@@ -380,12 +380,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_Mode(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Mode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -394,6 +388,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Mode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode>(arg);
 
             self->obj.Mode(param0);
@@ -408,14 +408,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -427,12 +427,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -441,6 +435,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -455,14 +455,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -474,12 +474,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -488,6 +482,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGrouped(param0);
@@ -502,14 +502,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
         }
         catch (...)
@@ -521,12 +521,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -535,6 +529,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecimalPointAlwaysDisplayed(param0);
@@ -549,14 +549,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IntegerDigits());
         }
         catch (...)
@@ -568,12 +568,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -582,6 +576,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IntegerDigits(param0);
@@ -596,14 +596,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FractionDigits());
         }
         catch (...)
@@ -615,12 +615,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -629,6 +623,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FractionDigits(param0);
@@ -643,14 +643,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_GeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -662,14 +662,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -681,14 +681,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -700,14 +700,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -719,14 +719,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberRounder());
         }
         catch (...)
@@ -738,12 +738,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -752,6 +746,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
             self->obj.NumberRounder(param0);
@@ -766,14 +766,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZeroSigned());
         }
         catch (...)
@@ -785,12 +785,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -799,6 +793,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZeroSigned(param0);
@@ -813,14 +813,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* CurrencyFormatter_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -832,12 +832,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int CurrencyFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -846,6 +840,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SignificantDigits(param0);
@@ -993,14 +993,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -1024,14 +1024,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.FormatDouble(param0));
@@ -1055,14 +1055,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.FormatInt(param0));
@@ -1086,14 +1086,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.FormatUInt(param0));
@@ -1117,14 +1117,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseDouble(param0));
@@ -1148,14 +1148,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseInt(param0));
@@ -1179,14 +1179,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ParseUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseUInt(param0));
@@ -1206,14 +1206,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
         }
         catch (...)
@@ -1225,12 +1225,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1239,6 +1233,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecimalPointAlwaysDisplayed(param0);
@@ -1253,14 +1253,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IntegerDigits());
         }
         catch (...)
@@ -1272,12 +1272,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1286,6 +1280,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IntegerDigits(param0);
@@ -1300,14 +1300,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -1319,12 +1319,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1333,6 +1327,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGrouped(param0);
@@ -1347,14 +1347,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -1366,12 +1366,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1380,6 +1374,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -1394,14 +1394,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FractionDigits());
         }
         catch (...)
@@ -1413,12 +1413,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1427,6 +1421,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FractionDigits(param0);
@@ -1441,14 +1441,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_GeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -1460,14 +1460,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -1479,14 +1479,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -1517,14 +1517,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberRounder());
         }
         catch (...)
@@ -1536,12 +1536,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1550,6 +1544,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
             self->obj.NumberRounder(param0);
@@ -1564,14 +1564,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZeroSigned());
         }
         catch (...)
@@ -1583,12 +1583,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1597,6 +1591,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZeroSigned(param0);
@@ -1611,14 +1611,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* DecimalFormatter_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -1630,12 +1630,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int DecimalFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1644,6 +1638,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SignificantDigits(param0);
@@ -1772,14 +1772,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.RoundDouble(param0));
@@ -1803,14 +1803,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt32(param0));
@@ -1834,14 +1834,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt64(param0));
@@ -1865,14 +1865,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundSingle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundSingle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 return py::convert(self->obj.RoundSingle(param0));
@@ -1896,14 +1896,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundUInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundUInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt32(param0));
@@ -1927,14 +1927,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundUInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundUInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt64(param0));
@@ -1954,14 +1954,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_get_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoundingAlgorithm());
         }
         catch (...)
@@ -1973,12 +1973,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int IncrementNumberRounder_put_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1987,6 +1981,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"RoundingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(arg);
 
             self->obj.RoundingAlgorithm(param0);
@@ -2001,14 +2001,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* IncrementNumberRounder_get_Increment(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"Increment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"Increment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Increment());
         }
         catch (...)
@@ -2020,12 +2020,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int IncrementNumberRounder_put_Increment(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"Increment"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2034,6 +2028,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.IncrementNumberRounder", L"Increment"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.Increment(param0);
@@ -2166,14 +2166,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"TranslateNumerals", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"TranslateNumerals", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.TranslateNumerals(param0));
@@ -2193,14 +2193,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* NumeralSystemTranslator_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -2212,12 +2212,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int NumeralSystemTranslator_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2226,6 +2220,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -2240,14 +2240,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* NumeralSystemTranslator_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -2259,14 +2259,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* NumeralSystemTranslator_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.NumeralSystemTranslator", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -2393,14 +2393,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -2424,14 +2424,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.FormatDouble(param0));
@@ -2455,14 +2455,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.FormatInt(param0));
@@ -2486,14 +2486,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.FormatUInt(param0));
@@ -2517,14 +2517,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseDouble(param0));
@@ -2548,14 +2548,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseInt(param0));
@@ -2579,14 +2579,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ParseUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseUInt(param0));
@@ -2606,14 +2606,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
         }
         catch (...)
@@ -2625,12 +2625,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2639,6 +2633,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecimalPointAlwaysDisplayed(param0);
@@ -2653,14 +2653,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IntegerDigits());
         }
         catch (...)
@@ -2672,12 +2672,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2686,6 +2680,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IntegerDigits(param0);
@@ -2700,14 +2700,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -2719,12 +2719,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2733,6 +2727,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGrouped(param0);
@@ -2747,14 +2747,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -2766,12 +2766,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2780,6 +2774,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -2794,14 +2794,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FractionDigits());
         }
         catch (...)
@@ -2813,12 +2813,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2827,6 +2821,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FractionDigits(param0);
@@ -2841,14 +2841,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_GeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -2860,14 +2860,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -2879,14 +2879,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -2898,14 +2898,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -2917,14 +2917,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberRounder());
         }
         catch (...)
@@ -2936,12 +2936,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2950,6 +2944,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
             self->obj.NumberRounder(param0);
@@ -2964,14 +2964,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZeroSigned());
         }
         catch (...)
@@ -2983,12 +2983,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -2997,6 +2991,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZeroSigned(param0);
@@ -3011,14 +3011,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PercentFormatter_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -3030,12 +3030,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PercentFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3044,6 +3038,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SignificantDigits(param0);
@@ -3188,14 +3188,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -3219,14 +3219,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.FormatDouble(param0));
@@ -3250,14 +3250,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.FormatInt(param0));
@@ -3281,14 +3281,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.FormatUInt(param0));
@@ -3312,14 +3312,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseDouble(param0));
@@ -3343,14 +3343,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseInt(param0));
@@ -3374,14 +3374,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ParseUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseUInt(param0));
@@ -3401,14 +3401,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
         }
         catch (...)
@@ -3420,12 +3420,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3434,6 +3428,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecimalPointAlwaysDisplayed(param0);
@@ -3448,14 +3448,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IntegerDigits());
         }
         catch (...)
@@ -3467,12 +3467,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3481,6 +3475,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IntegerDigits(param0);
@@ -3495,14 +3495,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -3514,12 +3514,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3528,6 +3522,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGrouped(param0);
@@ -3542,14 +3542,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -3561,12 +3561,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3575,6 +3569,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -3589,14 +3589,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FractionDigits());
         }
         catch (...)
@@ -3608,12 +3608,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3622,6 +3616,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FractionDigits(param0);
@@ -3636,14 +3636,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_GeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -3655,14 +3655,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -3674,14 +3674,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -3693,14 +3693,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -3712,14 +3712,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberRounder());
         }
         catch (...)
@@ -3731,12 +3731,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3745,6 +3739,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
             self->obj.NumberRounder(param0);
@@ -3759,14 +3759,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZeroSigned());
         }
         catch (...)
@@ -3778,12 +3778,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3792,6 +3786,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZeroSigned(param0);
@@ -3806,14 +3806,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* PermilleFormatter_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -3825,12 +3825,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int PermilleFormatter_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3839,6 +3833,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SignificantDigits(param0);
@@ -3967,14 +3967,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.RoundDouble(param0));
@@ -3998,14 +3998,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt32(param0));
@@ -4029,14 +4029,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt64(param0));
@@ -4060,14 +4060,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundSingle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundSingle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 return py::convert(self->obj.RoundSingle(param0));
@@ -4091,14 +4091,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundUInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundUInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt32(param0));
@@ -4122,14 +4122,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundUInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundUInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt64(param0));
@@ -4149,14 +4149,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -4168,12 +4168,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int SignificantDigitsNumberRounder_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4182,6 +4176,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.SignificantDigits(param0);
@@ -4196,14 +4196,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* SignificantDigitsNumberRounder_get_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.RoundingAlgorithm());
         }
         catch (...)
@@ -4215,12 +4215,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int SignificantDigitsNumberRounder_put_RoundingAlgorithm(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundingAlgorithm"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4229,6 +4223,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.SignificantDigitsNumberRounder", L"RoundingAlgorithm"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>(arg);
 
             self->obj.RoundingAlgorithm(param0);
@@ -4324,14 +4324,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter", L"Format", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter", L"Format", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
@@ -4425,14 +4425,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.FormatDouble(param0));
@@ -4456,14 +4456,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.FormatInt(param0));
@@ -4487,14 +4487,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter2", L"FormatUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.FormatUInt(param0));
@@ -4586,14 +4586,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FractionDigits());
         }
         catch (...)
@@ -4605,12 +4605,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_FractionDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"FractionDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4619,6 +4613,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"FractionDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.FractionDigits(param0);
@@ -4633,14 +4633,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_GeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"GeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"GeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeographicRegion());
         }
         catch (...)
@@ -4652,14 +4652,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IntegerDigits());
         }
         catch (...)
@@ -4671,12 +4671,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IntegerDigits(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IntegerDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4685,6 +4679,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IntegerDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.IntegerDigits(param0);
@@ -4699,14 +4699,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsDecimalPointAlwaysDisplayed());
         }
         catch (...)
@@ -4718,12 +4718,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IsDecimalPointAlwaysDisplayed(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsDecimalPointAlwaysDisplayed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4732,6 +4726,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsDecimalPointAlwaysDisplayed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsDecimalPointAlwaysDisplayed(param0);
@@ -4746,14 +4746,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsGrouped());
         }
         catch (...)
@@ -4765,12 +4765,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_IsGrouped(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsGrouped"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4779,6 +4773,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"IsGrouped"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsGrouped(param0);
@@ -4793,14 +4793,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_Languages(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"Languages"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"Languages"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Languages());
         }
         catch (...)
@@ -4812,14 +4812,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumeralSystem());
         }
         catch (...)
@@ -4831,12 +4831,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberFormatterOptions_put_NumeralSystem(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"NumeralSystem"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4845,6 +4839,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"NumeralSystem"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
             self->obj.NumeralSystem(param0);
@@ -4859,14 +4859,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_ResolvedGeographicRegion(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"ResolvedGeographicRegion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"ResolvedGeographicRegion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedGeographicRegion());
         }
         catch (...)
@@ -4878,14 +4878,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberFormatterOptions_get_ResolvedLanguage(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"ResolvedLanguage"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberFormatterOptions", L"ResolvedLanguage"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ResolvedLanguage());
         }
         catch (...)
@@ -4979,14 +4979,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseDouble(param0));
@@ -5010,14 +5010,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseInt(param0));
@@ -5041,14 +5041,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseUInt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberParser", L"ParseUInt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ParseUInt(param0));
@@ -5144,14 +5144,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundDouble", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundDouble", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<double>(args, 0);
 
                 return py::convert(self->obj.RoundDouble(param0));
@@ -5175,14 +5175,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt32(param0));
@@ -5206,14 +5206,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
                 return py::convert(self->obj.RoundInt64(param0));
@@ -5237,14 +5237,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundSingle", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundSingle", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<float>(args, 0);
 
                 return py::convert(self->obj.RoundSingle(param0));
@@ -5268,14 +5268,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundUInt32", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundUInt32", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt32(param0));
@@ -5299,14 +5299,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundUInt64", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberRounder", L"RoundUInt64", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.RoundUInt64(param0));
@@ -5401,14 +5401,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* INumberRounderOption_get_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberRounderOption", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberRounderOption", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.NumberRounder());
         }
         catch (...)
@@ -5420,12 +5420,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int INumberRounderOption_put_NumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberRounderOption", L"NumberRounder"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5434,6 +5428,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.INumberRounderOption", L"NumberRounder"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Globalization::NumberFormatting::INumberRounder>(arg);
 
             self->obj.NumberRounder(param0);
@@ -5518,14 +5518,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* ISignedZeroOption_get_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignedZeroOption", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignedZeroOption", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsZeroSigned());
         }
         catch (...)
@@ -5537,12 +5537,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int ISignedZeroOption_put_IsZeroSigned(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignedZeroOption", L"IsZeroSigned"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5551,6 +5545,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignedZeroOption", L"IsZeroSigned"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsZeroSigned(param0);
@@ -5635,14 +5635,14 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyObject* ISignificantDigitsOption_get_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignificantDigitsOption", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignificantDigitsOption", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignificantDigits());
         }
         catch (...)
@@ -5654,12 +5654,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static int ISignificantDigitsOption_put_SignificantDigits(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignificantDigitsOption", L"SignificantDigits"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -5668,6 +5662,12 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.NumberFormatting.ISignificantDigitsOption", L"SignificantDigits"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<int32_t>(arg);
 
             self->obj.SignificantDigits(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -54,14 +54,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationChannel_get_ExpirationTime(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"ExpirationTime"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"ExpirationTime"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExpirationTime());
         }
         catch (...)
@@ -73,14 +73,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationChannel_get_Uri(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationChannel* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"Uri"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationChannel", L"Uri"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uri());
         }
         catch (...)
@@ -164,14 +164,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationCreateChannelResult_get_Channel(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"Channel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"Channel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Channel());
         }
         catch (...)
@@ -183,14 +183,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationCreateChannelResult_get_ExtendedError(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -202,14 +202,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationCreateChannelResult_get_Status(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationCreateChannelResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationCreateChannelResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -297,14 +297,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"CreateChannelAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"CreateChannelAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(self->obj.CreateChannelAsync(param0));
@@ -328,14 +328,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"IsSupported", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"IsSupported", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::IsSupported());
             }
             catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Register", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Register", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Register();
                 Py_RETURN_NONE;
             }
@@ -387,14 +387,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Unregister", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Unregister", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Unregister();
                 Py_RETURN_NONE;
             }
@@ -417,14 +417,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"UnregisterAll", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"UnregisterAll", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.UnregisterAll();
                 Py_RETURN_NONE;
             }
@@ -443,14 +443,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_get_Default(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Default"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"Default"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Microsoft::Windows::PushNotifications::PushNotificationManager::Default());
         }
         catch (...)
@@ -462,14 +462,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_add_PushReceived(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"PushReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"PushReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Windows::PushNotifications::PushNotificationManager, winrt::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs>>(arg);
 
             return py::convert(self->obj.PushReceived(param0));
@@ -483,14 +483,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationManager_remove_PushReceived(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationManager* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"PushReceived"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationManager", L"PushReceived"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PushReceived(param0);
@@ -611,14 +611,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -636,14 +636,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationReceivedEventArgs_get_Payload(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Payload"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Payload"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Payload());
         }
         catch (...)
@@ -655,14 +655,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationReceivedEventArgs_add_Canceled(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Background::BackgroundTaskCanceledEventHandler>(arg);
 
             return py::convert(self->obj.Canceled(param0));
@@ -676,14 +676,14 @@ namespace py::cpp::Microsoft::Windows::PushNotifications
 
     static PyObject* PushNotificationReceivedEventArgs_remove_Canceled(py::wrapper::Microsoft::Windows::PushNotifications::PushNotificationReceivedEventArgs* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Canceled"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.Windows.PushNotifications.PushNotificationReceivedEventArgs", L"Canceled"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.Canceled(param0);

@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CloneStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CloneStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloneStream());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"FlushAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"FlushAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FlushAsync());
             }
             catch (...)
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetInputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetInputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetInputStreamAt(param0));
@@ -147,14 +147,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetOutputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"GetOutputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetOutputStreamAt(param0));
@@ -178,14 +178,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ReadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ReadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -211,14 +211,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.Seek(param0);
@@ -243,14 +243,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"WriteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"WriteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteAsync(param0));
@@ -270,14 +270,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_TimedMetadataTracks(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"TimedMetadataTracks"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"TimedMetadataTracks"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TimedMetadataTracks());
         }
         catch (...)
@@ -289,14 +289,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_Markers(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Markers"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Markers"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Markers());
         }
         catch (...)
@@ -308,14 +308,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_ContentType(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -327,14 +327,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_Size(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -346,12 +346,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesisStream_put_Size(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -360,6 +354,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.Size(param0);
@@ -374,14 +374,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_CanRead(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanRead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanRead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRead());
         }
         catch (...)
@@ -393,14 +393,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_CanWrite(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"CanWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanWrite());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesisStream_get_Position(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesisStream", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -562,14 +562,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -592,14 +592,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeSsmlToStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeSsmlToStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SynthesizeSsmlToStreamAsync(param0));
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeTextToStreamAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"SynthesizeTextToStreamAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.SynthesizeTextToStreamAsync(param0));
@@ -654,14 +654,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"TrySetDefaultVoiceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"TrySetDefaultVoiceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>(args, 0);
 
                 return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::TrySetDefaultVoiceAsync(param0));
@@ -681,14 +681,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_get_Voice(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Voice());
         }
         catch (...)
@@ -700,12 +700,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizer_put_Voice(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -714,6 +708,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Voice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>(arg);
 
             self->obj.Voice(param0);
@@ -728,14 +728,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_get_Options(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -747,14 +747,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_get_AllVoices(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"AllVoices"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"AllVoices"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::AllVoices());
         }
         catch (...)
@@ -766,14 +766,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizer_get_DefaultVoice(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"DefaultVoice"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizer", L"DefaultVoice"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer::DefaultVoice());
         }
         catch (...)
@@ -908,14 +908,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_IncludeWordBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeWordBoundaryMetadata());
         }
         catch (...)
@@ -927,12 +927,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_IncludeWordBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -941,6 +935,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeWordBoundaryMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IncludeWordBoundaryMetadata(param0);
@@ -955,14 +955,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_IncludeSentenceBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IncludeSentenceBoundaryMetadata());
         }
         catch (...)
@@ -974,12 +974,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_IncludeSentenceBoundaryMetadata(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -988,6 +982,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"IncludeSentenceBoundaryMetadata"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IncludeSentenceBoundaryMetadata(param0);
@@ -1002,14 +1002,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_SpeakingRate(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SpeakingRate());
         }
         catch (...)
@@ -1021,12 +1021,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_SpeakingRate(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1035,6 +1029,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"SpeakingRate"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.SpeakingRate(param0);
@@ -1049,14 +1049,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_AudioVolume(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioVolume());
         }
         catch (...)
@@ -1068,12 +1068,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AudioVolume(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1082,6 +1076,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioVolume"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.AudioVolume(param0);
@@ -1096,14 +1096,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_AudioPitch(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AudioPitch());
         }
         catch (...)
@@ -1115,12 +1115,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AudioPitch(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1129,6 +1123,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AudioPitch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.AudioPitch(param0);
@@ -1143,14 +1143,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_PunctuationSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PunctuationSilence());
         }
         catch (...)
@@ -1162,12 +1162,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_PunctuationSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1176,6 +1170,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"PunctuationSilence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>(arg);
 
             self->obj.PunctuationSilence(param0);
@@ -1190,14 +1190,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* SpeechSynthesizerOptions_get_AppendedSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AppendedSilence());
         }
         catch (...)
@@ -1209,12 +1209,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static int SpeechSynthesizerOptions_put_AppendedSilence(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1223,6 +1217,12 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.SpeechSynthesizerOptions", L"AppendedSilence"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>(arg);
 
             self->obj.AppendedSilence(param0);
@@ -1313,14 +1313,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* VoiceInformation_get_Description(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Description"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Description"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Description());
         }
         catch (...)
@@ -1332,14 +1332,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* VoiceInformation_get_DisplayName(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -1351,14 +1351,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* VoiceInformation_get_Gender(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Gender"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Gender"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Gender());
         }
         catch (...)
@@ -1370,14 +1370,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* VoiceInformation_get_Id(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1389,14 +1389,14 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyObject* VoiceInformation_get_Language(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Language"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.SpeechSynthesis.VoiceInformation", L"Language"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Language());
         }
         catch (...)

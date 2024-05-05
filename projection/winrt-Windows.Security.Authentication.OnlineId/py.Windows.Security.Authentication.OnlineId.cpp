@@ -50,14 +50,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticateUserAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticateUserAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>(args, 0);
 
                 return py::convert(self->obj.AuthenticateUserAsync(param0));
@@ -70,14 +70,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticateUserAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticateUserAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>(args, 1);
 
@@ -102,14 +102,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"SignOutUserAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"SignOutUserAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.SignOutUserAsync());
             }
             catch (...)
@@ -127,14 +127,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_get_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"ApplicationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"ApplicationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationId());
         }
         catch (...)
@@ -146,12 +146,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int OnlineIdAuthenticator_put_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"ApplicationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -160,6 +154,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"ApplicationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.ApplicationId(param0);
@@ -174,14 +174,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_get_AuthenticatedSafeCustomerId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticatedSafeCustomerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"AuthenticatedSafeCustomerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.AuthenticatedSafeCustomerId());
         }
         catch (...)
@@ -193,14 +193,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdAuthenticator_get_CanSignOut(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"CanSignOut"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator", L"CanSignOut"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanSignOut());
         }
         catch (...)
@@ -286,14 +286,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdServiceTicket_get_ErrorCode(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -305,14 +305,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdServiceTicket_get_Request(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -324,14 +324,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdServiceTicket_get_Value(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicket", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -455,14 +455,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdServiceTicketRequest_get_Policy(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest", L"Policy"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest", L"Policy"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Policy());
         }
         catch (...)
@@ -474,14 +474,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdServiceTicketRequest_get_Service(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest", L"Service"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest", L"Service"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Service());
         }
         catch (...)
@@ -560,14 +560,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator", L"GetForUser", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator", L"GetForUser", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
 
                 return py::convert(winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::GetForUser(param0));
@@ -587,14 +587,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemAuthenticator_get_Default(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator", L"Default"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticator", L"Default"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator::Default());
         }
         catch (...)
@@ -679,14 +679,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"GetTicketAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"GetTicketAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>(args, 0);
 
                 return py::convert(self->obj.GetTicketAsync(param0));
@@ -706,14 +706,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemAuthenticatorForUser_get_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"ApplicationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"ApplicationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ApplicationId());
         }
         catch (...)
@@ -725,12 +725,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int OnlineIdSystemAuthenticatorForUser_put_ApplicationId(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"ApplicationId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -739,6 +733,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"ApplicationId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::guid>(arg);
 
             self->obj.ApplicationId(param0);
@@ -753,14 +753,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemAuthenticatorForUser_get_User(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"User"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemAuthenticatorForUser", L"User"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.User());
         }
         catch (...)
@@ -844,14 +844,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemIdentity_get_Id(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -863,14 +863,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemIdentity_get_Ticket(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity", L"Ticket"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemIdentity", L"Ticket"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Ticket());
         }
         catch (...)
@@ -953,14 +953,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemTicketResult_get_ExtendedError(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"ExtendedError"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"ExtendedError"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ExtendedError());
         }
         catch (...)
@@ -972,14 +972,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemTicketResult_get_Identity(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"Identity"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"Identity"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Identity());
         }
         catch (...)
@@ -991,14 +991,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* OnlineIdSystemTicketResult_get_Status(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.OnlineIdSystemTicketResult", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1086,14 +1086,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -1116,14 +1116,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1146,14 +1146,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.GetResults();
                 Py_RETURN_NONE;
             }
@@ -1172,14 +1172,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_get_ErrorCode(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -1191,14 +1191,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_get_Id(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1210,14 +1210,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_get_Status(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1229,14 +1229,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* SignOutUserOperation_get_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -1248,12 +1248,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int SignOutUserOperation_put_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1262,6 +1256,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.SignOutUserOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncActionCompletedHandler>(arg);
 
             self->obj.Completed(param0);
@@ -1362,14 +1362,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Cancel", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Cancel", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Cancel();
                 Py_RETURN_NONE;
             }
@@ -1392,14 +1392,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -1422,14 +1422,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"GetResults", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"GetResults", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetResults());
             }
             catch (...)
@@ -1447,14 +1447,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_get_ErrorCode(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"ErrorCode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"ErrorCode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ErrorCode());
         }
         catch (...)
@@ -1466,14 +1466,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_get_Id(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1485,14 +1485,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_get_Status(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Status"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Status"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Status());
         }
         catch (...)
@@ -1504,14 +1504,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserAuthenticationOperation_get_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Completed());
         }
         catch (...)
@@ -1523,12 +1523,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static int UserAuthenticationOperation_put_Completed(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Completed"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1537,6 +1531,12 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserAuthenticationOperation", L"Completed"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::AsyncOperationCompletedHandler<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>>(arg);
 
             self->obj.Completed(param0);
@@ -1633,14 +1633,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_FirstName(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"FirstName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"FirstName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FirstName());
         }
         catch (...)
@@ -1652,14 +1652,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_Id(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Id());
         }
         catch (...)
@@ -1671,14 +1671,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_IsBetaAccount(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"IsBetaAccount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"IsBetaAccount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsBetaAccount());
         }
         catch (...)
@@ -1690,14 +1690,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_IsConfirmedPC(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"IsConfirmedPC"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"IsConfirmedPC"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsConfirmedPC());
         }
         catch (...)
@@ -1709,14 +1709,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_LastName(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"LastName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"LastName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.LastName());
         }
         catch (...)
@@ -1728,14 +1728,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_SafeCustomerId(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"SafeCustomerId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"SafeCustomerId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SafeCustomerId());
         }
         catch (...)
@@ -1747,14 +1747,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_SignInName(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"SignInName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"SignInName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SignInName());
         }
         catch (...)
@@ -1766,14 +1766,14 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyObject* UserIdentity_get_Tickets(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"Tickets"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.OnlineId.UserIdentity", L"Tickets"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Tickets());
         }
         catch (...)

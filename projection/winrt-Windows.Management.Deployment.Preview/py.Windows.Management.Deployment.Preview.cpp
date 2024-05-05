@@ -20,14 +20,14 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.Preview.ClassicAppManager", L"FindInstalledApp", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.Preview.ClassicAppManager", L"FindInstalledApp", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Management::Deployment::Preview::ClassicAppManager::FindInstalledApp(param0));
@@ -115,14 +115,14 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyObject* InstalledClassicAppInfo_get_DisplayName(py::wrapper::Windows::Management::Deployment::Preview::InstalledClassicAppInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo", L"DisplayName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo", L"DisplayName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayName());
         }
         catch (...)
@@ -134,14 +134,14 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyObject* InstalledClassicAppInfo_get_DisplayVersion(py::wrapper::Windows::Management::Deployment::Preview::InstalledClassicAppInfo* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo", L"DisplayVersion"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo", L"DisplayVersion"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DisplayVersion());
         }
         catch (...)

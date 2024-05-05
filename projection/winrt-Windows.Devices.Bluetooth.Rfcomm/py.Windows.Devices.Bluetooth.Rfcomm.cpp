@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"FromIdAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"FromIdAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::FromIdAsync(param0));
@@ -89,14 +89,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelector", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelector", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::GetDeviceSelector(param0));
@@ -120,14 +120,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(param0));
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
@@ -172,14 +172,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDeviceAndServiceId", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDeviceAndServiceId", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 1);
 
@@ -193,14 +193,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDeviceAndServiceId", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDeviceAndServiceId", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 2);
@@ -226,14 +226,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetSdpRawAttributesAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetSdpRawAttributesAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSdpRawAttributesAsync());
             }
             catch (...)
@@ -244,14 +244,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetSdpRawAttributesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetSdpRawAttributesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
 
                 return py::convert(self->obj.GetSdpRawAttributesAsync(param0));
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"RequestAccessAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"RequestAccessAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.RequestAccessAsync());
             }
             catch (...)
@@ -300,14 +300,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_ConnectionHostName(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ConnectionHostName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ConnectionHostName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionHostName());
         }
         catch (...)
@@ -319,14 +319,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_ConnectionServiceName(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ConnectionServiceName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ConnectionServiceName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ConnectionServiceName());
         }
         catch (...)
@@ -338,14 +338,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_MaxProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"MaxProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"MaxProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MaxProtectionLevel());
         }
         catch (...)
@@ -357,14 +357,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_ProtectionLevel(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ProtectionLevel"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ProtectionLevel"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ProtectionLevel());
         }
         catch (...)
@@ -376,14 +376,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_ServiceId(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)
@@ -395,14 +395,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_Device(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"Device"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"Device"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Device());
         }
         catch (...)
@@ -414,14 +414,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceService_get_DeviceAccessInformation(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"DeviceAccessInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"DeviceAccessInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DeviceAccessInformation());
         }
         catch (...)
@@ -562,14 +562,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceServicesResult_get_Error(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult", L"Error"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult", L"Error"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Error());
         }
         catch (...)
@@ -581,14 +581,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommDeviceServicesResult_get_Services(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult", L"Services"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult", L"Services"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Services());
         }
         catch (...)
@@ -675,14 +675,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"AsShortId", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"AsShortId", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AsShortId());
             }
             catch (...)
@@ -704,14 +704,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"AsString", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"AsString", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.AsString());
             }
             catch (...)
@@ -733,14 +733,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"FromShortId", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"FromShortId", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::FromShortId(param0));
@@ -764,14 +764,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"FromUuid", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"FromUuid", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::FromUuid(param0));
@@ -791,14 +791,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_Uuid(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"Uuid"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"Uuid"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Uuid());
         }
         catch (...)
@@ -810,14 +810,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_GenericFileTransfer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"GenericFileTransfer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"GenericFileTransfer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::GenericFileTransfer());
         }
         catch (...)
@@ -829,14 +829,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_ObexFileTransfer(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"ObexFileTransfer"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"ObexFileTransfer"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::ObexFileTransfer());
         }
         catch (...)
@@ -848,14 +848,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_ObexObjectPush(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"ObexObjectPush"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"ObexObjectPush"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::ObexObjectPush());
         }
         catch (...)
@@ -867,14 +867,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_PhoneBookAccessPce(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"PhoneBookAccessPce"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"PhoneBookAccessPce"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::PhoneBookAccessPce());
         }
         catch (...)
@@ -886,14 +886,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_PhoneBookAccessPse(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"PhoneBookAccessPse"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"PhoneBookAccessPse"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::PhoneBookAccessPse());
         }
         catch (...)
@@ -905,14 +905,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceId_get_SerialPort(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"SerialPort"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId", L"SerialPort"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId::SerialPort());
         }
         catch (...)
@@ -1033,14 +1033,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider::CreateAsync(param0));
@@ -1064,14 +1064,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StartAdvertising", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StartAdvertising", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::StreamSocketListener>(args, 0);
 
                 self->obj.StartAdvertising(param0);
@@ -1085,14 +1085,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StartAdvertising", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StartAdvertising", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Networking::Sockets::StreamSocketListener>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
@@ -1118,14 +1118,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StopAdvertising", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"StopAdvertising", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.StopAdvertising();
                 Py_RETURN_NONE;
             }
@@ -1144,14 +1144,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_get_SdpRawAttributes(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"SdpRawAttributes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"SdpRawAttributes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SdpRawAttributes());
         }
         catch (...)
@@ -1163,14 +1163,14 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyObject* RfcommServiceProvider_get_ServiceId(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"ServiceId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider", L"ServiceId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ServiceId());
         }
         catch (...)

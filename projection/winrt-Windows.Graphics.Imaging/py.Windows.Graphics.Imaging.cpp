@@ -28,14 +28,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -58,14 +58,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"CreateReference", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"CreateReference", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CreateReference());
             }
             catch (...)
@@ -87,14 +87,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"GetPlaneCount", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"GetPlaneCount", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPlaneCount());
             }
             catch (...)
@@ -116,14 +116,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"GetPlaneDescription", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapBuffer", L"GetPlaneDescription", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
                 return py::convert(self->obj.GetPlaneDescription(param0));
@@ -237,14 +237,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapCodecInformation_get_CodecId(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"CodecId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"CodecId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CodecId());
         }
         catch (...)
@@ -256,14 +256,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapCodecInformation_get_FileExtensions(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"FileExtensions"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"FileExtensions"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FileExtensions());
         }
         catch (...)
@@ -275,14 +275,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapCodecInformation_get_FriendlyName(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"FriendlyName"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"FriendlyName"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FriendlyName());
         }
         catch (...)
@@ -294,14 +294,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapCodecInformation_get_MimeTypes(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"MimeTypes"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapCodecInformation", L"MimeTypes"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.MimeTypes());
         }
         catch (...)
@@ -390,14 +390,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"CreateAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"CreateAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::CreateAsync(param0));
@@ -410,14 +410,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"CreateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"CreateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -442,14 +442,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetDecoderInformationEnumerator", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetDecoderInformationEnumerator", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::GetDecoderInformationEnumerator());
             }
             catch (...)
@@ -471,14 +471,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetFrameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetFrameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint32_t>(args, 0);
 
                 return py::convert(self->obj.GetFrameAsync(param0));
@@ -502,14 +502,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPixelDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPixelDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPixelDataAsync());
             }
             catch (...)
@@ -520,14 +520,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPixelDataAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPixelDataAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -555,14 +555,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPreviewAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetPreviewAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPreviewAsync());
             }
             catch (...)
@@ -584,14 +584,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSoftwareBitmapAsync());
             }
             catch (...)
@@ -602,14 +602,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
@@ -623,14 +623,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetSoftwareBitmapAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -658,14 +658,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetThumbnailAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GetThumbnailAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetThumbnailAsync());
             }
             catch (...)
@@ -683,14 +683,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_BitmapContainerProperties(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapContainerProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapContainerProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapContainerProperties());
         }
         catch (...)
@@ -702,14 +702,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_DecoderInformation(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DecoderInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DecoderInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DecoderInformation());
         }
         catch (...)
@@ -721,14 +721,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_FrameCount(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"FrameCount"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"FrameCount"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FrameCount());
         }
         catch (...)
@@ -740,14 +740,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_BitmapAlphaMode(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -759,14 +759,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_BitmapPixelFormat(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -778,14 +778,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -797,14 +797,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_DpiX(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -816,14 +816,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_DpiY(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -835,14 +835,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_OrientedPixelHeight(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"OrientedPixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"OrientedPixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelHeight());
         }
         catch (...)
@@ -854,14 +854,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_OrientedPixelWidth(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"OrientedPixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"OrientedPixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelWidth());
         }
         catch (...)
@@ -873,14 +873,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_PixelHeight(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -892,14 +892,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_PixelWidth(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -911,14 +911,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_BmpDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BmpDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"BmpDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::BmpDecoderId());
         }
         catch (...)
@@ -930,14 +930,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_GifDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GifDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"GifDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::GifDecoderId());
         }
         catch (...)
@@ -949,14 +949,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_IcoDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"IcoDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"IcoDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::IcoDecoderId());
         }
         catch (...)
@@ -968,14 +968,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_JpegDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"JpegDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"JpegDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegDecoderId());
         }
         catch (...)
@@ -987,14 +987,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_JpegXRDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"JpegXRDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"JpegXRDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::JpegXRDecoderId());
         }
         catch (...)
@@ -1006,14 +1006,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_PngDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PngDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"PngDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::PngDecoderId());
         }
         catch (...)
@@ -1025,14 +1025,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_TiffDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"TiffDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"TiffDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::TiffDecoderId());
         }
         catch (...)
@@ -1044,14 +1044,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_HeifDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"HeifDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"HeifDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::HeifDecoderId());
         }
         catch (...)
@@ -1063,14 +1063,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapDecoder_get_WebpDecoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"WebpDecoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapDecoder", L"WebpDecoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapDecoder::WebpDecoderId());
         }
         catch (...)
@@ -1208,14 +1208,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
 
@@ -1229,14 +1229,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::guid>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 2);
@@ -1262,14 +1262,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateForInPlacePropertyEncodingAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateForInPlacePropertyEncodingAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapDecoder>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::CreateForInPlacePropertyEncodingAsync(param0));
@@ -1293,14 +1293,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateForTranscodingAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"CreateForTranscodingAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapDecoder>(args, 1);
 
@@ -1325,14 +1325,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"FlushAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"FlushAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FlushAsync());
             }
             catch (...)
@@ -1354,14 +1354,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GetEncoderInformationEnumerator", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GetEncoderInformationEnumerator", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::GetEncoderInformationEnumerator());
             }
             catch (...)
@@ -1383,14 +1383,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GoToNextFrameAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GoToNextFrameAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GoToNextFrameAsync());
             }
             catch (...)
@@ -1401,14 +1401,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GoToNextFrameAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GoToNextFrameAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 0);
 
                 return py::convert(self->obj.GoToNextFrameAsync(param0));
@@ -1432,14 +1432,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 7)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"SetPixelData", 7))
-            {
-                py::set_arg_count_version_error(7);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"SetPixelData", 7))
+                {
+                    py::set_arg_count_version_error(7);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<uint32_t>(args, 2);
@@ -1470,14 +1470,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"SetSoftwareBitmap", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"SetSoftwareBitmap", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.SetSoftwareBitmap(param0);
@@ -1498,14 +1498,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_IsThumbnailGenerated(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"IsThumbnailGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"IsThumbnailGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsThumbnailGenerated());
         }
         catch (...)
@@ -1517,12 +1517,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_IsThumbnailGenerated(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"IsThumbnailGenerated"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1531,6 +1525,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"IsThumbnailGenerated"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsThumbnailGenerated(param0);
@@ -1545,14 +1545,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_GeneratedThumbnailWidth(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeneratedThumbnailWidth());
         }
         catch (...)
@@ -1564,12 +1564,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_GeneratedThumbnailWidth(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1578,6 +1572,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.GeneratedThumbnailWidth(param0);
@@ -1592,14 +1592,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_GeneratedThumbnailHeight(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.GeneratedThumbnailHeight());
         }
         catch (...)
@@ -1611,12 +1611,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapEncoder_put_GeneratedThumbnailHeight(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -1625,6 +1619,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GeneratedThumbnailHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.GeneratedThumbnailHeight(param0);
@@ -1639,14 +1639,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_BitmapContainerProperties(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapContainerProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapContainerProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapContainerProperties());
         }
         catch (...)
@@ -1658,14 +1658,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -1677,14 +1677,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_BitmapTransform(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapTransform"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BitmapTransform"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapTransform());
         }
         catch (...)
@@ -1696,14 +1696,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_EncoderInformation(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"EncoderInformation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"EncoderInformation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.EncoderInformation());
         }
         catch (...)
@@ -1715,14 +1715,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_BmpEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BmpEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"BmpEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::BmpEncoderId());
         }
         catch (...)
@@ -1734,14 +1734,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_GifEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GifEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"GifEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::GifEncoderId());
         }
         catch (...)
@@ -1753,14 +1753,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_JpegEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"JpegEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"JpegEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegEncoderId());
         }
         catch (...)
@@ -1772,14 +1772,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_JpegXREncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"JpegXREncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"JpegXREncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::JpegXREncoderId());
         }
         catch (...)
@@ -1791,14 +1791,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_PngEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"PngEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"PngEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::PngEncoderId());
         }
         catch (...)
@@ -1810,14 +1810,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_TiffEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"TiffEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"TiffEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::TiffEncoderId());
         }
         catch (...)
@@ -1829,14 +1829,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapEncoder_get_HeifEncoderId(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"HeifEncoderId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapEncoder", L"HeifEncoderId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(winrt::Windows::Graphics::Imaging::BitmapEncoder::HeifEncoderId());
         }
         catch (...)
@@ -1968,14 +1968,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetPixelDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetPixelDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPixelDataAsync());
             }
             catch (...)
@@ -1986,14 +1986,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetPixelDataAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetPixelDataAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -2021,14 +2021,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSoftwareBitmapAsync());
             }
             catch (...)
@@ -2039,14 +2039,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
@@ -2060,14 +2060,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetSoftwareBitmapAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -2095,14 +2095,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetThumbnailAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"GetThumbnailAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetThumbnailAsync());
             }
             catch (...)
@@ -2120,14 +2120,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_BitmapAlphaMode(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -2139,14 +2139,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_BitmapPixelFormat(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -2158,14 +2158,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -2177,14 +2177,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_DpiX(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -2196,14 +2196,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_DpiY(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -2215,14 +2215,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_OrientedPixelHeight(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"OrientedPixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"OrientedPixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelHeight());
         }
         catch (...)
@@ -2234,14 +2234,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_OrientedPixelWidth(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"OrientedPixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"OrientedPixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelWidth());
         }
         catch (...)
@@ -2253,14 +2253,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_PixelHeight(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -2272,14 +2272,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapFrame_get_PixelWidth(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapFrame", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -2376,14 +2376,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapProperties", L"GetPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapProperties", L"GetPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetPropertiesAsync(param0));
@@ -2407,14 +2407,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapProperties", L"SetPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapProperties", L"SetPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::Windows::Graphics::Imaging::BitmapTypedValue>>>(args, 0);
 
                 return py::convert(self->obj.SetPropertiesAsync(param0));
@@ -2509,14 +2509,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertiesView", L"GetPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertiesView", L"GetPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetPropertiesAsync(param0));
@@ -2632,14 +2632,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Clear", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Clear", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Clear();
                 Py_RETURN_NONE;
             }
@@ -2662,14 +2662,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"First", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"First", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.First());
             }
             catch (...)
@@ -2691,14 +2691,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"GetView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"GetView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetView());
             }
             catch (...)
@@ -2720,14 +2720,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"HasKey", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"HasKey", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.HasKey(param0));
@@ -2751,14 +2751,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Insert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Insert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTypedValue>(args, 1);
 
@@ -2783,14 +2783,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Lookup", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Lookup", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.Lookup(param0));
@@ -2814,14 +2814,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Remove", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Remove", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.Remove(param0);
@@ -2842,14 +2842,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapPropertySet_get_Size(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapPropertySet", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -3066,14 +3066,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_ScaledWidth(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaledWidth());
         }
         catch (...)
@@ -3085,12 +3085,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_ScaledWidth(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3099,6 +3093,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ScaledWidth(param0);
@@ -3113,14 +3113,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_ScaledHeight(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaledHeight());
         }
         catch (...)
@@ -3132,12 +3132,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_ScaledHeight(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3146,6 +3140,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"ScaledHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint32_t>(arg);
 
             self->obj.ScaledHeight(param0);
@@ -3160,14 +3160,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_Rotation(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Rotation());
         }
         catch (...)
@@ -3179,12 +3179,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Rotation(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Rotation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3193,6 +3187,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Rotation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapRotation>(arg);
 
             self->obj.Rotation(param0);
@@ -3207,14 +3207,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_InterpolationMode(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"InterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"InterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.InterpolationMode());
         }
         catch (...)
@@ -3226,12 +3226,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_InterpolationMode(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"InterpolationMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3240,6 +3234,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"InterpolationMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapInterpolationMode>(arg);
 
             self->obj.InterpolationMode(param0);
@@ -3254,14 +3254,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_Flip(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Flip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Flip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Flip());
         }
         catch (...)
@@ -3273,12 +3273,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Flip(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Flip"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3287,6 +3281,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Flip"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFlip>(arg);
 
             self->obj.Flip(param0);
@@ -3301,14 +3301,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTransform_get_Bounds(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Bounds());
         }
         catch (...)
@@ -3320,12 +3320,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int BitmapTransform_put_Bounds(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Bounds"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3334,6 +3328,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTransform", L"Bounds"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBounds>(arg);
 
             self->obj.Bounds(param0);
@@ -3448,14 +3448,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTypedValue_get_Type(py::wrapper::Windows::Graphics::Imaging::BitmapTypedValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTypedValue", L"Type"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTypedValue", L"Type"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Type());
         }
         catch (...)
@@ -3467,14 +3467,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* BitmapTypedValue_get_Value(py::wrapper::Windows::Graphics::Imaging::BitmapTypedValue* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTypedValue", L"Value"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.BitmapTypedValue", L"Value"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Value());
         }
         catch (...)
@@ -3561,14 +3561,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"CloneStream", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"CloneStream", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.CloneStream());
             }
             catch (...)
@@ -3590,14 +3590,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -3620,14 +3620,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"FlushAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"FlushAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.FlushAsync());
             }
             catch (...)
@@ -3649,14 +3649,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"GetInputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"GetInputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetInputStreamAt(param0));
@@ -3680,14 +3680,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"GetOutputStreamAt", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"GetOutputStreamAt", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.GetOutputStreamAt(param0));
@@ -3711,14 +3711,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"ReadAsync", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"ReadAsync", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<uint32_t>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Storage::Streams::InputStreamOptions>(args, 2);
@@ -3744,14 +3744,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"Seek", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"Seek", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 self->obj.Seek(param0);
@@ -3776,14 +3776,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"WriteAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.ImageStream", L"WriteAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteAsync(param0));
@@ -3803,14 +3803,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_get_ContentType(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"ContentType"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"ContentType"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContentType());
         }
         catch (...)
@@ -3822,14 +3822,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_get_Size(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Size());
         }
         catch (...)
@@ -3841,12 +3841,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int ImageStream_put_Size(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Size"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -3855,6 +3849,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Size"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<uint64_t>(arg);
 
             self->obj.Size(param0);
@@ -3869,14 +3869,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_get_CanRead(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"CanRead"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"CanRead"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanRead());
         }
         catch (...)
@@ -3888,14 +3888,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_get_CanWrite(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"CanWrite"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"CanWrite"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.CanWrite());
         }
         catch (...)
@@ -3907,14 +3907,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* ImageStream_get_Position(py::wrapper::Windows::Graphics::Imaging::ImageStream* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Position"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.ImageStream", L"Position"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Position());
         }
         catch (...)
@@ -4033,14 +4033,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.PixelDataProvider", L"DetachPixelData", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.PixelDataProvider", L"DetachPixelData", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.DetachPixelData());
             }
             catch (...)
@@ -4176,14 +4176,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Close", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Close", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Close();
                 Py_RETURN_NONE;
             }
@@ -4206,14 +4206,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Convert", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Convert", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
 
@@ -4227,14 +4227,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 3)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Convert", 3))
-            {
-                py::set_arg_count_version_error(3);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Convert", 3))
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 2);
@@ -4260,14 +4260,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Copy", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"Copy", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::Copy(param0));
@@ -4291,14 +4291,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyFromBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyFromBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.CopyFromBuffer(param0);
@@ -4323,14 +4323,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyTo", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyTo", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(args, 0);
 
                 self->obj.CopyTo(param0);
@@ -4355,14 +4355,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyToBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CopyToBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 self->obj.CopyToBuffer(param0);
@@ -4387,14 +4387,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 4)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 4))
-            {
-                py::set_arg_count_version_error(4);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 4))
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -4410,14 +4410,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromBuffer", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 1);
                 auto param2 = py::convert_to<int32_t>(args, 2);
@@ -4445,14 +4445,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromSurfaceAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromSurfaceAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
 
                 return py::convert(winrt::Windows::Graphics::Imaging::SoftwareBitmap::CreateCopyFromSurfaceAsync(param0));
@@ -4465,14 +4465,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromSurfaceAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"CreateCopyFromSurfaceAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
@@ -4497,14 +4497,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"GetReadOnlyView", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"GetReadOnlyView", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetReadOnlyView());
             }
             catch (...)
@@ -4526,14 +4526,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"LockBuffer", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"LockBuffer", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapBufferAccessMode>(args, 0);
 
                 return py::convert(self->obj.LockBuffer(param0));
@@ -4553,14 +4553,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_DpiY(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -4572,12 +4572,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int SoftwareBitmap_put_DpiY(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4586,6 +4580,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DpiY(param0);
@@ -4600,14 +4600,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_DpiX(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -4619,12 +4619,6 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static int SoftwareBitmap_put_DpiX(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, PyObject* arg, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return -1;
-        }
-
         if (arg == nullptr)
         {
             PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
@@ -4633,6 +4627,12 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
             auto param0 = py::convert_to<double>(arg);
 
             self->obj.DpiX(param0);
@@ -4647,14 +4647,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_BitmapAlphaMode(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -4666,14 +4666,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_BitmapPixelFormat(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -4685,14 +4685,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_IsReadOnly(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"IsReadOnly"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"IsReadOnly"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.IsReadOnly());
         }
         catch (...)
@@ -4704,14 +4704,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_PixelHeight(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -4723,14 +4723,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* SoftwareBitmap_get_PixelWidth(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.SoftwareBitmap", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -4878,14 +4878,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPixelDataAsync());
             }
             catch (...)
@@ -4896,14 +4896,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -4931,14 +4931,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetThumbnailAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetThumbnailAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetThumbnailAsync());
             }
             catch (...)
@@ -4956,14 +4956,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_BitmapAlphaMode(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -4975,14 +4975,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_BitmapPixelFormat(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -4994,14 +4994,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -5013,14 +5013,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_DpiX(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -5032,14 +5032,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_DpiY(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -5051,14 +5051,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_OrientedPixelHeight(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelHeight());
         }
         catch (...)
@@ -5070,14 +5070,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_OrientedPixelWidth(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelWidth());
         }
         catch (...)
@@ -5089,14 +5089,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_PixelHeight(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -5108,14 +5108,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrame_get_PixelWidth(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -5211,14 +5211,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetPixelDataAsync());
             }
             catch (...)
@@ -5229,14 +5229,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetPixelDataAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -5264,14 +5264,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetSoftwareBitmapAsync());
             }
             catch (...)
@@ -5282,14 +5282,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 2)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 2))
-            {
-                py::set_arg_count_version_error(2);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 2))
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
 
@@ -5303,14 +5303,14 @@ namespace py::cpp::Windows::Graphics::Imaging
         }
         else if (arg_count == 5)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 5))
-            {
-                py::set_arg_count_version_error(5);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrameWithSoftwareBitmap", L"GetSoftwareBitmapAsync", 5))
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapTransform>(args, 2);
@@ -5338,14 +5338,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetThumbnailAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"GetThumbnailAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetThumbnailAsync());
             }
             catch (...)
@@ -5363,14 +5363,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_BitmapAlphaMode(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapAlphaMode"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapAlphaMode"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapAlphaMode());
         }
         catch (...)
@@ -5382,14 +5382,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_BitmapPixelFormat(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapPixelFormat"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapPixelFormat"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapPixelFormat());
         }
         catch (...)
@@ -5401,14 +5401,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapProperties"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"BitmapProperties"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.BitmapProperties());
         }
         catch (...)
@@ -5420,14 +5420,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_DpiX(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiX"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiX"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiX());
         }
         catch (...)
@@ -5439,14 +5439,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_DpiY(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiY"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"DpiY"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DpiY());
         }
         catch (...)
@@ -5458,14 +5458,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_OrientedPixelHeight(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelHeight());
         }
         catch (...)
@@ -5477,14 +5477,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_OrientedPixelWidth(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"OrientedPixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.OrientedPixelWidth());
         }
         catch (...)
@@ -5496,14 +5496,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_PixelHeight(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelHeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelHeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelHeight());
         }
         catch (...)
@@ -5515,14 +5515,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static PyObject* IBitmapFrameWithSoftwareBitmap_get_PixelWidth(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelWidth"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Imaging.IBitmapFrame", L"PixelWidth"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.PixelWidth());
         }
         catch (...)
@@ -5619,14 +5619,14 @@ namespace py::cpp::Windows::Graphics::Imaging
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapPropertiesView", L"GetPropertiesAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Imaging.IBitmapPropertiesView", L"GetPropertiesAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 return py::convert(self->obj.GetPropertiesAsync(param0));

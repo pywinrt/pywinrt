@@ -28,14 +28,14 @@ namespace py::cpp::Windows::System::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"GetCurrentPostureAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"GetCurrentPostureAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetCurrentPostureAsync());
             }
             catch (...)
@@ -57,14 +57,14 @@ namespace py::cpp::Windows::System::Preview
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"GetDefaultAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"GetDefaultAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview::GetDefaultAsync());
             }
             catch (...)
@@ -82,14 +82,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreview_add_PostureChanged(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"PostureChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"PostureChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview, winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>>(arg);
 
             return py::convert(self->obj.PostureChanged(param0));
@@ -103,14 +103,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreview_remove_PostureChanged(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"PostureChanged"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreview", L"PostureChanged"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.PostureChanged(param0);
@@ -223,14 +223,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_HingeState(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"HingeState"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"HingeState"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.HingeState());
         }
         catch (...)
@@ -242,14 +242,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_Panel1Id(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel1Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel1Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Panel1Id());
         }
         catch (...)
@@ -261,14 +261,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_Panel1Orientation(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel1Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel1Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Panel1Orientation());
         }
         catch (...)
@@ -280,14 +280,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_Panel2Id(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel2Id"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel2Id"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Panel2Id());
         }
         catch (...)
@@ -299,14 +299,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_Panel2Orientation(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel2Orientation"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Panel2Orientation"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Panel2Orientation());
         }
         catch (...)
@@ -318,14 +318,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReading_get_Timestamp(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Timestamp"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReading", L"Timestamp"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Timestamp());
         }
         catch (...)
@@ -412,14 +412,14 @@ namespace py::cpp::Windows::System::Preview
 
     static PyObject* TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs_get_Reading(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs", L"Reading"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.System.Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs", L"Reading"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Reading());
         }
         catch (...)

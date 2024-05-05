@@ -28,14 +28,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"Start", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"Start", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 self->obj.Start();
                 Py_RETURN_NONE;
             }
@@ -54,14 +54,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_add_ServerSearchReadBatchRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"ServerSearchReadBatchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"ServerSearchReadBatchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>>(arg);
 
             return py::convert(self->obj.ServerSearchReadBatchRequested(param0));
@@ -75,14 +75,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_remove_ServerSearchReadBatchRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"ServerSearchReadBatchRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"ServerSearchReadBatchRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.ServerSearchReadBatchRequested(param0);
@@ -97,14 +97,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_add_SyncRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"SyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"SyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>>(arg);
 
             return py::convert(self->obj.SyncRequested(param0));
@@ -118,14 +118,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_remove_SyncRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"SyncRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"SyncRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.SyncRequested(param0);
@@ -140,14 +140,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_add_CreateOrUpdateContactRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"CreateOrUpdateContactRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"CreateOrUpdateContactRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>>(arg);
 
             return py::convert(self->obj.CreateOrUpdateContactRequested(param0));
@@ -161,14 +161,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_remove_CreateOrUpdateContactRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"CreateOrUpdateContactRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"CreateOrUpdateContactRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.CreateOrUpdateContactRequested(param0);
@@ -183,14 +183,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_add_DeleteContactRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"DeleteContactRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"DeleteContactRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection, winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>>(arg);
 
             return py::convert(self->obj.DeleteContactRequested(param0));
@@ -204,14 +204,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderConnection_remove_DeleteContactRequested(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self, PyObject* arg) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"DeleteContactRequested"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection", L"DeleteContactRequested"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
             self->obj.DeleteContactRequested(param0);
@@ -304,14 +304,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactDataProviderTriggerDetails_get_Connection(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails", L"Connection"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails", L"Connection"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Connection());
         }
         catch (...)
@@ -397,14 +397,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ReportCompletedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ReportCompletedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert(self->obj.ReportCompletedAsync(param0));
@@ -428,14 +428,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -453,14 +453,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequest_get_Contact(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"Contact"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"Contact"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Contact());
         }
         catch (...)
@@ -472,14 +472,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequest_get_ContactListId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ContactListId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequest", L"ContactListId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactListId());
         }
         catch (...)
@@ -568,14 +568,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -593,14 +593,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListCreateOrUpdateContactRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListCreateOrUpdateContactRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -687,14 +687,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -716,14 +716,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -741,14 +741,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequest_get_ContactId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ContactId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ContactId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactId());
         }
         catch (...)
@@ -760,14 +760,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequest_get_ContactListId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ContactListId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequest", L"ContactListId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactListId());
         }
         catch (...)
@@ -856,14 +856,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -881,14 +881,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListDeleteContactRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListDeleteContactRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -975,14 +975,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1004,14 +1004,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ReportFailedAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ReportFailedAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactBatchStatus>(args, 0);
 
                 return py::convert(self->obj.ReportFailedAsync(param0));
@@ -1035,14 +1035,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 1)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SaveContactAsync", 1))
-            {
-                py::set_arg_count_version_error(1);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SaveContactAsync", 1))
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
 
                 return py::convert(self->obj.SaveContactAsync(param0));
@@ -1062,14 +1062,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_get_ContactListId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ContactListId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"ContactListId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactListId());
         }
         catch (...)
@@ -1081,14 +1081,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_get_Options(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"Options"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"Options"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Options());
         }
         catch (...)
@@ -1100,14 +1100,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_get_SessionId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SessionId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SessionId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SessionId());
         }
         catch (...)
@@ -1119,14 +1119,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequest_get_SuggestedBatchSize(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SuggestedBatchSize"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest", L"SuggestedBatchSize"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.SuggestedBatchSize());
         }
         catch (...)
@@ -1218,14 +1218,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1243,14 +1243,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListServerSearchReadBatchRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)
@@ -1337,14 +1337,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ReportCompletedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ReportCompletedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportCompletedAsync());
             }
             catch (...)
@@ -1366,14 +1366,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ReportFailedAsync", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ReportFailedAsync", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.ReportFailedAsync());
             }
             catch (...)
@@ -1391,14 +1391,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListSyncManagerSyncRequest_get_ContactListId(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ContactListId"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest", L"ContactListId"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ContactListId());
         }
         catch (...)
@@ -1486,14 +1486,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
         if (arg_count == 0)
         {
-            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs", L"GetDeferral", 0))
-            {
-                py::set_arg_count_version_error(0);
-                return nullptr;
-            }
-
             try
             {
+                if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs", L"GetDeferral", 0))
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
                 return py::convert(self->obj.GetDeferral());
             }
             catch (...)
@@ -1511,14 +1511,14 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 
     static PyObject* ContactListSyncManagerSyncRequestEventArgs_get_Request(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs", L"Request"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs", L"Request"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.Request());
         }
         catch (...)

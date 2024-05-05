@@ -24,14 +24,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFont_get_FontFamily(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontFamily"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontFamily"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FontFamily());
         }
         catch (...)
@@ -43,14 +43,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFont_get_FontStretch(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontStretch"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontStretch"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FontStretch());
         }
         catch (...)
@@ -62,14 +62,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFont_get_FontStyle(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontStyle"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontStyle"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FontStyle());
         }
         catch (...)
@@ -81,14 +81,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFont_get_FontWeight(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontWeight"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"FontWeight"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FontWeight());
         }
         catch (...)
@@ -100,14 +100,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFont_get_ScaleFactor(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"ScaleFactor"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFont", L"ScaleFactor"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ScaleFactor());
         }
         catch (...)
@@ -217,14 +217,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_DocumentAlternate1Font(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentAlternate1Font"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentAlternate1Font"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentAlternate1Font());
         }
         catch (...)
@@ -236,14 +236,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_DocumentAlternate2Font(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentAlternate2Font"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentAlternate2Font"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentAlternate2Font());
         }
         catch (...)
@@ -255,14 +255,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_DocumentHeadingFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentHeadingFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"DocumentHeadingFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.DocumentHeadingFont());
         }
         catch (...)
@@ -274,14 +274,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_FixedWidthTextFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"FixedWidthTextFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"FixedWidthTextFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.FixedWidthTextFont());
         }
         catch (...)
@@ -293,14 +293,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_ModernDocumentFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"ModernDocumentFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"ModernDocumentFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.ModernDocumentFont());
         }
         catch (...)
@@ -312,14 +312,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_TraditionalDocumentFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"TraditionalDocumentFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"TraditionalDocumentFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.TraditionalDocumentFont());
         }
         catch (...)
@@ -331,14 +331,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_UICaptionFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UICaptionFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UICaptionFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UICaptionFont());
         }
         catch (...)
@@ -350,14 +350,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_UIHeadingFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UIHeadingFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UIHeadingFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UIHeadingFont());
         }
         catch (...)
@@ -369,14 +369,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_UINotificationHeadingFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UINotificationHeadingFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UINotificationHeadingFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UINotificationHeadingFont());
         }
         catch (...)
@@ -388,14 +388,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_UITextFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UITextFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UITextFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UITextFont());
         }
         catch (...)
@@ -407,14 +407,14 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyObject* LanguageFontGroup_get_UITitleFont(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self, void* /*unused*/) noexcept
     {
-        if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UITitleFont"))
-        {
-            PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-            return nullptr;
-        }
-
         try
         {
+            if (!winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Globalization.Fonts.LanguageFontGroup", L"UITitleFont"))
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
             return py::convert(self->obj.UITitleFont());
         }
         catch (...)
