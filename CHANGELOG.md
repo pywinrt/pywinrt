@@ -6,6 +6,7 @@
 
 ### Fixed
 - Fixed possible crash when checking if API is available at runtime.
+- Fixed memory leak when converting Python object to char16_t or hstring.
 
 ## [v2.0.1] - 2024-04-28
 
