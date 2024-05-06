@@ -1381,7 +1381,8 @@ namespace py
             throw_if_pyobj_null(obj);
 
             Py_ssize_t py_size;
-            auto buffer = PyUnicode_AsWideCharString(obj, &py_size);
+            std::unique_ptr<wchar_t, decltype(&PyMem_Free)> buffer{
+                PyUnicode_AsWideCharString(obj, &py_size), &PyMem_Free};
 
             if (!buffer)
             {
@@ -1390,7 +1391,7 @@ namespace py
 
             auto size = static_cast<winrt::hstring::size_type>(py_size);
 
-            winrt::hstring str{buffer, size};
+            winrt::hstring str{buffer.get(), size};
 
             return str;
         }
@@ -1409,7 +1410,8 @@ namespace py
             throw_if_pyobj_null(obj);
 
             Py_ssize_t size;
-            auto buffer = PyUnicode_AsWideCharString(obj, &size);
+            std::unique_ptr<wchar_t, decltype(&PyMem_Free)> buffer{
+                PyUnicode_AsWideCharString(obj, &size), &PyMem_Free};
 
             if (!buffer)
             {
@@ -1425,7 +1427,7 @@ namespace py
                 throw python_exception();
             }
 
-            return buffer[0];
+            return *buffer;
         }
     };
 
