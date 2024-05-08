@@ -46,6 +46,33 @@ find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
 set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 set(WINRT_WINDOWS_APP_SDK_PATH "winrt-WindowsAppSDK/src/winrt_windows_app_sdk")
+set(WINDOWS_APP_SDK_PATH "../_tools/Microsoft.WindowsAppSDK")
+
+if (CMAKE_CXX_COMPILER_ARCHITECTURE_ID)
+    string(TOLOWER ${CMAKE_CXX_COMPILER_ARCHITECTURE_ID} WINDOWS_APP_SDK_ARCH)
+else()
+    execute_process(
+        COMMAND ${CMAKE_CXX_COMPILER} -dumpmachine
+        RESULT_VARIABLE EXIT_CODE
+        OUTPUT_VARIABLE TARGET_TRIPLE
+        ERROR_QUIET
+    )
+
+    if (EXIT_CODE)
+        message(FATAL_ERROR "Failed to get target architecture triple: ${EXIT_CODE}")
+    endif()
+
+    if (TARGET_TRIPLE MATCHES "^x86_64-.*")
+        set(WINDOWS_APP_SDK_ARCH "x64")
+    elseif (TARGET_TRIPLE MATCHES "^i686-.*")
+        set(WINDOWS_APP_SDK_ARCH "x86")
+    elseif (TARGET_TRIPLE MATCHES "^aarch64-.*")
+        set(WINDOWS_APP_SDK_ARCH "arm64")
+    else()
+        message(FATAL_ERROR "Unsupported target architecture: ${TARGET_TRIPLE}")
+    endif()
+endif()
+message(STATUS "Windows App SDK architecture: ${WINDOWS_APP_SDK_ARCH}")
 
 function(pywinrt_add_library target sources)
     Python3_add_library(${target} MODULE "${sources}")
@@ -86,6 +113,7 @@ if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages CONFIGURE_DEPENDS "winrt-Windows.*")
     file(GLOB app_packages CONFIGURE_DEPENDS "winrt-Microsoft.*")
     file(GLOB interop_packages CONFIGURE_DEPENDS "interop/winrt-Windows.*")
+    file(GLOB app_interop_packages CONFIGURE_DEPENDS "interop/winrt-Microsoft.*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -102,13 +130,19 @@ else()
         "winrt-Windows.Storage"
         "winrt-Windows.Storage.Streams"
     )
+    set(app_packages
+        "winrt-Microsoft.Windows.AppNotifications"
+    )
     set(interop_packages
         "interop/winrt-Windows.Foundation.Interop"
         "interop/winrt-Windows.Graphics.Capture.Interop"
     )
+    set(app_interop_packages
+        "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    )
 endif()
 
-foreach(package ${packages} ${app_packages} ${interop_packages})
+foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_packages})
     pywinrt_add_namespace_package(${package})
 
     # speed up builds by precompiling frequently used headers
@@ -141,6 +175,21 @@ foreach(package ${packages} ${app_packages} ${interop_packages})
             "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
             "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
         )
+    endif()
+
+    if (package IN_LIST app_interop_packages)
+        target_include_directories(${package_target} PRIVATE
+            "${WINDOWS_APP_SDK_PATH}/include"
+        )
+        target_link_directories(${package_target} PRIVATE
+            "${WINDOWS_APP_SDK_PATH}/lib/win10-${WINDOWS_APP_SDK_ARCH}"
+        )
+    endif()
+
+    if (${package} STREQUAL "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
+        target_link_libraries(${package_target} PRIVATE "Microsoft.WindowsAppRuntime.Bootstrap")
+        install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
+            DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     endif()
 endforeach()
 

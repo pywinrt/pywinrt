@@ -6,5 +6,6 @@ API reference
    :maxdepth: 2
    :caption: Contents:
 
+   microsoft
    system
    windows

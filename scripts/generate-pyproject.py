@@ -75,7 +75,7 @@ from setuptools import Extension, setup
 from setuptools.command.build_ext import build_ext
 from winrt_sdk import get_include_dirs{extra_imports}
 
-
+{extra_init}
 class build_ext_ex(build_ext):
     def build_extension(self, ext):
         if self.compiler.compiler_type == "msvc":
@@ -85,7 +85,7 @@ class build_ext_ex(build_ext):
             ext.extra_link_args = ["-loleaut32"]
         else:
             raise ValueError(f"Unsupported compiler: {{self.compiler.compiler_type}}")
-
+{extra_build}
         build_ext.build_extension(self, ext)
 
 
@@ -96,10 +96,25 @@ setup(
             "winrt.{ext_module}",
             sources=[{sources}],
             include_dirs=get_include_dirs(){extra_include_dirs},
-            libraries=["windowsapp"],
+            libraries=["windowsapp"{extra_libraries}],
         )
     ],
 )
+"""
+
+APP_SDK_INIT = """
+try:
+    import os, pathlib
+
+    WINDOWS_APP_SDK_PATH = pathlib.Path(os.environ["WINDOWS_APP_SDK_PATH"]).resolve()
+    print(f"Using Windows App SDK from {WINDOWS_APP_SDK_PATH}")
+except KeyError:
+    raise RuntimeError("Please set WINDOWS_APP_SDK_PATH environment variable")
+"""
+
+APP_SDK_EXTRA_BUILD = """
+        target = self.plat_name.replace("32", "-x86").replace("amd", "x").replace("win", "win10")
+        ext.library_dirs = [str(WINDOWS_APP_SDK_PATH / "lib" / target)]
 """
 
 README_TEMPLATE = """\
@@ -193,6 +208,12 @@ def is_sdk_package(name: str) -> bool:
     return name in ["winrt-sdk", "winrt-WindowsAppSDK"]
 
 
+def is_app_sdk_interop_package(name: str) -> bool:
+    return name in [
+        "winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap"
+    ]
+
+
 def is_windows_app_package(name: str) -> bool:
     return name.startswith("winrt-Microsoft.")
 
@@ -256,13 +277,29 @@ def write_project_files(
         with open(package_path / "setup.py", "w", newline="\n") as f:
             f.write(
                 SETUP_PY_TEMPLATE.format(
+                    extra_init=APP_SDK_INIT
+                    if is_app_sdk_interop_package(package_name)
+                    else "",
                     ext_module=ext_module_name,
                     sources=", ".join(f'"{x}"' for x in sources),
                     extra_imports="\nfrom winrt_windows_app_sdk import get_include_dirs as get_app_sdk_include_dirs"
                     if is_windows_app_package(package_name)
                     else "",
-                    extra_include_dirs="+ get_app_sdk_include_dirs()"
-                    if is_windows_app_package(package_name)
+                    extra_include_dirs=(
+                        "+ get_app_sdk_include_dirs()"
+                        if is_windows_app_package(package_name)
+                        else ""
+                    )
+                    + (
+                        '+ [str(WINDOWS_APP_SDK_PATH / "include")]'
+                        if is_app_sdk_interop_package(package_name)
+                        else ""
+                    ),
+                    extra_build=APP_SDK_EXTRA_BUILD
+                    if is_app_sdk_interop_package(package_name)
+                    else "",
+                    extra_libraries=', "Microsoft.WindowsAppRuntime.Bootstrap"'
+                    if is_app_sdk_interop_package(package_name)
                     else "",
                 )
             )
