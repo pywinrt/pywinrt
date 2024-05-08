@@ -48,6 +48,8 @@ jobs:
           - win_arm64
     steps:
       - uses: actions/checkout@v4
+      - name: install nuget packages
+        run: ./scripts/fetch-tools.ps1 -noCppWinRT -noPyWinRT -noTestWinRT
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
