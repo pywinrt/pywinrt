@@ -3,18 +3,20 @@
 param(
     [Parameter(Mandatory=$false)]
     [string]$CppWinRTVersion = "2.0.240111.5",
+    [switch]$noCppWinRT,
 
     [Parameter(Mandatory=$false)]
     [string]$PyWinRTVersion = "2.0.1",
+    [switch]$useLocalPyWinRTNuget,
+    [switch]$noPyWinRT,
 
     [Parameter(Mandatory=$false)]
     [string]$WindowsAppSDKVersion = "1.5.240311000",
+    [switch]$noWindowsAppSDK,
 
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",
-
-    [switch]$useLocalPyWinRTNuget,
-    [switch]$noPyWinRT
+    [switch]$noTestWinRT
 )
 
 $repoRootPath = (Get-Item $PSScriptRoot).Parent.FullName
@@ -26,29 +28,35 @@ try {
     exit 1
 }
 
-& nuget install Microsoft.Windows.CppWinRT -Version $CppWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+if (!$noCppWinRT) {
+    & nuget install Microsoft.Windows.CppWinRT -Version $CppWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
 If (!$noPyWinRT) {
     $source = If ($useLocalPyWinRTNuget) { "-Source", "$repoRootPath" } Else { "" }
     & nuget install PyWinRT -Version $PyWinRTVersion -Prerelease -DependencyVersion Ignore -ExcludeVersion -OutputDirectory "$repoRootPath/_tools" $source
+
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
+if (!$noWindowsAppSDK) {
+    & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
 
-& nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+if (!$noTestWinRT) {
+    & nuget install KennyKerr.Windows.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
-}
-
-& nuget install KennyKerr.Windows.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
-
-if ($LASTEXITCODE -ne 0) {
-    exit $LASTEXITCODE
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
 }
