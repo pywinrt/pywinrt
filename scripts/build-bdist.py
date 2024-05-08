@@ -1,11 +1,15 @@
+import os
 import shutil
 import subprocess
 import sys
 from itertools import chain
 from pathlib import Path
 
-PROJECTION_PATH = (Path(__file__).parent.parent / "projection").resolve()
+PROJECT_DIR = Path(__file__).parent.parent
+PROJECTION_PATH = (PROJECT_DIR / "projection").resolve()
+WINDOWS_APP_SDK_PATH = (PROJECT_DIR / "_tools/Microsoft.WindowsAppSDK").resolve()
 
+os.environ["WINDOWS_APP_SDK_PATH"] = str(WINDOWS_APP_SDK_PATH)
 
 for package_path in chain(
     [PROJECTION_PATH / "winrt-runtime"],

@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Added
+- Added `winrt.Microsoft.Windows.ApplicationModel.DynamicDepedency.Bootstrap`
+  interop package.
+
 ### Fixed
 - Fixed possible crash when checking if API is available at runtime.
 - Fixed memory leak when converting Python object to char16_t or hstring.
