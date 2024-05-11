@@ -34,6 +34,11 @@ version = {{ file = "pywinrt-version.txt" }}{dependencies}{optional_dependencies
 {find_src}
 """
 
+COMPONENT_PACKAGE_FIND_SRC = """
+[tool.setuptools.packages.find]
+exclude = ["cppwrint"]
+"""
+
 SDK_PACKAGE_TEMPLATE = """\
 [tool.setuptools.package-data]
 "*" = ["*.h"]
@@ -218,6 +223,10 @@ def is_windows_app_package(name: str) -> bool:
     return name.startswith("winrt-Microsoft.")
 
 
+def is_component_pacakge(name: str) -> bool:
+    return name in ["winrt-TestComponent"]
+
+
 def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
@@ -254,7 +263,13 @@ def write_project_files(
                 optional_dependencies=OPTIONAL_DEPENDENCIES
                 if has_all_requirements
                 else "",
-                find_src=FIND_SRC if (package_path / "src").exists() else "",
+                find_src=FIND_SRC
+                if (package_path / "src").exists()
+                else (
+                    COMPONENT_PACKAGE_FIND_SRC
+                    if is_component_pacakge(package_name)
+                    else ""
+                ),
             )
         )
 
@@ -293,6 +308,11 @@ def write_project_files(
                     + (
                         '+ [str(WINDOWS_APP_SDK_PATH / "include")]'
                         if is_app_sdk_interop_package(package_name)
+                        else ""
+                    )
+                    + (
+                        ' + ["./cppwinrt"]'
+                        if is_component_pacakge(package_name)
                         else ""
                     ),
                     extra_build=APP_SDK_EXTRA_BUILD
