@@ -2130,9 +2130,9 @@ return 0;
         {
             auto setter = setter_name.empty() ? "nullptr"
                                               : w.write_temp(
-                                                  "reinterpret_cast<setter>(@_%)",
-                                                  type.TypeName(),
-                                                  setter_name);
+                                                    "reinterpret_cast<setter>(@_%)",
+                                                    type.TypeName(),
+                                                    setter_name);
 
             w.write(
                 "{ \"%\", reinterpret_cast<getter>(@_%), %, nullptr, nullptr },\n",
@@ -2316,9 +2316,9 @@ static PyType_Spec type_spec_@ =
         {
             auto setter = setter_name.empty() ? "nullptr"
                                               : w.write_temp(
-                                                  "reinterpret_cast<setter>(@_%)",
-                                                  type.TypeName(),
-                                                  setter_name);
+                                                    "reinterpret_cast<setter>(@_%)",
+                                                    type.TypeName(),
+                                                    setter_name);
 
             w.write(
                 "{ \"%\", reinterpret_cast<getter>(@_%), %, nullptr, nullptr },\n",
