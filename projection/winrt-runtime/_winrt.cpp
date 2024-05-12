@@ -21,7 +21,7 @@ namespace py::cpp::_winrt
     }
 
     static void Object_dealloc(
-        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self)
+        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self) noexcept
     {
         auto tp = Py_TYPE(self);
 
@@ -30,12 +30,65 @@ namespace py::cpp::_winrt
         Py_DECREF(tp);
     }
 
-    static PyType_Slot Object_type_slots[] = {
-        {Py_tp_new, reinterpret_cast<void*>(Object_new)},
-        {Py_tp_dealloc, reinterpret_cast<void*>(Object_dealloc)},
-        {Py_tp_doc, const_cast<char*>(Object_doc)},
-        {},
-    };
+    PyDoc_STRVAR(
+        Object_iids_doc,
+        "Gets the interfaces that are implemented by the current Windows Runtime class.");
+
+    static PyObject* Object_iids_get(
+        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
+        void* /*unused*/) noexcept
+    {
+        try
+        {
+            auto name = winrt::get_interfaces(self->obj);
+            return convert(name);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    PyDoc_STRVAR(
+        Object_runtime_class_name_doc,
+        "Gets the fully qualified name of the current Windows Runtime object.");
+
+    static PyObject* Object_runtime_class_name_get(
+        py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>* self,
+        void* /*unused*/) noexcept
+    {
+        try
+        {
+            auto name = winrt::get_class_name(self->obj);
+            return convert(name);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyGetSetDef Object_getset[]
+        = {{"_iids_",
+            reinterpret_cast<getter>(Object_iids_get),
+            nullptr,
+            Object_iids_doc,
+            nullptr},
+           {"_runtime_class_name_",
+            reinterpret_cast<getter>(Object_runtime_class_name_get),
+            nullptr,
+            Object_runtime_class_name_doc,
+            nullptr},
+           {}};
+
+    static PyType_Slot Object_type_slots[]
+        = {{Py_tp_doc, const_cast<char*>(Object_doc)},
+           {Py_tp_new, reinterpret_cast<void*>(Object_new)},
+           {Py_tp_dealloc, reinterpret_cast<void*>(Object_dealloc)},
+           {Py_tp_getset, reinterpret_cast<void*>(Object_getset)},
+           {}};
 
     static PyType_Spec Object_type_spec
         = {"_winrt.Object",

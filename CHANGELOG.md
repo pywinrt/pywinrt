@@ -7,6 +7,7 @@
 ### Added
 - Added `winrt.Microsoft.Windows.ApplicationModel.DynamicDepedency.Bootstrap`
   interop package.
+- Added `_iids_` and `_runtime_class_name_` properties to `system.Object`.
 
 ### Fixed
 - Fixed possible crash when checking if API is available at runtime.
