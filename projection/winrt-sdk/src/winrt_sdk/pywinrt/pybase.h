@@ -1701,6 +1701,11 @@ namespace py
 
         static auto convert_to(PyObject* obj)
         {
+            if (Py_IsNone(obj))
+            {
+                return empty_instance<T>::get();
+            }
+
             auto result = convert_interface_to<T>(obj);
 
             if (!result)
