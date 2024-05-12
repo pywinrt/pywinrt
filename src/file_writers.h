@@ -174,20 +174,54 @@ static void custom_set(winrt::hresult& instance, int32_t value)
             w.write("import enum\n");
         }
 
-        auto delegate_types = filter_types(settings.filter, members.delegates);
-        if (!delegate_types.empty())
+        auto delegate_aliases = w.write_temp(
+            "%",
+            bind(settings.filter.bind_each<write_python_delegate_type_alias>(
+                members.delegates)));
+
+        if (!delegate_aliases.empty())
         {
             w.write("import typing\n");
             w.write("import uuid as _uuid\n");
         }
 
-        if (!enum_types.empty() || !delegate_types.empty())
+        if (!enum_types.empty() || !delegate_aliases.empty())
         {
             w.write("\n");
         }
 
         w.write("import winrt.system\n");
         w.write("from winrt import %\n", bind<write_ns_module_name>(ns));
+
+        // Search for any type names that got quoted in the delegates and
+        // collect them to determine if any imports are needed.
+        std::regex winrt_type(R"(winrt\.[^(?:system)][\w\.]+)");
+        std::string search_str{delegate_aliases};
+        std::set<std::string> delegate_imports;
+
+        for (std::smatch sm; std::regex_search(search_str, sm, winrt_type);
+             search_str = sm.suffix())
+        {
+            auto match = sm.str();
+            auto last_dot = match.find_last_of('.');
+            delegate_imports.insert(match.substr(0, last_dot));
+        }
+
+        // Write any import needed for the quoted type in the delegates
+        if (!delegate_imports.empty())
+        {
+            w.write("\nif typing.TYPE_CHECKING:\n");
+            {
+                writer::indent_guard g{w};
+
+                for (auto&& import : delegate_imports)
+                {
+                    w.write("import %\n", import);
+                }
+            }
+
+            w.write("\n");
+        }
 
         w.write("\n");
         w.write("__all__ = [\n");
@@ -213,8 +247,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);
         settings.filter.bind_each<write_python_import_type>(members.classes)(w);
         settings.filter.bind_each<write_python_import_type>(members.interfaces)(w);
-        settings.filter.bind_each<write_python_delegate_type_alias>(members.delegates)(
-            w);
+        w.write("%", delegate_aliases);
 
         w.flush_to_file(folder / "__init__.py");
     }

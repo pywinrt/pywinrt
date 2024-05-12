@@ -7,6 +7,10 @@ import uuid as _uuid
 import winrt.system
 from winrt import _winrt_microsoft_ui_xaml_controls
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.foundation
+
+
 __all__ = [
     "AnnotatedScrollBarScrollingEventKind",
     "AppBarClosedDisplayMode",
@@ -1490,7 +1494,7 @@ DragItemsStartingEventHandler = typing.Callable[[typing.Optional[winrt.system.Ob
 HubSectionHeaderClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[HubSectionHeaderClickEventArgs]], None]
 ItemClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ItemClickEventArgs]], None]
 ListViewItemToKeyHandler = typing.Callable[[typing.Optional[winrt.system.Object]], str]
-ListViewKeyToItemHandler = typing.Callable[[str], winrt.windows.foundation.IAsyncOperation[winrt.system.Object]]
+ListViewKeyToItemHandler = typing.Callable[[str], "winrt.windows.foundation.IAsyncOperation[winrt.system.Object]"]
 SectionsInViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SectionsInViewChangedEventArgs]], None]
 SelectionChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SelectionChangedEventArgs]], None]
 SemanticZoomViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SemanticZoomViewChangedEventArgs]], None]

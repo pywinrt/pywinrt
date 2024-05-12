@@ -7,6 +7,10 @@ import uuid as _uuid
 import winrt.system
 from winrt import _winrt_windows_security_isolation
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.foundation.collections
+
+
 __all__ = [
     "IsolatedWindowsEnvironmentActivator",
     "IsolatedWindowsEnvironmentAllowedClipboardFormats",
@@ -170,5 +174,5 @@ IsolatedWindowsEnvironmentStartProcessResult = _winrt_windows_security_isolation
 IsolatedWindowsEnvironmentTelemetryParameters = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters
 IsolatedWindowsEnvironmentUserInfo = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo
 IsolatedWindowsHostMessenger = _winrt_windows_security_isolation.IsolatedWindowsHostMessenger
-HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
-MessageReceivedCallback = typing.Callable[[_uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
+HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, "winrt.windows.foundation.collections.IVectorView[winrt.system.Object]"], None]
+MessageReceivedCallback = typing.Callable[[_uuid.UUID, "winrt.windows.foundation.collections.IVectorView[winrt.system.Object]"], None]
