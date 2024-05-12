@@ -1,6 +1,6 @@
 root = true
 
-[*.{py,pyi,json,md,cpp,h,cmd,ps1,txt,toml}]
+[*.{py,pyi,json,md,cpp,h,cmd,ps1,txt,toml,rst}]
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
