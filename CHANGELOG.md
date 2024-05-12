@@ -15,6 +15,7 @@
   other modules.
 - Fixed `TypeError` when trying to pass composed runtime object to API that
   requires subclass ([#25]).
+- Fixed `TypeError` when passing `None` to APIs that require a `system.Object`.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
 
