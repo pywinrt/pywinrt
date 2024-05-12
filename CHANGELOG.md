@@ -13,6 +13,10 @@
 - Fixed memory leak when converting Python object to `char16_t` or `hstring`.
 - Fixed importing modules containing delegates with parameters that reference
   other modules.
+- Fixed `TypeError` when trying to pass composed runtime object to API that
+  requires subclass ([#25]).
+
+[#25]: https://github.com/pywinrt/pywinrt/issues/25
 
 ## [v2.0.1] - 2024-04-28
 
