@@ -7,6 +7,11 @@ import uuid as _uuid
 import winrt.system
 from winrt import _winrt_windows_ui_webui
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.applicationmodel
+    import winrt.windows.applicationmodel.activation
+
+
 __all__ = [
     "PrintContent",
     "ActivatedDeferral",
@@ -154,10 +159,10 @@ WebUIWebAuthenticationBrokerContinuationEventArgs = _winrt_windows_ui_webui.WebU
 IActivatedEventArgsDeferral = _winrt_windows_ui_webui.IActivatedEventArgsDeferral
 IWebUIBackgroundTaskInstance = _winrt_windows_ui_webui.IWebUIBackgroundTaskInstance
 IWebUINavigatedEventArgs = _winrt_windows_ui_webui.IWebUINavigatedEventArgs
-ActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs]], None]
-BackgroundActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.activation.IBackgroundActivatedEventArgs]], None]
-EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.IEnteredBackgroundEventArgs]], None]
-LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.ILeavingBackgroundEventArgs]], None]
+ActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.activation.IActivatedEventArgs"]], None]
+BackgroundActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.activation.IBackgroundActivatedEventArgs"]], None]
+EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.IEnteredBackgroundEventArgs"]], None]
+LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.ILeavingBackgroundEventArgs"]], None]
 NavigatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[IWebUINavigatedEventArgs]], None]
 ResumingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
-SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.ISuspendingEventArgs]], None]
+SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.ISuspendingEventArgs"]], None]

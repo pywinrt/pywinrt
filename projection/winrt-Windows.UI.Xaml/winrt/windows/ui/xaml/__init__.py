@@ -7,6 +7,11 @@ import uuid as _uuid
 import winrt.system
 from winrt import _winrt_windows_ui_xaml
 
+if typing.TYPE_CHECKING:
+    import winrt.windows.applicationmodel
+    import winrt.windows.ui.core
+
+
 __all__ = [
     "ApplicationHighContrastAdjustment",
     "ApplicationRequiresPointerMode",
@@ -456,16 +461,16 @@ CreateDefaultValueCallback = typing.Callable[[], typing.Optional[winrt.system.Ob
 DependencyPropertyChangedCallback = typing.Callable[[typing.Optional[DependencyObject], typing.Optional[DependencyProperty]], None]
 DependencyPropertyChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DependencyPropertyChangedEventArgs]], None]
 DragEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragEventArgs]], None]
-EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.EnteredBackgroundEventArgs]], None]
+EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.EnteredBackgroundEventArgs"]], None]
 ExceptionRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ExceptionRoutedEventArgs]], None]
-LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.LeavingBackgroundEventArgs]], None]
+LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.LeavingBackgroundEventArgs"]], None]
 PropertyChangedCallback = typing.Callable[[typing.Optional[DependencyObject], typing.Optional[DependencyPropertyChangedEventArgs]], None]
 RoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RoutedEventArgs]], None]
 SizeChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SizeChangedEventArgs]], None]
-SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.SuspendingEventArgs]], None]
+SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.applicationmodel.SuspendingEventArgs"]], None]
 UnhandledExceptionEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[UnhandledExceptionEventArgs]], None]
 VisualStateChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[VisualStateChangedEventArgs]], None]
-WindowActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.WindowActivatedEventArgs]], None]
-WindowClosedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.CoreWindowEventArgs]], None]
-WindowSizeChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.WindowSizeChangedEventArgs]], None]
-WindowVisibilityChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.VisibilityChangedEventArgs]], None]
+WindowActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.ui.core.WindowActivatedEventArgs"]], None]
+WindowClosedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.ui.core.CoreWindowEventArgs"]], None]
+WindowSizeChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.ui.core.WindowSizeChangedEventArgs"]], None]
+WindowVisibilityChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional["winrt.windows.ui.core.VisibilityChangedEventArgs"]], None]

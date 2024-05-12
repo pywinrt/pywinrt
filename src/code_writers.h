@@ -4695,11 +4695,22 @@ if (!return_value)
 
         method_signature signature{get_delegate_invoke(type)};
 
-        w.write(
+        auto decl = w.write_temp(
             "@ = typing.Callable[[%], %]\n",
             type.TypeName(),
             bind_list<write_method_in_param_typing>(
                 ", ", filter_py_in_params(signature.params())),
             bind<write_return_typing>(signature));
+
+        // Surround any types starting with winrt. other than winrt.system with
+        // quotes to avoid import errors at runtime. Since we don't have recursive
+        // regex, we have to do some ugly stuff with [] for nested generics.
+        decl = std::regex_replace(
+            decl,
+            std::regex(
+                R"(winrt\.[^(?:system)][\w\.]+(?:\[[^\]\[]*(?:\[[^\]]*\])?\])?)"),
+            "\"$&\"");
+
+        w.write("%", decl);
     }
 } // namespace pywinrt
