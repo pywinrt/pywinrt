@@ -16,6 +16,7 @@ from typing import (
     ValuesView,
     overload,
 )
+from uuid import UUID
 
 MTA: int
 STA: int
@@ -82,7 +83,11 @@ class MutableMapping(Mapping[_KT, _VT]):
 
 # actual runtime classes
 
-class Object: ...
+class Object:
+    @property
+    def _iids_(self) -> Array[UUID]: ...
+    @property
+    def _runtime_class_name_(self) -> str: ...
 
 class Array(MutableSequence[_T]):
     _winrt_element_type_name_: str
