@@ -6,12 +6,30 @@
 
 .. class:: Object
 
-    A wrapper around the WinRT ``System.Object`` type. 
-    
+    A wrapper around the WinRT ``System.Object`` type.
+
     This is the base type of all WinRT runtime objects and cannot be
     instantiated directly.
 
-    This type currently has no members.
+    .. rubric:: Introspection attributes
+
+    WinRT objects have the following attributes for inspecting various metatdata
+    at runtime:
+
+    .. attribute:: _runtime_class_name_
+        :type: str
+
+        Gets the WinRT runtime class name of the object.
+
+        .. versionadded:: unreleased
+
+    .. attribute:: _iids_
+        :type: Array[uuid.UUID]
+
+        Gets the Interface Identifiers (IIDS) of the WinRT interfaces
+        implemented by the object.
+
+        .. versionadded:: unreleased
 
 .. class:: Array(type, [initializer, ] /)
 
