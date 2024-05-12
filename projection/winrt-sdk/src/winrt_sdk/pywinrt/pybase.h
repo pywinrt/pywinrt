@@ -1497,35 +1497,6 @@ namespace py
     };
 
     template<typename T>
-    struct converter<T, typename std::enable_if_t<is_class_category_v<T>>>
-    {
-        static PyObject* convert(T const& instance) noexcept
-        {
-            return wrap(instance);
-        }
-
-        static auto convert_to(PyObject* obj)
-        {
-            throw_if_pyobj_null(obj);
-
-            auto type = get_python_type<T>();
-
-            if (!type)
-            {
-                throw python_exception();
-            }
-
-            if (!Py_IS_TYPE(obj, type))
-            {
-                PyErr_SetString(PyExc_TypeError, "wrong type");
-                throw python_exception();
-            }
-
-            return reinterpret_cast<winrt_wrapper<T>*>(obj)->obj;
-        }
-    };
-
-    template<typename T>
     struct python_iterable : winrt::implements<
                                  python_iterable<T>,
                                  winrt::Windows::Foundation::Collections::IIterable<T>>
@@ -1718,9 +1689,10 @@ namespace py
     template<typename T>
     struct converter<
         T,
-        typename std::enable_if_t<(
-            is_interface_category_v<T>
-            || is_pinterface_category_v<T>)&&!is_specialized_interface_v<T>>>
+        typename std::enable_if_t<
+            (is_class_category_v<T> || is_interface_category_v<T>
+             || is_pinterface_category_v<T>)
+            && !is_specialized_interface_v<T>>>
     {
         static PyObject* convert(T const& instance) noexcept
         {
