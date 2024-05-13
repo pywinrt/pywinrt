@@ -398,7 +398,10 @@ namespace py::cpp::Windows::UI::Xaml
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ApplicationInitializationCallback>(args, 0);
 
-                winrt::Windows::UI::Xaml::Application::Start(param0);
+                {
+                    auto ts = release_gil();
+                    winrt::Windows::UI::Xaml::Application::Start(param0);
+                }
                 Py_RETURN_NONE;
             }
             catch (...)

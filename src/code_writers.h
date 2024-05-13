@@ -846,11 +846,35 @@ static PyModuleDef module_def
             }
             else
             {
-                w.write(
+                auto invoke = w.write_temp(
                     "%%(%);\n",
                     bind<write_method_invoke_context>(type, method),
                     bind<write_method_cpp_name>(method),
                     bind_list<write_param_name>(", ", signature.params()));
+
+                // HACK: WinRT APIs are generally non-blocking, but some are
+                // long-running and block other threads in the Python interpreter.
+                // To avoid this, we release the GIL before invoking the method.
+                // The known methods are just hard-coded here for now. We can
+                // generalize this if we find more methods that need this treatment.
+                // For the Application::Start methods though, what we really need
+                // is an alternative that integrates with asyncio in Python.
+                if ((type.TypeNamespace() == "Windows.UI.Xaml"
+                     || type.TypeNamespace() == "Microsoft.UI.Xaml")
+                    && type.TypeName() == "Application" && method.Name() == "Start")
+                {
+                    w.write("{\n");
+                    {
+                        writer::indent_guard g{w};
+                        w.write("auto ts = release_gil();\n");
+                        w.write("%", invoke);
+                    }
+                    w.write("}\n");
+                }
+                else
+                {
+                    w.write("%", invoke);
+                }
 
                 write_void_return(w, method, put_property_method);
             }

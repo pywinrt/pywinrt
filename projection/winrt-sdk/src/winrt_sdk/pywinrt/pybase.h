@@ -63,6 +63,37 @@ namespace py
         return gil_handle{PyGILState_Ensure()};
     }
 
+    /**
+     * Traits for use with winrt::handle_type.
+     */
+    struct thread_state_traits
+    {
+        using type = PyThreadState*;
+
+        static void close(type value) noexcept
+        {
+            PyEval_RestoreThread(value);
+        }
+
+        static constexpr type invalid() noexcept
+        {
+            return nullptr;
+        }
+    };
+
+    /**
+     * Type alias for Python thread state handle.
+     */
+    using thread_state_handle = winrt::handle_type<thread_state_traits>;
+
+    /**
+     * Helper function for ensuring a block of code runs with the Python GIL released.
+     */
+    static inline auto release_gil()
+    {
+        return thread_state_handle{PyEval_SaveThread()};
+    }
+
     template<typename Category>
     struct pinterface_checker
     {
