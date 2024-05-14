@@ -195,7 +195,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         // Search for any type names that got quoted in the delegates and
         // collect them to determine if any imports are needed.
-        std::regex winrt_type(R"(winrt\.[^(?:system)][\w\.]+)");
+        std::regex winrt_type(R"(winrt\.(?!system\.)[\w\.]+)");
         std::string search_str{delegate_aliases};
         std::set<std::string> delegate_imports{};
 

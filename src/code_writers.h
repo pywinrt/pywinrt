@@ -4731,8 +4731,7 @@ if (!return_value)
         // regex, we have to do some ugly stuff with [] for nested generics.
         decl = std::regex_replace(
             decl,
-            std::regex(
-                R"(winrt\.[^(?:system)][\w\.]+(?:\[[^\]\[]*(?:\[[^\]]*\])?\])?)"),
+            std::regex(R"(winrt\.(?!system\.)[\w\.]+(?:\[[^\]\[]*(?:\[[^\]]*\])?\])?)"),
             "\"$&\"");
 
         w.write("%", decl);
