@@ -596,8 +596,25 @@ static PyModuleDef module_def
             }
             w.write("}\n\n");
 
+            std::vector<TypeDef> composeable_classes{};
+            std::copy_if(
+                members.classes.begin(),
+                members.classes.end(),
+                std::back_inserter(composeable_classes),
+                is_composable);
+
+            std::vector<TypeDef> sealed_classes{};
+            std::copy_if(
+                members.classes.begin(),
+                members.classes.end(),
+                std::back_inserter(sealed_classes),
+                std::not_fn(is_composable));
+
+            // write composable classes first because they may be base of sealed class
             settings.filter.bind_each<write_ns_module_init_python_type>(
-                members.classes)(w);
+                composeable_classes)(w);
+            settings.filter.bind_each<write_ns_module_init_python_type>(sealed_classes)(
+                w);
             settings.filter.bind_each<write_ns_module_init_python_type>(
                 members.interfaces)(w);
             settings.filter.bind_each<write_ns_module_init_python_type>(

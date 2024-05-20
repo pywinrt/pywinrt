@@ -4936,24 +4936,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ContentDeferral_type{py::register_python_type(module.get(), &type_spec_ContentDeferral, object_bases.get(), nullptr)};
-    if (!ContentDeferral_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentEnvironmentSettingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentEnvironmentSettingChangedEventArgs, object_bases.get(), nullptr)};
-    if (!ContentEnvironmentSettingChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentEnvironmentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentEnvironmentStateChangedEventArgs, object_bases.get(), nullptr)};
-    if (!ContentEnvironmentStateChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_ContentIsland_Static{PyType_FromSpec(&type_spec_ContentIsland_Static)};
     if (!type_ContentIsland_Static)
     {
@@ -4966,20 +4948,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ContentIslandAutomationProviderRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentIslandAutomationProviderRequestedEventArgs, object_bases.get(), nullptr)};
-    if (!ContentIslandAutomationProviderRequestedEventArgs_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle ContentIslandEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentIslandEnvironment, object_bases.get(), nullptr)};
     if (!ContentIslandEnvironment_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentIslandStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentIslandStateChangedEventArgs, object_bases.get(), nullptr)};
-    if (!ContentIslandStateChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -5002,26 +4972,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ContentSiteRequestedStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentSiteRequestedStateChangedEventArgs, object_bases.get(), nullptr)};
-    if (!ContentSiteRequestedStateChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle ContentSiteView_type{py::register_python_type(module.get(), &type_spec_ContentSiteView, object_bases.get(), nullptr)};
     if (!ContentSiteView_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopChildSiteBridge_Static)};
-    if (!type_DesktopChildSiteBridge_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
-    if (!DesktopChildSiteBridge_type)
     {
         return nullptr;
     }
@@ -5034,6 +4986,54 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
 
     py::pyobj_handle DesktopSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopSiteBridge_Static.get()))};
     if (!DesktopSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentDeferral_type{py::register_python_type(module.get(), &type_spec_ContentDeferral, object_bases.get(), nullptr)};
+    if (!ContentDeferral_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentEnvironmentSettingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentEnvironmentSettingChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ContentEnvironmentSettingChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentEnvironmentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentEnvironmentStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ContentEnvironmentStateChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentIslandAutomationProviderRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentIslandAutomationProviderRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ContentIslandAutomationProviderRequestedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentIslandStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentIslandStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ContentIslandStateChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentSiteRequestedStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContentSiteRequestedStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ContentSiteRequestedStateChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopChildSiteBridge_Static)};
+    if (!type_DesktopChildSiteBridge_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
+    if (!DesktopChildSiteBridge_type)
     {
         return nullptr;
     }

@@ -9031,6 +9031,48 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
+    if (!type_KeyboardAccelerator_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
+    if (!KeyboardAccelerator_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationStartedRoutedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StandardUICommand_Static{PyType_FromSpec(&type_spec_StandardUICommand_Static)};
+    if (!type_StandardUICommand_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle StandardUICommand_type{py::register_python_type(module.get(), &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Static.get()))};
+    if (!StandardUICommand_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
+    if (!type_XamlUICommand_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
+    if (!XamlUICommand_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle AccessKeyDisplayDismissedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), nullptr)};
     if (!AccessKeyDisplayDismissedEventArgs_type)
     {
@@ -9175,18 +9217,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
-    if (!type_KeyboardAccelerator_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
-    if (!KeyboardAccelerator_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle KeyboardAcceleratorInvokedEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyboardAcceleratorInvokedEventArgs, object_bases.get(), nullptr)};
     if (!KeyboardAcceleratorInvokedEventArgs_type)
     {
@@ -9219,12 +9249,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
 
     py::pyobj_handle ManipulationPivot_type{py::register_python_type(module.get(), &type_spec_ManipulationPivot, object_bases.get(), nullptr)};
     if (!ManipulationPivot_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr)};
-    if (!ManipulationStartedRoutedEventArgs_type)
     {
         return nullptr;
     }
@@ -9265,32 +9289,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardUICommand_Static{PyType_FromSpec(&type_spec_StandardUICommand_Static)};
-    if (!type_StandardUICommand_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle StandardUICommand_type{py::register_python_type(module.get(), &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Static.get()))};
-    if (!StandardUICommand_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle TappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedRoutedEventArgs, object_bases.get(), nullptr)};
     if (!TappedRoutedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
-    if (!type_XamlUICommand_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
-    if (!XamlUICommand_type)
     {
         return nullptr;
     }

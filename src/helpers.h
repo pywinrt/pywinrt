@@ -95,6 +95,13 @@ namespace pywinrt
         return get_category(type) == category::class_type && type.Flags().Abstract();
     }
 
+    /* returns true if type is composable (has Composable attribute) */
+    auto is_composable(TypeDef const& type)
+    {
+        return bool(
+            get_attribute(type, "Windows.Foundation.Metadata", "ComposableAttribute"));
+    }
+
     enum class fundamental_type
     {
         Boolean,

@@ -14367,12 +14367,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle AutoSuggestBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr)};
-    if (!AutoSuggestBoxAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_AutomationPeer_Static{PyType_FromSpec(&type_spec_AutomationPeer_Static)};
     if (!type_AutomationPeer_Static)
     {
@@ -14381,18 +14375,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle AutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeer_Static.get()))};
     if (!AutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_AutomationPeerAnnotation_Static{PyType_FromSpec(&type_spec_AutomationPeerAnnotation_Static)};
-    if (!type_AutomationPeerAnnotation_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle AutomationPeerAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Static.get()))};
-    if (!AutomationPeerAnnotation_type)
     {
         return nullptr;
     }
@@ -14459,12 +14441,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle DatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr)};
     if (!DatePickerAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DatePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
-    if (!DatePickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
@@ -14559,12 +14535,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle InkToolbarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr)};
-    if (!InkToolbarAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle ItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, object_bases.get(), nullptr)};
     if (!ItemAutomationPeer_type)
     {
@@ -14591,12 +14561,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle ListBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr)};
     if (!ListBoxItemDataAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ListPickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
-    if (!ListPickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
@@ -14633,30 +14597,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle ListViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr)};
     if (!ListViewItemDataAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle LoopingSelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr)};
-    if (!LoopingSelectorAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle LoopingSelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr)};
-    if (!LoopingSelectorItemAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle LoopingSelectorItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr)};
-    if (!LoopingSelectorItemDataAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle MapControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr)};
-    if (!MapControlAutomationPeer_type)
     {
         return nullptr;
     }
@@ -14717,30 +14657,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle PersonPictureAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr)};
     if (!PersonPictureAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
-    if (!PickerFlyoutPresenterAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PivotAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, object_bases.get(), nullptr)};
-    if (!PivotAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PivotItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr)};
-    if (!PivotItemAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PivotItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr)};
-    if (!PivotItemDataAutomationPeer_type)
     {
         return nullptr;
     }
@@ -14871,12 +14787,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle TimePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
-    if (!TimePickerFlyoutPresenterAutomationPeer_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle ToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr)};
     if (!ToggleButtonAutomationPeer_type)
     {
@@ -14903,6 +14813,96 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
 
     py::pyobj_handle TreeViewListAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr)};
     if (!TreeViewListAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle AutoSuggestBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr)};
+    if (!AutoSuggestBoxAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationPeerAnnotation_Static{PyType_FromSpec(&type_spec_AutomationPeerAnnotation_Static)};
+    if (!type_AutomationPeerAnnotation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle AutomationPeerAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Static.get()))};
+    if (!AutomationPeerAnnotation_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DatePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    if (!DatePickerFlyoutPresenterAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InkToolbarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr)};
+    if (!InkToolbarAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ListPickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    if (!ListPickerFlyoutPresenterAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle LoopingSelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr)};
+    if (!LoopingSelectorAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle LoopingSelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr)};
+    if (!LoopingSelectorItemAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle LoopingSelectorItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr)};
+    if (!LoopingSelectorItemDataAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle MapControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr)};
+    if (!MapControlAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    if (!PickerFlyoutPresenterAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PivotAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, object_bases.get(), nullptr)};
+    if (!PivotAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PivotItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr)};
+    if (!PivotItemAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PivotItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr)};
+    if (!PivotItemDataAutomationPeer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TimePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    if (!TimePickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }

@@ -4985,6 +4985,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
+    if (!CurrentChangingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ItemIndexRange_type{py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr)};
+    if (!ItemIndexRange_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PropertyChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PropertyChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
+    if (!RelativeSource_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_BindingOperations_Static{PyType_FromSpec(&type_spec_BindingOperations_Static)};
     if (!type_BindingOperations_Static)
     {
@@ -5009,32 +5033,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
-    if (!CurrentChangingEventArgs_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle DataErrorsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DataErrorsChangedEventArgs, object_bases.get(), nullptr)};
     if (!DataErrorsChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ItemIndexRange_type{py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr)};
-    if (!ItemIndexRange_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PropertyChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr)};
-    if (!PropertyChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
-    if (!RelativeSource_type)
     {
         return nullptr;
     }

@@ -2912,6 +2912,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle DesktopWindowXamlSource_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr)};
+    if (!DesktopWindowXamlSource_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle DesignerAppExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr)};
     if (!DesignerAppExitedEventArgs_type)
     {
@@ -2926,12 +2932,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
 
     py::pyobj_handle DesignerAppView_type{py::register_python_type(module.get(), &type_spec_DesignerAppView, object_bases.get(), nullptr)};
     if (!DesignerAppView_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DesktopWindowXamlSource_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr)};
-    if (!DesktopWindowXamlSource_type)
     {
         return nullptr;
     }

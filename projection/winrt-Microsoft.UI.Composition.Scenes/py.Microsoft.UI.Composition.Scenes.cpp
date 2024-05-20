@@ -4660,20 +4660,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr)};
-    if (!SceneBoundingBox_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle SceneComponent_type{py::register_python_type(module.get(), &type_spec_SceneComponent, object_bases.get(), nullptr)};
     if (!SceneComponent_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle SceneComponentCollection_type{py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr)};
-    if (!SceneComponentCollection_type)
     {
         return nullptr;
     }
@@ -4686,6 +4674,36 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
 
     py::pyobj_handle SceneMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneMaterialInput, object_bases.get(), nullptr)};
     if (!SceneMaterialInput_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), nullptr)};
+    if (!SceneObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), nullptr)};
+    if (!ScenePbrMaterial_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), nullptr)};
+    if (!SceneRendererComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr)};
+    if (!SceneBoundingBox_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SceneComponentCollection_type{py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr)};
+    if (!SceneComponentCollection_type)
     {
         return nullptr;
     }
@@ -4752,24 +4770,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
 
     py::pyobj_handle SceneNodeCollection_type{py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr)};
     if (!SceneNodeCollection_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), nullptr)};
-    if (!SceneObject_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), nullptr)};
-    if (!ScenePbrMaterial_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), nullptr)};
-    if (!SceneRendererComponent_type)
     {
         return nullptr;
     }

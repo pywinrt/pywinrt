@@ -4337,6 +4337,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle AppWindowPresenter_type{py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), nullptr)};
+    if (!AppWindowPresenter_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_AppWindow_Static{PyType_FromSpec(&type_spec_AppWindow_Static)};
     if (!type_AppWindow_Static)
     {
@@ -4357,12 +4363,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
 
     py::pyobj_handle AppWindowClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_AppWindowClosingEventArgs, object_bases.get(), nullptr)};
     if (!AppWindowClosingEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle AppWindowPresenter_type{py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), nullptr)};
-    if (!AppWindowPresenter_type)
     {
         return nullptr;
     }

@@ -11091,6 +11091,48 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), nullptr)};
+    if (!Inline_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), nullptr)};
+    if (!Span_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextElement_Static{PyType_FromSpec(&type_spec_TextElement_Static)};
+    if (!type_TextElement_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TextElement_type{py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Static.get()))};
+    if (!TextElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextHighlighter_Static{PyType_FromSpec(&type_spec_TextHighlighter_Static)};
+    if (!type_TextHighlighter_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TextHighlighter_type{py::register_python_type(module.get(), &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Static.get()))};
+    if (!TextHighlighter_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TextHighlighterBase_type{py::register_python_type(module.get(), &type_spec_TextHighlighterBase, object_bases.get(), nullptr)};
+    if (!TextHighlighterBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle BlockCollection_type{py::register_python_type(module.get(), &type_spec_BlockCollection, object_bases.get(), nullptr)};
     if (!BlockCollection_type)
     {
@@ -11129,12 +11171,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
 
     py::pyobj_handle HyperlinkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, object_bases.get(), nullptr)};
     if (!HyperlinkClickEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), nullptr)};
-    if (!Inline_type)
     {
         return nullptr;
     }
@@ -11183,42 +11219,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
 
     py::pyobj_handle Run_type{py::register_python_type(module.get(), &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Static.get()))};
     if (!Run_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), nullptr)};
-    if (!Span_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_TextElement_Static{PyType_FromSpec(&type_spec_TextElement_Static)};
-    if (!type_TextElement_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle TextElement_type{py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Static.get()))};
-    if (!TextElement_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_TextHighlighter_Static{PyType_FromSpec(&type_spec_TextHighlighter_Static)};
-    if (!type_TextHighlighter_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle TextHighlighter_type{py::register_python_type(module.get(), &type_spec_TextHighlighter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighter_Static.get()))};
-    if (!TextHighlighter_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle TextHighlighterBase_type{py::register_python_type(module.get(), &type_spec_TextHighlighterBase, object_bases.get(), nullptr)};
-    if (!TextHighlighterBase_type)
     {
         return nullptr;
     }

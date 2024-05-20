@@ -2729,18 +2729,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
-    if (!type_BitmapImage_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
-    if (!BitmapImage_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_BitmapSource_Static{PyType_FromSpec(&type_spec_BitmapSource_Static)};
     if (!type_BitmapSource_Static)
     {
@@ -2749,6 +2737,42 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
 
     py::pyobj_handle BitmapSource_type{py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Static.get()))};
     if (!BitmapSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), nullptr)};
+    if (!SurfaceImageSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SvgImageSource_Static{PyType_FromSpec(&type_spec_SvgImageSource_Static)};
+    if (!type_SvgImageSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SvgImageSource_type{py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Static.get()))};
+    if (!SvgImageSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle XamlRenderingBackgroundTask_type{py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr)};
+    if (!XamlRenderingBackgroundTask_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
+    if (!type_BitmapImage_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
+    if (!BitmapImage_type)
     {
         return nullptr;
     }
@@ -2777,24 +2801,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), nullptr)};
-    if (!SurfaceImageSource_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_SvgImageSource_Static{PyType_FromSpec(&type_spec_SvgImageSource_Static)};
-    if (!type_SvgImageSource_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle SvgImageSource_type{py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Static.get()))};
-    if (!SvgImageSource_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle SvgImageSourceFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_SvgImageSourceFailedEventArgs, object_bases.get(), nullptr)};
     if (!SvgImageSourceFailedEventArgs_type)
     {
@@ -2815,12 +2821,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
 
     py::pyobj_handle WriteableBitmap_type{py::register_python_type(module.get(), &type_spec_WriteableBitmap, object_bases.get(), nullptr)};
     if (!WriteableBitmap_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle XamlRenderingBackgroundTask_type{py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr)};
-    if (!XamlRenderingBackgroundTask_type)
     {
         return nullptr;
     }

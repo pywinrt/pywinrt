@@ -30225,6 +30225,198 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle BrushTransition_type{py::register_python_type(module.get(), &type_spec_BrushTransition, object_bases.get(), nullptr)};
+    if (!BrushTransition_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ColorPaletteResources_type{py::register_python_type(module.get(), &type_spec_ColorPaletteResources, object_bases.get(), nullptr)};
+    if (!ColorPaletteResources_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DataTemplate_Static{PyType_FromSpec(&type_spec_DataTemplate_Static)};
+    if (!type_DataTemplate_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DataTemplate_type{py::register_python_type(module.get(), &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Static.get()))};
+    if (!DataTemplate_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DataTemplateKey_type{py::register_python_type(module.get(), &type_spec_DataTemplateKey, object_bases.get(), nullptr)};
+    if (!DataTemplateKey_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DependencyObject_type{py::register_python_type(module.get(), &type_spec_DependencyObject, object_bases.get(), nullptr)};
+    if (!DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DependencyObjectCollection_type{py::register_python_type(module.get(), &type_spec_DependencyObjectCollection, object_bases.get(), nullptr)};
+    if (!DependencyObjectCollection_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DispatcherTimer_type{py::register_python_type(module.get(), &type_spec_DispatcherTimer, object_bases.get(), nullptr)};
+    if (!DispatcherTimer_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ElementFactoryGetArgs_type{py::register_python_type(module.get(), &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr)};
+    if (!ElementFactoryGetArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ElementFactoryRecycleArgs_type{py::register_python_type(module.get(), &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr)};
+    if (!ElementFactoryRecycleArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ExceptionRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr)};
+    if (!ExceptionRoutedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FrameworkElement_Static{PyType_FromSpec(&type_spec_FrameworkElement_Static)};
+    if (!type_FrameworkElement_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle FrameworkElement_type{py::register_python_type(module.get(), &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Static.get()))};
+    if (!FrameworkElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle FrameworkTemplate_type{py::register_python_type(module.get(), &type_spec_FrameworkTemplate, object_bases.get(), nullptr)};
+    if (!FrameworkTemplate_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PropertyMetadata_Static{PyType_FromSpec(&type_spec_PropertyMetadata_Static)};
+    if (!type_PropertyMetadata_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PropertyMetadata_type{py::register_python_type(module.get(), &type_spec_PropertyMetadata, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyMetadata_Static.get()))};
+    if (!PropertyMetadata_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ResourceDictionary_type{py::register_python_type(module.get(), &type_spec_ResourceDictionary, object_bases.get(), nullptr)};
+    if (!ResourceDictionary_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle RoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_RoutedEventArgs, object_bases.get(), nullptr)};
+    if (!RoutedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ScalarTransition_type{py::register_python_type(module.get(), &type_spec_ScalarTransition, object_bases.get(), nullptr)};
+    if (!ScalarTransition_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SetterBase_type{py::register_python_type(module.get(), &type_spec_SetterBase, object_bases.get(), nullptr)};
+    if (!SetterBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle StateTriggerBase_type{py::register_python_type(module.get(), &type_spec_StateTriggerBase, object_bases.get(), nullptr)};
+    if (!StateTriggerBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TriggerAction_type{py::register_python_type(module.get(), &type_spec_TriggerAction, object_bases.get(), nullptr)};
+    if (!TriggerAction_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle TriggerBase_type{py::register_python_type(module.get(), &type_spec_TriggerBase, object_bases.get(), nullptr)};
+    if (!TriggerBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_UIElement_Static{PyType_FromSpec(&type_spec_UIElement_Static)};
+    if (!type_UIElement_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle UIElement_type{py::register_python_type(module.get(), &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Static.get()))};
+    if (!UIElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle UIElementWeakCollection_type{py::register_python_type(module.get(), &type_spec_UIElementWeakCollection, object_bases.get(), nullptr)};
+    if (!UIElementWeakCollection_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Vector3Transition_type{py::register_python_type(module.get(), &type_spec_Vector3Transition, object_bases.get(), nullptr)};
+    if (!Vector3Transition_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VisualStateManager_Static{PyType_FromSpec(&type_spec_VisualStateManager_Static)};
+    if (!type_VisualStateManager_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle VisualStateManager_type{py::register_python_type(module.get(), &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Static.get()))};
+    if (!VisualStateManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle VisualTransition_type{py::register_python_type(module.get(), &type_spec_VisualTransition, object_bases.get(), nullptr)};
+    if (!VisualTransition_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Window_Static{PyType_FromSpec(&type_spec_Window_Static)};
+    if (!type_Window_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Window_type{py::register_python_type(module.get(), &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Static.get()))};
+    if (!Window_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle ApplicationInitializationCallbackParams_type{py::register_python_type(module.get(), &type_spec_ApplicationInitializationCallbackParams, object_bases.get(), nullptr)};
     if (!ApplicationInitializationCallbackParams_type)
     {
@@ -30249,18 +30441,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle BrushTransition_type{py::register_python_type(module.get(), &type_spec_BrushTransition, object_bases.get(), nullptr)};
-    if (!BrushTransition_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ColorPaletteResources_type{py::register_python_type(module.get(), &type_spec_ColorPaletteResources, object_bases.get(), nullptr)};
-    if (!ColorPaletteResources_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_CornerRadiusHelper_Static{PyType_FromSpec(&type_spec_CornerRadiusHelper_Static)};
     if (!type_CornerRadiusHelper_Static)
     {
@@ -30279,38 +30459,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DataTemplate_Static{PyType_FromSpec(&type_spec_DataTemplate_Static)};
-    if (!type_DataTemplate_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DataTemplate_type{py::register_python_type(module.get(), &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Static.get()))};
-    if (!DataTemplate_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DataTemplateKey_type{py::register_python_type(module.get(), &type_spec_DataTemplateKey, object_bases.get(), nullptr)};
-    if (!DataTemplateKey_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle DebugSettings_type{py::register_python_type(module.get(), &type_spec_DebugSettings, object_bases.get(), nullptr)};
     if (!DebugSettings_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DependencyObject_type{py::register_python_type(module.get(), &type_spec_DependencyObject, object_bases.get(), nullptr)};
-    if (!DependencyObject_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DependencyObjectCollection_type{py::register_python_type(module.get(), &type_spec_DependencyObjectCollection, object_bases.get(), nullptr)};
-    if (!DependencyObjectCollection_type)
     {
         return nullptr;
     }
@@ -30329,12 +30479,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
 
     py::pyobj_handle DependencyPropertyChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_DependencyPropertyChangedEventArgs, object_bases.get(), nullptr)};
     if (!DependencyPropertyChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DispatcherTimer_type{py::register_python_type(module.get(), &type_spec_DispatcherTimer, object_bases.get(), nullptr)};
-    if (!DispatcherTimer_type)
     {
         return nullptr;
     }
@@ -30393,18 +30537,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ElementFactoryGetArgs_type{py::register_python_type(module.get(), &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr)};
-    if (!ElementFactoryGetArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ElementFactoryRecycleArgs_type{py::register_python_type(module.get(), &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr)};
-    if (!ElementFactoryRecycleArgs_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_ElementSoundPlayer_Static{PyType_FromSpec(&type_spec_ElementSoundPlayer_Static)};
     if (!type_ElementSoundPlayer_Static)
     {
@@ -30419,30 +30551,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
 
     py::pyobj_handle EventTrigger_type{py::register_python_type(module.get(), &type_spec_EventTrigger, object_bases.get(), nullptr)};
     if (!EventTrigger_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ExceptionRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr)};
-    if (!ExceptionRoutedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_FrameworkElement_Static{PyType_FromSpec(&type_spec_FrameworkElement_Static)};
-    if (!type_FrameworkElement_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle FrameworkElement_type{py::register_python_type(module.get(), &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Static.get()))};
-    if (!FrameworkElement_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle FrameworkTemplate_type{py::register_python_type(module.get(), &type_spec_FrameworkTemplate, object_bases.get(), nullptr)};
-    if (!FrameworkTemplate_type)
     {
         return nullptr;
     }
@@ -30495,18 +30603,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PropertyMetadata_Static{PyType_FromSpec(&type_spec_PropertyMetadata_Static)};
-    if (!type_PropertyMetadata_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PropertyMetadata_type{py::register_python_type(module.get(), &type_spec_PropertyMetadata, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PropertyMetadata_Static.get()))};
-    if (!PropertyMetadata_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle PropertyPath_type{py::register_python_type(module.get(), &type_spec_PropertyPath, object_bases.get(), nullptr)};
     if (!PropertyPath_type)
     {
@@ -30525,12 +30621,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ResourceDictionary_type{py::register_python_type(module.get(), &type_spec_ResourceDictionary, object_bases.get(), nullptr)};
-    if (!ResourceDictionary_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle ResourceManagerRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ResourceManagerRequestedEventArgs, object_bases.get(), nullptr)};
     if (!ResourceManagerRequestedEventArgs_type)
     {
@@ -30543,26 +30633,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle RoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_RoutedEventArgs, object_bases.get(), nullptr)};
-    if (!RoutedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ScalarTransition_type{py::register_python_type(module.get(), &type_spec_ScalarTransition, object_bases.get(), nullptr)};
-    if (!ScalarTransition_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle Setter_type{py::register_python_type(module.get(), &type_spec_Setter, object_bases.get(), nullptr)};
     if (!Setter_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle SetterBase_type{py::register_python_type(module.get(), &type_spec_SetterBase, object_bases.get(), nullptr)};
-    if (!SetterBase_type)
     {
         return nullptr;
     }
@@ -30603,12 +30675,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle StateTriggerBase_type{py::register_python_type(module.get(), &type_spec_StateTriggerBase, object_bases.get(), nullptr)};
-    if (!StateTriggerBase_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle Style_type{py::register_python_type(module.get(), &type_spec_Style, object_bases.get(), nullptr)};
     if (!Style_type)
     {
@@ -30633,20 +30699,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle TriggerAction_type{py::register_python_type(module.get(), &type_spec_TriggerAction, object_bases.get(), nullptr)};
-    if (!TriggerAction_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle TriggerActionCollection_type{py::register_python_type(module.get(), &type_spec_TriggerActionCollection, object_bases.get(), nullptr)};
     if (!TriggerActionCollection_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle TriggerBase_type{py::register_python_type(module.get(), &type_spec_TriggerBase, object_bases.get(), nullptr)};
-    if (!TriggerBase_type)
     {
         return nullptr;
     }
@@ -30657,32 +30711,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_UIElement_Static{PyType_FromSpec(&type_spec_UIElement_Static)};
-    if (!type_UIElement_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle UIElement_type{py::register_python_type(module.get(), &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Static.get()))};
-    if (!UIElement_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle UIElementWeakCollection_type{py::register_python_type(module.get(), &type_spec_UIElementWeakCollection, object_bases.get(), nullptr)};
-    if (!UIElementWeakCollection_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle UnhandledExceptionEventArgs_type{py::register_python_type(module.get(), &type_spec_UnhandledExceptionEventArgs, object_bases.get(), nullptr)};
     if (!UnhandledExceptionEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle Vector3Transition_type{py::register_python_type(module.get(), &type_spec_Vector3Transition, object_bases.get(), nullptr)};
-    if (!Vector3Transition_type)
     {
         return nullptr;
     }
@@ -30701,36 +30731,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml(void) noexcept
 
     py::pyobj_handle VisualStateGroup_type{py::register_python_type(module.get(), &type_spec_VisualStateGroup, object_bases.get(), nullptr)};
     if (!VisualStateGroup_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_VisualStateManager_Static{PyType_FromSpec(&type_spec_VisualStateManager_Static)};
-    if (!type_VisualStateManager_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle VisualStateManager_type{py::register_python_type(module.get(), &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Static.get()))};
-    if (!VisualStateManager_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle VisualTransition_type{py::register_python_type(module.get(), &type_spec_VisualTransition, object_bases.get(), nullptr)};
-    if (!VisualTransition_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Window_Static{PyType_FromSpec(&type_spec_Window_Static)};
-    if (!type_Window_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle Window_type{py::register_python_type(module.get(), &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Static.get()))};
-    if (!Window_type)
     {
         return nullptr;
     }

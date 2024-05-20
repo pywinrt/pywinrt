@@ -4678,30 +4678,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingOperations_Static{PyType_FromSpec(&type_spec_BindingOperations_Static)};
-    if (!type_BindingOperations_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle BindingOperations_type{py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingOperations_Static.get()))};
-    if (!BindingOperations_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_CollectionViewSource_Static{PyType_FromSpec(&type_spec_CollectionViewSource_Static)};
-    if (!type_CollectionViewSource_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle CollectionViewSource_type{py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get()))};
-    if (!CollectionViewSource_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
     if (!CurrentChangingEventArgs_type)
     {
@@ -4722,6 +4698,30 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
 
     py::pyobj_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
     if (!RelativeSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingOperations_Static{PyType_FromSpec(&type_spec_BindingOperations_Static)};
+    if (!type_BindingOperations_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BindingOperations_type{py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingOperations_Static.get()))};
+    if (!BindingOperations_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CollectionViewSource_Static{PyType_FromSpec(&type_spec_CollectionViewSource_Static)};
+    if (!type_CollectionViewSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle CollectionViewSource_type{py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get()))};
+    if (!CollectionViewSource_type)
     {
         return nullptr;
     }

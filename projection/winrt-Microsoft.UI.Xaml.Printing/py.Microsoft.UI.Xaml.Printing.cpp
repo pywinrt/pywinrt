@@ -858,6 +858,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_printing(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_PrintDocument_Static{PyType_FromSpec(&type_spec_PrintDocument_Static)};
+    if (!type_PrintDocument_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle PrintDocument_type{py::register_python_type(module.get(), &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Static.get()))};
+    if (!PrintDocument_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle AddPagesEventArgs_type{py::register_python_type(module.get(), &type_spec_AddPagesEventArgs, object_bases.get(), nullptr)};
     if (!AddPagesEventArgs_type)
     {
@@ -872,18 +884,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_printing(void) noexcept
 
     py::pyobj_handle PaginateEventArgs_type{py::register_python_type(module.get(), &type_spec_PaginateEventArgs, object_bases.get(), nullptr)};
     if (!PaginateEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_PrintDocument_Static{PyType_FromSpec(&type_spec_PrintDocument_Static)};
-    if (!type_PrintDocument_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle PrintDocument_type{py::register_python_type(module.get(), &type_spec_PrintDocument, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintDocument_Static.get()))};
-    if (!PrintDocument_type)
     {
         return nullptr;
     }

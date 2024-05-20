@@ -10514,6 +10514,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_InputCursor_Static{PyType_FromSpec(&type_spec_InputCursor_Static)};
+    if (!type_InputCursor_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InputCursor_type{py::register_python_type(module.get(), &type_spec_InputCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputCursor_Static.get()))};
+    if (!InputCursor_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, object_bases.get(), nullptr)};
+    if (!InputCustomCursor_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), nullptr)};
+    if (!InputObject_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle CharacterReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedEventArgs, object_bases.get(), nullptr)};
     if (!CharacterReceivedEventArgs_type)
     {
@@ -10588,24 +10612,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
 
     py::pyobj_handle InputActivationListenerActivationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr)};
     if (!InputActivationListenerActivationChangedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_InputCursor_Static{PyType_FromSpec(&type_spec_InputCursor_Static)};
-    if (!type_InputCursor_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle InputCursor_type{py::register_python_type(module.get(), &type_spec_InputCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputCursor_Static.get()))};
-    if (!InputCursor_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, object_bases.get(), nullptr)};
-    if (!InputCustomCursor_type)
     {
         return nullptr;
     }
@@ -10696,12 +10702,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
 
     py::pyobj_handle InputNonClientPointerSource_type{py::register_python_type(module.get(), &type_spec_InputNonClientPointerSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputNonClientPointerSource_Static.get()))};
     if (!InputNonClientPointerSource_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), nullptr)};
-    if (!InputObject_type)
     {
         return nullptr;
     }
