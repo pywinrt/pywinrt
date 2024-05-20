@@ -603,6 +603,10 @@ static PyModuleDef module_def
                 std::back_inserter(composeable_classes),
                 is_composable);
 
+            // sort composable classes so that base classes are defined before
+            // derived classes
+            depedency_sort(composeable_classes);
+
             std::vector<TypeDef> sealed_classes{};
             std::copy_if(
                 members.classes.begin(),

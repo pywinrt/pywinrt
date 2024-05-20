@@ -4654,38 +4654,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), nullptr)};
-    if (!Binding_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle BindingBase_type{py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), nullptr)};
-    if (!BindingBase_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), nullptr)};
-    if (!BindingExpression_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle BindingExpressionBase_type{py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), nullptr)};
-    if (!BindingExpressionBase_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
-    if (!CurrentChangingEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ItemIndexRange_type{py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr)};
-    if (!ItemIndexRange_type)
+    py::pyobj_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
+    if (!RelativeSource_type)
     {
         return nullptr;
     }
@@ -4696,8 +4666,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
-    if (!RelativeSource_type)
+    py::pyobj_handle ItemIndexRange_type{py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr)};
+    if (!ItemIndexRange_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
+    if (!CurrentChangingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BindingExpressionBase_type{py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), nullptr)};
+    if (!BindingExpressionBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), nullptr)};
+    if (!BindingExpression_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BindingBase_type{py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), nullptr)};
+    if (!BindingBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), nullptr)};
+    if (!Binding_type)
     {
         return nullptr;
     }

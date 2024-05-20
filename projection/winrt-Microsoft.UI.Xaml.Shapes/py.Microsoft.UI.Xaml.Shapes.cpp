@@ -2362,18 +2362,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Path_Static{PyType_FromSpec(&type_spec_Path_Static)};
-    if (!type_Path_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle Path_type{py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get()))};
-    if (!Path_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_Shape_Static{PyType_FromSpec(&type_spec_Shape_Static)};
     if (!type_Shape_Static)
     {
@@ -2382,6 +2370,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_shapes(void) noexcept
 
     py::pyobj_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
     if (!Shape_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Path_Static{PyType_FromSpec(&type_spec_Path_Static)};
+    if (!type_Path_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Path_type{py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get()))};
+    if (!Path_type)
     {
         return nullptr;
     }

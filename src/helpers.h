@@ -180,9 +180,15 @@ namespace pywinrt
         case TypeDefOrRef::TypeRef:
         {
             auto type_ref = type.TypeRef();
+
             if (type_ref.TypeNamespace() == "System" && type_ref.TypeName() == "Guid")
             {
                 return guid_type{};
+            }
+
+            if (type_ref.TypeNamespace() == "System" && type_ref.TypeName() == "Object")
+            {
+                return object_type{};
             }
 
             return find_required(type_ref);
@@ -922,5 +928,90 @@ namespace pywinrt
         }
 
         return false;
+    }
+
+    void depedency_sort(std::vector<TypeDef>& types)
+    {
+        // sort in dpendency order using topological sort
+        // https://en.wikipedia.org/wiki/Topological_sorting
+
+        enum class mark
+        {
+            unmarked,
+            temporary,
+            permanent
+        };
+
+        std::map<TypeDef, mark> marked_types{};
+
+        for (auto&& t : types)
+        {
+            marked_types[t] = mark::unmarked;
+        }
+
+        std::vector<TypeDef> sorted_types{};
+
+        auto visit = [&](TypeDef const& visit_type, auto const& lambda) -> void
+        {
+            if (marked_types[visit_type] == mark::permanent)
+            {
+                return;
+            }
+
+            if (marked_types[visit_type] == mark::temporary)
+            {
+                throw_invalid("circular dependency detected");
+            }
+
+            marked_types[visit_type] = mark::temporary;
+
+            for (auto&& check_type : types)
+            {
+                if (!std::visit(
+                        impl::overloaded{
+                            [&](type_definition const& t)
+                            {
+                                return t.TypeNamespace() == visit_type.TypeNamespace()
+                                       && t.TypeName() == visit_type.TypeName();
+                            },
+                            [](auto)
+                            {
+                                return false;
+                            }},
+                        get_type_semantics(check_type.Extends())))
+                {
+                    continue;
+                }
+
+                lambda(check_type, lambda);
+            }
+
+            marked_types[visit_type] = mark::permanent;
+
+            sorted_types.push_back(visit_type);
+        };
+
+        while (std::any_of(
+            marked_types.begin(),
+            marked_types.end(),
+            [](auto& t)
+            {
+                return t.second != mark::permanent;
+            }))
+        {
+            visit(
+                std::find_if(
+                    marked_types.begin(),
+                    marked_types.end(),
+                    [](auto& t)
+                    {
+                        return t.second == mark::unmarked;
+                    })
+                    ->first,
+                visit);
+        }
+
+        std::reverse(sorted_types.begin(), sorted_types.end());
+        types = sorted_types;
     }
 } // namespace pywinrt

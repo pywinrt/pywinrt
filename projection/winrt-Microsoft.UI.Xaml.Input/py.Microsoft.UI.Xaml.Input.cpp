@@ -9031,20 +9031,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
-    if (!type_KeyboardAccelerator_Static)
+    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
+    if (!type_XamlUICommand_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
-    if (!KeyboardAccelerator_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr)};
-    if (!ManipulationStartedRoutedEventArgs_type)
+    py::pyobj_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
+    if (!XamlUICommand_type)
     {
         return nullptr;
     }
@@ -9061,14 +9055,20 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
-    if (!type_XamlUICommand_Static)
+    py::pyobj_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), nullptr)};
+    if (!ManipulationStartedRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
-    if (!XamlUICommand_type)
+    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
+    if (!type_KeyboardAccelerator_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
+    if (!KeyboardAccelerator_type)
     {
         return nullptr;
     }

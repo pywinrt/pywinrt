@@ -4924,14 +4924,44 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContentCoordinateConverter_Static{PyType_FromSpec(&type_spec_ContentCoordinateConverter_Static)};
-    if (!type_ContentCoordinateConverter_Static)
+    py::pyobj_handle type_DesktopSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopSiteBridge_Static)};
+    if (!type_DesktopSiteBridge_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle ContentCoordinateConverter_type{py::register_python_type(module.get(), &type_spec_ContentCoordinateConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentCoordinateConverter_Static.get()))};
-    if (!ContentCoordinateConverter_type)
+    py::pyobj_handle DesktopSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopSiteBridge_Static.get()))};
+    if (!DesktopSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentSiteView_type{py::register_python_type(module.get(), &type_spec_ContentSiteView, object_bases.get(), nullptr)};
+    if (!ContentSiteView_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentSiteEnvironmentView_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironmentView, object_bases.get(), nullptr)};
+    if (!ContentSiteEnvironmentView_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentSiteEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironment, object_bases.get(), nullptr)};
+    if (!ContentSiteEnvironment_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentSite_type{py::register_python_type(module.get(), &type_spec_ContentSite, object_bases.get(), nullptr)};
+    if (!ContentSite_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ContentIslandEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentIslandEnvironment, object_bases.get(), nullptr)};
+    if (!ContentIslandEnvironment_type)
     {
         return nullptr;
     }
@@ -4948,44 +4978,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle ContentIslandEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentIslandEnvironment, object_bases.get(), nullptr)};
-    if (!ContentIslandEnvironment_type)
+    py::pyobj_handle type_ContentCoordinateConverter_Static{PyType_FromSpec(&type_spec_ContentCoordinateConverter_Static)};
+    if (!type_ContentCoordinateConverter_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle ContentSite_type{py::register_python_type(module.get(), &type_spec_ContentSite, object_bases.get(), nullptr)};
-    if (!ContentSite_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentSiteEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironment, object_bases.get(), nullptr)};
-    if (!ContentSiteEnvironment_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentSiteEnvironmentView_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironmentView, object_bases.get(), nullptr)};
-    if (!ContentSiteEnvironmentView_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle ContentSiteView_type{py::register_python_type(module.get(), &type_spec_ContentSiteView, object_bases.get(), nullptr)};
-    if (!ContentSiteView_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_DesktopSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopSiteBridge_Static)};
-    if (!type_DesktopSiteBridge_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle DesktopSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopSiteBridge_Static.get()))};
-    if (!DesktopSiteBridge_type)
+    py::pyobj_handle ContentCoordinateConverter_type{py::register_python_type(module.get(), &type_spec_ContentCoordinateConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentCoordinateConverter_Static.get()))};
+    if (!ContentCoordinateConverter_type)
     {
         return nullptr;
     }

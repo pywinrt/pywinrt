@@ -18516,20 +18516,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr)};
-    if (!CustomMapTileDataSource_type)
+    py::pyobj_handle type_MapTileSource_Static{PyType_FromSpec(&type_spec_MapTileSource_Static)};
+    if (!type_MapTileSource_Static)
     {
         return nullptr;
     }
 
-    py::pyobj_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr)};
-    if (!HttpMapTileDataSource_type)
+    py::pyobj_handle MapTileSource_type{py::register_python_type(module.get(), &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Static.get()))};
+    if (!MapTileSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr)};
-    if (!LocalMapTileDataSource_type)
+    py::pyobj_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), nullptr)};
+    if (!MapRouteView_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapModel3D_Static{PyType_FromSpec(&type_spec_MapModel3D_Static)};
+    if (!type_MapModel3D_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle MapModel3D_type{py::register_python_type(module.get(), &type_spec_MapModel3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapModel3D_Static.get()))};
+    if (!MapModel3D_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapLayer_Static{PyType_FromSpec(&type_spec_MapLayer_Static)};
+    if (!type_MapLayer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
+    if (!MapLayer_type)
     {
         return nullptr;
     }
@@ -18552,50 +18576,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapLayer_Static{PyType_FromSpec(&type_spec_MapLayer_Static)};
-    if (!type_MapLayer_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
-    if (!MapLayer_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_MapModel3D_Static{PyType_FromSpec(&type_spec_MapModel3D_Static)};
-    if (!type_MapModel3D_Static)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle MapModel3D_type{py::register_python_type(module.get(), &type_spec_MapModel3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapModel3D_Static.get()))};
-    if (!MapModel3D_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), nullptr)};
-    if (!MapRouteView_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), nullptr)};
     if (!MapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapTileSource_Static{PyType_FromSpec(&type_spec_MapTileSource_Static)};
-    if (!type_MapTileSource_Static)
+    py::pyobj_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr)};
+    if (!LocalMapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle MapTileSource_type{py::register_python_type(module.get(), &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Static.get()))};
-    if (!MapTileSource_type)
+    py::pyobj_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr)};
+    if (!HttpMapTileDataSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr)};
+    if (!CustomMapTileDataSource_type)
     {
         return nullptr;
     }
